@@ -2,7 +2,7 @@
 
 XSLTPROC = xsltproc --timing --stringparam debug.datedfiles no # -v
 
-docs:	aut-forms-arthur-selberg-pretty.xml aut-forms-arthur-selberg.xsl filter.xsl
+docs:	docs/aut-forms-arthur-selberg.pdf aut-forms-arthur-selberg-pretty.xml aut-forms-arthur-selberg.xsl filter.xsl
 	mkdir -p docs
 	cd docs/; \
 	$(XSLTPROC) ../aut-forms-arthur-selberg.xsl ../aut-forms-arthur-selberg-pretty.xml
