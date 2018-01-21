@@ -22,6 +22,10 @@
 \zeta(s) \amp= \frac{1}{s-1} + \sum_{n=1}^\infty n^{-s} - \int_{n}^{n+1} t^{-s} \diff t\\
 \amp = \frac{1}{s-1} + \sum_{n=1}^\infty \left(\int_{n}^{n+1} n^{-s} - \int_{n}^{n+1} t^{-s} \diff t\right)
 \end{align*}
+<p>we denote each of the terms in the right hand sum as \(\phi_n(s)\)</p>
+\begin{equation*}
+\phi_n(s)  = \int_n^{n+1} n^{-s} -t^{-s} \diff t
+\end{equation*}
 <p>Step 3:</p>
 \begin{align*}
 |\phi_n(s)| \amp\le \sup_{n \le t \le n+1} | n^{-s} - t^{-s}|\\

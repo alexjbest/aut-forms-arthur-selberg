@@ -12,19 +12,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Step 1: proof of this property is the <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> formula</p>
-<ul style="list-style-type: disc;">
-<li>
+<p>Idea: Mellin transform and properties of \(\theta\) to derive properties of \(\zeta\text{.}\)</p>
 \begin{equation*}
-f(x) = e^{-\pi x^2} \implies \hat f(\xi) = f(\xi)
+\frac{\Gamma\left(\frac{s}{2}\right)}{\pi^{s/2}} \frac{1}{ns} = \int_0^\infty e^{-\pi n^2 t} t^{s/2} \frac{\diff t}{t}
 \end{equation*}
-</li>
-<li>
+<p>property of \(\theta\text{:}\)</p>
 \begin{equation*}
-g(x) = f(\sqrt{t} x) \implies \hat g(\xi) = \frac{1}{\sqrt{t}}\hat f\left(\frac{\xi}{\sqrt{t}}\right)
+\theta(t) = \frac{1}{\sqrt{t}} \theta\left(\frac1t\right)
 \end{equation*}
-</li>
-</ul>
 <span class="incontext"><a href="section-aut-forms-motivation.html#p-24">in-context</a></span>
 </body>
 </html>

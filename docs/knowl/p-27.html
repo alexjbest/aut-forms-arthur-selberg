@@ -12,27 +12,11 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Final step: Compute the above to see</p>
+<p>Refined idea: Consider</p>
 \begin{equation*}
-I(s) = \frac2s + \frac{2}{1-s} + \frac{2}{\pi^{s/2}} \Gamma\left(\frac s2\right) \zeta(s)
+I(s) = \int_0^1 (\theta(t) - \frac{1}{\sqrt t}) t^{s/2} \frac{\diff t}{t} + \int_1^\infty(\theta(t) -  1 ) t^{s/2} \frac{\diff t}{t}
 \end{equation*}
-<p>which implies</p>
-<ol style="list-style-type: decimal;">
-<li>\(\zeta(s)\) has analytic continuation to \(s\in \CC\text{,}\) with only a simple pole at \(s = 1\) with residue 1.</li>
-<li>
-\begin{equation*}
-I(s) = I(1-s)\text{,}
-\end{equation*}
-this follows from the property of \(\theta\) so if we let
-\begin{equation*}
-\Lambda(s) = \frac{\Gamma\left(\frac s2\right)}{\pi^{s/2}} \zeta(s)\text{,}
-\end{equation*}
-then
-\begin{equation*}
-\Lambda(s) = \Lambda(1-s)\text{.}
-\end{equation*}
-</li>
-</ol>
+<p>upshot: \(I(s)\) is well-defined and holomorphic for all \(s\in \CC\text{.}\)</p>
 <span class="incontext"><a href="section-aut-forms-motivation.html#p-27">in-context</a></span>
 </body>
 </html>

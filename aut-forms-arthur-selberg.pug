@@ -28,7 +28,7 @@ section#section-aut-forms-motivation
         title Motivation
         p
             | What does this paper do?
-            blockquote: q It rederives the Selberg trace formula for #[m \GL_2] by a regularised process.
+        blockquote: p: q It rederives the Selberg trace formula for #[m \GL_2] by a regularised process.
 
         note
             p
@@ -40,6 +40,8 @@ section#section-aut-forms-motivation
             | The Selberg trace formula generalises the more classical Poisson summation formula.
 
         paragraphs
+            title Poisson summation
+
             theorem#thm-poisson-sum
                 title Poisson summation
                 statement: p
@@ -49,10 +51,10 @@ section#section-aut-forms-motivation
                     me \sum_{n\in \ZZ} f(n) = \sum_{\xi \in \ZZ} \hat f (\xi)
                     | where
                     me \hat f (\xi) = \frac{1}{2\pi} \int_{-\infty}^{\infty} f(x) e(x\xi) \diff x
+                    | .
 
-            notation
-                p
-                    m e(x) = e^{2\pi i x}
+            p
+                | Notation: #[m e(x) = e^{2\pi i x}].
             p
                 | To make this look more general we make the following notational choices.
                 me G = \RR, \Gamma = \ZZ
@@ -103,8 +105,8 @@ section#section-aut-forms-motivation
                     md
                         mrow \zeta(s) \amp= \frac{1}{s-1} + \sum_{n=1}^\infty n^{-s} - \int_{n}^{n+1} t^{-s} \diff t
                         mrow         \amp = \frac{1}{s-1} + \sum_{n=1}^\infty \left(\int_{n}^{n+1} n^{-s} - \int_{n}^{n+1} t^{-s} \diff t\right)
-                        | we denote each of the terms in the right hand sum as #[m \phi_n(s)]
-                        me \phi_n(s)  = \int_n^{n+1 n^{-s} -t^{-s} \diff t
+                    | we denote each of the terms in the right hand sum as #[m \phi_n(s)]
+                    me \phi_n(s)  = \int_n^{n+1} n^{-s} -t^{-s} \diff t
                 p
                     | Step 3:
                     md
@@ -214,4 +216,4 @@ section#section-aut-forms-motivation
                 me y = \wp_\Lambda (u)
                 | .
 
-    aside: p Lecture 2 23/1/2018
+        aside: p Lecture 2 23/1/2018
