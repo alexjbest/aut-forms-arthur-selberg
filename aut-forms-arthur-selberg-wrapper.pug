@@ -1,0 +1,31 @@
+doctype xml
+
+mathbook
+
+    docinfo
+        latex-preamble
+            package xypic
+            package newpxtext
+            package newpxmath
+
+
+        include ./macros.pug
+
+        feedback: url https://github.com/alexjbest/aut-forms-arthur-selberg/issues
+
+        initialism AFAS
+
+        // TODO enable when this doesn't cause DTD violations
+        //analytics: google: tracking UA-48250536-1
+
+    article#aut-forms-arthur-selberg
+        title Automorphic forms and the Arthur-Selberg trace formula
+        subtitle MA842 BU Spring 2018
+
+        frontmatter
+            titlepage
+                author: personname Salim Ali Altuğ
+
+                date: today/
+
+        include ./aut-forms-arthur-selberg.pug
