@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Step 2: Would like to write something like</p>
+\begin{equation*}
+`` \int_0^\infty \theta(t) t^{s/2} \frac{\diff t}{t}"
+\end{equation*}
+<p>This integral makes no sense</p>
+<ul style="list-style-type: disc;">
+<li>As \(t \to \infty\text{,}\) \(\theta \sim 1\) thus
+\begin{equation*}
+\left| \int_A^\infty \theta(t) t^{s/2} \frac{\diff t}{t} \right| \lt \infty
+\end{equation*}
+
+\begin{equation*}
+\iff \left| \int_A^\infty t^{s/2} \frac{\diff t}{t} \right| \lt \infty
+\end{equation*}
+
+\begin{equation*}
+\iff \Re(s) \lt 0
+\end{equation*}
+</li>
+<li>As \(t \to 0\) consider \(\xi = \frac 1t\) so \(\xi \to \infty\) and
+\begin{equation*}
+\theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi]
+\end{equation*}
+
+\begin{equation*}
+\implies \theta(t) = \sqrt \xi \theta(\xi) \sim \sqrt \xi = \frac{1}{\sqrt t}
+\end{equation*}
+so \(\theta(t) \sim \frac{1}{ \sqrt t}\)
+\begin{equation*}
+\implies \left | \int_0^A \theta(t) t^{s/2} \frac{\diff t}{t}\right | \lt \infty
+\end{equation*}
+
+\begin{equation*}
+\iff \left| \int_0^A t^{(s-1)/2} \frac{\diff t}{t}\right | \lt \infty
+\end{equation*}
+
+\begin{equation*}
+\iff \Re(s) \gt 1
+\end{equation*}
+</li>
+</ul>
+<p>so no values of \(s\) will make sense for this improper integral.</p>
+<span class="incontext"><a href="section-aut-forms-motivation.html#p-25">in-context</a></span>
+</body>
+</html>
