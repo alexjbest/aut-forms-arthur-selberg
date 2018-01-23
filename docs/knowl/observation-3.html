@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Observation</span><span class="codenumber">1.11</span>
+</h6>
+<p>\(L\) commute with \(\Delta\text{.}\)</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Based on the following:</p>
+\begin{equation*}
+K(x,y) = K_0(x-y,0)
+\end{equation*}
+
+\begin{equation*}
+\partder[K]{x_i} = - \partder[K]{y_i}
+\end{equation*}
+<p>which implies</p>
+\begin{equation*}
+\Delta_z(L(f))(z) = \Delta_z \int_{\RR^2} f(w) K(z,w) \diff w
+\end{equation*}
+
+\begin{equation*}
+= \int\int_{\RR^2} \Delta_z f(w) K(z,w) \diff w
+\end{equation*}
+
+\begin{equation*}
+= \int\int_{\RR^2} f(w) \Delta_w K(z,w) \diff w
+\end{equation*}
+<p>which via integration by parts is</p>
+\begin{equation*}
+= \int\int_{\RR^2} \Delta_wf(w)  K(z,w) \diff w = L(\Delta f)(z)\text{.}
+\end{equation*}
+</article></article><span class="incontext"><a href="section-aut-forms-motivation.html#observation-3">in-context</a></span>
+</body>
+</html>

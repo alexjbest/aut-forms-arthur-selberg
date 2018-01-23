@@ -216,4 +216,175 @@ section#section-aut-forms-motivation
                 me y = \wp_\Lambda (u)
                 | .
 
-        aside: p Lecture 2 23/1/2018
+    subsection
+        title Euclidean Harmonic analysis
+
+        introduction
+            aside: p Lecture 2 23/1/2018
+
+            p
+                | We'll take a roundabout route to automorphic forms.
+            p
+
+                | Today:
+                | Classical harmonic analysis on #[m \RR^n].
+                | Classical harmonic analysis on #[m \HH].
+            p
+                | The aim (in general) is to express a certain class of functions (i.e. #[m \mathcal L^2]) in terms of building block (harmonics).
+            p
+                | In classical analysis the harmonics are known (#[m e(nx)]), then the question becomes how these things fit together.
+                | In number theory the harmonics are extremely mysterious.
+                | We are looking at far more complicated geometries, quotient spaces etc. and arithmetic information comes in.
+
+            example
+                statement: p
+                    | #[m \RR], #[m f\colon \RR\to \CC], being periodic in #[m \mathcal L^2(S^1)] leads to a fourier expansion
+                    me f(x) = \sum_{n\in\ZZ} a_ne(nx)
+                    | .
+
+        subsubsection
+            title #[m \RR^2]
+
+            p
+                | We have a slightly different perspective.
+                me \RR^2 = G \acts G
+                | via translations (i.e. right regular representation of #[m G] will be #[m G\acts \mathcal L^2(G)]).
+                | I.e. #[m g\cdot x = x+g].
+
+            remark
+                statement
+                    p
+                        | This makes #[m \RR^2] a homogeneous space.
+                    p
+                        | #[m \RR^2] with standard metric #[m \diff s^2 = \diff x^2 + \diff y^2] is a flat space #[m \kappa = 0].
+
+            p
+                | To the metric we have the associated Laplacian (Laplace-Beltrami operator, #[m \nabla\cdot\nabla])
+                me \Delta = \partder[^2]{x^2}  + \partder[^2]{y^2}
+                | we are interested in this as it is essentially the only operator, we will define automorphic forms to be eigenfunctions for this operator.
+
+            note: p
+                | The exponential functions
+                me \phi_{u,v}(x,y)= e(ux+vy)
+                | are eigenfunctions of #[m \Delta] with eigenvalue #[m \lambda_{u,v} = -4\pi^2 (u^2 + v^2)] i.e.
+                me (\Delta + \lambda_{u,v}) \phi_{u,v} = 0
+                |.
+                | These are a complete set of harmonics for #[m \mathcal L^2 (\RR^2)].
+                | The proof is via fourier inversion.
+                me f(x,y) = \int\int_{\RR^2} \hat f(u,v) \phi_{u,v} (x,y) \diff u\diff v
+                | where
+                me \hat f(u,v) = \int\int_{\RR^2}     f(u,v) \bar \phi_{u,v} (x,y) \diff y\diff x
+                | .
+
+            paragraphs
+                title
+                    | A little twist
+                p
+                    | We could have established the spectral resolution ( of #[m \Delta]) by considering invariant integral operators.
+                p
+                    | Using the spectral theorem if we can find easier to diagonalise operators that commute we can find the eigenspaces for those to cut down the eigenspace.
+                p
+                    | Recall: an integral operator is
+                    me L(f)(x)=       \int K(x,y)f(y) \diff y
+                    | invariant means
+                    me L(gf) = gL(f) \ g\in G
+                    | in our case
+                    me g\cdot f(x) = f(g+x)
+                    | .
+
+
+            observation
+                statement: p
+                    | If #[m L] is invariant then the kernel #[m K(x,y)] is given by
+                    me K(x,y) = K_0(x-y)
+                    |for some function #[m K_0].
+                proof
+                    proofcase
+                        p
+                            | #[m (\Leftarrow)] obvious
+                    proofcase
+                        p
+                            | #[m (\Rightarrow)] Suppose #[m L] is invariant then
+                            me  \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
+                            | implies
+                            me  \int \int_{\RR^2} K(x,y - \alpha) f(y) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
+                            | so
+                            me  \int_{\RR^2} (K(x+\alpha,y) - K(x,y - \alpha)) f(y) \diff y = 0 \ \forall f
+                            | which implies with some proof that
+                            me K(x+\alpha,y) = K(x,y - \alpha)
+                            | so
+                            me K(x,y) = K(x-y,0)
+                            | .
+
+
+            observation
+                statement: p
+                    | Invariant integral operators commute with each other
+                    me L_1L_2(f)(z) = L_2L_1(f)(z)
+                proof: p
+                    me L_1L_2(f)(z) = \int_{\RR^2 \times \RR^2} f(w) K_2(u-w) K_1(z-u) \diff w \diff u = L_2L_1(f)(z)
+                    | after change of variables
+                    me u\mapsto z - u+w
+
+            observation
+                statement: p
+                    | #[m L] commute with #[m \Delta].
+                proof: p
+                    | Based on the following:
+                    me K(x,y) = K_0(x-y,0)
+                    me \partder[K]{x_i} = - \partder[K]{y_i}
+                    | which implies
+                    me \Delta_z(L(f))(z) = \Delta_z \int_{\RR^2} f(w) K(z,w) \diff w
+                    me = \int\int_{\RR^2} \Delta_z f(w) K(z,w) \diff w
+                    me = \int\int_{\RR^2} f(w) \Delta_w K(z,w) \diff w
+                    | which via integration by parts is
+                    me = \int\int_{\RR^2} \Delta_wf(w)  K(z,w) \diff w = L(\Delta f)(z)
+                    |.
+
+            observation
+                statement: p
+                    | #[m \phi_{u,v}(x,y)] is an eigenfunction of #[m L], #[m (u,v)\in\RR^2, (x,y) \in \RR^2].
+                proof: p
+                    me L\phi_{u,v}(\overbrace{z}^{=x,y})  = \int_{\RR^2} \phi_{u,v}(w) K(z,w) \diff w
+                    me                                   = \int_{\RR^2} \phi_{u,v}(w) K_0(z-w) \diff w
+                    me                                   = \int_\RR \int_\RR e(uw_1 + vw_2) K_0(z_1- w_1,z_2-w_2)\diff w_1 \diff w_2
+                    me                                   = e(uw_1 + vw_2)\int_\RR \int_\RR K_0(w_1,w_2)e(-uw_1 - vw_2)\diff w_1 \diff w_2
+                    | after the change of variable #[m w_i \mapsto - w_i + z_i]
+                    me \phi_{u,v}(z)\hat K_0(u,v)
+                    | i.e.
+                    me L\phi_{u,v} = \hat K_0(u,v) \phi_{u,v}
+                    | .
+
+            p
+                | Side remark: these are enough to form a generating set.
+
+        subsubsection
+            title Poisson summation (yet again)
+
+            p
+                |Let's consider integral operators on functions on #[m \ZZ^2 \backslash \RR^2 = \mathbf T^2].
+            p
+                | Observe: #[m L\leadsto K(x,) = K_0(x-y)].
+                me Lf(z) = \int_{\RR^2} f(w) K(z,w) \diff w
+                me = \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
+                | now #[m \mathbf K] is a function on #[m \mathbf T^2 \times \mathbf T^2].
+            p
+                | Trace of this operator
+                me = \int_{\mathbf T^2} \mathbf K(z,z) \diff z = \int_{\mathbf T^2} \left( \sum_{n\in \ZZ^2} K_0(n)\right) \diff z = \sum_{n\in\ZZ^2} K_0(n)
+
+                |  Using sum of eigenvlaues
+                me K(z,w) = \sum_{n\in \ZZ^2} K_0(z- + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
+                | so the trace is
+                me \sum_{\xi \in \ZZ^2} \lambda_\xi = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
+                | so we get to
+                me \sum_{n\in \ZZ^2} K_0(n) = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
+                | i.e. Poisson summation.
+
+            p
+                | Why care about Poisson summation?
+                me \hat K_0(0) = \int K_0(z) \diff z
+                | Gauss circle problem, how many lattice points are there in a circle of radius #[m R].
+                | We can pick a radially symmetric function that is 1 on the circle and 0 outside, or a smooth approximation of such an indicator function at least.
+                | Poisson summation packages the important information into a single term, plus some rapidly decaying ones.
+                | Then we get #[m \pi R^2 + ] error, Gauss conjectured that the error is #[m R^{1/2 + \epsilon}].
+

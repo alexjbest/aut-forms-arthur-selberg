@@ -16,6 +16,7 @@
 <xsl:param name="html.css.file" select="'mathbook-4.css'"/>
 
 <xsl:param name="html.knowl.example" select="'no'" />
+<xsl:param name="html.knowl.proof" select="'no'" />
 <xsl:param name="toc.level" select="'3'" />
 
 

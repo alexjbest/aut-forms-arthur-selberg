@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Trace of this operator</p>
+\begin{equation*}
+= \int_{\mathbf T^2} \mathbf K(z,z) \diff z = \int_{\mathbf T^2} \left( \sum_{n\in \ZZ^2} K_0(n)\right) \diff z = \sum_{n\in\ZZ^2} K_0(n)
+\end{equation*}
+<p>Using sum of eigenvlaues</p>
+\begin{equation*}
+K(z,w) = \sum_{n\in \ZZ^2} K_0(z- + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
+\end{equation*}
+<p>so the trace is</p>
+\begin{equation*}
+\sum_{\xi \in \ZZ^2} \lambda_\xi = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
+\end{equation*}
+<p>so we get to</p>
+\begin{equation*}
+\sum_{n\in \ZZ^2} K_0(n) = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
+\end{equation*}
+<p>i.e. <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a>.</p>
+<span class="incontext"><a href="section-aut-forms-motivation.html#p-61">in-context</a></span>
+</body>
+</html>
