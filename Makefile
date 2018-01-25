@@ -18,6 +18,7 @@ docs/aut-forms-arthur-selberg.pdf:	aut-forms-arthur-selberg.tex
 
 aut-forms-arthur-selberg-wrapper.xml:	*.pug pug-plugin.json
 	pug -O pug-plugin.json --extension xml aut-forms-arthur-selberg-wrapper.pug
+	sed -i 's/proofcase/case/g' aut-forms-arthur-selberg-wrapper.xml # Fix proofcase->case !! UGLY HACK, SAD
 
 aut-forms-arthur-selberg-pretty.xml: aut-forms-arthur-selberg-wrapper.xml
 	xmllint --pretty 2 aut-forms-arthur-selberg-wrapper.xml > aut-forms-arthur-selberg-pretty.xml

@@ -241,11 +241,13 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-3" data-scroll="subsection-3">Motivating example</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-4" data-scroll="subsection-4">Modular forms</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-5" data-scroll="subsection-5">Euclidean Harmonic analysis</a></li>
+<li><a href="section-aut-forms-motivation.html#subsection-6" data-scroll="subsection-6">The hyperbolic plane \(\HH\)</a></li>
+<li><a href="section-aut-forms-motivation.html#subsection-7" data-scroll="subsection-7">\(\HH\) as a homogeneous space</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated January 23, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated January 25, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -557,9 +559,9 @@ g\cdot f(x) = f(g+x)\text{.}
 \begin{equation*}
 K(x,y) = K_0(x-y)
 \end{equation*}
-<p>for some function \(K_0\text{.}\)</p>
-<article class="proof" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6>
-<p id="p-50">\((\Leftarrow)\) obvious</p>
+<p>for some function \(K_0\text{.}\)</p></article><article class="proof" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6>
+<article class="case" id="case-1"><h6 class="heading"></h6>
+<p id="p-50">\((\Leftarrow)\) obvious</p></article><article class="case" id="case-2"><h6 class="heading"></h6>
 <p id="p-51">\((\Rightarrow)\) Suppose \(L\) is invariant then</p>
 \begin{equation*}
 \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
@@ -587,7 +589,7 @@ K(x,y) = K(x-y,0)\text{.}
 \begin{equation*}
 L_1L_2(f)(z) = L_2L_1(f)(z)
 \end{equation*}
-<article class="proof" id="proof-4"><h6 class="heading"><span class="type">Proof</span></h6>
+</article><article class="proof" id="proof-4"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-53"></p>
 \begin{equation*}
 L_1L_2(f)(z) = \int_{\RR^2 \times \RR^2} f(w) K_2(u-w) K_1(z-u) \diff w \diff u = L_2L_1(f)(z)
@@ -596,11 +598,10 @@ L_1L_2(f)(z) = \int_{\RR^2 \times \RR^2} f(w) K_2(u-w) K_1(z-u) \diff w \diff u 
 \begin{equation*}
 u\mapsto z - u+w
 \end{equation*}
-</article></article><article class="remark-like" id="observation-3"><h6 class="heading">
+</article><article class="remark-like" id="observation-3"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.11</span>
 </h6>
-<p id="p-54">\(L\) commute with \(\Delta\text{.}\)</p>
-<article class="proof" id="proof-5"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-54">\(L\) commute with \(\Delta\text{.}\)</p></article><article class="proof" id="proof-5"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-55">Based on the following:</p>
 \begin{equation*}
 K(x,y) = K_0(x-y,0)
@@ -625,11 +626,10 @@ K(x,y) = K_0(x-y,0)
 \begin{equation*}
 = \int\int_{\RR^2} \Delta_wf(w)  K(z,w) \diff w = L(\Delta f)(z)\text{.}
 \end{equation*}
-</article></article><article class="remark-like" id="observation-4"><h6 class="heading">
+</article><article class="remark-like" id="observation-4"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.12</span>
 </h6>
-<p id="p-56">\(\phi_{u,v}(x,y)\) is an eigenfunction of \(L\text{,}\) \((u,v)\in\RR^2, (x,y) \in \RR^2\text{.}\)</p>
-<article class="proof" id="proof-6"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-56">\(\phi_{u,v}(x,y)\) is an eigenfunction of \(L\text{,}\) \((u,v)\in\RR^2, (x,y) \in \RR^2\text{.}\)</p></article><article class="proof" id="proof-6"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-57"></p>
 \begin{equation*}
 L\phi_{u,v}(\overbrace{z}^{=x,y})  = \int_{\RR^2} \phi_{u,v}(w) K(z,w) \diff w
@@ -654,7 +654,7 @@ L\phi_{u,v}(\overbrace{z}^{=x,y})  = \int_{\RR^2} \phi_{u,v}(w) K(z,w) \diff w
 \begin{equation*}
 L\phi_{u,v} = \hat K_0(u,v) \phi_{u,v}\text{.}
 \end{equation*}
-</article></article><p id="p-58">Side remark: these are enough to form a generating set.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type" alt="Subsubsection 1.5.2 Poisson summation (yet again)">
+</article><p id="p-58">Side remark: these are enough to form a generating set.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type" alt="Subsubsection 1.5.2 Poisson summation (yet again)">
 <span class="type">Subsubsection</span><span class="codenumber">1.5.2</span><span class="title">Poisson summation (yet again)</span>
 </h4>
 <p id="p-59">Let's consider integral operators on functions on \(\ZZ^2 \backslash \RR^2 = \mathbf T^2\text{.}\)</p>
@@ -664,14 +664,14 @@ Lf(z) = \int_{\RR^2} f(w) K(z,w) \diff w
 \end{equation*}
 
 \begin{equation*}
-= \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
+= \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in \ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
 \end{equation*}
 <p>now \(\mathbf K\) is a function on \(\mathbf T^2 \times \mathbf T^2\text{.}\)</p>
 <p id="p-61">Trace of this operator</p>
 \begin{equation*}
 = \int_{\mathbf T^2} \mathbf K(z,z) \diff z = \int_{\mathbf T^2} \left( \sum_{n\in \ZZ^2} K_0(n)\right) \diff z = \sum_{n\in\ZZ^2} K_0(n)
 \end{equation*}
-<p>Using sum of eigenvlaues</p>
+<p>Using sum of eigenvalues</p>
 \begin{equation*}
 K(z,w) = \sum_{n\in \ZZ^2} K_0(z- + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
 \end{equation*}
@@ -688,7 +688,190 @@ K(z,w) = \sum_{n\in \ZZ^2} K_0(z- + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\
 \begin{equation*}
 \hat K_0(0) = \int K_0(z) \diff z
 \end{equation*}
-<p>Gauss circle problem, how many lattice points are there in a circle of radius \(R\text{.}\) We can pick a radially symmetric function that is 1 on the circle and 0 outside, or a smooth approximation of such an indicator function at least. Poisson summation packages the important information into a single term, plus some rapidly decaying ones. Then we get \(\pi R^2 + \) error, Gauss conjectured that the error is \(R^{1/2 + \epsilon}\text{.}\)</p></section></section></section></div></main>
+<p>Gauss circle problem, how many lattice points are there in a circle of radius \(R\text{.}\) We can pick a radially symmetric function that is 1 on the circle and 0 outside, or a smooth approximation of such an indicator function at least. Poisson summation packages the important information into a single term, plus some rapidly decaying ones. Then we get \(\pi R^2 + \) error, Gauss conjectured that the error is \(R^{1/2 + \epsilon}\text{.}\)</p>
+<article class="aside-like" id="aside-3"><p id="p-63">Lecture 3 25/1/2018</p></article><p id="p-64">Last time we gave a conceptual proof of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> (this strategy will generalise to the trace formula eventually).</p>
+<p id="p-65">To clean up one loose end: there is a generalisation of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> called Voronoi summation, which will actually be useful later. For <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> we had</p>
+\begin{equation*}
+\sum_{n_1,n_2\in \ZZ} K(n_1, n_2) = \sum_{\xi_1,\xi_2\in \ZZ} \hat k(\xi_1, \xi_2)
+\end{equation*}
+<p>suppose \(K(x,y)\colon \RR^2 \to \CC\) is radially symmetric i.e.</p>
+\begin{equation*}
+k(x,y) = k_0(x^2 + y^2),\,(x,y) \in \RR^2
+\end{equation*}
+<p>then the fourier transform</p>
+\begin{equation*}
+\hat k(u,v) = \pi\int_0^\infty K_0(r) J_0(\sqrt{\lambda r})\diff r,\,\lambda = 4\pi^2 (u^2 + v^2)
+\end{equation*}
+<p>where</p>
+\begin{equation*}
+J_0(z) = \frac1\pi \int_0^\pi \cos(z\cos(\alpha)) \diff \alpha
+\end{equation*}
+<p>is a Bessel function of the second kind.</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.13</span>
+</h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-66">Prove this.</p></article></div>
+<p id="p-67">Plug this into <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a></p>
+\begin{equation*}
+\sum_{(n_1,n_2)\in \ZZ^2} K(n_1,n_2) = \sum_{N=0}^\infty r_2(N)K_0(N)
+\end{equation*}
+<p>as \(K\) only depends on \(n_1^2 + n_2^2\) we group terms based on this quantity, so</p>
+\begin{equation*}
+r_2 = \#\{(n_1,n_2) \in \ZZ^2 : n_1^2 + n_2^2 = N\}\text{.}
+\end{equation*}
+<p id="p-68"></p>
+\begin{equation*}
+\sum_{\xi_1,\xi_2\in \ZZ} \pi\int_0^\infty K_0(r) J_0(2\pi \sqrt{(\xi^2_1 + \xi_2^2)r})\diff r
+\end{equation*}
+
+\begin{equation*}
+= \sum_{M=0}^\infty r_2(M)\tilde K_0(M)\text{.}
+\end{equation*}
+<article class="theorem-like" id="theorem-3"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.14</span><span class="title">Voronoi summation</span>
+</h6>
+<p id="p-69"></p>
+\begin{equation*}
+\sum_{N=0}^\infty r_2(N)K_0(N) =\sum_{M=0}^\infty r_2(M)\tilde K_0(M)
+\end{equation*}
+<p>where</p>
+\begin{equation*}
+\tilde K_0(z) = \pi\int_0^\infty K_0(r) J_0(2\pi \sqrt{zr})\diff r\text{.}
+\end{equation*}
+</article><p id="p-70">Note that \(J_0(0) =1 \text{.}\)</p>
+<p id="p-71">How is this useful? Consider point counting in a circle problem. Let \(K_0(x)\) be an approximation to the step function, \(1\) for \(x \le 1\)  and 0 for \(x \gt 1\text{.}\) With \(\int K_0 = 1\text{.}\) Then</p>
+\begin{equation*}
+\sum_{N=0}\infty K_0\left( \frac{N}{ R^2}\right) r_2(N)\text{.}
+\end{equation*}
+<p>This is counting lattice points. The right hand side is then</p>
+\begin{equation*}
+\sum_{M=0}^\infty r_2(M) \tilde K_0(M) = \tilde K_0(0)  + \sum_{M=1}^\infty r_2(M) \tilde K_0(M)
+\end{equation*}
+
+\begin{equation*}
+= \pi  + \sum_{M=1}^\infty r_2(M) \tilde K_0(M)\text{.}
+\end{equation*}
+<p>Finally</p>
+\begin{equation*}
+f(z) = K_0\left( \frac{ z}{R^2}\right)
+\end{equation*}
+<p>so</p>
+\begin{equation*}
+\tilde f(\xi )  = R^2\tilde K_0(\xi R^2)\text{.}
+\end{equation*}
+<p>So</p>
+\begin{equation*}
+\sum_{N=0}\infty K_0\left( \frac{N}{R^2}\right) r_2(N) = R^2\left( \pi  + \sum_{M=1}^\infty r_2(M) \tilde K_0(MR^2)\right)
+\end{equation*}
+<p>where the lead term is the area of the circle. Finally if \(M \ne 0\) then \(f(MR^2)\) doesn't increase fast as \(R\to \infty\text{.}\) i.e. it is smaller than \(R^2\text{.}\) So as \(R\to \infty\) we find \(\#\{\text{lattice points in the circle}\} \sim\pi R^2\text{.}\)</p></section></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type" alt="Subsection 1.6 The hyperbolic plane \(\HH\)">
+<span class="type">Subsection</span><span class="codenumber">1.6</span><span class="title">The hyperbolic plane \(\HH\)</span>
+</h3>
+<p id="p-72">What if we consider the same problem on the hyperbolic disk? Things are extremely different.</p>
+<article class="paragraphs" id="paragraphs-5"><h5 class="heading"><span class="title">Generalities</span></h5>
+<article class="definition-like" id="definition-1"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.15</span>
+</h6>
+<p id="p-73"></p>
+\begin{equation*}
+\HH = \{x+iy:y \gt 0\}\text{.}
+\end{equation*}
+
+\begin{equation*}
+\diff s^2 = \frac{1}{y^2} (\diff x^2 + \diff y^2),\,\text{Riemannian metric}
+\end{equation*}
+<p>this gives</p>
+\begin{equation*}
+\kappa=  -1
+\end{equation*}
+<p>i.e. this is negatively curved, this is the cause of huge differences between the euclidean theory.</p></article><p id="p-74">There is a formula for the (hyperbolic) distance between two points</p>
+\begin{equation*}
+\rho(z,w) = \log \frac{| z- \bar w| + |z-w|}{| z- \bar w| - |z-w|}\text{.}
+\end{equation*}
+<article class="remark-like" id="observation-5"><h6 class="heading">
+<span class="type">Observation</span><span class="codenumber">1.16</span>
+</h6>
+<p id="p-75">As \(w\to \RR\) we have \(\rho \to \infty\text{.}\) So \(\RR\) is the boundary.</p></article><p id="p-76">Recall: the isoperimetric inequality</p>
+\begin{equation*}
+4\pi A -\kappa A^2 \le L^2
+\end{equation*}
+<p>where \(L\) is the length of the boundary of a region and \(A\) is the area. Note if \(\kappa = 0\) then \(4\pi A \le L^2\text{.}\) So \(A\) can be and would be as large as \(L^2\text{.}\)</p>
+<p id="p-77">For \(\kappa = -1\) we have</p>
+\begin{equation*}
+4\pi A +A^2 \le L^2
+\end{equation*}
+<p>so \(A\) can at most (and most often will) be as large as \(\sim L\text{.}\) The upshot is that under the hyperbolic metric, the area and perimeter can be the same size.</p>
+\begin{equation*}
+|\text{Boundary}| \sim |\text{Area}|\text{.}
+\end{equation*}
+<p>Things are a lot more subtle.</p>
+<p id="p-78">Another interesting setting is the tree of \(\PGL_2(\QQ_p)\) for \(p =2\) this is a \(3\)-regular tree. How many points are there of distance less than \(R\) from a fixed point</p>
+\begin{equation*}
+1 + 3(1+ 2 + \cdots + 2^R) =  1 + 3(2^{R+1} -1 ) \sim 3 2^{R+1} = 6\cdot 2^R\text{.}
+\end{equation*}
+<p>But how many points of distance exactly \(R\) are there? Roughly \(2^R\) again.</p>
+<p id="p-79">A hyperbolic disk of radius \(R\) centred at \(i\) would be a euclidean disk, but not centered at \(i\text{.}\) The area is \(4\pi(\sinh (R/2))^2\) and the circumference is \(2\pi\sinh(R)\) these are roughly the same size as \(\sinh(x) = (e^x - e^{-x})/2\text{.}\) The euclidean area is far large (roughly the square) of the hyperbolic.</p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type" alt="Subsection 1.7 \(\HH\) as a homogeneous space">
+<span class="type">Subsection</span><span class="codenumber">1.7</span><span class="title">\(\HH\) as a homogeneous space</span>
+</h3>
+<section class="introduction" id="introduction-3"><p id="p-80"></p>
+\begin{equation*}
+\SL_2(\RR) \acts \HH
+\end{equation*}
+<p>via linear fractional transformations, i.e.</p>
+\begin{equation*}
+g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\RR)
+\end{equation*}
+<p>this is the full group of holomorphic isometries of \(\HH\) to get all of them take \(z\mapsto -\bar z\) as well.</p>
+\begin{equation*}
+\HH = \SL_2(\HH) / \SO(2)
+\end{equation*}
+<p>because \(\SO(2) = \Stab_i(\SL_2(\RR))\text{.}\)</p></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type" alt="Subsubsection 1.7.1 Several decompositions">
+<span class="type">Subsubsection</span><span class="codenumber">1.7.1</span><span class="title">Several decompositions</span>
+</h4>
+<p id="p-81">Cartesian: \(x+ iy\) then the invariant measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
+<p id="p-82">Iwasawa: \(G = NAK\)</p>
+\begin{equation*}
+N = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}:n\in \RR\right\}
+\end{equation*}
+
+\begin{equation*}
+A = \left\{ \begin{pmatrix} a \amp   \\ \amp a^{-1} \end{pmatrix}:a\in \RR_{\ge 0}\right\}
+\end{equation*}
+
+\begin{equation*}
+K = \left\{ \begin{pmatrix} \cos \theta \amp \sin \theta  \\ -\sin \theta \amp\cos \theta \end{pmatrix}:\theta\in [0,2\pi)\right\}
+\end{equation*}
+
+\begin{equation*}
+x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y}^{-1} \end{pmatrix}}_A \underbrace{\begin{pmatrix} 1           \amp \frac{x}{\sqrt{y}} \\        \amp      1  \end{pmatrix}}_N
+\end{equation*}
+<p>this is very general, an analogue of Gram-Schmidt.</p>
+<article class="remark-like" id="observation-6"><h6 class="heading">
+<span class="type">Observation</span><span class="codenumber">1.17</span>
+</h6>
+<p id="p-83"></p>
+\begin{equation*}
+\HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\}}
+\end{equation*}
+<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally invariant functions).</p>
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.18</span>
+</h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-85">Prove these decompositions. Use the spectral theorem of symmetric matrices for the Cartan case.</p></article></div>
+<article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Classification of Motions</span></h5>
+<p id="p-86">We classify by the number of fixed points in \(\HH \cup \hat\RR\text{,}\) the extended real line.</p>
+<ul id="ul-5" style="list-style-type: disc;">
+<li id="li-11">Identity, infinitely many fixed points.</li>
+<li id="li-12">Parabolic, 1 fixed point in \(\hat \RR\) (\(\infty\)) \(\begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\)</li>
+<li id="li-13">Hyperbolic, 2 fixed points in \(\RR\) \((0,\infty)\text{,}\)  \(\begin{pmatrix} a \amp   \\ \amp a^{-1} \end{pmatrix}\text{.}\)</li>
+<li id="li-14">Elliptic, 1 fixed point in \(\HH\) but not in \(\overline \HH\text{,}\) \((i,-i)\)  \(\begin{pmatrix} \cos \theta \amp \sin \theta  \\ -\sin \theta \amp\cos \theta \end{pmatrix}\text{.}\)</li>
+</ul>
+<article class="remark-like" id="note-4"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">1.19</span><span class="title">for the future</span>
+</h6>
+<p id="p-87">These notions are different when we consider \(\gamma \in G(\QQ)\) something can be \(\QQ\)-elliptic but \(\RR\)-hyperbolic.</p></article><p id="p-88">So we have</p>
+<ul id="ul-6" style="list-style-type: disc;">
+<li id="li-15">Parabolic \(| \tr | = 2\)</li>
+<li id="li-16">Elliptic \(| \tr | \lt 2\)</li>
+<li id="li-17">Hyperbolic \(| \tr | \gt 2\)</li>
+</ul></article></section></section></section></div></main>
 </div>
 </body>
 </html>

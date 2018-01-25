@@ -148,7 +148,7 @@ section#section-aut-forms-motivation
                             me \iff \left| \int_A^\infty t^{s/2} \frac{\diff t}{t} \right| \lt \infty
                             me \iff \Re(s) \lt 0
                         li
-                            | As #[m t \to 0] consider #[m \xi = \frac 1t] so #[m \xi \to \infty] and 
+                            | As #[m t \to 0] consider #[m \xi = \frac 1t] so #[m \xi \to \infty] and
                             me  \theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi]
                             me \implies \theta(t) = \sqrt \xi \theta(\xi) \sim \sqrt \xi = \frac{1}{\sqrt t}
                             | so #[m \theta(t) \sim \frac{1}{ \sqrt t}]
@@ -252,11 +252,10 @@ section#section-aut-forms-motivation
                 | I.e. #[m g\cdot x = x+g].
 
             remark
-                statement
-                    p
-                        | This makes #[m \RR^2] a homogeneous space.
-                    p
-                        | #[m \RR^2] with standard metric #[m \diff s^2 = \diff x^2 + \diff y^2] is a flat space #[m \kappa = 0].
+                p
+                    | This makes #[m \RR^2] a homogeneous space.
+                p
+                    | #[m \RR^2] with standard metric #[m \diff s^2 = \diff x^2 + \diff y^2] is a flat space #[m \kappa = 0].
 
             p
                 | To the metric we have the associated Laplacian (Laplace-Beltrami operator, #[m \nabla\cdot\nabla])
@@ -294,66 +293,66 @@ section#section-aut-forms-motivation
 
 
             observation
-                statement: p
+                p
                     | If #[m L] is invariant then the kernel #[m K(x,y)] is given by
                     me K(x,y) = K_0(x-y)
                     |for some function #[m K_0].
-                proof
-                    proofcase
-                        p
-                            | #[m (\Leftarrow)] obvious
-                    proofcase
-                        p
-                            | #[m (\Rightarrow)] Suppose #[m L] is invariant then
-                            me  \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
-                            | implies
-                            me  \int \int_{\RR^2} K(x,y - \alpha) f(y) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
-                            | so
-                            me  \int_{\RR^2} (K(x+\alpha,y) - K(x,y - \alpha)) f(y) \diff y = 0 \ \forall f
-                            | which implies with some proof that
-                            me K(x+\alpha,y) = K(x,y - \alpha)
-                            | so
-                            me K(x,y) = K(x-y,0)
-                            | .
+            proof
+                proofcase
+                    p
+                        | #[m (\Leftarrow)] obvious
+                proofcase
+                    p
+                        | #[m (\Rightarrow)] Suppose #[m L] is invariant then
+                        me  \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
+                        | implies
+                        me  \int \int_{\RR^2} K(x,y - \alpha) f(y) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
+                        | so
+                        me  \int_{\RR^2} (K(x+\alpha,y) - K(x,y - \alpha)) f(y) \diff y = 0 \ \forall f
+                        | which implies with some proof that
+                        me K(x+\alpha,y) = K(x,y - \alpha)
+                        | so
+                        me K(x,y) = K(x-y,0)
+                        | .
 
 
             observation
-                statement: p
+                p
                     | Invariant integral operators commute with each other
                     me L_1L_2(f)(z) = L_2L_1(f)(z)
-                proof: p
-                    me L_1L_2(f)(z) = \int_{\RR^2 \times \RR^2} f(w) K_2(u-w) K_1(z-u) \diff w \diff u = L_2L_1(f)(z)
-                    | after change of variables
-                    me u\mapsto z - u+w
+            proof: p
+                me L_1L_2(f)(z) = \int_{\RR^2 \times \RR^2} f(w) K_2(u-w) K_1(z-u) \diff w \diff u = L_2L_1(f)(z)
+                | after change of variables
+                me u\mapsto z - u+w
 
             observation
-                statement: p
+                p
                     | #[m L] commute with #[m \Delta].
-                proof: p
-                    | Based on the following:
-                    me K(x,y) = K_0(x-y,0)
-                    me \partder[K]{x_i} = - \partder[K]{y_i}
-                    | which implies
-                    me \Delta_z(L(f))(z) = \Delta_z \int_{\RR^2} f(w) K(z,w) \diff w
-                    me = \int\int_{\RR^2} \Delta_z f(w) K(z,w) \diff w
-                    me = \int\int_{\RR^2} f(w) \Delta_w K(z,w) \diff w
-                    | which via integration by parts is
-                    me = \int\int_{\RR^2} \Delta_wf(w)  K(z,w) \diff w = L(\Delta f)(z)
-                    |.
+            proof: p
+                | Based on the following:
+                me K(x,y) = K_0(x-y,0)
+                me \partder[K]{x_i} = - \partder[K]{y_i}
+                | which implies
+                me \Delta_z(L(f))(z) = \Delta_z \int_{\RR^2} f(w) K(z,w) \diff w
+                me = \int\int_{\RR^2} \Delta_z f(w) K(z,w) \diff w
+                me = \int\int_{\RR^2} f(w) \Delta_w K(z,w) \diff w
+                | which via integration by parts is
+                me = \int\int_{\RR^2} \Delta_wf(w)  K(z,w) \diff w = L(\Delta f)(z)
+                |.
 
             observation
-                statement: p
+                p
                     | #[m \phi_{u,v}(x,y)] is an eigenfunction of #[m L], #[m (u,v)\in\RR^2, (x,y) \in \RR^2].
-                proof: p
-                    me L\phi_{u,v}(\overbrace{z}^{=x,y})  = \int_{\RR^2} \phi_{u,v}(w) K(z,w) \diff w
-                    me                                   = \int_{\RR^2} \phi_{u,v}(w) K_0(z-w) \diff w
-                    me                                   = \int_\RR \int_\RR e(uw_1 + vw_2) K_0(z_1- w_1,z_2-w_2)\diff w_1 \diff w_2
-                    me                                   = e(uw_1 + vw_2)\int_\RR \int_\RR K_0(w_1,w_2)e(-uw_1 - vw_2)\diff w_1 \diff w_2
-                    | after the change of variable #[m w_i \mapsto - w_i + z_i]
-                    me \phi_{u,v}(z)\hat K_0(u,v)
-                    | i.e.
-                    me L\phi_{u,v} = \hat K_0(u,v) \phi_{u,v}
-                    | .
+            proof: p
+                me L\phi_{u,v}(\overbrace{z}^{=x,y})  = \int_{\RR^2} \phi_{u,v}(w) K(z,w) \diff w
+                me                                   = \int_{\RR^2} \phi_{u,v}(w) K_0(z-w) \diff w
+                me                                   = \int_\RR \int_\RR e(uw_1 + vw_2) K_0(z_1- w_1,z_2-w_2)\diff w_1 \diff w_2
+                me                                   = e(uw_1 + vw_2)\int_\RR \int_\RR K_0(w_1,w_2)e(-uw_1 - vw_2)\diff w_1 \diff w_2
+                | after the change of variable #[m w_i \mapsto - w_i + z_i]
+                me \phi_{u,v}(z)\hat K_0(u,v)
+                | i.e.
+                me L\phi_{u,v} = \hat K_0(u,v) \phi_{u,v}
+                | .
 
             p
                 | Side remark: these are enough to form a generating set.
@@ -366,13 +365,13 @@ section#section-aut-forms-motivation
             p
                 | Observe: #[m L\leadsto K(x,) = K_0(x-y)].
                 me Lf(z) = \int_{\RR^2} f(w) K(z,w) \diff w
-                me = \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
+                me = \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in \ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
                 | now #[m \mathbf K] is a function on #[m \mathbf T^2 \times \mathbf T^2].
             p
                 | Trace of this operator
                 me = \int_{\mathbf T^2} \mathbf K(z,z) \diff z = \int_{\mathbf T^2} \left( \sum_{n\in \ZZ^2} K_0(n)\right) \diff z = \sum_{n\in\ZZ^2} K_0(n)
 
-                |  Using sum of eigenvlaues
+                |  Using sum of eigenvalues
                 me K(z,w) = \sum_{n\in \ZZ^2} K_0(z- + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
                 | so the trace is
                 me \sum_{\xi \in \ZZ^2} \lambda_\xi = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
@@ -387,4 +386,187 @@ section#section-aut-forms-motivation
                 | We can pick a radially symmetric function that is 1 on the circle and 0 outside, or a smooth approximation of such an indicator function at least.
                 | Poisson summation packages the important information into a single term, plus some rapidly decaying ones.
                 | Then we get #[m \pi R^2 + ] error, Gauss conjectured that the error is #[m R^{1/2 + \epsilon}].
+
+            aside: p Lecture 3 25/1/2018
+
+            p
+                | Last time we gave a conceptual proof of Poisson summation (this strategy will generalise to the trace formula eventually).
+            p
+                | To clean up one loose end: there is a generalisation of Poisson summation called Voronoi summation, which will actually be useful later.
+                | For Poisson summation we had
+                me \sum_{n_1,n_2\in \ZZ} K(n_1, n_2) = \sum_{\xi_1,\xi_2\in \ZZ} \hat k(\xi_1, \xi_2)
+                | suppose #[m K(x,y)\colon \RR^2 \to \CC] is radially symmetric i.e.
+                me k(x,y) = k_0(x^2 + y^2),\,(x,y) \in \RR^2
+                | then the fourier transform
+                me \hat k(u,v) = \pi\int_0^\infty K_0(r) J_0(\sqrt{\lambda r})\diff r,\,\lambda = 4\pi^2 (u^2 + v^2)
+                |  where
+                me J_0(z) = \frac1\pi \int_0^\pi \cos(z\cos(\alpha)) \diff \alpha
+                |  is a Bessel function of the second kind.
+
+            exercise
+                statement: p
+                    | Prove this.
+
+            p
+                | Plug this into Poisson summation
+                me \sum_{(n_1,n_2)\in \ZZ^2} K(n_1,n_2) = \sum_{N=0}^\infty r_2(N)K_0(N)
+                | as #[m K] only depends on #[m n_1^2 + n_2^2] we group terms based on this quantity, so
+                me r_2 = \#\{(n_1,n_2) \in \ZZ^2 : n_1^2 + n_2^2 = N\}
+                | .
+
+            p
+                me \sum_{\xi_1,\xi_2\in \ZZ} \pi\int_0^\infty K_0(r) J_0(2\pi \sqrt{(\xi^2_1 + \xi_2^2)r})\diff r
+                me = \sum_{M=0}^\infty r_2(M)\tilde K_0(M)
+                | .
+            theorem
+                title Voronoi summation
+                statement: p
+                    me  \sum_{N=0}^\infty r_2(N)K_0(N) =\sum_{M=0}^\infty r_2(M)\tilde K_0(M)
+                    | where
+                    me \tilde K_0(z) = \pi\int_0^\infty K_0(r) J_0(2\pi \sqrt{zr})\diff r
+                    | .
+
+            p
+                | Note that #[m J_0(0) =1 ].
+
+            p
+                | How is this useful?
+                | Consider point counting in a circle problem.
+                | Let #[m K_0(x)] be an approximation to the step function, #[m 1] for #[m x \le 1]  and 0 for #[m x \gt 1].
+                | With #[m \int K_0 = 1].
+                | Then
+                me \sum_{N=0}\infty K_0\left( \frac{N}{ R^2}\right) r_2(N)
+                | . This is counting lattice points.
+                | The right hand side is then
+                me \sum_{M=0}^\infty r_2(M) \tilde K_0(M) = \tilde K_0(0)  + \sum_{M=1}^\infty r_2(M) \tilde K_0(M)
+                me                                        = \pi  + \sum_{M=1}^\infty r_2(M) \tilde K_0(M)
+                | . Finally
+                me f(z) = K_0\left( \frac{ z}{R^2}\right)
+                | so
+                me \tilde f(\xi )  = R^2\tilde K_0(\xi R^2)
+                | . So
+                me \sum_{N=0}\infty K_0\left( \frac{N}{R^2}\right) r_2(N) = R^2\left( \pi  + \sum_{M=1}^\infty r_2(M) \tilde K_0(MR^2)\right)
+                | where the lead term is the area of the circle.
+                | Finally if #[m M \ne 0] then #[m f(MR^2)] doesn't increase fast as #[m R\to \infty]. i.e. it is smaller than #[m R^2].
+                | So as #[m R\to \infty] we find #[m \#\{\text{lattice points in the circle}\} \sim\pi R^2].
+
+
+
+    subsection
+        title The hyperbolic plane #[m \HH]
+
+        p
+            | What if we consider the same problem on the hyperbolic disk? Things are extremely different.
+
+        paragraphs
+            title Generalities
+
+            definition
+                statement: p
+                    me \HH = \{x+iy:y \gt 0\}
+                    | .
+                    me \diff s^2 = \frac{1}{y^2} (\diff x^2 + \diff y^2),\,\text{Riemannian metric}
+                    | this gives
+                    me \kappa=  -1
+                    | i.e. this is negatively curved, this is the cause of huge differences between the euclidean theory.
+
+            p
+                | There is a formula for the (hyperbolic) distance between two points
+                me \rho(z,w) = \log \frac{| z- \bar w| + |z-w|}{| z- \bar w| - |z-w|}
+                |.
+
+            observation
+                p
+                    | As #[m w\to \RR] we have #[m \rho \to \infty].
+                    | So #[m \RR] is the boundary.
+
+            p
+                | Recall: the isoperimetric inequality
+                me 4\pi A -\kappa A^2 \le L^2
+                | where #[m L] is the length of the boundary of a region and #[m A] is the area.
+                | Note if #[m \kappa = 0] then #[m 4\pi A \le L^2].
+                | So #[m A] can be and would be as large as #[m L^2].
+            p
+                | For #[m \kappa = -1] we have 
+                me 4\pi A +A^2 \le L^2
+                | so #[m A] can at most (and most often will) be as large as #[m \sim L].
+                | The upshot is that under the hyperbolic metric, the area and perimeter can be the same size.
+                me |\text{Boundary}| \sim |\text{Area}|
+                | . Things are a lot more subtle.
+
+            p
+                | Another interesting setting is the tree of #[m \PGL_2(\QQ_p)] for #[m p =2] this is a #[m 3]-regular tree.
+                | How many points are there of distance less than #[m R] from a fixed point
+                me 1 + 3(1+ 2 + \cdots + 2^R) =  1 + 3(2^{R+1} -1 ) \sim 3 2^{R+1} = 6\cdot 2^R
+                | . But how many points of distance exactly #[m R] are there? Roughly #[m 2^R] again.
+
+            p
+                | A hyperbolic disk of radius #[m R] centred at #[m i] would be a euclidean disk, but not centered at #[m i].
+                | The area is #[m 4\pi(\sinh (R/2))^2] and the circumference is #[m 2\pi\sinh(R)] these are roughly the same size as #[m \sinh(x) = (e^x - e^{-x})/2].
+                | The euclidean area is far large (roughly the square) of the hyperbolic.
+
+    subsection
+        title #[m \HH] as a homogeneous space
+
+        introduction: p
+            me \SL_2(\RR) \acts \HH
+            | via linear fractional transformations, i.e.
+            me g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\RR)
+            | this is the full group of holomorphic isometries of #[m \HH] to get all of them take #[m z\mapsto -\bar z] as well.
+            me \HH = \SL_2(\HH) / \SO(2)
+            | because #[m \SO(2) = \Stab_i(\SL_2(\RR))].
+
+
+        subsubsection
+            title Several decompositions
+
+            p
+                | Cartesian: #[m x+ iy] then the invariant measure is #[m \frac{\diff x\diff y}{y^2}].
+
+            p
+                | Iwasawa: #[m G = NAK]
+                me N = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}:n\in \RR\right\}
+                me A = \left\{ \begin{pmatrix} a \amp   \\ \amp a^{-1} \end{pmatrix}:a\in \RR_{\ge 0}\right\}
+                me K = \left\{ \begin{pmatrix} \cos \theta \amp \sin \theta  \\ -\sin \theta \amp\cos \theta \end{pmatrix}:\theta\in [0,2\pi)\right\}
+
+                me x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y}^{-1} \end{pmatrix}}_A \underbrace{\begin{pmatrix} 1           \amp \frac{x}{\sqrt{y}} \\        \amp      1  \end{pmatrix}}_N
+                | this is very general, an analogue of Gram-Schmidt.
+
+
+            observation
+                p
+                    me \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\}}
+                    | warning #[m NA \ne AN] elementwise
+
+            p
+                | Cartan: #[m KAK] (useful when dealing with rotationally invariant functions).
+
+            exercise
+                statement: p
+                    | Prove these decompositions.
+                    | Use the spectral theorem of symmetric matrices for the Cartan case.
+
+            paragraphs
+                title Classification of Motions
+
+                p
+                    |We classify by the number of fixed points in #[m \HH \cup \hat\RR], the extended real line.
+                    ul
+                        li Identity, infinitely many fixed points.
+                        li Parabolic, 1 fixed point in #[m \hat \RR] (#[m \infty]) #[m \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}]
+                        li Hyperbolic, 2 fixed points in #[m \RR] #[m (0,\infty)],  #[m \begin{pmatrix} a \amp   \\ \amp a^{-1} \end{pmatrix}].
+                        li Elliptic, 1 fixed point in #[m \HH] but not in #[m \overline \HH], #[m (i,-i)]  #[m \begin{pmatrix} \cos \theta \amp \sin \theta  \\ -\sin \theta \amp\cos \theta \end{pmatrix}].
+
+                note
+                    title for the future
+
+                    p
+                        | These notions are different when we consider #[m \gamma \in G(\QQ)] something can be #[m \QQ]-elliptic but #[m \RR]-hyperbolic.
+
+                p
+                    | So we have
+                    ul
+                        li Parabolic #[m | \tr | = 2]
+                        li Elliptic #[m | \tr | \lt 2]
+                        li Hyperbolic #[m | \tr | \gt 2]
 

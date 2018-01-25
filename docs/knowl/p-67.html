@@ -12,15 +12,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Observe: \(L\leadsto K(x,) = K_0(x-y)\text{.}\)</p>
+<p>Plug this into <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a></p>
 \begin{equation*}
-Lf(z) = \int_{\RR^2} f(w) K(z,w) \diff w
+\sum_{(n_1,n_2)\in \ZZ^2} K(n_1,n_2) = \sum_{N=0}^\infty r_2(N)K_0(N)
 \end{equation*}
-
+<p>as \(K\) only depends on \(n_1^2 + n_2^2\) we group terms based on this quantity, so</p>
 \begin{equation*}
-= \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in \ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
+r_2 = \#\{(n_1,n_2) \in \ZZ^2 : n_1^2 + n_2^2 = N\}\text{.}
 \end{equation*}
-<p>now \(\mathbf K\) is a function on \(\mathbf T^2 \times \mathbf T^2\text{.}\)</p>
-<span class="incontext"><a href="section-aut-forms-motivation.html#p-60">in-context</a></span>
+<span class="incontext"><a href="section-aut-forms-motivation.html#p-67">in-context</a></span>
 </body>
 </html>
