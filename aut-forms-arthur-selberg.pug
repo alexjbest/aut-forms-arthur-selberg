@@ -327,7 +327,7 @@ section#section-aut-forms-motivation
 
             observation
                 p
-                    | #[m L] commute with #[m \Delta].
+                    | #[m L] commutes with #[m \Delta].
             proof: p
                 | Based on the following:
                 me K(x,y) = K_0(x-y,0)
@@ -363,7 +363,7 @@ section#section-aut-forms-motivation
             p
                 |Let's consider integral operators on functions on #[m \ZZ^2 \backslash \RR^2 = \mathbf T^2].
             p
-                | Observe: #[m L\leadsto K(x,) = K_0(x-y)].
+                | Observe: #[m L\leadsto K(x,y) = K_0(x-y)].
                 me Lf(z) = \int_{\RR^2} f(w) K(z,w) \diff w
                 me = \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in \ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
                 | now #[m \mathbf K] is a function on #[m \mathbf T^2 \times \mathbf T^2].
@@ -372,7 +372,7 @@ section#section-aut-forms-motivation
                 me = \int_{\mathbf T^2} \mathbf K(z,z) \diff z = \int_{\mathbf T^2} \left( \sum_{n\in \ZZ^2} K_0(n)\right) \diff z = \sum_{n\in\ZZ^2} K_0(n)
 
                 |  Using sum of eigenvalues
-                me K(z,w) = \sum_{n\in \ZZ^2} K_0(z- + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
+                me K(z,w) = \sum_{n\in \ZZ^2} K_0(z-w + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
                 | so the trace is
                 me \sum_{\xi \in \ZZ^2} \lambda_\xi = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
                 | so we get to
@@ -512,7 +512,7 @@ section#section-aut-forms-motivation
             me \SL_2(\RR) \acts \HH
             | via linear fractional transformations, i.e.
             me g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\RR)
-            | this is the full group of holomorphic isometries of #[m \HH] to get all of them take #[m z\mapsto -\bar z] as well.
+            | this is the full group of holomorphic isometries of #[m \HH], to get all of them take #[m z\mapsto -\bar z] as well.
             me \HH = \SL_2(\HH) / \SO(2)
             | because #[m \SO(2) = \Stab_i(\SL_2(\RR))].
 
@@ -550,7 +550,7 @@ section#section-aut-forms-motivation
                 title Classification of Motions
 
                 p
-                    |We classify by the number of fixed points in #[m \HH \cup \hat\RR], the extended real line.
+                    |We classify by the number of fixed points in #[m \HH \cup \hat\RR],  for #[m \hat \RR] the extended real line.
                     ul
                         li Identity, infinitely many fixed points.
                         li Parabolic, 1 fixed point in #[m \hat \RR] (#[m \infty]) #[m \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}]
