@@ -243,11 +243,13 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-5" data-scroll="subsection-5">Euclidean Harmonic analysis</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-6" data-scroll="subsection-6">The hyperbolic plane \(\HH\)</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-7" data-scroll="subsection-7">\(\HH\) as a homogeneous space</a></li>
+<li><a href="section-aut-forms-motivation.html#subsection-8" data-scroll="subsection-8">\(\Delta_\HH\)</a></li>
+<li><a href="section-aut-forms-motivation.html#subsection-9" data-scroll="subsection-9">Integral operators</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated January 26, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated January 30, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -538,7 +540,7 @@ f(x,y) = \int\int_{\RR^2} \hat f(u,v) \phi_{u,v} (x,y) \diff u\diff v
 \hat f(u,v) = \int\int_{\RR^2}     f(u,v) \bar \phi_{u,v} (x,y) \diff y\diff x\text{.}
 \end{equation*}
 </article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">A little twist</span></h5>
-<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering invariant integral operators.</p>
+<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> integral operators.</p>
 <p id="p-47">Using the spectral theorem if we can find easier to diagonalise operators that commute we can find the eigenspaces for those to cut down the eigenspace.</p>
 <p id="p-48">Recall: an integral operator is</p>
 \begin{equation*}
@@ -555,14 +557,14 @@ g\cdot f(x) = f(g+x)\text{.}
 </article><article class="remark-like" id="observation-1"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.9</span>
 </h6>
-<p id="p-49">If \(L\) is invariant then the kernel \(K(x,y)\) is given by</p>
+<p id="p-49">If \(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> then the kernel \(K(x,y)\) is given by</p>
 \begin{equation*}
 K(x,y) = K_0(x-y)
 \end{equation*}
 <p>for some function \(K_0\text{.}\)</p></article><article class="proof" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6>
 <article class="case" id="case-1"><h6 class="heading"></h6>
 <p id="p-50">\((\Leftarrow)\) obvious</p></article><article class="case" id="case-2"><h6 class="heading"></h6>
-<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is invariant then</p>
+<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> then</p>
 \begin{equation*}
 \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
 \end{equation*}
@@ -826,7 +828,7 @@ g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\e
 <p>because \(\SO(2) = \Stab_i(\SL_2(\RR))\text{.}\)</p></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type" alt="Subsubsection 1.7.1 Several decompositions">
 <span class="type">Subsubsection</span><span class="codenumber">1.7.1</span><span class="title">Several decompositions</span>
 </h4>
-<p id="p-81">Cartesian: \(x+ iy\) then the invariant measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
+<p id="p-81">Cartesian: \(x+ iy\) then the <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
 <p id="p-82">Iwasawa: \(G = NAK\)</p>
 \begin{equation*}
 N = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}:n\in \RR\right\}
@@ -851,7 +853,7 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 \begin{equation*}
 \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\}}
 \end{equation*}
-<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally invariant functions).</p>
+<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> functions).</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.18</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-85">Prove these decompositions. Use the spectral theorem of symmetric matrices for the Cartan case.</p></article></div>
@@ -866,12 +868,185 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 <article class="remark-like" id="note-4"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.19</span><span class="title">for the future</span>
 </h6>
-<p id="p-87">These notions are different when we consider \(\gamma \in G(\QQ)\) something can be \(\QQ\)-elliptic but \(\RR\)-hyperbolic.</p></article><p id="p-88">So we have</p>
+<p id="p-87">These notions are different when we consider \(\gamma \in G(\QQ)\) something can be \(\QQ\)-elliptic but \(\RR\)-hyperbolic. This depends on the Jordan decomposition essentially, we can have such \(\gamma\) with no rational roots of the characteristic polynomial but which splits over \(\RR\text{.}\)</p></article><p id="p-88">So we have</p>
 <ul id="ul-6" style="list-style-type: disc;">
 <li id="li-15">Parabolic \(| \tr | = 2\)</li>
-<li id="li-16">Elliptic \(| \tr | \lt 2\)</li>
-<li id="li-17">Hyperbolic \(| \tr | \gt 2\)</li>
-</ul></article></section></section></section></div></main>
+<li id="li-16">(\(\RR\)-)Elliptic \(| \tr | \lt 2\)</li>
+<li id="li-17">(\(\RR\)-)Hyperbolic \(| \tr | \gt 2\)</li>
+</ul></article></section></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type" alt="Subsection 1.8 \(\Delta_\HH\)">
+<span class="type">Subsection</span><span class="codenumber">1.8</span><span class="title">\(\Delta_\HH\)</span>
+</h3>
+<article class="aside-like" id="aside-4"><p id="p-89">Lecture 4 30/1/2018</p></article><p id="p-90">For this section \(\Delta_\HH  = \Delta\text{.}\)</p>
+<article class="definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.20</span>
+</h6>
+<p id="p-91"></p>
+\begin{equation*}
+g\in \SL_2(\RR)
+\end{equation*}
+
+\begin{equation*}
+T_g f(z) = f(g\cdot z)
+\end{equation*}
+</article><article class="definition-like" id="definition-3"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.21</span>
+</h6>
+<p id="p-92">A linear operator \(L\) will be called <dfn class="terminology">invariant</dfn> if it commutes with \(T_g\) for all \(g\in \SL_2(\RR)\text{,}\) i.e.</p>
+\begin{equation*}
+L(T_g f) = T_g(Lf)\text{.}
+\end{equation*}
+</article><article class="remark-like" id="remark-2"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.22</span>
+</h6>
+<p id="p-93">On any Riemannian manifold \(\Delta\) can be characterised by: A diffeomorphism is an isometry iff it commutes with \(\Delta\text{.}\)</p></article><p id="p-94">\(\Delta\) in coordinates:</p>
+<p id="p-95">Cartesian</p>
+\begin{equation*}
+\Delta = y^2\left( \partder[^2]{x^2}  + \partder[^2]{y^2}\right) = -(z-\bar z)^2 \partder z \partder{\bar z}
+\end{equation*}
+
+\begin{equation*}
+\partder z= \frac 12 \left(\partder x - i \partder y\right)
+\end{equation*}
+
+\begin{equation*}
+\partder{\bar z}= \frac 12 \left(\partder x + i \partder y\right)
+\end{equation*}
+<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.23</span>
+</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> differential operator.</p></article></div>
+<p id="p-97">Polar:</p>
+\begin{equation*}
+\Delta = \partder[^2]{r^2}  + \frac{1}{\tanh(r)} \partder{r} + \frac{1}{(2\sinh(r))^2} \partder[^2]{\phi^2}
+\end{equation*}
+<p id="p-98">We will be interested in \(\Delta \acts\cinf(\Gamma \backslash \HH)\text{.}\)</p>
+<article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Eigenfunctions of \(\Delta\)</span></h5>
+<p id="p-99">This is a little subtle, lets take the definition of an eigenfunction to be</p>
+\begin{equation*}
+f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
+\end{equation*}
+<article class="remark-like" id="remark-3"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.24</span>
+</h6>
+<p id="p-100">\(\Delta\) is an “elliptic” operator with real analytic coefficients. This implies any eigenfunction is real analytic.</p></article><article class="remark-like" id="remark-4"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.25</span>
+</h6>
+<p id="p-101">\(\lambda = 0\) means \(f\) is harmonic.</p></article><p id="p-102">Some basic eigenfunctions: Lets try \(f(z) = f_0(y)\) independent of \(x\)</p>
+\begin{equation*}
+\Delta f = y^{2} \partder[^2]{y^2} f
+\end{equation*}
+<p>if \(f\) satisfies</p>
+\begin{equation*}
+(\Delta + \lambda)f = 0
+\end{equation*}
+<p>this implies \(f\) is a linear combination of \((y^s,y^{1-s})\) where \(s(1-s) = \lambda\) if \(\lambda \ne \frac 14\text{.}\)</p>
+<p id="p-103">If \(\lambda = \frac 14\) this gives \(y^{1/2}\) and \(\log (y)y^{1/2}\text{.}\) Note the symmetry! \(s \leftrightarrow 1-s\text{.}\)</p>
+<p id="p-104">Let's look at \(f(z)\) depending periodically on \(x\) (with period \(f\)). Separation of variables: try</p>
+\begin{equation*}
+f(z) = e(x) F(2\pi y)
+\end{equation*}
+<p>where the \(2\pi\) is really in both factors. This gives</p>
+\begin{equation*}
+\partder[^2]{x^2} f = -4\pi^2 f
+\end{equation*}
+
+\begin{equation*}
+\partder[^2]{y^2} f = 4\pi^2 e(x) F''(2\pi y)
+\end{equation*}
+<p>which gives</p>
+\begin{equation*}
+(\Delta + \lambda)f = 0 \iff y^2 4\pi^2 e(x) \left( -F(2\pi y)  + F''(2\pi y)+\lambda F(2\pi y) \right) = 0
+\end{equation*}
+<p>which implies</p>
+\begin{equation*}
+F''(2 \pi y) + (\lambda - 1) F(2\pi y) = 0
+\end{equation*}
+<p>this is a close relative of the Bessel differential equation.</p>
+\begin{equation*}
+F''(u) + \left( \frac{\lambda}{u^2} - 1\right) F(u) = 0\text{.}
+\end{equation*}
+<p id="p-105">This has two solutions</p>
+\begin{equation*}
+\left(\frac{2y}{\pi}\right)^{\frac 12} K_{s-\frac 12}(y) \sim e^{-2\pi y}\text{ as }y\to \infty
+\end{equation*}
+
+\begin{equation*}
+\left(2y\pi\right)^{\frac 12} I_{s-\frac 12}(y) \sim e^{2\pi y}\text{ as }y\to \infty
+\end{equation*}
+<p>intuition: as \(y\to\infty\) we have \(F'' - F = 0\) so \(e^{u}\) or \(e^{-u}\text{.}\)</p>
+<article class="remark-like" id="remark-5"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.26</span>
+</h6>
+<p id="p-106">If we insist on some “moderate growth” (at most polynomial in \(y\)) on the eigenfunction. The \(I_{s-\frac 12}\) solution can not contribute. (when we come to automorphic forms we will see that the definition is essentially eigenfunctions with moderate growth).</p></article><p id="p-107">So our periodic (in \(x\)) eigenfunction with (moderate growth) looks like</p>
+\begin{equation*}
+f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}
+\end{equation*}
+<article class="definition-like" id="def-whittaker"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.27</span><span class="title">whittaker functions</span>
+</h6>
+<p id="p-108">\(W_s(z)\) is called a Whittaker function.</p></article><p id="p-109">These exist for arbitrary lie groups, but we may not always be able to write eigenfunctions in terms of them in general though. They are a replacement for the exponential functions.</p>
+<article class="theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.28</span><span class="title">Spectral decomposition</span>
+</h6>
+<p id="p-110"></p>
+\begin{equation*}
+f(z) = \frac{1}{2\pi i} \int_{\frac 12}\int_\RR W_s(rz) f_s(r) \gamma_s(r) \diff s \diff r,\,s = \frac 12 + it
+\end{equation*}
+<p>where</p>
+\begin{equation*}
+f_s(r) = \int_{\HH} f(z) W_s(rz) \diff z
+\end{equation*}
+
+\begin{equation*}
+\gamma_s(r) = \frac{1}{2\pi |r|} t \sinh(\pi t)
+\end{equation*}
+<p>analogue of the Fourier inversion formula for \(\HH\text{.}\)</p></article><article class="theorem-like" id="theorem-5"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.29</span><span class="title">2</span>
+</h6>
+<p id="p-111">If \(f\) is actually periodic in \(x\) and \((\Delta + s(1-s)) f= 0\) with growth \(O(e^2pi y)\)</p>
+\begin{equation*}
+f(z) =  f_0(y) + \sum_{n=1}\infty  f_n W_s(nz)
+\end{equation*}
+<p>where \(f_0(y)\) is a combination of \(y^2, y^{1-s}\text{.}\)</p></article><article class="remark-like" id="note-5"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">1.30</span>
+</h6>
+<p id="p-112">We will be considering automorphic forms</p>
+\begin{equation*}
+\left\langle  \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\right \rangle \subseteq \Gamma \subseteq \SL_2(\ZZ)\text{.}
+\end{equation*}
+</article></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type" alt="Subsection 1.9 Integral operators">
+<span class="type">Subsection</span><span class="codenumber">1.9</span><span class="title">Integral operators</span>
+</h3>
+<p id="p-113">Recall the Cauchy integral formula for holomorphic functions</p>
+\begin{equation*}
+f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w = \int_{B_z} K(w,z) f(w) \diff w
+\end{equation*}
+<p>i.e. using an integral kernel, \(f\) is an eigenfunction for this operator.</p>
+<p id="p-114">Recall: \(L\) is an integral operator if</p>
+\begin{equation*}
+Lf(z) = \int_{\HH} K(z,w) f(w)\diff \underbrace{\mu(w)}_\frac{\diff u\diff v}{v^2} ,\,w = u+iv
+\end{equation*}
+<p>\(K\) will often be smooth of compact support for us. \(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> if it commutes with \(T_g\) for all \(g\text{.}\)</p>
+<article class="remark-like" id="observation-7"><h6 class="heading">
+<span class="type">Observation</span><span class="codenumber">1.31</span>
+</h6>
+<p id="p-115">\(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> iff</p>
+\begin{equation*}
+K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)
+\end{equation*}
+</article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-4" id="exercise-4"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.32</span>
+</h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-116">Show this.</p></article></div>
+<article class="definition-like" id="def-point-pair-invariant"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.33</span><span class="title">Point pair invariants</span>
+</h6>
+<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, p w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a></dfn>.</p></article><article class="remark-like" id="remark-6"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.34</span>
+</h6>
+<p id="p-118">A <a knowl="./knowl/def-point-pair-invariant.html" knowl-id="xref-def-point-pair-invariant" alt="Definition 1.33 Point pair invariants" title="Definition 1.33 Point pair invariants">point pair invariant</a> \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
+\begin{equation*}
+K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
+\end{equation*}
+<p>so an <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> operator is just a convolution operator.</p></article></section></section></div></main>
 </div>
 </body>
 </html>

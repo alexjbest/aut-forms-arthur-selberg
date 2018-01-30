@@ -562,11 +562,181 @@ section#section-aut-forms-motivation
 
                     p
                         | These notions are different when we consider #[m \gamma \in G(\QQ)] something can be #[m \QQ]-elliptic but #[m \RR]-hyperbolic.
+                        | This depends on the Jordan decomposition essentially, we can have such #[m \gamma] with no rational roots of the characteristic polynomial but which splits over #[m \RR].
 
                 p
                     | So we have
                     ul
                         li Parabolic #[m | \tr | = 2]
-                        li Elliptic #[m | \tr | \lt 2]
-                        li Hyperbolic #[m | \tr | \gt 2]
+                        li (#[m \RR]-)Elliptic #[m | \tr | \lt 2]
+                        li (#[m \RR]-)Hyperbolic #[m | \tr | \gt 2]
 
+
+    subsection
+        title #[m \Delta_\HH]
+
+        aside: p Lecture 4 30/1/2018
+
+        p
+            | For this section #[m \Delta_\HH  = \Delta].
+
+        definition
+            statement: p
+                me g\in \SL_2(\RR)
+                me T_g f(z) = f(g\cdot z)
+
+
+        definition
+            statement: p
+                | A linear operator #[m L] will be called #[term invariant] if it commutes with #[m T_g] for all #[m g\in \SL_2(\RR)], i.e.
+                me L(T_g f) = T_g(Lf)
+                | .
+
+        remark
+            p
+                | On any Riemannian manifold #[m \Delta] can be characterised by:
+                | A diffeomorphism is an isometry iff it commutes with #[m \Delta].
+
+        p
+            | #[m \Delta] in coordinates:
+        p
+            |Cartesian
+            me \Delta = y^2\left( \partder[^2]{x^2}  + \partder[^2]{y^2}\right) = -(z-\bar z)^2 \partder z \partder{\bar z}
+            me \partder z= \frac 12 \left(\partder x - i \partder y\right)
+            me \partder{\bar z}= \frac 12 \left(\partder x + i \partder y\right)
+
+        exercise
+            statement: p
+                | Show that #[m \Delta] is an invariant differential operator.
+
+        p
+            | Polar:
+            me \Delta = \partder[^2]{r^2}  + \frac{1}{\tanh(r)} \partder{r} + \frac{1}{(2\sinh(r))^2} \partder[^2]{\phi^2}
+
+        p
+            | We will be interested in #[m \Delta \acts\cinf(\Gamma \backslash \HH)].
+
+        paragraphs
+            title Eigenfunctions of #[m \Delta]
+
+            p
+                | This is a little subtle, lets take the definition of an eigenfunction to be
+                me f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
+
+            remark
+                p
+                    | #[m \Delta] is an #[q elliptic] operator with real analytic coefficients.
+                    | This implies any eigenfunction is real analytic.
+
+            remark
+                p
+                    | #[m \lambda = 0] means #[m f] is harmonic.
+
+            p
+                | Some basic eigenfunctions:
+                | Lets try #[m f(z) = f_0(y)] independent of #[m x]
+                me \Delta f = y^{2} \partder[^2]{y^2} f
+                | if #[m f] satisfies
+                me (\Delta + \lambda)f = 0
+                | this implies #[m f] is a linear combination of #[m (y^s,y^{1-s})] where #[m s(1-s) = \lambda] if #[m \lambda \ne \frac 14].
+            p
+                |If #[m \lambda = \frac 14] this gives #[m y^{1/2}] and #[m \log (y)y^{1/2}].
+                | Note the symmetry! #[m s \leftrightarrow 1-s].
+
+            p
+                | Let's look at #[m f(z)] depending periodically on #[m x] (with period #[m f]).
+                | Separation of variables: try
+                me f(z) = e(x) F(2\pi y)
+                | where the #[m 2\pi] is really in both factors.
+                | This gives
+                me \partder[^2]{x^2} f = -4\pi^2 f
+                me \partder[^2]{y^2} f = 4\pi^2 e(x) F''(2\pi y)
+                | which gives
+                me (\Delta + \lambda)f = 0 \iff y^2 4\pi^2 e(x) \left( -F(2\pi y)  + F''(2\pi y)+\lambda F(2\pi y) \right) = 0
+                | which implies
+                me F''(2 \pi y) + (\lambda - 1) F(2\pi y) = 0
+                | this is a close relative of the Bessel differential equation.
+                me F''(u) + \left( \frac{\lambda}{u^2} - 1\right) F(u) = 0
+                | .
+            p
+                | This has two solutions
+                me \left(\frac{2y}{\pi}\right)^{\frac 12} K_{s-\frac 12}(y) \sim e^{-2\pi y}\text{ as }y\to \infty
+                me \left(2y\pi\right)^{\frac 12} I_{s-\frac 12}(y) \sim e^{2\pi y}\text{ as }y\to \infty
+                | intuition: as #[m y\to\infty] we have #[m F'' - F = 0] so #[m e^{u}] or #[m e^{-u}].
+
+            remark
+                p
+                    | If we insist on some #[q moderate growth] (at most polynomial in #[m y]) on the eigenfunction.
+                    | The #[m I_{s-\frac 12}] solution can not contribute.
+                    | (when we come to automorphic forms we will see that the definition is essentially eigenfunctions with moderate growth).
+
+            p
+                | So our periodic (in #[m x]) eigenfunction with (moderate growth) looks like
+                me f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}
+
+            definition#def-whittaker
+                title whittaker functions
+                statement: p
+                    | #[m W_s(z)] is called a Whittaker function.
+
+            p
+                | These exist for arbitrary lie groups, but we may not always be able to write eigenfunctions in terms of them in general though.
+                | They are a replacement for the exponential functions.
+
+            theorem
+                title Spectral decomposition
+                statement: p
+                    me f(z) = \frac{1}{2\pi i} \int_{\frac 12}\int_\RR W_s(rz) f_s(r) \gamma_s(r) \diff s \diff r,\,s = \frac 12 + it
+                    | where
+                    me f_s(r) = \int_{\HH} f(z) W_s(rz) \diff z
+                    me \gamma_s(r) = \frac{1}{2\pi |r|} t \sinh(\pi t)
+                    | analogue of the Fourier inversion formula for #[m \HH].
+
+            theorem
+                title 2
+                statement: p
+                    | If #[m f] is actually periodic in #[m x] and #[m (\Delta + s(1-s)) f= 0] with growth #[m O(e^2pi y)]
+                    me f(z) =  f_0(y) + \sum_{n=1}\infty  f_n W_s(nz)
+                    | where #[m f_0(y)] is a combination of #[m y^2, y^{1-s}].
+
+            note
+                statement: p
+                    | We will be considering automorphic forms
+                    me \left\langle  \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\right \rangle \subseteq \Gamma \subseteq \SL_2(\ZZ)
+                    |.
+
+    subsection
+        title Integral operators
+
+        p
+            | Recall the Cauchy integral formula for holomorphic functions
+            me f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w = \int_{B_z} K(w,z) f(w) \diff w
+            | i.e. using an integral kernel, #[m f] is an eigenfunction for this operator.
+
+        p
+            | Recall: #[m L] is an integral operator if
+            me Lf(z) = \int_{\HH} K(z,w) f(w)\diff \underbrace{\mu(w)}_\frac{\diff u\diff v}{v^2} ,\,w = u+iv
+            | #[m K] will often be smooth of compact support for us.
+            | #[m L] is invariant if it commutes with #[m T_g] for all #[m g].
+
+        observation
+            statement: p
+                | #[m L] is invariant iff
+                me K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)
+
+        exercise
+            statement: p
+                | Show this.
+
+        definition#def-point-pair-invariant
+            title Point pair invariants
+            statement: p
+                | A function #[m K\colon \HH \times \HH \to \CC] that satisfies #[m K(gz, p w) = K(z,w)] is called a #[term point pair invariant].
+
+
+        remark
+            p
+
+                | A point pair invariant #[m K(z,w)] depends only of the distance between #[m z,w] i.e.
+                me K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
+                | so an invariant operator is just a convolution operator.
