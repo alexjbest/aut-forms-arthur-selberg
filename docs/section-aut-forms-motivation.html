@@ -245,11 +245,12 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-7" data-scroll="subsection-7">\(\HH\) as a homogeneous space</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-8" data-scroll="subsection-8">\(\Delta_\HH\)</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-9" data-scroll="subsection-9">Integral operators</a></li>
+<li><a href="section-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated January 30, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 1, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -318,7 +319,7 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}
 \end{equation*}
 <p>converges absolutely for \(s \gt 1\text{.}\)</p>
-<article class="theorem-like" id="theorem-2"><h6 class="heading">
+<article class="theorem-like" id="thm-riemann-zeta-continuation"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.3</span><span class="title">Riemann</span>
 </h6>
 <p id="p-17">\(\zeta(s)\) has analytic continuation up to \(\Re(s) \gt 0\) with a simple pole at \(s=  1\) residue \(1\text{.}\) i.e.</p>
@@ -448,7 +449,7 @@ then
 \begin{equation*}
 \HH = \{z\in \CC : \Im(z) \gt 0\}\text{.}
 \end{equation*}
-<p id="p-30">Historically elliptic integrals lead to elliptic functions, and modular forms and elliptic curves.</p>
+<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.37 " title="Definition 1.37 ">modular forms</a> and elliptic curves.</p>
 <article class="remark-like" id="note-2"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.4</span>
 </h6>
@@ -540,7 +541,7 @@ f(x,y) = \int\int_{\RR^2} \hat f(u,v) \phi_{u,v} (x,y) \diff u\diff v
 \hat f(u,v) = \int\int_{\RR^2}     f(u,v) \bar \phi_{u,v} (x,y) \diff y\diff x\text{.}
 \end{equation*}
 </article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">A little twist</span></h5>
-<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> integral operators.</p>
+<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operators.</p>
 <p id="p-47">Using the spectral theorem if we can find easier to diagonalise operators that commute we can find the eigenspaces for those to cut down the eigenspace.</p>
 <p id="p-48">Recall: an integral operator is</p>
 \begin{equation*}
@@ -557,14 +558,14 @@ g\cdot f(x) = f(g+x)\text{.}
 </article><article class="remark-like" id="observation-1"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.9</span>
 </h6>
-<p id="p-49">If \(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> then the kernel \(K(x,y)\) is given by</p>
+<p id="p-49">If \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> then the kernel \(K(x,y)\) is given by</p>
 \begin{equation*}
 K(x,y) = K_0(x-y)
 \end{equation*}
 <p>for some function \(K_0\text{.}\)</p></article><article class="proof" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6>
 <article class="case" id="case-1"><h6 class="heading"></h6>
 <p id="p-50">\((\Leftarrow)\) obvious</p></article><article class="case" id="case-2"><h6 class="heading"></h6>
-<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> then</p>
+<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> then</p>
 \begin{equation*}
 \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
 \end{equation*}
@@ -828,7 +829,7 @@ g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\e
 <p>because \(\SO(2) = \Stab_i(\SL_2(\RR))\text{.}\)</p></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type" alt="Subsubsection 1.7.1 Several decompositions">
 <span class="type">Subsubsection</span><span class="codenumber">1.7.1</span><span class="title">Several decompositions</span>
 </h4>
-<p id="p-81">Cartesian: \(x+ iy\) then the <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
+<p id="p-81">Cartesian: \(x+ iy\) then the <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
 <p id="p-82">Iwasawa: \(G = NAK\)</p>
 \begin{equation*}
 N = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}:n\in \RR\right\}
@@ -853,7 +854,7 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 \begin{equation*}
 \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\}}
 \end{equation*}
-<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> functions).</p>
+<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> functions).</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.18</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-85">Prove these decompositions. Use the spectral theorem of symmetric matrices for the Cartan case.</p></article></div>
@@ -880,7 +881,7 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 <article class="definition-like" id="definition-2"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.20</span>
 </h6>
-<p id="p-91"></p>
+<p id="p-91">We have the translation operators</p>
 \begin{equation*}
 g\in \SL_2(\RR)
 \end{equation*}
@@ -913,7 +914,7 @@ L(T_g f) = T_g(Lf)\text{.}
 \end{equation*}
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.23</span>
-</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> differential operator.</p></article></div>
+</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> differential operator.</p></article></div>
 <p id="p-97">Polar:</p>
 \begin{equation*}
 \Delta = \partder[^2]{r^2}  + \frac{1}{\tanh(r)} \partder{r} + \frac{1}{(2\sinh(r))^2} \partder[^2]{\phi^2}
@@ -1025,11 +1026,11 @@ f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w = \int_{B_z} K(w,z) 
 \begin{equation*}
 Lf(z) = \int_{\HH} K(z,w) f(w)\diff \underbrace{\mu(w)}_\frac{\diff u\diff v}{v^2} ,\,w = u+iv
 \end{equation*}
-<p>\(K\) will often be smooth of compact support for us. \(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> if it commutes with \(T_g\) for all \(g\text{.}\)</p>
+<p>\(K\) will often be smooth of compact support for us. \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> if it commutes with \(T_g\) for all \(g\text{.}\)</p>
 <article class="remark-like" id="observation-7"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.31</span>
 </h6>
-<p id="p-115">\(L\) is <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> iff</p>
+<p id="p-115">\(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> iff</p>
 \begin{equation*}
 K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 \end{equation*}
@@ -1039,14 +1040,191 @@ K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 <article class="definition-like" id="def-point-pair-invariant"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.33</span><span class="title">Point pair invariants</span>
 </h6>
-<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a></dfn>. This was first introduced by Selberg.</p></article><article class="remark-like" id="remark-6"><h6 class="heading">
+<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a></dfn>. This was first introduced by Selberg.</p></article><p id="p-118">Invariant integral operators are convolution opertators.</p>
+<article class="remark-like" id="remark-6"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.34</span>
 </h6>
-<p id="p-118">A <a knowl="./knowl/def-point-pair-invariant.html" knowl-id="xref-def-point-pair-invariant" alt="Definition 1.33 Point pair invariants" title="Definition 1.33 Point pair invariants">point pair invariant</a> \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
+<p id="p-119">A <a knowl="./knowl/def-point-pair-invariant.html" knowl-id="xref-def-point-pair-invariant" alt="Definition 1.33 Point pair invariants" title="Definition 1.33 Point pair invariants">point pair invariant</a> \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
 \begin{equation*}
 K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
 \end{equation*}
-<p>so an <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">invariant</a> operator is just a convolution operator.</p></article></section></section></div></main>
+<p>so an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> operator is just a convolution operator.</p></article><article class="aside-like" id="aside-5"><p id="p-120">Lecture 4 27/1/2018</p></article><article class="theorem-like" id="theorem-6"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.35</span>
+</h6>
+<p id="p-121">If \((\Delta + \lambda)f \equiv 0\) and \(L\) is an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator. (\(\Rightarrow\)) Then there exists</p>
+\begin{equation*}
+\Lambda(\lambda,K)
+\end{equation*}
+<p>such that</p>
+\begin{equation*}
+L(f)(z) = \Lambda(\lambda, K) f(z)\text{.}
+\end{equation*}
+<p id="p-122">(\(\Leftarrow\))  Moreover if \(f\) is an eigenfunction of all <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> operators then \(f\) is an eigenfunction of \(\Delta\text{.}\)</p></article><article class="proof" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6>
+<article class="case" id="case-3"><h6 class="heading"></h6>
+<p id="p-123">(\(\Leftarrow\)) Let \(L_K\) be</p>
+\begin{equation*}
+L_K(f)(z) = \int_\HH f(w) K(z,w) \diff \mu (z)
+\end{equation*}
+<p>then</p>
+\begin{equation*}
+L_K(f)(z) = \Lambda_K f(z)
+\end{equation*}
+<p>(if \(\Lambda_K = 0\) for all \(K\) then \(f \equiv 0\)). . So that</p>
+\begin{equation*}
+\Delta f(z) = \Delta \frac{1}{\Lambda_K} L_K f(z)
+\end{equation*}
+
+\begin{equation*}
+\frac{1}{ \Lambda_K} \int_\HH f(w) \Delta_z K(w,z) \diff \mu(w)
+\end{equation*}
+<p id="p-124">Note \(f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)\) is another <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator (exercise, show this).</p></article><article class="case" id="case-4"><h6 class="heading"></h6>
+<p id="p-125">We will prove an integral representation that looks like the Cauchy integral formula</p>
+\begin{equation*}
+f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w\text{.}
+\end{equation*}
+<p>Let for \(w\in \HH\text{,}\)</p>
+\begin{equation*}
+\Phi_w(f)(z) = \int_{G_w} f(gz) \diff\mu(g)
+\end{equation*}
+<p>where \(G_w\) is the stabiliser of \(w\) in \(\SL_2(\RR)\) and \(\diff\mu\) is normalized so that \(G_w\) has volume 1.</p>
+<p id="p-126">Facts:</p>
+<ol id="ol-2" style="list-style-type: decimal;">
+<li id="li-18">If \(f\) is an eigenfunction of \(\Delta\) with eigenvalue \((\Delta + \lambda)f \equiv 0\text{,}\) \(\lambda = s(1-s)\) then there exists a unique function \(W(z,w)\) s.t.
+\begin{equation*}
+\Phi_w(f)(z) = W(z,w) f(w)
+\end{equation*}
+
+\begin{equation*}
+W(w,w) = 1
+\end{equation*}
+
+\begin{equation*}
+(\Delta_z + \lambda)W(z,w) \equiv 0
+\end{equation*}
+
+\begin{equation*}
+W \text{ is point pair invariant}\text{.}
+\end{equation*}
+</li>
+<li id="li-19">
+\begin{equation*}
+L(\Phi_z(f)(z) = L(f)(z)
+\end{equation*}
+as
+\begin{equation*}
+L(\Phi_z(f))(z) = \int_\HH \Phi_z(f) (w) K(w,z) \diff \mu(w)
+\end{equation*}
+
+\begin{equation*}
+\int_\HH \int_{B_z} f(gw) \diff \mu(g) K(w,z) \diff \mu(w)
+\end{equation*}
+
+\begin{equation*}
+\int_{B_z} \int_\HH f(w)  \underbrace{K(g\inv w,z)}_{=K(w,gz) = K(w,z)} \diff \mu(w)\diff \mu(g)
+\end{equation*}
+</li>
+</ol>
+<p id="p-127">Now returning to the proof. Let \((\Delta + \lambda)f  \equiv 0\text{,}\) \(L\) <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a>.</p>
+\begin{equation*}
+Lf(z) = L(\Phi_zf)(z)
+\end{equation*}
+
+\begin{equation*}
+= \int_\HH \Phi_z(f) (w) K(z,w) \diff \mu(w)
+\end{equation*}
+
+\begin{equation*}
+= \int_\HH W(w,z) f(w) K(z,w) \diff \mu(w)
+\end{equation*}
+
+\begin{equation*}
+\left\{\int_\HH W(w,z) K(z,w) \diff \mu(w)\right\} f(z)
+\end{equation*}
+<p id="p-128">Claim: \(\{\cdots\}\) depends only on \(K\) and \(\lambda\) not \(z\text{.}\) Proof: Let \(z_1,z_2 \in \HH\) and pick \(g\in \SL_2(\RR)\) \(gz_1 = z_2\text{.}\)</p>
+\begin{equation*}
+\int_\HH W(w,z_2)K(z_2, w) \diff \mu(w)
+\end{equation*}
+
+\begin{equation*}
+= \int_\HH W(w,gz_1) K(gz_1,w) \diff \mu(w)
+\end{equation*}
+
+\begin{equation*}
+= \int_\HH W(g\inv w,z_1) K(z_1,g\inv w) \diff \mu(w)
+\end{equation*}
+
+\begin{equation*}
+= \int_\HH W( w,z_1) K(z_1, w) \diff \mu(w)\text{.}
+\end{equation*}
+</article></article><p id="p-129">Upshot so far: <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
+<article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Digression: Ramanujan conjecture</span></h5>
+<p id="p-130">A weight \(k\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.38 Cusp forms" title="Definition 1.38 Cusp forms">cusp form</a>, eigenfunction of the Hecke operators implies</p>
+\begin{equation*}
+|\lambda_p| \le 2 p^{\frac{k-1}{2}}\text{,}
+\end{equation*}
+<p>“correct” normalisation is \(|\tilde \lambda_p| \le 2\text{.}\)</p>
+<p id="p-131">This is about the components at \(p\) but there is also a component at infinity.</p>
+<p id="p-132">Selberg's eigenvalue conjecture: \(\phi\) is a cuspidal automorphic (Maass) form with eigenvalue \(\lambda = s(1-s)\) implies \(s = \frac 12 + it\text{,}\) \(t\in \RR\) i.e. \(|\lambda| \ge \frac 14\text{.}\)</p></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Back to \(\HH\)</span></h5>
+<p id="p-133">If we have \((\Delta + \lambda) f = 0\) can we say anything about \(\lambda\text{?}\)</p>
+<article class="theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">1.36</span>
+</h6>
+<p id="p-134"></p>
+\begin{equation*}
+\lambda\in \RR,\,\lambda\ge 0
+\end{equation*}
+</article><article class="proof" id="proof-8"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-135">Introduce the Petersson inner product</p>
+\begin{equation*}
+\pair FG  = \int_\HH F(z) \overline{G(z)} \diff \mu(z)\text{.}
+\end{equation*}
+<p>Now</p>
+\begin{equation*}
+\pair{-\Delta F}{G} = \int_\HH \nabla F \overline{\nabla G} \diff \mu(z)
+\end{equation*}
+
+\begin{equation*}
+(\Delta F= \nabla\cdot \nabla F)
+\end{equation*}
+<p>exercise: check this. So \(\pair {-\Delta F}{G} = \pair {F}{-\Delta G}\) which gives \(\lambda \in \RR\text{.}\)</p>
+\begin{equation*}
+\pair{-\Delta F}{F} \ge 0 \implies \lambda \ge 0\text{.}
+\end{equation*}
+</article><p id="p-136">For the \(\frac14\) bound one needs to work a little harder. Consider the Dirichlet problem</p>
+\begin{equation*}
+(\Delta + \lambda)f \equiv 0 \text{ inside }D
+\end{equation*}
+
+\begin{equation*}
+f \equiv 0 \text{ on }\partial D
+\end{equation*}
+<p>we will get back to this next time.</p>
+<p id="p-137">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.38 Cusp forms" title="Definition 1.38 Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type" alt="Subsection 1.10 Automorphic forms">
+<span class="type">Subsection</span><span class="codenumber">1.10</span><span class="title">Automorphic forms</span>
+</h3>
+<p id="p-138">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.37 " title="Definition 1.37 ">modular form</a> as we involved square roots</p>
+\begin{equation*}
+\theta (t) \leftrightarrow \theta(\frac 1t)\text{.}
+\end{equation*}
+<article class="definition-like" id="def-modular-function"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.37</span>
+</h6>
+<p id="p-139">A <dfn class="terminology">modular function</dfn> is some</p>
+\begin{equation*}
+f\colon \HH \to \CC
+\end{equation*}
+<p>with</p>
+\begin{equation*}
+f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\ZZ)
+\end{equation*}
+<p>where, \(f\) is meromorphic on \(\HH\) including \(\infty\text{.}\) It is called a <dfn class="terminology">modular form</dfn> if it is indeed holomorphic at infinity.</p></article><article class="definition-like" id="def-cusp-form"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.38</span><span class="title">Cusp forms</span>
+</h6>
+<p id="p-140">\(f\) is a <dfn class="terminology">cusp form</dfn> if</p>
+\begin{equation*}
+\int_0^1 f(x+z) \diff x = 0\, \forall z\text{.}
+\end{equation*}
+</article></section></section></div></main>
 </div>
 </body>
 </html>

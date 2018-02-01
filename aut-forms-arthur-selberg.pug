@@ -86,7 +86,7 @@ section#section-aut-forms-motivation
             me \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}
             | converges absolutely for #[m s \gt 1].
 
-        theorem
+        theorem#thm-riemann-zeta-continuation
             title Riemann
             statement: p
                 | #[m \zeta(s)] has analytic continuation up to #[m \Re(s) \gt 0] with a simple pole at #[m s=  1] residue #[m 1].
@@ -582,6 +582,7 @@ section#section-aut-forms-motivation
 
         definition
             statement: p
+                | We have the translation operators
                 me g\in \SL_2(\RR)
                 me T_g f(z) = f(g\cdot z)
 
@@ -735,6 +736,9 @@ section#section-aut-forms-motivation
                 | A function #[m K\colon \HH \times \HH \to \CC] that satisfies #[m K(gz, g w) = K(z,w)] is called a #[term point pair invariant].
                 | This was first introduced by Selberg.
 
+        p
+            | Invariant integral operators are convolution opertators.
+
 
         remark
             p
@@ -742,3 +746,145 @@ section#section-aut-forms-motivation
                 | A point pair invariant #[m K(z,w)] depends only of the distance between #[m z,w] i.e.
                 me K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
                 | so an invariant operator is just a convolution operator.
+
+        aside: p Lecture 4 27/1/2018
+
+        theorem
+            statement
+                p
+                    | If #[m (\Delta + \lambda)f \equiv 0] and #[m L] is an invariant integral operator.
+                    | (#[m \Rightarrow]) Then there exists
+                    me \Lambda(\lambda,K)
+
+                    | such that
+                    me L(f)(z) = \Lambda(\lambda, K) f(z)
+                    | .
+                p
+                    |(#[m \Leftarrow])  Moreover if #[m f] is an eigenfunction of all invariant operators then #[m f] is an eigenfunction of #[m \Delta].
+            proof
+                proofcase
+                    p
+                        | (#[m \Leftarrow]) Let #[m L_K] be
+                        me L_K(f)(z) = \int_\HH f(w) K(z,w) \diff \mu (z)
+                        | then
+                        me L_K(f)(z) = \Lambda_K f(z)
+                        | (if #[m \Lambda_K = 0] for all #[m K] then #[m f \equiv 0]).
+                        | . So that
+                        me \Delta f(z) = \Delta \frac{1}{\Lambda_K} L_K f(z)
+                        me \frac{1}{ \Lambda_K} \int_\HH f(w) \Delta_z K(w,z) \diff \mu(w)
+                    p
+                        | Note #[m f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)] is another invariant integral operator (exercise, show this).
+                proofcase
+                    p
+                        | We will prove an integral representation that looks like the Cauchy integral formula
+                        me f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w
+                        | . Let for #[m w\in \HH],
+                        me \Phi_w(f)(z) = \int_{G_w} f(gz) \diff\mu(g)
+                        |where #[m G_w] is the stabiliser of #[m w] in #[m \SL_2(\RR)] and #[m \diff\mu] is normalized so that #[m G_w] has volume 1.
+                    p
+                        | Facts:
+                        ol
+                            li
+                                | If #[m f] is an eigenfunction of #[m \Delta] with eigenvalue #[m (\Delta + \lambda)f \equiv 0], #[m \lambda = s(1-s)]
+                                | then there exists a unique function #[m W(z,w)] s.t.
+                                me \Phi_w(f)(z) = W(z,w) f(w)
+                                me W(w,w) = 1
+                                me (\Delta_z + \lambda)W(z,w) \equiv 0
+                                me W \text{ is point pair invariant}
+                                | .
+                            li
+                                me L(\Phi_z(f)(z) = L(f)(z)
+                                | as
+                                me L(\Phi_z(f))(z) = \int_\HH \Phi_z(f) (w) K(w,z) \diff \mu(w)
+                                me \int_\HH \int_{B_z} f(gw) \diff \mu(g) K(w,z) \diff \mu(w)
+                                me \int_{B_z} \int_\HH f(w)  \underbrace{K(g\inv w,z)}_{=K(w,gz) = K(w,z)} \diff \mu(w)\diff \mu(g)
+                    p
+                        | Now returning to the proof.
+                        | Let #[m (\Delta + \lambda)f  \equiv 0], #[m L] invariant.
+                        me Lf(z) = L(\Phi_zf)(z)
+                        me = \int_\HH \Phi_z(f) (w) K(z,w) \diff \mu(w)
+                        me = \int_\HH W(w,z) f(w) K(z,w) \diff \mu(w)
+                        me \left\{\int_\HH W(w,z) K(z,w) \diff \mu(w)\right\} f(z)
+                    p
+                        | Claim: #[m \{\cdots\}] depends only on #[m K] and #[m \lambda] not #[m z].
+                        | Proof: Let #[m z_1,z_2 \in \HH] and pick #[m g\in \SL_2(\RR)] #[m gz_1 = z_2].
+                        me \int_\HH W(w,z_2)K(z_2, w) \diff \mu(w)
+                        me = \int_\HH W(w,gz_1) K(gz_1,w) \diff \mu(w)
+                        me = \int_\HH W(g\inv w,z_1) K(z_1,g\inv w) \diff \mu(w)
+                        me = \int_\HH W( w,z_1) K(z_1, w) \diff \mu(w)
+                        |.
+
+        p
+            | Upshot so far: Poisson summation is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways.
+            | In the non-euclidean setting we can do something similar, but not so recognisable.
+
+        paragraphs
+            title Digression: Ramanujan conjecture
+            p
+                | A weight #[m k] cusp form, eigenfunction of the Hecke operators implies
+                me |\lambda_p| \le 2 p^{\frac{k-1}{2}}
+                | , #[q correct] normalisation is #[m |\tilde \lambda_p| \le 2].
+            p
+                | This is about the components at #[m p] but there is also a component at infinity.
+            p
+                | Selberg's eigenvalue conjecture:
+                | #[m \phi] is a cuspidal automorphic (Maass) form with eigenvalue #[m \lambda = s(1-s)] implies #[m s = \frac 12 + it], #[m t\in \RR] i.e. #[m |\lambda| \ge \frac 14].
+                // TODO this is like twisting by canonical bundle in Serre duality.
+        paragraphs
+            title Back to #[m \HH]
+
+            p
+                | If we have #[m (\Delta + \lambda) f = 0] can we say anything about #[m \lambda]?
+
+            proposition
+                statement
+                    p
+                        me \lambda\in \RR,\,\lambda\ge 0
+                proof
+                    p
+                        | Introduce the Petersson inner product
+                        me \pair FG  = \int_\HH F(z) \overline{G(z)} \diff \mu(z)
+                        | . Now
+                        me \pair{-\Delta F}{G} = \int_\HH \nabla F \overline{\nabla G} \diff \mu(z)
+                        me (\Delta F= \nabla\cdot \nabla F)
+                        | exercise: check this.
+                        | So #[m \pair {-\Delta F}{G} = \pair {F}{-\Delta G}] which gives #[m \lambda \in \RR].
+                        me \pair{-\Delta F}{F} \ge 0 \implies \lambda \ge 0
+                        | .
+
+            p
+                | For the #[m \frac14] bound one needs to work a little harder. Consider the Dirichlet problem
+                me (\Delta + \lambda)f \equiv 0 \text{ inside }D
+                me f \equiv 0 \text{ on }\partial D
+                | we will get back to this next time.
+            p
+                | The spectrum of #[m \Delta] on #[m \HH] has #[m \lambda = s(1-s)], #[m s = \frac 12 + it].
+                | If we consider the quotient #[m \Gamma \backslash \HH] there is a possibility for #[m t = t_{\RR} + it_{\CC}] where #[m 0\le  t_\CC \le \frac 12].
+                | Selberg's conjecture is that these extra ones don't appear for cusp forms.
+                | This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.
+
+
+    subsection
+        title Automorphic forms
+        p
+            | These are functions  on #[m \HH] that are very symmetric.
+            | We already saw one in the first lecture, #[m \theta(t)] in the proof of #[xref(ref="thm-riemann-zeta-continuation")/].
+            | Its not quite, instead it is a #[em half-integral] weight modular form as we involved square roots
+            me \theta (t) \leftrightarrow \theta(\frac 1t)
+            |.
+
+        definition#def-modular-function
+            statement: p
+                | A #[term modular function] is some
+                me f\colon \HH \to \CC
+                | with
+                me f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\ZZ)
+                | where, #[m f] is meromorphic on #[m \HH] including #[m \infty].
+                | It is called a #[term modular form] if it is indeed holomorphic at infinity.
+
+        definition#def-cusp-form
+            title Cusp forms
+            statement: p
+                | #[m f] is a #[term cusp form] if
+                me \int_0^1 f(x+z) \diff x = 0\, \forall z
+                | .
