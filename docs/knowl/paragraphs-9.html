@@ -16,79 +16,103 @@
 <article class="theorem-like"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">1.36</span>
 </h6>
+<div class="displaymath">
 \begin{equation*}
 \lambda\in \RR,\,\lambda\ge 0
 \end{equation*}
-</article><article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+</div></article><article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
 <p>Introduce the Petersson inner product</p>
+<div class="displaymath">
 \begin{equation*}
 \pair FG  = \int_\HH F(z) \overline{G(z)} \diff \mu(z)\text{.}
 \end{equation*}
+</div>
 <p>Now</p>
+<div class="displaymath">
 \begin{equation*}
 \pair{-\Delta F}{G} = \int_\HH \nabla F \cdot \overline{\nabla G} \diff x\diff y
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 (\Delta F= \nabla\cdot \nabla F)
 \end{equation*}
+</div>
 <p>exercise: check this. So \(\pair {-\Delta F}{G} = \pair {F}{-\Delta G}\) which gives \(\lambda \in \RR\text{.}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \pair{-\Delta F}{F} \ge 0 \implies \lambda \ge 0\text{.}
 \end{equation*}
-</article><p>For the \(\frac14\) bound one needs to work a little harder.</p>
+</div></article><p>For the \(\frac14\) bound one needs to work a little harder.</p>
 <article class="theorem-like"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">1.37</span>
 </h6>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda) \equiv 0 \implies \lambda \ge \frac 14\text{.}
 \end{equation*}
-</article><article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+</div></article><article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
 <p>Let \(D\subseteq \HH\) be a (nice) domain. Consider the Dirichlet problem</p>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda)f \equiv 0 \text{ inside }D
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 f \equiv 0 \text{ on }\partial D\text{.}
 \end{equation*}
+</div>
 <p>Define</p>
+<div class="displaymath">
 \begin{equation*}
 \pair FG _D= \int_D F(z) \overline{G(z)} \diff \mu(z)\text{.}
 \end{equation*}
+</div>
 <p>Then</p>
+<div class="displaymath">
 \begin{equation*}
 \pair{-\Delta F}{G}_D = \int \nabla F \cdot \overline{\nabla G} \diff x\diff y
 \end{equation*}
+</div>
 <p>(exercise, show this).</p>
+<div class="displaymath">
 \begin{equation}
 \lambda\|F\|^2 = \pair{-\Delta F}{F} = \int_D \left(\left(\partder[F]{x}\right)^2 + \left(\partder[F]{y}\right)^2\right) \frac{\diff x\diff y}{y^2} \ge \int_D \left(\partder[F]{y}\right)^2\diff x\diff y\tag{1.1}
 \end{equation}
+</div>
 <p>For every fixed \(x\text{:}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \int F^2 \frac{\diff y}{y^2} = 2 \int F\partder[F]{y} \frac{\diff y}{y}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \implies \int_D F^2 \frac{\diff x \diff y}{y^2}  = 2\int F\partder[F]{y} \frac{\diff x \diff y}{y}\text{.}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \implies  2\int \left| \frac Fy \partder[F]{y}\right | \diff x \diff y \le 2\left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation}
 \implies \frac12\int_D \frac{F^2}{y^2} \diff x \diff y \le \left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12\tag{1.2}
 \end{equation}
+</div>
 <p>previous two imply</p>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{4\lambda} \int_D \left(\partder[F]{y}\right)^2 \diff x \diff y \le \frac 14 \int_D \frac{F^2}{y^2} \diff x \diff y \le \int_D \left(\partder[F]{y}\right)^2 \diff x\diff y
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{4\lambda}\le 1 \implies \lambda \ge \frac 14\text{.}
 \end{equation*}
-</article><article class="remark-like"><h6 class="heading">
+</div></article><article class="remark-like"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.38</span>
 </h6>
 <p>In <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a> we restricted to the \(1/2\) line, this is a reincarnation of \(\lambda \ge \frac 14\text{.}\) Only certain functions contributed, similar to the way only the unitaries \(e^{2\pi ix\xi}\) contribute to a fourier expansion, not all characters of \(\RR\text{.}\)</p></article><p>The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article><span class="incontext"><a href="section-aut-forms-motivation.html#paragraphs-9">in-context</a></span>

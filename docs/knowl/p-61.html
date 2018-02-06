@@ -13,21 +13,29 @@
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <p>Trace of this operator</p>
+<div class="displaymath">
 \begin{equation*}
 = \int_{\mathbf T^2} \mathbf K(z,z) \diff z = \int_{\mathbf T^2} \left( \sum_{n\in \ZZ^2} K_0(n)\right) \diff z = \sum_{n\in\ZZ^2} K_0(n)
 \end{equation*}
+</div>
 <p>Using sum of eigenvalues</p>
+<div class="displaymath">
 \begin{equation*}
 K(z,w) = \sum_{n\in \ZZ^2} K_0(z-w + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
 \end{equation*}
+</div>
 <p>so the trace is</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{\xi \in \ZZ^2} \lambda_\xi = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
 \end{equation*}
+</div>
 <p>so we get to</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{n\in \ZZ^2} K_0(n) = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
 \end{equation*}
+</div>
 <p>i.e. <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a>.</p>
 <span class="incontext"><a href="section-aut-forms-motivation.html#p-61">in-context</a></span>
 </body>

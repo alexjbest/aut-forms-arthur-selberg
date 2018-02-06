@@ -13,29 +13,38 @@
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <p>Based on the following:</p>
+<div class="displaymath">
 \begin{equation*}
 K(x,y) = K_0(x-y,0)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \partder[K]{x_i} = - \partder[K]{y_i}
 \end{equation*}
+</div>
 <p>which implies</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta_z(L(f))(z) = \Delta_z \int_{\RR^2} f(w) K(z,w) \diff w
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int\int_{\RR^2} \Delta_z f(w) K(z,w) \diff w
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int\int_{\RR^2} f(w) \Delta_w K(z,w) \diff w
 \end{equation*}
+</div>
 <p>which via integration by parts is</p>
+<div class="displaymath">
 \begin{equation*}
 = \int\int_{\RR^2} \Delta_wf(w)  K(z,w) \diff w = L(\Delta f)(z)\text{.}
 \end{equation*}
+</div>
 <span class="incontext"><a href="section-aut-forms-motivation.html#p-55">in-context</a></span>
 </body>
 </html>

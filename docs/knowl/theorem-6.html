@@ -15,110 +15,142 @@
 <span class="type">Theorem</span><span class="codenumber">1.35</span>
 </h6>
 <p>If \((\Delta + \lambda)f \equiv 0\) and \(L\) is an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator. (\(\Rightarrow\)) Then there exists</p>
+<div class="displaymath">
 \begin{equation*}
 \Lambda(\lambda,K)
 \end{equation*}
+</div>
 <p>such that</p>
+<div class="displaymath">
 \begin{equation*}
 L(f)(z) = \Lambda(\lambda, K) f(z)\text{.}
 \end{equation*}
+</div>
 <p>(\(\Leftarrow\))  Moreover if \(f\) is an eigenfunction of all <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> operators then \(f\) is an eigenfunction of \(\Delta\text{.}\)</p></article><article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
 <article class="case"><h6 class="heading"></h6>
 <p>(\(\Leftarrow\)) Let \(L_K\) be</p>
+<div class="displaymath">
 \begin{equation*}
 L_K(f)(z) = \int_\HH f(w) K(z,w) \diff \mu (z)
 \end{equation*}
+</div>
 <p>then</p>
+<div class="displaymath">
 \begin{equation*}
 L_K(f)(z) = \Lambda_K f(z)
 \end{equation*}
+</div>
 <p>(if \(\Lambda_K = 0\) for all \(K\) then \(f \equiv 0\)). So that</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta f(z) = \Delta \frac{1}{\Lambda_K} L_K f(z)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{ \Lambda_K} \int_\HH f(w) \Delta_z K(w,z) \diff \mu(w)
 \end{equation*}
+</div>
 <p>Note \(f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)\) is another <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator (exercise, show this).</p></article><article class="case"><h6 class="heading"></h6>
 <p>We will prove an integral representation that looks like the Cauchy integral formula</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w\text{.}
 \end{equation*}
+</div>
 <p>Let for \(w\in \HH\text{,}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \Phi_w(f)(z) = \int_{G_w} f(gz) \diff\mu(g)
 \end{equation*}
+</div>
 <p>where \(G_w\) is the stabiliser of \(w\) in \(\SL_2(\RR)\) and \(\diff\mu\) is normalized so that \(G_w\) has volume 1.</p>
 <p>Facts:</p>
-<ol style="list-style-type: decimal;">
-<li>If \(f\) is an eigenfunction of \(\Delta\) with eigenvalue \((\Delta + \lambda)f \equiv 0\text{,}\) \(\lambda = s(1-s)\) then there exists a unique function \(W(z,w)\) s.t.
+<ol class="decimal">
+<li>If \(f\) is an eigenfunction of \(\Delta\) with eigenvalue \((\Delta + \lambda)f \equiv 0\text{,}\) \(\lambda = s(1-s)\) then there exists a unique function \(W(z,w)\) s.t.<div class="displaymath">
 \begin{equation*}
 \Phi_w(f)(z) = W(z,w) f(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 W(w,w) = 1
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 (\Delta_z + \lambda)W(z,w) \equiv 0
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 W \text{ is point pair invariant}\text{.}
 \end{equation*}
+</div>
 </li>
 <li>
+<div class="displaymath">
 \begin{equation*}
 L(\Phi_z(f)(z) = L(f)(z)
 \end{equation*}
-as
+</div>as<div class="displaymath">
 \begin{equation*}
 L(\Phi_z(f))(z) = \int_\HH \Phi_z(f) (w) K(w,z) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \int_\HH \int_{B_z} f(gw) \diff \mu(g) K(w,z) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \int_{B_z} \int_\HH f(w)  \underbrace{K(g\inv w,z)}_{=K(w,gz) = K(w,z)} \diff \mu(w)\diff \mu(g)
 \end{equation*}
+</div>
 </li>
 </ol>
 <p>Now returning to the proof. Let \((\Delta + \lambda)f  \equiv 0\text{,}\) \(L\) <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a>.</p>
+<div class="displaymath">
 \begin{equation*}
 Lf(z) = L(\Phi_zf)(z)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH \Phi_z(f) (w) K(z,w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W(w,z) f(w) K(z,w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 =\left\{\int_\HH W(w,z) K(z,w) \diff \mu(w)\right\} f(z)
 \end{equation*}
+</div>
 <p>Claim: \(\{\cdots\}\) depends only on \(K\) and \(\lambda\) not \(z\text{.}\) Proof: Let \(z_1,z_2 \in \HH\) and pick \(g\in \SL_2(\RR)\) \(gz_1 = z_2\text{.}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \int_\HH W(w,z_2)K(z_2, w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W(w,gz_1) K(gz_1,w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W(g^{-1} w,z_1) K(z_1,g\inv w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W( w,z_1) K(z_1, w) \diff \mu(w)\text{.}
 \end{equation*}
-</article></article><span class="incontext"><a href="section-aut-forms-motivation.html#theorem-6">in-context</a></span>
+</div></article></article><span class="incontext"><a href="section-aut-forms-motivation.html#theorem-6">in-context</a></span>
 </body>
 </html>

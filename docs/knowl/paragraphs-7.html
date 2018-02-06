@@ -13,9 +13,11 @@
 <body>
 <article class="paragraphs"><h5 class="heading"><span class="title">Eigenfunctions of \(\Delta\)</span></h5>
 <p>This is a little subtle, lets take the definition of an eigenfunction to be</p>
+<div class="displaymath">
 \begin{equation*}
 f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
 \end{equation*}
+</div>
 <article class="remark-like"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.24</span>
 </h6>
@@ -23,55 +25,75 @@ f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
 <span class="type">Remark</span><span class="codenumber">1.25</span>
 </h6>
 <p>\(\lambda = 0\) means \(f\) is harmonic.</p></article><p>Some basic eigenfunctions: Lets try \(f(z) = f_0(y)\) independent of \(x\)</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta f = y^{2} \partder[^2]{y^2} f
 \end{equation*}
+</div>
 <p>if \(f\) satisfies</p>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda)f = 0
 \end{equation*}
+</div>
 <p>this implies \(f\) is a linear combination of \((y^s,y^{1-s})\) where \(s(1-s) = \lambda\) if \(\lambda \ne \frac 14\text{.}\)</p>
 <p>If \(\lambda = \frac 14\) this gives \(y^{1/2}\) and \(\log (y)y^{1/2}\text{.}\) Note the symmetry! \(s \leftrightarrow 1-s\text{.}\)</p>
 <p>Let's look at \(f(z)\) depending periodically on \(x\) (with period \(f\)). Separation of variables: try</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = e(x) F(2\pi y)
 \end{equation*}
+</div>
 <p>where the \(2\pi\) is really in both factors. This gives</p>
+<div class="displaymath">
 \begin{equation*}
 \partder[^2]{x^2} f = -4\pi^2 f
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \partder[^2]{y^2} f = 4\pi^2 e(x) F''(2\pi y)
 \end{equation*}
+</div>
 <p>which gives</p>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda)f = 0 \iff y^2 4\pi^2 e(x) \left( -F(2\pi y)  + F''(2\pi y)+\lambda F(2\pi y) \right) = 0
 \end{equation*}
+</div>
 <p>which implies</p>
+<div class="displaymath">
 \begin{equation*}
 F''(2 \pi y) + (\lambda - 1) F(2\pi y) = 0
 \end{equation*}
+</div>
 <p>this is a close relative of the Bessel differential equation.</p>
+<div class="displaymath">
 \begin{equation*}
 F''(u) + \left( \frac{\lambda}{u^2} - 1\right) F(u) = 0\text{.}
 \end{equation*}
+</div>
 <p>This has two solutions</p>
+<div class="displaymath">
 \begin{equation*}
 \left(\frac{2y}{\pi}\right)^{\frac 12} K_{s-\frac 12}(y) \sim e^{-2\pi y}\text{ as }y\to \infty
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \left(2y\pi\right)^{\frac 12} I_{s-\frac 12}(y) \sim e^{2\pi y}\text{ as }y\to \infty
 \end{equation*}
+</div>
 <p>intuition: as \(y\to\infty\) we have \(F'' - F = 0\) so \(e^{u}\) or \(e^{-u}\text{.}\)</p>
 <article class="remark-like"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.26</span>
 </h6>
 <p>If we insist on some “moderate growth” (at most polynomial in \(y\)) on the eigenfunction. The \(I_{s-\frac 12}\) solution can not contribute. (when we come to automorphic forms we will see that the definition is essentially eigenfunctions with moderate growth).</p></article><p>So our periodic (in \(x\)) eigenfunction with (moderate growth) looks like</p>
+<div class="displaymath">
 \begin{equation*}
 f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}\text{.}
 \end{equation*}
+</div>
 <article class="definition-like"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.27</span><span class="title">Whittaker functions</span>
 </h6>
@@ -79,31 +101,39 @@ f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}\text{.}
 <article class="theorem-like"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.28</span><span class="title">Spectral decomposition</span>
 </h6>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \frac{1}{2\pi i} \int_{\frac 12}\int_\RR W_s(rz) f_s(r) \gamma_s(r) \diff s \diff r,\,s = \frac 12 + it
 \end{equation*}
+</div>
 <p>where</p>
+<div class="displaymath">
 \begin{equation*}
 f_s(r) = \int_{\HH} f(z) W_s(rz) \diff z
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \gamma_s(r) = \frac{1}{2\pi |r|} t \sinh(\pi t)
 \end{equation*}
+</div>
 <p>analogue of the Fourier inversion formula for \(\HH\text{.}\)</p></article><article class="theorem-like"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.29</span><span class="title">2</span>
 </h6>
 <p>If \(f\) is actually periodic in \(x\) and \((\Delta + s(1-s)) f= 0\) with growth \(O(e^2{\pi y})\)</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) =  f_0(y) + \sum_{n=1}^\infty  f_n W_s(nz)
 \end{equation*}
+</div>
 <p>where \(f_0(y)\) is a combination of \(y^s, y^{1-s}\text{.}\)</p></article><article class="remark-like"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.30</span>
 </h6>
 <p>We will be considering automorphic forms</p>
+<div class="displaymath">
 \begin{equation*}
 \left\langle  \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\right \rangle \subseteq \Gamma \subseteq \SL_2(\ZZ)\text{.}
 \end{equation*}
-</article></article><span class="incontext"><a href="section-aut-forms-motivation.html#paragraphs-7">in-context</a></span>
+</div></article></article><span class="incontext"><a href="section-aut-forms-motivation.html#paragraphs-7">in-context</a></span>
 </body>
 </html>

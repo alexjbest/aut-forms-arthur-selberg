@@ -223,7 +223,7 @@ MathJax.Hub.Config({
 <p class="byline">Salim Ali Altuğ</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
@@ -257,9 +257,11 @@ MathJax.Hub.Config({
 </h3>
 <p id="p-5">Jacquet and Zagier, Eisenstein series and the Selberg Trace Formula II (1980's).</p>
 <p id="p-6">Part I is a paper of Zagier from 1970 in purely classical language. Part II is in adelic language (and somewhat incomplete).</p>
+<div class="displaymath">
 \begin{equation*}
 \left( \begin{aligned} \amp\text{Arthur-Selberg} \\ \amp\text{trace formula}\end{aligned}\right) \xleftrightarrow{\text{conjecture}} \left( \begin{aligned} \amp\text{Relative} \\ \amp\text{trace formula}\end{aligned}\right)
 \end{equation*}
+</div>
 <p>the Arthur-Selberg side is used in Langlands functoriality and the Relative is used in arithmetic applications.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type" alt="Subsection 1.2 Motivation">
 <span class="type">Subsection</span><span class="codenumber">1.2</span><span class="title">Motivation</span>
 </h3>
@@ -268,8 +270,7 @@ MathJax.Hub.Config({
 <article class="remark-like" id="note-1"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.1</span>
 </h6>
-<p id="p-9"></p>
-<ul id="ul-1" style="list-style-type: disc;">
+<ul id="p-9" class="disc">
 <li id="li-1">Selberg trace formula only for \(\GL_2\)</li>
 <li id="li-2">Arthur-Selberg more general</li>
 </ul></article><p id="p-10">The Selberg trace formula generalises the more classical <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> formula.</p>
@@ -278,219 +279,277 @@ MathJax.Hub.Config({
 <span class="type">Theorem</span><span class="codenumber">1.2</span><span class="title">Poisson summation</span>
 </h6>
 <p id="p-11">Let</p>
+<div class="displaymath">
 \begin{equation*}
 f\colon \RR \to \RR
 \end{equation*}
+</div>
 <p>then <dfn class="terminology">Poisson summation</dfn> says</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{n\in \ZZ} f(n) = \sum_{\xi \in \ZZ} \hat f (\xi)
 \end{equation*}
+</div>
 <p>where</p>
+<div class="displaymath">
 \begin{equation*}
 \hat f (\xi) = \frac{1}{2\pi} \int_{-\infty}^{\infty} f(x) e(x\xi) \diff x\text{.}
 \end{equation*}
-</article><p id="p-12">Notation: \(e(x) = e^{2\pi i x}\text{.}\)</p>
+</div></article><p id="p-12">Notation: \(e(x) = e^{2\pi i x}\text{.}\)</p>
 <p id="p-13">To make this look more general we make the following notational choices.</p>
+<div class="displaymath">
 \begin{equation*}
 G = \RR, \Gamma = \ZZ
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \sum_{\gamma \in \Gamma^\#} f(\gamma) =  \sum_{\xi \in (G/\Gamma)^{\vee}} \hat f(\xi)
 \end{equation*}
+</div>
 <p>where</p>
-<ul id="ul-2" style="list-style-type: disc;">
+<ul class="disc">
 <li id="li-3">\(\Gamma^\# =\) conjugacy classes of \(\Gamma\) (\(= \Gamma\) in this case since \(\Gamma\) is abelian).</li>
 <li id="li-4">\((G/\Gamma)^{\vee} =\)dual of  \(G/\Gamma\text{.}\)</li>
 </ul></article><article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Selberg</span></h5>
-<p id="p-14"></p>
+<div class="displaymath" id="p-14">
 \begin{equation*}
 G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \sum_{\gamma \in \Gamma^\#}\cdots ``="  \sum_{\pi\in ``(G/\Gamma)^{\vee}" } \cdots
 \end{equation*}
+</div>
 <p>relating conjugacy classes on the left to automorphic forms on the right.</p></article><p id="p-15">Arthur and Selberg prove the trace formula by a <em class="emphasis">sharp cut off</em>, Jacquet and Zagier derive this using a regularisation.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type" alt="Subsection 1.3 Motivating example">
 <span class="type">Subsection</span><span class="codenumber">1.3</span><span class="title">Motivating example</span>
 </h3>
-<p id="p-16"></p>
+<div class="displaymath" id="p-16">
 \begin{equation*}
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}
 \end{equation*}
+</div>
 <p>converges absolutely for \(s \gt 1\text{.}\)</p>
 <article class="theorem-like" id="thm-riemann-zeta-continuation"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.3</span><span class="title">Riemann</span>
 </h6>
 <p id="p-17">\(\zeta(s)\) has analytic continuation up to \(\Re(s) \gt 0\) with a simple pole at \(s=  1\) residue \(1\text{.}\) i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 \zeta(s) = \frac{1}{s-1} + \phi(s)
 \end{equation*}
+</div>
 <p>where \(\phi(s)\) is holomorphic for \(\Re(s) \gt 0\text{.}\)</p></article><article class="proof" id="proof-1"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-18">Step 1: observe</p>
+<div class="displaymath">
 \begin{align*}
 \frac{1}{s-1} \amp= \int_1^\infty t^{-s} \diff t \ \text{(for }\Re(s) \gt 1\text{)}\\
 \amp=\sum_{n=1}^\infty \int_{n}^{n+1} t^{-s} \diff t
 \end{align*}
+</div>
 <p id="p-19">Step 2: this implies</p>
+<div class="displaymath">
 \begin{align*}
 \zeta(s) \amp= \frac{1}{s-1} + \sum_{n=1}^\infty n^{-s} - \int_{n}^{n+1} t^{-s} \diff t\\
 \amp = \frac{1}{s-1} + \sum_{n=1}^\infty \left(\int_{n}^{n+1} n^{-s} - \int_{n}^{n+1} t^{-s} \diff t\right)
 \end{align*}
+</div>
 <p>we denote each of the terms in the right hand sum as \(\phi_n(s)\)</p>
+<div class="displaymath">
 \begin{equation*}
 \phi_n(s)  = \int_n^{n+1} n^{-s} -t^{-s} \diff t
 \end{equation*}
+</div>
 <p id="p-20">Step 3:</p>
+<div class="displaymath">
 \begin{align*}
 |\phi_n(s)| \amp\le \sup_{n \le t \le n+1} | n^{-s} - t^{-s}|\\
 \amp \sup_{n\le t\le n+1} \frac{|s|}{t^{\Re(s) + 1}}\le \frac{|s|}{n^{\Re(s) + 1}}
 \end{align*}
+</div>
 <p>by applying the mean value theorem.</p>
 <p id="p-21">So \(\sum_{n=1}^\infty \phi_n\) converges absolutely. Hence \(\phi = \sum_{n=1}^\infty \phi_n\) is holomorphic</p>
 <p id="p-22">One can push this idea to get analytic continuation to all of \(\CC\text{,}\) one strip at a time. This is an analogue of the sharp cut off method mentioned above. It's fairly elementary but somewhat unmotivated and doesn't give any deep information (like the functional equation).</p></article><article class="proof" id="proof-2"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-23">Introduce</p>
+<div class="displaymath">
 \begin{equation*}
 \theta(t) = \sum_{n \in \ZZ} e^{-\pi n^2 t },\,t\gt 0
 \end{equation*}
+</div>
 <p>note that \(\theta(t)  =  1 + 2 \sum_{n=1}^\infty e^{-\pi n^2 t}\text{.}\)</p>
 <p id="p-24">Idea: Mellin transform and properties of \(\theta\) to derive properties of \(\zeta\text{.}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \frac{\Gamma\left(\frac{s}{2}\right)}{\pi^{s/2}} \frac{1}{ns} = \int_0^\infty e^{-\pi n^2 t} t^{s/2} \frac{\diff t}{t}
 \end{equation*}
+</div>
 <p>property of \(\theta\text{:}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \theta(t) = \frac{1}{\sqrt{t}} \theta\left(\frac1t\right)
 \end{equation*}
+</div>
 <p id="p-25">Step 1: proof of this property is the <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> formula</p>
-<ul id="ul-3" style="list-style-type: disc;">
-<li id="li-5">
+<ul class="disc">
+<li id="li-5"><div class="displaymath">
 \begin{equation*}
 f(x) = e^{-\pi x^2} \implies \hat f(\xi) = f(\xi)
 \end{equation*}
-</li>
-<li id="li-6">
+</div></li>
+<li id="li-6"><div class="displaymath">
 \begin{equation*}
 g(x) = f(\sqrt{t} x) \implies \hat g(\xi) = \frac{1}{\sqrt{t}}\hat f\left(\frac{\xi}{\sqrt{t}}\right)
 \end{equation*}
-</li>
+</div></li>
 </ul>
 <p id="p-26">Step 2: Would like to write something like</p>
+<div class="displaymath">
 \begin{equation*}
 `` \int_0^\infty \theta(t) t^{s/2} \frac{\diff t}{t}"
 \end{equation*}
+</div>
 <p>This integral makes no sense</p>
-<ul id="ul-4" style="list-style-type: disc;">
-<li id="li-7">As \(t \to \infty\text{,}\) \(\theta \sim 1\) thus
+<ul class="disc">
+<li id="li-7">As \(t \to \infty\text{,}\) \(\theta \sim 1\) thus<div class="displaymath">
 \begin{equation*}
 \left| \int_A^\infty \theta(t) t^{s/2} \frac{\diff t}{t} \right| \lt \infty
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \iff \left| \int_A^\infty t^{s/2} \frac{\diff t}{t} \right| \lt \infty
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \iff \Re(s) \lt 0
 \end{equation*}
+</div>
 </li>
-<li id="li-8">As \(t \to 0\) consider \(\xi = \frac 1t\) so \(\xi \to \infty\) and
+<li id="li-8">As \(t \to 0\) consider \(\xi = \frac 1t\) so \(\xi \to \infty\) and<div class="displaymath">
 \begin{equation*}
 \theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi]
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \implies \theta(t) = \sqrt \xi \theta(\xi) \sim \sqrt \xi = \frac{1}{\sqrt t}
 \end{equation*}
-so \(\theta(t) \sim \frac{1}{ \sqrt t}\)
+</div>so \(\theta(t) \sim \frac{1}{ \sqrt t}\)<div class="displaymath">
 \begin{equation*}
 \implies \left | \int_0^A \theta(t) t^{s/2} \frac{\diff t}{t}\right | \lt \infty
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \iff \left| \int_0^A t^{(s-1)/2} \frac{\diff t}{t}\right | \lt \infty
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \iff \Re(s) \gt 1
 \end{equation*}
+</div>
 </li>
 </ul>
 <p>so no values of \(s\) will make sense for this improper integral.</p>
 <p id="p-27">Refined idea: Consider</p>
+<div class="displaymath">
 \begin{equation*}
 I(s) = \int_0^1 (\theta(t) - \frac{1}{\sqrt t}) t^{s/2} \frac{\diff t}{t} + \int_1^\infty(\theta(t) -  1 ) t^{s/2} \frac{\diff t}{t}
 \end{equation*}
+</div>
 <p>upshot: \(I(s)\) is well-defined and holomorphic for all \(s\in \CC\text{.}\)</p>
 <p id="p-28">Final step: Compute the above to see</p>
+<div class="displaymath">
 \begin{equation*}
 I(s) = \frac2s + \frac{2}{1-s} + \frac{2}{\pi^{s/2}} \Gamma\left(\frac s2\right) \zeta(s)
 \end{equation*}
+</div>
 <p>which implies</p>
-<ol id="ol-1" style="list-style-type: decimal;">
+<ol class="decimal">
 <li id="li-9">\(\zeta(s)\) has analytic continuation to \(s\in \CC\text{,}\) with only a simple pole at \(s = 1\) with residue 1.</li>
 <li id="li-10">
+<div class="displaymath">
 \begin{equation*}
 I(s) = I(1-s)\text{,}
 \end{equation*}
-this follows from the property of \(\theta\) so if we let
+</div>this follows from the property of \(\theta\) so if we let<div class="displaymath">
 \begin{equation*}
 \Lambda(s) = \frac{\Gamma\left(\frac s2\right)}{\pi^{s/2}} \zeta(s)\text{,}
 \end{equation*}
-then
+</div>then<div class="displaymath">
 \begin{equation*}
 \Lambda(s) = \Lambda(1-s)\text{.}
 \end{equation*}
+</div>
 </li>
 </ol></article></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type" alt="Subsection 1.4 Modular forms">
 <span class="type">Subsection</span><span class="codenumber">1.4</span><span class="title">Modular forms</span>
 </h3>
 <p id="p-29">Functions on the upper half plane,</p>
+<div class="displaymath">
 \begin{equation*}
 \HH = \{z\in \CC : \Im(z) \gt 0\}\text{.}
 \end{equation*}
+</div>
 <p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> and elliptic curves.</p>
 <article class="remark-like" id="note-2"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.4</span>
 </h6>
 <p id="p-31">When one is intereseted in functions on \(\mathcal O/\Lambda\) where \(\mathcal O\) is some object and \(\Lambda\) is some discrete group. Take \(f\) a function on \(\mathcal O\) and average over \(\Lambda\) to get</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{\lambda \in \Lambda} f (\lambda z)\text{.}
 \end{equation*}
+</div>
 <p>If you're lucky this converges, this is good.</p></article><article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Elliptic functions</span></h5>
 <p id="p-32">Weierstrass, take \(\Lambda = \omega_1 \ZZ + \omega_2\ZZ\) a lattice an define</p>
+<div class="displaymath">
 \begin{equation*}
 \wp_\Lambda (z) = \frac{1}{z^2} + \sum_{\omega \in \Lambda \smallsetminus \{0\}} \left( \frac{1}{(z-\omega)^2} + \frac{1}{\omega^2}\right)\text{.}
 \end{equation*}
+</div>
 <p id="p-33">Jacobi, (Elliptic integrals) consider</p>
+<div class="displaymath">
 \begin{equation*}
 \int_0^\phi \frac{\diff t}{\sqrt{(1-t^2)(1-\kappa t^2)}},\ \kappa \ge 0
 \end{equation*}
+</div>
 <p>related by:</p>
+<div class="displaymath">
 \begin{equation*}
 (\wp_\Lambda'(z))^2 = 4 \wp_\Lambda(z)^3 - 60 G_2(\Lambda) \wp_\Lambda(z) - 140 G_3(\Lambda)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 G_k(\Lambda)  = \sum_{\lambda \in \Lambda\smallsetminus\{0\}} \lambda^{-2k}
 \end{equation*}
+</div>
 <p>or</p>
+<div class="displaymath">
 \begin{equation*}
 G_k(\tau)  = \sum_{(m,n) \in \ZZ^2\smallsetminus\{0\}} \frac{1}{(m\tau+n)^{2k}}
 \end{equation*}
+</div>
 <p>the weight \(2k\) holomorphic Eisenstein series.</p>
 <article class="theorem-like" id="fact-1"><h6 class="heading">
 <span class="type">Fact</span><span class="codenumber">1.5</span>
 </h6>
 <p id="p-34">Let</p>
+<div class="displaymath">
 \begin{equation*}
 u = \int_y^\infty \frac{\diff s}{\sqrt{4s^3 - 60G_2 s -  140G_3}}
 \end{equation*}
+</div>
 <p>then</p>
+<div class="displaymath">
 \begin{equation*}
 y = \wp_\Lambda (u)\text{.}
 \end{equation*}
-</article></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type" alt="Subsection 1.5 Euclidean Harmonic analysis">
+</div></article></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type" alt="Subsection 1.5 Euclidean Harmonic analysis">
 <span class="type">Subsection</span><span class="codenumber">1.5</span><span class="title">Euclidean Harmonic analysis</span>
 </h3>
 <section class="introduction" id="introduction-2"><article class="aside-like" id="aside-2"><p id="p-35">Lecture 2 23/1/2018</p></article><p id="p-36">We'll take a roundabout route to automorphic forms.</p>
@@ -501,270 +560,356 @@ y = \wp_\Lambda (u)\text{.}
 <span class="type">Example</span><span class="codenumber">1.6</span>
 </h6>
 <p id="p-40">\(\RR\text{,}\) \(f\colon \RR\to \CC\text{,}\) being periodic in \(\mathcal L^2(S^1)\) leads to a fourier expansion</p>
+<div class="displaymath">
 \begin{equation*}
 f(x) = \sum_{n\in\ZZ} a_ne(nx)\text{.}
 \end{equation*}
-</article></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type" alt="Subsubsection 1.5.1 \(\RR^2\)">
+</div></article></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type" alt="Subsubsection 1.5.1 \(\RR^2\)">
 <span class="type">Subsubsection</span><span class="codenumber">1.5.1</span><span class="title">\(\RR^2\)</span>
 </h4>
 <p id="p-41">We have a slightly different perspective.</p>
+<div class="displaymath">
 \begin{equation*}
 \RR^2 = G \acts G
 \end{equation*}
+</div>
 <p>via translations (i.e. right regular representation of \(G\) will be \(G\acts \mathcal L^2(G)\)). I.e. \(g\cdot x = x+g\text{.}\)</p>
 <article class="remark-like" id="remark-1"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.7</span>
 </h6>
 <p id="p-42">This makes \(\RR^2\) a homogeneous space.</p>
 <p id="p-43">\(\RR^2\) with standard metric \(\diff s^2 = \diff x^2 + \diff y^2\) is a flat space \(\kappa = 0\text{.}\)</p></article><p id="p-44">To the metric we have the associated Laplacian (Laplace-Beltrami operator, \(\nabla\cdot\nabla\))</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta = \partder[^2]{x^2}  + \partder[^2]{y^2}
 \end{equation*}
+</div>
 <p>we are interested in this as it is essentially the only operator, we will define automorphic forms to be eigenfunctions for this operator.</p>
 <article class="remark-like" id="note-3"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.8</span>
 </h6>
 <p id="p-45">The exponential functions</p>
+<div class="displaymath">
 \begin{equation*}
 \phi_{u,v}(x,y)= e(ux+vy)
 \end{equation*}
+</div>
 <p>are eigenfunctions of \(\Delta\) with eigenvalue \(\lambda_{u,v} = -4\pi^2 (u^2 + v^2)\) i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda_{u,v}) \phi_{u,v} = 0\text{.}
 \end{equation*}
+</div>
 <p>These are a complete set of harmonics for \(\mathcal L^2 (\RR^2)\text{.}\) The proof is via fourier inversion.</p>
+<div class="displaymath">
 \begin{equation*}
 f(x,y) = \int\int_{\RR^2} \hat f(u,v) \phi_{u,v} (x,y) \diff u\diff v
 \end{equation*}
+</div>
 <p>where</p>
+<div class="displaymath">
 \begin{equation*}
 \hat f(u,v) = \int\int_{\RR^2}     f(u,v) \bar \phi_{u,v} (x,y) \diff y\diff x\text{.}
 \end{equation*}
-</article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">A little twist</span></h5>
+</div></article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">A little twist</span></h5>
 <p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operators.</p>
 <p id="p-47">Using the spectral theorem if we can find easier to diagonalise operators that commute we can find the eigenspaces for those to cut down the eigenspace.</p>
 <p id="p-48">Recall: an integral operator is</p>
+<div class="displaymath">
 \begin{equation*}
 L(f)(x)=       \int K(x,y)f(y) \diff y
 \end{equation*}
+</div>
 <p>invariant means</p>
+<div class="displaymath">
 \begin{equation*}
 L(gf) = gL(f) \ g\in G
 \end{equation*}
+</div>
 <p>in our case</p>
+<div class="displaymath">
 \begin{equation*}
 g\cdot f(x) = f(g+x)\text{.}
 \end{equation*}
-</article><article class="remark-like" id="observation-1"><h6 class="heading">
+</div></article><article class="remark-like" id="observation-1"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.9</span>
 </h6>
 <p id="p-49">If \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> then the kernel \(K(x,y)\) is given by</p>
+<div class="displaymath">
 \begin{equation*}
 K(x,y) = K_0(x-y)
 \end{equation*}
+</div>
 <p>for some function \(K_0\text{.}\)</p></article><article class="proof" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6>
 <article class="case" id="case-1"><h6 class="heading"></h6>
 <p id="p-50">\((\Leftarrow)\) obvious</p></article><article class="case" id="case-2"><h6 class="heading"></h6>
 <p id="p-51">\((\Rightarrow)\) Suppose \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> then</p>
+<div class="displaymath">
 \begin{equation*}
 \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
 \end{equation*}
+</div>
 <p>implies</p>
+<div class="displaymath">
 \begin{equation*}
 \int \int_{\RR^2} K(x,y - \alpha) f(y) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
 \end{equation*}
+</div>
 <p>so</p>
+<div class="displaymath">
 \begin{equation*}
 \int_{\RR^2} (K(x+\alpha,y) - K(x,y - \alpha)) f(y) \diff y = 0 \ \forall f
 \end{equation*}
+</div>
 <p>which implies with some proof that</p>
+<div class="displaymath">
 \begin{equation*}
 K(x+\alpha,y) = K(x,y - \alpha)
 \end{equation*}
+</div>
 <p>so</p>
+<div class="displaymath">
 \begin{equation*}
 K(x,y) = K(x-y,0)\text{.}
 \end{equation*}
-</article></article><article class="remark-like" id="observation-2"><h6 class="heading">
+</div></article></article><article class="remark-like" id="observation-2"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.10</span>
 </h6>
 <p id="p-52">Invariant integral operators commute with each other</p>
+<div class="displaymath">
 \begin{equation*}
 L_1L_2(f)(z) = L_2L_1(f)(z)
 \end{equation*}
-</article><article class="proof" id="proof-4"><h6 class="heading"><span class="type">Proof</span></h6>
-<p id="p-53"></p>
+</div></article><article class="proof" id="proof-4"><h6 class="heading"><span class="type">Proof</span></h6>
+<div class="displaymath" id="p-53">
 \begin{equation*}
 L_1L_2(f)(z) = \int_{\RR^2 \times \RR^2} f(w) K_2(u-w) K_1(z-u) \diff w \diff u = L_2L_1(f)(z)
 \end{equation*}
+</div>
 <p>after change of variables</p>
+<div class="displaymath">
 \begin{equation*}
 u\mapsto z - u+w
 \end{equation*}
-</article><article class="remark-like" id="observation-3"><h6 class="heading">
+</div></article><article class="remark-like" id="observation-3"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.11</span>
 </h6>
 <p id="p-54">\(L\) commutes with \(\Delta\text{.}\)</p></article><article class="proof" id="proof-5"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-55">Based on the following:</p>
+<div class="displaymath">
 \begin{equation*}
 K(x,y) = K_0(x-y,0)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \partder[K]{x_i} = - \partder[K]{y_i}
 \end{equation*}
+</div>
 <p>which implies</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta_z(L(f))(z) = \Delta_z \int_{\RR^2} f(w) K(z,w) \diff w
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int\int_{\RR^2} \Delta_z f(w) K(z,w) \diff w
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int\int_{\RR^2} f(w) \Delta_w K(z,w) \diff w
 \end{equation*}
+</div>
 <p>which via integration by parts is</p>
+<div class="displaymath">
 \begin{equation*}
 = \int\int_{\RR^2} \Delta_wf(w)  K(z,w) \diff w = L(\Delta f)(z)\text{.}
 \end{equation*}
-</article><article class="remark-like" id="observation-4"><h6 class="heading">
+</div></article><article class="remark-like" id="observation-4"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.12</span>
 </h6>
 <p id="p-56">\(\phi_{u,v}(x,y)\) is an eigenfunction of \(L\text{,}\) \((u,v)\in\RR^2, (x,y) \in \RR^2\text{.}\)</p></article><article class="proof" id="proof-6"><h6 class="heading"><span class="type">Proof</span></h6>
-<p id="p-57"></p>
+<div class="displaymath" id="p-57">
 \begin{equation*}
 L\phi_{u,v}(\overbrace{z}^{=x,y})  = \int_{\RR^2} \phi_{u,v}(w) K(z,w) \diff w
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_{\RR^2} \phi_{u,v}(w) K_0(z-w) \diff w
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\RR \int_\RR e(uw_1 + vw_2) K_0(z_1- w_1,z_2-w_2)\diff w_1 \diff w_2
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = e(uw_1 + vw_2)\int_\RR \int_\RR K_0(w_1,w_2)e(-uw_1 - vw_2)\diff w_1 \diff w_2
 \end{equation*}
+</div>
 <p>after the change of variable \(w_i \mapsto - w_i + z_i\)</p>
+<div class="displaymath">
 \begin{equation*}
 \phi_{u,v}(z)\hat K_0(u,v)
 \end{equation*}
+</div>
 <p>i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 L\phi_{u,v} = \hat K_0(u,v) \phi_{u,v}\text{.}
 \end{equation*}
-</article><p id="p-58">Side remark: these are enough to form a generating set.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type" alt="Subsubsection 1.5.2 Poisson summation (yet again)">
+</div></article><p id="p-58">Side remark: these are enough to form a generating set.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type" alt="Subsubsection 1.5.2 Poisson summation (yet again)">
 <span class="type">Subsubsection</span><span class="codenumber">1.5.2</span><span class="title">Poisson summation (yet again)</span>
 </h4>
 <p id="p-59">Let's consider integral operators on functions on \(\ZZ^2 \backslash \RR^2 = \mathbf T^2\text{.}\)</p>
 <p id="p-60">Observe: \(L\leadsto K(x,y) = K_0(x-y)\text{.}\)</p>
+<div class="displaymath">
 \begin{equation*}
 Lf(z) = \int_{\RR^2} f(w) K(z,w) \diff w
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int\int_{\ZZ^2 \backslash \RR^2} f(w) \underbrace{\left(\sum_{n\in\ZZ^2} K(z,w+n)\right)}_{= \sum_{n\in \ZZ} K_0(z-w + n) = \mathbf K(z,w)} \diff w
 \end{equation*}
+</div>
 <p>now \(\mathbf K\) is a function on \(\mathbf T^2 \times \mathbf T^2\text{.}\)</p>
 <p id="p-61">Trace of this operator</p>
+<div class="displaymath">
 \begin{equation*}
 = \int_{\mathbf T^2} \mathbf K(z,z) \diff z = \int_{\mathbf T^2} \left( \sum_{n\in \ZZ^2} K_0(n)\right) \diff z = \sum_{n\in\ZZ^2} K_0(n)
 \end{equation*}
+</div>
 <p>Using sum of eigenvalues</p>
+<div class="displaymath">
 \begin{equation*}
 K(z,w) = \sum_{n\in \ZZ^2} K_0(z-w + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_\xi (z-w) = \sum_{\xi\in \ZZ^2} \lambda_\xi \phi_\xi (z) \bar \phi_\xi (w)
 \end{equation*}
+</div>
 <p>so the trace is</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{\xi \in \ZZ^2} \lambda_\xi = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
 \end{equation*}
+</div>
 <p>so we get to</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{n\in \ZZ^2} K_0(n) = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
 \end{equation*}
+</div>
 <p>i.e. <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a>.</p>
 <p id="p-62">Why care about Poisson summation?</p>
+<div class="displaymath">
 \begin{equation*}
 \hat K_0(0) = \int K_0(z) \diff z
 \end{equation*}
+</div>
 <p>Gauss circle problem, how many lattice points are there in a circle of radius \(R\text{.}\) We can pick a radially symmetric function that is 1 on the circle and 0 outside, or a smooth approximation of such an indicator function at least. Poisson summation packages the important information into a single term, plus some rapidly decaying ones. Then we get \(\pi R^2 + \) error, Gauss conjectured that the error is \(R^{1/2 + \epsilon}\text{.}\)</p>
 <article class="aside-like" id="aside-3"><p id="p-63">Lecture 3 25/1/2018</p></article><p id="p-64">Last time we gave a conceptual proof of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> (this strategy will generalise to the trace formula eventually).</p>
 <p id="p-65">To clean up one loose end: there is a generalisation of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> called Voronoi summation, which will actually be useful later. For <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> we had</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{n_1,n_2\in \ZZ} K(n_1, n_2) = \sum_{\xi_1,\xi_2\in \ZZ} \hat K(\xi_1, \xi_2)
 \end{equation*}
+</div>
 <p>suppose \(K(x,y)\colon \RR^2 \to \CC\) is radially symmetric i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 K(x,y) = K_0(x^2 + y^2),\,(x,y) \in \RR^2
 \end{equation*}
+</div>
 <p>then the fourier transform</p>
+<div class="displaymath">
 \begin{equation*}
 \hat K(u,v) = \pi\int_0^\infty K_0(r) J_0(\sqrt{\lambda r})\diff r,\,\lambda = 4\pi^2 (u^2 + v^2)
 \end{equation*}
+</div>
 <p>where</p>
+<div class="displaymath">
 \begin{equation*}
 J_0(z) = \frac1\pi \int_0^\pi \cos(z\cos(\alpha)) \diff \alpha
 \end{equation*}
+</div>
 <p>is a Bessel function of the second kind.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.13</span>
 </h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-66">Prove this.</p></article></div>
 <p id="p-67">Plug this into <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a></p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{(n_1,n_2)\in \ZZ^2} K(n_1,n_2) = \sum_{N=0}^\infty r_2(N)K_0(N)
 \end{equation*}
+</div>
 <p>as \(K\) only depends on \(n_1^2 + n_2^2\) we group terms based on this quantity, so</p>
+<div class="displaymath">
 \begin{equation*}
 r_2 = \#\{(n_1,n_2) \in \ZZ^2 : n_1^2 + n_2^2 = N\}\text{.}
 \end{equation*}
-<p id="p-68"></p>
+</div>
+<div class="displaymath" id="p-68">
 \begin{equation*}
 \sum_{\xi_1,\xi_2\in \ZZ} \pi\int_0^\infty K_0(r) J_0(2\pi \sqrt{(\xi^2_1 + \xi_2^2)r})\diff r
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \sum_{M=0}^\infty r_2(M)\tilde K_0(M)\text{.}
 \end{equation*}
+</div>
 <article class="theorem-like" id="theorem-3"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.14</span><span class="title">Voronoi summation</span>
 </h6>
-<p id="p-69"></p>
+<div class="displaymath" id="p-69">
 \begin{equation*}
 \sum_{N=0}^\infty r_2(N)K_0(N) =\sum_{M=0}^\infty r_2(M)\tilde K_0(M)
 \end{equation*}
+</div>
 <p>where</p>
+<div class="displaymath">
 \begin{equation*}
 \tilde K_0(z) = \pi\int_0^\infty K_0(r) J_0(2\pi \sqrt{zr})\diff r\text{.}
 \end{equation*}
-</article><p id="p-70">Note that \(J_0(0) =1 \text{.}\)</p>
+</div></article><p id="p-70">Note that \(J_0(0) =1 \text{.}\)</p>
 <p id="p-71">How is this useful? Consider point counting in a circle problem. Let \(K_0(x)\) be an approximation to the step function, \(1\) for \(x \le 1\)  and 0 for \(x \gt 1\text{.}\) With \(\int K_0 = 1\text{.}\) Then</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{N=0}^\infty K_0\left( \frac{N}{ R^2}\right) r_2(N)\text{.}
 \end{equation*}
+</div>
 <p>This is counting lattice points. The right hand side is then</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{M=0}^\infty r_2(M) \tilde K_0(M) = \tilde K_0(0)  + \sum_{M=1}^\infty r_2(M) \tilde K_0(M)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \pi  + \sum_{M=1}^\infty r_2(M) \tilde K_0(M)\text{.}
 \end{equation*}
+</div>
 <p>Finally</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = K_0\left( \frac{ z}{R^2}\right)
 \end{equation*}
+</div>
 <p>so</p>
+<div class="displaymath">
 \begin{equation*}
 \tilde f(\xi )  = R^2\tilde K_0(\xi R^2)\text{.}
 \end{equation*}
+</div>
 <p>So</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{N=0}^\infty K_0\left( \frac{N}{R^2}\right) r_2(N) = R^2\left( \pi  + \sum_{M=1}^\infty r_2(M) \tilde K_0(MR^2)\right)
 \end{equation*}
+</div>
 <p>where the lead term is the area of the circle. Finally if \(M \ne 0\) then \(f(MR^2)\) doesn't increase fast as \(R\to \infty\text{.}\) i.e. it is smaller than \(R^2\text{.}\) So as \(R\to \infty\) we find \(\#\{\text{lattice points in the circle}\} \sim\pi R^2\text{.}\)</p></section></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type" alt="Subsection 1.6 The hyperbolic plane \(\HH\)">
 <span class="type">Subsection</span><span class="codenumber">1.6</span><span class="title">The hyperbolic plane \(\HH\)</span>
 </h3>
@@ -773,94 +918,119 @@ f(z) = K_0\left( \frac{ z}{R^2}\right)
 <article class="definition-like" id="definition-1"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.15</span>
 </h6>
-<p id="p-73"></p>
+<div class="displaymath" id="p-73">
 \begin{equation*}
 \HH = \{x+iy:y \gt 0\}\text{.}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \diff s^2 = \frac{1}{y^2} (\diff x^2 + \diff y^2),\,\text{Riemannian metric}
 \end{equation*}
+</div>
 <p>this gives</p>
+<div class="displaymath">
 \begin{equation*}
 \kappa=  -1
 \end{equation*}
+</div>
 <p>i.e. this is negatively curved, this is the cause of huge differences between the euclidean theory.</p></article><p id="p-74">There is a formula for the (hyperbolic) distance between two points</p>
+<div class="displaymath">
 \begin{equation*}
 \rho(z,w) = \log \frac{| z- \bar w| + |z-w|}{| z- \bar w| - |z-w|}\text{.}
 \end{equation*}
+</div>
 <article class="remark-like" id="observation-5"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.16</span>
 </h6>
 <p id="p-75">As \(w\to \RR\) we have \(\rho \to \infty\text{.}\) So \(\RR\) is the boundary.</p></article><p id="p-76">Recall: the isoperimetric inequality</p>
+<div class="displaymath">
 \begin{equation*}
 4\pi A -\kappa A^2 \le L^2
 \end{equation*}
+</div>
 <p>where \(L\) is the length of the boundary of a region and \(A\) is the area. Note if \(\kappa = 0\) then \(4\pi A \le L^2\text{.}\) So \(A\) can be and would be as large as \(L^2\text{.}\)</p>
 <p id="p-77">For \(\kappa = -1\) we have</p>
+<div class="displaymath">
 \begin{equation*}
 4\pi A +A^2 \le L^2
 \end{equation*}
+</div>
 <p>so \(A\) can at most (and most often will) be as large as \(\sim L\text{.}\) The upshot is that under the hyperbolic metric, the area and perimeter can be the same size.</p>
+<div class="displaymath">
 \begin{equation*}
 |\text{Boundary}| \sim |\text{Area}|\text{.}
 \end{equation*}
+</div>
 <p>Things are a lot more subtle.</p>
 <p id="p-78">Another interesting setting is the tree of \(\PGL_2(\QQ_p)\) for \(p =2\) this is a \(3\)-regular tree. How many points are there of distance less than \(R\) from a fixed point</p>
+<div class="displaymath">
 \begin{equation*}
 1 + 3(1+ 2 + \cdots + 2^R) =  1 + 3(2^{R+1} -1 ) \sim 3 \cdot2^{R+1} = 6\cdot 2^R\text{.}
 \end{equation*}
+</div>
 <p>But how many points of distance exactly \(R\) are there? Roughly \(2^R\) again.</p>
 <p id="p-79">A hyperbolic disk of radius \(R\) centred at \(i\) would be a euclidean disk, but not centered at \(i\text{.}\) The area is \(4\pi(\sinh (R/2))^2\) and the circumference is \(2\pi\sinh(R)\) these are roughly the same size as \(\sinh(x) = (e^x - e^{-x})/2\text{.}\) The euclidean area is far large (roughly the square) of the hyperbolic.</p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type" alt="Subsection 1.7 \(\HH\) as a homogeneous space">
 <span class="type">Subsection</span><span class="codenumber">1.7</span><span class="title">\(\HH\) as a homogeneous space</span>
 </h3>
-<section class="introduction" id="introduction-3"><p id="p-80"></p>
+<section class="introduction" id="introduction-3"><div class="displaymath" id="p-80">
 \begin{equation*}
 \SL_2(\RR) \acts \HH
 \end{equation*}
+</div>
 <p>via linear fractional transformations, i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\RR)
 \end{equation*}
+</div>
 <p>this is the full group of holomorphic isometries of \(\HH\text{,}\) to get all of them take \(z\mapsto -\bar z\) as well.</p>
+<div class="displaymath">
 \begin{equation*}
 \HH = \SL_2(\HH) / \SO(2)
 \end{equation*}
+</div>
 <p>because \(\SO(2) = \Stab_i(\SL_2(\RR))\text{.}\)</p></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type" alt="Subsubsection 1.7.1 Several decompositions">
 <span class="type">Subsubsection</span><span class="codenumber">1.7.1</span><span class="title">Several decompositions</span>
 </h4>
 <p id="p-81">Cartesian: \(x+ iy\) then the <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
 <p id="p-82">Iwasawa: \(G = NAK\)</p>
+<div class="displaymath">
 \begin{equation*}
 N = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}:n\in \RR\right\}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 A = \left\{ \begin{pmatrix} a \amp   \\ \amp a^{-1} \end{pmatrix}:a\in \RR_{\ge 0}\right\}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 K = \left\{ \begin{pmatrix} \cos \theta \amp \sin \theta  \\ -\sin \theta \amp\cos \theta \end{pmatrix}:\theta\in [0,2\pi)\right\}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y}^{-1} \end{pmatrix}}_A \underbrace{\begin{pmatrix} 1           \amp \frac{x}{\sqrt{y}} \\        \amp      1  \end{pmatrix}}_N
 \end{equation*}
+</div>
 <p>this is very general, an analogue of Gram-Schmidt.</p>
 <article class="remark-like" id="observation-6"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.17</span>
 </h6>
-<p id="p-83"></p>
+<div class="displaymath" id="p-83">
 \begin{equation*}
 \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\}}
 \end{equation*}
+</div>
 <p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> functions).</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.18</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-85">Prove these decompositions. Use the spectral theorem of symmetric matrices for the Cartan case.</p></article></div>
 <article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Classification of Motions</span></h5>
 <p id="p-86">We classify by the number of fixed points in \(\HH \cup \hat\RR\text{,}\)  for \(\hat \RR\) the extended real line.</p>
-<ul id="ul-5" style="list-style-type: disc;">
+<ul class="disc">
 <li id="li-11">Identity, infinitely many fixed points.</li>
 <li id="li-12">Parabolic, 1 fixed point in \(\hat \RR\) (\(\infty\)) \(\begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\)</li>
 <li id="li-13">Hyperbolic, 2 fixed points in \(\RR\) \((0,\infty)\text{,}\)  \(\begin{pmatrix} a \amp   \\ \amp a^{-1} \end{pmatrix}\text{.}\)</li>
@@ -870,7 +1040,7 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 <span class="type">Note</span><span class="codenumber">1.19</span><span class="title">for the future</span>
 </h6>
 <p id="p-87">These notions are different when we consider \(\gamma \in G(\QQ)\) something can be \(\QQ\)-elliptic but \(\RR\)-hyperbolic. This depends on the Jordan decomposition essentially, we can have such \(\gamma\) with no rational roots of the characteristic polynomial but which splits over \(\RR\text{.}\)</p></article><p id="p-88">So we have</p>
-<ul id="ul-6" style="list-style-type: disc;">
+<ul class="disc">
 <li id="li-15">Parabolic \(| \tr | = 2\)</li>
 <li id="li-16">(\(\RR\)-)Elliptic \(| \tr | \lt 2\)</li>
 <li id="li-17">(\(\RR\)-)Hyperbolic \(| \tr | \gt 2\)</li>
@@ -882,49 +1052,60 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 <span class="type">Definition</span><span class="codenumber">1.20</span>
 </h6>
 <p id="p-91">We have the translation operators</p>
+<div class="displaymath">
 \begin{equation*}
 g\in \SL_2(\RR)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 T_g f(z) = f(g\cdot z)
 \end{equation*}
-</article><article class="definition-like" id="definition-3"><h6 class="heading">
+</div></article><article class="definition-like" id="definition-3"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.21</span>
 </h6>
 <p id="p-92">A linear operator \(L\) will be called <dfn class="terminology">invariant</dfn> if it commutes with \(T_g\) for all \(g\in \SL_2(\RR)\text{,}\) i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 L(T_g f) = T_g(Lf)\text{.}
 \end{equation*}
-</article><article class="remark-like" id="remark-2"><h6 class="heading">
+</div></article><article class="remark-like" id="remark-2"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.22</span>
 </h6>
 <p id="p-93">On any Riemannian manifold \(\Delta\) can be characterised by: A diffeomorphism is an isometry iff it commutes with \(\Delta\text{.}\)</p></article><p id="p-94">\(\Delta\) in coordinates:</p>
 <p id="p-95">Cartesian</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta = y^2\left( \partder[^2]{x^2}  + \partder[^2]{y^2}\right) = -(z-\bar z)^2 \partder z \partder{\bar z}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \partder z= \frac 12 \left(\partder x - i \partder y\right)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \partder{\bar z}= \frac 12 \left(\partder x + i \partder y\right)
 \end{equation*}
+</div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.23</span>
 </h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> differential operator.</p></article></div>
 <p id="p-97">Polar:</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta = \partder[^2]{r^2}  + \frac{1}{\tanh(r)} \partder{r} + \frac{1}{(2\sinh(r))^2} \partder[^2]{\phi^2}
 \end{equation*}
+</div>
 <p id="p-98">We will be interested in \(\Delta \acts\cinf(\Gamma \backslash \HH)\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Eigenfunctions of \(\Delta\)</span></h5>
 <p id="p-99">This is a little subtle, lets take the definition of an eigenfunction to be</p>
+<div class="displaymath">
 \begin{equation*}
 f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
 \end{equation*}
+</div>
 <article class="remark-like" id="remark-3"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.24</span>
 </h6>
@@ -932,55 +1113,75 @@ f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
 <span class="type">Remark</span><span class="codenumber">1.25</span>
 </h6>
 <p id="p-101">\(\lambda = 0\) means \(f\) is harmonic.</p></article><p id="p-102">Some basic eigenfunctions: Lets try \(f(z) = f_0(y)\) independent of \(x\)</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta f = y^{2} \partder[^2]{y^2} f
 \end{equation*}
+</div>
 <p>if \(f\) satisfies</p>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda)f = 0
 \end{equation*}
+</div>
 <p>this implies \(f\) is a linear combination of \((y^s,y^{1-s})\) where \(s(1-s) = \lambda\) if \(\lambda \ne \frac 14\text{.}\)</p>
 <p id="p-103">If \(\lambda = \frac 14\) this gives \(y^{1/2}\) and \(\log (y)y^{1/2}\text{.}\) Note the symmetry! \(s \leftrightarrow 1-s\text{.}\)</p>
 <p id="p-104">Let's look at \(f(z)\) depending periodically on \(x\) (with period \(f\)). Separation of variables: try</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = e(x) F(2\pi y)
 \end{equation*}
+</div>
 <p>where the \(2\pi\) is really in both factors. This gives</p>
+<div class="displaymath">
 \begin{equation*}
 \partder[^2]{x^2} f = -4\pi^2 f
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \partder[^2]{y^2} f = 4\pi^2 e(x) F''(2\pi y)
 \end{equation*}
+</div>
 <p>which gives</p>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda)f = 0 \iff y^2 4\pi^2 e(x) \left( -F(2\pi y)  + F''(2\pi y)+\lambda F(2\pi y) \right) = 0
 \end{equation*}
+</div>
 <p>which implies</p>
+<div class="displaymath">
 \begin{equation*}
 F''(2 \pi y) + (\lambda - 1) F(2\pi y) = 0
 \end{equation*}
+</div>
 <p>this is a close relative of the Bessel differential equation.</p>
+<div class="displaymath">
 \begin{equation*}
 F''(u) + \left( \frac{\lambda}{u^2} - 1\right) F(u) = 0\text{.}
 \end{equation*}
+</div>
 <p id="p-105">This has two solutions</p>
+<div class="displaymath">
 \begin{equation*}
 \left(\frac{2y}{\pi}\right)^{\frac 12} K_{s-\frac 12}(y) \sim e^{-2\pi y}\text{ as }y\to \infty
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \left(2y\pi\right)^{\frac 12} I_{s-\frac 12}(y) \sim e^{2\pi y}\text{ as }y\to \infty
 \end{equation*}
+</div>
 <p>intuition: as \(y\to\infty\) we have \(F'' - F = 0\) so \(e^{u}\) or \(e^{-u}\text{.}\)</p>
 <article class="remark-like" id="remark-5"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.26</span>
 </h6>
 <p id="p-106">If we insist on some “moderate growth” (at most polynomial in \(y\)) on the eigenfunction. The \(I_{s-\frac 12}\) solution can not contribute. (when we come to automorphic forms we will see that the definition is essentially eigenfunctions with moderate growth).</p></article><p id="p-107">So our periodic (in \(x\)) eigenfunction with (moderate growth) looks like</p>
+<div class="displaymath">
 \begin{equation*}
 f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}\text{.}
 \end{equation*}
+</div>
 <article class="definition-like" id="def-whittaker"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.27</span><span class="title">Whittaker functions</span>
 </h6>
@@ -988,53 +1189,65 @@ f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}\text{.}
 <article class="theorem-like" id="theorem-4"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.28</span><span class="title">Spectral decomposition</span>
 </h6>
-<p id="p-110"></p>
+<div class="displaymath" id="p-110">
 \begin{equation*}
 f(z) = \frac{1}{2\pi i} \int_{\frac 12}\int_\RR W_s(rz) f_s(r) \gamma_s(r) \diff s \diff r,\,s = \frac 12 + it
 \end{equation*}
+</div>
 <p>where</p>
+<div class="displaymath">
 \begin{equation*}
 f_s(r) = \int_{\HH} f(z) W_s(rz) \diff z
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \gamma_s(r) = \frac{1}{2\pi |r|} t \sinh(\pi t)
 \end{equation*}
+</div>
 <p>analogue of the Fourier inversion formula for \(\HH\text{.}\)</p></article><article class="theorem-like" id="thm-whittaker-expansion"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.29</span><span class="title">2</span>
 </h6>
 <p id="p-111">If \(f\) is actually periodic in \(x\) and \((\Delta + s(1-s)) f= 0\) with growth \(O(e^2{\pi y})\)</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) =  f_0(y) + \sum_{n=1}^\infty  f_n W_s(nz)
 \end{equation*}
+</div>
 <p>where \(f_0(y)\) is a combination of \(y^s, y^{1-s}\text{.}\)</p></article><article class="remark-like" id="note-5"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.30</span>
 </h6>
 <p id="p-112">We will be considering automorphic forms</p>
+<div class="displaymath">
 \begin{equation*}
 \left\langle  \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\right \rangle \subseteq \Gamma \subseteq \SL_2(\ZZ)\text{.}
 \end{equation*}
-</article></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type" alt="Subsection 1.9 Integral operators">
+</div></article></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type" alt="Subsection 1.9 Integral operators">
 <span class="type">Subsection</span><span class="codenumber">1.9</span><span class="title">Integral operators</span>
 </h3>
 <p id="p-113">Recall the Cauchy integral formula for holomorphic functions</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w = \int_{B_z} K(w,z) f(w) \diff w
 \end{equation*}
+</div>
 <p>i.e. using an integral kernel, \(f\) is an eigenfunction for this operator.</p>
 <p id="p-114">Recall: \(L\) is an integral operator if</p>
+<div class="displaymath">
 \begin{equation*}
 Lf(z) = \int_{\HH} K(z,w) f(w)\diff \underbrace{\mu(w)}_\frac{\diff u\diff v}{v^2} ,\,w = u+iv
 \end{equation*}
+</div>
 <p>\(K\) will often be smooth of compact support for us. \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> if it commutes with \(T_g\) for all \(g\text{.}\)</p>
 <article class="remark-like" id="observation-7"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.31</span>
 </h6>
 <p id="p-115">\(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> iff</p>
+<div class="displaymath">
 \begin{equation*}
 K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 \end{equation*}
-</article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-4" id="exercise-4"><h6 class="heading">
+</div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-4" id="exercise-4"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.32</span>
 </h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-116">Show this.</p></article></div>
 <article class="definition-like" id="def-point-pair-invariant"><h6 class="heading">
@@ -1045,123 +1258,159 @@ K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 <span class="type">Remark</span><span class="codenumber">1.34</span>
 </h6>
 <p id="p-119">A <a knowl="./knowl/def-point-pair-invariant.html" knowl-id="xref-def-point-pair-invariant" alt="Definition 1.33 Point pair invariants" title="Definition 1.33 Point pair invariants">point pair invariant</a> \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
 \end{equation*}
+</div>
 <p>so an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> operator is just a convolution operator.</p></article><article class="aside-like" id="aside-5"><p id="p-120">Lecture 5 1/2/2018</p></article><article class="theorem-like" id="theorem-6"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.35</span>
 </h6>
 <p id="p-121">If \((\Delta + \lambda)f \equiv 0\) and \(L\) is an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator. (\(\Rightarrow\)) Then there exists</p>
+<div class="displaymath">
 \begin{equation*}
 \Lambda(\lambda,K)
 \end{equation*}
+</div>
 <p>such that</p>
+<div class="displaymath">
 \begin{equation*}
 L(f)(z) = \Lambda(\lambda, K) f(z)\text{.}
 \end{equation*}
+</div>
 <p id="p-122">(\(\Leftarrow\))  Moreover if \(f\) is an eigenfunction of all <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> operators then \(f\) is an eigenfunction of \(\Delta\text{.}\)</p></article><article class="proof" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6>
 <article class="case" id="case-3"><h6 class="heading"></h6>
 <p id="p-123">(\(\Leftarrow\)) Let \(L_K\) be</p>
+<div class="displaymath">
 \begin{equation*}
 L_K(f)(z) = \int_\HH f(w) K(z,w) \diff \mu (z)
 \end{equation*}
+</div>
 <p>then</p>
+<div class="displaymath">
 \begin{equation*}
 L_K(f)(z) = \Lambda_K f(z)
 \end{equation*}
+</div>
 <p>(if \(\Lambda_K = 0\) for all \(K\) then \(f \equiv 0\)). So that</p>
+<div class="displaymath">
 \begin{equation*}
 \Delta f(z) = \Delta \frac{1}{\Lambda_K} L_K f(z)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{ \Lambda_K} \int_\HH f(w) \Delta_z K(w,z) \diff \mu(w)
 \end{equation*}
+</div>
 <p id="p-124">Note \(f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)\) is another <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator (exercise, show this).</p></article><article class="case" id="case-4"><h6 class="heading"></h6>
 <p id="p-125">We will prove an integral representation that looks like the Cauchy integral formula</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w\text{.}
 \end{equation*}
+</div>
 <p>Let for \(w\in \HH\text{,}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \Phi_w(f)(z) = \int_{G_w} f(gz) \diff\mu(g)
 \end{equation*}
+</div>
 <p>where \(G_w\) is the stabiliser of \(w\) in \(\SL_2(\RR)\) and \(\diff\mu\) is normalized so that \(G_w\) has volume 1.</p>
 <p id="p-126">Facts:</p>
-<ol id="ol-2" style="list-style-type: decimal;">
-<li id="li-18">If \(f\) is an eigenfunction of \(\Delta\) with eigenvalue \((\Delta + \lambda)f \equiv 0\text{,}\) \(\lambda = s(1-s)\) then there exists a unique function \(W(z,w)\) s.t.
+<ol class="decimal">
+<li id="li-18">If \(f\) is an eigenfunction of \(\Delta\) with eigenvalue \((\Delta + \lambda)f \equiv 0\text{,}\) \(\lambda = s(1-s)\) then there exists a unique function \(W(z,w)\) s.t.<div class="displaymath">
 \begin{equation*}
 \Phi_w(f)(z) = W(z,w) f(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 W(w,w) = 1
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 (\Delta_z + \lambda)W(z,w) \equiv 0
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 W \text{ is point pair invariant}\text{.}
 \end{equation*}
+</div>
 </li>
 <li id="li-19">
+<div class="displaymath">
 \begin{equation*}
 L(\Phi_z(f)(z) = L(f)(z)
 \end{equation*}
-as
+</div>as<div class="displaymath">
 \begin{equation*}
 L(\Phi_z(f))(z) = \int_\HH \Phi_z(f) (w) K(w,z) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \int_\HH \int_{B_z} f(gw) \diff \mu(g) K(w,z) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \int_{B_z} \int_\HH f(w)  \underbrace{K(g\inv w,z)}_{=K(w,gz) = K(w,z)} \diff \mu(w)\diff \mu(g)
 \end{equation*}
+</div>
 </li>
 </ol>
 <p id="p-127">Now returning to the proof. Let \((\Delta + \lambda)f  \equiv 0\text{,}\) \(L\) <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a>.</p>
+<div class="displaymath">
 \begin{equation*}
 Lf(z) = L(\Phi_zf)(z)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH \Phi_z(f) (w) K(z,w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W(w,z) f(w) K(z,w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 =\left\{\int_\HH W(w,z) K(z,w) \diff \mu(w)\right\} f(z)
 \end{equation*}
+</div>
 <p id="p-128">Claim: \(\{\cdots\}\) depends only on \(K\) and \(\lambda\) not \(z\text{.}\) Proof: Let \(z_1,z_2 \in \HH\) and pick \(g\in \SL_2(\RR)\) \(gz_1 = z_2\text{.}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \int_\HH W(w,z_2)K(z_2, w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W(w,gz_1) K(gz_1,w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W(g^{-1} w,z_1) K(z_1,g\inv w) \diff \mu(w)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 = \int_\HH W( w,z_1) K(z_1, w) \diff \mu(w)\text{.}
 \end{equation*}
-</article></article><p id="p-129">Upshot so far: <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
+</div></article></article><p id="p-129">Upshot so far: <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
 <article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Digression: Ramanujan conjecture</span></h5>
 <p id="p-130">A weight \(k\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a>, eigenfunction of the Hecke operators implies</p>
+<div class="displaymath">
 \begin{equation*}
 |\lambda_p| \le 2 p^{\frac{k-1}{2}}\text{,}
 \end{equation*}
+</div>
 <p>“correct” normalisation is \(|\tilde \lambda_p| \le 2\text{.}\)</p>
 <p id="p-131">This is about the components at \(p\) but there is also a component at infinity.</p>
 <p id="p-132">Selberg's eigenvalue conjecture: \(\phi\) is a cuspidal automorphic (Maass) form with eigenvalue \(\lambda = s(1-s)\) implies \(s = \frac 12 + it\text{,}\) \(t\in \RR\) i.e. \(|\lambda| \ge \frac 14\text{.}\)</p></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Back to \(\HH\)</span></h5>
@@ -1169,82 +1418,103 @@ Lf(z) = L(\Phi_zf)(z)
 <article class="theorem-like" id="proposition-1"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">1.36</span>
 </h6>
-<p id="p-134"></p>
+<div class="displaymath" id="p-134">
 \begin{equation*}
 \lambda\in \RR,\,\lambda\ge 0
 \end{equation*}
-</article><article class="proof" id="proof-8"><h6 class="heading"><span class="type">Proof</span></h6>
+</div></article><article class="proof" id="proof-8"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-135">Introduce the Petersson inner product</p>
+<div class="displaymath">
 \begin{equation*}
 \pair FG  = \int_\HH F(z) \overline{G(z)} \diff \mu(z)\text{.}
 \end{equation*}
+</div>
 <p>Now</p>
+<div class="displaymath">
 \begin{equation*}
 \pair{-\Delta F}{G} = \int_\HH \nabla F \cdot \overline{\nabla G} \diff x\diff y
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 (\Delta F= \nabla\cdot \nabla F)
 \end{equation*}
+</div>
 <p>exercise: check this. So \(\pair {-\Delta F}{G} = \pair {F}{-\Delta G}\) which gives \(\lambda \in \RR\text{.}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \pair{-\Delta F}{F} \ge 0 \implies \lambda \ge 0\text{.}
 \end{equation*}
-</article><p id="p-136">For the \(\frac14\) bound one needs to work a little harder.</p>
+</div></article><p id="p-136">For the \(\frac14\) bound one needs to work a little harder.</p>
 <article class="theorem-like" id="proposition-2"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">1.37</span>
 </h6>
-<p id="p-137"></p>
+<div class="displaymath" id="p-137">
 \begin{equation*}
 (\Delta + \lambda) \equiv 0 \implies \lambda \ge \frac 14\text{.}
 \end{equation*}
-</article><article class="proof" id="proof-9"><h6 class="heading"><span class="type">Proof</span></h6>
+</div></article><article class="proof" id="proof-9"><h6 class="heading"><span class="type">Proof</span></h6>
 <p id="p-138">Let \(D\subseteq \HH\) be a (nice) domain. Consider the Dirichlet problem</p>
+<div class="displaymath">
 \begin{equation*}
 (\Delta + \lambda)f \equiv 0 \text{ inside }D
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 f \equiv 0 \text{ on }\partial D\text{.}
 \end{equation*}
+</div>
 <p id="p-139">Define</p>
+<div class="displaymath">
 \begin{equation*}
 \pair FG _D= \int_D F(z) \overline{G(z)} \diff \mu(z)\text{.}
 \end{equation*}
+</div>
 <p>Then</p>
+<div class="displaymath">
 \begin{equation*}
 \pair{-\Delta F}{G}_D = \int \nabla F \cdot \overline{\nabla G} \diff x\diff y
 \end{equation*}
+</div>
 <p>(exercise, show this).</p>
-<p id="p-140"></p>
+<div class="displaymath" id="p-140">
 \begin{equation}
 \lambda\|F\|^2 = \pair{-\Delta F}{F} = \int_D \left(\left(\partder[F]{x}\right)^2 + \left(\partder[F]{y}\right)^2\right) \frac{\diff x\diff y}{y^2} \ge \int_D \left(\partder[F]{y}\right)^2\diff x\diff y\tag{1.1}
 \end{equation}
+</div>
 <p id="p-141">For every fixed \(x\text{:}\)</p>
+<div class="displaymath">
 \begin{equation*}
 \int F^2 \frac{\diff y}{y^2} = 2 \int F\partder[F]{y} \frac{\diff y}{y}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \implies \int_D F^2 \frac{\diff x \diff y}{y^2}  = 2\int F\partder[F]{y} \frac{\diff x \diff y}{y}\text{.}
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \implies  2\int \left| \frac Fy \partder[F]{y}\right | \diff x \diff y \le 2\left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation}
 \implies \frac12\int_D \frac{F^2}{y^2} \diff x \diff y \le \left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12\tag{1.2}
 \end{equation}
+</div>
 <p>previous two imply</p>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{4\lambda} \int_D \left(\partder[F]{y}\right)^2 \diff x \diff y \le \frac 14 \int_D \frac{F^2}{y^2} \diff x \diff y \le \int_D \left(\partder[F]{y}\right)^2 \diff x\diff y
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \frac{1}{4\lambda}\le 1 \implies \lambda \ge \frac 14\text{.}
 \end{equation*}
-</article><article class="remark-like" id="remark-7"><h6 class="heading">
+</div></article><article class="remark-like" id="remark-7"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.38</span>
 </h6>
 <p id="p-142">In <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a> we restricted to the \(1/2\) line, this is a reincarnation of \(\lambda \ge \frac 14\text{.}\) Only certain functions contributed, similar to the way only the unitaries \(e^{2\pi ix\xi}\) contribute to a fourier expansion, not all characters of \(\RR\text{.}\)</p></article><p id="p-143">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type" alt="Subsection 1.10 Automorphic forms">
@@ -1254,38 +1524,49 @@ f \equiv 0 \text{ on }\partial D\text{.}
 <span class="type">Subsubsection</span><span class="codenumber">1.10.1</span><span class="title">Modular forms</span>
 </h4>
 <p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> as we involved square roots</p>
+<div class="displaymath">
 \begin{equation*}
 \theta (t) \leftrightarrow \theta\left(\frac 1t\right)\text{.}
 \end{equation*}
+</div>
 <article class="definition-like" id="def-modular-function"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.39</span>
 </h6>
 <p id="p-145">A <dfn class="terminology">modular function</dfn> is some</p>
+<div class="displaymath">
 \begin{equation*}
 f\colon \HH \to \CC
 \end{equation*}
+</div>
 <p>with</p>
+<div class="displaymath">
 \begin{equation*}
 f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\ZZ)
 \end{equation*}
+</div>
 <p>where, \(f\) is meromorphic on \(\HH\) including \(\infty\text{.}\) It is called a <dfn class="terminology">modular form</dfn> if it is indeed holomorphic at infinity, this is equivalent to some growth condition.</p></article><article class="definition-like" id="def-cusp-form"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.40</span><span class="title">Cusp forms</span>
 </h6>
 <p id="p-146">\(f\) is a <dfn class="terminology">cusp form</dfn> if</p>
+<div class="displaymath">
 \begin{equation*}
 \int_0^1 f(x+z) \diff x = 0\, \forall z\text{.}
 \end{equation*}
-</article><article class="aside-like" id="aside-6"><p id="p-147">Lecture 6 6/2/2018</p></article><article class="remark-like" id="remark-8"><h6 class="heading">
+</div></article><article class="aside-like" id="aside-6"><p id="p-147">Lecture 6 6/2/2018</p></article><article class="remark-like" id="remark-8"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.41</span>
 </h6>
 <p id="p-148">\(f\) has  a fourier expansion (invariant under \(x\mapsto x+1\)) holomorphic implies</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n=0}^\infty a_n e(nz) \ (e(\alpha) =e^{2\pi i \alpha})
 \end{equation*}
+</div>
 <p>cusp form impllies</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n=1}^\infty a_n e(nz)
 \end{equation*}
+</div>
 <p>as cuspidal implies \(f(z) = O(e^{-2\pi y})\) as \(y \to \infty\text{.}\) \(f\) not cuspidal implies \(f(z) = O(y^s)\) as \(y \to \infty\text{.}\)</p></article></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type" alt="Subsubsection 1.10.2 Examples">
 <span class="type">Subsubsection</span><span class="codenumber">1.10.2</span><span class="title">Examples</span>
 </h4>
@@ -1296,42 +1577,50 @@ f(z) = \sum_{n=1}^\infty a_n e(nz)
 <span class="type">Example</span><span class="codenumber">1.43</span>
 </h6>
 <p id="p-150">Eisenstein series (holomorphic).</p>
+<div class="displaymath">
 \begin{equation*}
 G_k(z) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0)} \frac{1}{(mz+n)^{2k}}\text{.}
 \end{equation*}
+</div>
 <p>Is this cuspidal? Answer: No! Why?</p>
+<div class="displaymath">
 \begin{equation*}
 G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\alpha = 1}^\infty \underbrace{\sigma_{2k-1}(\alpha)}_{=\sum_{d|\alpha} d^{2k-1}} e(\alpha z)
 \end{equation*}
+</div>
 <p>this is of weight \(2k\text{!}\)</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-5" id="exercise-5"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.44</span>
 </h6></a></article><div id="hk-exercise-5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-151">Prove this.</p></article></div>
 <article class="example-like" id="example-4"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.45</span>
 </h6>
-<p id="p-152"></p>
+<div class="displaymath" id="p-152">
 \begin{equation*}
 \Delta(z) = (60G_2(z))^3 - 27(140G_3(z))^2
 \end{equation*}
+</div>
 <p>is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight 12.</p>
-<p id="p-153"></p>
+<div class="displaymath" id="p-153">
 \begin{equation*}
 \Delta(z) = \sum_{n=1}^\infty a_n e(nz),\,a_n = n^{11/2} \tau(n) \implies \tau(n) = O(n^\varepsilon) \forall \varepsilon
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 |\tau(p) | \le 2
 \end{equation*}
+</div>
 <p>the original Ramanujan conjecture.</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-6" id="exercise-6"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.46</span>
 </h6></a></article><div id="hk-exercise-6" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-154">Show these.</p></article></div>
 <article class="example-like" id="example-5"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.47</span><span class="title">A non-example</span>
 </h6>
-<p id="p-155"></p>
+<div class="displaymath" id="p-155">
 \begin{equation*}
 j(x) = \frac{1728(60G_2(z))^2}{\Delta(z)}
 \end{equation*}
+</div>
 <p>not holomorphic at \(\infty\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.48</span>
 </h6>
@@ -1340,44 +1629,59 @@ j(x) = \frac{1728(60G_2(z))^2}{\Delta(z)}
 <span class="type">Theorem</span><span class="codenumber">1.49</span><span class="title">Hecke</span>
 </h6>
 <p id="p-157">If \(f(z)\) is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\)</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n=1}^\infty a_n e(nz)
 \end{equation*}
+</div>
 <p>then</p>
+<div class="displaymath">
 \begin{equation*}
 a_n = O( n^{k/2})
 \end{equation*}
+</div>
 <p>called the Hecke or trivial bound.</p>
 <p id="p-158">If \(\lambda_n = n^{(1-k)/2} a_n\) then this says \(\lambda_n \le \sqrt n\text{.}\)</p></article><article class="proof" id="proof-10"><h6 class="heading"><span class="type">Proof</span></h6>
-<p id="p-159"></p>
+<div class="displaymath" id="p-159">
 \begin{equation*}
 f(z) = \sum_{n=1}^\infty a_n e(nz) = e(z) \sum_{n=1}^\infty a_n e((n-1)z)
 \end{equation*}
+</div>
 <p>implies</p>
+<div class="displaymath">
 \begin{equation*}
 |f(x) | \le C e^{-2\pi y}
 \end{equation*}
+</div>
 <p>now consider</p>
+<div class="displaymath">
 \begin{equation*}
 \phi(z) = f(z) y^{k/2}\text{.}
 \end{equation*}
+</div>
 <p>Then</p>
+<div class="displaymath">
 \begin{equation*}
 \phi(gz) = \phi(z) \ \forall f\in\SL_2(\ZZ)
 \end{equation*}
+</div>
 <p>(exercise). Moreover \(\phi(z) \to 0\) as \(y\to\infty\) and \(\phi\) is continuous so \(\exists M\) s.t. \(|\phi(z) | \le M\text{.}\)</p>
 <p id="p-160">Therefore \(f(z) \le M y^{-k/2}\text{.}\)</p>
+<div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n=1}^\infty a_n e(nz)
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 a_n e(iy) = \int_0^1 f(x+iy) e(-nz) \diff x
 \end{equation*}
-
+</div>
+<div class="displaymath">
 \begin{equation*}
 \le \int_0^1 \frac{M}{y^{k/2}} \diff x = O\left(\frac{1}{y^{k/2}}\right)
 \end{equation*}
+</div>
 <p>for all \(y\) pick \(y=1/n\) so \(O(n^{k/2})\text{.}\)</p></article></article></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type" alt="Subsubsection 1.10.3 Maass forms">
 <span class="type">Subsubsection</span><span class="codenumber">1.10.3</span><span class="title">Maass forms</span>
 </h4>
@@ -1385,30 +1689,32 @@ a_n e(iy) = \int_0^1 f(x+iy) e(-nz) \diff x
 <span class="type">Definition</span><span class="codenumber">1.50</span><span class="title">Maass forms</span>
 </h6>
 <p id="p-161">A function \(f\colon \HH \to \CC\) s.t.</p>
-<ul id="ul-7" style="list-style-type: disc;">
-<li id="li-20">
+<ul class="disc">
+<li id="li-20"><div class="displaymath">
 \begin{equation*}
 f(gz) = f(z) \ \forall g\in\SL_2(Z)
 \end{equation*}
-</li>
+</div></li>
 <li id="li-21">\(f\) is an eigenfunction of \(\Delta\text{.}\)</li>
 <li id="li-22">\(f\) is of moderate growth, \(f(x+iy) = O(y^N)\) for some \(N\text{.}\)</li>
 </ul>
 <p>is called a <dfn class="terminology">maass form</dfn> If</p>
+<div class="displaymath">
 \begin{equation*}
 \int_0^1 f(x+iy)\diff x = 0
 \end{equation*}
+</div>
 <p>we call it a <dfn class="terminology">maass <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a></dfn>.</p></article><article class="example-like" id="example-7"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.51</span>
 </h6>
 <p id="p-162">Constant functions are <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a>.</p></article><article class="example-like" id="example-8"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.52</span>
 </h6>
-<p id="p-163"></p>
+<div class="displaymath" id="p-163">
 \begin{equation*}
 E(z; s) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0} \frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}\text{.}
 \end{equation*}
-</article></section></section></section></div></main>
+</div></article></section></section></section></div></main>
 </div>
 </body>
 </html>

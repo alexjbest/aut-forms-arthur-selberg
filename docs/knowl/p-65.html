@@ -13,21 +13,29 @@
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
 <p>To clean up one loose end: there is a generalisation of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> called Voronoi summation, which will actually be useful later. For <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> we had</p>
+<div class="displaymath">
 \begin{equation*}
 \sum_{n_1,n_2\in \ZZ} K(n_1, n_2) = \sum_{\xi_1,\xi_2\in \ZZ} \hat K(\xi_1, \xi_2)
 \end{equation*}
+</div>
 <p>suppose \(K(x,y)\colon \RR^2 \to \CC\) is radially symmetric i.e.</p>
+<div class="displaymath">
 \begin{equation*}
 K(x,y) = K_0(x^2 + y^2),\,(x,y) \in \RR^2
 \end{equation*}
+</div>
 <p>then the fourier transform</p>
+<div class="displaymath">
 \begin{equation*}
 \hat K(u,v) = \pi\int_0^\infty K_0(r) J_0(\sqrt{\lambda r})\diff r,\,\lambda = 4\pi^2 (u^2 + v^2)
 \end{equation*}
+</div>
 <p>where</p>
+<div class="displaymath">
 \begin{equation*}
 J_0(z) = \frac1\pi \int_0^\pi \cos(z\cos(\alpha)) \diff \alpha
 \end{equation*}
+</div>
 <p>is a Bessel function of the second kind.</p>
 <span class="incontext"><a href="section-aut-forms-motivation.html#p-65">in-context</a></span>
 </body>
