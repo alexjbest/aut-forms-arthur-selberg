@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.49</span><span class="title">Hecke</span>
+</h6>
+<p>If \(f(z)\) is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\)</p>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+<p>then</p>
+\begin{equation*}
+a_n = O( n^{k/2})
+\end{equation*}
+<p>called the Hecke or trivial bound.</p>
+<p>If \(\lambda_n = n^{(1-k)/2} a_n\) then this says \(\lambda_n \le \sqrt n\text{.}\)</p></article><article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz) = e(z) \sum_{n=1}^\infty a_n e((n-1)z)
+\end{equation*}
+<p>implies</p>
+\begin{equation*}
+|f(x) | le C e^{-2\pi y}
+\end{equation*}
+<p>now consider</p>
+\begin{equation*}
+\phi(z) = f(z) y^{k/2}\text{.}
+\end{equation*}
+<p>Then</p>
+\begin{equation*}
+\phi(gz) = \phi(z) \ \forall f\in\SL_2(\ZZ)
+\end{equation*}
+<p>(exercise). Moreover \(\phi(z) \to 0\) as \(y\to\infty\) and \(\phi\) is continuous so \(\exists M\) s.t. \(|\phi(z) | \le M\text{.}\)</p>
+<p>Therefore \(f(z) \le M y^{-k/2}\text{.}\)</p>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+
+\begin{equation*}
+a_n e(iy) = \int_0^1 f(x+iy) e(-nz) \diff x
+\end{equation*}
+
+\begin{equation*}
+\le \int_0^1 \frac{M}{y^{k/2}} \diff x = O\left(\frac{1}{y^{k/2}}\right)
+\end{equation*}
+<p>for all \(y\) pick \(y=1/n\) so \(O(n^{k/2})\text{.}\)</p></article></article><span class="incontext"><a href="section-aut-forms-motivation.html#paragraphs-10">in-context</a></span>
+</body>
+</html>

@@ -55,6 +55,7 @@ MathJax.Hub.Config({
 
 \newcommand{\diff}{\mathop{}\!\mathrm{d}}
 \newcommand{\cinf}{C^\infty}
+\newcommand{\inv}{^{-1}}
 
 \newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
 \newcommand{\pair}[2]{\left\langle #1, #2 \right\rangle}
@@ -116,7 +117,6 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Ass}{Ass}
 \DeclareMathOperator{\Supp}{Supp}
 \DeclareMathOperator{\coker}{coker}
-\DeclareMathOperator{\inv}{^{-1}}
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Diff}{Diff}
@@ -250,7 +250,7 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 3, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 6, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -449,7 +449,7 @@ then
 \begin{equation*}
 \HH = \{z\in \CC : \Im(z) \gt 0\}\text{.}
 \end{equation*}
-<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.37 " title="Definition 1.37 ">modular forms</a> and elliptic curves.</p>
+<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> and elliptic curves.</p>
 <article class="remark-like" id="note-2"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.4</span>
 </h6>
@@ -979,12 +979,12 @@ F''(u) + \left( \frac{\lambda}{u^2} - 1\right) F(u) = 0\text{.}
 </h6>
 <p id="p-106">If we insist on some “moderate growth” (at most polynomial in \(y\)) on the eigenfunction. The \(I_{s-\frac 12}\) solution can not contribute. (when we come to automorphic forms we will see that the definition is essentially eigenfunctions with moderate growth).</p></article><p id="p-107">So our periodic (in \(x\)) eigenfunction with (moderate growth) looks like</p>
 \begin{equation*}
-f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}
+f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}\text{.}
 \end{equation*}
 <article class="definition-like" id="def-whittaker"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.27</span><span class="title">Whittaker functions</span>
 </h6>
-<p id="p-108">\(W_s(z)\) is called a Whittaker function.</p></article><p id="p-109">These exist for arbitrary lie groups, but we may not always be able to write eigenfunctions in terms of them in general though. They are a replacement for the exponential functions.</p>
+<p id="p-108">\(W_s(z)\) is called a <dfn class="terminology">Whittaker function</dfn>.</p></article><p id="p-109">These exist for arbitrary lie groups, but we may not always be able to write eigenfunctions in terms of them in general though. They are a replacement for the exponential functions.</p>
 <article class="theorem-like" id="theorem-4"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.28</span><span class="title">Spectral decomposition</span>
 </h6>
@@ -1000,7 +1000,7 @@ f_s(r) = \int_{\HH} f(z) W_s(rz) \diff z
 \begin{equation*}
 \gamma_s(r) = \frac{1}{2\pi |r|} t \sinh(\pi t)
 \end{equation*}
-<p>analogue of the Fourier inversion formula for \(\HH\text{.}\)</p></article><article class="theorem-like" id="theorem-5"><h6 class="heading">
+<p>analogue of the Fourier inversion formula for \(\HH\text{.}\)</p></article><article class="theorem-like" id="thm-whittaker-expansion"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.29</span><span class="title">2</span>
 </h6>
 <p id="p-111">If \(f\) is actually periodic in \(x\) and \((\Delta + s(1-s)) f= 0\) with growth \(O(e^2{\pi y})\)</p>
@@ -1158,7 +1158,7 @@ Lf(z) = L(\Phi_zf)(z)
 \end{equation*}
 </article></article><p id="p-129">Upshot so far: <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
 <article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Digression: Ramanujan conjecture</span></h5>
-<p id="p-130">A weight \(k\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.38 Cusp forms" title="Definition 1.38 Cusp forms">cusp form</a>, eigenfunction of the Hecke operators implies</p>
+<p id="p-130">A weight \(k\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a>, eigenfunction of the Hecke operators implies</p>
 \begin{equation*}
 |\lambda_p| \le 2 p^{\frac{k-1}{2}}\text{,}
 \end{equation*}
@@ -1180,7 +1180,7 @@ Lf(z) = L(\Phi_zf)(z)
 \end{equation*}
 <p>Now</p>
 \begin{equation*}
-\pair{-\Delta F}{G} = \int_\HH \nabla F \overline{\nabla G} \diff \mu(z)
+\pair{-\Delta F}{G} = \int_\HH \nabla F \cdot \overline{\nabla G} \diff x\diff y
 \end{equation*}
 
 \begin{equation*}
@@ -1190,26 +1190,77 @@ Lf(z) = L(\Phi_zf)(z)
 \begin{equation*}
 \pair{-\Delta F}{F} \ge 0 \implies \lambda \ge 0\text{.}
 \end{equation*}
-</article><p id="p-136">For the \(\frac14\) bound one needs to work a little harder. Consider the Dirichlet problem</p>
+</article><p id="p-136">For the \(\frac14\) bound one needs to work a little harder.</p>
+<article class="theorem-like" id="proposition-2"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">1.37</span>
+</h6>
+<p id="p-137"></p>
+\begin{equation*}
+(\Delta + \lambda) \equiv 0 \implies \lambda \ge \frac 14\text{.}
+\end{equation*}
+</article><article class="proof" id="proof-9"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-138">Let \(D\subseteq \HH\) be a (nice) domain. Consider the Dirichlet problem</p>
 \begin{equation*}
 (\Delta + \lambda)f \equiv 0 \text{ inside }D
 \end{equation*}
 
 \begin{equation*}
-f \equiv 0 \text{ on }\partial D
+f \equiv 0 \text{ on }\partial D\text{.}
 \end{equation*}
-<p>we will get back to this next time.</p>
-<p id="p-137">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.38 Cusp forms" title="Definition 1.38 Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type" alt="Subsection 1.10 Automorphic forms">
+<p id="p-139">Define</p>
+\begin{equation*}
+\pair FG _D= \int_D F(z) \overline{G(z)} \diff \mu(z)\text{.}
+\end{equation*}
+<p>Then</p>
+\begin{equation*}
+\pair{-\Delta F}{G}_D = \int \nabla F \cdot \overline{\nabla G} \diff x\diff y
+\end{equation*}
+<p>(exercise, show this).</p>
+<p id="p-140"></p>
+\begin{equation}
+\lambda\|F\|^2 = \pair{-\Delta F}{F} = \int_D \left(\left(\partder[F]{x}\right)^2 + \left(\partder[F]{y}\right)^2\right) \frac{\diff x\diff y}{y^2} \ge \int_D \left(\left(\partder[F]{y}\right)^2\diff x\diff y\tag{1.1}
+\end{equation}
+<p id="p-141">For every fixed \(x\text{:}\)</p>
+\begin{equation*}
+\int F^2 \frac{\diff y}{y^2} = 2 \int F\partder[F]{y} \frac{\diff y}{y}
+\end{equation*}
+
+\begin{equation*}
+\implies \int_D F^2 \frac{\diff x \diff y}{y^2}  = 2\int F\partder[F]{y} \frac{\diff x \diff y}{y}\text{.}
+\end{equation*}
+
+\begin{equation*}
+\implies  2\int \left| \frac Fy \partder[F]{y}\right | \diff x \diff y \le 2\left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12
+\end{equation*}
+
+\begin{equation}
+\implies \frac12\int_D \frac{F^2}{y^2} \diff x \diff y \le \left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12\tag{1.2}
+\end{equation}
+<p>previous two imply</p>
+\begin{equation*}
+\frac{1}{4\lambda} \int_D \left(\partder[F]{y}\right)^2 \diff x \diff y \le \frac 14 \int_D \frac{F^2}{y^2} \diff x \diff y \le \int_D \left(\partder[F]{y}\right)^2 \diff x\diff y
+\end{equation*}
+
+\begin{equation*}
+\frac{1}{4\lambda}\le 1 \implies \lambda \ge \frac 14\text{.}
+\end{equation*}
+</article><article class="remark-like" id="remark-7"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.38</span>
+</h6>
+<p id="p-142">In <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a> we restricted to the \(1/2\) line, this is a reincarnation of \(\lambda \ge \frac 14\text{.}\) Only certain functions contributed, similar to the way only the unitaries \(e^{2\pi ix\xi}\) contribute to a fourier expansion, not all characters of \(\RR\text{.}\)</p></article><p id="p-143">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type" alt="Subsection 1.10 Automorphic forms">
 <span class="type">Subsection</span><span class="codenumber">1.10</span><span class="title">Automorphic forms</span>
 </h3>
-<p id="p-138">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.37 " title="Definition 1.37 ">modular form</a> as we involved square roots</p>
+<section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type" alt="Subsubsection 1.10.1 Modular forms">
+<span class="type">Subsubsection</span><span class="codenumber">1.10.1</span><span class="title">Modular forms</span>
+</h4>
+<p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> as we involved square roots</p>
 \begin{equation*}
-\theta (t) \leftrightarrow \theta(\frac 1t)\text{.}
+\theta (t) \leftrightarrow \theta\left(\frac 1t\right)\text{.}
 \end{equation*}
 <article class="definition-like" id="def-modular-function"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.37</span>
+<span class="type">Definition</span><span class="codenumber">1.39</span>
 </h6>
-<p id="p-139">A <dfn class="terminology">modular function</dfn> is some</p>
+<p id="p-145">A <dfn class="terminology">modular function</dfn> is some</p>
 \begin{equation*}
 f\colon \HH \to \CC
 \end{equation*}
@@ -1217,14 +1268,147 @@ f\colon \HH \to \CC
 \begin{equation*}
 f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\ZZ)
 \end{equation*}
-<p>where, \(f\) is meromorphic on \(\HH\) including \(\infty\text{.}\) It is called a <dfn class="terminology">modular form</dfn> if it is indeed holomorphic at infinity.</p></article><article class="definition-like" id="def-cusp-form"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.38</span><span class="title">Cusp forms</span>
+<p>where, \(f\) is meromorphic on \(\HH\) including \(\infty\text{.}\) It is called a <dfn class="terminology">modular form</dfn> if it is indeed holomorphic at infinity, this is equivalent to some growth condition.</p></article><article class="definition-like" id="def-cusp-form"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.40</span><span class="title">Cusp forms</span>
 </h6>
-<p id="p-140">\(f\) is a <dfn class="terminology">cusp form</dfn> if</p>
+<p id="p-146">\(f\) is a <dfn class="terminology">cusp form</dfn> if</p>
 \begin{equation*}
 \int_0^1 f(x+z) \diff x = 0\, \forall z\text{.}
 \end{equation*}
-</article></section></section></div></main>
+</article><article class="aside-like" id="aside-6"><p id="p-147">Lecture 6 6/2/2018</p></article><article class="remark-like" id="remark-8"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.41</span>
+</h6>
+<p id="p-148">\(f\) has  a fourier expansion (invariant under \(x\mapsto x+1\)) holomorphic implies</p>
+\begin{equation*}
+f(z) = \sum_{n=0}^\infty a_n e(nz) \ (e(\alpha) =e^{2\pi i \alpha})
+\end{equation*}
+<p>cusp form impllies</p>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+<p>as cuspidal implies \(f(z) = O(e^{-2\pi y})\) as \(y \to \infty\text{.}\) \(f\) not cuspidal implies \(f(z) = O(y^s)\) as \(y \to \infty\text{.}\)</p></article></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type" alt="Subsubsection 1.10.2 Examples">
+<span class="type">Subsubsection</span><span class="codenumber">1.10.2</span><span class="title">Examples</span>
+</h4>
+<article class="example-like" id="example-2"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.42</span>
+</h6>
+<p id="p-149">Constant functions for \(k = 0\text{.}\)</p></article><article class="example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.43</span>
+</h6>
+<p id="p-150">Eisenstein series (holomorphic).</p>
+\begin{equation*}
+G_k(z) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0)} \frac{1}{(mz+n)^{2k}}\text{.}
+\end{equation*}
+<p>Is this cuspidal? Answer: No! Why?</p>
+\begin{equation*}
+G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\alpha = 1}^\infty \underbrace{\sigma_{2k-1}(\alpha)}_{=\sum_{d|\alpha} d^{2k-1}} e(\alpha z)
+\end{equation*}
+<p>this is of weight \(2k\text{!}\)</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-5" id="exercise-5"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.44</span>
+</h6></a></article><div id="hk-exercise-5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-151">Prove this.</p></article></div>
+<article class="example-like" id="example-4"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.45</span>
+</h6>
+<p id="p-152"></p>
+\begin{equation*}
+\Delta(z) = (60G_2(z))^3 - 27(140G_3(z))^2
+\end{equation*}
+<p>is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight 12.</p>
+<p id="p-153"></p>
+\begin{equation*}
+\Delta(z) = \sum_{n=1}^\infty a_n e(nz),\,a_n = n^{11/2} \tau(n) \implies \tau(n) = O(n^\varepsilon) \forall \varepsilon
+\end{equation*}
+
+\begin{equation*}
+|\tau(p) | \le 2
+\end{equation*}
+<p>the original Ramanujan conjecture.</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-6" id="exercise-6"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.46</span>
+</h6></a></article><div id="hk-exercise-6" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-154">Show these.</p></article></div>
+<article class="example-like" id="example-5"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.47</span><span class="title">A non-example</span>
+</h6>
+<p id="p-155"></p>
+\begin{equation*}
+j(x) = \frac{1728(60G_2(z))^2}{\Delta(z)}
+\end{equation*}
+<p>not holomorphic at \(\infty\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.48</span>
+</h6>
+<p id="p-156">We had also seen \(\theta\)-function but it <em class="emphasis">does not</em> fit in to this setting. It is rather a <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> for a covering group.</p></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
+<article class="theorem-like" id="theorem-7"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.49</span><span class="title">Hecke</span>
+</h6>
+<p id="p-157">If \(f(z)\) is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\)</p>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+<p>then</p>
+\begin{equation*}
+a_n = O( n^{k/2})
+\end{equation*}
+<p>called the Hecke or trivial bound.</p>
+<p id="p-158">If \(\lambda_n = n^{(1-k)/2} a_n\) then this says \(\lambda_n \le \sqrt n\text{.}\)</p></article><article class="proof" id="proof-10"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-159"></p>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz) = e(z) \sum_{n=1}^\infty a_n e((n-1)z)
+\end{equation*}
+<p>implies</p>
+\begin{equation*}
+|f(x) | le C e^{-2\pi y}
+\end{equation*}
+<p>now consider</p>
+\begin{equation*}
+\phi(z) = f(z) y^{k/2}\text{.}
+\end{equation*}
+<p>Then</p>
+\begin{equation*}
+\phi(gz) = \phi(z) \ \forall f\in\SL_2(\ZZ)
+\end{equation*}
+<p>(exercise). Moreover \(\phi(z) \to 0\) as \(y\to\infty\) and \(\phi\) is continuous so \(\exists M\) s.t. \(|\phi(z) | \le M\text{.}\)</p>
+<p id="p-160">Therefore \(f(z) \le M y^{-k/2}\text{.}\)</p>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+
+\begin{equation*}
+a_n e(iy) = \int_0^1 f(x+iy) e(-nz) \diff x
+\end{equation*}
+
+\begin{equation*}
+\le \int_0^1 \frac{M}{y^{k/2}} \diff x = O\left(\frac{1}{y^{k/2}}\right)
+\end{equation*}
+<p>for all \(y\) pick \(y=1/n\) so \(O(n^{k/2})\text{.}\)</p></article></article></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type" alt="Subsubsection 1.10.3 Maass forms">
+<span class="type">Subsubsection</span><span class="codenumber">1.10.3</span><span class="title">Maass forms</span>
+</h4>
+<article class="definition-like" id="def-maass-form"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.50</span><span class="title">Maass forms</span>
+</h6>
+<p id="p-161">A function \(f\colon \HH \to \CC\) s.t.</p>
+<ul id="ul-7" style="list-style-type: disc;">
+<li id="li-20">
+\begin{equation*}
+f(gz) = f(z) \ \forall g\in\SL_2(Z)
+\end{equation*}
+</li>
+<li id="li-21">\(f\) is an eigenfunction of \(\Delta\text{.}\)</li>
+<li id="li-22">\(f\) is of moderate growth, \(f(x+iy) = O(y^N)\) for some \(N\text{.}\)</li>
+</ul>
+<p>is called a <dfn class="terminology">maass form</dfn> If</p>
+\begin{equation*}
+\int_0^1 f(x+iy)\diff x = 0
+\end{equation*}
+<p>we call it a <dfn class="terminology">maass <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a></dfn>.</p></article><article class="example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.51</span>
+</h6>
+<p id="p-162">Constant functions are <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a>.</p></article><article class="example-like" id="example-8"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.52</span>
+</h6>
+<p id="p-163"></p>
+\begin{equation*}
+E(z; s) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0} \frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}\text{.}
+\end{equation*}
+</article></section></section></section></div></main>
 </div>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz) = e(z) \sum_{n=1}^\infty a_n e((n-1)z)
+\end{equation*}
+<p>implies</p>
+\begin{equation*}
+|f(x) | le C e^{-2\pi y}
+\end{equation*}
+<p>now consider</p>
+\begin{equation*}
+\phi(z) = f(z) y^{k/2}\text{.}
+\end{equation*}
+<p>Then</p>
+\begin{equation*}
+\phi(gz) = \phi(z) \ \forall f\in\SL_2(\ZZ)
+\end{equation*}
+<p>(exercise). Moreover \(\phi(z) \to 0\) as \(y\to\infty\) and \(\phi\) is continuous so \(\exists M\) s.t. \(|\phi(z) | \le M\text{.}\)</p>
+<p>Therefore \(f(z) \le M y^{-k/2}\text{.}\)</p>
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+
+\begin{equation*}
+a_n e(iy) = \int_0^1 f(x+iy) e(-nz) \diff x
+\end{equation*}
+
+\begin{equation*}
+\le \int_0^1 \frac{M}{y^{k/2}} \diff x = O\left(\frac{1}{y^{k/2}}\right)
+\end{equation*}
+<p>for all \(y\) pick \(y=1/n\) so \(O(n^{k/2})\text{.}\)</p></article><span class="incontext"><a href="section-aut-forms-motivation.html#proof-10">in-context</a></span>
+</body>
+</html>

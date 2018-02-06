@@ -674,11 +674,12 @@ section#section-aut-forms-motivation
             p
                 | So our periodic (in #[m x]) eigenfunction with (moderate growth) looks like
                 me f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}
+                |.
 
             definition#def-whittaker
                 title Whittaker functions
                 statement: p
-                    | #[m W_s(z)] is called a Whittaker function.
+                    | #[m W_s(z)] is called a #[term Whittaker function].
 
             p
                 | These exist for arbitrary lie groups, but we may not always be able to write eigenfunctions in terms of them in general though.
@@ -693,7 +694,7 @@ section#section-aut-forms-motivation
                     me \gamma_s(r) = \frac{1}{2\pi |r|} t \sinh(\pi t)
                     | analogue of the Fourier inversion formula for #[m \HH].
 
-            theorem
+            theorem#thm-whittaker-expansion
                 title 2
                 statement: p
                     | If #[m f] is actually periodic in #[m x] and #[m (\Delta + s(1-s)) f= 0] with growth #[m O(e^2{\pi y})]
@@ -845,7 +846,7 @@ section#section-aut-forms-motivation
                         | Introduce the Petersson inner product
                         me \pair FG  = \int_\HH F(z) \overline{G(z)} \diff \mu(z)
                         | . Now
-                        me \pair{-\Delta F}{G} = \int_\HH \nabla F \overline{\nabla G} \diff \mu(z)
+                        me \pair{-\Delta F}{G} = \int_\HH \nabla F \cdot \overline{\nabla G} \diff x\diff y
                         me (\Delta F= \nabla\cdot \nabla F)
                         | exercise: check this.
                         | So #[m \pair {-\Delta F}{G} = \pair {F}{-\Delta G}] which gives #[m \lambda \in \RR].
@@ -853,10 +854,44 @@ section#section-aut-forms-motivation
                         | .
 
             p
-                | For the #[m \frac14] bound one needs to work a little harder. Consider the Dirichlet problem
-                me (\Delta + \lambda)f \equiv 0 \text{ inside }D
-                me f \equiv 0 \text{ on }\partial D
-                | we will get back to this next time.
+                | For the #[m \frac14] bound one needs to work a little harder.
+            proposition
+                statement: p
+                    me (\Delta + \lambda) \equiv 0 \implies \lambda \ge \frac 14
+                    |.
+                proof
+                    p
+                        | Let #[m D\subseteq \HH] be a (nice) domain.
+                        | Consider the Dirichlet problem
+                        me (\Delta + \lambda)f \equiv 0 \text{ inside }D
+                        me f \equiv 0 \text{ on }\partial D
+                        |.
+                    p
+                        | Define
+                        me \pair FG _D= \int_D F(z) \overline{G(z)} \diff \mu(z)
+                        |. Then
+                        me \pair{-\Delta F}{G}_D = \int \nabla F \cdot \overline{\nabla G} \diff x\diff y
+                        | (exercise, show this).
+                    p
+                        men \lambda\|F\|^2 = \pair{-\Delta F}{F} = \int_D \left(\left(\partder[F]{x}\right)^2 + \left(\partder[F]{y}\right)^2\right) \frac{\diff x\diff y}{y^2} \ge \int_D \left(\left(\partder[F]{y}\right)^2\diff x\diff y
+                    p
+                        | For every fixed #[m x]:
+                        me \int F^2 \frac{\diff y}{y^2} = 2 \int F\partder[F]{y} \frac{\diff y}{y}
+                        me \implies \int_D F^2 \frac{\diff x \diff y}{y^2}  = 2\int F\partder[F]{y} \frac{\diff x \diff y}{y}
+                        | .
+                        me \implies  2\int \left| \frac Fy \partder[F]{y}\right | \diff x \diff y \le 2\left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12
+                        men \implies \frac12\int_D \frac{F^2}{y^2} \diff x \diff y \le \left( \int \frac{F^2}{y^2} \diff x\diff y\right)^{\frac 12} \left(\int \left(\partder[F]{y}\right)^2 \diff x \diff y\right)^\frac12
+                        // TODO
+                        | previous two imply
+                        me \frac{1}{4\lambda} \int_D \left(\partder[F]{y}\right)^2 \diff x \diff y \le \frac 14 \int_D \frac{F^2}{y^2} \diff x \diff y \le \int_D \left(\partder[F]{y}\right)^2 \diff x\diff y
+                        me \frac{1}{4\lambda}\le 1 \implies \lambda \ge \frac 14
+                        |.
+
+            remark
+                p
+                    | In #[xref(ref="thm-whittaker-expansion")/] we restricted to the #[m 1/2] line, this is a reincarnation of #[m \lambda \ge \frac 14].
+                    | Only certain functions contributed, similar to the way only the unitaries #[m e^{2\pi ix\xi}] contribute to a fourier expansion, not all characters of #[m \RR].
+
             p
                 | The spectrum of #[m \Delta] on #[m \HH] has #[m \lambda = s(1-s)], #[m s = \frac 12 + it].
                 | If we consider the quotient #[m \Gamma \backslash \HH] there is a possibility for #[m t = t_{\RR} + it_{\CC}] where #[m 0\le  t_\CC \le \frac 12].
@@ -866,25 +901,138 @@ section#section-aut-forms-motivation
 
     subsection
         title Automorphic forms
-        p
-            | These are functions  on #[m \HH] that are very symmetric.
-            | We already saw one in the first lecture, #[m \theta(t)] in the proof of #[xref(ref="thm-riemann-zeta-continuation")/].
-            | Its not quite, instead it is a #[em half-integral] weight modular form as we involved square roots
-            me \theta (t) \leftrightarrow \theta(\frac 1t)
-            |.
+        subsubsection
+            title Modular forms
+            p
+                | These are functions  on #[m \HH] that are very symmetric.
+                | We already saw one in the first lecture, #[m \theta(t)] in the proof of #[xref(ref="thm-riemann-zeta-continuation")/].
+                | Its not quite, instead it is a #[em half-integral] weight modular form as we involved square roots
+                me \theta (t) \leftrightarrow \theta\left(\frac 1t\right)
+                |.
 
-        definition#def-modular-function
-            statement: p
-                | A #[term modular function] is some
-                me f\colon \HH \to \CC
-                | with
-                me f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\ZZ)
-                | where, #[m f] is meromorphic on #[m \HH] including #[m \infty].
-                | It is called a #[term modular form] if it is indeed holomorphic at infinity.
+            definition#def-modular-function
+                statement: p
+                    | A #[term modular function] is some
+                    me f\colon \HH \to \CC
+                    | with
+                    me f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp b \\c\amp d\end{pmatrix} \in \SL_2(\ZZ)
+                    | where, #[m f] is meromorphic on #[m \HH] including #[m \infty].
+                    | It is called a #[term modular form] if it is indeed holomorphic at infinity, this is equivalent to some growth condition.
 
-        definition#def-cusp-form
-            title Cusp forms
-            statement: p
-                | #[m f] is a #[term cusp form] if
-                me \int_0^1 f(x+z) \diff x = 0\, \forall z
-                | .
+            definition#def-cusp-form
+                title Cusp forms
+                statement: p
+                    | #[m f] is a #[term cusp form] if
+                    me \int_0^1 f(x+z) \diff x = 0\, \forall z
+                    | .
+
+            aside: p Lecture 6 6/2/2018
+
+            remark
+                p
+                    | #[m f] has  a fourier expansion (invariant under #[m x\mapsto x+1]) holomorphic implies
+                    me f(z) = \sum_{n=0}^\infty a_n e(nz) \ (e(\alpha) =e^{2\pi i \alpha})
+                    | cusp form impllies
+                    me f(z) = \sum_{n=1}^\infty a_n e(nz)
+                    | as cuspidal implies #[m f(z) = O(e^{-2\pi y})] as #[m y \to \infty].
+                    | #[m f] not cuspidal implies #[m f(z) = O(y^s)] as #[m y \to \infty].
+
+        subsubsection
+            title Examples
+
+            example
+                statement: p
+                    | Constant functions for #[m k = 0].
+
+            example
+                statement: p
+                    | Eisenstein series (holomorphic).
+                    me G_k(z) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0)} \frac{1}{(mz+n)^{2k}}
+                    | . Is this cuspidal?
+                    | Answer: No! Why?
+                    me G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\alpha = 1}^\infty \underbrace{\sigma_{2k-1}(\alpha)}_{=\sum_{d|\alpha} d^{2k-1}} e(\alpha z)
+                    | this is of weight #[m 2k]!
+
+            exercise
+                statement: p
+                    | Prove this.
+            example
+                statement
+                    p
+                        me \Delta(z) = (60G_2(z))^3 - 27(140G_3(z))^2
+                        | is a cusp form of weight 12.
+                    p
+                        me \Delta(z) = \sum_{n=1}^\infty a_n e(nz),\,a_n = n^{11/2} \tau(n) \implies \tau(n) = O(n^\varepsilon) \forall \varepsilon
+                        me |\tau(p) | \le 2
+                        | the original Ramanujan conjecture.
+
+            exercise
+                statement: p
+                    | Show these.
+
+            example
+                title A non-example
+                statement: p
+                    me j(x) = \frac{1728(60G_2(z))^2}{\Delta(z)}
+                    | not holomorphic at #[m \infty].
+
+            example
+                statement: p
+                    | We had also seen #[m \theta]-function but it #[em does not] fit in to this setting.
+                    | It is rather a modular form for a covering group.
+
+            paragraphs
+                title Digression: bounds on fourier coefficients of cusp forms
+
+                theorem
+                    title Hecke
+                    statement
+                        p
+                            | If #[m f(z)] is a cusp form of weight #[m k]
+                            me f(z) = \sum_{n=1}^\infty a_n e(nz)
+                            | then
+                            me a_n = O( n^{k/2})
+                            | called the Hecke or trivial bound.
+                        p
+                            | If #[m \lambda_n = n^{(1-k)/2} a_n] then this says #[m \lambda_n \le \sqrt n].
+                    proof
+                        p
+                            me f(z) = \sum_{n=1}^\infty a_n e(nz) = e(z) \sum_{n=1}^\infty a_n e((n-1)z)
+                            | implies
+                            me |f(x) | le C e^{-2\pi y}
+                            | now consider
+                            me \phi(z) = f(z) y^{k/2}
+                            | . Then
+                            me \phi(gz) = \phi(z) \ \forall f\in\SL_2(\ZZ)
+                            |(exercise). Moreover #[m \phi(z) \to 0] as #[m y\to\infty] and #[m \phi] is continuous so #[m \exists M] s.t. #[m |\phi(z) | \le M].
+                        p
+                            | Therefore #[m f(z) \le M y^{-k/2}].
+                            me f(z) = \sum_{n=1}^\infty a_n e(nz)
+                            me a_n e(iy) = \int_0^1 f(x+iy) e(-nz) \diff x
+                            me \le \int_0^1 \frac{M}{y^{k/2}} \diff x = O\left(\frac{1}{y^{k/2}}\right)
+                            | for all #[m y] pick #[m y=1/n] so #[m O(n^{k/2})].
+
+        subsubsection
+            title Maass forms
+
+            definition#def-maass-form
+                title Maass forms
+                statement: p
+                    | A function #[m f\colon \HH \to \CC] s.t.
+                    ul
+                        li: me f(gz) = f(z) \ \forall g\in\SL_2(Z)
+                        li #[m f] is an eigenfunction of #[m \Delta].
+                        li #[m f] is of moderate growth, #[m f(x+iy) = O(y^N)] for some #[m N].
+                    | is called a #[term maass form]
+                    | If
+                    me \int_0^1 f(x+iy)\diff x = 0
+                    | we call it a #[term maass cusp form].
+
+            example
+                statement: p
+                    | Constant functions are Maass forms.
+
+            example
+                statement: p
+                    me E(z; s) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0} \frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}
+                    |.
