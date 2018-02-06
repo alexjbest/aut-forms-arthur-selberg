@@ -873,7 +873,7 @@ section#section-aut-forms-motivation
                         me \pair{-\Delta F}{G}_D = \int \nabla F \cdot \overline{\nabla G} \diff x\diff y
                         | (exercise, show this).
                     p
-                        men \lambda\|F\|^2 = \pair{-\Delta F}{F} = \int_D \left(\left(\partder[F]{x}\right)^2 + \left(\partder[F]{y}\right)^2\right) \frac{\diff x\diff y}{y^2} \ge \int_D \left(\left(\partder[F]{y}\right)^2\diff x\diff y
+                        men \lambda\|F\|^2 = \pair{-\Delta F}{F} = \int_D \left(\left(\partder[F]{x}\right)^2 + \left(\partder[F]{y}\right)^2\right) \frac{\diff x\diff y}{y^2} \ge \int_D \left(\partder[F]{y}\right)^2\diff x\diff y
                     p
                         | For every fixed #[m x]:
                         me \int F^2 \frac{\diff y}{y^2} = 2 \int F\partder[F]{y} \frac{\diff y}{y}
@@ -999,7 +999,7 @@ section#section-aut-forms-motivation
                         p
                             me f(z) = \sum_{n=1}^\infty a_n e(nz) = e(z) \sum_{n=1}^\infty a_n e((n-1)z)
                             | implies
-                            me |f(x) | le C e^{-2\pi y}
+                            me |f(x) | \le C e^{-2\pi y}
                             | now consider
                             me \phi(z) = f(z) y^{k/2}
                             | . Then
