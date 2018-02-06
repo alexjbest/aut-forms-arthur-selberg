@@ -747,7 +747,7 @@ section#section-aut-forms-motivation
                 me K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
                 | so an invariant operator is just a convolution operator.
 
-        aside: p Lecture 4 27/1/2018
+        aside: p Lecture 5 1/2/2018
 
         theorem
             statement
@@ -769,7 +769,7 @@ section#section-aut-forms-motivation
                         | then
                         me L_K(f)(z) = \Lambda_K f(z)
                         | (if #[m \Lambda_K = 0] for all #[m K] then #[m f \equiv 0]).
-                        | . So that
+                        | So that
                         me \Delta f(z) = \Delta \frac{1}{\Lambda_K} L_K f(z)
                         me \frac{1}{ \Lambda_K} \int_\HH f(w) \Delta_z K(w,z) \diff \mu(w)
                     p
@@ -804,13 +804,13 @@ section#section-aut-forms-motivation
                         me Lf(z) = L(\Phi_zf)(z)
                         me = \int_\HH \Phi_z(f) (w) K(z,w) \diff \mu(w)
                         me = \int_\HH W(w,z) f(w) K(z,w) \diff \mu(w)
-                        me \left\{\int_\HH W(w,z) K(z,w) \diff \mu(w)\right\} f(z)
+                        me =\left\{\int_\HH W(w,z) K(z,w) \diff \mu(w)\right\} f(z)
                     p
                         | Claim: #[m \{\cdots\}] depends only on #[m K] and #[m \lambda] not #[m z].
                         | Proof: Let #[m z_1,z_2 \in \HH] and pick #[m g\in \SL_2(\RR)] #[m gz_1 = z_2].
                         me \int_\HH W(w,z_2)K(z_2, w) \diff \mu(w)
                         me = \int_\HH W(w,gz_1) K(gz_1,w) \diff \mu(w)
-                        me = \int_\HH W(g\inv w,z_1) K(z_1,g\inv w) \diff \mu(w)
+                        me = \int_\HH W(g^{-1} w,z_1) K(z_1,g\inv w) \diff \mu(w)
                         me = \int_\HH W( w,z_1) K(z_1, w) \diff \mu(w)
                         |.
 
