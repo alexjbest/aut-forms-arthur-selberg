@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading">
+<span class="type">Item</span><span class="codenumber">2</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+c\ne 0 : \sum_{(c,d),\,c\ne0} \int_0^1 \frac{y^{s+\frac12}}{|cz+d|^{2y+1}}  e(-nx) \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty \sum_{d = -\infty}^ \infty y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{\underbrace{|cz+d|^{2s+1}}_{=cx+d +icy}} \diff x
+\end{equation*}
+</div>
+<p>the right hand side is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> under \(x\mapsto x+1\) we can absorb the shift into the sum over \(d\text{,}\) in a general context this is known as unfolding.</p>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{d \equiv \alpha \pmod c} y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cz+d|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{k \in \ZZ}y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cx+ck + \alpha + icy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 y^{s+\frac 12} \sum_{c=1}^\infty\sum_{\alpha \pmod c} \int_{-\infty}^\infty \frac{e(-nx)}{|cx+ \alpha + icy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 y^{s+\frac 12} \sum_{c=1,\alpha\pmod c}^\infty \frac{e(n\alpha/c)}{c^{2s+1}}\int_0^1 \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<p>note:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\alpha \pmod c} e(n\alpha/c) = \begin{cases} c\amp\text{ if }c|n \\0\amp\text{ if }c\nmid n \end{cases}
+\end{equation*}
+</div>
+<p>so we get</p>
+<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<p>two cases</p>
+<ol class="lower-alpha">
+<li>\(n = 0\)<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>\(x\to yx\)<div class="displaymath">
+\begin{equation*}
+=2\frac{y^{s+\frac32}}{y^{2s+1}} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2y^{-s+\frac12} \zeta(2s)\int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+\end{equation*}
+</div>
+</li>
+<li>\(n \ne 0\)<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sigma_{-2s}(|n|)\int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>fact:<div class="displaymath">
+\begin{equation*}
+\pi^{-(s+\frac 12)} y^{s+\frac 12} \Gamma(s+\frac 12) \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1} }\diff x = \begin{cases} \pi^{-s} \Gamma (s) y^{\frac12 - s } \amp \text{ if } n = 0 \\ 2|n|^2 \sqrt y K_s(2\pi |n| y) \amp\text{ if } n \ne 0\end{cases}
+\end{equation*}
+</div>
+</li>
+</ol>
+<p>Combining these we have shown</p>
+<div class="displaymath">
+\begin{equation}
+E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + \pi ^{-s} \Gamma(s) \zeta(2s) y^{\frac 12 -s} + \sum_{n \ne 0} \sigma_{-2s} (|n|) |n| ^s \sqrt{y} K_s( 2\pi |n| y) e(nx)\tag{1.3}
+\end{equation}
+</div>
+<p>where we have \(K_s = K_{-s}\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^2s}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)\text{.}
+\end{equation*}
+</div>
+<p>So we have proved the functional equation and analytic continuation.</p></article><span class="incontext"><a href="section-aut-forms-motivation.html#li-27">in-context</a></span>
+</body>
+</html>

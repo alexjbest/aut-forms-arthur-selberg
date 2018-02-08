@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Properties</span></h5>
+<ul class="disc">
+<li>
+<div class="displaymath">
+\begin{equation*}
+(\Delta + \lambda) E(z; s) = 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda = \frac 14 - s^2
+\end{equation*}
+</div>
+</li>
+<li><div class="displaymath">
+\begin{equation*}
+E(\gamma z; s) = E(z,s) \ \forall\gamma\in\SL_2(\ZZ)
+\end{equation*}
+</div></li>
+<li><div class="displaymath">
+\begin{equation*}
+E(z; s) = O(y^{\max\{\Res(s+\frac 12),\Re(-s + \frac 12)\}})
+\end{equation*}
+</div></li>
+</ul>
+<p>hence \(E(z; s)\) is a <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass form</a>. We have</p>
+<div class="displaymath">
+\begin{equation*}
+\Im(\gamma z) = \frac{\Im(z)}{|cz+d|^2}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = \sum_{(c,d)\in\ZZ^2 \smallsetminus (0,0), (c,d) =1,c\ge 0} \frac{y^{s+\frac 12}}{|cz+d|^{2s+1}}= \sum_{\gamma \in \pm\Gamma_\infty \backslash \SL_2(ZZ)} \Im(\gamma z)^{s+\frac12}
+\end{equation*}
+</div>
+<p>where \(\Gamma_\infty = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\in\SL_2(\ZZ)\right\}\text{.}\) Exercise: check.</p>
+<div class="displaymath">
+\begin{equation*}
+\Delta y^{s+\frac 12} = y^2 (\partder[^2]{x^2}+\partder[^2]{y^2}) y^{s+\frac12}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (s+\frac12)(s-\frac12) y^{s+\frac12}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (s^2 - \frac14)y^{s+\frac12}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies (\Delta+ (\frac14 - s^2))y^{s+\frac 12} = 0
+\end{equation*}
+</div>
+<p>\(\gamma\) is an isometry implies \(\Delta\gamma = \gamma\Delta\text{.}\) So \(\gamma y^{s+\frac 12}\) is also an eigenfunction with eigenvalue \(\frac 14 - s^2\text{.}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.54</span>
+</h6>
+<p>\(E(z; s)\) has analytic continuation to \(\CC\) (in \(s\)), it satisfies \(E(z; s) = E(z; -s)\) and</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = O( y^\sigma),\,\sigma=\max\{\Re(s),\Re(-s)\} + \frac 12\text{.}
+\end{equation*}
+</div></article><article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>(Wrong way to prove this) Fourier expansion of Eisenstein series.</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = a_0(y)+ \sum_{n\ne 0} a_n 2y^{\frac12}K_s(2\pi |n| y) e(nx)
+\end{equation*}
+</div>
+<p>using <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a>.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 E(x+iy ; s ) e(-nx) \diff x = \begin{cases} a_0 (y) \amp n=0 \\ 2a_n y^{\frac 12} K_s(2\pi|n|y) \amp n \ne0 \end{cases}\text{.}
+\end{equation*}
+</div>
+<p>Note:</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = \sum \frac{y^{s+\frac12}}{|cz+d|^{2s+1}}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=\frac12 \frac {1}{\zeta(2s+1)} \sum_{(c,d) \in \ZZ\smallsetminus (0,0)} \frac{y^{s+\frac 12}}{|cz+d|^{2s+1}}
+\end{equation*}
+</div>
+<p>We will work with</p>
+<div class="displaymath">
+\begin{equation*}
+E_1(z; s) = \frac {\overbrace{\pi^{-(s+\frac 12)} \Gamma(s+\frac12)}^{\text{for archimidean factors of }\zeta(2s+1)}}{2} \sum_{(c,d) \ne (0,0)} \frac {y^{s+\frac12}}{|cz+d|^{1+2s}}
+\end{equation*}
+</div>
+<ol class="decimal">
+<li><div class="displaymath">
+\begin{equation*}
+c= 0 \implies \begin{cases}
+\frac {\pi^{-(s+\frac 12)} \Gamma(s+\frac12)}{2}\zeta(1+2s)\amp\text{ if }n=0\\
+0                                                          \amp\text{ if }n\ne0
+\end{cases}
+\end{equation*}
+</div></li>
+<li>
+<div class="displaymath">
+\begin{equation*}
+c\ne 0 : \sum_{(c,d),\,c\ne0} \int_0^1 \frac{y^{s+\frac12}}{|cz+d|^{2y+1}}  e(-nx) \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty \sum_{d = -\infty}^ \infty y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{\underbrace{|cz+d|^{2s+1}}_{=cx+d +icy}} \diff x
+\end{equation*}
+</div>
+<p>the right hand side is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> under \(x\mapsto x+1\) we can absorb the shift into the sum over \(d\text{,}\) in a general context this is known as unfolding.</p>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{d \equiv \alpha \pmod c} y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cz+d|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{k \in \ZZ}y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cx+ck + \alpha + icy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 y^{s+\frac 12} \sum_{c=1}^\infty\sum_{\alpha \pmod c} \int_{-\infty}^\infty \frac{e(-nx)}{|cx+ \alpha + icy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 y^{s+\frac 12} \sum_{c=1,\alpha\pmod c}^\infty \frac{e(n\alpha/c)}{c^{2s+1}}\int_0^1 \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<p>note:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\alpha \pmod c} e(n\alpha/c) = \begin{cases} c\amp\text{ if }c|n \\0\amp\text{ if }c\nmid n \end{cases}
+\end{equation*}
+</div>
+<p>so we get</p>
+<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<p>two cases</p>
+<ol class="lower-alpha">
+<li>\(n = 0\)<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>\(x\to yx\)<div class="displaymath">
+\begin{equation*}
+=2\frac{y^{s+\frac32}}{y^{2s+1}} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2y^{-s+\frac12} \zeta(2s)\int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+\end{equation*}
+</div>
+</li>
+<li>\(n \ne 0\)<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sigma_{-2s}(|n|)\int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>fact:<div class="displaymath">
+\begin{equation*}
+\pi^{-(s+\frac 12)} y^{s+\frac 12} \Gamma(s+\frac 12) \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1} }\diff x = \begin{cases} \pi^{-s} \Gamma (s) y^{\frac12 - s } \amp \text{ if } n = 0 \\ 2|n|^2 \sqrt y K_s(2\pi |n| y) \amp\text{ if } n \ne 0\end{cases}
+\end{equation*}
+</div>
+</li>
+</ol>
+<p>Combining these we have shown</p>
+<div class="displaymath">
+\begin{equation}
+E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + \pi ^{-s} \Gamma(s) \zeta(2s) y^{\frac 12 -s} + \sum_{n \ne 0} \sigma_{-2s} (|n|) |n| ^s \sqrt{y} K_s( 2\pi |n| y) e(nx)\tag{1.3}
+\end{equation}
+</div>
+<p>where we have \(K_s = K_{-s}\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^2s}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)\text{.}
+\end{equation*}
+</div>
+<p>So we have proved the functional equation and analytic continuation.</p>
+</li>
+</ol></article></article><span class="incontext"><a href="section-aut-forms-motivation.html#paragraphs-11">in-context</a></span>
+</body>
+</html>

@@ -187,7 +187,7 @@ section#section-aut-forms-motivation
             | Historically elliptic integrals lead to elliptic functions, and modular forms and elliptic curves.
 
         note: p
-            | When one is intereseted in functions on #[m \mathcal O/\Lambda] where #[m \mathcal O] is some object and #[m \Lambda] is some discrete group.
+            | When one is interested in functions on #[m \mathcal O/\Lambda] where #[m \mathcal O] is some object and #[m \Lambda] is some discrete group.
             | Take #[m f] a function on #[m \mathcal O] and average over #[m \Lambda] to get
             me \sum_{\lambda \in \Lambda} f (\lambda z)
             | . If you're lucky this converges, this is good.
@@ -623,11 +623,13 @@ section#section-aut-forms-motivation
             p
                 | This is a little subtle, lets take the definition of an eigenfunction to be
                 me f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
+                |.
 
             remark
                 p
                     | #[m \Delta] is an #[q elliptic] operator with real analytic coefficients.
                     | This implies any eigenfunction is real analytic.
+                    // TODO brian says this is the elliptic regularity theorem, add a reference?
 
             remark
                 p
@@ -673,7 +675,7 @@ section#section-aut-forms-motivation
 
             p
                 | So our periodic (in #[m x]) eigenfunction with (moderate growth) looks like
-                me f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}
+                me f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{=W_s(z)}
                 |.
 
             definition#def-whittaker
@@ -738,7 +740,7 @@ section#section-aut-forms-motivation
                 | This was first introduced by Selberg.
 
         p
-            | Invariant integral operators are convolution opertators.
+            | Invariant integral operators are convolution operators.
 
 
         remark
@@ -910,7 +912,7 @@ section#section-aut-forms-motivation
                 me \theta (t) \leftrightarrow \theta\left(\frac 1t\right)
                 |.
 
-            definition#def-modular-function
+            definition#def-arthur-selberg-modular-function
                 statement: p
                     | A #[term modular function] is some
                     me f\colon \HH \to \CC
@@ -932,7 +934,7 @@ section#section-aut-forms-motivation
                 p
                     | #[m f] has  a fourier expansion (invariant under #[m x\mapsto x+1]) holomorphic implies
                     me f(z) = \sum_{n=0}^\infty a_n e(nz) \ (e(\alpha) =e^{2\pi i \alpha})
-                    | cusp form impllies
+                    | cusp form implies
                     me f(z) = \sum_{n=1}^\infty a_n e(nz)
                     | as cuspidal implies #[m f(z) = O(e^{-2\pi y})] as #[m y \to \infty].
                     | #[m f] not cuspidal implies #[m f(z) = O(y^s)] as #[m y \to \infty].
@@ -1023,16 +1025,115 @@ section#section-aut-forms-motivation
                         li: me f(gz) = f(z) \ \forall g\in\SL_2(Z)
                         li #[m f] is an eigenfunction of #[m \Delta].
                         li #[m f] is of moderate growth, #[m f(x+iy) = O(y^N)] for some #[m N].
-                    | is called a #[term maass form]
+                    | is called a #[term maass form].
                     | If
                     me \int_0^1 f(x+iy)\diff x = 0
                     | we call it a #[term maass cusp form].
 
             example
                 statement: p
-                    | Constant functions are Maass forms.
+                    | Constant functions are Maass forms, this is because they are #[m L^2] because #[m \HH/\SL_2(\ZZ)] has finite volume.
 
             example
+                title Non-holomorphic Eisenstein series.
                 statement: p
-                    me E(z; s) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0} \frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}
-                    |.
+                    me E(z; s) = \sum_{(c,d) \in \ZZ^2 \smallsetminus (0,0),(c,d) =1,c\ge 0}\frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}
+                    |, we choose this normalisation (for now) with #[m s+\frac 12] as it generalises better to #[m \GL_3] which has more elements in its Weyl group.
+
+            aside: p Lecture 7 8/2/2018
+
+            remark
+                p
+                    | In fact most things are non-holomorphic in the sense that many spaces of interest do not have a complex structure.
+
+            paragraphs
+                title Properties
+                p
+                    ul
+                        li
+                            me (\Delta + \lambda) E(z; s) = 0
+                            me \lambda = \frac 14 - s^2
+                        li
+                            me E(\gamma z; s) = E(z,s) \ \forall\gamma\in\SL_2(\ZZ)
+                        li
+                            me E(z; s) = O(y^{\max\{\Res(s+\frac 12),\Re(-s + \frac 12)\}})
+                    | hence #[m E(z; s)] is a Maass form.
+                    | We have
+                    me \Im(\gamma z) = \frac{\Im(z)}{|cz+d|^2}
+                    | so
+                    me E(z; s) = \sum_{(c,d)\in\ZZ^2 \smallsetminus (0,0), (c,d) =1,c\ge 0} \frac{y^{s+\frac 12}}{|cz+d|^{2s+1}}= \sum_{\gamma \in \pm\Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{s+\frac12}
+                    | where #[m \Gamma_\infty = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\in\SL_2(\ZZ)\right\}].
+                    | Exercise: check.
+                p
+                    me \Delta y^{s+\frac 12} = y^2 (\partder[^2]{x^2}+\partder[^2]{y^2}) y^{s+\frac12}
+                    me = (s+\frac12)(s-\frac12) y^{s+\frac12}
+                    me = (s^2 - \frac14)y^{s+\frac12}
+                    me \implies (\Delta+ (\frac14 - s^2))y^{s+\frac 12} = 0
+                    | #[m \gamma] is an isometry implies #[m \Delta\gamma = \gamma\Delta]. So #[m \gamma y^{s+\frac 12}] is also an eigenfunction with eigenvalue #[m \frac 14 - s^2].
+
+                theorem
+                    statement: p
+                        | #[m E(z; s)] has analytic continuation to #[m \CC] (in #[m s]), it satisfies #[m E(z; s) = E(z; -s)] and
+                        me E(z; s) = O( y^\sigma),\,\sigma=\max\{\Re(s),\Re(-s)\} + \frac 12
+                        |.
+                    proof
+                        p
+                            | (Wrong way to prove this) Fourier expansion of Eisenstein series.
+                            me E(z; s) = a_0(y)+ \sum_{n\ne 0} a_n 2y^{\frac12}K_s(2\pi |n| y) e(nx)
+                            | using #[xref(ref="thm-whittaker-expansion")/].
+                            me \int_0^1 E(x+iy ; s ) e(-nx) \diff x = \begin{cases} a_0 (y) \amp n=0 \\ 2a_n y^{\frac 12} K_s(2\pi|n|y) \amp n \ne0 \end{cases}
+                            | .
+                        p
+                            | Note:
+                            me E(z; s) = \sum \frac{y^{s+\frac12}}{|cz+d|^{2s+1}}
+                            me =\frac12 \frac {1}{\zeta(2s+1)} \sum_{(c,d) \in \ZZ\smallsetminus (0,0)} \frac{y^{s+\frac 12}}{|cz+d|^{2s+1}}
+                            | We will work with
+                            me E_1(z; s) = \frac {\overbrace{\pi^{-(s+\frac 12)} \Gamma(s+\frac12)}^{\text{for archimidean factors of }\zeta(2s+1)}}{2} \sum_{(c,d) \ne (0,0)} \frac {y^{s+\frac12}}{|cz+d|^{1+2s}}
+                            ol
+                                li
+                                    me.
+                                        c= 0 \implies \begin{cases}
+                                        \frac {\pi^{-(s+\frac 12)} \Gamma(s+\frac12)}{2}\zeta(1+2s)\amp\text{ if }n=0\\
+                                        0                                                          \amp\text{ if }n\ne0
+                                        \end{cases}
+                                li: p
+                                    me c\ne 0 : \sum_{(c,d),\,c\ne0} \int_0^1 \frac{y^{s+\frac12}}{|cz+d|^{2y+1}}  e(-nx) \diff x
+                                    me =2 \sum_{c=1}^\infty \sum_{d = -\infty}^ \infty y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{\underbrace{|cz+d|^{2s+1}}_{=cx+d +icy}} \diff x
+                                    | the right hand side is invariant under #[m x\mapsto x+1] we can absorb the shift into the sum over #[m d], in a general context this is known as unfolding.
+
+                                    me =2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{d \equiv \alpha \pmod c} y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cz+d|^{2s+1}} \diff x
+                                    me =2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{k \in \ZZ}y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cx+ck + \alpha + icy|^{2s+1}} \diff x
+                                    me =2 y^{s+\frac 12} \sum_{c=1}^\infty\sum_{\alpha \pmod c} \int_{-\infty}^\infty \frac{e(-nx)}{|cx+ \alpha + icy|^{2s+1}} \diff x
+                                    me =2 y^{s+\frac 12} \sum_{c=1,\alpha\pmod c}^\infty \frac{e(n\alpha/c)}{c^{2s+1}}\int_0^1 \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+                                    | note:
+                                    me \sum_{\alpha \pmod c} e(n\alpha/c) = \begin{cases} c\amp\text{ if }c|n \\0\amp\text{ if }c\nmid n \end{cases}
+                                    | so we get
+                                    me 2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+                                    | two cases
+                                    ol
+                                        li
+                                            | #[m n = 0]
+                                            me 2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{|x+iy|^{2s+1}} \diff x
+                                            | #[m x\to yx]
+                                            me =2\frac{y^{s+\frac32}}{y^{2s+1}} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+                                            me =2y^{-s+\frac12} \zeta(2s)\int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+                                        li
+                                            | #[m n \ne 0]
+                                            me 2y^{s+\frac12} \sigma_{-2s}(|n|)\int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+                                            | fact:
+                                            me \pi^{-(s+\frac 12)} y^{s+\frac 12} \Gamma(s+\frac 12) \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1} }\diff x = \begin{cases} \pi^{-s} \Gamma (s) y^{\frac12 - s } \amp \text{ if } n = 0 \\ 2|n|^2 \sqrt y K_s(2\pi |n| y) \amp\text{ if } n \ne 0\end{cases}
+                                    | Combining these we have shown
+                                    men E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + \pi ^{-s} \Gamma(s) \zeta(2s) y^{\frac 12 -s} + \sum_{n \ne 0} \sigma_{-2s} (|n|) |n| ^s \sqrt{y} K_s( 2\pi |n| y) e(nx)
+                                    | where we have #[m K_s = K_{-s}] and
+                                    me \sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^2s}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)
+                                    | . So we have proved the functional equation and analytic continuation.
+
+            p
+                | We can see that we have #[m \zeta] appearing here in the constant term, we can determine analytic information about it using what we know about Eisenstein series, this idea in generality is known as the Langlands-Shahidi method.
+
+            remark
+                p
+                    | This has poles at #[m s = \frac12], #[m \Res_{s=\frac12} E(z; s) = \frac12].
+                    | Note that this residue is constant.
+                    | We will use this in Rankin-Selberg.
+

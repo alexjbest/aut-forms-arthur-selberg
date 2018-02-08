@@ -250,7 +250,7 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 6, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 8, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -494,11 +494,11 @@ I(s) = I(1-s)\text{,}
 \HH = \{z\in \CC : \Im(z) \gt 0\}\text{.}
 \end{equation*}
 </div>
-<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> and elliptic curves.</p>
+<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> and elliptic curves.</p>
 <article class="remark-like" id="note-2"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.4</span>
 </h6>
-<p id="p-31">When one is intereseted in functions on \(\mathcal O/\Lambda\) where \(\mathcal O\) is some object and \(\Lambda\) is some discrete group. Take \(f\) a function on \(\mathcal O\) and average over \(\Lambda\) to get</p>
+<p id="p-31">When one is interested in functions on \(\mathcal O/\Lambda\) where \(\mathcal O\) is some object and \(\Lambda\) is some discrete group. Take \(f\) a function on \(\mathcal O\) and average over \(\Lambda\) to get</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{\lambda \in \Lambda} f (\lambda z)\text{.}
@@ -1103,7 +1103,7 @@ L(T_g f) = T_g(Lf)\text{.}
 <p id="p-99">This is a little subtle, lets take the definition of an eigenfunction to be</p>
 <div class="displaymath">
 \begin{equation*}
-f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0
+f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0\text{.}
 \end{equation*}
 </div>
 <article class="remark-like" id="remark-3"><h6 class="heading">
@@ -1179,7 +1179,7 @@ F''(u) + \left( \frac{\lambda}{u^2} - 1\right) F(u) = 0\text{.}
 <p id="p-106">If we insist on some “moderate growth” (at most polynomial in \(y\)) on the eigenfunction. The \(I_{s-\frac 12}\) solution can not contribute. (when we come to automorphic forms we will see that the definition is essentially eigenfunctions with moderate growth).</p></article><p id="p-107">So our periodic (in \(x\)) eigenfunction with (moderate growth) looks like</p>
 <div class="displaymath">
 \begin{equation*}
-f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{W_s(z)}\text{.}
+f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{=W_s(z)}\text{.}
 \end{equation*}
 </div>
 <article class="definition-like" id="def-whittaker"><h6 class="heading">
@@ -1253,7 +1253,7 @@ K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 <article class="definition-like" id="def-point-pair-invariant"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.33</span><span class="title">Point pair invariants</span>
 </h6>
-<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a></dfn>. This was first introduced by Selberg.</p></article><p id="p-118">Invariant integral operators are convolution opertators.</p>
+<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a></dfn>. This was first introduced by Selberg.</p></article><p id="p-118">Invariant integral operators are convolution operators.</p>
 <article class="remark-like" id="remark-6"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.34</span>
 </h6>
@@ -1523,13 +1523,13 @@ f \equiv 0 \text{ on }\partial D\text{.}
 <section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type" alt="Subsubsection 1.10.1 Modular forms">
 <span class="type">Subsubsection</span><span class="codenumber">1.10.1</span><span class="title">Modular forms</span>
 </h4>
-<p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> as we involved square roots</p>
+<p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> as we involved square roots</p>
 <div class="displaymath">
 \begin{equation*}
 \theta (t) \leftrightarrow \theta\left(\frac 1t\right)\text{.}
 \end{equation*}
 </div>
-<article class="definition-like" id="def-modular-function"><h6 class="heading">
+<article class="definition-like" id="def-arthur-selberg-modular-function"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.39</span>
 </h6>
 <p id="p-145">A <dfn class="terminology">modular function</dfn> is some</p>
@@ -1561,7 +1561,7 @@ f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp 
 f(z) = \sum_{n=0}^\infty a_n e(nz) \ (e(\alpha) =e^{2\pi i \alpha})
 \end{equation*}
 </div>
-<p>cusp form impllies</p>
+<p>cusp form implies</p>
 <div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n=1}^\infty a_n e(nz)
@@ -1624,7 +1624,7 @@ j(x) = \frac{1728(60G_2(z))^2}{\Delta(z)}
 <p>not holomorphic at \(\infty\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.48</span>
 </h6>
-<p id="p-156">We had also seen \(\theta\)-function but it <em class="emphasis">does not</em> fit in to this setting. It is rather a <a knowl="./knowl/def-modular-function.html" knowl-id="xref-def-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> for a covering group.</p></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
+<p id="p-156">We had also seen \(\theta\)-function but it <em class="emphasis">does not</em> fit in to this setting. It is rather a <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> for a covering group.</p></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
 <article class="theorem-like" id="theorem-7"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.49</span><span class="title">Hecke</span>
 </h6>
@@ -1698,7 +1698,7 @@ f(gz) = f(z) \ \forall g\in\SL_2(Z)
 <li id="li-21">\(f\) is an eigenfunction of \(\Delta\text{.}\)</li>
 <li id="li-22">\(f\) is of moderate growth, \(f(x+iy) = O(y^N)\) for some \(N\text{.}\)</li>
 </ul>
-<p>is called a <dfn class="terminology">maass form</dfn> If</p>
+<p>is called a <dfn class="terminology">maass form</dfn>. If</p>
 <div class="displaymath">
 \begin{equation*}
 \int_0^1 f(x+iy)\diff x = 0
@@ -1707,14 +1707,214 @@ f(gz) = f(z) \ \forall g\in\SL_2(Z)
 <p>we call it a <dfn class="terminology">maass <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a></dfn>.</p></article><article class="example-like" id="example-7"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.51</span>
 </h6>
-<p id="p-162">Constant functions are <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a>.</p></article><article class="example-like" id="example-8"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.52</span>
+<p id="p-162">Constant functions are <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a>, this is because they are \(L^2\) because \(\HH/\SL_2(\ZZ)\) has finite volume.</p></article><article class="example-like" id="example-8"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">1.52</span><span class="title">Non-holomorphic Eisenstein series.</span>
 </h6>
 <div class="displaymath" id="p-163">
 \begin{equation*}
-E(z; s) = \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0} \frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}\text{.}
+E(z; s) = \sum_{(c,d) \in \ZZ^2 \smallsetminus (0,0),(c,d) =1,c\ge 0}\frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}\text{,}
 \end{equation*}
-</div></article></section></section></section></div></main>
+</div>
+<p>we choose this normalisation (for now) with \(s+\frac 12\) as it generalises better to \(\GL_3\) which has more elements in its Weyl group.</p></article><article class="aside-like" id="aside-7"><p id="p-164">Lecture 7 8/2/2018</p></article><article class="remark-like" id="remark-9"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.53</span>
+</h6>
+<p id="p-165">In fact most things are non-holomorphic in the sense that many spaces of interest do not have a complex structure.</p></article><article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Properties</span></h5>
+<ul id="p-166" class="disc">
+<li id="li-23">
+<div class="displaymath">
+\begin{equation*}
+(\Delta + \lambda) E(z; s) = 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda = \frac 14 - s^2
+\end{equation*}
+</div>
+</li>
+<li id="li-24"><div class="displaymath">
+\begin{equation*}
+E(\gamma z; s) = E(z,s) \ \forall\gamma\in\SL_2(\ZZ)
+\end{equation*}
+</div></li>
+<li id="li-25"><div class="displaymath">
+\begin{equation*}
+E(z; s) = O(y^{\max\{\Res(s+\frac 12),\Re(-s + \frac 12)\}})
+\end{equation*}
+</div></li>
+</ul>
+<p>hence \(E(z; s)\) is a <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass form</a>. We have</p>
+<div class="displaymath">
+\begin{equation*}
+\Im(\gamma z) = \frac{\Im(z)}{|cz+d|^2}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = \sum_{(c,d)\in\ZZ^2 \smallsetminus (0,0), (c,d) =1,c\ge 0} \frac{y^{s+\frac 12}}{|cz+d|^{2s+1}}= \sum_{\gamma \in \pm\Gamma_\infty \backslash \SL_2(ZZ)} \Im(\gamma z)^{s+\frac12}
+\end{equation*}
+</div>
+<p>where \(\Gamma_\infty = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\in\SL_2(\ZZ)\right\}\text{.}\) Exercise: check.</p>
+<div class="displaymath" id="p-167">
+\begin{equation*}
+\Delta y^{s+\frac 12} = y^2 (\partder[^2]{x^2}+\partder[^2]{y^2}) y^{s+\frac12}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (s+\frac12)(s-\frac12) y^{s+\frac12}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (s^2 - \frac14)y^{s+\frac12}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies (\Delta+ (\frac14 - s^2))y^{s+\frac 12} = 0
+\end{equation*}
+</div>
+<p>\(\gamma\) is an isometry implies \(\Delta\gamma = \gamma\Delta\text{.}\) So \(\gamma y^{s+\frac 12}\) is also an eigenfunction with eigenvalue \(\frac 14 - s^2\text{.}\)</p>
+<article class="theorem-like" id="theorem-8"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.54</span>
+</h6>
+<p id="p-168">\(E(z; s)\) has analytic continuation to \(\CC\) (in \(s\)), it satisfies \(E(z; s) = E(z; -s)\) and</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = O( y^\sigma),\,\sigma=\max\{\Re(s),\Re(-s)\} + \frac 12\text{.}
+\end{equation*}
+</div></article><article class="proof" id="proof-11"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-169">(Wrong way to prove this) Fourier expansion of Eisenstein series.</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = a_0(y)+ \sum_{n\ne 0} a_n 2y^{\frac12}K_s(2\pi |n| y) e(nx)
+\end{equation*}
+</div>
+<p>using <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a>.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 E(x+iy ; s ) e(-nx) \diff x = \begin{cases} a_0 (y) \amp n=0 \\ 2a_n y^{\frac 12} K_s(2\pi|n|y) \amp n \ne0 \end{cases}\text{.}
+\end{equation*}
+</div>
+<p id="p-170">Note:</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = \sum \frac{y^{s+\frac12}}{|cz+d|^{2s+1}}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=\frac12 \frac {1}{\zeta(2s+1)} \sum_{(c,d) \in \ZZ\smallsetminus (0,0)} \frac{y^{s+\frac 12}}{|cz+d|^{2s+1}}
+\end{equation*}
+</div>
+<p>We will work with</p>
+<div class="displaymath">
+\begin{equation*}
+E_1(z; s) = \frac {\overbrace{\pi^{-(s+\frac 12)} \Gamma(s+\frac12)}^{\text{for archimidean factors of }\zeta(2s+1)}}{2} \sum_{(c,d) \ne (0,0)} \frac {y^{s+\frac12}}{|cz+d|^{1+2s}}
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-26"><div class="displaymath">
+\begin{equation*}
+c= 0 \implies \begin{cases}
+\frac {\pi^{-(s+\frac 12)} \Gamma(s+\frac12)}{2}\zeta(1+2s)\amp\text{ if }n=0\\
+0                                                          \amp\text{ if }n\ne0
+\end{cases}
+\end{equation*}
+</div></li>
+<li id="li-27">
+<div class="displaymath" id="p-171">
+\begin{equation*}
+c\ne 0 : \sum_{(c,d),\,c\ne0} \int_0^1 \frac{y^{s+\frac12}}{|cz+d|^{2y+1}}  e(-nx) \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty \sum_{d = -\infty}^ \infty y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{\underbrace{|cz+d|^{2s+1}}_{=cx+d +icy}} \diff x
+\end{equation*}
+</div>
+<p>the right hand side is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> under \(x\mapsto x+1\) we can absorb the shift into the sum over \(d\text{,}\) in a general context this is known as unfolding.</p>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{d \equiv \alpha \pmod c} y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cz+d|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{k \in \ZZ}y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cx+ck + \alpha + icy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 y^{s+\frac 12} \sum_{c=1}^\infty\sum_{\alpha \pmod c} \int_{-\infty}^\infty \frac{e(-nx)}{|cx+ \alpha + icy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2 y^{s+\frac 12} \sum_{c=1,\alpha\pmod c}^\infty \frac{e(n\alpha/c)}{c^{2s+1}}\int_0^1 \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<p>note:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\alpha \pmod c} e(n\alpha/c) = \begin{cases} c\amp\text{ if }c|n \\0\amp\text{ if }c\nmid n \end{cases}
+\end{equation*}
+</div>
+<p>so we get</p>
+<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>
+<p>two cases</p>
+<ol class="lower-alpha">
+<li id="li-28">\(n = 0\)<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>\(x\to yx\)<div class="displaymath">
+\begin{equation*}
+=2\frac{y^{s+\frac32}}{y^{2s+1}} \sum_{c=1}^\infty \frac{1}{c^{2s}} \int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=2y^{-s+\frac12} \zeta(2s)\int_{-\infty}^\infty \frac{1}{(x^{2}+1)^{\frac{2s+1}{2}}} \diff x
+\end{equation*}
+</div>
+</li>
+<li id="li-29">\(n \ne 0\)<div class="displaymath">
+\begin{equation*}
+2y^{s+\frac12} \sigma_{-2s}(|n|)\int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1}} \diff x
+\end{equation*}
+</div>fact:<div class="displaymath">
+\begin{equation*}
+\pi^{-(s+\frac 12)} y^{s+\frac 12} \Gamma(s+\frac 12) \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1} }\diff x = \begin{cases} \pi^{-s} \Gamma (s) y^{\frac12 - s } \amp \text{ if } n = 0 \\ 2|n|^2 \sqrt y K_s(2\pi |n| y) \amp\text{ if } n \ne 0\end{cases}
+\end{equation*}
+</div>
+</li>
+</ol>
+<p>Combining these we have shown</p>
+<div class="displaymath">
+\begin{equation}
+E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + \pi ^{-s} \Gamma(s) \zeta(2s) y^{\frac 12 -s} + \sum_{n \ne 0} \sigma_{-2s} (|n|) |n| ^s \sqrt{y} K_s( 2\pi |n| y) e(nx)\tag{1.3}
+\end{equation}
+</div>
+<p>where we have \(K_s = K_{-s}\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^2s}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)\text{.}
+\end{equation*}
+</div>
+<p>So we have proved the functional equation and analytic continuation.</p>
+</li>
+</ol></article></article><p id="p-172">We can see that we have \(\zeta\) appearing here in the constant term, we can determine analytic information about it using what we know about Eisenstein series, this idea in generality is known as the Langlands-Shahidi method.</p>
+<article class="remark-like" id="remark-10"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.55</span>
+</h6>
+<p id="p-173">This has poles at \(s = \frac12\text{,}\) \(\Res_{s=\frac12} E(z; s) = \frac12\text{.}\) Note that this residue is constant. We will use this in Rankin-Selberg.</p></article></section></section></section></div></main>
 </div>
 </body>
 </html>
