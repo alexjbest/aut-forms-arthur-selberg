@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>By the Fourier expansion</p>
+<div class="displaymath">
+\begin{equation*}
+T_nf(z) = \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} f \left( \frac{az+b}{d} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} \sum_{m=1}^\infty a_m  e\left( \frac{maz}{d} \right) e\left( \frac{mb}{d} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} d \sum_{m=1}^\infty a_{md}  e\left( maz\right)\text{.}
+\end{equation*}
+</div>
+<p>Which implies</p>
+<div class="displaymath">
+\begin{equation*}
+n^{1-k/2} \lambda(n) f(z) = \sum_{ad= n} \left( \frac ad \right)^{k/2} d \sum_{m=1}^\infty e(maz)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+n^{1-k/2} \lambda(n) a_m = \sum_{ad= n,\, a|m} \left( \frac ad \right)^{k/2} d  \frac{a_{md}}{a}
+\end{equation*}
+</div>
+<p>exercise: check. Take \(m = 1\) so</p>
+<div class="displaymath">
+\begin{equation*}
+n^{1-k/2} \lambda(n) a_1 = n^{-k/2 + 1} a_n
+\end{equation*}
+</div>
+<p>hence</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda(n) a_1 = a_n\text{.}
+\end{equation*}
+</div>
+<ol class="decimal">
+<li>If \(a_1 = 0\) then \(f \equiv 0\text{.}\)</li>
+<li>If \(a_1 = 1\) then \(\lambda(n) = a_n\text{.}\)</li>
+<li>Follows from 4.</li>
+<li>Note<div class="displaymath">
+\begin{equation*}
+(p^r)^{1-k/2} \lambda(p^r) \lambda(p) = \sum_{ad = p^r,\, a|p} \lambda\left(\frac{pd}{a} \right) \left( \frac ad\right)^{k/2} d
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \lambda(p^{r+1}) (p^r)^{1-k/2} + \lambda(p^{r-1}) (p^r)^{1-k/2} p^{k-1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\left(\sum_{r=0}^\infty \frac{\lambda(p^r)}{p^{rs}}\right) (1-\frac{\lambda(p)}{p^s} + \frac{p^{k-1}}{p^{2s}}) = 1\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><span class="incontext"><a href="section-aut-forms-motivation.html#proof-12">in-context</a></span>
+</body>
+</html>

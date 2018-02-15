@@ -246,11 +246,12 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-8" data-scroll="subsection-8">\(\Delta_\HH\)</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-9" data-scroll="subsection-9">Integral operators</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
+<li><a href="section-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 10, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 15, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -1905,7 +1906,7 @@ E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + 
 <p>where we have \(K_s = K_{-s}\) and</p>
 <div class="displaymath">
 \begin{equation*}
-\sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^2s}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)\text{.}
+\sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^{2s}}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)\text{.}
 \end{equation*}
 </div>
 <p>So we have proved the functional equation and analytic continuation.</p>
@@ -1914,7 +1915,226 @@ E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + 
 <article class="remark-like" id="remark-10"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.55</span>
 </h6>
-<p id="p-173">This has poles at \(s = \frac12\text{,}\) \(\Res_{s=\frac12} E(z; s) = \frac12\text{.}\) Note that this residue is constant. We will use this in Rankin-Selberg.</p></article></section></section></section></div></main>
+<p id="p-173">This has poles at \(s = \frac12\text{,}\) \(\Res_{s=\frac12} E(z; s) = \frac12\text{.}\) Note that this residue is constant. We will use this in Rankin-Selberg.</p></article><article class="aside-like" id="aside-8"><p id="p-174">Lecture 8 15/2/2018</p></article><article class="remark-like" id="remark-11"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.56</span>
+</h6>
+<p id="p-175">If \(G\) is a reductive group and \(M \subseteq G\) a Levi subgroup, e.g. for \(\GL_n\) a Levi is diagonal blocks of size \(n_1 + n_2 + \cdots +n_k = n\text{.}\) One can associate  a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> to these subgroups following Eisenstein. There are automorphic \(L\)-functions corresponding to these and by doing the same procedure as last time we see these \(L\)-functions appearing in the constant terms of the Eisenstein series. So we can establish analytic properties of these automorphic \(L\)-functions via those of the Eisenstein series. This is known as the Langlands-Shahidi  method, it only works in some cases but when it does it is very powerful. Shahidi pushed the idea by looking at non-constant terms. In the example above we have</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_{-2s}(n) = \sum_{d|n} d^{-2s} \prod(1+ 1/p^{2s} = \prod_{p|n} \zeta_p^{-1}(2s)
+\end{equation*}
+</div>
+<p>so there are \(L\)-functions even in the non-constant terms.</p></article></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type" alt="Subsubsection 1.10.4 Hecke Operators">
+<span class="type">Subsubsection</span><span class="codenumber">1.10.4</span><span class="title">Hecke Operators</span>
+</h4>
+<p id="p-176">The natural setting to view these is over \(\GL_2(\QQ_p)\text{.}\) But as we haven't done this yet we will take the path that Hecke took and just write a formula. They act on the space of <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a>.</p>
+<article class="definition-like" id="definition-9"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.57</span><span class="title">Slash operators</span>
+</h6>
+<p id="p-177">Let \(k\in   \ZZ_+\) fixed, \(\gamma \in \GL_2^+(\RR)\) (positive determinant).</p>
+<div class="displaymath">
+\begin{equation*}
+f|_{\gamma} (z)  = \det(\gamma)^{k/2} (cz+d)^{-k} f\left(\frac{az+b}{cz+d}\right)\text{.}
+\end{equation*}
+</div>
+<p>There is a determinant twist so that the center acts trivially.</p></article><article class="definition-like" id="definition-10"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.58</span><span class="title">\(T_{\gamma}\)</span>
+</h6>
+<p id="p-178">Let \(\gamma\in  \GL_2^+(\QQ)\) write</p>
+<div class="displaymath">
+\begin{equation*}
+\SL_2(\ZZ) \gamma\SL_2(\ZZ) = \bigsqcup_{i=1}^r \SL_2(\ZZ) \gamma_i
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+T_\gamma(f) =  \sum_{i=1}^r f|_{\gamma_i}(z)\text{.}
+\end{equation*}
+</div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-7" id="exercise-7"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.59</span>
+</h6></a></article><div id="hk-exercise-7" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="displaymath" id="p-179">
+\begin{equation*}
+\gamma = \begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\SL_2(\ZZ)\begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix} \SL_2(\ZZ) = \bigsqcup_{b \pmod p} \SL_2(\ZZ) \begin{pmatrix}1\amp b \\ 0 \amp p \end{pmatrix} \bigsqcup \SL_2(\ZZ) \begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix}\text{.}
+\end{equation*}
+</div></article></div>
+<article class="paragraphs" id="paragraphs-12"><h5 class="heading"><span class="title">More classically</span></h5>
+<div class="displaymath" id="p-180">
+\begin{equation*}
+T_p(f)(z) = p^{-k/2} \sum_{b\pmod p} f\left(\frac{ z+b}{p}\right) + p^{k/2} f(pz)\text{.}
+\end{equation*}
+</div>
+<p>This differs by a normalization of \(\det\) won't change too much but will shift the spectrum. Or more generally we have</p>
+<div class="displaymath">
+\begin{equation*}
+T_n(f)(z) = \sum_{ad = n,\,b\pmod {d} } n^{k/2} d^{-k} f\left(\frac{az+ b}{d}\right)\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="fact-2"><h6 class="heading">
+<span class="type">Fact</span><span class="codenumber">1.60</span>
+</h6>
+<p id="p-181">Hecke operators commpute with each other (follows from \(KAK\) decomposition).</p></article><article class="theorem-like" id="fact-3"><h6 class="heading">
+<span class="type">Fact</span><span class="codenumber">1.61</span>
+</h6>
+<p id="p-182">Hecke operators are self-adjoint with respect to the Petersson inner product on \(M_k(1)\text{,}\) the <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> of weight \(k\) and level \(1\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\pair fg_\text{Pet} \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline{g(z)} y^{k} \diff \mu(z)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="lemma-1"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">1.62</span>
+</h6>
+<p id="p-183">Let \(f(z)\ne 0\) be  a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\) which is an eigenfunction for all of the Hecke operators with eigenvalue \(n^{1-k/2} \lambda(n)\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+T_n(f)(z) n^{1-k/2} \lambda(n) f(z) \forall n
+\end{equation*}
+</div>
+<p>let</p>
+<div class="displaymath">
+\begin{equation*}
+f(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+</div>
+<p>be its fourier expansion and</p>
+<div class="displaymath">
+\begin{equation*}
+L(s,f) = \sum_{n=1}^\infty \frac{a_n}{n^s}\text{.}
+\end{equation*}
+</div>
+<p>Then</p>
+<ol class="decimal">
+<li id="li-30"><div class="displaymath">
+\begin{equation*}
+a_1 \ne 0
+\end{equation*}
+</div></li>
+<li id="li-31">If \(a_1  =1\) then \(a_n = \lambda(n) \forall n\text{.}\)</li>
+<li id="li-32">If \(a_1 = 1\) then \(\lambda(mn) = \lambda(m)\lambda(n)\) for all \((m,n) = 1\text{.}\)</li>
+<li id="li-33">If \(a_1 = 1\) then<div class="displaymath">
+\begin{equation*}
+L(s,f) = \prod_p(1-a_pp^{-s} + p^{k - 1- 2s})^{-1}\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="proof" id="proof-12"><h6 class="heading"><span class="type">Proof</span></h6>
+<p id="p-184">By the Fourier expansion</p>
+<div class="displaymath">
+\begin{equation*}
+T_nf(z) = \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} f \left( \frac{az+b}{d} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} \sum_{m=1}^\infty a_m  e\left( \frac{maz}{d} \right) e\left( \frac{mb}{d} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} d \sum_{m=1}^\infty a_{md}  e\left( maz\right)\text{.}
+\end{equation*}
+</div>
+<p>Which implies</p>
+<div class="displaymath">
+\begin{equation*}
+n^{1-k/2} \lambda(n) f(z) = \sum_{ad= n} \left( \frac ad \right)^{k/2} d \sum_{m=1}^\infty e(maz)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+n^{1-k/2} \lambda(n) a_m = \sum_{ad= n,\, a|m} \left( \frac ad \right)^{k/2} d  \frac{a_{md}}{a}
+\end{equation*}
+</div>
+<p>exercise: check. Take \(m = 1\) so</p>
+<div class="displaymath">
+\begin{equation*}
+n^{1-k/2} \lambda(n) a_1 = n^{-k/2 + 1} a_n
+\end{equation*}
+</div>
+<p>hence</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda(n) a_1 = a_n\text{.}
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-34">If \(a_1 = 0\) then \(f \equiv 0\text{.}\)</li>
+<li id="li-35">If \(a_1 = 1\) then \(\lambda(n) = a_n\text{.}\)</li>
+<li id="li-36">Follows from 4.</li>
+<li id="li-37">Note<div class="displaymath">
+\begin{equation*}
+(p^r)^{1-k/2} \lambda(p^r) \lambda(p) = \sum_{ad = p^r,\, a|p} \lambda\left(\frac{pd}{a} \right) \left( \frac ad\right)^{k/2} d
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \lambda(p^{r+1}) (p^r)^{1-k/2} + \lambda(p^{r-1}) (p^r)^{1-k/2} p^{k-1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\left(\sum_{r=0}^\infty \frac{\lambda(p^r)}{p^{rs}}\right) (1-\frac{\lambda(p)}{p^s} + \frac{p^{k-1}}{p^{2s}}) = 1\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><p id="p-185">This is very special to \(\GL_2\text{,}\) in general fourier coefficients have more information than Hecke eigenvalues.</p>
+<article class="remark-like" id="remark-12"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.63</span>
+</h6>
+<p id="p-186">With the normalisation</p>
+<div class="displaymath">
+\begin{equation*}
+T_n(f)(z) = \lambda(n) n^{1-k/2} f(z)
+\end{equation*}
+</div>
+<p>the Ramanujan conjecture reads \(\lambda(n) = O(n^\epsilon)\) for all \(\epsilon \gt 0\text{.}\)</p></article><article class="remark-like" id="remark-13"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.64</span>
+</h6>
+<p id="p-187">Having \(a_1 = 1\) is known as being Hecke normalised.</p></article></article></section></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type" alt="Subsection 1.11 Rankin-Selberg method">
+<span class="type">Subsection</span><span class="codenumber">1.11</span><span class="title">Rankin-Selberg method</span>
+</h3>
+<section class="introduction" id="introduction-4"><p id="p-188">This is a protoype of the integral representation of automorphic \(L\)-functions.</p></section><section class="subsubsection" id="subsubsection-8"><h4 class="heading hide-type" alt="Subsubsection 1.11.1 Mellin transforms of automorphic forms and automorphic \(L\)-functions">
+<span class="type">Subsubsection</span><span class="codenumber">1.11.1</span><span class="title">Mellin transforms of automorphic forms and automorphic \(L\)-functions</span>
+</h4>
+<p id="p-189">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\phi(z) = \sum_{n\in \ZZ} a_n(y) e(nx)
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+a_n(y) = \int_0^1  \phi(z) \overline {e(nx)} \diff x\text{.}
+\end{equation*}
+</div>
+<p id="p-190">Notation:</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde a_n(s) = \int_0^\infty a_n(y) y^2 \diff^* y\ \diff^* y = \frac{\diff y}{y}
+\end{equation*}
+</div>
+<p>converges for \(\Re(s) \gg 0\) if \(a_n(y) = O(y^{-N})\) for all \(N\text{.}\)</p>
+<article class="theorem-like" id="theorem-9"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.65</span>
+</h6>
+<p id="p-191">Let \(\phi(x+iy) = O(y{-N})\) for all \(N\gt 0\) and \(\phi(z)\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> under \(z\mapsto \gamma z\) for \(\gamma\in \SL_2(\ZZ)\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ)\backslash \HH} \phi(z) E(z; s) \diff z
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pi^{-s} \Gamma(S) \zeta(2s) \tilde a_0 (s-1)\text{.}
+\end{equation*}
+</div></article></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

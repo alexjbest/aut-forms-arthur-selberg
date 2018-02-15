@@ -1125,7 +1125,7 @@ section#section-aut-forms-motivation
                                     | Combining these we have shown
                                     men E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + \pi ^{-s} \Gamma(s) \zeta(2s) y^{\frac 12 -s} + \sum_{n \ne 0} \sigma_{-2s} (|n|) |n| ^s \sqrt{y} K_s( 2\pi |n| y) e(nx)
                                     | where we have #[m K_s = K_{-s}] and
-                                    me \sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^2s}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)
+                                    me \sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^{2s}}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)
                                     | . So we have proved the functional equation and analytic continuation.
 
             p
@@ -1136,4 +1136,156 @@ section#section-aut-forms-motivation
                     | This has poles at #[m s = \frac12], #[m \Res_{s=\frac12} E(z; s) = \frac12].
                     | Note that this residue is constant.
                     | We will use this in Rankin-Selberg.
+
+            aside: p Lecture 8 15/2/2018
+
+            remark: p
+                | If #[m G] is a reductive group and #[m M \subseteq G] a Levi subgroup, e.g. for #[m \GL_n] a Levi is diagonal blocks of size #[m n_1 + n_2 + \cdots +n_k = n].
+                | One can associate  a cusp form to these subgroups following Eisenstein.
+                | There are automorphic #[m L]-functions corresponding to these and by doing the same procedure as last time we see these #[m L]-functions appearing in the constant terms of the Eisenstein series.
+                | So we can establish analytic properties of these automorphic #[m L]-functions via those of the Eisenstein series.
+                | This is known as the Langlands-Shahidi  method, it only works in some cases but when it does it is very powerful.
+                | Shahidi pushed the idea by looking at non-constant terms.
+                | In the example above we have
+                me \sigma_{-2s}(n) = \sum_{d|n} d^{-2s} \prod(1+ 1/p^{2s} = \prod_{p|n} \zeta_p^{-1}(2s)
+                | so there are #[m L]-functions even in the non-constant terms.
+
+        subsubsection
+            title Hecke Operators
+
+            p
+                | The natural setting to view these is over #[m \GL_2(\QQ_p)].
+                | But as we haven't done this yet we will take the path that Hecke took and just write a formula.
+                | They act on the space of modular forms.
+
+            definition
+                title Slash operators
+                statement: p
+                    | Let #[m k\in   \ZZ_+] fixed, #[m \gamma \in \GL_2^+(\RR)] (positive determinant).
+                    me f|_{\gamma} (z)  = \det(\gamma)^{k/2} (cz+d)^{-k} f\left(\frac{az+b}{cz+d}\right)
+                    | . There is a determinant twist so that the center acts trivially.
+
+            definition
+                title #[m T_{\gamma}]
+                statement: p
+                    | Let #[m \gamma\in  \GL_2^+(\QQ)] write
+                    me \SL_2(\ZZ) \gamma\SL_2(\ZZ) = \bigsqcup_{i=1}^r \SL_2(\ZZ) \gamma_i
+                    | then
+                    me T_\gamma(f) =  \sum_{i=1}^r f|_{\gamma_i}(z)
+                    | .
+
+            exercise: statement: p
+                me \gamma = \begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix}
+                me \SL_2(\ZZ)\begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix} \SL_2(\ZZ) = \bigsqcup_{b \pmod p} \SL_2(\ZZ) \begin{pmatrix}1\amp b \\ 0 \amp p \end{pmatrix} \bigsqcup \SL_2(\ZZ) \begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix}
+                | .
+
+            paragraphs
+                title More classically
+
+                p
+                    me T_p(f)(z) = p^{-k/2} \sum_{b\pmod p} f\left(\frac{ z+b}{p}\right) + p^{k/2} f(pz)
+                    | . This differs by a normalization of #[m \det] won't change too much but will shift the spectrum.
+                    | Or more generally we have
+                    me T_n(f)(z) = \sum_{ad = n,\,b\pmod {d} } n^{k/2} d^{-k} f\left(\frac{az+ b}{d}\right)
+                    | .
+
+                fact: statement: p
+                    | Hecke operators commpute with each other (follows from #[m KAK] decomposition).
+
+                fact: statement: p
+                    | Hecke operators are self-adjoint with respect to the Petersson inner product on #[m M_k(1)], the modular forms of weight #[m k] and level #[m 1].
+                    me \pair fg_\text{Pet} \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline{g(z)} y^{k} \diff \mu(z)
+                    | .
+
+                lemma
+                    statement: p
+                        | Let #[m f(z)\ne 0] be  a cusp form of weight #[m k] which is an eigenfunction for all of the Hecke operators with eigenvalue #[m n^{1-k/2} \lambda(n)] i.e.
+                        me T_n(f)(z) n^{1-k/2} \lambda(n) f(z) \forall n
+                        | let
+                        me f(z) = \sum_{n=1}^\infty a_n e(nz)
+                        | be its fourier expansion and
+                        me L(s,f) = \sum_{n=1}^\infty \frac{a_n}{n^s}
+                        | . Then
+                        ol
+                            li: me a_1 \ne 0
+                            li
+                                | If #[m a_1  =1] then #[m a_n = \lambda(n) \forall n].
+                            li
+                                | If #[m a_1 = 1] then #[m \lambda(mn) = \lambda(m)\lambda(n)] for all #[m (m,n) = 1].
+                            li
+                                | If #[m a_1 = 1] then
+                                me L(s,f) = \prod_p(1-a_pp^{-s} + p^{k - 1- 2s})^{-1}
+                                | .
+                    proof
+                        p
+                            | By the Fourier expansion
+                            me T_nf(z) = \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} f \left( \frac{az+b}{d} \right)
+                            me         = \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} \sum_{m=1}^\infty a_m  e\left( \frac{maz}{d} \right) e\left( \frac{mb}{d} \right)
+                            me         = \sum_{ad= n,\, b\pmod d} \left(\frac ad\right)^{k/2} d \sum_{m=1}^\infty a_{md}  e\left( maz\right)
+                            | .
+                            | Which implies
+                            me  n^{1-k/2} \lambda(n) f(z) = \sum_{ad= n} \left( \frac ad \right)^{k/2} d \sum_{m=1}^\infty e(maz)
+                            | so
+                            me  n^{1-k/2} \lambda(n) a_m = \sum_{ad= n,\, a|m} \left( \frac ad \right)^{k/2} d  \frac{a_{md}}{a}
+                            | exercise: check.
+                            | Take #[m m = 1] so
+                            me n^{1-k/2} \lambda(n) a_1 = n^{-k/2 + 1} a_n
+                            | hence
+                            me \lambda(n) a_1 = a_n
+                            | .
+                            ol
+                                li
+                                    | If #[m a_1 = 0] then #[m f \equiv 0].
+                                li
+                                    | If #[m a_1 = 1] then #[m \lambda(n) = a_n].
+                                li
+                                    | Follows from 4.
+                                li
+                                    | Note
+                                    me (p^r)^{1-k/2} \lambda(p^r) \lambda(p) = \sum_{ad = p^r,\, a|p} \lambda\left(\frac{pd}{a} \right) \left( \frac ad\right)^{k/2} d
+                                    me = \lambda(p^{r+1}) (p^r)^{1-k/2} + \lambda(p^{r-1}) (p^r)^{1-k/2} p^{k-1}
+                                    me \left(\sum_{r=0}^\infty \frac{\lambda(p^r)}{p^{rs}}\right) (1-\frac{\lambda(p)}{p^s} + \frac{p^{k-1}}{p^{2s}}) = 1
+                                    | .
+
+                p
+                    | This is very special to #[m \GL_2], in general fourier coefficients have more information than Hecke eigenvalues.
+
+                remark
+                    p
+                        | With the normalisation
+                        me T_n(f)(z) = \lambda(n) n^{1-k/2} f(z)
+                        | the Ramanujan conjecture reads #[m \lambda(n) = O(n^\epsilon)] for all #[m \epsilon \gt 0].
+
+                remark
+                    p
+                        | Having #[m a_1 = 1] is known as being Hecke normalised.
+
+    subsection
+        title Rankin-Selberg method
+
+        introduction: p
+            | This is a protoype of the integral representation of automorphic #[m L]-functions.
+
+        subsubsection
+            title Mellin transforms of automorphic forms and automorphic #[m L]-functions
+
+            p
+                | Let
+                me \phi(z) = \sum_{n\in \ZZ} a_n(y) e(nx)
+                | then
+                me a_n(y) = \int_0^1  \phi(z) \overline {e(nx)} \diff x
+                |.
+            p
+                | Notation:
+                me \tilde a_n(s) = \int_0^\infty a_n(y) y^2 \diff^* y\ \diff^* y = \frac{\diff y}{y}
+                | converges for #[m \Re(s) \gg 0] if #[m a_n(y) = O(y^{-N})] for all #[m N].
+
+            theorem
+                statement
+                    p
+                        | Let #[m \phi(x+iy) = O(y{-N})] for all #[m N\gt 0] and #[m \phi(z)] is invariant under #[m z\mapsto \gamma z] for #[m \gamma\in \SL_2(\ZZ)].
+                        | Then
+                        me \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) E(z; s) \diff z
+                        me = \pi^{-s} \Gamma(S) \zeta(2s) \tilde a_0 (s-1)
+                        | .
 
