@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Follow your nose!</p>
+<p>Recall</p>
+<div class="displaymath">
+\begin{equation*}
+E_3(z; s) = \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s\text{.}
+\end{equation*}
+</div>
+<p>Step 1: The integral converges: Writing \(E\) for \(E_3\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = O(y^2 + y^{1-s})\text{.}
+\end{equation*}
+</div>
+<p>Step 2: Unfold</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s \right) \diff \mu(z)\\
+\frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH}  \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)}\phi(\gamma z) \Im(\gamma z)^s \right) \diff \mu(z)\\
+\pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty\backslash \HH}  \phi(z) y^s \diff \mu(z)\\
+\pi^{-s} \Gamma(s) \zeta(2s)\int_0^1 \int_{0}^\infty \phi(z) y^s \frac{\diff x \diff y}{y^2}\\
+\pi^{-s} \Gamma(s) \zeta(2s)\int_{0}^\infty a_0(y) y^s \frac{\diff y}{y^2}\\
+\pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)
+\end{gather*}
+</div></article><span class="incontext"><a href="section-aut-forms-motivation.html#proof-13">in-context</a></span>
+</body>
+</html>

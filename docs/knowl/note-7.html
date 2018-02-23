@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">1.71</span>
+</h6>
+<p>If \(f = \sum a_n e(nz)\text{,}\) \(g = \sum b_n e(nz)\) then</p>
+<div class="displaymath">
+\begin{equation*}
+f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \overline b_n
+\end{equation*}
+</div>
+<p>so if we were to integrate this from 0 to 1 \(\diff x\) the first term would dissapear and we would be left with the second.</p>
+<div class="displaymath">
+\begin{equation*}
+\phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k = \sum_{n\in \ZZ} a_n \overline b_ny^k
+\end{equation*}
+</div>
+<p>i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) t^k e^{-4\pi i ny}\text{.}
+\end{equation*}
+</div></article><span class="incontext"><a href="section-aut-forms-motivation.html#note-7">in-context</a></span>
+</body>
+</html>

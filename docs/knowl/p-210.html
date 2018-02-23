@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="displaymath">
+\begin{equation*}
+\tilde \phi_0(s) = \int_0^1 \sum_{n\in \ZZ} a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{n\in \ZZ} a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{1}{(4\pi )^s} \sum_{n\in \ZZ}\frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
+\end{equation*}
+</div>
+<p>this is the Rankin-Selberg \(L\)-function. So by the <a knowl="./knowl/cor-l-function-functional-eq-eisenstein.html" knowl-id="xref-cor-l-function-functional-eq-eisenstein" alt="Corollary 1.68 " title="Corollary 1.68 ">corollary 1.68</a>; \(L(s+k; f\times g)\) has analytic continuation and functional equation, and poles only at \(s= 1+k, s=k\text{.}\)</p>
+<span class="incontext"><a href="section-aut-forms-motivation.html#p-210">in-context</a></span>
+</body>
+</html>

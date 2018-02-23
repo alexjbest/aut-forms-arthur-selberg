@@ -152,8 +152,8 @@ section#section-aut-forms-motivation
                             me  \theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi]
                             me \implies \theta(t) = \sqrt \xi \theta(\xi) \sim \sqrt \xi = \frac{1}{\sqrt t}
                             | so #[m \theta(t) \sim \frac{1}{ \sqrt t}]
-                            me \implies \left | \int_0^A \theta(t) t^{s/2} \frac{\diff t}{t}\right | \lt \infty
-                            me \iff \left| \int_0^A t^{(s-1)/2} \frac{\diff t}{t}\right | \lt \infty
+                            me \implies \left | \int_0^A \theta(t) t^{s/2} \frac{\diff t}{t}\right| \lt \infty
+                            me \iff \left| \int_0^A t^{(s-1)/2} \frac{\diff t}{t}\right| \lt \infty
                             me \iff \Re(s) \gt 1
                     | so no values of #[m s] will make sense for this improper integral.
                 p
@@ -1254,7 +1254,7 @@ section#section-aut-forms-motivation
                     p
                         | With the normalisation
                         me T_n(f)(z) = \lambda(n) n^{1-k/2} f(z)
-                        | the Ramanujan conjecture reads #[m \lambda(n) = O(n^\epsilon)] for all #[m \epsilon \gt 0].
+                        | the Ramanujan conjecture reads #[m \lambda(n) = O(n^{(k-1)/2 + \epsilon})].
 
                 remark
                     p
@@ -1288,4 +1288,119 @@ section#section-aut-forms-motivation
                         me \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) E(z; s) \diff z
                         me = \pi^{-s} \Gamma(S) \zeta(2s) \tilde a_0 (s-1)
                         | .
+
+            aside: p Lecture 9 22/2/2018
+
+            definition#def-mellin-transform
+                title Mellin transforms
+                statement: p
+                    | Given
+                    me f(y) \chi \RR_+ \to\CC
+                    | its #[term Mellin transform] is
+                    me \hat f (s) = \int_0^\infty f(y) y^s \frac{\diff y}{y},\, f(y) = O(y^{-N})
+                    | .
+            p
+                | If
+                me f(y) = g(Q(n) y)
+                me \hat f(s) = \int g(Q(n)y)y^s \frac{\diff y } y = \int g(y) \frac{y^s}{Q^s(n)} \frac{\diff y}{y} = \frac{1}{Q(n)^s} \tilde g(y)
+
+            p
+                | What is
+                me \int_{\SL_2(\ZZ) \backslash \HH} \phi(z) E_3( z; s)\diff \mu(z)
+                | ? The Eisenstein series is essentially
+                me \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s
+                | we can see the integrating over #[m \SL_2(\ZZ) \backslash \HH] a sum over #[m \Gamma_\infty\backslash \SL_2(\ZZ)] things should cancel to give us an integral over #[m \Gamma_\infty \backslash \HH], a rectangle!
+                | So this unfolding should simplify things.
+
+
+            proposition
+                statement: p
+                    | If #[m \phi(x+iy) = O(y^{-N})] for all #[m N \gt 0].
+                    men \int_{\SL_2(\ZZ) \backslash \HH} \phi(z) E_3( z; s)\diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \tilde a_0(s-1)
+                    | where #[m \phi(z) = \sum_{n\in \ZZ} a_n(y) e(nx)].
+                proof
+                    p
+                        | Follow your nose!
+                    p
+                        | Recall
+                        me E_3(z; s) = \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s
+                        | .
+                    p
+                        | Step 1: The integral converges: Writing #[m E] for #[m E_3] we have
+                        me E(z; s) = O(y^2 + y^{1-s})
+                        | .
+                    p
+                        | Step 2: Unfold
+                        md
+                            mrow \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s \right) \diff \mu(z)
+                            mrow \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH}  \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)}\phi(\gamma z) \Im(\gamma z)^s \right) \diff \mu(z)
+                            // TODO when does 2 dissapear
+                            mrow \pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty\backslash \HH}  \phi(z) y^s \diff \mu(z)
+                            mrow \pi^{-s} \Gamma(s) \zeta(2s)\int_0^1 \int_{0}^\infty \phi(z) y^s \frac{\diff x \diff y}{y^2}
+                            mrow \pi^{-s} \Gamma(s) \zeta(2s)\int_{0}^\infty a_0(y) y^s \frac{\diff y}{y^2}
+                            mrow \pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)
+                        | .
+
+            corollary#cor-l-function-functional-eq-eisenstein
+                statement: p
+                    me \Lambda(s) = \pi^{-s} \Gamma(s) \zeta(2s) \tilde a_0 (s-1)
+                    | we showed
+                    me \Lambda(s) = \int_{\SL_2(\ZZ) \backslash \HH} \phi(s) E(z; s) \diff \mu (z)
+                    | . (So we can find a functional equation and analytic continuation for from the corresponding properties of the Eisenstein series.)
+                    ul
+                        li #[m \Lambda(s)] has analytic continuation.
+                        li #[m \Lambda(s)] has functional equation #[m s\leftrightarrow s-1].
+                        li #[m \Lambda(s)] has poles only at #[m s= 0,1].
+                        li: me \Res_{s=1}  = \int_{\SL_2(\ZZ) \backslash \HH} \phi(s) \diff \mu(z)
+
+
+            p
+                | Note that if we use a cusp form for #[m \phi] we get 0 from the integral above, in #[m L^2] the cusp forms and Eisenstein series are orthogonal.
+                | Instead we will cook up something interesting from two functions.
+
+        subsubsection
+            title Rankin-Selberg #[m L]-functions
+
+            p
+                | Let
+                me f(z) = \sum_{n\in \ZZ} a_ne(nz)
+                me g(z) = \sum_{n\in \ZZ} b_ne(nz)
+                | be modular forms of weight #[m k].
+            p
+                | Assume that at least one of #[m f] or #[m g] is cuspidal.
+                | Assume additionally that #[m f,g] are normalised Hecke eigenforms so #[m a(1) = b(1) = 1].
+
+
+            definition
+                statement: p
+                    me \phi(z) = f(z) \overline g(z)y^k
+
+            note: p
+                | #[m \phi(\gamma z) = \phi(z)] for any #[m \gamma \in \SL_2(\ZZ)].
+
+            note: p
+                | If #[m f = \sum a_n e(nz)], #[m g = \sum b_n e(nz)] then
+                me f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \overline b_n
+                | so if we were to integrate this from 0 to 1 #[m \diff x] the first term would dissapear and we would be left with the second.
+                me \phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k = \sum_{n\in \ZZ} a_n \overline b_ny^k
+                | i.e.
+                me \phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) t^k e^{-4\pi i ny}
+                |.
+            note: p
+                me \tilde \phi_0(s) = \int_0^1 \sum_{n\in \ZZ} a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+                me = \sum_{n\in \ZZ} a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+                me = \frac{1}{(4\pi )^s} \sum_{n\in \ZZ}\frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
+                me = \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
+                | this is the Rankin-Selberg #[m L]-function.
+                | So by the #[xref(ref="cor-l-function-functional-eq-eisenstein") corollary]; #[m L(s+k; f\times g)] has analytic continuation and functional equation, and poles only at #[m s= 1+k, s=k].
+
+
+            paragraphs
+                title An application
+                p
+                    | We proved #[m f] cusp form #[m f(z) = \sum  a_ne(nz)] implies #[m a_n = O(n^{k/2})], Ramanujan #[m a_n = O(n^{k-1/2})].
+                    | As cusp forms often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series.
+                    | The averaged version of the Ramanujan conjecture is much easier
+                    me \sum_{n\lt X} a_n
+                    |.
 
