@@ -2093,7 +2093,7 @@ n^{1-k/2} \lambda(n) a_1 = n^{-k/2 + 1} a_n
 T_n(f)(z) = \lambda(n) n^{1-k/2} f(z)
 \end{equation*}
 </div>
-<p>the Ramanujan conjecture reads \(\lambda(n) = O(n^\epsilon)\) for all \(\epsilon \gt 0\text{.}\)</p></article><article class="remark-like" id="remark-13"><h6 class="heading">
+<p>the Ramanujan conjecture reads \(\lambda(n) = O(n^{(k-1)/2 + \epsilon})\text{.}\)</p></article><article class="remark-like" id="remark-13"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.64</span>
 </h6>
 <p id="p-187">Having \(a_1 = 1\) is known as being Hecke normalised.</p></article></article></section></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type" alt="Subsection 1.11 Rankin-Selberg method">
@@ -2134,20 +2134,13 @@ a_n(y) = \int_0^1  \phi(z) \overline {e(nx)} \diff x\text{.}
 \begin{equation*}
 = \pi^{-s} \Gamma(S) \zeta(2s) \tilde a_0 (s-1)\text{.}
 \end{equation*}
-</div></article><article class="aside-like" id="aside-9"><p id="p-192">Lecture 9 22/2/2018</p></article><p id="p-193">Little correction: From last time \(f\) a modular form of weight \(k\)</p>
-<div class="displaymath">
-\begin{equation*}
-T_n(f)(z) = n^{k/w} \sum_{ad=n,\, b \pmod d} d^{-k} f\left(\frac{az+b}{d}\right)
-\end{equation*}
-</div>
-<p id="p-194">If \(f\) is an eigenfunction then ramanujan conj. reads \(\lambda(n) = O(n^{(k-1)/2 + \epsilon})\)</p>
-<article class="definition-like" id="def-mellin-transform"><h6 class="heading">
+</div></article><article class="aside-like" id="aside-9"><p id="p-192">Lecture 9 22/2/2018</p></article><article class="definition-like" id="def-mellin-transform"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.66</span><span class="title">Mellin transforms</span>
 </h6>
-<p id="p-195">Given</p>
+<p id="p-193">Given</p>
 <div class="displaymath">
 \begin{equation*}
-f(y) \chi \RR_+ \to\CC
+f(y) \colon \RR_+ \to\CC
 \end{equation*}
 </div>
 <p>its <dfn class="terminology">Mellin transform</dfn> is</p>
@@ -2155,7 +2148,7 @@ f(y) \chi \RR_+ \to\CC
 \begin{equation*}
 \hat f (s) = \int_0^\infty f(y) y^s \frac{\diff y}{y},\, f(y) = O(y^{-N})\text{.}
 \end{equation*}
-</div></article><p id="p-196">If</p>
+</div></article><p id="p-194">If</p>
 <div class="displaymath">
 \begin{equation*}
 f(y) = g(Q(n) y)
@@ -2166,7 +2159,7 @@ f(y) = g(Q(n) y)
 \hat f(s) = \int g(Q(n)y)y^s \frac{\diff y } y = \int g(y) \frac{y^s}{Q^s(n)} \frac{\diff y}{y} = \frac{1}{Q(n)^s} \tilde g(y)
 \end{equation*}
 </div>
-<p id="p-197">What is</p>
+<p id="p-195">What is</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\SL_2(\ZZ) \backslash \HH} \phi(z) E_3( z; s)\diff \mu(z)\text{?}
@@ -2182,26 +2175,26 @@ f(y) = g(Q(n) y)
 <article class="theorem-like" id="proposition-3"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">1.67</span>
 </h6>
-<p id="p-198">If \(\phi(x+iy) = O(y^{-N})\) for all \(N \gt 0\text{.}\)</p>
+<p id="p-196">If \(\phi(x+iy) = O(y^{-N})\) for all \(N \gt 0\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\SL_2(\ZZ) \backslash \HH} \phi(z) E_3( z; s)\diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \tilde a_0(s-1)\tag{1.4}
 \end{equation}
 </div>
-<p>where \(\phi(z) = \sum_{n\in \ZZ} a_n(y) e(nx)\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-13" id="proof-13"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-13" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-199">Follow your nose!</p>
-<p id="p-200">Recall</p>
+<p>where \(\phi(z) = \sum_{n\in \ZZ} a_n(y) e(nx)\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-13" id="proof-13"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-13" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-197">Follow your nose!</p>
+<p id="p-198">Recall</p>
 <div class="displaymath">
 \begin{equation*}
 E_3(z; s) = \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s\text{.}
 \end{equation*}
 </div>
-<p id="p-201">Step 1: The integral converges: Writing \(E\) for \(E_3\) we have</p>
+<p id="p-199">Step 1: The integral converges: Writing \(E\) for \(E_3\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 E(z; s) = O(y^2 + y^{1-s})\text{.}
 \end{equation*}
 </div>
-<p id="p-202">Step 2: Unfold</p>
+<p id="p-200">Step 2: Unfold</p>
 <div class="displaymath">
 \begin{gather*}
 \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s \right) \diff \mu(z)\\
@@ -2209,13 +2202,13 @@ E(z; s) = O(y^2 + y^{1-s})\text{.}
 \pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty\backslash \HH}  \phi(z) y^s \diff \mu(z)\\
 \pi^{-s} \Gamma(s) \zeta(2s)\int_0^1 \int_{0}^\infty \phi(z) y^s \frac{\diff x \diff y}{y^2}\\
 \pi^{-s} \Gamma(s) \zeta(2s)\int_{0}^\infty a_0(y) y^s \frac{\diff y}{y^2}\\
-\pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)
+\pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)\text{.}
 \end{gather*}
 </div></article></div>
 <article class="theorem-like" id="cor-l-function-functional-eq-eisenstein"><h6 class="heading">
 <span class="type">Corollary</span><span class="codenumber">1.68</span>
 </h6>
-<div class="displaymath" id="p-203">
+<div class="displaymath" id="p-201">
 \begin{equation*}
 \Lambda(s) = \pi^{-s} \Gamma(s) \zeta(2s) \tilde a_0 (s-1)
 \end{equation*}
@@ -2233,13 +2226,13 @@ E(z; s) = O(y^2 + y^{1-s})\text{.}
 <li id="li-40">\(\Lambda(s)\) has poles only at \(s= 0,1\text{.}\)</li>
 <li id="li-41"><div class="displaymath">
 \begin{equation*}
-\Res_{s=1}  = \int_{\SL_2(\ZZ) \backslash \HH} \phi(s) \diff \mu(z)
+\Res_{s=1} \Lambda(s) = \int_{\SL_2(\ZZ) \backslash \HH} \phi(s) \diff \mu(z)
 \end{equation*}
 </div></li>
-</ul></article><p id="p-204">Note that if we use a cusp form for \(\phi\) we get 0 from the integral above, in \(L^2\) the cusp forms and Eisenstein series are orthogonal. Instead we will cook up something interesting from two functions.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type" alt="Subsubsection 1.11.2 Rankin-Selberg \(L\)-functions">
+</ul></article><p id="p-202">Note that if we use a cusp form for \(\phi\) we get 0 from the integral above, in \(L^2\) the cusp forms and Eisenstein series are orthogonal. Instead we will cook up something interesting from two functions.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type" alt="Subsubsection 1.11.2 Rankin-Selberg \(L\)-functions">
 <span class="type">Subsubsection</span><span class="codenumber">1.11.2</span><span class="title">Rankin-Selberg \(L\)-functions</span>
 </h4>
-<p id="p-205">Let</p>
+<p id="p-203">Let</p>
 <div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n\in \ZZ} a_ne(nz)
@@ -2251,21 +2244,21 @@ g(z) = \sum_{n\in \ZZ} b_ne(nz)
 \end{equation*}
 </div>
 <p>be modular forms of weight \(k\text{.}\)</p>
-<p id="p-206">Assume that at least one of \(f\) or \(g\) is cuspidal. Assume additionally that \(f,g\) are normalised Hecke eigenforms so \(a(1) = b(1) = 1\text{.}\)</p>
+<p id="p-204">Assume that at least one of \(f\) or \(g\) is cuspidal. Assume additionally that \(f,g\) are normalised Hecke eigenforms so \(a(1) = b(1) = 1\text{.}\)</p>
 <article class="definition-like" id="definition-12"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.69</span>
 </h6>
-<div class="displaymath" id="p-207">
+<div class="displaymath" id="p-205">
 \begin{equation*}
 \phi(z) = f(z) \overline g(z)y^k
 \end{equation*}
 </div></article><article class="remark-like" id="note-6"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.70</span>
 </h6>
-<p id="p-208">\(\phi(\gamma z) = \phi(z)\) for any \(\gamma \in \SL_2(\ZZ)\text{.}\)</p></article><article class="remark-like" id="note-7"><h6 class="heading">
+<p id="p-206">\(\phi(\gamma z) = \phi(z)\) for any \(\gamma \in \SL_2(\ZZ)\text{.}\)</p></article><article class="remark-like" id="note-7"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.71</span>
 </h6>
-<p id="p-209">If \(f = \sum a_n e(nz)\text{,}\) \(g = \sum b_n e(nz)\) then</p>
+<p id="p-207">If \(f = \sum a_n e(nz)\text{,}\) \(g = \sum b_n e(nz)\) then</p>
 <div class="displaymath">
 \begin{equation*}
 f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \overline b_n
@@ -2285,7 +2278,7 @@ f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \
 </div></article><article class="remark-like" id="note-8"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.72</span>
 </h6>
-<div class="displaymath" id="p-210">
+<div class="displaymath" id="p-208">
 \begin{equation*}
 \tilde \phi_0(s) = \int_0^1 \sum_{n\in \ZZ} a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
 \end{equation*}
@@ -2306,7 +2299,7 @@ f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \
 \end{equation*}
 </div>
 <p>this is the Rankin-Selberg \(L\)-function. So by the <a knowl="./knowl/cor-l-function-functional-eq-eisenstein.html" knowl-id="xref-cor-l-function-functional-eq-eisenstein" alt="Corollary 1.68 " title="Corollary 1.68 ">corollary 1.68</a>; \(L(s+k; f\times g)\) has analytic continuation and functional equation, and poles only at \(s= 1+k, s=k\text{.}\)</p></article><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">An application</span></h5>
-<p id="p-211">We proved \(f\) cusp form \(f(z) = \sum  a_ne(nz)\) implies \(a_n = O(n^{k/2})\text{,}\) Ramanujan \(a_n = O(n^{k-1/2})\text{.}\) As cusp forms often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series. The averaged version of the Ramanujan conjecture is much easier</p>
+<p id="p-209">We proved \(f\) cusp form \(f(z) = \sum  a_ne(nz)\) implies \(a_n = O(n^{k/2})\text{,}\) Ramanujan \(a_n = O(n^{k-1/2})\text{.}\) As cusp forms often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series. The averaged version of the Ramanujan conjecture is much easier</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n\lt X} a_n\text{.}
