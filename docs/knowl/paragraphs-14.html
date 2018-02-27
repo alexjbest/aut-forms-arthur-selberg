@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Applications</span></h5>
+<p>If one proves the prime number theorem using non-vanishing of the \(\zeta\) function in a certain region you use a weird identity using sines and cosines being positive. This really comes from a Rankin-Selberg product.</p>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.76</span>
+</h6>
+<p>Rankin-Selberg proves positivity.</p>
+<div class="displaymath">
+\begin{equation*}
+z\in \ZZ,\,|z|^2 \ge 0\text{.}
+\end{equation*}
+</div></article><p>Ramanujan on average:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n\lt X } a_n  \sim X^{(k+1)/2}
+\end{equation*}
+</div>
+<p>this is equivalent to</p>
+<div class="displaymath">
+\begin{equation*}
+L(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}
+\end{equation*}
+</div>
+<p>converges for \(\Re(s) \gt (k+1)/2\text{.}\) Let</p>
+<div class="displaymath">
+\begin{equation*}
+\phi(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+</div>
+<p>be a cusp form of weight \(k\text{.}\)</p>
+<p>Consider</p>
+<div class="displaymath">
+\begin{equation*}
+D(s) = \sum_{n=1}^\infty \frac{|a_n|^2}{n^s}\text{,}
+\end{equation*}
+</div>
+<p>Hecke implies this converges for \(\Re(s) \gt k+1\text{.}\)</p>
+<article class="remark-like"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">1.77</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+D(s) = L(s, f\times \overline f)
+\end{equation*}
+</div>
+<p>converges for \(\Re(s) \gt k\text{.}\)</p></article><p>Now observe that for any \(\lambda \gt 0\)</p>
+<div class="displaymath">
+\begin{equation*}
+|a_n| \le \max \left\{n^\lambda, \frac{|a_n|^2}{n^\lambda}\right\}\text{.}
+\end{equation*}
+</div>
+<p>So</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{|a_n|}{n^s} \le \max\sum_{n=1}^\infty \max \left\{ \frac{1}{n^{s-\lambda}}, \frac{|a_n|}{n^{s+\lambda}}\right\}
+\end{equation*}
+</div>
+<p>choose \(\lambda = (k-1)/2\) so</p>
+<div class="displaymath">
+\begin{equation*}
+\lt \max\sum_{n=1}^\infty \max \left\{ \frac{1}{n^{s-(k-1)/2}}, \frac{|a_n|}{n^{s+(k-1)/2}}\right\}
+\end{equation*}
+</div>
+<p>which converges for \(s\gt (k+1)/2\text{.}\)</p>
+<article class="example-like"><h6 class="heading">
+<span class="type">Question</span><span class="codenumber">1.78</span>
+</h6>
+<p>Fix \(\diff \mu(z) = \frac{\diff x \diff y}{y^2}\) on \(\HH\text{.}\) What is \(\vol(\SL_2(\ZZ) \backslash \HH)\text{?}\) (\(\pi/3\text{?}\)) What about other \(\Gamma\text{?}\)</p></article><p>Naive observation:</p>
+<div class="displaymath">
+\begin{equation*}
+\int \frac 12 \diff \mu(z) = \frac{\vol}{2}
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\frac 12  = \Res_{s=1 } E(z; s)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\vol}{2} = \int_{\SL_2\backslash \HH} \Res_{s=1} E(z; s) \diff \mu(z) ``=" \Res_{s=1} \int_{\SL_2(\ZZ) \backslash \HH} E(z; s) \diff \mu(z)
+\end{equation*}
+</div>
+<p>but the right hand side does not converge (exercise, check).</p>
+<p>Problem: naive idea doesn't work \(\int_{\SL_2(\ZZ)\backslash \HH} E(z; s) \diff \mu(z)\) converges only for \(0 \lt 1 \lt 1\text{.}\) but then we can't unfold because the series defining \(E(z; s)\) does not converge \(0\lt s \lt 1\text{.}\) We must target the source of this divergence, the constant term of the Eisenstein series.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_1^\infty * y^s + * y^{1-s} \frac{\diff y}{y^2}
+\end{equation*}
+</div>
+<p>we will truncate the Eisenstein series.</p></article><span class="incontext"><a href="section-aut-forms-motivation.html#paragraphs-14">in-context</a></span>
+</body>
+</html>

@@ -12,18 +12,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let</p>
+<p>If we let</p>
 <div class="displaymath">
 \begin{equation*}
-f(z) = \sum_{n=0}^\infty a_ne(nz)
+L(s,f\times \overline g) = \zeta(2(s-k+1)) \sum_{n=1} ^\infty \frac{a_n \overline b_n}{n^s}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-g(z) = \sum_{n=0}^\infty b_ne(nz)
+\Lambda(s,f\times \overline g) = (2\pi)^{-2s} \Gamma(s) \Gamma(s-k+1) L(s,f\times g)
 \end{equation*}
 </div>
-<p>be holomorphic modular forms of weight \(k\text{.}\)</p>
-<span class="incontext"><a href="section-aut-forms-motivation.html#p-203">in-context</a></span>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\Lambda(s, f\times \overline g) = \Lambda(2k-1-s, f\times g)
+\end{equation*}
+</div>
+<p>this follows from <a knowl="./knowl/thm-functional-eqn-eisenstein.html" knowl-id="xref-thm-functional-eqn-eisenstein" alt="Theorem 1.54 " title="Theorem 1.54 ">Theorem 1.54</a> \(E(z; s) = E(s; 1-s)\text{.}\) .</p>
+<span class="incontext"><a href="section-aut-forms-motivation.html#p-212">in-context</a></span>
 </body>
 </html>

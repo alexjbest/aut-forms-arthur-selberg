@@ -1071,7 +1071,7 @@ section#section-aut-forms-motivation
                     me \implies (\Delta+ (\frac14 - s^2))y^{s+\frac 12} = 0
                     | #[m \gamma] is an isometry implies #[m \Delta\gamma = \gamma\Delta]. So #[m \gamma y^{s+\frac 12}] is also an eigenfunction with eigenvalue #[m \frac 14 - s^2].
 
-                theorem
+                theorem#thm-functional-eqn-eisenstein
                     statement: p
                         | #[m E(z; s)] has analytic continuation to #[m \CC] (in #[m s]), it satisfies #[m E(z; s) = E(z; -s)] and
                         me E(z; s) = O( y^\sigma),\,\sigma=\max\{\Re(s),\Re(-s)\} + \frac 12
@@ -1313,8 +1313,11 @@ section#section-aut-forms-motivation
                 | So this unfolding should simplify things.
 
 
-            proposition
+            proposition#prop-unfolding
                 statement: p
+                    | Let #[m \phi\colon \HH \to \CC] be automorphic with respect to #[m \SL_2(\ZZ)], with fourier expansion
+                    me \phi(z) = \sum_{n=-\infty}^\infty a_n(y) e(nx),\,\text{where}\,a_n(y) = \int_0^1 \phi(x+iy) e(-nx) \diff x
+                    | .
                     | If #[m \phi(x+iy) = O(y^{-N})] for all #[m N \gt 0].
                     men \int_{\SL_2(\ZZ) \backslash \HH} \phi(z) E_3( z; s)\diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \tilde a_0(s-1)
                     | where #[m \phi(z) = \sum_{n\in \ZZ} a_n(y) e(nx)].
@@ -1333,12 +1336,12 @@ section#section-aut-forms-motivation
                         | Step 2: Unfold
                         md
                             mrow \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s \right) \diff \mu(z)
-                            mrow \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH}  \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)}\phi(\gamma z) \Im(\gamma z)^s \right) \diff \mu(z)
-                            // TODO when does 2 dissapear
-                            mrow \pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty\backslash \HH}  \phi(z) y^s \diff \mu(z)
-                            mrow \pi^{-s} \Gamma(s) \zeta(2s)\int_0^1 \int_{0}^\infty \phi(z) y^s \frac{\diff x \diff y}{y^2}
-                            mrow \pi^{-s} \Gamma(s) \zeta(2s)\int_{0}^\infty a_0(y) y^s \frac{\diff y}{y^2}
-                            mrow \pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)
+                            mrow =\frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH}  \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)}\phi(\gamma z) \Im(\gamma z)^s \right) \diff \mu(z)
+                            // TODO when does 2 disappear
+                            mrow =\pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty\backslash \HH}  \phi(z) y^s \diff \mu(z)
+                            mrow =\pi^{-s} \Gamma(s) \zeta(2s)\int_0^1 \int_{0}^\infty \phi(z) y^s \frac{\diff x \diff y}{y^2}
+                            mrow =\pi^{-s} \Gamma(s) \zeta(2s)\int_{0}^\infty a_0(y) y^s \frac{\diff y}{y^2}
+                            mrow =\pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)
                         | .
 
             corollary#cor-l-function-functional-eq-eisenstein
@@ -1363,9 +1366,9 @@ section#section-aut-forms-motivation
 
             p
                 | Let
-                me f(z) = \sum_{n\in \ZZ} a_ne(nz)
-                me g(z) = \sum_{n\in \ZZ} b_ne(nz)
-                | be modular forms of weight #[m k].
+                me f(z) = \sum_{n=0}^\infty a_ne(nz)
+                me g(z) = \sum_{n=0}^\infty b_ne(nz)
+                | be holomorphic modular forms of weight #[m k].
             p
                 | Assume that at least one of #[m f] or #[m g] is cuspidal.
                 | Assume additionally that #[m f,g] are normalised Hecke eigenforms so #[m a(1) = b(1) = 1].
@@ -1377,22 +1380,25 @@ section#section-aut-forms-motivation
 
             note: p
                 | #[m \phi(\gamma z) = \phi(z)] for any #[m \gamma \in \SL_2(\ZZ)].
+                | #[m \phi] also satisfies the decay condition.
 
-            note: p
-                | If #[m f = \sum a_n e(nz)], #[m g = \sum b_n e(nz)] then
-                me f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \overline b_n
-                | so if we were to integrate this from 0 to 1 #[m \diff x] the first term would dissapear and we would be left with the second.
-                me \phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k = \sum_{n\in \ZZ} a_n \overline b_ny^k
-                | i.e.
-                me \phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) t^k e^{-4\pi i ny}
-                |.
-            note: p
-                me \tilde \phi_0(s) = \int_0^1 \sum_{n\in \ZZ} a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
-                me = \sum_{n\in \ZZ} a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
-                me = \frac{1}{(4\pi )^s} \sum_{n\in \ZZ}\frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
-                me = \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
-                | this is the Rankin-Selberg #[m L]-function.
-                | So by the #[xref(ref="cor-l-function-functional-eq-eisenstein") corollary]; #[m L(s+k; f\times g)] has analytic continuation and functional equation, and poles only at #[m s= 1+k, s=k].
+            note#note-exp-phi0
+                p
+                    | If #[m f = \sum a_n e(nz)], #[m g = \sum b_n e(nz)] then
+                    me f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \overline b_n
+                    | so if we were to integrate this from 0 to 1 #[m \diff x] the first term would disappear and we would be left with the second.
+                    me \phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k
+                    me = \sum_{n\in \ZZ} a_n \overline b_ny^k
+                    | i.e.
+                    me \phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) y^k e^{-4\pi i ny}
+                    |.
+                note: p
+                    me \tilde \phi_0(s) = \int_0^1 \sum_{n=0}^\infty a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+                    me = \sum_{n=0}^\infty a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+                    me = \frac{1}{(4\pi )^s} \sum_{n=0}^\infty \frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
+                    me = \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
+                    | this is the Rankin-Selberg #[m L]-function.
+                    | So by the #[xref(ref="cor-l-function-functional-eq-eisenstein") corollary]; #[m L(s+k; f\times g)] has analytic continuation and functional equation, and poles only at #[m s= 1+k, s=k].
 
 
             paragraphs
@@ -1404,3 +1410,124 @@ section#section-aut-forms-motivation
                     me \sum_{n\lt X} a_n
                     |.
 
+            aside: p Lecture 10 27/2/2018
+
+            p
+                | Recall #[xref(ref="prop-unfolding")/] and moreover that
+                me E(z; s) = \pi^{-s} \Gamma(s) \zeta(2s) \frac 12 \sum_{\gamma \in     \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s = \pi^{-s } \Gamma(s) \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0)} \frac{y^s}{|mz+n|^{2s}}
+                | , from this and #[xref(ref="note-exp-phi0")/] we conclude.
+
+                me \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline g(z) y^k E(z; s) \diff \mu (z)
+                men#eqn-conclusion-rankin-selberg = \frac{\pi^{-s} \zeta(2s) \Gamma(s) \Gamma(s+ k-1)}{(4\pi)^{2+k-1}} \sum_{n=1}^\infty \frac{a_n \overline b_n}{n^{s+k-1}}
+                | #[xref(ref="eqn-conclusion-rankin-selberg")/] has analytic continuation as a function of #[m s] to all #[m s\in \CC].
+                | It has at most simple poles
+                me \Res_{s=1} #[xref(ref="eqn-conclusion-rankin-selberg")/] (s) = \frac 12 \pair{f}{g}_{\text{Pet}}
+                | .
+            p
+                | If we let
+                me L(s,f\times \overline g) = \zeta(2(s-k+1)) \sum_{n=1} ^\infty \frac{a_n \overline b_n}{n^s}
+                me \Lambda(s,f\times \overline g) = (2\pi)^{-2s} \Gamma(s) \Gamma(s-k+1) L(s,f\times g)
+                | so
+                me \Lambda(s, f\times \overline g) = \Lambda(2k-1-s, f\times g)
+                | this follows from #[xref(ref="thm-functional-eqn-eisenstein")/] #[m E(z; s) = E(s; 1-s)].
+                | .
+            p
+                | #[m \Lambda(s,f\times \overline g)] has analytic continuation to #[m s\in \CC] with poles at most at #[m s=k,\,s=k-1].
+                me \Res_{s=k} \Lambda(s,f\times g) =  \frac{1}{2\pi^{k-1}} \pair fg_{\text{Pet}}
+                | .
+            p
+                | This is analogous to when we took the Mellin transform of the theta function.
+                | We have obtained some highly nontrivial information above:
+
+            remark: p
+                | Given an arbitrary series of the form
+                me  L(s) = \sum_{n=1}^\infty \frac{a_n}{n^s},\,|a_n| = O(n^\alpha)
+                | will converge for #[m \Re(s) \gt \alpha + 1].
+                | As these coefficients often come from point counts, they will in general be polynomial.
+
+            p
+                | Recall the Hecke bound
+                me f(z) = \sum_{n=1}\infty a_n e(nz)
+                | a cuspidal (Hecke eigen)form of weight #[m k] has #[m a_n = O(n^{k/2})].
+                | Ramanujan (Deligne) gives us #[m a_n =O(n^{(k-1)/2})].
+                | Hecke implies that #[m a_n\overline b_n = O(n^k)] implies #[m \sum_{n=1}^\infty \frac{a_n\overline b_n}{n^s}] converges for #[m \Re(s) \gt k+1].
+                | Deligne implies that #[m a_n\overline b_n = O(n^{k-1})] implies #[m \sum_{n=1}^\infty \frac{a_n\overline b_n}{n^s}] converges for #[m \Re(s) \gt k].
+                | But the above already gives us this convergence, highly nontrivial #[m k]!
+
+            remark
+                p
+                    | If we take #[m f,g] to be normalized Hecke eigenforms.
+                    | Let
+                    me 1-\frac{a_p}{p^s} + \frac{1}{p^{2s -k +1}} = (1-\frac{\alpha_1}{p^s})(1-\frac{\alpha_2}{p^s})
+                    me 1-\frac{b_p}{p^s} + \frac{1}{p^{2s -k +1}} = (1-\frac{\beta_1}{p^s})(1-\frac{\beta_2}{p^s})
+                    | then
+                    me L(s,f\times \overline g) = \prod_p  \prod_{1\le i,j\le 2}(1- \frac{\alpha_i \overline \beta_j}{p^s})^{-1}
+                    | .
+
+            exercise: statement
+                p
+                    | Prove this.
+
+            paragraphs
+                title Applications
+
+                p
+                    | If one proves the prime number theorem using non-vanishing of the #[m \zeta] function in a certain region you use a weird identity using sines and cosines being positive.
+                    | This really comes from a Rankin-Selberg product.
+
+                remark
+                    p
+                        | Rankin-Selberg proves positivity.
+                        me z\in \ZZ,\,|z|^2 \ge 0
+                        | .
+
+                p
+                    | Ramanujan on average:
+                    me \sum_{n\lt X } a_n  \sim X^{(k+1)/2}
+                    | this is equivalent to
+                    me L(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}
+                    | converges for #[m \Re(s) \gt (k+1)/2].
+                    | Let
+                    me \phi(z) = \sum_{n=1}^\infty a_n e(nz)
+                    | be a cusp form of weight #[m k].
+                p
+                    |Consider
+                    me D(s) = \sum_{n=1}^\infty \frac{|a_n|^2}{n^s}
+                    | , Hecke implies this converges for #[m \Re(s) \gt k+1].
+
+                note: statement
+                    p
+                        me D(s) = L(s, f\times \overline f)
+                        | converges for #[m \Re(s) \gt k].
+
+                p
+                    | Now observe that for any #[m \lambda \gt 0]
+                    me |a_n| \le \max \left\{n^\lambda, \frac{|a_n|^2}{n^\lambda}\right\}
+                    | . So
+                    me \sum_{n=1}^\infty \frac{|a_n|}{n^s} \le \max\sum_{n=1}^\infty \max \left\{ \frac{1}{n^{s-\lambda}}, \frac{|a_n|}{n^{s+\lambda}}\right\}
+                    | choose #[m \lambda = (k-1)/2]
+                    | so
+                    me \lt \max\sum_{n=1}^\infty \max \left\{ \frac{1}{n^{s-(k-1)/2}}, \frac{|a_n|}{n^{s+(k-1)/2}}\right\}
+                    | which converges for #[m s\gt (k+1)/2].
+
+                question
+                    statement: p
+                        | Fix #[m \diff \mu(z) = \frac{\diff x \diff y}{y^2}] on #[m \HH].
+                        | What is #[m \vol(\SL_2(\ZZ) \backslash \HH)]? (#[m \pi/3]?)
+
+                        | What about other #[m \Gamma]?
+                p
+                    | Naive observation:
+                    me \int \frac 12 \diff \mu(z) = \frac{\vol}{2}
+                    | and
+                    me \frac 12  = \Res_{s=1 } E(z; s)
+                    | so
+                    me \frac{\vol}{2} = \int_{\SL_2\backslash \HH} \Res_{s=1} E(z; s) \diff \mu(z) ``=" \Res_{s=1} \int_{\SL_2(\ZZ) \backslash \HH} E(z; s) \diff \mu(z)
+                    | but the right hand side does not converge (exercise, check).
+
+                p
+                    | Problem: naive idea doesn't work #[m \int_{\SL_2(\ZZ)\backslash \HH} E(z; s) \diff \mu(z)] converges only for #[m 0 \lt 1 \lt 1].
+                    | but then we can't unfold because the series defining #[m E(z; s)] does not converge #[m 0\lt s \lt 1].
+                    | We must target the source of this divergence, the constant term of the Eisenstein series.
+                    me \int_1^\infty * y^s + * y^{1-s} \frac{\diff y}{y^2}
+                    | we will truncate the Eisenstein series.

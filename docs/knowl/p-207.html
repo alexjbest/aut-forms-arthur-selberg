@@ -18,16 +18,21 @@
 f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \overline b_n
 \end{equation*}
 </div>
-<p>so if we were to integrate this from 0 to 1 \(\diff x\) the first term would dissapear and we would be left with the second.</p>
+<p>so if we were to integrate this from 0 to 1 \(\diff x\) the first term would disappear and we would be left with the second.</p>
 <div class="displaymath">
 \begin{equation*}
-\phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k = \sum_{n\in \ZZ} a_n \overline b_ny^k
+\phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{n\in \ZZ} a_n \overline b_ny^k
 \end{equation*}
 </div>
 <p>i.e.</p>
 <div class="displaymath">
 \begin{equation*}
-\phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) t^k e^{-4\pi i ny}\text{.}
+\phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) y^k e^{-4\pi i ny}\text{.}
 \end{equation*}
 </div>
 <span class="incontext"><a href="section-aut-forms-motivation.html#p-207">in-context</a></span>

@@ -1,4 +1,12 @@
 macros.
+
+
+    % really small matrices https://tex.stackexchange.com/questions/109072/smallmatrix-with-vertical-line-as-column-separator-how-to-do-it
+    \newenvironment{smallermatrix}[1]
+    {\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny% change to whatever you need
+    \array{#1}}
+    {\endarray}
+
     \newcommand{\ideal}[1]{\mathfrak{#1}}
     \newcommand{\lie}[1]{\operatorname{\mathfrak{#1}}}
     \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
@@ -120,6 +128,8 @@ macros.
     \DeclareMathOperator{\Tgt}{Tgt}
     % special rep
     \DeclareMathOperator{\sprep}{sp}
+    % volume
+    \DeclareMathOperator{\vol}{Vol}
 
     % divisors
     \DeclareMathOperator{\divisor}{div}

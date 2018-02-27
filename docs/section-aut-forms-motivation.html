@@ -48,7 +48,12 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newcommand{\ideal}[1]{\mathfrak{#1}}
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
+{\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
+\array{#1}}
+{\endarray}
+
+\newcommand{\ideal}[1]{\mathfrak{#1}}
 \newcommand{\lie}[1]{\operatorname{\mathfrak{#1}}}
 \newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
 \newcommand{\Lie}{\operatorname{Lie}}
@@ -126,6 +131,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Syl}{Syl}
 \DeclareMathOperator{\Tgt}{Tgt}
 \DeclareMathOperator{\sprep}{sp}
+\DeclareMathOperator{\vol}{Vol}
 
 \DeclareMathOperator{\divisor}{div}
 \DeclareMathOperator{\divisors}{Div}
@@ -254,7 +260,7 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 23, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 27, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -1779,7 +1785,7 @@ E(z; s) = \sum_{(c,d)\in\ZZ^2 \smallsetminus (0,0), (c,d) =1,c\ge 0} \frac{y^{s+
 \end{equation*}
 </div>
 <p>\(\gamma\) is an isometry implies \(\Delta\gamma = \gamma\Delta\text{.}\) So \(\gamma y^{s+\frac 12}\) is also an eigenfunction with eigenvalue \(\frac 14 - s^2\text{.}\)</p>
-<article class="theorem-like" id="theorem-8"><h6 class="heading">
+<article class="theorem-like" id="thm-functional-eqn-eisenstein"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.54</span>
 </h6>
 <p id="p-168">\(E(z; s)\) has analytic continuation to \(\CC\) (in \(s\)), it satisfies \(E(z; s) = E(z; -s)\) and</p>
@@ -2172,10 +2178,16 @@ f(y) = g(Q(n) y)
 \end{equation*}
 </div>
 <p>we can see the integrating over \(\SL_2(\ZZ) \backslash \HH\) a sum over \(\Gamma_\infty\backslash \SL_2(\ZZ)\) things should cancel to give us an integral over \(\Gamma_\infty \backslash \HH\text{,}\) a rectangle! So this unfolding should simplify things.</p>
-<article class="theorem-like" id="proposition-3"><h6 class="heading">
+<article class="theorem-like" id="prop-unfolding"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">1.67</span>
 </h6>
-<p id="p-196">If \(\phi(x+iy) = O(y^{-N})\) for all \(N \gt 0\text{.}\)</p>
+<p id="p-196">Let \(\phi\colon \HH \to \CC\) be automorphic with respect to \(\SL_2(\ZZ)\text{,}\) with fourier expansion</p>
+<div class="displaymath">
+\begin{equation*}
+\phi(z) = \sum_{n=-\infty}^\infty a_n(y) e(nx),\,\text{where}\,a_n(y) = \int_0^1 \phi(x+iy) e(-nx) \diff x\text{.}
+\end{equation*}
+</div>
+<p>If \(\phi(x+iy) = O(y^{-N})\) for all \(N \gt 0\text{.}\)</p>
 <div class="displaymath">
 \begin{equation}
 \int_{\SL_2(\ZZ) \backslash \HH} \phi(z) E_3( z; s)\diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \tilde a_0(s-1)\tag{1.4}
@@ -2198,11 +2210,11 @@ E(z; s) = O(y^2 + y^{1-s})\text{.}
 <div class="displaymath">
 \begin{gather*}
 \frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s \right) \diff \mu(z)\\
-\frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH}  \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)}\phi(\gamma z) \Im(\gamma z)^s \right) \diff \mu(z)\\
-\pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty\backslash \HH}  \phi(z) y^s \diff \mu(z)\\
-\pi^{-s} \Gamma(s) \zeta(2s)\int_0^1 \int_{0}^\infty \phi(z) y^s \frac{\diff x \diff y}{y^2}\\
-\pi^{-s} \Gamma(s) \zeta(2s)\int_{0}^\infty a_0(y) y^s \frac{\diff y}{y^2}\\
-\pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)\text{.}
+=\frac{\pi^{-s}}{2} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ)\backslash \HH}  \left( \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)}\phi(\gamma z) \Im(\gamma z)^s \right) \diff \mu(z)\\
+=\pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty\backslash \HH}  \phi(z) y^s \diff \mu(z)\\
+=\pi^{-s} \Gamma(s) \zeta(2s)\int_0^1 \int_{0}^\infty \phi(z) y^s \frac{\diff x \diff y}{y^2}\\
+=\pi^{-s} \Gamma(s) \zeta(2s)\int_{0}^\infty a_0(y) y^s \frac{\diff y}{y^2}\\
+=\pi^{-s} \Gamma(s) \zeta(2s)\tilde a_0(s-1)\text{.}
 \end{gather*}
 </div></article></div>
 <article class="theorem-like" id="cor-l-function-functional-eq-eisenstein"><h6 class="heading">
@@ -2235,15 +2247,15 @@ E(z; s) = O(y^2 + y^{1-s})\text{.}
 <p id="p-203">Let</p>
 <div class="displaymath">
 \begin{equation*}
-f(z) = \sum_{n\in \ZZ} a_ne(nz)
+f(z) = \sum_{n=0}^\infty a_ne(nz)
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-g(z) = \sum_{n\in \ZZ} b_ne(nz)
+g(z) = \sum_{n=0}^\infty b_ne(nz)
 \end{equation*}
 </div>
-<p>be modular forms of weight \(k\text{.}\)</p>
+<p>be holomorphic modular forms of weight \(k\text{.}\)</p>
 <p id="p-204">Assume that at least one of \(f\) or \(g\) is cuspidal. Assume additionally that \(f,g\) are normalised Hecke eigenforms so \(a(1) = b(1) = 1\text{.}\)</p>
 <article class="definition-like" id="definition-12"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.69</span>
@@ -2255,7 +2267,7 @@ g(z) = \sum_{n\in \ZZ} b_ne(nz)
 </div></article><article class="remark-like" id="note-6"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.70</span>
 </h6>
-<p id="p-206">\(\phi(\gamma z) = \phi(z)\) for any \(\gamma \in \SL_2(\ZZ)\text{.}\)</p></article><article class="remark-like" id="note-7"><h6 class="heading">
+<p id="p-206">\(\phi(\gamma z) = \phi(z)\) for any \(\gamma \in \SL_2(\ZZ)\text{.}\) \(\phi\) also satisfies the decay condition.</p></article><article class="remark-like" id="note-exp-phi0"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.71</span>
 </h6>
 <p id="p-207">If \(f = \sum a_n e(nz)\text{,}\) \(g = \sum b_n e(nz)\) then</p>
@@ -2264,33 +2276,39 @@ g(z) = \sum_{n\in \ZZ} b_ne(nz)
 f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \overline b_n
 \end{equation*}
 </div>
-<p>so if we were to integrate this from 0 to 1 \(\diff x\) the first term would dissapear and we would be left with the second.</p>
+<p>so if we were to integrate this from 0 to 1 \(\diff x\) the first term would disappear and we would be left with the second.</p>
 <div class="displaymath">
 \begin{equation*}
-\phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k = \sum_{n\in \ZZ} a_n \overline b_ny^k
+\phi_0(y) = \int_0^1 f(z)\overline g(z) \diff xy^k  = \int_0^1\sum_{m-n \ne 0} A_{n-m} e((n-m)z)y^k +\int_0^1 \sum_{n\in \ZZ} a_n \overline b_ny^k
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{n\in \ZZ} a_n \overline b_ny^k
 \end{equation*}
 </div>
 <p>i.e.</p>
 <div class="displaymath">
 \begin{equation*}
-\phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) t^k e^{-4\pi i ny}\text{.}
+\phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) y^k e^{-4\pi i ny}\text{.}
 \end{equation*}
-</div></article><article class="remark-like" id="note-8"><h6 class="heading">
+</div>
+<article class="remark-like" id="note-8"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.72</span>
 </h6>
 <div class="displaymath" id="p-208">
 \begin{equation*}
-\tilde \phi_0(s) = \int_0^1 \sum_{n\in \ZZ} a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+\tilde \phi_0(s) = \int_0^1 \sum_{n=0}^\infty a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \sum_{n\in \ZZ} a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+= \sum_{n=0}^\infty a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \frac{1}{(4\pi )^s} \sum_{n\in \ZZ}\frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
+= \frac{1}{(4\pi )^s} \sum_{n=0}^\infty \frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -2298,13 +2316,190 @@ f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \
 = \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
 \end{equation*}
 </div>
-<p>this is the Rankin-Selberg \(L\)-function. So by the <a knowl="./knowl/cor-l-function-functional-eq-eisenstein.html" knowl-id="xref-cor-l-function-functional-eq-eisenstein" alt="Corollary 1.68 " title="Corollary 1.68 ">corollary 1.68</a>; \(L(s+k; f\times g)\) has analytic continuation and functional equation, and poles only at \(s= 1+k, s=k\text{.}\)</p></article><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">An application</span></h5>
+<p>this is the Rankin-Selberg \(L\)-function. So by the <a knowl="./knowl/cor-l-function-functional-eq-eisenstein.html" knowl-id="xref-cor-l-function-functional-eq-eisenstein" alt="Corollary 1.68 " title="Corollary 1.68 ">corollary 1.68</a>; \(L(s+k; f\times g)\) has analytic continuation and functional equation, and poles only at \(s= 1+k, s=k\text{.}\)</p></article></article><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">An application</span></h5>
 <p id="p-209">We proved \(f\) cusp form \(f(z) = \sum  a_ne(nz)\) implies \(a_n = O(n^{k/2})\text{,}\) Ramanujan \(a_n = O(n^{k-1/2})\text{.}\) As cusp forms often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series. The averaged version of the Ramanujan conjecture is much easier</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n\lt X} a_n\text{.}
 \end{equation*}
-</div></article></section></section></section></div></main>
+</div></article><article class="aside-like" id="aside-10"><p id="p-210">Lecture 10 27/2/2018</p></article><p id="p-211">Recall <a knowl="./knowl/prop-unfolding.html" knowl-id="xref-prop-unfolding" alt="Proposition 1.67 " title="Proposition 1.67 ">Proposition 1.67</a> and moreover that</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = \pi^{-s} \Gamma(s) \zeta(2s) \frac 12 \sum_{\gamma \in     \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s = \pi^{-s } \Gamma(s) \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0)} \frac{y^s}{|mz+n|^{2s}}\text{,}
+\end{equation*}
+</div>
+<p>from this and <a knowl="./knowl/note-exp-phi0.html" knowl-id="xref-note-exp-phi0" alt="Note 1.71 " title="Note 1.71 ">Note 1.71</a> we conclude.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline g(z) y^k E(z; s) \diff \mu (z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation}
+= \frac{\pi^{-s} \zeta(2s) \Gamma(s) \Gamma(s+ k-1)}{(4\pi)^{2+k-1}} \sum_{n=1}^\infty \frac{a_n \overline b_n}{n^{s+k-1}}\label{eqn-conclusion-rankin-selberg}\tag{1.5}
+\end{equation}
+</div>
+<p><a knowl="./knowl/eqn-conclusion-rankin-selberg.html" knowl-id="xref-eqn-conclusion-rankin-selberg" alt="Equation 1.5 " title="Equation 1.5 ">(1.5)</a> has analytic continuation as a function of \(s\) to all \(s\in \CC\text{.}\) It has at most simple poles</p>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1}  (s) = \frac 12 \pair{f}{g}_{\text{Pet}}\text{.}
+\end{equation*}
+</div>
+<p id="p-212">If we let</p>
+<div class="displaymath">
+\begin{equation*}
+L(s,f\times \overline g) = \zeta(2(s-k+1)) \sum_{n=1} ^\infty \frac{a_n \overline b_n}{n^s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Lambda(s,f\times \overline g) = (2\pi)^{-2s} \Gamma(s) \Gamma(s-k+1) L(s,f\times g)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\Lambda(s, f\times \overline g) = \Lambda(2k-1-s, f\times g)
+\end{equation*}
+</div>
+<p>this follows from <a knowl="./knowl/thm-functional-eqn-eisenstein.html" knowl-id="xref-thm-functional-eqn-eisenstein" alt="Theorem 1.54 " title="Theorem 1.54 ">Theorem 1.54</a> \(E(z; s) = E(s; 1-s)\text{.}\) .</p>
+<p id="p-213">\(\Lambda(s,f\times \overline g)\) has analytic continuation to \(s\in \CC\) with poles at most at \(s=k,\,s=k-1\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=k} \Lambda(s,f\times g) =  \frac{1}{2\pi^{k-1}} \pair fg_{\text{Pet}}\text{.}
+\end{equation*}
+</div>
+<p id="p-214">This is analogous to when we took the Mellin transform of the theta function. We have obtained some highly nontrivial information above:</p>
+<article class="remark-like" id="remark-14"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.73</span>
+</h6>
+<p id="p-215">Given an arbitrary series of the form</p>
+<div class="displaymath">
+\begin{equation*}
+L(s) = \sum_{n=1}^\infty \frac{a_n}{n^s},\,|a_n| = O(n^\alpha)
+\end{equation*}
+</div>
+<p>will converge for \(\Re(s) \gt \alpha + 1\text{.}\) As these coefficients often come from point counts, they will in general be polynomial.</p></article><p id="p-216">Recall the Hecke bound</p>
+<div class="displaymath">
+\begin{equation*}
+f(z) = \sum_{n=1}\infty a_n e(nz)
+\end{equation*}
+</div>
+<p>a cuspidal (Hecke eigen)form of weight \(k\) has \(a_n = O(n^{k/2})\text{.}\) Ramanujan (Deligne) gives us \(a_n =O(n^{(k-1)/2})\text{.}\) Hecke implies that \(a_n\overline b_n = O(n^k)\) implies \(\sum_{n=1}^\infty \frac{a_n\overline b_n}{n^s}\) converges for \(\Re(s) \gt k+1\text{.}\) Deligne implies that \(a_n\overline b_n = O(n^{k-1})\) implies \(\sum_{n=1}^\infty \frac{a_n\overline b_n}{n^s}\) converges for \(\Re(s) \gt k\text{.}\) But the above already gives us this convergence, highly nontrivial \(k\text{!}\)</p>
+<article class="remark-like" id="remark-15"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.74</span>
+</h6>
+<p id="p-217">If we take \(f,g\) to be normalized Hecke eigenforms. Let</p>
+<div class="displaymath">
+\begin{equation*}
+1-\frac{a_p}{p^s} + \frac{1}{p^{2s -k +1}} = (1-\frac{\alpha_1}{p^s})(1-\frac{\alpha_2}{p^s})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+1-\frac{b_p}{p^s} + \frac{1}{p^{2s -k +1}} = (1-\frac{\beta_1}{p^s})(1-\frac{\beta_2}{p^s})
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+L(s,f\times \overline g) = \prod_p  \prod_{1\le i,j\le 2}(1- \frac{\alpha_i \overline \beta_j}{p^s})^{-1}\text{.}
+\end{equation*}
+</div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-8" id="exercise-8"><h6 class="heading">
+<span class="type">Exercise</span><span class="codenumber">1.75</span>
+</h6></a></article><div id="hk-exercise-8" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-218">Prove this.</p></article></div>
+<article class="paragraphs" id="paragraphs-14"><h5 class="heading"><span class="title">Applications</span></h5>
+<p id="p-219">If one proves the prime number theorem using non-vanishing of the \(\zeta\) function in a certain region you use a weird identity using sines and cosines being positive. This really comes from a Rankin-Selberg product.</p>
+<article class="remark-like" id="remark-16"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.76</span>
+</h6>
+<p id="p-220">Rankin-Selberg proves positivity.</p>
+<div class="displaymath">
+\begin{equation*}
+z\in \ZZ,\,|z|^2 \ge 0\text{.}
+\end{equation*}
+</div></article><p id="p-221">Ramanujan on average:</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n\lt X } a_n  \sim X^{(k+1)/2}
+\end{equation*}
+</div>
+<p>this is equivalent to</p>
+<div class="displaymath">
+\begin{equation*}
+L(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}
+\end{equation*}
+</div>
+<p>converges for \(\Re(s) \gt (k+1)/2\text{.}\) Let</p>
+<div class="displaymath">
+\begin{equation*}
+\phi(z) = \sum_{n=1}^\infty a_n e(nz)
+\end{equation*}
+</div>
+<p>be a cusp form of weight \(k\text{.}\)</p>
+<p id="p-222">Consider</p>
+<div class="displaymath">
+\begin{equation*}
+D(s) = \sum_{n=1}^\infty \frac{|a_n|^2}{n^s}\text{,}
+\end{equation*}
+</div>
+<p>Hecke implies this converges for \(\Re(s) \gt k+1\text{.}\)</p>
+<article class="remark-like" id="note-9"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">1.77</span>
+</h6>
+<div class="displaymath" id="p-223">
+\begin{equation*}
+D(s) = L(s, f\times \overline f)
+\end{equation*}
+</div>
+<p>converges for \(\Re(s) \gt k\text{.}\)</p></article><p id="p-224">Now observe that for any \(\lambda \gt 0\)</p>
+<div class="displaymath">
+\begin{equation*}
+|a_n| \le \max \left\{n^\lambda, \frac{|a_n|^2}{n^\lambda}\right\}\text{.}
+\end{equation*}
+</div>
+<p>So</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty \frac{|a_n|}{n^s} \le \max\sum_{n=1}^\infty \max \left\{ \frac{1}{n^{s-\lambda}}, \frac{|a_n|}{n^{s+\lambda}}\right\}
+\end{equation*}
+</div>
+<p>choose \(\lambda = (k-1)/2\) so</p>
+<div class="displaymath">
+\begin{equation*}
+\lt \max\sum_{n=1}^\infty \max \left\{ \frac{1}{n^{s-(k-1)/2}}, \frac{|a_n|}{n^{s+(k-1)/2}}\right\}
+\end{equation*}
+</div>
+<p>which converges for \(s\gt (k+1)/2\text{.}\)</p>
+<article class="example-like" id="question-1"><h6 class="heading">
+<span class="type">Question</span><span class="codenumber">1.78</span>
+</h6>
+<p id="p-225">Fix \(\diff \mu(z) = \frac{\diff x \diff y}{y^2}\) on \(\HH\text{.}\) What is \(\vol(\SL_2(\ZZ) \backslash \HH)\text{?}\) (\(\pi/3\text{?}\)) What about other \(\Gamma\text{?}\)</p></article><p id="p-226">Naive observation:</p>
+<div class="displaymath">
+\begin{equation*}
+\int \frac 12 \diff \mu(z) = \frac{\vol}{2}
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\frac 12  = \Res_{s=1 } E(z; s)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\vol}{2} = \int_{\SL_2\backslash \HH} \Res_{s=1} E(z; s) \diff \mu(z) ``=" \Res_{s=1} \int_{\SL_2(\ZZ) \backslash \HH} E(z; s) \diff \mu(z)
+\end{equation*}
+</div>
+<p>but the right hand side does not converge (exercise, check).</p>
+<p id="p-227">Problem: naive idea doesn't work \(\int_{\SL_2(\ZZ)\backslash \HH} E(z; s) \diff \mu(z)\) converges only for \(0 \lt 1 \lt 1\text{.}\) but then we can't unfold because the series defining \(E(z; s)\) does not converge \(0\lt s \lt 1\text{.}\) We must target the source of this divergence, the constant term of the Eisenstein series.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_1^\infty * y^s + * y^{1-s} \frac{\diff y}{y^2}
+\end{equation*}
+</div>
+<p>we will truncate the Eisenstein series.</p></article></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];
