@@ -1392,13 +1392,14 @@ section#section-aut-forms-motivation
                     | i.e.
                     me \phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) y^k e^{-4\pi i ny}
                     |.
-                note: p
-                    me \tilde \phi_0(s) = \int_0^1 \sum_{n=0}^\infty a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
-                    me = \sum_{n=0}^\infty a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
-                    me = \frac{1}{(4\pi )^s} \sum_{n=0}^\infty \frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
-                    me = \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
-                    | this is the Rankin-Selberg #[m L]-function.
-                    | So by the #[xref(ref="cor-l-function-functional-eq-eisenstein") corollary]; #[m L(s+k; f\times g)] has analytic continuation and functional equation, and poles only at #[m s= 1+k, s=k].
+
+            note: p
+                me \tilde \phi_0(s) = \int_0^1 \sum_{n=0}^\infty a_n \overline b_n e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+                me = \sum_{n=0}^\infty a_n\overline b_n\int_0^\infty e^{-4 \pi i y} y^{k+s}\frac{\diff y}{y}
+                me = \frac{1}{(4\pi )^s} \sum_{n=0}^\infty \frac{ a_n\overline b_n}{n^{k+s}}\int_0^\infty  e^{-y} y^{k+s}\frac{\diff y}{y}
+                me = \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
+                | this is the Rankin-Selberg #[m L]-function.
+                | So by the #[xref(ref="cor-l-function-functional-eq-eisenstein") corollary]; #[m L(s+k; f\times g)] has analytic continuation and functional equation, and poles only at #[m s= 1+k, s=k].
 
 
             paragraphs
@@ -1447,7 +1448,7 @@ section#section-aut-forms-motivation
 
             p
                 | Recall the Hecke bound
-                me f(z) = \sum_{n=1}\infty a_n e(nz)
+                me f(z) = \sum_{n=1}^\infty a_n e(nz)
                 | a cuspidal (Hecke eigen)form of weight #[m k] has #[m a_n = O(n^{k/2})].
                 | Ramanujan (Deligne) gives us #[m a_n =O(n^{(k-1)/2})].
                 | Hecke implies that #[m a_n\overline b_n = O(n^k)] implies #[m \sum_{n=1}^\infty \frac{a_n\overline b_n}{n^s}] converges for #[m \Re(s) \gt k+1].
