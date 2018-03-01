@@ -260,7 +260,7 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated February 27, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated March 1, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -2498,7 +2498,331 @@ D(s) = L(s, f\times \overline f)
 \int_1^\infty * y^s + * y^{1-s} \frac{\diff y}{y^2}
 \end{equation*}
 </div>
-<p>we will truncate the Eisenstein series.</p></article></section></section></section></div></main>
+<p>we will truncate the Eisenstein series.</p></article></section><section class="subsubsection" id="subsubsection-10"><h4 class="heading hide-type" alt="Subsubsection 1.11.3 Applications">
+<span class="type">Subsubsection</span><span class="codenumber">1.11.3</span><span class="title">Applications</span>
+</h4>
+<article class="aside-like" id="aside-11"><p id="p-228">Lecture 11 1/3/2018</p></article><p id="p-229">First aim of the day: Calculate</p>
+<div class="displaymath">
+\begin{equation*}
+\vol(\SL_2(\ZZ)\backslash\HH,\,\diff \mu(z) = \frac{\diff x \diff y}{y^2})
+\end{equation*}
+</div>
+<p>Idea: Use the pole of \(E(z; s)\) at \(s= 1\) and unfolding.</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1} E(z; s) = \frac 12\text{.}
+\end{equation*}
+</div>
+<p>Idea:</p>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1} \int_{\SL_2(\ZZ) \backslash \HH} E(z; s)  = \diff \mu(z) =  \frac{\vol}{2}\text{.}
+\end{equation*}
+</div>
+<p>Problem: Constant term of \(E(z; s) \sim y^s + y^{1-s}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{1}^\infty y^s + y^{1-s} \frac{\diff y}{y^2}
+\end{equation*}
+</div>
+<p>converges only if \(0\lt s \lt 1\text{.}\) This approach needs modification, we will look at two such.</p>
+<ol class="decimal">
+<li id="li-42">Sharp cut-off,</li>
+<li id="li-43">Smooth cut-off.</li>
+</ol>
+<article class="paragraphs" id="paragraphs-15"><h5 class="heading"><span class="title">1 Sharp cut-off</span></h5>
+<p id="p-230">For sharp cut off we will fix some \(T \gt 0\) and only consider \(y\lt T\text{.}\) Setting</p>
+<div class="displaymath">
+\begin{equation*}
+y_T(z) =
+\begin{cases}
+y \amp y\lt T\\
+0 \amp y\ge T
+\end{cases}
+\end{equation*}
+</div>
+<p>using this</p>
+<div class="displaymath">
+\begin{equation*}
+E_T(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y_T(\gamma z)^{s}\text{.}
+\end{equation*}
+</div>
+<p id="p-231">Observations:</p>
+<article class="theorem-like" id="lemma-2"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">1.79</span>
+</h6>
+<p id="p-232">\(K \subseteq \HH\) compact, thre exists \(T_K\) such that for all \(T \ge T_K\)</p>
+<div class="displaymath">
+\begin{equation*}
+E_T(z; s) = E(z; s) \,\forall z\in K\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-14" id="proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-233">
+\begin{equation*}
+\Im(\gamma z) = \frac{y}{|cz+  d| ^2 } = \frac{ y}{((cx+d)^2 + (cy)^2)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\le \max\left\{ \frac{y}{d^s}, \frac{1}{c^2 y}\right\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Im(\SL_2(\ZZ)K) \le T_0
+\end{equation*}
+</div>
+<p>for some \(T_0\text{.}\)</p></article></div>
+<article class="theorem-like" id="lemma-3"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">1.80</span>
+</h6>
+<div class="displaymath" id="p-234">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH}  E_T(z; s) \diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \frac{T^{s-1}}{s-1}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-15" id="proof-15"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-15" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-235">(Unfold), recall</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_\infty = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\in\SL_2(\ZZ)\right\}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH}  E_T(z; s) \diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ) \backslash \HH}  \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y_T(\gamma z)^{s} \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty \backslash \HH}   y_T \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pi^{-s} \Gamma(s) \zeta(2s) \int_0^1\int_0^T   y^{s-1} \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pi^{-s} \Gamma(s) \zeta(2s) \frac{T^{s-1}}{s-1}
+\end{equation*}
+</div></article></div>
+<p id="p-236">There is a huge generalization of this lemma by Langlands that allows him to calculate a lot of volumes.</p>
+<article class="theorem-like" id="lemma-4"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">1.81</span>
+</h6>
+<p id="p-237">Let \(T \gt 1\) and \(x+ iy\) in the standard fundamental domain \(\mathcal F\) for \(\SL_2(\ZZ) \backslash \HH\) then</p>
+<div class="displaymath">
+\begin{equation*}
+E_T(z; s) =
+\begin{cases}
+E(z; s) \amp y\lt T\\
+E(z; s) - pi^{-s} \Gamma(s) \zeta(2s) y^s \amp y\ge T
+\end{cases}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-16" id="proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-238">Recall</p>
+<div class="displaymath">
+\begin{equation*}
+\Im(\gamma z) = \frac{ y}{((cx+d)^2 + (cy)^2)}
+\end{equation*}
+</div>
+<p id="p-239">Case 1: \(c \ne 0 \) implies \(\Im( \gamma z)  \le \frac{1}{c^2 y} \le T\) for all \(y\in \mathcal F\text{.}\)</p>
+<p id="p-240">Case 2: \(c =   0 \) implies \(\Im( \gamma z) = \frac{y}{d^2 } \)</p>
+<div class="displaymath">
+\begin{equation*}
+\gamma = \begin{pmatrix} a \amp b\\ 0 \amp d\end{pmatrix} \in \SL_2(\ZZ)
+\end{equation*}
+</div>
+<p>implies \(ad = 1\) so \(a= d= 1\) or \(a=d=  -1\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+E_T(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y_T(\gamma z)^{s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y(\gamma z)^{s}  -  \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{ d = \pm 1} y_T(\frac{y}{d^s})^{s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=
+\begin{cases}
+E(z; s)  - \pi^{-s} \Gamma (s)\zeta(2s) y^s \amp y\lt T\\
+E(z; s) \amp y\ge T
+\end{cases}
+\end{equation*}
+</div></article></div>
+<article class="remark-like" id="remark-17"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.82</span>
+</h6>
+<p id="p-241">\(E(z; s) - E_T(z; s) \) for fixed \(z\) is holomorphic as a function of \(s\) at \(s =1\text{.}\)</p></article><article class="theorem-like" id="theorem-10"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">1.83</span>
+</h6>
+<div class="displaymath" id="p-242">
+\begin{equation*}
+\vol(\SL_2(\ZZ) \backslash \HH) = \frac\pi 3\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-17" id="proof-17"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-17" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-243">\(E(z; s) - E_T(z; s) \) is holomorphic at \(s =1\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH} \Res_{s=1}(  E(z; s) - E_T(z; s) ) \diff \mu(z) = 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH} \frac 12 -\Res_{s=1}( E_T(z; s) ) \diff \mu(z) = 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH} \Res_{s=1}( E_T(z; s) ) \diff \mu(z) = \frac 12 \vol(\SL_2(\ZZ) \backslash \HH)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1}\int_{\SL_2(\ZZ) \backslash \HH}  E_T(z; s) \diff \mu(z) = \frac 12 \vol(\SL_2(\ZZ) \backslash \HH)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1}\pi^{-s} \Gamma (s)\zeta(2s) \frac{T^{s-1}}{s-1} = \frac 12 \vol(\SL_2(\ZZ) \backslash \HH)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac 1 \pi \frac{\pi^2}{6}
+\end{equation*}
+</div>
+<p>hence</p>
+<div class="displaymath">
+\begin{equation*}
+\vol(\SL_2(\ZZ) \backslash \HH) =  \frac {\pi}{3}\text{.}
+\end{equation*}
+</div></article></div>
+<p id="p-244">Volumes of such domains are known as Tamagawa number and many such were computed via these methods by Langlands in the 60s.</p></article><article class="paragraphs" id="paragraphs-16"><h5 class="heading"><span class="title">2 Smooth cut-off</span></h5>
+<p id="p-245">Let \(f \in \cinf_c(\RR_{\ge 0 })\) e.g. some nice bump. Consider</p>
+<div class="displaymath">
+\begin{equation*}
+\theta_f(z ) = \frac 12 \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} f(\Im(\gamma z))
+\end{equation*}
+</div>
+<p>idea</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{2\pi i} \int_{(\sigma)} \tilde f(s)  x^{-s} \diff s
+\end{equation*}
+</div>
+<p>for \(a\lt \sigma\lt b\) such that \(\tilde f = \int_0^\infty y^s f(y) \frac{\diff y}{y}\) converges absolutely for \(a \lt s \lt b\text{.}\) Observation: \(\sigma\in \RR\) for this to hold. So</p>
+<div class="displaymath">
+\begin{equation*}
+\theta_f(z) = \sum \left( \frac{1}{2\pi i} \int_{(\sigma)} \tilde f(s) \Im(\gamma z)^{-s} \diff s\right)
+\end{equation*}
+</div>
+<p>for \(\Re(s) \lt -s\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+= \frac{1}{4\pi i} \int_{(\sigma)} \tilde f ( s) \left(\sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{-s}\right) \diff s
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{1}{2\pi i} \int_{(\sigma)} \tilde f ( s) E_1(z; -s) \diff s
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+E_1(z; s) = \frac12 \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{s}\text{.}
+\end{equation*}
+</div>
+<p>Now integrate</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =  \int_{\SL_2(\ZZ)\backslash \HH} \frac{1}{2\pi i} \int_{(\sigma)} \tilde f (s) E(z; -1) \diff s\diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH) + \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
+\end{equation*}
+</div>
+<p>(shifting contours to \(\sigma = \frac{-1}{2} + it\)). The rightmost term is 0 as we have a decomposition</p>
+<div class="displaymath">
+\begin{equation*}
+L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus \text{cusp form}\text{.}
+\end{equation*}
+</div>
+<p>We'll do this by hand here. i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)  + \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s\text{.}
+\end{equation*}
+</div>
+<p><article class="theorem-like" id="lemma-5"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">1.84</span>
+</h6>
+<div class="displaymath" id="p-246">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash\HH} \theta_f(z) \diff \mu (z)  = \tilde f(-1)
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-18" id="proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-247">Exercise.</p></article></div>The lemma implies \(\forall f \in \cinf_c(\RR_{\gt -})\) we have the followin</p>
+<div class="displaymath">
+\begin{equation}
+\tilde f (-1) \left(1-\frac3\pi \vol{}\right) = \frac{1}{2\pi i } \int_{(\frac12)} \tilde f (-s) \int  E(z; -s) \diff \mu(z) \diff s\label{eqn-volE}\tag{1.6}
+\end{equation}
+</div>
+<p><article class="theorem-like" id="claim-1"><h6 class="heading">
+<span class="type">Claim</span><span class="codenumber">1.85</span>
+</h6>
+<p id="p-248"><a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> implies that</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0\text{,}
+\end{equation*}
+</div>
+<p>whenever it converges.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-19" id="proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-249">By a change of variables we can rewrite <a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> as</p>
+<div class="displaymath">
+\begin{equation*}
+c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                         \diff s
+\end{equation*}
+</div>
+<p>for some constant \(c\text{.}\)</p>
+<ol class="decimal">
+<li id="li-44">Take \(F(y) = y^{\frac12} f(y)\) which implies<div class="displaymath">
+\begin{equation*}
+\tilde F(s) = \tilde f( s+ \frac 12)\text{.}
+\end{equation*}
+</div>
+<a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> \(\iff\)<div class="displaymath">
+\begin{equation*}
+\frac{1}{2\pi i } \int_{(0)} \tilde F(s) I(s) \diff s = c \tilde F(-\frac32)\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-45">Trick: Let \(G(y) = (y\partder{y} F + \frac32 F)\) so<div class="displaymath">
+\begin{equation*}
+\tilde G(s) = s\tilde F(s) + \frac 32  \tilde F(s)
+\end{equation*}
+</div>so<div class="displaymath">
+\begin{equation*}
+\tilde G(-\frac 32) = 0
+\end{equation*}
+</div>implies<div class="displaymath">
+\begin{equation*}
+\frac{1}{2\pi i} \int \tilde G (-s) I(z; s) \diff s = 0
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+I(z; s) \equiv 0
+\end{equation*}
+</div>whenever it converges.</li>
+</ol></article></div></p></article></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

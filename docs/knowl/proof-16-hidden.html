@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>Recall</p>
+<div class="displaymath">
+\begin{equation*}
+\Im(\gamma z) = \frac{ y}{((cx+d)^2 + (cy)^2)}
+\end{equation*}
+</div>
+<p>Case 1: \(c \ne 0 \) implies \(\Im( \gamma z)  \le \frac{1}{c^2 y} \le T\) for all \(y\in \mathcal F\text{.}\)</p>
+<p>Case 2: \(c =   0 \) implies \(\Im( \gamma z) = \frac{y}{d^2 } \)</p>
+<div class="displaymath">
+\begin{equation*}
+\gamma = \begin{pmatrix} a \amp b\\ 0 \amp d\end{pmatrix} \in \SL_2(\ZZ)
+\end{equation*}
+</div>
+<p>implies \(ad = 1\) so \(a= d= 1\) or \(a=d=  -1\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+E_T(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y_T(\gamma z)^{s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y(\gamma z)^{s}  -  \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{ d = \pm 1} y_T(\frac{y}{d^s})^{s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=
+\begin{cases}
+E(z; s)  - \pi^{-s} \Gamma (s)\zeta(2s) y^s \amp y\lt T\\
+E(z; s) \amp y\ge T
+\end{cases}
+\end{equation*}
+</div></article></body>
+</html>

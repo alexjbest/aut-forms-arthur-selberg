@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>First aim of the day: Calculate</p>
+<div class="displaymath">
+\begin{equation*}
+\vol(\SL_2(\ZZ)\backslash\HH,\,\diff \mu(z) = \frac{\diff x \diff y}{y^2})
+\end{equation*}
+</div>
+<p>Idea: Use the pole of \(E(z; s)\) at \(s= 1\) and unfolding.</p>
+<div class="displaymath">
+\begin{equation*}
+E(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1} E(z; s) = \frac 12\text{.}
+\end{equation*}
+</div>
+<p>Idea:</p>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1} \int_{\SL_2(\ZZ) \backslash \HH} E(z; s)  = \diff \mu(z) =  \frac{\vol}{2}\text{.}
+\end{equation*}
+</div>
+<p>Problem: Constant term of \(E(z; s) \sim y^s + y^{1-s}\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{1}^\infty y^s + y^{1-s} \frac{\diff y}{y^2}
+\end{equation*}
+</div>
+<p>converges only if \(0\lt s \lt 1\text{.}\) This approach needs modification, we will look at two such.</p>
+<ol class="decimal">
+<li>Sharp cut-off,</li>
+<li>Smooth cut-off.</li>
+</ol>
+<span class="incontext"><a href="section-aut-forms-motivation.html#p-229">in-context</a></span>
+</body>
+</html>

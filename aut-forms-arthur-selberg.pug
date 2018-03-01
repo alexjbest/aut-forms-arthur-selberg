@@ -1496,7 +1496,7 @@ section#section-aut-forms-motivation
                     me D(s) = \sum_{n=1}^\infty \frac{|a_n|^2}{n^s}
                     | , Hecke implies this converges for #[m \Re(s) \gt k+1].
 
-                note: statement
+                note
                     p
                         me D(s) = L(s, f\times \overline f)
                         | converges for #[m \Re(s) \gt k].
@@ -1532,3 +1532,190 @@ section#section-aut-forms-motivation
                     | We must target the source of this divergence, the constant term of the Eisenstein series.
                     me \int_1^\infty * y^s + * y^{1-s} \frac{\diff y}{y^2}
                     | we will truncate the Eisenstein series.
+
+        subsubsection
+            title Applications
+            aside: p Lecture 11 1/3/2018
+
+
+            p
+                | First aim of the day:
+                | Calculate
+                me \vol(\SL_2(\ZZ)\backslash\HH,\,\diff \mu(z) = \frac{\diff x \diff y}{y^2})
+
+                | Idea:
+                | Use the pole of #[m E(z; s)] at #[m s= 1] and unfolding.
+                me E(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{s}
+                me \Res_{s=1} E(z; s) = \frac 12
+                | .
+                | Idea:
+                me \Res_{s=1} \int_{\SL_2(\ZZ) \backslash \HH} E(z; s)  = \diff \mu(z) =  \frac{\vol}{2}
+                | .
+                | Problem: Constant term of #[m E(z; s) \sim y^s + y^{1-s}].
+                me \int_{1}^\infty y^s + y^{1-s} \frac{\diff y}{y^2}
+                | converges only if #[m 0\lt s \lt 1].
+                | This approach needs modification, we will look at two such.
+                ol
+                    li Sharp cut-off,
+                    li Smooth cut-off.
+
+            paragraphs
+                title 1 Sharp cut-off
+                p
+                    | For sharp cut off we will fix some #[m T \gt 0] and only consider #[m y\lt T].
+                    | Setting
+                    me.
+                        y_T(z) =
+                        \begin{cases}
+                        y \amp y\lt T\\
+                        0 \amp y\ge T
+                        \end{cases}
+                    | using this
+                    me E_T(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y_T(\gamma z)^{s}
+                    | .
+                p
+                    | Observations:
+                lemma
+                    statement: p
+                        | #[m K \subseteq \HH] compact, thre exists #[m T_K] such that for all #[m T \ge T_K]
+                        me E_T(z; s) = E(z; s) \,\forall z\in K
+                        | .
+                    proof: p
+                        me \Im(\gamma z) = \frac{y}{|cz+  d| ^2 } = \frac{ y}{((cx+d)^2 + (cy)^2)}
+                        me \le \max\left\{ \frac{y}{d^s}, \frac{1}{c^2 y}\right\}
+                        me \Im(\SL_2(\ZZ)K) \le T_0
+                        | for some #[m T_0].
+
+                lemma
+                    statement: p
+                        me \int_{\SL_2(\ZZ) \backslash \HH}  E_T(z; s) \diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \frac{T^{s-1}}{s-1}
+                    proof: p
+                        | (Unfold), recall
+                        me \Gamma_\infty = \left\{ \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\in\SL_2(\ZZ)\right\}
+                        | so
+                        me \int_{\SL_2(\ZZ) \backslash \HH}  E_T(z; s) \diff \mu(z) = \pi^{-s} \Gamma(s) \zeta(2s) \int_{\SL_2(\ZZ) \backslash \HH}  \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y_T(\gamma z)^{s} \diff \mu(z)
+                        me = \pi^{-s} \Gamma(s) \zeta(2s) \int_{\Gamma_\infty \backslash \HH}   y_T \diff \mu(z)
+                        me = \pi^{-s} \Gamma(s) \zeta(2s) \int_0^1\int_0^T   y^{s-1} \diff \mu(z)
+                        me = \pi^{-s} \Gamma(s) \zeta(2s) \frac{T^{s-1}}{s-1}
+                p
+                    | There is a huge generalization of this lemma by Langlands that allows him to calculate a lot of volumes.
+
+                lemma
+                    statement: p
+                        | Let #[m T \gt 1] and #[m x+ iy] in the standard fundamental domain #[m \mathcal F] for #[m \SL_2(\ZZ) \backslash \HH] then
+                        me.
+                            E_T(z; s) =
+                            \begin{cases}
+                            E(z; s) \amp y\lt T\\
+                            E(z; s) - pi^{-s} \Gamma(s) \zeta(2s) y^s \amp y\ge T
+                            \end{cases}
+                        | .
+                    proof
+                        p
+                            | Recall
+                            me \Im(\gamma z) = \frac{ y}{((cx+d)^2 + (cy)^2)}
+                        p
+                            | Case 1:
+                            | #[m c \ne 0 ] implies #[m \Im( \gamma z)  \le \frac{1}{c^2 y} \le T] for all #[m y\in \mathcal F].
+                        p
+                            | Case 2:
+                            | #[m c =   0 ] implies #[m \Im( \gamma z) = \frac{y}{d^2 } ]
+                            me \gamma = \begin{pmatrix} a \amp b\\ 0 \amp d\end{pmatrix} \in \SL_2(\ZZ)
+                            | implies #[m ad = 1] so #[m a= d= 1] or #[m a=d=  -1].
+                            me E_T(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y_T(\gamma z)^{s}
+                            me  = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} y(\gamma z)^{s}  -  \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{ d = \pm 1} y_T(\frac{y}{d^s})^{s}
+                            me.
+                                =
+                                \begin{cases}
+                                E(z; s)  - \pi^{-s} \Gamma (s)\zeta(2s) y^s \amp y\lt T\\
+                                E(z; s) \amp y\ge T
+                                \end{cases}
+                remark
+                    p
+                        | #[m E(z; s) - E_T(z; s) ] for fixed #[m z] is holomorphic as a function of #[m s] at #[m s =1].
+
+
+                theorem
+                    statement: p
+                        me \vol(\SL_2(\ZZ) \backslash \HH) = \frac\pi 3
+                        | .
+                    proof: p
+                        | #[m E(z; s) - E_T(z; s) ] is holomorphic at #[m s =1].
+                        | So
+                        me \int_{\SL_2(\ZZ) \backslash \HH} \Res_{s=1}(  E(z; s) - E_T(z; s) ) \diff \mu(z) = 0
+                        me \int_{\SL_2(\ZZ) \backslash \HH} \frac 12 -\Res_{s=1}( E_T(z; s) ) \diff \mu(z) = 0
+                        me \int_{\SL_2(\ZZ) \backslash \HH} \Res_{s=1}( E_T(z; s) ) \diff \mu(z) = \frac 12 \vol(\SL_2(\ZZ) \backslash \HH)
+                        me \Res_{s=1}\int_{\SL_2(\ZZ) \backslash \HH}  E_T(z; s) \diff \mu(z) = \frac 12 \vol(\SL_2(\ZZ) \backslash \HH)
+                        me \Res_{s=1}\pi^{-s} \Gamma (s)\zeta(2s) \frac{T^{s-1}}{s-1} = \frac 12 \vol(\SL_2(\ZZ) \backslash \HH)
+                        me = \frac 1 \pi \frac{\pi^2}{6}
+                        | hence
+                        me \vol(\SL_2(\ZZ) \backslash \HH) =  \frac {\pi}{3}
+                        | .
+
+                p
+                    | Volumes of such domains are known as Tamagawa number and many such were computed via these methods by Langlands in the 60s.
+
+            paragraphs
+                title 2 Smooth cut-off
+
+                p
+                    | Let #[m f \in \cinf_c(\RR_{\ge 0 })] e.g. some nice bump.
+                    | Consider
+                    me \theta_f(z ) = \frac 12 \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} f(\Im(\gamma z))
+                    | idea
+                    me f(x) = \frac{1}{2\pi i} \int_{(\sigma)} \tilde f(s)  x^{-s} \diff s
+                    | for #[m a\lt \sigma\lt b] such that #[m \tilde f = \int_0^\infty y^s f(y) \frac{\diff y}{y}] converges absolutely for #[m a \lt s \lt b].
+                    | Observation: #[m \sigma\in \RR] for this to hold.
+                    | So
+                    me \theta_f(z) = \sum \left( \frac{1}{2\pi i} \int_{(\sigma)} \tilde f(s) \Im(\gamma z)^{-s} \diff s\right)
+                    | for #[m \Re(s) \lt -s]:
+                    me  = \frac{1}{4\pi i} \int_{(\sigma)} \tilde f ( s) \left(\sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{-s}\right) \diff s
+                    me  = \frac{1}{2\pi i} \int_{(\sigma)} \tilde f ( s) E_1(z; -s) \diff s
+                    | where
+                    me E_1(z; s) = \frac12 \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{s}
+                    | .
+                    | Now integrate
+                    me \int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =  \int_{\SL_2(\ZZ)\backslash \HH} \frac{1}{2\pi i} \int_{(\sigma)} \tilde f (s) E(z; -1) \diff s\diff \mu(z)
+                    me = \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH) + \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
+                    | (shifting contours to #[m \sigma = \frac{-1}{2} + it]).
+                    | The rightmost term is 0 as we have a decomposition
+                    me L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus \text{cusp form}
+                    | . We'll do this by hand here.
+                    | i.e.
+                    me \int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)  + \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s
+                    | .
+                    lemma
+                        statement: p
+                            me \int_{\SL_2(\ZZ) \backslash\HH} \theta_f(z) \diff \mu (z)  = \tilde f(-1)
+                        proof: p
+                            | Exercise.
+
+                    | The lemma implies #[m \forall f \in \cinf_c(\RR_{\gt -})] we have the followin
+                    men#eqn-volE \tilde f (-1) \left(1-\frac3\pi \vol{}\right) = \frac{1}{2\pi i } \int_{(\frac12)} \tilde f (-s) \int  E(z; -s) \diff \mu(z) \diff s
+
+                    claim
+                        statement: p
+                            | #[xref(ref="eqn-volE")/] implies that
+                            me \int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0
+                            | , whenever it converges.
+                        proof: p
+                            | By a change of variables we can rewrite #[xref(ref="eqn-volE")/] as 
+                            me c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                         \diff s
+                            | for some constant #[m c].
+                            ol
+                                li
+                                    | Take #[m F(y) = y^{\frac12} f(y)] which implies
+                                    me  \tilde F(s) = \tilde f( s+ \frac 12)
+                                    | . #[xref(ref="eqn-volE")/] #[m \iff]
+                                    me \frac{1}{2\pi i } \int_{(0)} \tilde F(s) I(s) \diff s = c \tilde F(-\frac32)
+                                    | .
+                                li
+                                    | Trick:
+                                    | Let #[m G(y) = (y\partder{y} F + \frac32 F)] so
+                                    me \tilde G(s) = s\tilde F(s) + \frac 32  \tilde F(s)
+                                    | so
+                                    me \tilde G(-\frac 32) = 0
+                                    | implies
+                                    me \frac{1}{2\pi i} \int \tilde G (-s) I(z; s) \diff s = 0
+                                    me I(z; s) \equiv 0
+                                    | whenever it converges.

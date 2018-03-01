@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">2 Smooth cut-off</span></h5>
+<p>Let \(f \in \cinf_c(\RR_{\ge 0 })\) e.g. some nice bump. Consider</p>
+<div class="displaymath">
+\begin{equation*}
+\theta_f(z ) = \frac 12 \sum_{\Gamma_\infty \backslash \SL_2(\ZZ)} f(\Im(\gamma z))
+\end{equation*}
+</div>
+<p>idea</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{2\pi i} \int_{(\sigma)} \tilde f(s)  x^{-s} \diff s
+\end{equation*}
+</div>
+<p>for \(a\lt \sigma\lt b\) such that \(\tilde f = \int_0^\infty y^s f(y) \frac{\diff y}{y}\) converges absolutely for \(a \lt s \lt b\text{.}\) Observation: \(\sigma\in \RR\) for this to hold. So</p>
+<div class="displaymath">
+\begin{equation*}
+\theta_f(z) = \sum \left( \frac{1}{2\pi i} \int_{(\sigma)} \tilde f(s) \Im(\gamma z)^{-s} \diff s\right)
+\end{equation*}
+</div>
+<p>for \(\Re(s) \lt -s\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+= \frac{1}{4\pi i} \int_{(\sigma)} \tilde f ( s) \left(\sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{-s}\right) \diff s
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{1}{2\pi i} \int_{(\sigma)} \tilde f ( s) E_1(z; -s) \diff s
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+E_1(z; s) = \frac12 \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^{s}\text{.}
+\end{equation*}
+</div>
+<p>Now integrate</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =  \int_{\SL_2(\ZZ)\backslash \HH} \frac{1}{2\pi i} \int_{(\sigma)} \tilde f (s) E(z; -1) \diff s\diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH) + \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
+\end{equation*}
+</div>
+<p>(shifting contours to \(\sigma = \frac{-1}{2} + it\)). The rightmost term is 0 as we have a decomposition</p>
+<div class="displaymath">
+\begin{equation*}
+L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus \text{cusp form}\text{.}
+\end{equation*}
+</div>
+<p>We'll do this by hand here. i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)  + \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s\text{.}
+\end{equation*}
+</div>
+<p><article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">1.84</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash\HH} \theta_f(z) \diff \mu (z)  = \tilde f(-1)
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-18-hidden.html" knowl-id="hidden-proof-18" alt="Proof 1.84.1 " title="Proof 1.84.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article>The lemma implies \(\forall f \in \cinf_c(\RR_{\gt -})\) we have the followin</p>
+<div class="displaymath">
+\begin{equation}
+\tilde f (-1) \left(1-\frac3\pi \vol{}\right) = \frac{1}{2\pi i } \int_{(\frac12)} \tilde f (-s) \int  E(z; -s) \diff \mu(z) \diff s\tag{1.6}
+\end{equation}
+</div>
+<p><article class="theorem-like"><h6 class="heading">
+<span class="type">Claim</span><span class="codenumber">1.85</span>
+</h6>
+<p><a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> implies that</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0\text{,}
+\end{equation*}
+</div>
+<p>whenever it converges.</p></article><article class="hiddenproof"><a knowl="./knowl/proof-19-hidden.html" knowl-id="hidden-proof-19" alt="Proof 1.85.1 " title="Proof 1.85.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article></p></article><span class="incontext"><a href="section-aut-forms-motivation.html#paragraphs-16">in-context</a></span>
+</body>
+</html>
