@@ -535,7 +535,7 @@ section#section-aut-forms-motivation
 
             observation
                 p
-                    me \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\}}
+                    me \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\left\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\right\}}
                     | warning #[m NA \ne AN] elementwise
 
             p
@@ -1277,7 +1277,7 @@ section#section-aut-forms-motivation
                 |.
             p
                 | Notation:
-                me \tilde a_n(s) = \int_0^\infty a_n(y) y^2 \diff^* y\ \diff^* y = \frac{\diff y}{y}
+                me \tilde a_n(s) = \int_0^\infty a_n(y) y^2 \diff^* y,\,\diff^* y = \frac{\diff y}{y}
                 | converges for #[m \Re(s) \gg 0] if #[m a_n(y) = O(y^{-N})] for all #[m N].
 
             theorem
@@ -1421,8 +1421,8 @@ section#section-aut-forms-motivation
                 me \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline g(z) y^k E(z; s) \diff \mu (z)
                 men#eqn-conclusion-rankin-selberg = \frac{\pi^{-s} \zeta(2s) \Gamma(s) \Gamma(s+ k-1)}{(4\pi)^{2+k-1}} \sum_{n=1}^\infty \frac{a_n \overline b_n}{n^{s+k-1}}
                 | #[xref(ref="eqn-conclusion-rankin-selberg")/] has analytic continuation as a function of #[m s] to all #[m s\in \CC].
-                | It has at most simple poles
-                me \Res_{s=1} #[xref(ref="eqn-conclusion-rankin-selberg")/] (s) = \frac 12 \pair{f}{g}_{\text{Pet}}
+                | It has at most simple poles with residue at #[m s =1]:
+                me \frac 12 \pair{f}{g}_{\text{Pet}}
                 | .
             p
                 | If we let
@@ -1577,7 +1577,7 @@ section#section-aut-forms-motivation
                     | Observations:
                 lemma
                     statement: p
-                        | #[m K \subseteq \HH] compact, thre exists #[m T_K] such that for all #[m T \ge T_K]
+                        | #[m K \subseteq \HH] compact, there exists #[m T_K] such that for all #[m T \ge T_K]
                         me E_T(z; s) = E(z; s) \,\forall z\in K
                         | .
                     proof: p
@@ -1676,46 +1676,168 @@ section#section-aut-forms-motivation
                     | .
                     | Now integrate
                     me \int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =  \int_{\SL_2(\ZZ)\backslash \HH} \frac{1}{2\pi i} \int_{(\sigma)} \tilde f (s) E(z; -1) \diff s\diff \mu(z)
-                    me = \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH) + \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
+                    me = \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH)
+                    me + \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
                     | (shifting contours to #[m \sigma = \frac{-1}{2} + it]).
                     | The rightmost term is 0 as we have a decomposition
                     me L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus \text{cusp form}
                     | . We'll do this by hand here.
                     | i.e.
-                    me \int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)  + \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s
+                    me \int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)
+                    me + \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s
                     | .
-                    lemma
-                        statement: p
-                            me \int_{\SL_2(\ZZ) \backslash\HH} \theta_f(z) \diff \mu (z)  = \tilde f(-1)
-                        proof: p
-                            | Exercise.
+                lemma
+                    statement: p
+                        me \int_{\SL_2(\ZZ) \backslash\HH} \theta_f(z) \diff \mu (z)  = \tilde f(-1)
+                    proof: p
+                        | Exercise.
 
-                    | The lemma implies #[m \forall f \in \cinf_c(\RR_{\gt -})] we have the followin
+                p
+                    | The lemma implies #[m \forall f \in \cinf_c(\RR_{\gt 0})] we have the following
                     men#eqn-volE \tilde f (-1) \left(1-\frac3\pi \vol{}\right) = \frac{1}{2\pi i } \int_{(\frac12)} \tilde f (-s) \int  E(z; -s) \diff \mu(z) \diff s
 
-                    claim
-                        statement: p
-                            | #[xref(ref="eqn-volE")/] implies that
-                            me \int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0
-                            | , whenever it converges.
-                        proof: p
-                            | By a change of variables we can rewrite #[xref(ref="eqn-volE")/] as 
-                            me c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                         \diff s
-                            | for some constant #[m c].
-                            ol
-                                li
-                                    | Take #[m F(y) = y^{\frac12} f(y)] which implies
-                                    me  \tilde F(s) = \tilde f( s+ \frac 12)
-                                    | . #[xref(ref="eqn-volE")/] #[m \iff]
-                                    me \frac{1}{2\pi i } \int_{(0)} \tilde F(s) I(s) \diff s = c \tilde F(-\frac32)
-                                    | .
-                                li
-                                    | Trick:
-                                    | Let #[m G(y) = (y\partder{y} F + \frac32 F)] so
-                                    me \tilde G(s) = s\tilde F(s) + \frac 32  \tilde F(s)
-                                    | so
-                                    me \tilde G(-\frac 32) = 0
-                                    | implies
-                                    me \frac{1}{2\pi i} \int \tilde G (-s) I(z; s) \diff s = 0
-                                    me I(z; s) \equiv 0
-                                    | whenever it converges.
+                claim
+                    statement: p
+                        | #[xref(ref="eqn-volE")/] implies that
+                        me \int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0
+                        | , whenever it converges.
+                    proof: p
+                        | By a change of variables we can rewrite #[xref(ref="eqn-volE")/] as
+                        me c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                         \diff s
+                        | for some constant #[m c].
+                        ol
+                            li
+                                | Take #[m F(y) = y^{\frac12} f(y)] which implies
+                                me  \tilde F(s) = \tilde f( s+ \frac 12)
+                                | . #[xref(ref="eqn-volE")/] #[m \iff]
+                                me \frac{1}{2\pi i } \int_{(0)} \tilde F(s) I(s) \diff s = c \tilde F(-\frac32)
+                                | .
+                            li
+                                | Trick:
+                                | Let #[m G(y) = (y\partder{y} F + \frac32 F)] so
+                                me \tilde G(s) = s\tilde F(s) + \frac 32  \tilde F(s)
+                                | so
+                                me \tilde G(-\frac 32) = 0
+                                | implies
+                                me \frac{1}{2\pi i} \int \tilde G (-s) I(z; s) \diff s = 0
+                                me I(z; s) \equiv 0
+                                | whenever it converges.
+
+section
+    title The Eichler-Selberg trace formula
+    aside: p Lecture 12 15/3/2018
+
+    p
+        | What does it do?
+        | It calculates the #[em trace] of the #[m m]th Hecke operator #[m T(m)] on #[m S_k] the space of holomorphic modular forms of weight #[m k] level 1.
+
+    p
+        | Input #[m m \in \ZZ_{\ge 0}], #[m k] weight.
+
+    remark
+        p
+            | It is more general, there is an  (Eichler-)Selberg trace formula for general level #[m N].
+        p
+            | Even more generally there is a Selberg trace formula for Maass forms of arbitrary level.
+        p
+            | Even more general Arthur-Selberg trace formula for automorphic representations on any group.
+
+
+    p
+        | Recall
+        me T(m) f(z) =  m^{k-1} \sum_{ad=m,\, b \pmod d} d^{-k} f\left(\frac {az+b}{d} \right)
+        | #[m S_k]  cusp forms of weight #[m k\ge 2] even level 1.
+        me \trace_{S_k} T(m) = -\frac12 \sum_{t\in \ZZ,\,t^2 - 4m \lt 0} P_k(t,m) H(4 m -t^2)
+        me -\frac12 \sum_{dd' = m} \min(d,d')^{k-1} +\begin{cases} \frac{k-1}{2} m^{k/2 - 1} \amp m\in \ZZ^2 \\ 0 \end{cases}
+        | .
+        | Where
+        me P_k(t,m) = \frac{\rho^k - \bar \rho^k}{\rho - \bar\rho}
+        | for #[m \{\rho,\bar \rho\}] solutions to #[m X^2 - tX + m = 0].
+        | #[m H(n)] is the #[q Hurwitz class number]
+        me = \#\{Q \text{ pos. def. integral quad. form}: \disc Q = -N\}/\SL_2(\ZZ)
+        | each one counted with multiplicity 1 unless it is equivalent to #[m x^2+y^2 \to \frac 12], #[m x^2+xy+y^2 \to \frac 13]
+        | We will prove this and examine some consequences.
+    p
+        | How would we calculate terms in this? It can be hard, the Hurwitz class number requires #[m \sqrt D] time for #[m N = f^2D], #[m D] a fundamental discriminant.
+        | To get the trace we can integrate #[m \int K(x,x)] for the kernel which gives us #[m T(m)].
+
+
+
+    paragraphs
+        title Towards the trace formula
+        p
+            | We will follow Zagier: Modular forms whose coefficients are Dirichlet series.
+        p
+            | Normalization: Let #[m \{f_1, \ldots, f_r\}] be a basis for #[m S_k].
+            | We will assume that they are all Hecke eigenfunctions and they are normalized by #[m a_1^i = 1] (Hecke normalized).
+            me f_i(z)  = \sum_{i=1}^\infty a_n^i e(nx)
+
+        note
+            p
+                | #[m f_i]s are pairwise orthogonal with respect to #[m \pair{-}{-}_{\text{Pet}}]
+                me \pair{f_i}{f_j}_{\text{Pet}} = \int_{\Gamma\backslash \HH} f_i\bar f_j y^k \frac{\diff x\diff y}{y^2}
+                | why: say #[m a^i_m \ne 0] for some #[m m] then
+                me \pair{f_i}{f_j}_{\text{Pet}} = \frac{1}{a_m^i} \pair{T(m) f_i}{f_j}_\text{Pet}
+                me                              = \frac{1}{a_m^i} \pair{ f_i}{T(m)f_j}_\text{Pet}
+                me                              = \frac{a_m^j}{a_m^i} \pair{ f_i}{f_j}_\text{Pet}
+
+    paragraphs
+        title Kernel function
+
+        theorem
+            statement: p
+                | #[m T(m)] is an integral operator with the kernel
+                me h_m(z,z') = \sum_{ad-bc = m }\frac{1}{(czz' + dz' + az+ b)^k} = \frac{1}{(cz+d)^k} \frac{1}{z' + \left(\frac{az+b}{cz+d}\right)^k}
+                | .
+
+        note
+            p
+                | Let's set #[m j_k(\gamma,z) = (cz+d)^{-k}],
+                me \gamma = \begin{pmatrix} a \amp b\\ c \amp d\end{pmatrix} \in \SL_2(\ZZ)
+                me F_k(z,z') = (z+z')^{-k}
+                | so
+                me h_m(z,z') = \sum_{\gamma\in \Mat_2(\ZZ),\,\det \gamma = m} j_k(\gamma,z) F_k(\gamma z, z')
+                | .
+                | Even more is true #[m h_m(z,z') = h_1(T_m(z), z')].
+
+        proof
+            p
+                me f\ast h_m(z') = \frac{c_k}{m^{k-1}} T_m(f)(z')
+                | #[m c_k = (-1)^{k/2} \pi/2^{k-3}(k-1)].
+                | set #[m m = 1] (this is enough because of our earlier observation).
+                me f\ast h_1( z') = \int_{\Gamma \backslash \HH} f(z)  \overline{h_1(z,-\bar z')} y^k \diff \mu(z)
+                me  \int_{\Gamma \backslash\HH} f(z) \left\{ \sum_{\gamma} j_k(\gamma,z) (-z' + \gamma z)^{-k} \right\} y^k \diff \mu(y)
+                | #[m f] is  a modular form of weight #[m k] implies
+                me f(\gamma z) = (cz+d)^k  f(z)
+                me \im(\gamma z ) = \frac{y}{|cz+d|^2|}
+                | so
+                men \overline{(cz+d)^{-k}} f(z) y^k = f(\gamma z) \im(\gamma z )^k
+                | . this implies
+                me \int_{\Gamma\backslash \HH}     f(\gamma z) \im('g z)^i (-z' + \overline{\gamma z})^{-k}          \frac{\diff x\diff y}{y^2}
+                me = 2 \int_0^\infty \int_{-\infty}^{\infty} f(z) y^k (-z' + \bar z) ^{-k} \frac{\diff x \diff y}{y^2}
+                | Cauchy integral formula implies
+                me \int_{-\infty}^\infty \frac{f(x+iy)}{(x -iy -z')^k} \diff x
+                me 2 \pi i/(k-1)! f^{(k-1)}(2\pi i y)
+                me 4\pi i /(k-1)! \int _0^\infty f^{(k-1)} (2iy + z') y^{k-2} \diff y
+                | inner part is
+                me 1/(2i)^{k-2} \frac{\diff^{k-2}}{\diff t^{k-2}} f' (2 i ty + z') |_{t=1}
+                me 4 \pi i/(k-1)! 1/(2i)^{k-2}\frac{\diff^{k-2}}{\diff t^{k-2}} \int_0^\infty f'(2ity + z') \diff y |_{t=1}
+                me = -4\pi i /(k-1)!(2i)^{k-1} \frac{\diff^{k-2}}{\diff t^{k-2}} \frac1t f(z')|_{t=1}
+                me = (i/2)^{k-1}4\pi i /(k-1) f(z') = c_kf(z')
+                | .
+
+        corollary
+            statement: p
+                me c_k\inv m^{k-1} h_m(z,z') = \sum_{i=1}^r \frac{a^i_m}{\pair{f_i}{f_i}_\text{Pet}} f_i(z)f_i(z')
+                | spectral decomposition.
+                me \trace(T_m) = \frac{c_k\inv}{m^{k-1}} \int_{\Gamma\backslash \HH} h_m(z,\bar z)\im(z)^k \frac{\diff x \diff y}{y^2}
+                | .
+            proof: p
+                | Expand #[m h_m(z,z')] with respect to #[m \{f_1, \ldots, f_r\}].
+                | #[m h_m(z,z')] is a cusp form in both variables, we will show this later!
+                me h_m(z,z') = \sum_{1\le i,j\le r} \alpha_{i,j} f_i(z) f_j(z'),\, \alpha_{i,j} \in \CC
+                | By the theorem
+                me \frac{c\inv_k}{m^{k-1}} f\ast h_m(z') = T_m(f)(z')
+                | let's apply this to #[m f_{i_0}] for any #[m i_0]
+                | .. Next time.
+

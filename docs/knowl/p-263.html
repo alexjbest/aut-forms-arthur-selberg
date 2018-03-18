@@ -12,12 +12,24 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let's set \(j_k(\gamma,z) = (cz+d)^{-k}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\left\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\right\}}
+\gamma = \begin{pmatrix} a \amp b\\ c \amp d\end{pmatrix} \in \SL_2(\ZZ)
 \end{equation*}
 </div>
-<p>warning \(NA \ne AN\) elementwise</p>
-<span class="incontext"><a href="section-aut-forms-motivation.html#p-83">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+F_k(z,z') = (z+z')^{-k}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+h_m(z,z') = \sum_{\gamma\in \Mat_2(\ZZ),\,\det \gamma = m} j_k(\gamma,z) F_k(\gamma z, z')\text{.}
+\end{equation*}
+</div>
+<p>Even more is true \(h_m(z,z') = h_1(T_m(z), z')\text{.}\)</p>
+<span class="incontext"><a href="section-2.html#p-263">in-context</a></span>
 </body>
 </html>

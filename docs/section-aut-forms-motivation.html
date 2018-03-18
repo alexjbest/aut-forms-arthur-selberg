@@ -87,6 +87,8 @@ MathJax.Hub.Config({
 \newcommand{\ints}{\mathcal{O}}
 \newcommand{\adeles}{\mathbf{A}}
 
+\newcommand{\alg}{\mathrm{alg}}
+
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\catname}[1]{{\mathrm\textbf{#1}}}
 \newcommand{\Rings}{\mathrm{Rings}}
@@ -95,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\dR}{\mathrm{dR}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
 
-\newcommand{\pinf}{1/p^\infty}
+\newcommand{\pinf}{{1/p^\infty}}
 
 \newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
 \newcommand{\acts}{\circlearrowright}
@@ -160,6 +162,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Sel}{Sel}
 \DeclareMathOperator{\red}{red}
 \DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\Rep}{Rep}
 
 \DeclareMathOperator{\rk}{rk}
 \DeclareMathOperator{\rank}{rank}
@@ -234,11 +237,11 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-2.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-2.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -256,11 +259,12 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-9" data-scroll="subsection-9">Integral operators</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
-</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</ul>
+<h2 class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated March 1, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated March 17, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -1030,7 +1034,7 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 </h6>
 <div class="displaymath" id="p-83">
 \begin{equation*}
-\HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\}}
+\HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\left\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\right\}}
 \end{equation*}
 </div>
 <p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally invariant functions).</p>
@@ -2123,7 +2127,7 @@ a_n(y) = \int_0^1  \phi(z) \overline {e(nx)} \diff x\text{.}
 <p id="p-190">Notation:</p>
 <div class="displaymath">
 \begin{equation*}
-\tilde a_n(s) = \int_0^\infty a_n(y) y^2 \diff^* y\ \diff^* y = \frac{\diff y}{y}
+\tilde a_n(s) = \int_0^\infty a_n(y) y^2 \diff^* y,\,\diff^* y = \frac{\diff y}{y}
 \end{equation*}
 </div>
 <p>converges for \(\Re(s) \gg 0\) if \(a_n(y) = O(y^{-N})\) for all \(N\text{.}\)</p>
@@ -2338,10 +2342,10 @@ E(z; s) = \pi^{-s} \Gamma(s) \zeta(2s) \frac 12 \sum_{\gamma \in     \Gamma_\inf
 = \frac{\pi^{-s} \zeta(2s) \Gamma(s) \Gamma(s+ k-1)}{(4\pi)^{2+k-1}} \sum_{n=1}^\infty \frac{a_n \overline b_n}{n^{s+k-1}}\label{eqn-conclusion-rankin-selberg}\tag{1.5}
 \end{equation}
 </div>
-<p><a knowl="./knowl/eqn-conclusion-rankin-selberg.html" knowl-id="xref-eqn-conclusion-rankin-selberg" alt="Equation 1.5 " title="Equation 1.5 ">(1.5)</a> has analytic continuation as a function of \(s\) to all \(s\in \CC\text{.}\) It has at most simple poles</p>
+<p><a knowl="./knowl/eqn-conclusion-rankin-selberg.html" knowl-id="xref-eqn-conclusion-rankin-selberg" alt="Equation 1.5 " title="Equation 1.5 ">(1.5)</a> has analytic continuation as a function of \(s\) to all \(s\in \CC\text{.}\) It has at most simple poles with residue at \(s =1\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\Res_{s=1}  (s) = \frac 12 \pair{f}{g}_{\text{Pet}}\text{.}
+\frac 12 \pair{f}{g}_{\text{Pet}}\text{.}
 \end{equation*}
 </div>
 <p id="p-212">If we let</p>
@@ -2556,7 +2560,7 @@ E_T(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty
 <article class="theorem-like" id="lemma-2"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">1.79</span>
 </h6>
-<p id="p-232">\(K \subseteq \HH\) compact, thre exists \(T_K\) such that for all \(T \ge T_K\)</p>
+<p id="p-232">\(K \subseteq \HH\) compact, there exists \(T_K\) such that for all \(T \ge T_K\)</p>
 <div class="displaymath">
 \begin{equation*}
 E_T(z; s) = E(z; s) \,\forall z\in K\text{.}
@@ -2748,7 +2752,12 @@ E_1(z; s) = \frac12 \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\ga
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH) + \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
+= \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
++ \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
 \end{equation*}
 </div>
 <p>(shifting contours to \(\sigma = \frac{-1}{2} + it\)). The rightmost term is 0 as we have a decomposition</p>
@@ -2760,32 +2769,38 @@ L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus 
 <p>We'll do this by hand here. i.e.</p>
 <div class="displaymath">
 \begin{equation*}
-\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)  + \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s\text{.}
+\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)
 \end{equation*}
 </div>
-<p><article class="theorem-like" id="lemma-5"><h6 class="heading">
+<div class="displaymath">
+\begin{equation*}
++ \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="lemma-5"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">1.84</span>
 </h6>
 <div class="displaymath" id="p-246">
 \begin{equation*}
 \int_{\SL_2(\ZZ) \backslash\HH} \theta_f(z) \diff \mu (z)  = \tilde f(-1)
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-18" id="proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-247">Exercise.</p></article></div>The lemma implies \(\forall f \in \cinf_c(\RR_{\gt -})\) we have the followin</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-18" id="proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-247">Exercise.</p></article></div>
+<p id="p-248">The lemma implies \(\forall f \in \cinf_c(\RR_{\gt 0})\) we have the following</p>
 <div class="displaymath">
 \begin{equation}
 \tilde f (-1) \left(1-\frac3\pi \vol{}\right) = \frac{1}{2\pi i } \int_{(\frac12)} \tilde f (-s) \int  E(z; -s) \diff \mu(z) \diff s\label{eqn-volE}\tag{1.6}
 \end{equation}
 </div>
-<p><article class="theorem-like" id="claim-1"><h6 class="heading">
+<article class="theorem-like" id="claim-1"><h6 class="heading">
 <span class="type">Claim</span><span class="codenumber">1.85</span>
 </h6>
-<p id="p-248"><a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> implies that</p>
+<p id="p-249"><a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> implies that</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0\text{,}
 \end{equation*}
 </div>
-<p>whenever it converges.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-19" id="proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-249">By a change of variables we can rewrite <a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> as</p>
+<p>whenever it converges.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-19" id="proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-250">By a change of variables we can rewrite <a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> as</p>
 <div class="displaymath">
 \begin{equation*}
 c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                         \diff s
@@ -2822,7 +2837,7 @@ c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                     
 I(z; s) \equiv 0
 \end{equation*}
 </div>whenever it converges.</li>
-</ol></article></div></p></article></section></section></section></div></main>
+</ol></article></div></article></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

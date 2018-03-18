@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AFAS Automorphic forms and the Arthur-Selberg trace formula</title>
+<title>AFAS The Eichler-Selberg trace formula</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -237,11 +237,11 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><span id="previousbutton" class="previous-button button toolbar-item disabled">Prev</span><span id="upbutton" class="up-button button disabled toolbar-item">Up</span><a id="nextbutton" class="next-button button toolbar-item" href="frontmatter-1.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-aut-forms-motivation.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><span class="previous-button button toolbar-item disabled">Prev</span><span class="up-button button disabled toolbar-item">Up</span><a class="next-button button toolbar-item" href="frontmatter-1.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-aut-forms-motivation.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -260,12 +260,216 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="article" id="aut-forms-arthur-selberg"><nav class="summary-links"><ul>
-<li><a href="frontmatter-1.html"><span class="title">Front Matter</span></a></li>
-<li><a href="section-aut-forms-motivation.html"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></li>
-<li><a href="section-2.html"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></li>
-</ul></nav></section></div></main>
+<h2 class="link active"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-2"><h2 class="heading hide-type" alt="Section 2 The Eichler-Selberg trace formula">
+<span class="type">Section</span><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span>
+</h2>
+<article class="aside-like" id="aside-12"><p id="p-251">Lecture 12 15/3/2018</p></article><p id="p-252">What does it do? It calculates the <em class="emphasis">trace</em> of the \(m\)th Hecke operator \(T(m)\) on \(S_k\) the space of holomorphic modular forms of weight \(k\) level 1.</p>
+<p id="p-253">Input \(m \in \ZZ_{\ge 0}\text{,}\) \(k\) weight.</p>
+<article class="remark-like" id="remark-18"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">2.1</span>
+</h6>
+<p id="p-254">It is more general, there is an  (Eichler-)Selberg trace formula for general level \(N\text{.}\)</p>
+<p id="p-255">Even more generally there is a Selberg trace formula for Maass forms of arbitrary level.</p>
+<p id="p-256">Even more general Arthur-Selberg trace formula for automorphic representations on any group.</p></article><p id="p-257">Recall</p>
+<div class="displaymath">
+\begin{equation*}
+T(m) f(z) =  m^{k-1} \sum_{ad=m,\, b \pmod d} d^{-k} f\left(\frac {az+b}{d} \right)
+\end{equation*}
+</div>
+<p>\(S_k\)  cusp forms of weight \(k\ge 2\) even level 1.</p>
+<div class="displaymath">
+\begin{equation*}
+\trace_{S_k} T(m) = -\frac12 \sum_{t\in \ZZ,\,t^2 - 4m \lt 0} P_k(t,m) H(4 m -t^2)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+-\frac12 \sum_{dd' = m} \min(d,d')^{k-1} +\begin{cases} \frac{k-1}{2} m^{k/2 - 1} \amp m\in \ZZ^2 \\ 0 \end{cases}\text{.}
+\end{equation*}
+</div>
+<p>Where</p>
+<div class="displaymath">
+\begin{equation*}
+P_k(t,m) = \frac{\rho^k - \bar \rho^k}{\rho - \bar\rho}
+\end{equation*}
+</div>
+<p>for \(\{\rho,\bar \rho\}\) solutions to \(X^2 - tX + m = 0\text{.}\) \(H(n)\) is the “Hurwitz class number”</p>
+<div class="displaymath">
+\begin{equation*}
+= \#\{Q \text{ pos. def. integral quad. form}: \disc Q = -N\}/\SL_2(\ZZ)
+\end{equation*}
+</div>
+<p>each one counted with multiplicity 1 unless it is equivalent to \(x^2+y^2 \to \frac 12\text{,}\) \(x^2+xy+y^2 \to \frac 13\) We will prove this and examine some consequences.</p>
+<p id="p-258">How would we calculate terms in this? It can be hard, the Hurwitz class number requires \(\sqrt D\) time for \(N = f^2D\text{,}\) \(D\) a fundamental discriminant. To get the trace we can integrate \(\int K(x,x)\) for the kernel which gives us \(T(m)\text{.}\)</p>
+<article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">Towards the trace formula</span></h5>
+<p id="p-259">We will follow Zagier: Modular forms whose coefficients are Dirichlet series.</p>
+<p id="p-260">Normalization: Let \(\{f_1, \ldots, f_r\}\) be a basis for \(S_k\text{.}\) We will assume that they are all Hecke eigenfunctions and they are normalized by \(a_1^i = 1\) (Hecke normalized).</p>
+<div class="displaymath">
+\begin{equation*}
+f_i(z)  = \sum_{i=1}^\infty a_n^i e(nx)
+\end{equation*}
+</div>
+<article class="remark-like" id="note-10"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">2.2</span>
+</h6>
+<p id="p-261">\(f_i\)s are pairwise orthogonal with respect to \(\pair{-}{-}_{\text{Pet}}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\pair{f_i}{f_j}_{\text{Pet}} = \int_{\Gamma\backslash \HH} f_i\bar f_j y^k \frac{\diff x\diff y}{y^2}
+\end{equation*}
+</div>
+<p>why: say \(a^i_m \ne 0\) for some \(m\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\pair{f_i}{f_j}_{\text{Pet}} = \frac{1}{a_m^i} \pair{T(m) f_i}{f_j}_\text{Pet}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{1}{a_m^i} \pair{ f_i}{T(m)f_j}_\text{Pet}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{a_m^j}{a_m^i} \pair{ f_i}{f_j}_\text{Pet}
+\end{equation*}
+</div></article></article><article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">Kernel function</span></h5>
+<article class="theorem-like" id="theorem-11"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">2.3</span>
+</h6>
+<p id="p-262">\(T(m)\) is an integral operator with the kernel</p>
+<div class="displaymath">
+\begin{equation*}
+h_m(z,z') = \sum_{ad-bc = m }\frac{1}{(czz' + dz' + az+ b)^k} = \frac{1}{(cz+d)^k} \frac{1}{z' + \left(\frac{az+b}{cz+d}\right)^k}\text{.}
+\end{equation*}
+</div></article><article class="remark-like" id="note-11"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">2.4</span>
+</h6>
+<p id="p-263">Let's set \(j_k(\gamma,z) = (cz+d)^{-k}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\gamma = \begin{pmatrix} a \amp b\\ c \amp d\end{pmatrix} \in \SL_2(\ZZ)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+F_k(z,z') = (z+z')^{-k}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+h_m(z,z') = \sum_{\gamma\in \Mat_2(\ZZ),\,\det \gamma = m} j_k(\gamma,z) F_k(\gamma z, z')\text{.}
+\end{equation*}
+</div>
+<p>Even more is true \(h_m(z,z') = h_1(T_m(z), z')\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-20" id="proof-20"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-20" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-264">
+\begin{equation*}
+f\ast h_m(z') = \frac{c_k}{m^{k-1}} T_m(f)(z')
+\end{equation*}
+</div>
+<p>\(c_k = (-1)^{k/2} \pi/2^{k-3}(k-1)\text{.}\) set \(m = 1\) (this is enough because of our earlier observation).</p>
+<div class="displaymath">
+\begin{equation*}
+f\ast h_1( z') = \int_{\Gamma \backslash \HH} f(z)  \overline{h_1(z,-\bar z')} y^k \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma \backslash\HH} f(z) \left\{ \sum_{\gamma} j_k(\gamma,z) (-z' + \gamma z)^{-k} \right\} y^k \diff \mu(y)
+\end{equation*}
+</div>
+<p>\(f\) is  a modular form of weight \(k\) implies</p>
+<div class="displaymath">
+\begin{equation*}
+f(\gamma z) = (cz+d)^k  f(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\im(\gamma z ) = \frac{y}{|cz+d|^2|}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation}
+\overline{(cz+d)^{-k}} f(z) y^k = f(\gamma z) \im(\gamma z )^k\text{.}\tag{2.1}
+\end{equation}
+</div>
+<p>this implies</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma\backslash \HH}     f(\gamma z) \im('g z)^i (-z' + \overline{\gamma z})^{-k}          \frac{\diff x\diff y}{y^2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= 2 \int_0^\infty \int_{-\infty}^{\infty} f(z) y^k (-z' + \bar z) ^{-k} \frac{\diff x \diff y}{y^2}
+\end{equation*}
+</div>
+<p>Cauchy integral formula implies</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{-\infty}^\infty \frac{f(x+iy)}{(x -iy -z')^k} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+2 \pi i/(k-1)! f^{(k-1)}(2\pi i y)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+4\pi i /(k-1)! \int _0^\infty f^{(k-1)} (2iy + z') y^{k-2} \diff y
+\end{equation*}
+</div>
+<p>inner part is</p>
+<div class="displaymath">
+\begin{equation*}
+1/(2i)^{k-2} \frac{\diff^{k-2}}{\diff t^{k-2}} f' (2 i ty + z') |_{t=1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+4 \pi i/(k-1)! 1/(2i)^{k-2}\frac{\diff^{k-2}}{\diff t^{k-2}} \int_0^\infty f'(2ity + z') \diff y |_{t=1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= -4\pi i /(k-1)!(2i)^{k-1} \frac{\diff^{k-2}}{\diff t^{k-2}} \frac1t f(z')|_{t=1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (i/2)^{k-1}4\pi i /(k-1) f(z') = c_kf(z')\text{.}
+\end{equation*}
+</div></article></div>
+<article class="theorem-like" id="corollary-2"><h6 class="heading">
+<span class="type">Corollary</span><span class="codenumber">2.5</span>
+</h6>
+<div class="displaymath" id="p-265">
+\begin{equation*}
+c_k\inv m^{k-1} h_m(z,z') = \sum_{i=1}^r \frac{a^i_m}{\pair{f_i}{f_i}_\text{Pet}} f_i(z)f_i(z')
+\end{equation*}
+</div>
+<p>spectral decomposition.</p>
+<div class="displaymath">
+\begin{equation*}
+\trace(T_m) = \frac{c_k\inv}{m^{k-1}} \int_{\Gamma\backslash \HH} h_m(z,\bar z)\im(z)^k \frac{\diff x \diff y}{y^2}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-266">Expand \(h_m(z,z')\) with respect to \(\{f_1, \ldots, f_r\}\text{.}\) \(h_m(z,z')\) is a cusp form in both variables, we will show this later!</p>
+<div class="displaymath">
+\begin{equation*}
+h_m(z,z') = \sum_{1\le i,j\le r} \alpha_{i,j} f_i(z) f_j(z'),\, \alpha_{i,j} \in \CC
+\end{equation*}
+</div>
+<p>By the theorem</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{c\inv_k}{m^{k-1}} f\ast h_m(z') = T_m(f)(z')
+\end{equation*}
+</div>
+<p>let's apply this to \(f_{i_0}\) for any \(i_0\) .. Next time.</p></article></div></article></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

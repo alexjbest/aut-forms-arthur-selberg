@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="displaymath">
+\begin{equation*}
+f\ast h_m(z') = \frac{c_k}{m^{k-1}} T_m(f)(z')
+\end{equation*}
+</div>
+<p>\(c_k = (-1)^{k/2} \pi/2^{k-3}(k-1)\text{.}\) set \(m = 1\) (this is enough because of our earlier observation).</p>
+<div class="displaymath">
+\begin{equation*}
+f\ast h_1( z') = \int_{\Gamma \backslash \HH} f(z)  \overline{h_1(z,-\bar z')} y^k \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma \backslash\HH} f(z) \left\{ \sum_{\gamma} j_k(\gamma,z) (-z' + \gamma z)^{-k} \right\} y^k \diff \mu(y)
+\end{equation*}
+</div>
+<p>\(f\) is  a modular form of weight \(k\) implies</p>
+<div class="displaymath">
+\begin{equation*}
+f(\gamma z) = (cz+d)^k  f(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\im(\gamma z ) = \frac{y}{|cz+d|^2|}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation}
+\overline{(cz+d)^{-k}} f(z) y^k = f(\gamma z) \im(\gamma z )^k\text{.}\tag{2.1}
+\end{equation}
+</div>
+<p>this implies</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma\backslash \HH}     f(\gamma z) \im('g z)^i (-z' + \overline{\gamma z})^{-k}          \frac{\diff x\diff y}{y^2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= 2 \int_0^\infty \int_{-\infty}^{\infty} f(z) y^k (-z' + \bar z) ^{-k} \frac{\diff x \diff y}{y^2}
+\end{equation*}
+</div>
+<p>Cauchy integral formula implies</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{-\infty}^\infty \frac{f(x+iy)}{(x -iy -z')^k} \diff x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+2 \pi i/(k-1)! f^{(k-1)}(2\pi i y)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+4\pi i /(k-1)! \int _0^\infty f^{(k-1)} (2iy + z') y^{k-2} \diff y
+\end{equation*}
+</div>
+<p>inner part is</p>
+<div class="displaymath">
+\begin{equation*}
+1/(2i)^{k-2} \frac{\diff^{k-2}}{\diff t^{k-2}} f' (2 i ty + z') |_{t=1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+4 \pi i/(k-1)! 1/(2i)^{k-2}\frac{\diff^{k-2}}{\diff t^{k-2}} \int_0^\infty f'(2ity + z') \diff y |_{t=1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= -4\pi i /(k-1)!(2i)^{k-1} \frac{\diff^{k-2}}{\diff t^{k-2}} \frac1t f(z')|_{t=1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (i/2)^{k-1}4\pi i /(k-1) f(z') = c_kf(z')\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-2.html#p-264">in-context</a></span>
+</body>
+</html>

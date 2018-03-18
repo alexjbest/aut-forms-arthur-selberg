@@ -55,7 +55,12 @@ E_1(z; s) = \frac12 \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\ga
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH) + \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
+= \tilde f (-1) \left(\Res_{s=1} E_1(z; s)\right) \vol(\SL_2(\ZZ)\backslash \HH)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
++ \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
 \end{equation*}
 </div>
 <p>(shifting contours to \(\sigma = \frac{-1}{2} + it\)). The rightmost term is 0 as we have a decomposition</p>
@@ -67,32 +72,14 @@ L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus 
 <p>We'll do this by hand here. i.e.</p>
 <div class="displaymath">
 \begin{equation*}
-\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)  + \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s\text{.}
+\int_{\SL_2(\ZZ)\backslash \HH} \theta_f(z) \diff \mu (z) =\tilde f (-1) \underbrace{\left(\Res_{s=1} E_1(z; s)\right)}_{=3/\pi} \vol(\SL_2(\ZZ)\backslash \HH)
 \end{equation*}
 </div>
-<p><article class="theorem-like"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">1.84</span>
-</h6>
 <div class="displaymath">
 \begin{equation*}
-\int_{\SL_2(\ZZ) \backslash\HH} \theta_f(z) \diff \mu (z)  = \tilde f(-1)
-\end{equation*}
-</div></article><article class="hiddenproof"><a knowl="./knowl/proof-18-hidden.html" knowl-id="hidden-proof-18" alt="Proof 1.84.1 " title="Proof 1.84.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article>The lemma implies \(\forall f \in \cinf_c(\RR_{\gt -})\) we have the followin</p>
-<div class="displaymath">
-\begin{equation}
-\tilde f (-1) \left(1-\frac3\pi \vol{}\right) = \frac{1}{2\pi i } \int_{(\frac12)} \tilde f (-s) \int  E(z; -s) \diff \mu(z) \diff s\tag{1.6}
-\end{equation}
-</div>
-<p><article class="theorem-like"><h6 class="heading">
-<span class="type">Claim</span><span class="codenumber">1.85</span>
-</h6>
-<p><a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> implies that</p>
-<div class="displaymath">
-\begin{equation*}
-\int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0\text{,}
++ \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s\text{.}
 \end{equation*}
 </div>
-<p>whenever it converges.</p></article><article class="hiddenproof"><a knowl="./knowl/proof-19-hidden.html" knowl-id="hidden-proof-19" alt="Proof 1.85.1 " title="Proof 1.85.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article></p>
 <span class="incontext"><a href="section-aut-forms-motivation.html#p-245">in-context</a></span>
 </body>
 </html>
