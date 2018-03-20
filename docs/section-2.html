@@ -96,6 +96,7 @@ MathJax.Hub.Config({
 \newcommand{\Ar}{\mathrm{Ar}}
 \newcommand{\dR}{\mathrm{dR}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
+\newcommand{\Pet}{\mathrm{Pet}}
 
 \newcommand{\pinf}{{1/p^\infty}}
 
@@ -260,24 +261,31 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link active"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link active"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<ul>
+<li><a href="section-2.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
+<li><a href="section-2.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-2"><h2 class="heading hide-type" alt="Section 2 The Eichler-Selberg trace formula">
 <span class="type">Section</span><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span>
 </h2>
-<article class="aside-like" id="aside-12"><p id="p-251">Lecture 12 15/3/2018</p></article><p id="p-252">What does it do? It calculates the <em class="emphasis">trace</em> of the \(m\)th Hecke operator \(T(m)\) on \(S_k\) the space of holomorphic modular forms of weight \(k\) level 1.</p>
+<section class="subsection" id="subsection-12"><h3 class="heading hide-type" alt="Subsection 2.1 The OG approach">
+<span class="type">Subsection</span><span class="codenumber">2.1</span><span class="title">The OG approach</span>
+</h3>
+<article class="aside-like" id="aside-12"><p id="p-251">Lecture 12 15/3/2018</p></article><p id="p-252">What does it do? It calculates the <em class="emphasis">trace</em> of the \(m\)th Hecke operator \(T(m)\) on \(S_k\) the space of holomorphic <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> of weight \(k\) level 1.</p>
 <p id="p-253">Input \(m \in \ZZ_{\ge 0}\text{,}\) \(k\) weight.</p>
 <article class="remark-like" id="remark-18"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">2.1</span>
 </h6>
 <p id="p-254">It is more general, there is an  (Eichler-)Selberg trace formula for general level \(N\text{.}\)</p>
-<p id="p-255">Even more generally there is a Selberg trace formula for Maass forms of arbitrary level.</p>
+<p id="p-255">Even more generally there is a Selberg trace formula for <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a> of arbitrary level.</p>
 <p id="p-256">Even more general Arthur-Selberg trace formula for automorphic representations on any group.</p></article><p id="p-257">Recall</p>
 <div class="displaymath">
 \begin{equation*}
 T(m) f(z) =  m^{k-1} \sum_{ad=m,\, b \pmod d} d^{-k} f\left(\frac {az+b}{d} \right)
 \end{equation*}
 </div>
-<p>\(S_k\)  cusp forms of weight \(k\ge 2\) even level 1.</p>
+<p>\(S_k\)  <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a> of weight \(k\ge 2\) even level 1.</p>
 <div class="displaymath">
 \begin{equation*}
 \trace_{S_k} T(m) = -\frac12 \sum_{t\in \ZZ,\,t^2 - 4m \lt 0} P_k(t,m) H(4 m -t^2)
@@ -303,7 +311,7 @@ P_k(t,m) = \frac{\rho^k - \bar \rho^k}{\rho - \bar\rho}
 <p>each one counted with multiplicity 1 unless it is equivalent to \(x^2+y^2 \to \frac 12\text{,}\) \(x^2+xy+y^2 \to \frac 13\) We will prove this and examine some consequences.</p>
 <p id="p-258">How would we calculate terms in this? It can be hard, the Hurwitz class number requires \(\sqrt D\) time for \(N = f^2D\text{,}\) \(D\) a fundamental discriminant. To get the trace we can integrate \(\int K(x,x)\) for the kernel which gives us \(T(m)\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">Towards the trace formula</span></h5>
-<p id="p-259">We will follow Zagier: Modular forms whose coefficients are Dirichlet series.</p>
+<p id="p-259">We will follow Zagier: <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">Modular forms</a> whose coefficients are Dirichlet series.</p>
 <p id="p-260">Normalization: Let \(\{f_1, \ldots, f_r\}\) be a basis for \(S_k\text{.}\) We will assume that they are all Hecke eigenfunctions and they are normalized by \(a_1^i = 1\) (Hecke normalized).</p>
 <div class="displaymath">
 \begin{equation*}
@@ -313,26 +321,26 @@ f_i(z)  = \sum_{i=1}^\infty a_n^i e(nx)
 <article class="remark-like" id="note-10"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">2.2</span>
 </h6>
-<p id="p-261">\(f_i\)s are pairwise orthogonal with respect to \(\pair{-}{-}_{\text{Pet}}\)</p>
+<p id="p-261">\(f_i\)s are pairwise orthogonal with respect to \(\pair{-}{-}_{\Pet}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\pair{f_i}{f_j}_{\text{Pet}} = \int_{\Gamma\backslash \HH} f_i\bar f_j y^k \frac{\diff x\diff y}{y^2}
+\pair{f_i}{f_j}_{\Pet} = \int_{\Gamma\backslash \HH} f_i\bar f_j y^k \frac{\diff x\diff y}{y^2}
 \end{equation*}
 </div>
 <p>why: say \(a^i_m \ne 0\) for some \(m\) then</p>
 <div class="displaymath">
 \begin{equation*}
-\pair{f_i}{f_j}_{\text{Pet}} = \frac{1}{a_m^i} \pair{T(m) f_i}{f_j}_\text{Pet}
+\pair{f_i}{f_j}_{\Pet} = \frac{1}{a_m^i} \pair{T(m) f_i}{f_j}_\Pet
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \frac{1}{a_m^i} \pair{ f_i}{T(m)f_j}_\text{Pet}
+= \frac{1}{a_m^i} \pair{ f_i}{T(m)f_j}_\Pet
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \frac{a_m^j}{a_m^i} \pair{ f_i}{f_j}_\text{Pet}
+= \frac{a_m^j}{a_m^i} \pair{ f_i}{f_j}_\Pet
 \end{equation*}
 </div></article></article><article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">Kernel function</span></h5>
 <article class="theorem-like" id="theorem-11"><h6 class="heading">
@@ -379,7 +387,7 @@ f\ast h_1( z') = \int_{\Gamma \backslash \HH} f(z)  \overline{h_1(z,-\bar z')} y
 \int_{\Gamma \backslash\HH} f(z) \left\{ \sum_{\gamma} j_k(\gamma,z) (-z' + \gamma z)^{-k} \right\} y^k \diff \mu(y)
 \end{equation*}
 </div>
-<p>\(f\) is  a modular form of weight \(k\) implies</p>
+<p>\(f\) is  a <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> of weight \(k\) implies</p>
 <div class="displaymath">
 \begin{equation*}
 f(\gamma z) = (cz+d)^k  f(z)
@@ -387,19 +395,19 @@ f(\gamma z) = (cz+d)^k  f(z)
 </div>
 <div class="displaymath">
 \begin{equation*}
-\im(\gamma z ) = \frac{y}{|cz+d|^2|}
+\Im(\gamma z ) = \frac{y}{|cz+d|^2}
 \end{equation*}
 </div>
 <p>so</p>
 <div class="displaymath">
 \begin{equation}
-\overline{(cz+d)^{-k}} f(z) y^k = f(\gamma z) \im(\gamma z )^k\text{.}\tag{2.1}
+\overline{(cz+d)^{-k}} f(z) y^k = f(\gamma z) \Im(\gamma z )^k\text{.}\tag{2.1}
 \end{equation}
 </div>
 <p>this implies</p>
 <div class="displaymath">
 \begin{equation*}
-\int_{\Gamma\backslash \HH}     f(\gamma z) \im('g z)^i (-z' + \overline{\gamma z})^{-k}          \frac{\diff x\diff y}{y^2}
+\int_{\Gamma\backslash \HH}     f(\gamma z) \Im('g z)^i (-z' + \overline{\gamma z})^{-k}          \frac{\diff x\diff y}{y^2}
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -449,15 +457,15 @@ f(\gamma z) = (cz+d)^k  f(z)
 </h6>
 <div class="displaymath" id="p-265">
 \begin{equation*}
-c_k\inv m^{k-1} h_m(z,z') = \sum_{i=1}^r \frac{a^i_m}{\pair{f_i}{f_i}_\text{Pet}} f_i(z)f_i(z')
+c_k\inv m^{k-1} h_m(z,z') = \sum_{i=1}^r \frac{a^i_m}{\pair{f_i}{f_i}_\Pet} f_i(z)f_i(z')
 \end{equation*}
 </div>
 <p>spectral decomposition.</p>
 <div class="displaymath">
 \begin{equation*}
-\trace(T_m) = \frac{c_k\inv}{m^{k-1}} \int_{\Gamma\backslash \HH} h_m(z,\bar z)\im(z)^k \frac{\diff x \diff y}{y^2}\text{.}
+\trace(T_m) = \frac{c_k\inv}{m^{k-1}} \int_{\Gamma\backslash \HH} h_m(z,\bar z)\Im(z)^k \frac{\diff x \diff y}{y^2}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-266">Expand \(h_m(z,z')\) with respect to \(\{f_1, \ldots, f_r\}\text{.}\) \(h_m(z,z')\) is a cusp form in both variables, we will show this later!</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-266">Expand \(h_m(z,z')\) with respect to \(\{f_1, \ldots, f_r\}\text{.}\) \(h_m(z,z')\) is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> in both variables, we will show this later!</p>
 <div class="displaymath">
 \begin{equation*}
 h_m(z,z') = \sum_{1\le i,j\le r} \alpha_{i,j} f_i(z) f_j(z'),\, \alpha_{i,j} \in \CC
@@ -469,7 +477,199 @@ h_m(z,z') = \sum_{1\le i,j\le r} \alpha_{i,j} f_i(z) f_j(z'),\, \alpha_{i,j} \in
 \frac{c\inv_k}{m^{k-1}} f\ast h_m(z') = T_m(f)(z')
 \end{equation*}
 </div>
-<p>let's apply this to \(f_{i_0}\) for any \(i_0\) .. Next time.</p></article></div></article></section></div></main>
+<p>let's apply this to \(f_{i_0}\) for any \(i_0\) .. Next time.</p></article></div>
+<article class="aside-like" id="aside-13"><p id="p-267">Lecture 13 20/3/2018</p></article><p id="p-268">Summary:</p>
+<p id="p-269">Aim: to establish the Eichler-Selberg trace formula for  the trace of \(T_m \acts S_k\text{,}\) for \(T_m\)  the \(m\)th Hecke operator</p>
+<div class="displaymath">
+\begin{equation*}
+(T_m f )(z ) = m^k \sum_{j=1}^r  j_k(\gamma ,z ) f(\gamma_j z)
+\end{equation*}
+</div>
+<p>where \(\gamma_j\) are coset representatives for</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma\backslash \{ x\in \Mat_2(\ZZ) : \det(x) = m\}/\Gamma = \bigsqcup \Gamma \gamma_i
+\end{equation*}
+</div>
+<p>and \(j_k(\gamma z ) = (cz+ d)^{-k}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\gamma = \begin{pmatrix} a \amp b\\ c \amp d\end{pmatrix} \in \SL_2(\ZZ)\text{.}
+\end{equation*}
+</div>
+<div class="displaymath" id="p-270">
+\begin{equation*}
+h_m(z,z') = \sum_{ad-bc = m }(czz' + dz' + az+ b)^{-k}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-12"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">2.6</span><span class="title">Petersson</span>
+</h6>
+<p id="p-271">Let \(c_k = \frac{(-1)^{k/2} \pi}{2^{k-3} (k-1)}\text{.}\)</p>
+<ol class="decimal">
+<li id="li-46">Then \(c\inv_k m^{k-1} h_m(z,-\bar z')\) is the kernel for \(T_m\acts S_k\text{.}\) I.e.<div class="displaymath">
+\begin{equation*}
+c_k\inv m^{k-1 } \int_{\Gamma \backslash \HH} f(z) \overline{h_m(z,-\bar z')} y^k \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pair{f}{c_k\inv m^{k-1} h_m(\cdot, -\bar z') }_{\Pet}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= T_m (f) (z')
+\end{equation*}
+</div>for all \(f\) cuspidal (so that the integral converges).</li>
+<li id="li-47">
+<div class="displaymath">
+\begin{equation*}
+m^{k - 1} c_k\inv h_m(z,z') = \sum_{j=1}^{\dim S_k} \frac{a_j(m)}{\pair{f_j}{f_j}_{\Pet}} f_j(z) f_j(z')\text{.}
+\end{equation*}
+</div>When \(\{f_1 ,\ldots, f_{\dim(S_k)}\} \) is a (Hecke normalized)  orthogonal basis for \(S_k\)<div class="displaymath">
+\begin{equation*}
+f_j(z) = \sum_{n=1}^\infty a_j(n) e(nz)\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-22" id="proof-22"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-22" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-272">For the proof set \(g_k(z,z') = (z+z')^{-k}\text{.}\) This implies that</p>
+<div class="displaymath">
+\begin{equation*}
+h_m(z,z') = \sum_{\gamma\in \Mat_z(\ZZ),\det(\gamma) =m}  j_k(\gamma; z) g_k(\gamma z ,z')
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{\gamma\in \Mat_z(\ZZ),\det(\gamma) =m}  j_k(\begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}^\transpose \gamma\begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}; z) g_k(z, \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}^\transpose \gamma\begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}z')
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{\gamma_1 \in \Mat_2(\ZZ), \det(\gamma_1) =m} j_k (\gamma z;  z') g_k(z;  \gamma_1 z')
+\end{equation*}
+</div>
+<p>which implies that the integral is well defined.</p>
+<ol class="decimal">
+<li id="li-48">Reduce part 1. to the case of \(T_1\text{.}\)<div class="displaymath">
+\begin{equation*}
+T_m(h_1(z, z')) = \sum_{\gamma \in \Gamma} T_m(j_k(\gamma; z) g_k(z; z'))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\gamma\in \Gamma} m^{k-1} \sum_{j = 1}^r j_k(\gamma; \gamma_jz) g_k(\gamma\gamma_jz,z') j_k(\gamma_j, z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\gamma\in \Gamma} m^{k-1} \sum_{j = 1}^r j_k(\gamma\gamma_j; z) g_k(\gamma\gamma_jz,z')
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+m^{k-1} \sum_{\gamma_1 \in \Mat_2(\ZZ), \det(\gamma_1) =m} j_k(\gamma; z) g_k(\gamma z,z') = m^{k-1} h_m(z,z')\text{.}
+\end{equation*}
+</div>For \(h_1\) our calculation last time established<div class="displaymath">
+\begin{equation*}
+c_k\inv \int_{\Gamma\backslash \HH} f(z) \overline{h_1 (z, - \bar z')} y^k \diff \mu(z)  = f(z')\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-49">Fix \(z'\text{.}\) Implies<div class="displaymath">
+\begin{equation}
+c_k\inv m^{k-1} h_m(z,z')  = \sum_{j=1}^{\dim(S_k)} \frac {\alpha_j (z')}{\pair{f_j}{f_j}_{\Pet}}\label{eqn-pet-proof-1}\tag{2.2}
+\end{equation}
+</div>by the first part<div class="displaymath">
+\begin{equation}
+c_k\inv m^{k-1} \pair{f_k}{h(\cdot, z')}_\Pet =  T_m(f_k)(z') = a_k(m) f_k(z')\label{eqn-pet-proof-2}\tag{2.3}
+\end{equation}
+</div>as \(f_k\) is an eigenform. On the other hand by <a knowl="./knowl/eqn-pet-proof-1.html" knowl-id="xref-eqn-pet-proof-1" alt="Equation 2.2 " title="Equation 2.2 ">(2.2)</a><div class="displaymath">
+\begin{equation*}
+c_k\inv m^{k-1} \pair{f_k}{h_m(\cdot, -\bar z ')} = c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \pair{f_k}{\frac{\alpha_j(-\bar z ') f_j}{\pair{f_j}{f_j}_{\Pet}}}_{\Pet}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \frac{\overline{\alpha_j(-\bar z ') f_j}}{\pair{f_j}{f_j}_\Pet} \pair{f_k}{f_j}_\Pet
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \overline{\alpha_j(-\bar z ')} \frac{\pair{f_k}{f_k}_{\Pet}}{\pair{f_k}{f_k}_{\Pet}}
+\end{equation*}
+</div>combined with <a knowl="./knowl/eqn-pet-proof-2.html" knowl-id="xref-eqn-pet-proof-2" alt="Equation 2.3 " title="Equation 2.3 ">(2.3)</a> this implies<div class="displaymath">
+\begin{equation*}
+a_k(m) \overline{f_k(z')} =  c_k\inv m^{k-1}\alpha_k(-\bar z')
+\end{equation*}
+</div>Note:<div class="displaymath">
+\begin{equation*}
+\overline{f_k(z')}=\overline{\sum_{n=1}^\infty a_k(n) e(nz)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{n=1}^\infty a_k(n) \overline{e(nz)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{n=1}^\infty a_k(n) e(-n \overline{z}')
+\end{equation*}
+</div>implies<div class="displaymath">
+\begin{equation*}
+a_k(m) f_k(z')   =  c_k\inv m^{k-1} \alpha_k (z')
+\end{equation*}
+</div>so<div class="displaymath">
+\begin{equation*}
+c_k\inv m^{k-1} h_m(z,z') = \sum_{j=1}^{\dim S_k} \frac{a_j(m)}{\pair{f_j}{f_j}_\Pet} f_j(z)f_j(z')\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article></div>
+<article class="theorem-like" id="corollary-3"><h6 class="heading">
+<span class="type">Corollary</span><span class="codenumber">2.7</span>
+</h6>
+<div class="displaymath" id="p-273">
+\begin{equation*}
+c_k\inv m^{k-1} \int_{\Gamma\backslash \HH} h_m( z, - \bar z') y^k \diff \mu(z) = \trace(T(m))\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-23" id="proof-23"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-23" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-274">
+\begin{equation*}
+\int_{\Gamma\backslash \HH} \sum_{j=1}^{\dim S_k} \frac{a_j(m)}{\pair{f_j}{f_j}_\Pet} f_j(z)\overline{f_j(z)} y^k \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{j=1}^{\dim(S_k)} a_j(m) \frac{\pair{f_j}{f_j}_\Pet}{\pair{f_j}{f_j}_\Pet}  = \trace(T(m))\text{.}
+\end{equation*}
+</div></article></div>
+<p id="p-275">Subtle point (in general): This integral converges, and gives a manageable expression.</p></article></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type" alt="Subsection 2.2 Zagier's approach">
+<span class="type">Subsection</span><span class="codenumber">2.2</span><span class="title">Zagier's approach</span>
+</h3>
+<div class="displaymath" id="p-276">
+\begin{equation*}
+I(s) = \int_{\Gamma\backslash \HH} h_m(z,-\bar z')  E(z; s) y^k \diff \mu(z)
+\end{equation*}
+</div>
+<p>for \(\Re(s) \gt 1\text{.}\) (This “goes around the convergence issues”). Implies</p>
+<div class="displaymath">
+\begin{equation*}
+\Res_{s=1 } I(s)  = \trace( T_m) \frac{c_l}{m^{k-1}} E(z; s) = \frac12  \zeta(2s) pi^s \Gamma(s) \sum_{\gamma \in  \Gamma_\infty \backslash \Gamma} \im(\gamma z)^s\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-13"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">2.8</span>
+</h6>
+<ol id="p-277" class="decimal">
+<li id="li-50">\(I(s)\) is absolutely convergent for \(\Re(s) \gt 1\text{.}\)</li>
+<li id="li-51">
+<div class="displaymath">
+\begin{equation*}
+I(s) = \sum_{\Delta \ne 0} \zeta(s,\Delta) \{\text{archimidean}\}+ \zeta(s,0) \{\text{archimidean}\} +   \frac { (-1)^{k/2}\Gamma(s+ k -1)\zeta(s)\zeta(2s)}{(2\pi)^{s-1}\Gamma(k)}
+\end{equation*}
+</div>\(\zeta(s, \Delta)\) is a cousin of \(\zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)}^s\) for \(K = \QQ(\sqrt{-\Delta})\text{.}\)</li>
+</ol></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

@@ -96,6 +96,7 @@ MathJax.Hub.Config({
 \newcommand{\Ar}{\mathrm{Ar}}
 \newcommand{\dR}{\mathrm{dR}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
+\newcommand{\Pet}{\mathrm{Pet}}
 
 \newcommand{\pinf}{{1/p^\infty}}
 
@@ -260,11 +261,15 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<ul>
+<li><a href="section-2.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
+<li><a href="section-2.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated March 17, 2018.</p>
+<a href="section-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated March 20, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -287,7 +292,7 @@ MathJax.Hub.Config({
 <ul id="p-9" class="disc">
 <li id="li-1">Selberg trace formula only for \(\GL_2\)</li>
 <li id="li-2">Arthur-Selberg more general</li>
-</ul></article><p id="p-10">The Selberg trace formula generalises the more classical Poisson summation formula.</p>
+</ul></article><p id="p-10">The Selberg trace formula generalises the more classical <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> formula.</p>
 <article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Poisson summation</span></h5>
 <article class="theorem-like" id="thm-poisson-sum"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.2</span><span class="title">Poisson summation</span>
@@ -391,7 +396,7 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 \end{equation*}
 </div>
 <p>note that \(\theta(t)  =  1 + 2 \sum_{n=1}^\infty e^{-\pi n^2 t}\text{.}\)</p>
-<p id="p-24">Idea: Mellin transform and properties of \(\theta\) to derive properties of \(\zeta\text{.}\)</p>
+<p id="p-24">Idea: <a knowl="./knowl/def-mellin-transform.html" knowl-id="xref-def-mellin-transform" alt="Definition 1.66 Mellin transforms" title="Definition 1.66 Mellin transforms">Mellin transform</a> and properties of \(\theta\) to derive properties of \(\zeta\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\Gamma\left(\frac{s}{2}\right)}{\pi^{s/2}} \frac{1}{ns} = \int_0^\infty e^{-\pi n^2 t} t^{s/2} \frac{\diff t}{t}
@@ -403,7 +408,7 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 \theta(t) = \frac{1}{\sqrt{t}} \theta\left(\frac1t\right)
 \end{equation*}
 </div>
-<p id="p-25">Step 1: proof of this property is the Poisson summation formula</p>
+<p id="p-25">Step 1: proof of this property is the <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> formula</p>
 <ul class="disc">
 <li id="li-5"><div class="displaymath">
 \begin{equation*}
@@ -507,7 +512,7 @@ I(s) = I(1-s)\text{,}
 \HH = \{z\in \CC : \Im(z) \gt 0\}\text{.}
 \end{equation*}
 </div>
-<p id="p-30">Historically elliptic integrals lead to elliptic functions, and modular forms and elliptic curves.</p>
+<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> and elliptic curves.</p>
 <article class="remark-like" id="note-2"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">1.4</span>
 </h6>
@@ -625,7 +630,7 @@ f(x,y) = \int\int_{\RR^2} \hat f(u,v) \phi_{u,v} (x,y) \diff u\diff v
 \hat f(u,v) = \int\int_{\RR^2}     f(u,v) \bar \phi_{u,v} (x,y) \diff y\diff x\text{.}
 \end{equation*}
 </div></article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">A little twist</span></h5>
-<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering invariant integral operators.</p>
+<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operators.</p>
 <p id="p-47">Using the spectral theorem if we can find easier to diagonalise operators that commute we can find the eigenspaces for those to cut down the eigenspace.</p>
 <p id="p-48">Recall: an integral operator is</p>
 <div class="displaymath">
@@ -647,7 +652,7 @@ g\cdot f(x) = f(g+x)\text{.}
 </div></article><article class="remark-like" id="observation-1"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.9</span>
 </h6>
-<p id="p-49">If \(L\) is invariant then the kernel \(K(x,y)\) is given by</p>
+<p id="p-49">If \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> then the kernel \(K(x,y)\) is given by</p>
 <div class="displaymath">
 \begin{equation*}
 K(x,y) = K_0(x-y)
@@ -655,7 +660,7 @@ K(x,y) = K_0(x-y)
 </div>
 <p>for some function \(K_0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-3" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading"></h6>
 <p id="p-50">\((\Leftarrow)\) obvious</p></article><article class="case" id="case-2"><h6 class="heading"></h6>
-<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is invariant then</p>
+<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> then</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
@@ -815,7 +820,7 @@ K(z,w) = \sum_{n\in \ZZ^2} K_0(z-w + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_
 \sum_{n\in \ZZ^2} K_0(n) = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
 \end{equation*}
 </div>
-<p>i.e. Poisson summation.</p>
+<p>i.e. <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a>.</p>
 <p id="p-62">Why care about Poisson summation?</p>
 <div class="displaymath">
 \begin{equation*}
@@ -823,8 +828,8 @@ K(z,w) = \sum_{n\in \ZZ^2} K_0(z-w + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_
 \end{equation*}
 </div>
 <p>Gauss circle problem, how many lattice points are there in a circle of radius \(R\text{.}\) We can pick a radially symmetric function that is 1 on the circle and 0 outside, or a smooth approximation of such an indicator function at least. Poisson summation packages the important information into a single term, plus some rapidly decaying ones. Then we get \(\pi R^2 + \) error, Gauss conjectured that the error is \(R^{1/2 + \epsilon}\text{.}\)</p>
-<article class="aside-like" id="aside-3"><p id="p-63">Lecture 3 25/1/2018</p></article><p id="p-64">Last time we gave a conceptual proof of Poisson summation (this strategy will generalise to the trace formula eventually).</p>
-<p id="p-65">To clean up one loose end: there is a generalisation of Poisson summation called Voronoi summation, which will actually be useful later. For Poisson summation we had</p>
+<article class="aside-like" id="aside-3"><p id="p-63">Lecture 3 25/1/2018</p></article><p id="p-64">Last time we gave a conceptual proof of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> (this strategy will generalise to the trace formula eventually).</p>
+<p id="p-65">To clean up one loose end: there is a generalisation of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> called Voronoi summation, which will actually be useful later. For <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> we had</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n_1,n_2\in \ZZ} K(n_1, n_2) = \sum_{\xi_1,\xi_2\in \ZZ} \hat K(\xi_1, \xi_2)
@@ -852,7 +857,7 @@ J_0(z) = \frac1\pi \int_0^\pi \cos(z\cos(\alpha)) \diff \alpha
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.13</span>
 </h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-66">Prove this.</p></article></div>
-<p id="p-67">Plug this into Poisson summation</p>
+<p id="p-67">Plug this into <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a></p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{(n_1,n_2)\in \ZZ^2} K(n_1,n_2) = \sum_{N=0}^\infty r_2(N)K_0(N)
@@ -1006,7 +1011,7 @@ g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\e
 <p>because \(\SO(2) = \Stab_i(\SL_2(\RR))\text{.}\)</p></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type" alt="Subsubsection 1.7.1 Several decompositions">
 <span class="type">Subsubsection</span><span class="codenumber">1.7.1</span><span class="title">Several decompositions</span>
 </h4>
-<p id="p-81">Cartesian: \(x+ iy\) then the invariant measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
+<p id="p-81">Cartesian: \(x+ iy\) then the <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
 <p id="p-82">Iwasawa: \(G = NAK\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1037,7 +1042,7 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\left\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\right\}}
 \end{equation*}
 </div>
-<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally invariant functions).</p>
+<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> functions).</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.18</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-85">Prove these decompositions. Use the spectral theorem of symmetric matrices for the Cartan case.</p></article></div>
@@ -1104,7 +1109,7 @@ L(T_g f) = T_g(Lf)\text{.}
 </div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">1.23</span>
-</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an invariant differential operator.</p></article></div>
+</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> differential operator.</p></article></div>
 <p id="p-97">Polar:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1251,11 +1256,11 @@ f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w = \int_{B_z} K(w,z) 
 Lf(z) = \int_{\HH} K(z,w) f(w)\diff \underbrace{\mu(w)}_\frac{\diff u\diff v}{v^2} ,\,w = u+iv
 \end{equation*}
 </div>
-<p>\(K\) will often be smooth of compact support for us. \(L\) is invariant if it commutes with \(T_g\) for all \(g\text{.}\)</p>
+<p>\(K\) will often be smooth of compact support for us. \(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> if it commutes with \(T_g\) for all \(g\text{.}\)</p>
 <article class="remark-like" id="observation-7"><h6 class="heading">
 <span class="type">Observation</span><span class="codenumber">1.31</span>
 </h6>
-<p id="p-115">\(L\) is invariant iff</p>
+<p id="p-115">\(L\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> iff</p>
 <div class="displaymath">
 \begin{equation*}
 K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
@@ -1266,20 +1271,20 @@ K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 <article class="definition-like" id="def-point-pair-invariant"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.33</span><span class="title">Point pair invariants</span>
 </h6>
-<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair invariant</dfn>. This was first introduced by Selberg.</p></article><p id="p-118">Invariant integral operators are convolution operators.</p>
+<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a></dfn>. This was first introduced by Selberg.</p></article><p id="p-118">Invariant integral operators are convolution operators.</p>
 <article class="remark-like" id="remark-6"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.34</span>
 </h6>
-<p id="p-119">A point pair invariant \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
+<p id="p-119">A <a knowl="./knowl/def-point-pair-invariant.html" knowl-id="xref-def-point-pair-invariant" alt="Definition 1.33 Point pair invariants" title="Definition 1.33 Point pair invariants">point pair invariant</a> \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
 \end{equation*}
 </div>
-<p>so an invariant operator is just a convolution operator.</p></article><article class="aside-like" id="aside-5"><p id="p-120">Lecture 5 1/2/2018</p></article><article class="theorem-like" id="theorem-6"><h6 class="heading">
+<p>so an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> operator is just a convolution operator.</p></article><article class="aside-like" id="aside-5"><p id="p-120">Lecture 5 1/2/2018</p></article><article class="theorem-like" id="theorem-6"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.35</span>
 </h6>
-<p id="p-121">If \((\Delta + \lambda)f \equiv 0\) and \(L\) is an invariant integral operator. (\(\Rightarrow\)) Then there exists</p>
+<p id="p-121">If \((\Delta + \lambda)f \equiv 0\) and \(L\) is an <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator. (\(\Rightarrow\)) Then there exists</p>
 <div class="displaymath">
 \begin{equation*}
 \Lambda(\lambda,K)
@@ -1291,7 +1296,7 @@ K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
 L(f)(z) = \Lambda(\lambda, K) f(z)\text{.}
 \end{equation*}
 </div>
-<p id="p-122">(\(\Leftarrow\))  Moreover if \(f\) is an eigenfunction of all invariant operators then \(f\) is an eigenfunction of \(\Delta\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-3"><h6 class="heading"></h6>
+<p id="p-122">(\(\Leftarrow\))  Moreover if \(f\) is an eigenfunction of all <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> operators then \(f\) is an eigenfunction of \(\Delta\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-3"><h6 class="heading"></h6>
 <p id="p-123">(\(\Leftarrow\)) Let \(L_K\) be</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1315,7 +1320,7 @@ L_K(f)(z) = \Lambda_K f(z)
 \frac{1}{ \Lambda_K} \int_\HH f(w) \Delta_z K(w,z) \diff \mu(w)
 \end{equation*}
 </div>
-<p id="p-124">Note \(f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)\) is another invariant integral operator (exercise, show this).</p></article><article class="case" id="case-4"><h6 class="heading"></h6>
+<p id="p-124">Note \(f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)\) is another <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> integral operator (exercise, show this).</p></article><article class="case" id="case-4"><h6 class="heading"></h6>
 <p id="p-125">We will prove an integral representation that looks like the Cauchy integral formula</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1374,7 +1379,7 @@ L(\Phi_z(f))(z) = \int_\HH \Phi_z(f) (w) K(w,z) \diff \mu(w)
 </div>
 </li>
 </ol>
-<p id="p-127">Now returning to the proof. Let \((\Delta + \lambda)f  \equiv 0\text{,}\) \(L\) invariant.</p>
+<p id="p-127">Now returning to the proof. Let \((\Delta + \lambda)f  \equiv 0\text{,}\) \(L\) <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a>.</p>
 <div class="displaymath">
 \begin{equation*}
 Lf(z) = L(\Phi_zf)(z)
@@ -1416,9 +1421,9 @@ Lf(z) = L(\Phi_zf)(z)
 = \int_\HH W( w,z_1) K(z_1, w) \diff \mu(w)\text{.}
 \end{equation*}
 </div></article></article></div>
-<p id="p-129">Upshot so far: Poisson summation is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
+<p id="p-129">Upshot so far: <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
 <article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Digression: Ramanujan conjecture</span></h5>
-<p id="p-130">A weight \(k\) cusp form, eigenfunction of the Hecke operators implies</p>
+<p id="p-130">A weight \(k\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a>, eigenfunction of the Hecke operators implies</p>
 <div class="displaymath">
 \begin{equation*}
 |\lambda_p| \le 2 p^{\frac{k-1}{2}}\text{,}
@@ -1530,13 +1535,13 @@ f \equiv 0 \text{ on }\partial D\text{.}
 <article class="remark-like" id="remark-7"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.38</span>
 </h6>
-<p id="p-142">In <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a> we restricted to the \(1/2\) line, this is a reincarnation of \(\lambda \ge \frac 14\text{.}\) Only certain functions contributed, similar to the way only the unitaries \(e^{2\pi ix\xi}\) contribute to a fourier expansion, not all characters of \(\RR\text{.}\)</p></article><p id="p-143">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for cusp forms. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type" alt="Subsection 1.10 Automorphic forms">
+<p id="p-142">In <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a> we restricted to the \(1/2\) line, this is a reincarnation of \(\lambda \ge \frac 14\text{.}\) Only certain functions contributed, similar to the way only the unitaries \(e^{2\pi ix\xi}\) contribute to a fourier expansion, not all characters of \(\RR\text{.}\)</p></article><p id="p-143">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type" alt="Subsection 1.10 Automorphic forms">
 <span class="type">Subsection</span><span class="codenumber">1.10</span><span class="title">Automorphic forms</span>
 </h3>
 <section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type" alt="Subsubsection 1.10.1 Modular forms">
 <span class="type">Subsubsection</span><span class="codenumber">1.10.1</span><span class="title">Modular forms</span>
 </h4>
-<p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight modular form as we involved square roots</p>
+<p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> as we involved square roots</p>
 <div class="displaymath">
 \begin{equation*}
 \theta (t) \leftrightarrow \theta\left(\frac 1t\right)\text{.}
@@ -1612,7 +1617,7 @@ G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\
 \Delta(z) = (60G_2(z))^3 - 27(140G_3(z))^2
 \end{equation*}
 </div>
-<p>is a cusp form of weight 12.</p>
+<p>is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight 12.</p>
 <div class="displaymath" id="p-153">
 \begin{equation*}
 \Delta(z) = \sum_{n=1}^\infty a_n e(nz),\,a_n = n^{11/2} \tau(n) \implies \tau(n) = O(n^\varepsilon) \forall \varepsilon
@@ -1637,11 +1642,11 @@ j(x) = \frac{1728(60G_2(z))^2}{\Delta(z)}
 <p>not holomorphic at \(\infty\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.48</span>
 </h6>
-<p id="p-156">We had also seen \(\theta\)-function but it <em class="emphasis">does not</em> fit in to this setting. It is rather a modular form for a covering group.</p></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
+<p id="p-156">We had also seen \(\theta\)-function but it <em class="emphasis">does not</em> fit in to this setting. It is rather a <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular form</a> for a covering group.</p></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
 <article class="theorem-like" id="theorem-7"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.49</span><span class="title">Hecke</span>
 </h6>
-<p id="p-157">If \(f(z)\) is a cusp form of weight \(k\)</p>
+<p id="p-157">If \(f(z)\) is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\)</p>
 <div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n=1}^\infty a_n e(nz)
@@ -1716,10 +1721,10 @@ f(gz) = f(z) \ \forall g\in\SL_2(Z)
 \int_0^1 f(x+iy)\diff x = 0
 \end{equation*}
 </div>
-<p>we call it a <dfn class="terminology">maass cusp form</dfn>.</p></article><article class="example-like" id="example-7"><h6 class="heading">
+<p>we call it a <dfn class="terminology">maass <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a></dfn>.</p></article><article class="example-like" id="example-7"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.51</span>
 </h6>
-<p id="p-162">Constant functions are Maass forms, this is because they are \(L^2\) because \(\HH/\SL_2(\ZZ)\) has finite volume.</p></article><article class="example-like" id="example-8"><h6 class="heading">
+<p id="p-162">Constant functions are <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a>, this is because they are \(L^2\) because \(\HH/\SL_2(\ZZ)\) has finite volume.</p></article><article class="example-like" id="example-8"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.52</span><span class="title">Non-holomorphic Eisenstein series.</span>
 </h6>
 <div class="displaymath" id="p-163">
@@ -1755,7 +1760,7 @@ E(z; s) = O(y^{\max\{\Res(s+\frac 12),\Re(-s + \frac 12)\}})
 \end{equation*}
 </div></li>
 </ul>
-<p>hence \(E(z; s)\) is a Maass form. We have</p>
+<p>hence \(E(z; s)\) is a <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass form</a>. We have</p>
 <div class="displaymath">
 \begin{equation*}
 \Im(\gamma z) = \frac{\Im(z)}{|cz+d|^2}
@@ -1846,7 +1851,7 @@ c\ne 0 : \sum_{(c,d),\,c\ne0} \int_0^1 \frac{y^{s+\frac12}}{|cz+d|^{2y+1}}  e(-n
 =2 \sum_{c=1}^\infty \sum_{d = -\infty}^ \infty y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{\underbrace{|cz+d|^{2s+1}}_{=cx+d +icy}} \diff x
 \end{equation*}
 </div>
-<p>the right hand side is invariant under \(x\mapsto x+1\) we can absorb the shift into the sum over \(d\text{,}\) in a general context this is known as unfolding.</p>
+<p>the right hand side is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> under \(x\mapsto x+1\) we can absorb the shift into the sum over \(d\text{,}\) in a general context this is known as unfolding.</p>
 <div class="displaymath">
 \begin{equation*}
 =2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{d \equiv \alpha \pmod c} y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cz+d|^{2s+1}} \diff x
@@ -1928,7 +1933,7 @@ E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + 
 <p id="p-173">This has poles at \(s = \frac12\text{,}\) \(\Res_{s=\frac12} E(z; s) = \frac12\text{.}\) Note that this residue is constant. We will use this in Rankin-Selberg.</p></article><article class="aside-like" id="aside-8"><p id="p-174">Lecture 8 15/2/2018</p></article><article class="remark-like" id="remark-11"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.56</span>
 </h6>
-<p id="p-175">If \(G\) is a reductive group and \(M \subseteq G\) a Levi subgroup, e.g. for \(\GL_n\) a Levi is diagonal blocks of size \(n_1 + n_2 + \cdots +n_k = n\text{.}\) One can associate  a cusp form to these subgroups following Eisenstein. There are automorphic \(L\)-functions corresponding to these and by doing the same procedure as last time we see these \(L\)-functions appearing in the constant terms of the Eisenstein series. So we can establish analytic properties of these automorphic \(L\)-functions via those of the Eisenstein series. This is known as the Langlands-Shahidi  method, it only works in some cases but when it does it is very powerful. Shahidi pushed the idea by looking at non-constant terms. In the example above we have</p>
+<p id="p-175">If \(G\) is a reductive group and \(M \subseteq G\) a Levi subgroup, e.g. for \(\GL_n\) a Levi is diagonal blocks of size \(n_1 + n_2 + \cdots +n_k = n\text{.}\) One can associate  a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> to these subgroups following Eisenstein. There are automorphic \(L\)-functions corresponding to these and by doing the same procedure as last time we see these \(L\)-functions appearing in the constant terms of the Eisenstein series. So we can establish analytic properties of these automorphic \(L\)-functions via those of the Eisenstein series. This is known as the Langlands-Shahidi  method, it only works in some cases but when it does it is very powerful. Shahidi pushed the idea by looking at non-constant terms. In the example above we have</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma_{-2s}(n) = \sum_{d|n} d^{-2s} \prod(1+ 1/p^{2s} = \prod_{p|n} \zeta_p^{-1}(2s)
@@ -1937,7 +1942,7 @@ E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + 
 <p>so there are \(L\)-functions even in the non-constant terms.</p></article></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type" alt="Subsubsection 1.10.4 Hecke Operators">
 <span class="type">Subsubsection</span><span class="codenumber">1.10.4</span><span class="title">Hecke Operators</span>
 </h4>
-<p id="p-176">The natural setting to view these is over \(\GL_2(\QQ_p)\text{.}\) But as we haven't done this yet we will take the path that Hecke took and just write a formula. They act on the space of modular forms.</p>
+<p id="p-176">The natural setting to view these is over \(\GL_2(\QQ_p)\text{.}\) But as we haven't done this yet we will take the path that Hecke took and just write a formula. They act on the space of <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a>.</p>
 <article class="definition-like" id="definition-9"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.57</span><span class="title">Slash operators</span>
 </h6>
@@ -1991,15 +1996,15 @@ T_n(f)(z) = \sum_{ad = n,\,b\pmod {d} } n^{k/2} d^{-k} f\left(\frac{az+ b}{d}\ri
 <p id="p-181">Hecke operators commpute with each other (follows from \(KAK\) decomposition).</p></article><article class="theorem-like" id="fact-3"><h6 class="heading">
 <span class="type">Fact</span><span class="codenumber">1.61</span>
 </h6>
-<p id="p-182">Hecke operators are self-adjoint with respect to the Petersson inner product on \(M_k(1)\text{,}\) the modular forms of weight \(k\) and level \(1\text{.}\)</p>
+<p id="p-182">Hecke operators are self-adjoint with respect to the Petersson inner product on \(M_k(1)\text{,}\) the <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> of weight \(k\) and level \(1\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\pair fg_\text{Pet} \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline{g(z)} y^{k} \diff \mu(z)\text{.}
+\pair fg_\Pet \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline{g(z)} y^{k} \diff \mu(z)\text{.}
 \end{equation*}
 </div></article><article class="theorem-like" id="lemma-1"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">1.62</span>
 </h6>
-<p id="p-183">Let \(f(z)\ne 0\) be  a cusp form of weight \(k\) which is an eigenfunction for all of the Hecke operators with eigenvalue \(n^{1-k/2} \lambda(n)\) i.e.</p>
+<p id="p-183">Let \(f(z)\ne 0\) be  a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\) which is an eigenfunction for all of the Hecke operators with eigenvalue \(n^{1-k/2} \lambda(n)\) i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 T_n(f)(z) n^{1-k/2} \lambda(n) f(z) \forall n
@@ -2134,7 +2139,7 @@ a_n(y) = \int_0^1  \phi(z) \overline {e(nx)} \diff x\text{.}
 <article class="theorem-like" id="theorem-9"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.65</span>
 </h6>
-<p id="p-191">Let \(\phi(x+iy) = O(y{-N})\) for all \(N\gt 0\) and \(\phi(z)\) is invariant under \(z\mapsto \gamma z\) for \(\gamma\in \SL_2(\ZZ)\text{.}\) Then</p>
+<p id="p-191">Let \(\phi(x+iy) = O(y{-N})\) for all \(N\gt 0\) and \(\phi(z)\) is <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">invariant</a> under \(z\mapsto \gamma z\) for \(\gamma\in \SL_2(\ZZ)\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) E(z; s) \diff z
@@ -2245,7 +2250,7 @@ E(z; s) = O(y^2 + y^{1-s})\text{.}
 \Res_{s=1} \Lambda(s) = \int_{\SL_2(\ZZ) \backslash \HH} \phi(s) \diff \mu(z)
 \end{equation*}
 </div></li>
-</ul></article><p id="p-202">Note that if we use a cusp form for \(\phi\) we get 0 from the integral above, in \(L^2\) the cusp forms and Eisenstein series are orthogonal. Instead we will cook up something interesting from two functions.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type" alt="Subsubsection 1.11.2 Rankin-Selberg \(L\)-functions">
+</ul></article><p id="p-202">Note that if we use a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> for \(\phi\) we get 0 from the integral above, in \(L^2\) the <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a> and Eisenstein series are orthogonal. Instead we will cook up something interesting from two functions.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type" alt="Subsubsection 1.11.2 Rankin-Selberg \(L\)-functions">
 <span class="type">Subsubsection</span><span class="codenumber">1.11.2</span><span class="title">Rankin-Selberg \(L\)-functions</span>
 </h4>
 <p id="p-203">Let</p>
@@ -2259,7 +2264,7 @@ f(z) = \sum_{n=0}^\infty a_ne(nz)
 g(z) = \sum_{n=0}^\infty b_ne(nz)
 \end{equation*}
 </div>
-<p>be holomorphic modular forms of weight \(k\text{.}\)</p>
+<p>be holomorphic <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> of weight \(k\text{.}\)</p>
 <p id="p-204">Assume that at least one of \(f\) or \(g\) is cuspidal. Assume additionally that \(f,g\) are normalised Hecke eigenforms so \(a(1) = b(1) = 1\text{.}\)</p>
 <article class="definition-like" id="definition-12"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.69</span>
@@ -2320,7 +2325,7 @@ f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \
 \end{equation*}
 </div>
 <p>this is the Rankin-Selberg \(L\)-function. So by the <a knowl="./knowl/cor-l-function-functional-eq-eisenstein.html" knowl-id="xref-cor-l-function-functional-eq-eisenstein" alt="Corollary 1.68 " title="Corollary 1.68 ">corollary 1.68</a>; \(L(s+k; f\times g)\) has analytic continuation and functional equation, and poles only at \(s= 1+k, s=k\text{.}\)</p></article><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">An application</span></h5>
-<p id="p-209">We proved \(f\) cusp form \(f(z) = \sum  a_ne(nz)\) implies \(a_n = O(n^{k/2})\text{,}\) Ramanujan \(a_n = O(n^{k-1/2})\text{.}\) As cusp forms often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series. The averaged version of the Ramanujan conjecture is much easier</p>
+<p id="p-209">We proved \(f\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> \(f(z) = \sum  a_ne(nz)\) implies \(a_n = O(n^{k/2})\text{,}\) Ramanujan \(a_n = O(n^{k-1/2})\text{.}\) As <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a> often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series. The averaged version of the Ramanujan conjecture is much easier</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n\lt X} a_n\text{.}
@@ -2345,7 +2350,7 @@ E(z; s) = \pi^{-s} \Gamma(s) \zeta(2s) \frac 12 \sum_{\gamma \in     \Gamma_\inf
 <p><a knowl="./knowl/eqn-conclusion-rankin-selberg.html" knowl-id="xref-eqn-conclusion-rankin-selberg" alt="Equation 1.5 " title="Equation 1.5 ">(1.5)</a> has analytic continuation as a function of \(s\) to all \(s\in \CC\text{.}\) It has at most simple poles with residue at \(s =1\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\frac 12 \pair{f}{g}_{\text{Pet}}\text{.}
+\frac 12 \pair{f}{g}_{\Pet}\text{.}
 \end{equation*}
 </div>
 <p id="p-212">If we let</p>
@@ -2369,10 +2374,10 @@ L(s,f\times \overline g) = \zeta(2(s-k+1)) \sum_{n=1} ^\infty \frac{a_n \overlin
 <p id="p-213">\(\Lambda(s,f\times \overline g)\) has analytic continuation to \(s\in \CC\) with poles at most at \(s=k,\,s=k-1\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\Res_{s=k} \Lambda(s,f\times g) =  \frac{1}{2\pi^{k-1}} \pair fg_{\text{Pet}}\text{.}
+\Res_{s=k} \Lambda(s,f\times g) =  \frac{1}{2\pi^{k-1}} \pair fg_{\Pet}\text{.}
 \end{equation*}
 </div>
-<p id="p-214">This is analogous to when we took the Mellin transform of the theta function. We have obtained some highly nontrivial information above:</p>
+<p id="p-214">This is analogous to when we took the <a knowl="./knowl/def-mellin-transform.html" knowl-id="xref-def-mellin-transform" alt="Definition 1.66 Mellin transforms" title="Definition 1.66 Mellin transforms">Mellin transform</a> of the theta function. We have obtained some highly nontrivial information above:</p>
 <article class="remark-like" id="remark-14"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.73</span>
 </h6>
@@ -2439,7 +2444,7 @@ L(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}
 \phi(z) = \sum_{n=1}^\infty a_n e(nz)
 \end{equation*}
 </div>
-<p>be a cusp form of weight \(k\text{.}\)</p>
+<p>be a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\text{.}\)</p>
 <p id="p-222">Consider</p>
 <div class="displaymath">
 \begin{equation*}
@@ -2757,7 +2762,7 @@ E_1(z; s) = \frac12 \sum_{\gamma\in \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\ga
 </div>
 <div class="displaymath">
 \begin{equation*}
-+ \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\text{Pet}}}
++ \underbrace{\frac{1}{2\pi i} \int_{(-\frac 12)} \tilde f(s) \int_{\SL_2(\ZZ)\backslash \HH} E(z; -s) \diff \mu(z) \diff s}_{=\pair{E(z; s)}{1}_{\Pet}}
 \end{equation*}
 </div>
 <p>(shifting contours to \(\sigma = \frac{-1}{2} + it\)). The rightmost term is 0 as we have a decomposition</p>

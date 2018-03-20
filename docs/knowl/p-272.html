@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>For the proof set \(g_k(z,z') = (z+z')^{-k}\text{.}\) This implies that</p>
+<div class="displaymath">
+\begin{equation*}
+h_m(z,z') = \sum_{\gamma\in \Mat_z(\ZZ),\det(\gamma) =m}  j_k(\gamma; z) g_k(\gamma z ,z')
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{\gamma\in \Mat_z(\ZZ),\det(\gamma) =m}  j_k(\begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}^\transpose \gamma\begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}; z) g_k(z, \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}^\transpose \gamma\begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}z')
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{\gamma_1 \in \Mat_2(\ZZ), \det(\gamma_1) =m} j_k (\gamma z;  z') g_k(z;  \gamma_1 z')
+\end{equation*}
+</div>
+<p>which implies that the integral is well defined.</p>
+<ol class="decimal">
+<li>Reduce part 1. to the case of \(T_1\text{.}\)<div class="displaymath">
+\begin{equation*}
+T_m(h_1(z, z')) = \sum_{\gamma \in \Gamma} T_m(j_k(\gamma; z) g_k(z; z'))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\gamma\in \Gamma} m^{k-1} \sum_{j = 1}^r j_k(\gamma; \gamma_jz) g_k(\gamma\gamma_jz,z') j_k(\gamma_j, z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{\gamma\in \Gamma} m^{k-1} \sum_{j = 1}^r j_k(\gamma\gamma_j; z) g_k(\gamma\gamma_jz,z')
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+m^{k-1} \sum_{\gamma_1 \in \Mat_2(\ZZ), \det(\gamma_1) =m} j_k(\gamma; z) g_k(\gamma z,z') = m^{k-1} h_m(z,z')\text{.}
+\end{equation*}
+</div>For \(h_1\) our calculation last time established<div class="displaymath">
+\begin{equation*}
+c_k\inv \int_{\Gamma\backslash \HH} f(z) \overline{h_1 (z, - \bar z')} y^k \diff \mu(z)  = f(z')\text{.}
+\end{equation*}
+</div>
+</li>
+<li>Fix \(z'\text{.}\) Implies<div class="displaymath">
+\begin{equation}
+c_k\inv m^{k-1} h_m(z,z')  = \sum_{j=1}^{\dim(S_k)} \frac {\alpha_j (z')}{\pair{f_j}{f_j}_{\Pet}}\tag{2.2}
+\end{equation}
+</div>by the first part<div class="displaymath">
+\begin{equation}
+c_k\inv m^{k-1} \pair{f_k}{h(\cdot, z')}_\Pet =  T_m(f_k)(z') = a_k(m) f_k(z')\tag{2.3}
+\end{equation}
+</div>as \(f_k\) is an eigenform. On the other hand by <a knowl="./knowl/eqn-pet-proof-1.html" knowl-id="xref-eqn-pet-proof-1" alt="Equation 2.2 " title="Equation 2.2 ">(2.2)</a><div class="displaymath">
+\begin{equation*}
+c_k\inv m^{k-1} \pair{f_k}{h_m(\cdot, -\bar z ')} = c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \pair{f_k}{\frac{\alpha_j(-\bar z ') f_j}{\pair{f_j}{f_j}_{\Pet}}}_{\Pet}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \frac{\overline{\alpha_j(-\bar z ') f_j}}{\pair{f_j}{f_j}_\Pet} \pair{f_k}{f_j}_\Pet
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \overline{\alpha_j(-\bar z ')} \frac{\pair{f_k}{f_k}_{\Pet}}{\pair{f_k}{f_k}_{\Pet}}
+\end{equation*}
+</div>combined with <a knowl="./knowl/eqn-pet-proof-2.html" knowl-id="xref-eqn-pet-proof-2" alt="Equation 2.3 " title="Equation 2.3 ">(2.3)</a> this implies<div class="displaymath">
+\begin{equation*}
+a_k(m) \overline{f_k(z')} =  c_k\inv m^{k-1}\alpha_k(-\bar z')
+\end{equation*}
+</div>Note:<div class="displaymath">
+\begin{equation*}
+\overline{f_k(z')}=\overline{\sum_{n=1}^\infty a_k(n) e(nz)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{n=1}^\infty a_k(n) \overline{e(nz)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{n=1}^\infty a_k(n) e(-n \overline{z}')
+\end{equation*}
+</div>implies<div class="displaymath">
+\begin{equation*}
+a_k(m) f_k(z')   =  c_k\inv m^{k-1} \alpha_k (z')
+\end{equation*}
+</div>so<div class="displaymath">
+\begin{equation*}
+c_k\inv m^{k-1} h_m(z,z') = \sum_{j=1}^{\dim S_k} \frac{a_j(m)}{\pair{f_j}{f_j}_\Pet} f_j(z)f_j(z')\text{.}
+\end{equation*}
+</div>
+</li>
+</ol>
+<span class="incontext"><a href="section-2.html#p-272">in-context</a></span>
+</body>
+</html>
