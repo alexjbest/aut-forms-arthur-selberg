@@ -1951,7 +1951,7 @@ section#sec-eichler-selberg
                         | #[m I(s)] is absolutely convergent for #[m \Re(s) \gt 1].
                     li
                         me I(s) = \sum_{\Delta \ne 0} \zeta(s,\Delta) \{\text{archimidean}\}+ \zeta(s,0) \{\text{archimidean}\} +   \frac { (-1)^{k/2}\Gamma(s+ k -1)\zeta(s)\zeta(2s)}{(2\pi)^{s-1}\Gamma(k)}
-                        | #[m \zeta(s, \Delta)] is a cousin of #[m \zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)}^s] for #[m K = \QQ(\sqrt{-\Delta})].
+                        | #[m \zeta(s, \Delta)] is a cousin of #[m \zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)^s}] for #[m K = \QQ(\sqrt{-\Delta})].
 
         aside: p Lecture 14 22/3/2018
 
@@ -1961,12 +1961,12 @@ section#sec-eichler-selberg
             p
                 | First step:
             p
-                | Recall that there existss a one to one correspondence between (for fixed #[m m,t])
+                | Recall that there exists a one to one correspondence between (for fixed #[m m,t])
                 me \{A \in \Mat_{2\times 2 }(\ZZ) : \trace(A) =  t,\,\det(A)   =m\}
                 me \updownarrow
-                me  \{\phi(u,v) = au^2 + buv + cv^22 : \Delta_\phi = | \phi| = b^2- 4ac= t^2 - 4m\}
-                me \begin{pmatrix}   a\amp b \\ c\amp d \end{pmatrix} \mapsto \phi(u,v) = cu^2 +  (d-a) uv - b^2
-                me  \phi(u,v) = au^2 + bbuv + cv^2 \mapsto \begin{pmatrix}   \frac12 (t-b)\amp a \\ -c\amp \frac12 (t+b)\end{pmatrix}
+                me  \{\phi(u,v) = au^2 + buv + cv^2 : \Delta_\phi = | \phi| = b^2- 4ac= t^2 - 4m\}
+                me \begin{pmatrix}   a\amp b \\ c\amp d \end{pmatrix} \mapsto \phi(u,v) = cu^2 +  (d-a) uv - b^2v^2
+                me  \phi(u,v) = au^2 + buv + cv^2 \mapsto \begin{pmatrix}   \frac12 (t-b)\amp -c \\ a\amp \frac12 (t+b)\end{pmatrix}
                 |.
                 | Using this
                 me y^k h_m(z,-\bar z) = \sum_{a,b,c,d\in \ZZ,\,ad-bc = m} \frac{y^k}{(c|z|^2 + d\bar z - az -  b)^k}
@@ -1984,8 +1984,12 @@ section#sec-eichler-selberg
 
             remark
                 p
-                    | It will turn out that the #[m t=]-sum is finite.
+                    | It will turn out that the #[m t]-sum is finite.
 
+            p
+                | Recall that #[m \SL_2(\ZZ)] acts on binary quadratic forms #[m \Phi] by
+                me \gamma \phi(u,v) = \phi(au + cv, bu + dv)= \phi(\gamma^\transpose \begin{pmatrix}u\\v\end{pmatrix})
+                | .
 
             theorem
                 title Geometric side of the Eichler-Selberg trace  formula
@@ -1993,5 +1997,51 @@ section#sec-eichler-selberg
                     p
                         | For #[m t,m] fixed
                         me \int_{\Gamma\backslash\HH} \left( \sum_{|\phi| = t^2 - 4m} R_\phi (z,t)\right) E(z,s) \diff \mu(z) = \zeta(s, \Delta) \left\{I(\Delta, t, s)  + I(\Delta, -t, s)\right\}
+                        me + \begin{cases}(-1)^{k/2} \frac{\Gamma(s+ k - 1) \zeta(s) \zeta(2s)}{(2\pi)^{s -1} \Gamma(k)}\amp \Delta = 0 \\ 0 \amp \Delta \ne 0\end{cases}
                         | for #[m \Delta = t^2 - 4m].
+                    p
+                        | Where
+                        me \zeta(s,\Delta)  = \sum_{\phi \pmod \Gamma,\, |\phi| = \Delta} \sum_{(m,n) \in \ZZ^2 \smallsetminus\{(0,0\}/\Aut(\phi),\,\phi(m,n) \gt0} \frac{1}{\phi(m,n)^s}
+                        me \Aut(\phi) = \{ \gamma\in \SL_2(\ZZ) : \gamma\phi = \phi\}
+                        me I(\Delta, t, s) = \int_0^\infty  \int_{-\infty}^\infty \frac{y^{k+s - 2}}{(x^2 + y^2  +ity -\frac14 \Delta)^k} \diff x \diff y
+                        me = \frac{\Gamma(k- \frac 12)\Gamma(\frac 12)}{\Gamma(k)} \int_0^\infty \frac{y^{k+s -2}}{(y^2 + ity - \frac14 \Delta)^{k-\frac 12}} \diff y
+                        | .
 
+            remark
+                p
+                    | If #[m \Delta = \disc(K/\QQ)] then 
+                    me \zeta(s, \Delta) = \zeta_K(s)
+                    | .
+                p
+                    | Then we have
+                    me \sum_t\Res_{s= 1} \zeta_K(s)
+                    | where #[m K = \QQ(\sqrt{t^2 - 4m})].
+
+            proposition
+                statement: p
+                    | Let #[m \zeta(s, \Delta)] be as above and #[m \Re(s) \gt 1].
+                    | Then
+                    ol
+                        li
+                            me \zeta(s, \Delta) = \zeta(2s)\sum_{a = 1}^\infty \frac{n(a)}{a^s}
+                            | where
+                            me a(n)  = \#\{b \pmod {2a} : b^2   \equiv \Delta \pmod{4a}\}
+                            | .
+                        li
+                            | #[m \zeta(s, \Delta)] has meromorphic continuation and functional equation.
+                            me \gamma(s, \Delta)\zeta(s, \Delta) = \gamma(1-s, \Delta) \zeta(1-s, \Delta)
+                            | where
+                            me \gamma(s, \Delta) = \begin {cases} (2\pi)^{-s} |\Delta|^{s/2} \Gamma(s)  \amp \Delta\lt 0 \\ \pi^{-s} \Delta^{s/2} \Gamma(s/2)  \amp \Delta \gt 0\end{cases}
+                            | .
+                        li
+                            me \zeta(s, \Delta) = \begin{cases} 0 \amp \Delta\equiv 2,3\pmod4     \\ \zeta(s)\zeta(2s-1)    \amp \Delta = 0\\ \zeta(s) L_D(s) \sum_{d|f } \mu(d)\frac Dd d^{-s} \sigma_{1-2s}(\frac fd)\end{cases}
+                            | for #[m D] the fundamental discriminant, so that #[m \Delta = D f^2] and #[m \sigma_\nu (n) = \sum_{d|n} d^\nu], #[m \mu] is the Möbius function, and #[m L_D(s) = L(s, \legendre{D}{\cdot})].
+                        li
+                            me \Res_{s=1} \zeta(s, \Delta) = \frac{\pi}{\sqrt{|\Delta|}} H(|\Delta|)
+                            | .
+                proof
+                    p
+                        ol
+                            li
+                                me n(a) = \#\{\phi \in \Phi ,\,(m,n) \in \ZZ^2 :  \phi(m,n) = 0, |\phi| = \Delta,\, \gcd(m,n) = 1\}
+                                | comes from the theory of quadratic forms.

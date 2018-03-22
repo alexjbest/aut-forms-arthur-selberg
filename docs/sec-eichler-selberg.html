@@ -668,10 +668,10 @@ I(s) = \int_{\Gamma\backslash \HH} h_m(z,-\bar z')  E(z; s) y^k \diff \mu(z)
 \begin{equation*}
 I(s) = \sum_{\Delta \ne 0} \zeta(s,\Delta) \{\text{archimidean}\}+ \zeta(s,0) \{\text{archimidean}\} +   \frac { (-1)^{k/2}\Gamma(s+ k -1)\zeta(s)\zeta(2s)}{(2\pi)^{s-1}\Gamma(k)}
 \end{equation*}
-</div>\(\zeta(s, \Delta)\) is a cousin of \(\zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)}^s\) for \(K = \QQ(\sqrt{-\Delta})\text{.}\)</li>
+</div>\(\zeta(s, \Delta)\) is a cousin of \(\zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)^s}\) for \(K = \QQ(\sqrt{-\Delta})\text{.}\)</li>
 </ol></article><article class="aside-like" id="aside-14"><p id="p-278">Lecture 14 22/3/2018</p></article><article class="paragraphs" id="paragraphs-19"><h5 class="heading"><span class="title">Calculation of  \(I(s)\)</span></h5>
 <p id="p-279">First step:</p>
-<p id="p-280">Recall that there existss a one to one correspondence between (for fixed \(m,t\))</p>
+<p id="p-280">Recall that there exists a one to one correspondence between (for fixed \(m,t\))</p>
 <div class="displaymath">
 \begin{equation*}
 \{A \in \Mat_{2\times 2 }(\ZZ) : \trace(A) =  t,\,\det(A)   =m\}
@@ -684,17 +684,17 @@ I(s) = \sum_{\Delta \ne 0} \zeta(s,\Delta) \{\text{archimidean}\}+ \zeta(s,0) \{
 </div>
 <div class="displaymath">
 \begin{equation*}
-\{\phi(u,v) = au^2 + buv + cv^22 : \Delta_\phi = | \phi| = b^2- 4ac= t^2 - 4m\}
+\{\phi(u,v) = au^2 + buv + cv^2 : \Delta_\phi = | \phi| = b^2- 4ac= t^2 - 4m\}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\begin{pmatrix}   a\amp b \\ c\amp d \end{pmatrix} \mapsto \phi(u,v) = cu^2 +  (d-a) uv - b^2
+\begin{pmatrix}   a\amp b \\ c\amp d \end{pmatrix} \mapsto \phi(u,v) = cu^2 +  (d-a) uv - b^2v^2
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\phi(u,v) = au^2 + bbuv + cv^2 \mapsto \begin{pmatrix}   \frac12 (t-b)\amp a \\ -c\amp \frac12 (t+b)\end{pmatrix}\text{.}
+\phi(u,v) = au^2 + buv + cv^2 \mapsto \begin{pmatrix}   \frac12 (t-b)\amp -c \\ a\amp \frac12 (t+b)\end{pmatrix}\text{.}
 \end{equation*}
 </div>
 <p>Using this</p>
@@ -731,10 +731,105 @@ R_\phi(z,t) = \frac{y^k}{(a|z|^2 + bx + c - ity)^k}\text{.}
 </div></article><article class="remark-like" id="remark-19"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">2.10</span>
 </h6>
-<p id="p-282">It will turn out that the \(t=\)-sum is finite.</p></article><article class="theorem-like" id="theorem-14"><h6 class="heading">
+<p id="p-282">It will turn out that the \(t\)-sum is finite.</p></article><p id="p-283">Recall that \(\SL_2(\ZZ)\) acts on binary quadratic forms \(\Phi\) by</p>
+<div class="displaymath">
+\begin{equation*}
+\gamma \phi(u,v) = \phi(au + cv, bu + dv)= \phi(\gamma^\transpose \begin{pmatrix}u\\v\end{pmatrix})\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-14"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">2.11</span><span class="title">Geometric side of the Eichler-Selberg trace  formula</span>
 </h6>
-<p id="p-283"></p></article></article></section></section></div></main>
+<p id="p-284">For \(t,m\) fixed</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma\backslash\HH} \left( \sum_{|\phi| = t^2 - 4m} R_\phi (z,t)\right) E(z,s) \diff \mu(z) = \zeta(s, \Delta) \left\{I(\Delta, t, s)  + I(\Delta, -t, s)\right\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
++ \begin{cases}(-1)^{k/2} \frac{\Gamma(s+ k - 1) \zeta(s) \zeta(2s)}{(2\pi)^{s -1} \Gamma(k)}\amp \Delta = 0 \\ 0 \amp \Delta \ne 0\end{cases}
+\end{equation*}
+</div>
+<p>for \(\Delta = t^2 - 4m\text{.}\)</p>
+<p id="p-285">Where</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(s,\Delta)  = \sum_{\phi \pmod \Gamma,\, |\phi| = \Delta} \sum_{(m,n) \in \ZZ^2 \smallsetminus\{(0,0\}/\Aut(\phi),\,\phi(m,n) \gt0} \frac{1}{\phi(m,n)^s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Aut(\phi) = \{ \gamma\in \SL_2(\ZZ) : \gamma\phi = \phi\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+I(\Delta, t, s) = \int_0^\infty  \int_{-\infty}^\infty \frac{y^{k+s - 2}}{(x^2 + y^2  +ity -\frac14 \Delta)^k} \diff x \diff y
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac{\Gamma(k- \frac 12)\Gamma(\frac 12)}{\Gamma(k)} \int_0^\infty \frac{y^{k+s -2}}{(y^2 + ity - \frac14 \Delta)^{k-\frac 12}} \diff y\text{.}
+\end{equation*}
+</div></article><article class="remark-like" id="remark-20"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">2.12</span>
+</h6>
+<p id="p-286">If \(\Delta = \disc(K/\QQ)\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(s, \Delta) = \zeta_K(s)\text{.}
+\end{equation*}
+</div>
+<p id="p-287">Then we have</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_t\Res_{s= 1} \zeta_K(s)
+\end{equation*}
+</div>
+<p>where \(K = \QQ(\sqrt{t^2 - 4m})\text{.}\)</p></article><article class="theorem-like" id="proposition-5"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">2.13</span>
+</h6>
+<p id="p-288">Let \(\zeta(s, \Delta)\) be as above and \(\Re(s) \gt 1\text{.}\) Then</p>
+<ol class="decimal">
+<li id="li-52">
+<div class="displaymath">
+\begin{equation*}
+\zeta(s, \Delta) = \zeta(2s)\sum_{a = 1}^\infty \frac{n(a)}{a^s}
+\end{equation*}
+</div>where<div class="displaymath">
+\begin{equation*}
+a(n)  = \#\{b \pmod {2a} : b^2   \equiv \Delta \pmod{4a}\}\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-53">\(\zeta(s, \Delta)\) has meromorphic continuation and functional equation.<div class="displaymath">
+\begin{equation*}
+\gamma(s, \Delta)\zeta(s, \Delta) = \gamma(1-s, \Delta) \zeta(1-s, \Delta)
+\end{equation*}
+</div>where<div class="displaymath">
+\begin{equation*}
+\gamma(s, \Delta) = \begin {cases} (2\pi)^{-s} |\Delta|^{s/2} \Gamma(s)  \amp \Delta\lt 0 \\ \pi^{-s} \Delta^{s/2} \Gamma(s/2)  \amp \Delta \gt 0\end{cases}\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-54">
+<div class="displaymath">
+\begin{equation*}
+\zeta(s, \Delta) = \begin{cases} 0 \amp \Delta\equiv 2,3\pmod4     \\ \zeta(s)\zeta(2s-1)    \amp \Delta = 0\\ \zeta(s) L_D(s) \sum_{d|f } \mu(d)\frac Dd d^{-s} \sigma_{1-2s}(\frac fd)\end{cases}
+\end{equation*}
+</div>for \(D\) the fundamental discriminant, so that \(\Delta = D f^2\) and \(\sigma_\nu (n) = \sum_{d|n} d^\nu\text{,}\) \(\mu\) is the Möbius function, and \(L_D(s) = L(s, \legendre{D}{\cdot})\text{.}\)</li>
+<li id="li-55"><div class="displaymath">
+\begin{equation*}
+\Res_{s=1} \zeta(s, \Delta) = \frac{\pi}{\sqrt{|\Delta|}} H(|\Delta|)\text{.}
+\end{equation*}
+</div></li>
+</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-24" id="proof-24"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-24" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-289" class="decimal"><li id="li-56">
+<div class="displaymath">
+\begin{equation*}
+n(a) = \#\{\phi \in \Phi ,\,(m,n) \in \ZZ^2 :  \phi(m,n) = 0, |\phi| = \Delta,\, \gcd(m,n) = 1\}
+\end{equation*}
+</div>comes from the theory of quadratic forms.</li></ol></article></div></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

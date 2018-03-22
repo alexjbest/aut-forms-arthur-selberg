@@ -12,12 +12,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Recall that \(\SL_2(\ZZ)\) acts on binary quadratic forms \(\Phi\) by</p>
+<p>For \(t,m\) fixed</p>
 <div class="displaymath">
 \begin{equation*}
-\gamma \phi(u,v) = \phi(au + cv, bu + dv)= \phi(\gamma^\transpose \begin{pmatrix}u\\v\end{pmatrix})\text{.}
+\int_{\Gamma\backslash\HH} \left( \sum_{|\phi| = t^2 - 4m} R_\phi (z,t)\right) E(z,s) \diff \mu(z) = \zeta(s, \Delta) \left\{I(\Delta, t, s)  + I(\Delta, -t, s)\right\}
 \end{equation*}
 </div>
-<span class="incontext"><a href="sec-eichler-selberg.html#p-283">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
++ \begin{cases}(-1)^{k/2} \frac{\Gamma(s+ k - 1) \zeta(s) \zeta(2s)}{(2\pi)^{s -1} \Gamma(k)}\amp \Delta = 0 \\ 0 \amp \Delta \ne 0\end{cases}
+\end{equation*}
+</div>
+<p>for \(\Delta = t^2 - 4m\text{.}\)</p>
+<span class="incontext"><a href="sec-eichler-selberg.html#p-284">in-context</a></span>
 </body>
 </html>
