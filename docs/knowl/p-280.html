@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Recall that there existss a one to one correspondence between (for fixed \(m,t\))</p>
+<div class="displaymath">
+\begin{equation*}
+\{A \in \Mat_{2\times 2 }(\ZZ) : \trace(A) =  t,\,\det(A)   =m\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\updownarrow
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\{\phi(u,v) = au^2 + buv + cv^22 : \Delta_\phi = | \phi| = b^2- 4ac= t^2 - 4m\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}   a\amp b \\ c\amp d \end{pmatrix} \mapsto \phi(u,v) = cu^2 +  (d-a) uv - b^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\phi(u,v) = au^2 + bbuv + cv^2 \mapsto \begin{pmatrix}   \frac12 (t-b)\amp a \\ -c\amp \frac12 (t+b)\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p>Using this</p>
+<div class="displaymath">
+\begin{equation*}
+y^k h_m(z,-\bar z) = \sum_{a,b,c,d\in \ZZ,\,ad-bc = m} \frac{y^k}{(c|z|^2 + d\bar z - az -  b)^k}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{t\in \ZZ} \sum_{ad-bc = m,\, a+d = t} \frac{y^k}{(c|z|^2 + d\bar z - az -  b)^k}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{t\in \ZZ} \sum_{\phi,\, |\phi | = t^2 - 4m} R_\phi(z,t)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+R_\phi(z,t) = \frac{y^k}{(a|z|^2 + bx + c - ity)^k}\text{.}
+\end{equation*}
+</div>
+<p>Exercise: substitute \(a=  \frac 12 (t-b), b=  -c , c = a, d= \frac12 (t+b)\text{.}\)</p>
+<span class="incontext"><a href="sec-eichler-selberg.html#p-280">in-context</a></span>
+</body>
+</html>

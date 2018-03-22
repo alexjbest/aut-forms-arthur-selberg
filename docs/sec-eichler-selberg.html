@@ -261,15 +261,15 @@ MathJax.Hub.Config({
 <li><a href="section-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="section-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link active"><a href="section-2.html" data-scroll="section-2"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<h2 class="link active"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
 <ul>
-<li><a href="section-2.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
-<li><a href="section-2.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
+<li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
+<li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
 </ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-2"><h2 class="heading hide-type" alt="Section 2 The Eichler-Selberg trace formula">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-eichler-selberg"><h2 class="heading hide-type" alt="Section 2 The Eichler-Selberg trace formula">
 <span class="type">Section</span><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span>
 </h2>
-<section class="subsection" id="subsection-12"><h3 class="heading hide-type" alt="Subsection 2.1 The OG approach">
+<a href="sec-eichler-selberg.html" class="permalink">¶</a><section class="subsection" id="subsection-12"><h3 class="heading hide-type" alt="Subsection 2.1 The OG approach">
 <span class="type">Subsection</span><span class="codenumber">2.1</span><span class="title">The OG approach</span>
 </h3>
 <article class="aside-like" id="aside-12"><p id="p-251">Lecture 12 15/3/2018</p></article><p id="p-252">What does it do? It calculates the <em class="emphasis">trace</em> of the \(m\)th Hecke operator \(T(m)\) on \(S_k\) the space of holomorphic <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 " title="Definition 1.39 ">modular forms</a> of weight \(k\) level 1.</p>
@@ -655,7 +655,7 @@ I(s) = \int_{\Gamma\backslash \HH} h_m(z,-\bar z')  E(z; s) y^k \diff \mu(z)
 <p>for \(\Re(s) \gt 1\text{.}\) (This “goes around the convergence issues”). Implies</p>
 <div class="displaymath">
 \begin{equation*}
-\Res_{s=1 } I(s)  = \trace( T_m) \frac{c_l}{m^{k-1}} E(z; s) = \frac12  \zeta(2s) pi^s \Gamma(s) \sum_{\gamma \in  \Gamma_\infty \backslash \Gamma} \im(\gamma z)^s\text{.}
+\Res_{s=1 } I(s)  = \trace( T_m) \frac{c_l}{m^{k-1}} E(z; s) = \frac12  \zeta(2s) \pi^s \Gamma(s) \sum_{\gamma \in  \Gamma_\infty \backslash \Gamma} \Im(\gamma z)^s\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-13"><h6 class="heading">
@@ -669,7 +669,72 @@ I(s) = \int_{\Gamma\backslash \HH} h_m(z,-\bar z')  E(z; s) y^k \diff \mu(z)
 I(s) = \sum_{\Delta \ne 0} \zeta(s,\Delta) \{\text{archimidean}\}+ \zeta(s,0) \{\text{archimidean}\} +   \frac { (-1)^{k/2}\Gamma(s+ k -1)\zeta(s)\zeta(2s)}{(2\pi)^{s-1}\Gamma(k)}
 \end{equation*}
 </div>\(\zeta(s, \Delta)\) is a cousin of \(\zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)}^s\) for \(K = \QQ(\sqrt{-\Delta})\text{.}\)</li>
-</ol></article></section></section></div></main>
+</ol></article><article class="aside-like" id="aside-14"><p id="p-278">Lecture 14 22/3/2018</p></article><article class="paragraphs" id="paragraphs-19"><h5 class="heading"><span class="title">Calculation of  \(I(s)\)</span></h5>
+<p id="p-279">First step:</p>
+<p id="p-280">Recall that there existss a one to one correspondence between (for fixed \(m,t\))</p>
+<div class="displaymath">
+\begin{equation*}
+\{A \in \Mat_{2\times 2 }(\ZZ) : \trace(A) =  t,\,\det(A)   =m\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\updownarrow
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\{\phi(u,v) = au^2 + buv + cv^22 : \Delta_\phi = | \phi| = b^2- 4ac= t^2 - 4m\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}   a\amp b \\ c\amp d \end{pmatrix} \mapsto \phi(u,v) = cu^2 +  (d-a) uv - b^2
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\phi(u,v) = au^2 + bbuv + cv^2 \mapsto \begin{pmatrix}   \frac12 (t-b)\amp a \\ -c\amp \frac12 (t+b)\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p>Using this</p>
+<div class="displaymath">
+\begin{equation*}
+y^k h_m(z,-\bar z) = \sum_{a,b,c,d\in \ZZ,\,ad-bc = m} \frac{y^k}{(c|z|^2 + d\bar z - az -  b)^k}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{t\in \ZZ} \sum_{ad-bc = m,\, a+d = t} \frac{y^k}{(c|z|^2 + d\bar z - az -  b)^k}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{t\in \ZZ} \sum_{\phi,\, |\phi | = t^2 - 4m} R_\phi(z,t)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+R_\phi(z,t) = \frac{y^k}{(a|z|^2 + bx + c - ity)^k}\text{.}
+\end{equation*}
+</div>
+<p>Exercise: substitute \(a=  \frac 12 (t-b), b=  -c , c = a, d= \frac12 (t+b)\text{.}\)</p>
+<article class="theorem-like" id="proposition-4"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">2.9</span>
+</h6>
+<p id="p-281">For \(s\in \CC\) s.t. \(2-k \lt \Re(s) \lt k- 1\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{t\in \ZZ}\int_{\Gamma\backslash \HH} |E(z; s)|\left| \sum_{|\phi| = t^2 - 4m } R_\phi(z,t) \right| \diff \mu(z) \lt \infty
+\end{equation*}
+</div></article><article class="remark-like" id="remark-19"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">2.10</span>
+</h6>
+<p id="p-282">It will turn out that the \(t=\)-sum is finite.</p></article><article class="theorem-like" id="theorem-14"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">2.11</span><span class="title">Geometric side of the Eichler-Selberg trace  formula</span>
+</h6>
+<p id="p-283"></p></article></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

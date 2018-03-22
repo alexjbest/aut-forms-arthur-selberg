@@ -1723,7 +1723,7 @@ section#section-aut-forms-motivation
                                 me I(z; s) \equiv 0
                                 | whenever it converges.
 
-section
+section#sec-eichler-selberg
     title The Eichler-Selberg trace formula
 
     subsection
@@ -1941,7 +1941,7 @@ section
             | for #[m \Re(s) \gt 1]. (This #[q goes around the convergence issues]).
 
             | Implies
-            me \Res_{s=1 } I(s)  = \trace( T_m) \frac{c_l}{m^{k-1}} E(z; s) = \frac12  \zeta(2s) pi^s \Gamma(s) \sum_{\gamma \in  \Gamma_\infty \backslash \Gamma} \im(\gamma z)^s
+            me \Res_{s=1 } I(s)  = \trace( T_m) \frac{c_l}{m^{k-1}} E(z; s) = \frac12  \zeta(2s) \pi^s \Gamma(s) \sum_{\gamma \in  \Gamma_\infty \backslash \Gamma} \Im(\gamma z)^s
             | .
 
         theorem
@@ -1952,3 +1952,46 @@ section
                     li
                         me I(s) = \sum_{\Delta \ne 0} \zeta(s,\Delta) \{\text{archimidean}\}+ \zeta(s,0) \{\text{archimidean}\} +   \frac { (-1)^{k/2}\Gamma(s+ k -1)\zeta(s)\zeta(2s)}{(2\pi)^{s-1}\Gamma(k)}
                         | #[m \zeta(s, \Delta)] is a cousin of #[m \zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)}^s] for #[m K = \QQ(\sqrt{-\Delta})].
+
+        aside: p Lecture 14 22/3/2018
+
+        paragraphs
+            title  Calculation of  #[m I(s)]
+
+            p
+                | First step:
+            p
+                | Recall that there existss a one to one correspondence between (for fixed #[m m,t])
+                me \{A \in \Mat_{2\times 2 }(\ZZ) : \trace(A) =  t,\,\det(A)   =m\}
+                me \updownarrow
+                me  \{\phi(u,v) = au^2 + buv + cv^22 : \Delta_\phi = | \phi| = b^2- 4ac= t^2 - 4m\}
+                me \begin{pmatrix}   a\amp b \\ c\amp d \end{pmatrix} \mapsto \phi(u,v) = cu^2 +  (d-a) uv - b^2
+                me  \phi(u,v) = au^2 + bbuv + cv^2 \mapsto \begin{pmatrix}   \frac12 (t-b)\amp a \\ -c\amp \frac12 (t+b)\end{pmatrix}
+                |.
+                | Using this
+                me y^k h_m(z,-\bar z) = \sum_{a,b,c,d\in \ZZ,\,ad-bc = m} \frac{y^k}{(c|z|^2 + d\bar z - az -  b)^k}
+                me = \sum_{t\in \ZZ} \sum_{ad-bc = m,\, a+d = t} \frac{y^k}{(c|z|^2 + d\bar z - az -  b)^k}
+                me = \sum_{t\in \ZZ} \sum_{\phi,\, |\phi | = t^2 - 4m} R_\phi(z,t)
+                | where
+                me R_\phi(z,t) = \frac{y^k}{(a|z|^2 + bx + c - ity)^k}
+                | .
+                | Exercise: substitute #[m a=  \frac 12 (t-b), b=  -c , c = a, d= \frac12 (t+b)].
+
+            proposition
+                statement: p
+                    | For #[m s\in \CC] s.t. #[m 2-k \lt \Re(s) \lt k- 1]
+                    me \sum_{t\in \ZZ}\int_{\Gamma\backslash \HH} |E(z; s)|\left| \sum_{|\phi| = t^2 - 4m } R_\phi(z,t) \right| \diff \mu(z) \lt \infty
+
+            remark
+                p
+                    | It will turn out that the #[m t=]-sum is finite.
+
+
+            theorem
+                title Geometric side of the Eichler-Selberg trace  formula
+                statement
+                    p
+                        | For #[m t,m] fixed
+                        me \int_{\Gamma\backslash\HH} \left( \sum_{|\phi| = t^2 - 4m} R_\phi (z,t)\right) E(z,s) \diff \mu(z) = \zeta(s, \Delta) \left\{I(\Delta, t, s)  + I(\Delta, -t, s)\right\}
+                        | for #[m \Delta = t^2 - 4m].
+
