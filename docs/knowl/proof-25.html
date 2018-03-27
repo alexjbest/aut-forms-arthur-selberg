@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<ol class="decimal">
+<li>Note \(R_{\gamma\phi}(t,z) = R_\phi (t, \gamma^\transpose z)\) which means that the integral is well defined (check this).</li>
+<li>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma\backslash \HH} \left( \sum_{|\phi| = \Delta} R_\phi (t,z)\right) E(z; s) \diff \mu (z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{\Gamma\backslash \HH} \sum_{|\phi| = \Delta} \sum_{(m,n) \in \ZZ^2 \smallsetminus \{(0,0)\}} R_\phi(t, z) \frac{y^s}{|mz+n|^{2s}} \diff \mu(z)
+\end{equation*}
+</div>unfold whenever you can!</li>
+<li>Recall \(\Gamma \acts \Phi_\Delta  \times X\) fixing \(\pair{\phi}{(m,n)} = \phi(m,n)\text{.}\) We can break the sum into \(\phi(m,n) \gt 0,\, \phi(m,n) \lt 0\text{.}\)</li>
+<li>Fact: The action of \(\Gamma\) on the above is free, (exercise: prove this fact, hint: first take \((m,n) \to (0,r)\text{,}\) and analyze the action of the stabiliser on \((0,r)\)).</li>
+<li>
+<div class="displaymath">
+\begin{equation*}
+\int_{\Gamma \backslash \HH} \sum_{|\phi| = \Delta} \sum_{(m,n) \in X,\, \phi(m,n) \gt 0} R_\phi(t,z) \frac{y^s}{|mz+n|^s} \diff \mu(z)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{(\Phi_\Delta \times X)/\Gamma} \int_\HH R_\phi (t,z) \frac{y^s}{|mz+n|^{2s}} \diff \mu(z)\text{.}
+\end{equation*}
+</div>
+</li>
+<li>Check<div class="displaymath">
+\begin{equation*}
+z\mapsto \frac{nx - \frac 12 bn +cm}{-mz + an - \frac 12 bm}
+\end{equation*}
+</div>finishes the proof.</li>
+<li>To check other cases use<div class="displaymath">
+\begin{equation*}
+R_{-\phi} (z,t) = R_\phi(z,-t)
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{equation*}
+\pair{\phi}{(m,n)} = 0
+\end{equation*}
+</div>needs to be considered separately.</li>
+</ol></article><span class="incontext"><a href="sec-eichler-selberg.html#proof-25">in-context</a></span>
+</body>
+</html>

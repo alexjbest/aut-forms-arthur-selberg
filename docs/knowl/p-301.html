@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Recall that</p>
+<div class="displaymath">
+\begin{equation*}
+\trace(T_{S_k}(m))
+\end{equation*}
+</div>
+<p>is given by the Eichler-Selberg trace formula. In particular</p>
+<div class="displaymath">
+\begin{equation*}
+\trace(T_{S_k}(m)) = \dim(S_k)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= -\frac 12 \sum_{t^2  -  4 \le 0} P_k(t,1) H(4-t^2)  - \frac 12
+\end{equation*}
+</div>
+<p>we have</p>
+<div class="displaymath">
+\begin{equation*}
+H(0) = \frac{-1}{12}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+H(3) = \frac{1}{3}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+H(4) = \frac{1}{2}
+\end{equation*}
+</div>
+<p>to find the \(P_k(t,1)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\rho_t, \bar \rho_t= \frac{t \pm \sqrt{t^2 - 4}}{2} = e^{i\theta}, e^{-i\theta}
+\end{equation*}
+</div>
+<p>so \(\tan \theta = \frac{\sqrt{4-t^2}}{t}\) note then</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\rho_t^{k-1} - \bar \rho_t ^{k-1}}{\rho_t - \bar \rho_t} =  \frac{\rho_{-t}^{k-1} - \bar \rho_{-t} ^{k-1}}{\rho_{-t} - \bar \rho_{-t}} = \frac{\sin((k-1)\theta)}{\sin(\theta)}
+\end{equation*}
+</div>
+<p>so \(P_k(t,1)\) is  given by<figure class="figure-like"><table>
+<tr>
+<td class="l m b3 r0 l0 t0 lines">\(t\)</td>
+<td class="l m b3 r0 l0 t0 lines">\(\theta\)</td>
+<td class="l m b3 r0 l0 t0 lines">\(P_k(t,1)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\pi/2 \)</td>
+<td class="l m b0 r0 l0 t0 lines">\(k\mod 4 - 1\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\pi/3 \)</td>
+<td class="l m b0 r0 l0 t0 lines">\((k\mod 6 - 4)/2)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0     \)</td>
+<td class="l m b0 r0 l0 t0 lines">\((k-1)   \)</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="codenumber">2.16</span>Values of \(P_k(t,1)\text{.}\)</figcaption></figure>Now if \(k \equiv \pmod{12}\)</p>
+<div class="displaymath">
+\begin{equation*}
+-\left( \frac{-1}{4} - \frac {1}{3} - \frac{k-1}{12}\right) - \frac12 = \frac{k}{12} = \left\lfloor \frac{k}{12}\right \rfloor = \cdots
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec-eichler-selberg.html#p-301">in-context</a></span>
+</body>
+</html>
