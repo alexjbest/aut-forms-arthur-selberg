@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Claim:</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{(k-1)/12} = \begin{cases} n^{-1/2} \amp \text{ if } n \text{ is a square}\\ 0 \amp\text{otw}   \end{cases}
+\end{equation*}
+</div>
+<p>Assume the claim for now: Note that</p>
+<div class="displaymath">
+\begin{equation*}
+T_k'(p^m) = X_m(T_k'(p))
+\end{equation*}
+</div>
+<p>as</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{m=0}^\infty T_k'(p^m)t^m = \frac{1}{1- T_k'(p)t + t^2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\sum_{m=0}^\infty X_m(T_k'(p))t^m
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)} = \begin{cases} p^{-m/2} \amp m \equiv 0 \pmod 2\\ 0 \amp\text{otw}   \end{cases}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pair{X_m}{\mu_p}
+\end{equation*}
+</div>
+<p>by the claim and previous calculation.</p>
+<p>Proof of the claim: Recall that the Eichler-Selberg trace formula says that</p>
+<div class="displaymath">
+\begin{gather}
+\tr(T_k(n)) = \frac{k-1}{12} n^{k/2 -1} \delta_{n= \square}\tag{2.6}\\
+- \frac12 \sum_{t^2 \lt 4n} P_k(t,n) H(4n - t^2)\tag{2.7}\\
+- \frac 12 \sum_{dd' = n,\,d,d' \gt 0} \min(d,d')^{k-1}\tag{2.8}
+\end{gather}
+</div>
+<p>Sublemma: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O(n^{k/2})\)</p>
+<p>Proof: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O_n(\sum_{t^2 \lt 4n} P_k(t,n) )\)</p>
+<div class="displaymath">
+\begin{equation*}
+P_k(t,n) = \frac{\rho^{k-1} - \bar \rho^{k-1}}{\rho - \bar \rho},\, \rho = \frac{t + i \sqrt{4n - t^2}}{2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+| \rho^{k-1} - \bar \rho^{k-1}| \le 2|\rho^{k-1}| = O((4n- t^2)^{(k-1)/2})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho - \bar \rho = \sqrt{n - t^2}
+\end{equation*}
+</div>
+<p>Sublemma: <a knowl="./knowl/eqn-serre-equi-3.html" knowl-id="xref-eqn-serre-equi-3" alt="Equation 2.8 " title="Equation 2.8 ">(2.8)</a> \(= O(n^{(k-1)/2})\) Proof: exercise.</p>
+<p>The equations above combined with  the fact \(n^{k-1/2} \to n^{-1/2} \delta_{n=\square}\text{.}\)</p></article><span class="incontext"><a href="sec-eichler-selberg.html#proof-28">in-context</a></span>
+</body>
+</html>
