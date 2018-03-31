@@ -2054,7 +2054,6 @@ section#sec-eichler-selberg
                                     me n(a) = \#\{\phi \in \Phi ,\,(m,n) \in \ZZ^2 :  \phi(m,n) = 0, |\phi| = \Delta,\, \gcd(m,n) = 1\}
                                     | comes from the theory of quadratic forms.
                                 p
-                                    aside: p Lecture 15 27/3/2018
                                     | Instead note that #[m \Gamma \acts \Phi] via #[m \gamma \cdot \phi =(u,v) = \phi(\gamma^\transpose \begin{pmatrix} u\\v \end{pmatrix})].
                                     | We also have #[m \Gamma\acts \ZZ^2] via #[m \gamma \cdot (m,n) = \gamma \begin{pmatrix} m\\n \end{pmatrix}].
                                 p
@@ -2175,177 +2174,177 @@ section#sec-eichler-selberg
                         me -\left( \frac{-1}{4} - \frac {1}{3} - \frac{k-1}{12}\right) - \frac12 = \frac{k}{12} = \left\lfloor \frac{k}{12}\right \rfloor= \cdots
                         | .
 
-            paragraphs
-                title Another application: Equidistribution of Hecke eigenvalues.
-                aside: p Lecture 16 29/3/2018
+        paragraphs
+            title Another application: Equidistribution of Hecke eigenvalues.
+            aside: p Lecture 16 29/3/2018
 
+            p
+                | Following Serre '97, very readable article.
+
+            p
+                | Equidistribution:
+
+            definition
+                statement: p
+                    | Let #[m (\Omega, \mu)] be a measure space
+                    me \Omega\text{ compact}
+                    me \mu\text{ positive Radon measure}
+                    me \int_\Omega \diff \mu  = 1
+
+            example
+                statement: p
+                    me [-1,1],\,\frac{\diff x}{2} = \diff \mu
+
+            note
                 p
-                    | Following Serre '97, very readable article.
+                    | #[m \mu] gives a linear functional.
+                    me f\mapsto \int_\Omega f(x) \diff \mu(x)
+                    | , notated
+                    me \pair{f}{\mu}
+                    | .
 
-                p
-                    | Equidistribution:
-
-                definition
-                    statement: p
-                        | Let #[m (\Omega, \mu)] be a measure space
-                        me \Omega\text{ compact}
-                        me \mu\text{ positive Radon measure}
-                        me \int_\Omega \diff \mu  = 1
-
-                example
-                    statement: p
-                        me [-1,1],\,\frac{\diff x}{2} = \diff \mu
-
-                note
+            definition
+                title #[m \delta] measures
+                statement
                     p
-                        | #[m \mu] gives a linear functional.
-                        me f\mapsto \int_\Omega f(x) \diff \mu(x)
-                        | , notated
-                        me \pair{f}{\mu}
+                        | Let #[m L] be a sequence of indices, going to #[m \infty] (this will be the indexing set for the weight #[m k]).
+
+                        | For #[m \lambda \in L] let #[m I_\lambda] be a  non-empty finite set of cardinality
+                        me \#I_\lambda = d_\lambda
+                        | (this will be the set of eigenvalues for each #[m k]).
+                        | Let
+                        me \mathbf X _\lambda = (x_{i,\lambda}),\,i\in I_\lambda
+                        | .
+                    p
+                        | We define
+                        me \delta _{\mathbf X_\lambda} = \frac{1}{d_\lambda} \sum_{i\in I_\lambda} \delta_{x_{i,\lambda}}
+                        | note
+                        me \pair{f}{\delta _{\mathbf X_\lambda}} = \frac{1}{d_\lambda} \sum_{i\in I_\lambda} f(x_{i,\lambda})
+                        | .
+                    p
+                        | The family #[m \mathbf X_\lambda] for #[m \lambda \in L] is called #[m \mu]-equidistributed (or equidistributed with respect to the measure #[m \mu]) if
+                        me \lim_{\lambda \to \infty} \delta_{\mathbf X_\lambda} = \mu
+                        | the limit is in the weak-#[m \ast] sense i.e.
+                        me \lim_{\lambda \to \infty} \pair{f}{\delta_{\mathbf X_\lambda}} = \pair{f}{\mu},\,\forall f \in C(\Omega, \RR)
                         | .
 
-                definition
-                    title #[m \delta] measures
-                    statement
-                        p
-                            | Let #[m L] be a sequence of indices, going to #[m \infty] (this will be the indexing set for the weight #[m k]).
+            p
+                | So far these are all general statements.
+                | Let us put ourselves in the following situation:
+            p
+                | For each #[m \lambda \in L] we have a linear operator
+                me H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
+                | whose eigenvalues are in #[m \Omega].
+                | And #[m I_\lambda = \{ 1,2,\ldots, d_\lambda\}], #[m \mathbf X_\lambda = \{x_{1,\lambda}, \ldots, x_{d_\lambda,\lambda}\}] the eigenvalues of #[m H_\lambda] suitably normalised counted with multiplicity.
 
-                            | For #[m \lambda \in L] let #[m I_\lambda] be a  non-empty finite set of cardinality
-                            me \#I_\lambda = d_\lambda
-                            | (this will be the set of eigenvalues for each #[m k]).
-                            | Let
-                            me \mathbf X _\lambda = (x_{i,\lambda}),\,i\in I_\lambda
-                            | .
-                        p
-                            | We define
-                            me \delta _{\mathbf X_\lambda} = \frac{1}{d_\lambda} \sum_{i\in I_\lambda} \delta_{x_{i,\lambda}}
-                            | note
-                            me \pair{f}{\delta _{\mathbf X_\lambda}} = \frac{1}{d_\lambda} \sum_{i\in I_\lambda} f(x_{i,\lambda})
-                            | .
-                        p
-                            | The family #[m \mathbf X_\lambda] for #[m \lambda \in L] is called #[m \mu]-equidistributed (or equidistributed with respect to the measure #[m \mu]) if
-                            me \lim_{\lambda \to \infty} \delta_{\mathbf X_\lambda} = \mu
-                            | the limit is in the weak-#[m \ast] sense i.e.
-                            me \lim_{\lambda \to \infty} \pair{f}{\delta_{\mathbf X_\lambda}} = \pair{f}{\mu},\,\forall f \in C(\Omega, \RR)
-                            | .
-
-                p
-                    | So far these are all general statements.
-                    | Let us put ourselves in the following situation:
-                p
-                    | For each #[m \lambda \in L] we have a linear operator
-                    me H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
-                    | whose eigenvalues are in #[m \Omega].
-                    | And #[m I_\lambda = \{ 1,2,\ldots, d_\lambda\}], #[m \mathbf X_\lambda = \{x_{1,\lambda}, \ldots, x_{d_\lambda,\lambda}\}] the eigenvalues of #[m H_\lambda] suitably normalised counted with multiplicity.
-
-                proposition
-                    statement: p
-                        | TFAE
-                        ol
-                            li
-                                me \{x_\lambda\}_{\lambda \in L}  \text{ is }\mu \text{ equidistributed on } \Omega
-                            li
-                                | For all polynomials #[m P] with #[m \RR] coefficients
-                                men#eqn-equidist-poly \frac{\trace(P(H_\lambda))}{d_\lambda} \to_{\lambda \to \infty} \pair{P}{\mu}
-                            li
-                                | For all #[m m \in \ZZ_{\ge 0}] there exists a polynomial #[m P] of degree #[m m] s.t. #[xref(ref="eqn-equidist-poly")/] is satisfied.
-
-                    proof: p
-                        | Exercise.
-
-                p
-                    | Now we will choose a special set of polynomials to work with.
-
-                p
-                    | Symmetric polynomials:
-                p
-                    | Let #[m \Omega= \lb -2 , 2 \rb \leftrightarrow 2 \cos \lb -\pi, \pi\rb = \trace(\specialunitary(2,\CC))], this is really Satake parameters.
-                    | For #[m x\in \lb -2, 2\rb] we have a corresponding #[m 2\cos (\phi)].
-                    | Let
-                    me X_n (x) = e^{in\phi} + e^{i(n-2)\phi} + \cdots + e^{-in\phi} = \trace (\Sym^n(U)),\,x = \trace(u)
-                    | .
-                p
-                    | Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of #[m \specialunitary(2, \CC)].
-                    me X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdots + x_{|n-m|}
-                    | .
-
-                exercise
-                    statement: p
-                        | Prove this.
-
-                p
-                    | Several measures:
+            proposition
+                statement: p
+                    | TFAE
                     ol
                         li
-                            | Sato-Tate:
-                            me \mu_\infty = \frac 1 \pi \sqrt{1-\frac{x^2}{4}} \diff x
-                            me            = \frac 2 \pi \sin^2(\phi)           \diff \phi
-                            | properties
-                            me \int_{\Omega} \diff \mu_\infty = 1
-                            me \pair{X_n}{ \mu_\infty} = \begin{cases} 1\amp n = 0,\\0\amp\text{otw}\end{cases}
-                            me \pair{X_nX_m}{ \mu_\infty} = \delta_{n,m}
-                            | .
-                            | Exercise: prove this, with orthogonality of characters.
+                            me \{x_\lambda\}_{\lambda \in L}  \text{ is }\mu \text{ equidistributed on } \Omega
                         li
-                            | #[m p]-adic Plancherel measure:
+                            | For all polynomials #[m P] with #[m \RR] coefficients
+                            men#eqn-equidist-poly \frac{\trace(P(H_\lambda))}{d_\lambda} \to_{\lambda \to \infty} \pair{P}{\mu}
+                        li
+                            | For all #[m m \in \ZZ_{\ge 0}] there exists a polynomial #[m P] of degree #[m m] s.t. #[xref(ref="eqn-equidist-poly")/] is satisfied.
 
-                            | Let #[m q \in \RR_{\gt 1}] and define
-                            me f_q(x) = \sum_{n=0}^\infty q^{-n} X_{2n}(x) = \frac{q+1}{(q^{1/2} + q^{-1/2})^2 - x^2}
-                            me \mu_q = f_q \mu_\infty
-                            | note:
-                            me \lim_{q\to 1^+} \mu_q = \frac{\diff \phi}{\pi}
-                            me    \lim_{q \to \infty} \mu_q = \mu_\infty
-                            | #[m \mu_q] is positive and has total mass 1.
-                            | note:
-                            me \pair{X_n}{\mu_q} = \pair{X_n}{\sum_{m=0}^\infty q^{-m} X_{2m} \mu_\infty}
-                            me                   = \sum_{m=0}^\infty q^{-m} \pair{X_nX_{2m} }{\mu_\infty}
-                            me = \begin{cases} q^{-n/2} \amp n\equiv 0 \pmod 2 \\ 0 \amp \text{otw}\end{cases}
-                            | .
+                proof: p
+                    | Exercise.
 
-                theorem
-                    title Serre '97
-                    statement: p
-                        | #[m k \equiv 0 \pmod 2] let #[m s(k) = \dim(S_k(1))]
-                        me T_k'(n) = \frac{T_k(n)}{n^{k-1/2}}
-                        | so that the eigenvalues are in  #[m \lb -2, 2\rb] by Deligne.
-                        | Letting #[m \mathbf X(k,p)] be the eigenvalues of #[m T_k'(p)].
-                        | Then #[m \mathbf X(k,p)] are equidistributed with respect to #[m \mu_p].
-                        me \mu_p = \frac{p+1}{(p^{1/2} + p^{-1/2})^2 - x^2} \frac 1 \pi \sqrt{1-\frac{x^2}{4}} \diff x
+            p
+                | Now we will choose a special set of polynomials to work with.
+
+            p
+                | Symmetric polynomials:
+            p
+                | Let #[m \Omega= \lb -2 , 2 \rb \leftrightarrow 2 \cos \lb -\pi, \pi\rb = \trace(\specialunitary(2,\CC))], this is really Satake parameters.
+                | For #[m x\in \lb -2, 2\rb] we have a corresponding #[m 2\cos (\phi)].
+                | Let
+                me X_n (x) = e^{in\phi} + e^{i(n-2)\phi} + \cdots + e^{-in\phi} = \trace (\Sym^n(U)),\,x = \trace(u)
+                | .
+            p
+                | Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of #[m \specialunitary(2, \CC)].
+                me X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdots + x_{|n-m|}
+                | .
+
+            exercise
+                statement: p
+                    | Prove this.
+
+            p
+                | Several measures:
+                ol
+                    li
+                        | Sato-Tate:
+                        me \mu_\infty = \frac 1 \pi \sqrt{1-\frac{x^2}{4}} \diff x
+                        me            = \frac 2 \pi \sin^2(\phi)           \diff \phi
+                        | properties
+                        me \int_{\Omega} \diff \mu_\infty = 1
+                        me \pair{X_n}{ \mu_\infty} = \begin{cases} 1\amp n = 0,\\0\amp\text{otw}\end{cases}
+                        me \pair{X_nX_m}{ \mu_\infty} = \delta_{n,m}
                         | .
-                    proof
-                        p
-                            | Claim:
-                            me \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)}
-                            me = \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{(k-1)/12} = \begin{cases} n^{-1/2} \amp \text{ if } n \text{ is a square}\\ 0 \amp\text{otw}   \end{cases}
-                        p
-                            | Assume the claim for now:
-                            | Note that
-                            me T_k'(p^m) = X_m(T_k'(p))
-                            | as
-                            me \sum_{m=0}^\infty T_k'(p^m)t^m = \frac{1}{1- T_k'(p)t + t^2}
-                            me    \sum_{m=0}^\infty X_m(T_k'(p))t^m
-                        p
-                            me = \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)} = \begin{cases} p^{-m/2} \amp m \equiv 0 \pmod 2\\ 0 \amp\text{otw}   \end{cases}
-                            me = \pair{X_m}{\mu_p}
-                            | by the claim and previous calculation.
-                        p
-                            | Proof of the claim:
-                            | Recall that the Eichler-Selberg trace formula says that
-                            mdn
-                                mrow#eqn-serre-equi-1 \tr(T_k(n)) = \frac{k-1}{12} n^{k/2 -1} \delta_{n= \square}
-                                mrow#eqn-serre-equi-2 - \frac12 \sum_{t^2 \lt 4n} P_k(t,n) H(4n - t^2)
-                                mrow#eqn-serre-equi-3 - \frac 12 \sum_{dd' = n,\,d,d' \gt 0} \min(d,d')^{k-1}
-                        p
-                            | Sublemma: #[xref(ref="eqn-serre-equi-2")/] #[m = O(n^{k/2})]
-                        p
-                            | Proof:
+                        | Exercise: prove this, with orthogonality of characters.
+                    li
+                        | #[m p]-adic Plancherel measure:
 
-                            | #[xref(ref="eqn-serre-equi-2")/] #[m = O_n(\sum_{t^2 \lt 4n} P_k(t,n) )]
-                            me P_k(t,n) = \frac{\rho^{k-1} - \bar \rho^{k-1}}{\rho - \bar \rho},\, \rho = \frac{t + i \sqrt{4n - t^2}}{2}
-                            me | \rho^{k-1} - \bar \rho^{k-1}| \le 2|\rho^{k-1}| = O((4n- t^2)^{(k-1)/2})
-                            me \rho - \bar \rho = \sqrt{n - t^2}
-                        p
-                            | Sublemma: #[xref(ref="eqn-serre-equi-3")/] #[m = O(n^{(k-1)/2})]
-                            | Proof: exercise.
-                        p
-                            | The equations above combined with  the fact #[m n^{k-1/2} \to n^{-1/2} \delta_{n=\square}].
+                        | Let #[m q \in \RR_{\gt 1}] and define
+                        me f_q(x) = \sum_{n=0}^\infty q^{-n} X_{2n}(x) = \frac{q+1}{(q^{1/2} + q^{-1/2})^2 - x^2}
+                        me \mu_q = f_q \mu_\infty
+                        | note:
+                        me \lim_{q\to 1^+} \mu_q = \frac{\diff \phi}{\pi}
+                        me    \lim_{q \to \infty} \mu_q = \mu_\infty
+                        | #[m \mu_q] is positive and has total mass 1.
+                        | note:
+                        me \pair{X_n}{\mu_q} = \pair{X_n}{\sum_{m=0}^\infty q^{-m} X_{2m} \mu_\infty}
+                        me                   = \sum_{m=0}^\infty q^{-m} \pair{X_nX_{2m} }{\mu_\infty}
+                        me = \begin{cases} q^{-n/2} \amp n\equiv 0 \pmod 2 \\ 0 \amp \text{otw}\end{cases}
+                        | .
+
+            theorem
+                title Serre '97
+                statement: p
+                    | #[m k \equiv 0 \pmod 2] let #[m s(k) = \dim(S_k(1))]
+                    me T_k'(n) = \frac{T_k(n)}{n^{k-1/2}}
+                    | so that the eigenvalues are in  #[m \lb -2, 2\rb] by Deligne.
+                    | Letting #[m \mathbf X(k,p)] be the eigenvalues of #[m T_k'(p)].
+                    | Then #[m \mathbf X(k,p)] are equidistributed with respect to #[m \mu_p].
+                    me \mu_p = \frac{p+1}{(p^{1/2} + p^{-1/2})^2 - x^2} \frac 1 \pi \sqrt{1-\frac{x^2}{4}} \diff x
+                    | .
+                proof
+                    p
+                        | Claim:
+                        me \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)}
+                        me = \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{(k-1)/12} = \begin{cases} n^{-1/2} \amp \text{ if } n \text{ is a square}\\ 0 \amp\text{otw}   \end{cases}
+                    p
+                        | Assume the claim for now:
+                        | Note that
+                        me T_k'(p^m) = X_m(T_k'(p))
+                        | as
+                        me \sum_{m=0}^\infty T_k'(p^m)t^m = \frac{1}{1- T_k'(p)t + t^2}
+                        me    \sum_{m=0}^\infty X_m(T_k'(p))t^m
+                    p
+                        me = \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)} = \begin{cases} p^{-m/2} \amp m \equiv 0 \pmod 2\\ 0 \amp\text{otw}   \end{cases}
+                        me = \pair{X_m}{\mu_p}
+                        | by the claim and previous calculation.
+                    p
+                        | Proof of the claim:
+                        | Recall that the Eichler-Selberg trace formula says that
+                        mdn
+                            mrow#eqn-serre-equi-1 \tr(T_k(n)) = \frac{k-1}{12} n^{k/2 -1} \delta_{n= \square}
+                            mrow#eqn-serre-equi-2 - \frac12 \sum_{t^2 \lt 4n} P_k(t,n) H(4n - t^2)
+                            mrow#eqn-serre-equi-3 - \frac 12 \sum_{dd' = n,\,d,d' \gt 0} \min(d,d')^{k-1}
+                    p
+                        | Sublemma: #[xref(ref="eqn-serre-equi-2")/] #[m = O(n^{k/2})]
+                    p
+                        | Proof:
+
+                        | #[xref(ref="eqn-serre-equi-2")/] #[m = O_n(\sum_{t^2 \lt 4n} P_k(t,n) )]
+                        me P_k(t,n) = \frac{\rho^{k-1} - \bar \rho^{k-1}}{\rho - \bar \rho},\, \rho = \frac{t + i \sqrt{4n - t^2}}{2}
+                        me | \rho^{k-1} - \bar \rho^{k-1}| \le 2|\rho^{k-1}| = O((4n- t^2)^{(k-1)/2})
+                        me \rho - \bar \rho = \sqrt{n - t^2}
+                    p
+                        | Sublemma: #[xref(ref="eqn-serre-equi-3")/] #[m = O(n^{(k-1)/2})]
+                        | Proof: exercise.
+                    p
+                        | The equations above combined with  the fact #[m n^{k-1/2} \to n^{-1/2} \delta_{n=\square}].

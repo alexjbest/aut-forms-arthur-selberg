@@ -832,15 +832,15 @@ n(a) = \#\{\phi \in \Phi ,\,(m,n) \in \ZZ^2 :  \phi(m,n) = 0, |\phi| = \Delta,\,
 \end{equation*}
 </div>
 <p>comes from the theory of quadratic forms.</p>
-<p id="p-292"><article class="aside-like" id="aside-16"><p id="p-293">Lecture 15 27/3/2018</p></article>Instead note that \(\Gamma \acts \Phi\) via \(\gamma \cdot \phi =(u,v) = \phi(\gamma^\transpose \begin{pmatrix} u\\v \end{pmatrix})\text{.}\) We also have \(\Gamma\acts \ZZ^2\) via \(\gamma \cdot (m,n) = \gamma \begin{pmatrix} m\\n \end{pmatrix}\text{.}\)</p>
-<p id="p-294">Note that</p>
+<p id="p-292">Instead note that \(\Gamma \acts \Phi\) via \(\gamma \cdot \phi =(u,v) = \phi(\gamma^\transpose \begin{pmatrix} u\\v \end{pmatrix})\text{.}\) We also have \(\Gamma\acts \ZZ^2\) via \(\gamma \cdot (m,n) = \gamma \begin{pmatrix} m\\n \end{pmatrix}\text{.}\)</p>
+<p id="p-293">Note that</p>
 <div class="displaymath">
 \begin{equation*}
 (\gamma ^\transpose)\inv = \begin{pmatrix} 0 \amp 1 \\ -1   \amp 0 \end{pmatrix} \gamma \begin{pmatrix} 0 \amp -1  \\ 1 \amp 0\end{pmatrix}
 \end{equation*}
 </div>
 <p>(check!).</p>
-<p id="p-295">Define</p>
+<p id="p-294">Define</p>
 <div class="displaymath">
 \begin{equation*}
 \pair{-}{-}\colon \Phi \times X
@@ -856,7 +856,7 @@ n(a) = \#\{\phi \in \Phi ,\,(m,n) \in \ZZ^2 :  \phi(m,n) = 0, |\phi| = \Delta,\,
 = \phi \left( \begin{pmatrix} 0 \amp 1 \\ -1  \amp 0 \end{pmatrix} \begin{pmatrix} m \\n \end{pmatrix} \right)\text{.}
 \end{equation*}
 </div>
-<p id="p-296">Observe \(\pair{-}{-}\) is \(\Gamma\)-invariant! i.e.</p>
+<p id="p-295">Observe \(\pair{-}{-}\) is \(\Gamma\)-invariant! i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 \pair{\phi}{(m,n)} = \pair{\gamma \phi }{ \gamma(m,n)}
@@ -909,11 +909,11 @@ x= \pm(m,n)\sim_{\Gamma} \pm(0,\gcd(m,n)),\, r = \gcd(m,n) \gt 0
 </div>
 <p>Exercise, show this is    the sum from before. Hint, consider, explicitly, the action of \(\gamma\in \Gamma_\infty^\transpose\) on \(\phi(u,v)\text{.}\)</p>
 </li></ol></article></div>
-<p id="p-297">Back to the proof of the trace formula.</p>
+<p id="p-296">Back to the proof of the trace formula.</p>
 <article class="theorem-like" id="lemma-6"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">2.14</span>
 </h6>
-<p id="p-298">Let \(k \in \ZZ_{\gt 2},\,k\equiv 0 \pmod 2,\,\Delta \in \ZZ,\,\Delta \equiv 0,1 \pmod4,\,t\in \RR\) s.t. \(t^2 \gt \Delta\text{.}\) For each \(\phi \in \Phi_\Delta\) let</p>
+<p id="p-297">Let \(k \in \ZZ_{\gt 2},\,k\equiv 0 \pmod 2,\,\Delta \in \ZZ,\,\Delta \equiv 0,1 \pmod4,\,t\in \RR\) s.t. \(t^2 \gt \Delta\text{.}\) For each \(\phi \in \Phi_\Delta\) let</p>
 <div class="displaymath">
 \begin{equation*}
 R_\phi (t,z) = \frac{y^k}{(a|z|^2 + bx + c - ity )^k}
@@ -934,7 +934,7 @@ R_\phi (t,z) = \frac{y^k}{(a|z|^2 + bx + c - ity )^k}
 \begin{equation*}
 + \begin{cases}(-1)^{k/2} \frac{\Gamma(s+ k - 1) \zeta(s) \zeta(2s)}{(2\pi)^{s -1} \Gamma(k)}\amp \Delta = 0 \\ 0 \amp \Delta \ne 0\end{cases}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-25" id="proof-25"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-25" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-299" class="decimal">
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-25" id="proof-25"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-25" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-298" class="decimal">
 <li id="li-57">Note \(R_{\gamma\phi}(t,z) = R_\phi (t, \gamma^\transpose z)\) which means that the integral is well defined (check this).</li>
 <li id="li-58">
 <div class="displaymath">
@@ -976,11 +976,11 @@ R_{-\phi} (z,t) = R_\phi(z,-t)
 \end{equation*}
 </div>needs to be considered separately.</li>
 </ol></article></div>
-<p id="p-300">We really need to check some convergence here, but lets instead use the trace formula for something useful, to determine its value.</p></article><article class="paragraphs" id="paragraphs-20"><h5 class="heading"><span class="title">Application to spaces of modular forms</span></h5>
+<p id="p-299">We really need to check some convergence here, but lets instead use the trace formula for something useful, to determine its value.</p></article><article class="paragraphs" id="paragraphs-20"><h5 class="heading"><span class="title">Application to spaces of modular forms</span></h5>
 <article class="theorem-like" id="theorem-15"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">2.15</span>
 </h6>
-<div class="displaymath" id="p-301">
+<div class="displaymath" id="p-300">
 \begin{equation*}
 \left\lfloor \frac{k}{12} \right \rfloor - \mathbf 1[k \equiv 2 \pmod{12}] = -\frac 12 \sum_{t= - 2}^{t = 2} P_k(t,1) H(4-t^2)  - \frac 12
 \end{equation*}
@@ -1002,7 +1002,7 @@ P_k(t,m) = \frac{\rho^{k-1} - \bar \rho ^{k-1}}{\rho - \bar \rho},\,\{\rho,\bar 
 \dim(S_k(1)) = \left\lfloor \frac{k}{12} \right \rfloor  - \mathbf 1[k \equiv 2 \pmod{12}]\text{.}
 \end{equation*}
 </div>
-<p>This is a weird looking formula but it generalises very well, works even without a complex structure, Riemann-Roch, etc.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-26" id="proof-26"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-26" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-302">Recall that</p>
+<p>This is a weird looking formula but it generalises very well, works even without a complex structure, Riemann-Roch, etc.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-26" id="proof-26"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-26" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-301">Recall that</p>
 <div class="displaymath">
 \begin{equation*}
 \trace(T_{S_k}(m))
@@ -1070,19 +1070,18 @@ H(4) = \frac{1}{2}
 <td class="l m b0 r0 l0 t0 lines">\((k-1)   \)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span><span class="codenumber">2.16</span>Values of \(P_k(t,1)\text{.}\)</figcaption></figure><p id="p-303">Now if \(k \equiv 0\pmod{12}\)</p>
+<figcaption><span class="type">Table</span><span class="codenumber">2.16</span>Values of \(P_k(t,1)\text{.}\)</figcaption></figure><p id="p-302">Now if \(k \equiv 0\pmod{12}\)</p>
 <div class="displaymath">
 \begin{equation*}
 -\left( \frac{-1}{4} - \frac {1}{3} - \frac{k-1}{12}\right) - \frac12 = \frac{k}{12} = \left\lfloor \frac{k}{12}\right \rfloor= \cdots\text{.}
 \end{equation*}
-</div></article></div>
-<article class="paragraphs" id="paragraphs-21"><h5 class="heading"><span class="title">Another application: Equidistribution of Hecke eigenvalues.</span></h5>
-<article class="aside-like" id="aside-17"><p id="p-304">Lecture 16 29/3/2018</p></article><p id="p-305">Following Serre '97, very readable article.</p>
-<p id="p-306">Equidistribution:</p>
+</div></article></div></article><article class="paragraphs" id="paragraphs-21"><h5 class="heading"><span class="title">Another application: Equidistribution of Hecke eigenvalues.</span></h5>
+<article class="aside-like" id="aside-16"><p id="p-303">Lecture 16 29/3/2018</p></article><p id="p-304">Following Serre '97, very readable article.</p>
+<p id="p-305">Equidistribution:</p>
 <article class="definition-like" id="definition-13"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">2.17</span>
 </h6>
-<p id="p-307">Let \((\Omega, \mu)\) be a measure space</p>
+<p id="p-306">Let \((\Omega, \mu)\) be a measure space</p>
 <div class="displaymath">
 \begin{equation*}
 \Omega\text{ compact}
@@ -1100,14 +1099,14 @@ H(4) = \frac{1}{2}
 </div></article><article class="example-like" id="example-9"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">2.18</span>
 </h6>
-<div class="displaymath" id="p-308">
+<div class="displaymath" id="p-307">
 \begin{equation*}
 [-1,1],\,\frac{\diff x}{2} = \diff \mu
 \end{equation*}
 </div></article><article class="remark-like" id="note-12"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">2.19</span>
 </h6>
-<p id="p-309">\(\mu\) gives a linear functional.</p>
+<p id="p-308">\(\mu\) gives a linear functional.</p>
 <div class="displaymath">
 \begin{equation*}
 f\mapsto \int_\Omega f(x) \diff \mu(x)\text{,}
@@ -1121,7 +1120,7 @@ f\mapsto \int_\Omega f(x) \diff \mu(x)\text{,}
 </div></article><article class="definition-like" id="definition-14"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">2.20</span><span class="title">\(\delta\) measures</span>
 </h6>
-<p id="p-310">Let \(L\) be a sequence of indices, going to \(\infty\) (this will be the indexing set for the weight \(k\)). For \(\lambda \in L\) let \(I_\lambda\) be a  non-empty finite set of cardinality</p>
+<p id="p-309">Let \(L\) be a sequence of indices, going to \(\infty\) (this will be the indexing set for the weight \(k\)). For \(\lambda \in L\) let \(I_\lambda\) be a  non-empty finite set of cardinality</p>
 <div class="displaymath">
 \begin{equation*}
 \#I_\lambda = d_\lambda
@@ -1133,7 +1132,7 @@ f\mapsto \int_\Omega f(x) \diff \mu(x)\text{,}
 \mathbf X _\lambda = (x_{i,\lambda}),\,i\in I_\lambda\text{.}
 \end{equation*}
 </div>
-<p id="p-311">We define</p>
+<p id="p-310">We define</p>
 <div class="displaymath">
 \begin{equation*}
 \delta _{\mathbf X_\lambda} = \frac{1}{d_\lambda} \sum_{i\in I_\lambda} \delta_{x_{i,\lambda}}
@@ -1145,7 +1144,7 @@ f\mapsto \int_\Omega f(x) \diff \mu(x)\text{,}
 \pair{f}{\delta _{\mathbf X_\lambda}} = \frac{1}{d_\lambda} \sum_{i\in I_\lambda} f(x_{i,\lambda})\text{.}
 \end{equation*}
 </div>
-<p id="p-312">The family \(\mathbf X_\lambda\) for \(\lambda \in L\) is called \(\mu\)-equidistributed (or equidistributed with respect to the measure \(\mu\)) if</p>
+<p id="p-311">The family \(\mathbf X_\lambda\) for \(\lambda \in L\) is called \(\mu\)-equidistributed (or equidistributed with respect to the measure \(\mu\)) if</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{\lambda \to \infty} \delta_{\mathbf X_\lambda} = \mu
@@ -1156,8 +1155,8 @@ f\mapsto \int_\Omega f(x) \diff \mu(x)\text{,}
 \begin{equation*}
 \lim_{\lambda \to \infty} \pair{f}{\delta_{\mathbf X_\lambda}} = \pair{f}{\mu},\,\forall f \in C(\Omega, \RR)\text{.}
 \end{equation*}
-</div></article><p id="p-313">So far these are all general statements. Let us put ourselves in the following situation:</p>
-<p id="p-314">For each \(\lambda \in L\) we have a linear operator</p>
+</div></article><p id="p-312">So far these are all general statements. Let us put ourselves in the following situation:</p>
+<p id="p-313">For each \(\lambda \in L\) we have a linear operator</p>
 <div class="displaymath">
 \begin{equation*}
 H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
@@ -1167,7 +1166,7 @@ H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
 <article class="theorem-like" id="proposition-6"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">2.21</span>
 </h6>
-<p id="p-315">TFAE</p>
+<p id="p-314">TFAE</p>
 <ol class="decimal">
 <li id="li-64"><div class="displaymath">
 \begin{equation*}
@@ -1181,16 +1180,16 @@ H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
 </div>
 </li>
 <li id="li-66">For all \(m \in \ZZ_{\ge 0}\) there exists a polynomial \(P\) of degree \(m\) s.t. <a knowl="./knowl/eqn-equidist-poly.html" knowl-id="xref-eqn-equidist-poly" alt="Equation 2.5 " title="Equation 2.5 ">(2.5)</a> is satisfied.</li>
-</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-27" id="proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-316">Exercise.</p></article></div>
-<p id="p-317">Now we will choose a special set of polynomials to work with.</p>
-<p id="p-318">Symmetric polynomials:</p>
-<p id="p-319">Let \(\Omega= \lb -2 , 2 \rb \leftrightarrow 2 \cos \lb -\pi, \pi\rb = \trace(\specialunitary(2,\CC))\text{,}\) this is really Satake parameters. For \(x\in \lb -2, 2\rb\) we have a corresponding \(2\cos (\phi)\text{.}\) Let</p>
+</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-27" id="proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-315">Exercise.</p></article></div>
+<p id="p-316">Now we will choose a special set of polynomials to work with.</p>
+<p id="p-317">Symmetric polynomials:</p>
+<p id="p-318">Let \(\Omega= \lb -2 , 2 \rb \leftrightarrow 2 \cos \lb -\pi, \pi\rb = \trace(\specialunitary(2,\CC))\text{,}\) this is really Satake parameters. For \(x\in \lb -2, 2\rb\) we have a corresponding \(2\cos (\phi)\text{.}\) Let</p>
 <div class="displaymath">
 \begin{equation*}
 X_n (x) = e^{in\phi} + e^{i(n-2)\phi} + \cdots + e^{-in\phi} = \trace (\Sym^n(U)),\,x = \trace(u)\text{.}
 \end{equation*}
 </div>
-<p id="p-320">Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of \(\specialunitary(2, \CC)\text{.}\)</p>
+<p id="p-319">Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of \(\specialunitary(2, \CC)\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdots + x_{|n-m|}\text{.}
@@ -1198,8 +1197,8 @@ X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdot
 </div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-9" id="exercise-9"><h6 class="heading">
 <span class="type">Exercise</span><span class="codenumber">2.22</span>
-</h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-321">Prove this.</p></article></div>
-<p id="p-322">Several measures:</p>
+</h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-320">Prove this.</p></article></div>
+<p id="p-321">Several measures:</p>
 <ol class="decimal">
 <li id="li-67">Sato-Tate:<div class="displaymath">
 \begin{equation*}
@@ -1263,7 +1262,7 @@ f_q(x) = \sum_{n=0}^\infty q^{-n} X_{2n}(x) = \frac{q+1}{(q^{1/2} + q^{-1/2})^2 
 <article class="theorem-like" id="theorem-16"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">2.23</span><span class="title">Serre '97</span>
 </h6>
-<p id="p-323">\(k \equiv 0 \pmod 2\) let \(s(k) = \dim(S_k(1))\)</p>
+<p id="p-322">\(k \equiv 0 \pmod 2\) let \(s(k) = \dim(S_k(1))\)</p>
 <div class="displaymath">
 \begin{equation*}
 T_k'(n) = \frac{T_k(n)}{n^{k-1/2}}
@@ -1274,7 +1273,7 @@ T_k'(n) = \frac{T_k(n)}{n^{k-1/2}}
 \begin{equation*}
 \mu_p = \frac{p+1}{(p^{1/2} + p^{-1/2})^2 - x^2} \frac 1 \pi \sqrt{1-\frac{x^2}{4}} \diff x\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-28" id="proof-28"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-28" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-324">Claim:</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-28" id="proof-28"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-28" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-323">Claim:</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)}
@@ -1285,7 +1284,7 @@ T_k'(n) = \frac{T_k(n)}{n^{k-1/2}}
 = \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{(k-1)/12} = \begin{cases} n^{-1/2} \amp \text{ if } n \text{ is a square}\\ 0 \amp\text{otw}   \end{cases}
 \end{equation*}
 </div>
-<p id="p-325">Assume the claim for now: Note that</p>
+<p id="p-324">Assume the claim for now: Note that</p>
 <div class="displaymath">
 \begin{equation*}
 T_k'(p^m) = X_m(T_k'(p))
@@ -1302,7 +1301,7 @@ T_k'(p^m) = X_m(T_k'(p))
 \sum_{m=0}^\infty X_m(T_k'(p))t^m
 \end{equation*}
 </div>
-<div class="displaymath" id="p-326">
+<div class="displaymath" id="p-325">
 \begin{equation*}
 = \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)} = \begin{cases} p^{-m/2} \amp m \equiv 0 \pmod 2\\ 0 \amp\text{otw}   \end{cases}
 \end{equation*}
@@ -1313,7 +1312,7 @@ T_k'(p^m) = X_m(T_k'(p))
 \end{equation*}
 </div>
 <p>by the claim and previous calculation.</p>
-<p id="p-327">Proof of the claim: Recall that the Eichler-Selberg trace formula says that</p>
+<p id="p-326">Proof of the claim: Recall that the Eichler-Selberg trace formula says that</p>
 <div class="displaymath">
 \begin{gather}
 \tr(T_k(n)) = \frac{k-1}{12} n^{k/2 -1} \delta_{n= \square}\label{eqn-serre-equi-1}\tag{2.6}\\
@@ -1321,8 +1320,8 @@ T_k'(p^m) = X_m(T_k'(p))
 - \frac 12 \sum_{dd' = n,\,d,d' \gt 0} \min(d,d')^{k-1}\label{eqn-serre-equi-3}\tag{2.8}
 \end{gather}
 </div>
-<p id="p-328">Sublemma: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O(n^{k/2})\)</p>
-<p id="p-329">Proof: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O_n(\sum_{t^2 \lt 4n} P_k(t,n) )\)</p>
+<p id="p-327">Sublemma: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O(n^{k/2})\)</p>
+<p id="p-328">Proof: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O_n(\sum_{t^2 \lt 4n} P_k(t,n) )\)</p>
 <div class="displaymath">
 \begin{equation*}
 P_k(t,n) = \frac{\rho^{k-1} - \bar \rho^{k-1}}{\rho - \bar \rho},\, \rho = \frac{t + i \sqrt{4n - t^2}}{2}
@@ -1338,8 +1337,8 @@ P_k(t,n) = \frac{\rho^{k-1} - \bar \rho^{k-1}}{\rho - \bar \rho},\, \rho = \frac
 \rho - \bar \rho = \sqrt{n - t^2}
 \end{equation*}
 </div>
-<p id="p-330">Sublemma: <a knowl="./knowl/eqn-serre-equi-3.html" knowl-id="xref-eqn-serre-equi-3" alt="Equation 2.8 " title="Equation 2.8 ">(2.8)</a> \(= O(n^{(k-1)/2})\) Proof: exercise.</p>
-<p id="p-331">The equations above combined with  the fact \(n^{k-1/2} \to n^{-1/2} \delta_{n=\square}\text{.}\)</p></article></div></article></article></section></section></div></main>
+<p id="p-329">Sublemma: <a knowl="./knowl/eqn-serre-equi-3.html" knowl-id="xref-eqn-serre-equi-3" alt="Equation 2.8 " title="Equation 2.8 ">(2.8)</a> \(= O(n^{(k-1)/2})\) Proof: exercise.</p>
+<p id="p-330">The equations above combined with  the fact \(n^{k-1/2} \to n^{-1/2} \delta_{n=\square}\text{.}\)</p></article></div></article></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

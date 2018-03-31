@@ -12,58 +12,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Observe \(\pair{-}{-}\) is \(\Gamma\)-invariant! i.e.</p>
-<div class="displaymath">
-\begin{equation*}
-\pair{\phi}{(m,n)} = \pair{\gamma \phi }{ \gamma(m,n)}
-\end{equation*}
-</div>
-<p>for all \(\gamma \in  \Gamma\text{.}\) Then</p>
-<div class="displaymath">
-\begin{equation*}
-\zeta(s, \Delta)  = \sum_{\phi \pmod \Gamma,\, |\phi| = \Delta} \sum_{(m,n) \in X/\Aut(\phi),\,\phi(m,n) \gt 0} \frac{1}{\phi(m,n)^s},\,\Re(s) \gt 1
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{\phi \in \Phi_\Delta/\Gamma} \sum_{x \in X/\Aut(\phi)} \frac{1}{\pair{\phi}{x}^s}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{(\phi,x) \in (\Phi_\Delta \times X)/\Gamma} \frac{1}{\pair{\phi}{x}^s}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation}
-= \sum_{x\in X/\Gamma} \sum_{\phi\in \Phi_\Delta/\Aut(x)} \frac{1}{\pair{\phi}{x}^s}\tag{2.4}
-\end{equation}
-</div>
-<p>we are using Fubini to swap the order of summation as the pairing is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a>. Finally note that</p>
-<div class="displaymath">
-\begin{equation*}
-x= \pm(m,n)\sim_{\Gamma} \pm(0,\gcd(m,n)),\, r = \gcd(m,n) \gt 0
-\end{equation*}
-</div>
-<p>so <a knowl="./knowl/eqn-zeta-delta-calc.html" knowl-id="xref-eqn-zeta-delta-calc" alt="Equation 2.4 " title="Equation 2.4 ">(2.4)</a></p>
-<div class="displaymath">
-\begin{equation*}
-= \sum_{r= 1}^\infty \sum_{\phi \in \Phi_\Delta/\Aut((r,0))} \frac{1}{\phi(r,0)^s}
-\end{equation*}
-</div>
-<p>what is \(\Aut((r,0))\text{?}\) It is</p>
-<div class="displaymath">
-\begin{equation*}
-\Gamma_\infty^\transpose = \left\{\begin{pmatrix} 1 \amp 0 \\ \ast \amp 1 \end{pmatrix}\right\} \text{ as }\begin{pmatrix} 1 \amp 0 \\ \ast \amp 1 \end{pmatrix}\begin{pmatrix} 0\\ r \end{pmatrix} = \begin{pmatrix} 0\\ r \end{pmatrix}
-\end{equation*}
-</div>
-<p>continuing we have</p>
-<div class="displaymath">
-\begin{equation*}
-\zeta(2s) \sum_{a= 1}^\infty  \frac{1}{a^s} \left\{ \sum_{b \pmod{2a},\, b^2 \equiv \Delta \pmod{4a}} 1\right\}
-\end{equation*}
-</div>
-<p>Exercise, show this is    the sum from before. Hint, consider, explicitly, the action of \(\gamma\in \Gamma_\infty^\transpose\) on \(\phi(u,v)\text{.}\)</p>
+<p>Back to the proof of the trace formula.</p>
 <span class="incontext"><a href="sec-eichler-selberg.html#p-296">in-context</a></span>
 </body>
 </html>
