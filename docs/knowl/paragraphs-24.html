@@ -11,76 +11,41 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="paragraphs"><h5 class="heading"><span class="title">A particular non-trivial additive character</span></h5>
-<p>If \(K_v= \RR,\CC\) let</p>
-<div class="displaymath">
-\begin{equation*}
-\lambda_0 \colon \RR \to \RR
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\xi \mapsto -\xi \pmod 1
-\end{equation*}
-</div>
-<p>then</p>
-<div class="displaymath">
-\begin{equation*}
-\chi_v(\xi) = e(\lambda(\xi)) = e^{2\pi  i \lambda(\xi)}
-\end{equation*}
-</div>
-<p>where</p>
-<div class="displaymath">
-\begin{equation*}
-\lambda(\xi) = \lambda_0(\tr_{K_v/\RR}(\xi))\text{.}
-\end{equation*}
-</div>
-<p>For \(K_v\) non-archimidean let</p>
-<div class="displaymath">
-\begin{equation*}
-\lambda_0 \colon \QQ_v \to \RR
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\xi \mapsto \xi \pmod 1
-\end{equation*}
-</div>
-<p>i.e. if</p>
-<div class="displaymath">
-\begin{equation*}
-\xi = a_{-N} \varpi_v^{-N} + \cdots + a_{-1}\varpi_v^{-1} \underbrace{+ \cdots}_{\in \ints_v}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\lambda_0 (\xi) = a_{-N} \varpi_v^{-N} + \cdots + a_{-1}\varpi_v^{-1}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\chi_v(\xi) = e(\lambda(\xi))
-\end{equation*}
-</div>
-<p>where</p>
-<div class="displaymath">
-\begin{equation*}
-\lambda(\xi) = \lambda_0(\tr_{K_v/\QQ_v}(\xi))\text{.}
-\end{equation*}
-</div>
+<article class="paragraphs"><h5 class="heading"><span class="title">Haar measures</span></h5>
+<ul class="disc">
+<li>\(\CC\text{,}\) \(\mu_v\) is 2 times the Lebesge measure.</li>
+<li>\(\RR\text{,}\) \(\mu_v\) is the Lebesge measure.</li>
+<li>\(K_v\text{,}\) \(\mu_v(\ints_v) = N(D_v)^{-1/2}\text{.}\)</li>
+</ul>
 <article class="theorem-like"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.2</span>
+<span class="type">Lemma</span><span class="codenumber">3.3</span>
 </h6>
-<p>Let \(v\) be non-archimidean</p>
+<p>\(\alpha \ne 0\) implies</p>
 <div class="displaymath">
 \begin{equation*}
-\chi_{v,\eta}|_{\ints_v} \equiv 1 \iff \eta\in D_v^{-1}
+\mu_v(\alpha M) = |\alpha|_v \mu(M)
 \end{equation*}
 </div>
-<p>where \(D_v\) is the different ideal of \(K_v\)</p>
+<p>for all measurable sets \(M\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-30-hidden.html" knowl-id="hidden-proof-30" alt="Proof 3.3.1 " title="Proof 3.3.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>I.e.</p>
 <div class="displaymath">
 \begin{equation*}
-D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}\text{.}
+\int f(x) \diff \mu(x) = |\alpha|_v \int f(\alpha x) \diff \mu(x)\text{.}
+\end{equation*}
+</div>
+<article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.4</span><span class="title">Fourier Transform</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\hat f(\eta) = \int f(\xi) e(-\lambda_v(\eta\xi)) \diff \mu_v(\xi)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.5</span><span class="title">Fourier inversion</span>
+</h6>
+<p>Let \(f \in L^1(K_v^+)\) such that \(\hat f \in L^1(K_v^+)\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+f(\xi) = \int \hat f( \eta) e(\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)\text{.}
 \end{equation*}
 </div></article></article><span class="incontext"><a href="sec-tates-thesis.html#paragraphs-24">in-context</a></span>
 </body>
