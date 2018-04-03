@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Haar measures</span></h5>
+<ul class="disc">
+<li>\(\CC\text{,}\) \(\mu_v\) is 2 times the Lebesge measure.</li>
+<li>\(\RR\text{,}\) \(\mu_v\) is the Lebesge measure.</li>
+<li>\(K_v\text{,}\) \(\mu_v(\ints_v) = N(D_v)^{-1/2}\text{.}\)</li>
+</ul>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.3</span>
+</h6>
+<p>\(\alpha \ne 0\) implies</p>
+<div class="displaymath">
+\begin{equation*}
+\mu_v(\alpha M) = |\alpha|_v \mu(M)
+\end{equation*}
+</div>
+<p>for all measurable sets \(M\text{.}\)</p></article><article class="hiddenproof"><a knowl="./knowl/proof-30-hidden.html" knowl-id="hidden-proof-30" alt="Proof 3.3.1 " title="Proof 3.3.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>I.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\int f(x) \diff \mu(x) = |\alpha|_v \int f(\alpha x) \diff \mu(x)\text{.}
+\end{equation*}
+</div>
+<article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.4</span><span class="title">Fourier Transform</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\hat f(\eta) = \int f(\xi) e(-\lambda_v(\eta\xi)) \diff \mu_v(\xi)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.5</span><span class="title">Fourier inversion</span>
+</h6>
+<p>Let \(f \in L^1(K_v^+)\) such that \(\hat f \in L^1(K_v^+)\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+f(\xi) = \int \hat f( \eta) e(\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)\text{.}
+\end{equation*}
+</div></article></article><span class="incontext"><a href="sec-tates-thesis.html#paragraphs-25">in-context</a></span>
+</body>
+</html>

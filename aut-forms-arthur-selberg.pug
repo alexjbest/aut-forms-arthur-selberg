@@ -2348,3 +2348,215 @@ section#sec-eichler-selberg
                         | Proof: exercise.
                     p
                         | The equations above combined with  the fact #[m n^{k-1/2} \to n^{-1/2} \delta_{n=\square}].
+
+section#sec-tates-thesis
+    title Tate's Thesis (#[m \GL_1] theory)
+
+    aside: p Lecture 17 3/4/2018
+    paragraphs
+        title What's the aim?
+        p
+            | Redo Hecke's work, in an adelic setting, more canonically.
+            | I.e. obtain analytic continuation and functional equation of Hecke #[m L]-functions.
+            | This was also seemingly a bit more general than the Hecke theory.
+            | The local theory will give us terms like
+            me (1 - \frac{\chi(p)}{p^r})\inv
+            | and the global theory will give
+            me \prod_p (1 - \frac{\chi(p)}{p^r})\inv
+            | .
+
+    subsection
+        title Local theory
+
+        introduction: p
+            | For all of today, #[m K] is  a number field and   #[m v] a place of #[m K] so that
+            me K_v = \begin{cases} \RR,\CC \amp \text{ if } v \text{ is archimidean} \\ [K_v: \QQ_v] \lt \infty \amp \text{ if } v \text{ is non-archimidean}\end{cases}
+            | . If #[m \alpha \in K_v] then
+            me |\alpha|_v = \begin{cases} |\alpha|_\CC^2 \amp \text{ if } K_v = \CC \\ |\alpha|_\RR   \amp \text{ if } K_v = \RR \\ N(\varpi_v)^{-v_v(\alpha)} \amp \text{ if } v \text{ is non-archimidean}\end{cases}
+            | where #[m |N(\varpi_v) = | \ints_v / \varpi \ints_v|].
+
+        subsubsection
+            title Additive theory (Theory of Fourier transform)
+
+            p
+                | Let #[m K_v^+] denote the additive group of #[m K_v].
+
+            paragraphs
+                title Characters of #[m K_v^+] (continuous)
+
+                lemma
+                    statement: p
+                        | Let #[m \chi_v] be a non-trivial additive character of #[m K_v^+], i.e.
+                        me \chi_v \colon K_v^+ \to \CC^\times
+                        | then all the characters of #[m K_v^+] are of the form
+                        me \chi_v(\eta \cdot) = \chi_{v,\eta}
+                        | for #[m \eta \in K_v^+] i.e.
+                        me \chi_{v,\eta}(\xi) = \chi_v(\eta \xi)
+                        | which implies
+                        me K_v^+  \simeq \widehat K_v^+
+                        | both topologically and algebraically.
+                    proof: p
+                        | Exercise.
+
+            p
+                | This is not really canonical, but as far as number theorists are concerned there is a right choice of additive character to fix.
+
+            paragraphs
+                title A particular non-trivial additive character
+
+                p
+                    | If #[m K_v= \RR,\CC] let
+                    me \lambda_0 \colon \RR \to \RR
+                    me \xi \mapsto -\xi \pmod 1
+                    | then
+                    me \chi_v(\xi) = e(\lambda(\xi)) = e^{2\pi  i \lambda(\xi)}
+                    | where
+                    me \lambda(\xi) = \lambda_0(\tr_{K_v/\RR}(\xi))
+                    | .
+                p
+                    | For #[m K_v] non-archimidean let
+                    me \lambda_0 \colon \QQ_v \to \RR
+                    me \xi \mapsto \xi \pmod 1
+                    | i.e. if
+                    me \xi = a_{-N} \varpi_v^{-N} + \cdots + a_{-1}\varpi_v^{-1} \underbrace{+ \cdots}_{\in \ints_v}
+                    me \lambda_0 (\xi) = a_{-N} \varpi_v^{-N} + \cdots + a_{-1}\varpi_v^{-1}
+                    me \chi_v(\xi) = e(\lambda(\xi))
+                    | where
+                    me \lambda(\xi) = \lambda_0(\tr_{K_v/\QQ_v}(\xi))
+                    | .
+
+                lemma
+                    statement: p
+                        | Let #[m v] be non-archimidean
+                        me \chi_{v,\eta}|_{\ints_v} \equiv 1 \iff \eta\in D_v^{-1}
+                        | where #[m D_v] is the different ideal of #[m K_v]
+                        me D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}
+                        | .
+
+            paragraphs
+                title Haar measures
+
+                p
+                    ul
+                        li
+                            | #[m \CC], #[m \mu_v] is 2 times the Lebesge measure.
+                        li
+                            | #[m \RR], #[m \mu_v] is the Lebesge measure.
+                        li
+                            | #[m K_v], #[m \mu_v(\ints_v) = N(D_v)^{-1/2}].
+
+                lemma
+                    statement: p
+                        | #[m \alpha \ne 0] implies
+                        me \mu_v(\alpha M) = |\alpha|_v \mu(M)
+                        | for all measurable sets #[m M].
+                    proof: p Exercise
+
+                p
+                    | I.e.
+                    me \int f(x) \diff \mu(x) = |\alpha|_v \int f(\alpha x) \diff \mu(x)
+                    | .
+
+                definition
+                    title Fourier Transform
+                    statement: p
+                        me \hat f(\eta) = \int f(\xi) e(-\lambda_v(\eta\xi)) \diff \mu_v(\xi)
+                        | .
+
+                theorem
+                    title Fourier inversion
+                    statement: p
+                        | Let #[m f \in L^1(K_v^+)] such that #[m \hat f \in L^1(K_v^+)], then
+                        me f(\xi) = \int \hat f( \eta) e(\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)
+                        | .
+
+        subsubsection
+            title Multiplicative theory
+
+            definition
+                title Unit group
+                statement: p
+                    me U_v = \ker(x\mapsto |x|_v)
+                    | it is compact, open if #[m v] is non-archimidean, e.g.
+                    me U_v = \begin{cases}S^1 \amp \text{ if }K_v = \CC \\S^1 \amp \text{ if }K_v = \RR \\ \ints_v^\times \amp\text{ if } v\text{ non-archimidean}\end{cases}
+                    | .
+
+            definition#def-quasichar
+                statement: p
+                    | A #[term quasicharacter] is
+                    me K_v^\times \to \CC^\times
+                    | A (unitary) character is
+                    me K_v^\times \to S^1
+                    | .
+                    | Such a map is unramified if it is trivial on #[m U_v].
+                    | E.g.
+                    me \xi \mapsto |\xi|_v^s
+                    | is unramified #[m s\in  \CC].
+
+            lemma
+                statement: p
+                    | All unramified characters are of this form
+                    me \widehat K_\nr^\times= \CC/ (2\pi i/ \log(N(\varpi_v)))
+                    | if #[m v] is non-archimidean.
+
+            p
+                | Choose a uniformiser #[m \varpi_v] s.t.
+                me \begin{array}{ccc} \alpha \amp \tilde \alpha \amp \varpi_v^{v_v(\alpha)} \\ \CC^\times \amp S^1 \amp \RR_+ \\ \RR^\times \amp \{\pm 1\}\amp \RR_+ \\ K_v^\times \amp \ints_v^\times \amp \ZZ\end{array}
+                | .
+
+            theorem
+                statement: p
+                    | All quasicharacters of #[m K_v^\times] are of the form
+                    me \alpha \mapsto c(\alpha) = \tilde c (\tilde \alpha) |\alpha|^s
+                    | where
+                    me \tilde c \colon U_v \to \CC^\times
+                proof: p
+                    | Exercise.
+
+            example
+                statement: p
+                    | Dirichlet characters mod #[m p].
+
+            p
+                | E.g. over #[m \CC^\times] then
+                me \tilde c(\alpha) = \left(\frac{\alpha}{|\alpha|}\right)^m,\,m\in \ZZ
+                | over #[m \RR^\times] then
+                me \tilde c(\alpha) = \left(\frac{\alpha}{|\alpha|}\right)^m,\,m\in \{0,1\}
+                | over #[m \ints_v^\times] then
+                me \tilde c(\alpha)|_{1+\varpi^k\ints_v} \equiv 1
+                | because #[m c] is a continuous map from a #[m p]-adic field to the complex numbers.
+                | Let
+                me \tilde k = \min\{k\in \NN : \tilde c(\alpha)|_{1+ \varpi_v^k \ints_v} \equiv 1\}
+                |  and #[m \varpi_v^{\tilde k} = f_v] is the conductor of #[m \tilde c]
+
+            note
+                p
+                    | Sometimes this #[m \tilde k] is called the ramification degree of #[m c].
+
+            note: p
+                | If #[m c = \tilde c | \cdot |^s] then #[m  \Re(s) = \sigma] is uniquely determined  by #[m c].
+                | It is called the exponent of #[m c].
+                | In modern lingo this is measuring how non-tempered #[m c] is.
+
+            paragraphs
+                title Multiplicative Haar measures
+
+                p
+                    | Let
+                    me \diff_v^times \alpha = \begin{cases} \frac{\diff_v \alpha}{|\alpha|_v} \amp \text{ if } v \text{ archimidean}\\ \left(\frac{1}{1-1/N(\varpi_v)}\right) \frac{\diff_v \alpha}{|\alpha|_v}  \amp \text{ if } v \text{ non-archimidean}\end{cases}
+                    | where #[m \diff_v \alpha] is the additive Haar measure.
+                    | these extra factors are really Tamagawa numbers.
+                    | They make the product in the next lemma converge.
+
+                lemma
+                    statement: p
+                        | For #[m v] non-archimidean
+                        me \int_{\ints_v^\times } \diff_v^\times \alpha = N(D_v)^{-1/2}
+                        | .
+                    proof: p
+                        me \int_{\ints_v^\times} \diff_v^\times \alpha= \int_{\ints_v^\times} \frac{\diff_v \alpha}{|\alpha|_v} (1- N(\varpi_v)\inv)\inv
+                        me                                            = \int_{\ints_v^\times} \diff_v \alpha (1- N(\varpi_v)\inv)\inv
+                        me =  \sum_{\beta \in (\ints_v/\varpi_v\ints_v)^\times} \int _{\beta + \varpi_v\ints_v} \diff_v \alpha(1- N(\varpi_v)\inv)\inv
+                        me =  |\varpi_v|_v \sum_{\beta \in (\ints_v/\varpi_v\ints_v)^\times} \int _{\ints_v} \diff_v \alpha(1- N(\varpi_v)\inv)\inv
+                        me = N(D_v)^{-1/2} |\varpi_v| (N(\varpi_v) - 1) (1- N(\varpi_v)\inv)\inv = N(D_v)^{-1/2}
+                        | .

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AFAS Tate's Thesis (\(\GL_1\) theory)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/xyjax/xypic.js", "AMSmath.js", "AMSsymbols.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
+{\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
+\array{#1}}
+{\endarray}
+
+\newcommand{\ideal}[1]{\mathfrak{#1}}
+\newcommand{\lie}[1]{\operatorname{\mathfrak{#1}}}
+\newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+\newcommand{\Lie}{\operatorname{Lie}}
+
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand{\cinf}{C^\infty}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\pair}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\lb}{[}
+\newcommand{\rb}{]}
+\newcommand{\powerseries}[2]{#1[[#2]]}
+
+
+\newcommand{\partder}[2][]{\frac{\partial #1}{\partial #2}}
+
+
+\providecommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+\DeclareMathOperator{\Sha}{III}
+
+
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\HH}{\mathbf{H}}
+\newcommand{\FF}{\mathbf{F}}
+\newcommand{\GG}{\mathbf{G}}
+\newcommand{\ints}{\mathcal{O}}
+\newcommand{\adeles}{\mathbf{A}}
+
+\newcommand{\alg}{\mathrm{alg}}
+
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\catname}[1]{{\mathrm\textbf{#1}}}
+\newcommand{\Rings}{\mathrm{Rings}}
+
+\newcommand{\Ar}{\mathrm{Ar}}
+\newcommand{\dR}{\mathrm{dR}}
+\newcommand{\et}{\mathrm{\acute{e}t}}
+\newcommand{\Pet}{\mathrm{Pet}}
+
+\newcommand{\pinf}{{1/p^\infty}}
+
+\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+\newcommand{\acts}{\circlearrowright}
+
+\newcommand{\ab}{\mathrm{ab}}
+\newcommand{\alm}{\mathrm{a}}
+\newcommand{\an}{\mathrm{an}}
+\newcommand{\alt}{\mathrm{alt}}
+\newcommand{\cyc}{\mathrm{cyc}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\nr}{\mathrm{nr}}
+\newcommand{\ns}{\mathrm{ns}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\pre}{\mathrm{pre}}
+\newcommand{\reg}{\mathrm{reg}}
+\newcommand{\spec}{\mathrm{spec}}
+\newcommand{\Set}{\mathrm{Set}}
+\newcommand{\sep}{\mathrm{sep}}
+\newcommand{\St}{\mathrm{St}}
+\newcommand{\tors}{\mathrm{tors}}
+\newcommand{\transpose}{\mathrm{T}}
+
+
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Nat}{Nat}
+\DeclareMathOperator{\Syl}{Syl}
+\DeclareMathOperator{\Tgt}{Tgt}
+\DeclareMathOperator{\sprep}{sp}
+\DeclareMathOperator{\vol}{Vol}
+
+\DeclareMathOperator{\divisor}{div}
+\DeclareMathOperator{\divisors}{Div}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Princ}{Princ}
+\DeclareMathOperator{\Cycles}{Cycles}
+\DeclareMathOperator{\supp}{supp}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+
+\DeclareMathOperator{\gr}{gr}
+
+
+\DeclareMathOperator{\polylog}{\mathcal{L}}
+
+\DeclareMathOperator{\disc}{disc}
+
+\DeclareMathOperator{\Tan}{Tan}
+\DeclareMathOperator{\Cotan}{Cotan}
+\DeclareMathOperator{\Sing}{Sing}
+
+\DeclareMathOperator{\Sel}{Sel}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\Rep}{Rep}
+
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator{\coim}{coim}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\characteristic}{char}
+\DeclareMathOperator{\orient}{or}
+\DeclareMathOperator{\leadterm}{lt}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spf}{Spf}
+\DeclareMathOperator{\Spv}{Spv}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Spm}{Spm}
+\DeclareMathOperator{\specialisation}{sp}
+\DeclareMathOperator{\Max}{Max}
+\newcommand{\Gal}[2]{\operatorname{Gal}(#1/#2)}
+\newcommand{\absgal}[1]{\operatorname{Gal}(\overline{#1}/#1)}
+\newcommand{\sepgal}[1]{\operatorname{Gal}(#1^\sep/#1)}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Res}{Res}
+
+
+\DeclareMathOperator{\power}{\mathcal{P}}
+\DeclareMathOperator{\aff}{\mathbf{A}}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\norm}{Norm}
+\DeclareMathOperator{\trace}{Tr}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\NS}{NS}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\vf}{\mathcal{V}}
+\DeclareMathOperator{\krulldim}{krulldim}
+\DeclareMathOperator{\trdeg}{trdeg}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\Prob}{Prob}
+
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\orth}{O}
+\DeclareMathOperator{\unitary}{U}
+\DeclareMathOperator{\specialunitary}{SU}
+\DeclareMathOperator{\Sym}{Sym}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="aut-forms-arthur-selberg.html"><span class="title">Automorphic forms and the Arthur-Selberg trace formula</span><span class="subtitle">MA842 BU Spring 2018</span></a></h1>
+<p class="byline">Salim Ali Altuğ</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-eichler-selberg.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-eichler-selberg.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
+<ul>
+<li><a href="sec-aut-forms-motivation.html#subsection-1" data-scroll="subsection-1">Goal</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-2" data-scroll="subsection-2">Motivation</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-3" data-scroll="subsection-3">Motivating example</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-4" data-scroll="subsection-4">Modular forms</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-5" data-scroll="subsection-5">Euclidean Harmonic analysis</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-6" data-scroll="subsection-6">The hyperbolic plane \(\HH\)</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-7" data-scroll="subsection-7">\(\HH\) as a homogeneous space</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-8" data-scroll="subsection-8">\(\Delta_\HH\)</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-9" data-scroll="subsection-9">Integral operators</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
+</ul>
+<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<ul>
+<li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
+<li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
+</ul>
+<h2 class="link active"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
+<ul><li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-tates-thesis"><h2 class="heading hide-type" alt="Section 3 Tate's Thesis (\(\GL_1\) theory)">
+<span class="type">Section</span><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span>
+</h2>
+<a href="sec-tates-thesis.html" class="permalink">¶</a><article class="aside-like" id="aside-17"><p id="p-331">Lecture 17 3/4/2018</p></article><article class="paragraphs" id="paragraphs-22"><h5 class="heading"><span class="title punctuated">What's the aim?</span></h5>
+<p id="p-332">Redo Hecke's work, in an adelic setting, more canonically. I.e. obtain analytic continuation and functional equation of Hecke \(L\)-functions. This was also seemingly a bit more general than the Hecke theory. The local theory will give us terms like</p>
+<div class="displaymath">
+\begin{equation*}
+(1 - \frac{\chi(p)}{p^r})\inv
+\end{equation*}
+</div>
+<p>and the global theory will give</p>
+<div class="displaymath">
+\begin{equation*}
+\prod_p (1 - \frac{\chi(p)}{p^r})\inv\text{.}
+\end{equation*}
+</div></article><section class="subsection" id="subsection-14"><h3 class="heading hide-type" alt="Subsection 3.1 Local theory">
+<span class="type">Subsection</span><span class="codenumber">3.1</span><span class="title">Local theory</span>
+</h3>
+<section class="introduction" id="introduction-5"><p id="p-333">For all of today, \(K\) is  a number field and   \(v\) a place of \(K\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+K_v = \begin{cases} \RR,\CC \amp \text{ if } v \text{ is archimidean} \\ [K_v: \QQ_v] \lt \infty \amp \text{ if } v \text{ is non-archimidean}\end{cases}\text{.}
+\end{equation*}
+</div>
+<p>If \(\alpha \in K_v\) then</p>
+<div class="displaymath">
+\begin{equation*}
+|\alpha|_v = \begin{cases} |\alpha|_\CC^2 \amp \text{ if } K_v = \CC \\ |\alpha|_\RR   \amp \text{ if } K_v = \RR \\ N(\varpi_v)^{-v_v(\alpha)} \amp \text{ if } v \text{ is non-archimidean}\end{cases}
+\end{equation*}
+</div>
+<p>where \(|N(\varpi_v) = | \ints_v / \varpi \ints_v|\text{.}\)</p></section><section class="subsubsection" id="subsubsection-11"><h4 class="heading hide-type" alt="Subsubsection 3.1.1 Additive theory (Theory of Fourier transform)">
+<span class="type">Subsubsection</span><span class="codenumber">3.1.1</span><span class="title">Additive theory (Theory of Fourier transform)</span>
+</h4>
+<p id="p-334">Let \(K_v^+\) denote the additive group of \(K_v\text{.}\)</p>
+<article class="paragraphs" id="paragraphs-23"><h5 class="heading"><span class="title">Characters of \(K_v^+\) (continuous)</span></h5>
+<article class="theorem-like" id="lemma-7"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.1</span>
+</h6>
+<p id="p-335">Let \(\chi_v\) be a non-trivial additive character of \(K_v^+\text{,}\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_v \colon K_v^+ \to \CC^\times
+\end{equation*}
+</div>
+<p>then all the characters of \(K_v^+\) are of the form</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_v(\eta \cdot) = \chi_{v,\eta}
+\end{equation*}
+</div>
+<p>for \(\eta \in K_v^+\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_{v,\eta}(\xi) = \chi_v(\eta \xi)
+\end{equation*}
+</div>
+<p>which implies</p>
+<div class="displaymath">
+\begin{equation*}
+K_v^+  \simeq \widehat K_v^+
+\end{equation*}
+</div>
+<p>both topologically and algebraically.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-29" id="proof-29"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-29" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-336">Exercise.</p></article></div></article><p id="p-337">This is not really canonical, but as far as number theorists are concerned there is a right choice of additive character to fix.</p>
+<article class="paragraphs" id="paragraphs-24"><h5 class="heading"><span class="title">A particular non-trivial additive character</span></h5>
+<p id="p-338">If \(K_v= \RR,\CC\) let</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_0 \colon \RR \to \RR
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\xi \mapsto -\xi \pmod 1
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_v(\xi) = e(\lambda(\xi)) = e^{2\pi  i \lambda(\xi)}
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda(\xi) = \lambda_0(\tr_{K_v/\RR}(\xi))\text{.}
+\end{equation*}
+</div>
+<p id="p-339">For \(K_v\) non-archimidean let</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_0 \colon \QQ_v \to \RR
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\xi \mapsto \xi \pmod 1
+\end{equation*}
+</div>
+<p>i.e. if</p>
+<div class="displaymath">
+\begin{equation*}
+\xi = a_{-N} \varpi_v^{-N} + \cdots + a_{-1}\varpi_v^{-1} \underbrace{+ \cdots}_{\in \ints_v}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda_0 (\xi) = a_{-N} \varpi_v^{-N} + \cdots + a_{-1}\varpi_v^{-1}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\chi_v(\xi) = e(\lambda(\xi))
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda(\xi) = \lambda_0(\tr_{K_v/\QQ_v}(\xi))\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="lemma-8"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.2</span>
+</h6>
+<p id="p-340">Let \(v\) be non-archimidean</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_{v,\eta}|_{\ints_v} \equiv 1 \iff \eta\in D_v^{-1}
+\end{equation*}
+</div>
+<p>where \(D_v\) is the different ideal of \(K_v\)</p>
+<div class="displaymath">
+\begin{equation*}
+D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}\text{.}
+\end{equation*}
+</div></article></article><article class="paragraphs" id="paragraphs-25"><h5 class="heading"><span class="title">Haar measures</span></h5>
+<ul id="p-341" class="disc">
+<li id="li-69">\(\CC\text{,}\) \(\mu_v\) is 2 times the Lebesge measure.</li>
+<li id="li-70">\(\RR\text{,}\) \(\mu_v\) is the Lebesge measure.</li>
+<li id="li-71">\(K_v\text{,}\) \(\mu_v(\ints_v) = N(D_v)^{-1/2}\text{.}\)</li>
+</ul>
+<article class="theorem-like" id="lemma-9"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.3</span>
+</h6>
+<p id="p-342">\(\alpha \ne 0\) implies</p>
+<div class="displaymath">
+\begin{equation*}
+\mu_v(\alpha M) = |\alpha|_v \mu(M)
+\end{equation*}
+</div>
+<p>for all measurable sets \(M\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-30" id="proof-30"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-30" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-343">Exercise</p></article></div>
+<p id="p-344">I.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\int f(x) \diff \mu(x) = |\alpha|_v \int f(\alpha x) \diff \mu(x)\text{.}
+\end{equation*}
+</div>
+<article class="definition-like" id="definition-15"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.4</span><span class="title">Fourier Transform</span>
+</h6>
+<div class="displaymath" id="p-345">
+\begin{equation*}
+\hat f(\eta) = \int f(\xi) e(-\lambda_v(\eta\xi)) \diff \mu_v(\xi)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-17"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.5</span><span class="title">Fourier inversion</span>
+</h6>
+<p id="p-346">Let \(f \in L^1(K_v^+)\) such that \(\hat f \in L^1(K_v^+)\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+f(\xi) = \int \hat f( \eta) e(\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)\text{.}
+\end{equation*}
+</div></article></article></section><section class="subsubsection" id="subsubsection-12"><h4 class="heading hide-type" alt="Subsubsection 3.1.2 Multiplicative theory">
+<span class="type">Subsubsection</span><span class="codenumber">3.1.2</span><span class="title">Multiplicative theory</span>
+</h4>
+<article class="definition-like" id="definition-16"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.6</span><span class="title">Unit group</span>
+</h6>
+<div class="displaymath" id="p-347">
+\begin{equation*}
+U_v = \ker(x\mapsto |x|_v)
+\end{equation*}
+</div>
+<p>it is compact, open if \(v\) is non-archimidean, e.g.</p>
+<div class="displaymath">
+\begin{equation*}
+U_v = \begin{cases}S^1 \amp \text{ if }K_v = \CC \\S^1 \amp \text{ if }K_v = \RR \\ \ints_v^\times \amp\text{ if } v\text{ non-archimidean}\end{cases}\text{.}
+\end{equation*}
+</div></article><article class="definition-like" id="def-quasichar"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.7</span>
+</h6>
+<p id="p-348">A <dfn class="terminology">quasicharacter</dfn> is</p>
+<div class="displaymath">
+\begin{equation*}
+K_v^\times \to \CC^\times
+\end{equation*}
+</div>
+<p>A (unitary) character is</p>
+<div class="displaymath">
+\begin{equation*}
+K_v^\times \to S^1\text{.}
+\end{equation*}
+</div>
+<p>Such a map is unramified if it is trivial on \(U_v\text{.}\) E.g.</p>
+<div class="displaymath">
+\begin{equation*}
+\xi \mapsto |\xi|_v^s
+\end{equation*}
+</div>
+<p>is unramified \(s\in  \CC\text{.}\)</p></article><article class="theorem-like" id="lemma-10"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.8</span>
+</h6>
+<p id="p-349">All unramified characters are of this form</p>
+<div class="displaymath">
+\begin{equation*}
+\widehat K_\nr^\times= \CC/ (2\pi i/ \log(N(\varpi_v)))
+\end{equation*}
+</div>
+<p>if \(v\) is non-archimidean.</p></article><p id="p-350">Choose a uniformiser \(\varpi_v\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{ccc} \alpha \amp \tilde \alpha \amp \varpi_v^{v_v(\alpha)} \\ \CC^\times \amp S^1 \amp \RR_+ \\ \RR^\times \amp \{\pm 1\}\amp \RR_+ \\ K_v^\times \amp \ints_v^\times \amp \ZZ\end{array}\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-18"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.9</span>
+</h6>
+<p id="p-351">All <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacters</a> of \(K_v^\times\) are of the form</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha \mapsto c(\alpha) = \tilde c (\tilde \alpha) |\alpha|^s
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde c \colon U_v \to \CC^\times
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-31" id="proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-352">Exercise.</p></article></div>
+<article class="example-like" id="example-10"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">3.10</span>
+</h6>
+<p id="p-353">Dirichlet characters mod \(p\text{.}\)</p></article><p id="p-354">E.g. over \(\CC^\times\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde c(\alpha) = \left(\frac{\alpha}{|\alpha|}\right)^m,\,m\in \ZZ
+\end{equation*}
+</div>
+<p>over \(\RR^\times\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde c(\alpha) = \left(\frac{\alpha}{|\alpha|}\right)^m,\,m\in \{0,1\}
+\end{equation*}
+</div>
+<p>over \(\ints_v^\times\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde c(\alpha)|_{1+\varpi^k\ints_v} \equiv 1
+\end{equation*}
+</div>
+<p>because \(c\) is a continuous map from a \(p\)-adic field to the complex numbers. Let</p>
+<div class="displaymath">
+\begin{equation*}
+\tilde k = \min\{k\in \NN : \tilde c(\alpha)|_{1+ \varpi_v^k \ints_v} \equiv 1\}
+\end{equation*}
+</div>
+<p>and \(\varpi_v^{\tilde k} = f_v\) is the conductor of \(\tilde c\)</p>
+<article class="remark-like" id="note-13"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">3.11</span>
+</h6>
+<p id="p-355">Sometimes this \(\tilde k\) is called the ramification degree of \(c\text{.}\)</p></article><article class="remark-like" id="note-14"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">3.12</span>
+</h6>
+<p id="p-356">If \(c = \tilde c | \cdot |^s\) then \(\Re(s) = \sigma\) is uniquely determined  by \(c\text{.}\) It is called the exponent of \(c\text{.}\) In modern lingo this is measuring how non-tempered \(c\) is.</p></article><article class="paragraphs" id="paragraphs-26"><h5 class="heading"><span class="title">Multiplicative Haar measures</span></h5>
+<p id="p-357">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\diff_v^times \alpha = \begin{cases} \frac{\diff_v \alpha}{|\alpha|_v} \amp \text{ if } v \text{ archimidean}\\ \left(\frac{1}{1-1/N(\varpi_v)}\right) \frac{\diff_v \alpha}{|\alpha|_v}  \amp \text{ if } v \text{ non-archimidean}\end{cases}
+\end{equation*}
+</div>
+<p>where \(\diff_v \alpha\) is the additive Haar measure. these extra factors are really Tamagawa numbers. They make the product in the next lemma converge.</p>
+<article class="theorem-like" id="lemma-11"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.13</span>
+</h6>
+<p id="p-358">For \(v\) non-archimidean</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\ints_v^\times } \diff_v^\times \alpha = N(D_v)^{-1/2}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-32" id="proof-32"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-32" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-359">
+\begin{equation*}
+\int_{\ints_v^\times} \diff_v^\times \alpha= \int_{\ints_v^\times} \frac{\diff_v \alpha}{|\alpha|_v} (1- N(\varpi_v)\inv)\inv
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{\ints_v^\times} \diff_v \alpha (1- N(\varpi_v)\inv)\inv
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=  \sum_{\beta \in (\ints_v/\varpi_v\ints_v)^\times} \int _{\beta + \varpi_v\ints_v} \diff_v \alpha(1- N(\varpi_v)\inv)\inv
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=  |\varpi_v|_v \sum_{\beta \in (\ints_v/\varpi_v\ints_v)^\times} \int _{\ints_v} \diff_v \alpha(1- N(\varpi_v)\inv)\inv
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= N(D_v)^{-1/2} |\varpi_v| (N(\varpi_v) - 1) (1- N(\varpi_v)\inv)\inv = N(D_v)^{-1/2}\text{.}
+\end{equation*}
+</div></article></div></article></section></section></section></div></main>
+</div>
+<!--Start: Google code--><script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-48250536-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code-->
+</body>
+</html>
