@@ -61,6 +61,7 @@ MathJax.Hub.Config({
 \newcommand{\diff}{\mathop{}\!\mathrm{d}}
 \newcommand{\cinf}{C^\infty}
 \newcommand{\inv}{^{-1}}
+\newcommand{\units}{^{\times}}
 
 \newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
 \newcommand{\pair}[2]{\left\langle #1, #2 \right\rangle}
@@ -405,8 +406,8 @@ D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}\text{.}
 \end{equation*}
 </div></article></article><article class="paragraphs" id="paragraphs-24"><h5 class="heading"><span class="title">Haar measures</span></h5>
 <ul id="p-341" class="disc">
-<li id="li-69">\(\CC\text{,}\) \(\mu_v\) is 2 times the Lebesge measure.</li>
-<li id="li-70">\(\RR\text{,}\) \(\mu_v\) is the Lebesge measure.</li>
+<li id="li-69">\(\CC\text{,}\) \(\mu_v\) is 2 times the Lebesgue measure.</li>
+<li id="li-70">\(\RR\text{,}\) \(\mu_v\) is the Lebesgue measure.</li>
 <li id="li-71">\(K_v\text{,}\) \(\mu_v(\ints_v) = N(D_v)^{-1/2}\text{.}\)</li>
 </ul>
 <article class="theorem-like" id="lemma-9"><h6 class="heading">
@@ -438,7 +439,7 @@ D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}\text{.}
 <p id="p-346">Let \(f \in L^1(K_v^+)\) such that \(\hat f \in L^1(K_v^+)\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
-f(\xi) = \int \hat f( \eta) e(\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)\text{.}
+f(\xi) = \int \hat f( \eta) e(-\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)\text{.}
 \end{equation*}
 </div></article></article></section><section class="subsubsection" id="subsubsection-12"><h4 class="heading hide-type" alt="Subsubsection 3.1.2 Multiplicative theory">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.2</span><span class="title">Multiplicative theory</span>
@@ -581,7 +582,213 @@ K_v^\times \to S^1\text{.}
 \begin{equation*}
 = N(D_v)^{-1/2} |\varpi_v| (N(\varpi_v) - 1) (1- N(\varpi_v)\inv)\inv = N(D_v)^{-1/2}\text{.}
 \end{equation*}
-</div></article></div></article></section></section></section></div></main>
+</div></article></div></article></section><article class="aside-like" id="aside-18"><p id="p-360">Lecture 18 5/4/2018<p id="p-361">We are trying to set up a general machinery that will take a  <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacter</a> and associate  a zeta function. In fact we want have</p><div class="displaymath">
+\begin{equation*}
+c\colon N_v^\times \to \CC^\times \leadsto \zeta(f,c)
+\end{equation*}
+</div><p>a family of \(zeta\)-functions. We will then look at the gcd over all possible \(f\text{,}\) this will be the \(L\)-factor.</p></p></article><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type" alt="Subsubsection 3.1.3 Local \(\zeta\)-functions">
+<span class="type">Subsubsection</span><span class="codenumber">3.1.3</span><span class="title">Local \(\zeta\)-functions</span>
+</h4>
+<p id="p-362">Let</p>
+<div class="displaymath">
+\begin{equation*}
+f \colon K_v^+ \to \CC
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\xi \mapsto f(\xi)
+\end{equation*}
+</div>
+<p>restrict to</p>
+<div class="displaymath">
+\begin{equation*}
+f \colon K_v\units \to \CC
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\alpha \mapsto f(\alpha)
+\end{equation*}
+</div>
+<p>and such that</p>
+<ol class="decimal">
+<li id="li-72">\(f(\xi), \hat f(\xi) \in L^1(K^+)\) are continuous.</li>
+<li id="li-73">\(f(\alpha) |\alpha|^\sigma\) and \(\hat f (\alpha) |\alpha|^\sigma\in L^1(K\units)\) for all \(\alpha \gt 0\text{.}\)</li>
+</ol>
+<p>Call the class of such \(f\) \(S\text{.}\)</p>
+<article class="definition-like" id="definition-18"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.14</span>
+</h6>
+<p id="p-363">Let \(f \in S\) and \(c\) s.t. exponent of \(c\) is \(\sigma \gt 0\text{,}\) i.e. \(c=  c_0 \cdot |cdot|^s\) with \(c_0\) unitary and \(\Re(s) = \sigma \gt 0\) then we may define</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff\units \alpha\text{.}
+\end{equation*}
+</div></article><p id="p-364">In fact we have seen examples of this, for \(K_v = \RR\text{,}\) the \(\Gamma\) function, in Tate's language this is a local zeta function.</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f, |\cdot |^s) = \int_{\RR\units} e^{-|x|} |x|^s \frac{\diff x}{|x|} = 2 \gamma(s)
+\end{equation*}
+</div>
+<article class="remark-like" id="remark-21"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">3.15</span>
+</h6>
+<p id="p-365">\(c = c_0 | \cdot |^s\) for fixed \(f\) and \(c_0\)</p>
+<div class="displaymath">
+\begin{equation*}
+\implies \zeta(f,c) = \int_{K_v\units} f(\alpha) c_0(\alpha) |\alpha|_v^s\diff \units \alpha\text{.}
+\end{equation*}
+</div></article><p id="p-366">Aim:</p>
+<ol class="decimal">
+<li id="li-74">Prove that \(\zeta(f,s)\) extends to a meromorphic function of \(s\text{.}\)</li>
+<li id="li-75">Calculate this for “nice” choices of \(f\text{.}\)</li>
+</ol></section><section class="subsubsection" id="subsubsection-14"><h4 class="heading hide-type" alt="Subsubsection 3.1.4 Analytic properties of \(\zeta(f,c)\)">
+<span class="type">Subsubsection</span><span class="codenumber">3.1.4</span><span class="title">Analytic properties of \(\zeta(f,c)\)</span>
+</h4>
+<article class="theorem-like" id="lemma-12"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.16</span>
+</h6>
+<p id="p-367">\(\zeta(f,c)\) is a regular function for <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacters</a> \(c\) with \(\sigma \gt 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-33" id="proof-33"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-33" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-368">
+\begin{equation*}
+\zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff \units \alpha
+\end{equation*}
+</div>
+<p>check, absolutely convergent around 0, has derivatives around 0, other points are fine.</p></article></div>
+<article class="theorem-like" id="lemma-13"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.17</span><span class="title">fundamental lemma</span>
+</h6>
+<p id="p-369">Let \(c\) be a <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacter</a> that satisfies \(0 \lt \sigma \lt 1\) and define</p>
+<div class="displaymath">
+\begin{equation*}
+\hat c (\alpha) = c_0\inv (\alpha) | \cdot| ^{1-s}
+\end{equation*}
+</div>
+<p>then for \(f,g \in S\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,c) \zeta(\hat g,\hat c) =  \zeta(\hat f, \hat c)\zeta(g,c)\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-34" id="proof-34"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-34" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-370">All of the integrals are absolutely convergent.</p>
+<p id="p-371">Fubini implies the LHS is</p>
+<div class="displaymath">
+\begin{equation*}
+\int\int_{(K_v\units)^2} f(\alpha) \hat g(\beta) c(\alpha) c_0\inv(\beta) |\beta|^{1-s} \diff \units \mu(\alpha, \beta)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \vdots
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \zeta(\hat f, \hat c) \zeta(g ,c)
+\end{equation*}
+</div>
+<p>change variable \(\beta \mapsto \alpha\beta\text{.}\)</p></article></div>
+<article class="theorem-like" id="theorem-19"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.18</span><span class="title">Local functional equation</span>
+</h6>
+<p id="p-372">A \(\zeta\)-function will satisfy</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,c) = \rho(c) \zeta(\hat f, \hat c)
+\end{equation*}
+</div>
+<p>where \(\rho\) is meromorphic, and is defined initially for \(0\lt \sigma \lt 1\) then extended by analytic continuation.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-35" id="proof-35"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-35" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-373">Take \(f= g\) so</p>
+<div class="displaymath">
+\begin{equation*}
+\rho(C) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}
+\end{equation*}
+</div>
+<p>we will show \(\rho(c)\) is independent of \(f\) and that we can choose \(f\) s.t. \(\zeta(\hat f, \hat c)\) is non-zero. TBC.</p></article></div>
+<article class="theorem-like" id="proposition-7"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">3.19</span>
+</h6>
+<p id="p-374">Several properties:</p>
+<div class="displaymath">
+\begin{equation*}
+\rho(\hat c) = \frac{c(-1)}{\rho(c)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho(\bar c) = c(-1) \overline{\rho(c)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+|\rho(c) | = 1 \text{ if }\sigma= \frac12\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-36" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-375">
+\begin{equation*}
+\zeta(f,c) = \rho(c) \zeta(\hat f, \hat c) = \rho(c) \rho(\hat c) \zeta(\hat{\hat f}, \hat{\hat c})
+\end{equation*}
+</div>
+<p>as \(\hat{\hat c}\) and \(\hat{\hat f}(x) = f(-x)\) we get \(\rho(c) \rho(\hat c) c(-1) \zeta(f,c)\text{.}\)</p>
+<div class="displaymath" id="p-376">
+\begin{equation*}
+\overline{\zeta(f,c)} = \zeta(\bar f, \bar c) = \rho(\bar c) \zeta(\hat{\bar f}, \hat{\bar c})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \rho(\bar c) c(-1) \overline{\zeta(\hat f, \hat c)}\text{.}
+\end{equation*}
+</div>
+<p id="p-377">Remark:</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(\hat\bar f, \hat bar c) = \int \hat \bar f(\alpha) \hat \bar c(\alpha) \diff \units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int\hat \bar(\alpha) \bar c \inv(\alpha) |\alpha| \diff \units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int \bar \hat f(-\alpha) \bar c\inv (\alpha) |\alpha| \diff \units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= c(-1) \int \bar \hat f(\alpha) \bar c\inv(\alpha) |\alpha| \diff \units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= c(-1)\overline{\zeta(\hat f, \hat c)}
+\end{equation*}
+</div>
+<p id="p-378">If \(\sigma=  \frac12\) then \(c(\alpha) \bar c(\alpha) = |\alpha| = c(\alpha) \hat c(\alpha) = \bar c(\alpha) = \hat c(\alpha)\text{.}\) Together the previous parts give \(\rho(c)\overline {\rho(c)} = 1\text{.}\)</p></article></div></section><section class="subsubsection" id="subsubsection-15"><h4 class="heading hide-type" alt="Subsubsection 3.1.5 Explicit \(\zeta\) functions">
+<span class="type">Subsubsection</span><span class="codenumber">3.1.5</span><span class="title">Explicit \(\zeta\) functions</span>
+</h4>
+<p id="p-379">First let \(K_v = \RR\) then we will use the following notation: Additively \(\xi\) with \(\Lambda(\xi) = -\xi\text{,}\) \(\diff \xi\) the Lebesgue measure. Multiplicatively \(\alpha\) with \(|\alpha|_v = |\alpha|_\RR\) and \(\diff \units \alpha = \diff \alpha/|\alpha|_\RR\text{.}\) We will use characters \(|\cdot |^s\) or \(\mathrm{sgn}|\cdot|^s\text{,}\) \(f= e^{-\pi \xi^2}\) and \(f_\mathrm{sgn} (\xi) = \xi e^{-\pi \xi^2}\text{.}\) These have fourier transforms</p>
+<div class="displaymath">
+\begin{equation*}
+\hat f(\xi) = f(\xi)
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\hat f_\mathrm{sgn}(\xi) = i f_\mathrm{sgn}(\xi)\text{.}
+\end{equation*}
+</div>
+<p>So that</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f, |\cdot|^s) = \int_{\RR\units} f(\alpha) |\alpha|^s \diff \units \alpha = \int_{\RR\units} e^{-\pi \alpha^2} | \alpha| ^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= 2 \int_0^\infty e^{-\pi \alpha^2}\text{.}
+\end{equation*}
+</div></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

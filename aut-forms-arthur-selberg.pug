@@ -2439,9 +2439,9 @@ section#sec-tates-thesis
                 p
                     ul
                         li
-                            | #[m \CC], #[m \mu_v] is 2 times the Lebesge measure.
+                            | #[m \CC], #[m \mu_v] is 2 times the Lebesgue measure.
                         li
-                            | #[m \RR], #[m \mu_v] is the Lebesge measure.
+                            | #[m \RR], #[m \mu_v] is the Lebesgue measure.
                         li
                             | #[m K_v], #[m \mu_v(\ints_v) = N(D_v)^{-1/2}].
 
@@ -2467,8 +2467,9 @@ section#sec-tates-thesis
                     title Fourier inversion
                     statement: p
                         | Let #[m f \in L^1(K_v^+)] such that #[m \hat f \in L^1(K_v^+)], then
-                        me f(\xi) = \int \hat f( \eta) e(\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)
+                        me f(\xi) = \int \hat f( \eta) e(-\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)
                         | .
+                        // TODO check? there was no minus
 
         subsubsection
             title Multiplicative theory
@@ -2560,3 +2561,140 @@ section#sec-tates-thesis
                         me =  |\varpi_v|_v \sum_{\beta \in (\ints_v/\varpi_v\ints_v)^\times} \int _{\ints_v} \diff_v \alpha(1- N(\varpi_v)\inv)\inv
                         me = N(D_v)^{-1/2} |\varpi_v| (N(\varpi_v) - 1) (1- N(\varpi_v)\inv)\inv = N(D_v)^{-1/2}
                         | .
+
+        aside: p Lecture 18 5/4/2018
+
+            p
+                | We are trying to set up a general machinery that will take a  quasicharacter and associate  a zeta function.
+                | In fact we want have
+                me c\colon N_v^\times \to \CC^\times \leadsto \zeta(f,c)
+                | a family of #[m zeta]-functions.
+                | We will then look at the gcd over all possible #[m f], this will be the #[m L]-factor.
+
+        subsubsection
+            title Local #[m \zeta]-functions
+
+            p
+                | Let
+                me f \colon K_v^+ \to \CC
+                me \xi \mapsto f(\xi)
+                | restrict to
+                me f \colon K_v\units \to \CC
+                me \alpha \mapsto f(\alpha)
+                | and such that
+                ol
+                    li
+                        | #[m f(\xi), \hat f(\xi) \in L^1(K^+)] are continuous.
+                    li
+                        | #[m f(\alpha) |\alpha|^\sigma] and #[m \hat f (\alpha) |\alpha|^\sigma\in L^1(K\units)] for all #[m \alpha \gt 0].
+
+                | Call the class of such #[m f] #[m S].
+            definition
+                statement: p
+                    | Let #[m f \in S] and #[m c] s.t. exponent of #[m c] is #[m \sigma \gt 0], i.e. #[m c=  c_0 \cdot |cdot|^s] with #[m c_0] unitary and #[m \Re(s) = \sigma \gt 0] then we may define
+                    me \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff\units \alpha
+                    | .
+
+
+            p
+                | In fact we have seen examples of this, for #[m K_v = \RR], the #[m \Gamma] function, in Tate's language this is a local zeta function.
+                me \zeta(f, |\cdot |^s) = \int_{\RR\units} e^{-|x|} |x|^s \frac{\diff x}{|x|} = 2 \gamma(s)
+
+            remark
+                p
+                    | #[m c = c_0 | \cdot |^s] for fixed #[m f] and #[m c_0]
+                    me \implies \zeta(f,c) = \int_{K_v\units} f(\alpha) c_0(\alpha) |\alpha|_v^s\diff \units \alpha
+                    | .
+
+            p
+                | Aim:
+                ol
+                    li
+                        | Prove that #[m \zeta(f,s)] extends to a meromorphic function of #[m s].
+                    li
+                        | Calculate this for #[q nice] choices of #[m f].
+
+        subsubsection
+            title Analytic properties of #[m \zeta(f,c)]
+
+            lemma
+                statement: p
+                    | #[m \zeta(f,c)] is a regular function for quasicharacters #[m c] with #[m \sigma \gt 0].
+                proof: p
+                    me \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff \units \alpha
+                    | check, absolutely convergent around 0, has derivatives around 0, other points are fine.
+
+            lemma
+                title fundamental lemma
+                statement: p
+                    | Let #[m c] be a quasicharacter that satisfies #[m 0 \lt \sigma \lt 1] and define
+                    me \hat c (\alpha) = c_0\inv (\alpha) | \cdot| ^{1-s}
+                    | then for #[m f,g \in S] we have
+                    me \zeta(f,c) \zeta(\hat g,\hat c) =  \zeta(\hat f, \hat c)\zeta(g,c)
+                    | .
+                proof
+                    p
+                        | All of the integrals are absolutely convergent.
+                    p
+                        | Fubini implies the LHS is
+                        me \int\int_{(K_v\units)^2} f(\alpha) \hat g(\beta) c(\alpha) c_0\inv(\beta) |\beta|^{1-s} \diff \units \mu(\alpha, \beta)
+                        me = \vdots
+                        me = \zeta(\hat f, \hat c) \zeta(g ,c)
+                        | change variable #[m \beta \mapsto \alpha\beta].
+                        // TODO do this, maybe \hat c = c\inv |\cdot| is cleaner?
+
+
+            theorem
+                title Local functional equation
+                statement: p
+                    | A #[m \zeta]-function will satisfy
+                    me \zeta(f,c) = \rho(c) \zeta(\hat f, \hat c)
+                    | where #[m \rho] is meromorphic, and is defined initially for #[m 0\lt \sigma \lt 1] then extended by analytic continuation.
+                proof: p
+                    | Take #[m f= g] so
+                    me \rho(C) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}
+                    | we will show #[m \rho(c)] is independent of #[m f] and that we can choose #[m f] s.t. #[m \zeta(\hat f, \hat c)] is non-zero.
+                    | TBC.
+
+            proposition
+                statement: p
+                    | Several properties:
+                    me \rho(\hat c) = \frac{c(-1)}{\rho(c)}
+                    me \rho(\bar c) = c(-1) \overline{\rho(c)}
+                    me |\rho(c) | = 1 \text{ if }\sigma= \frac12
+                    | .
+                proof
+                    p
+                        me \zeta(f,c) = \rho(c) \zeta(\hat f, \hat c) = \rho(c) \rho(\hat c) \zeta(\hat{\hat f}, \hat{\hat c})
+                        | as #[m \hat{\hat c}] and #[m \hat{\hat f}(x) = f(-x)] we get #[m \rho(c) \rho(\hat c) c(-1) \zeta(f,c)].
+                    p
+                        me \overline{\zeta(f,c)} = \zeta(\bar f, \bar c) = \rho(\bar c) \zeta(\hat{\bar f}, \hat{\bar c})
+                        me = \rho(\bar c) c(-1) \overline{\zeta(\hat f, \hat c)}
+                        | .
+                    p
+                        | Remark:
+                        me \zeta(\hat\bar f, \hat bar c) = \int \hat \bar f(\alpha) \hat \bar c(\alpha) \diff \units \alpha
+                        me = \int\hat \bar(\alpha) \bar c \inv(\alpha) |\alpha| \diff \units \alpha
+                        me    = \int \bar \hat f(-\alpha) \bar c\inv (\alpha) |\alpha| \diff \units \alpha
+                        me = c(-1) \int \bar \hat f(\alpha) \bar c\inv(\alpha) |\alpha| \diff \units \alpha
+                        me = c(-1)\overline{\zeta(\hat f, \hat c)}
+                    p
+                        | If #[m \sigma=  \frac12] then #[m c(\alpha) \bar c(\alpha) = |\alpha| = c(\alpha) \hat c(\alpha) = \bar c(\alpha) = \hat c(\alpha)].
+                        | Together the previous parts give #[m \rho(c)\overline {\rho(c)} = 1].
+
+        subsubsection
+            title Explicit #[m \zeta] functions
+
+            p
+                | First let #[m K_v = \RR] then we will use the following notation: Additively #[m \xi] with #[m \Lambda(\xi) = -\xi], #[m \diff \xi] the Lebesgue measure.
+                | Multiplicatively #[m \alpha] with #[m |\alpha|_v = |\alpha|_\RR] and #[m \diff \units \alpha = \diff \alpha/|\alpha|_\RR].
+                | We will use characters #[m |\cdot |^s] or #[m \mathrm{sgn}|\cdot|^s], #[m f= e^{-\pi \xi^2}] and #[m f_\mathrm{sgn} (\xi) = \xi e^{-\pi \xi^2}].
+                | These have fourier transforms
+                me \hat f(\xi) = f(\xi)
+                | and
+                me \hat f_\mathrm{sgn}(\xi) = i f_\mathrm{sgn}(\xi)
+                | .
+                | So that
+                me \zeta(f, |\cdot|^s) = \int_{\RR\units} f(\alpha) |\alpha|^s \diff \units \alpha = \int_{\RR\units} e^{-\pi \alpha^2} | \alpha| ^s \diff\units \alpha
+                me = 2 \int_0^\infty e^{-\pi \alpha^2}
+                | .
