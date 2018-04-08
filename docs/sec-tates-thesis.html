@@ -582,11 +582,13 @@ K_v^\times \to S^1\text{.}
 \begin{equation*}
 = N(D_v)^{-1/2} |\varpi_v| (N(\varpi_v) - 1) (1- N(\varpi_v)\inv)\inv = N(D_v)^{-1/2}\text{.}
 \end{equation*}
-</div></article></div></article></section><article class="aside-like" id="aside-18"><p id="p-360">Lecture 18 5/4/2018<p id="p-361">We are trying to set up a general machinery that will take a  <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacter</a> and associate  a zeta function. In fact we want have</p><div class="displaymath">
+</div></article></div></article><article class="aside-like" id="aside-18"><p id="p-360">Lecture 18 5/4/2018</p></article><p id="p-361">We are trying to set up a general machinery that will take a  <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacter</a> and associate  a zeta function. In fact we want have</p>
+<div class="displaymath">
 \begin{equation*}
 c\colon N_v^\times \to \CC^\times \leadsto \zeta(f,c)
 \end{equation*}
-</div><p>a family of \(zeta\)-functions. We will then look at the gcd over all possible \(f\text{,}\) this will be the \(L\)-factor.</p></p></article><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type" alt="Subsubsection 3.1.3 Local \(\zeta\)-functions">
+</div>
+<p>a family of \(zeta\)-functions. We will then look at the gcd over all possible \(f\text{,}\) this will be the \(L\)-factor.</p></section><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type" alt="Subsubsection 3.1.3 Local \(\zeta\)-functions">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.3</span><span class="title">Local \(\zeta\)-functions</span>
 </h4>
 <p id="p-362">Let</p>
@@ -620,7 +622,7 @@ f \colon K_v\units \to \CC
 <article class="definition-like" id="definition-18"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.14</span>
 </h6>
-<p id="p-363">Let \(f \in S\) and \(c\) s.t. exponent of \(c\) is \(\sigma \gt 0\text{,}\) i.e. \(c=  c_0 \cdot |cdot|^s\) with \(c_0\) unitary and \(\Re(s) = \sigma \gt 0\) then we may define</p>
+<p id="p-363">Let \(f \in S\) and \(c\) s.t. exponent of \(c\) is \(\sigma \gt 0\text{,}\) i.e. \(c=  c_0 \cdot |\cdot|^s\) with \(c_0\) unitary and \(\Re(s) = \sigma \gt 0\) then we may define</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff\units \alpha\text{.}
@@ -628,7 +630,7 @@ f \colon K_v\units \to \CC
 </div></article><p id="p-364">In fact we have seen examples of this, for \(K_v = \RR\text{,}\) the \(\Gamma\) function, in Tate's language this is a local zeta function.</p>
 <div class="displaymath">
 \begin{equation*}
-\zeta(f, |\cdot |^s) = \int_{\RR\units} e^{-|x|} |x|^s \frac{\diff x}{|x|} = 2 \gamma(s)
+\zeta(f, |\cdot |^s) = \int_{\RR\units} e^{-|x|} |x|^s \frac{\diff x}{|x|} = 2 \Gamma(s)
 \end{equation*}
 </div>
 <article class="remark-like" id="remark-21"><h6 class="heading">
@@ -740,22 +742,22 @@ f \colon K_v\units \to \CC
 <p id="p-377">Remark:</p>
 <div class="displaymath">
 \begin{equation*}
-\zeta(\hat\bar f, \hat bar c) = \int \hat \bar f(\alpha) \hat \bar c(\alpha) \diff \units \alpha
+\zeta(\hat{\bar} f, \hat {\bar c}) = \int \hat {\bar f}(\alpha) \hat {\bar c}(\alpha) \diff \units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \int\hat \bar(\alpha) \bar c \inv(\alpha) |\alpha| \diff \units \alpha
+= \int\hat {\bar f}(\alpha) \bar c \inv(\alpha) |\alpha| \diff \units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \int \bar \hat f(-\alpha) \bar c\inv (\alpha) |\alpha| \diff \units \alpha
+= \int \bar {\hat f}(-\alpha) \bar c\inv (\alpha) |\alpha| \diff \units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= c(-1) \int \bar \hat f(\alpha) \bar c\inv(\alpha) |\alpha| \diff \units \alpha
+= c(-1) \int \bar {\hat f}(\alpha) \bar c\inv(\alpha) |\alpha| \diff \units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">

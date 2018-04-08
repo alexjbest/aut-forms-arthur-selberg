@@ -2562,7 +2562,7 @@ section#sec-tates-thesis
                         me = N(D_v)^{-1/2} |\varpi_v| (N(\varpi_v) - 1) (1- N(\varpi_v)\inv)\inv = N(D_v)^{-1/2}
                         | .
 
-        aside: p Lecture 18 5/4/2018
+            aside: p Lecture 18 5/4/2018
 
             p
                 | We are trying to set up a general machinery that will take a  quasicharacter and associate  a zeta function.
@@ -2591,14 +2591,14 @@ section#sec-tates-thesis
                 | Call the class of such #[m f] #[m S].
             definition
                 statement: p
-                    | Let #[m f \in S] and #[m c] s.t. exponent of #[m c] is #[m \sigma \gt 0], i.e. #[m c=  c_0 \cdot |cdot|^s] with #[m c_0] unitary and #[m \Re(s) = \sigma \gt 0] then we may define
+                    | Let #[m f \in S] and #[m c] s.t. exponent of #[m c] is #[m \sigma \gt 0], i.e. #[m c=  c_0 \cdot |\cdot|^s] with #[m c_0] unitary and #[m \Re(s) = \sigma \gt 0] then we may define
                     me \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff\units \alpha
                     | .
 
 
             p
                 | In fact we have seen examples of this, for #[m K_v = \RR], the #[m \Gamma] function, in Tate's language this is a local zeta function.
-                me \zeta(f, |\cdot |^s) = \int_{\RR\units} e^{-|x|} |x|^s \frac{\diff x}{|x|} = 2 \gamma(s)
+                me \zeta(f, |\cdot |^s) = \int_{\RR\units} e^{-|x|} |x|^s \frac{\diff x}{|x|} = 2 \Gamma(s)
 
             remark
                 p
@@ -2673,10 +2673,10 @@ section#sec-tates-thesis
                         | .
                     p
                         | Remark:
-                        me \zeta(\hat\bar f, \hat bar c) = \int \hat \bar f(\alpha) \hat \bar c(\alpha) \diff \units \alpha
-                        me = \int\hat \bar(\alpha) \bar c \inv(\alpha) |\alpha| \diff \units \alpha
-                        me    = \int \bar \hat f(-\alpha) \bar c\inv (\alpha) |\alpha| \diff \units \alpha
-                        me = c(-1) \int \bar \hat f(\alpha) \bar c\inv(\alpha) |\alpha| \diff \units \alpha
+                        me \zeta(\hat{\bar} f, \hat {\bar c}) = \int \hat {\bar f}(\alpha) \hat {\bar c}(\alpha) \diff \units \alpha
+                        me = \int\hat {\bar f}(\alpha) \bar c \inv(\alpha) |\alpha| \diff \units \alpha
+                        me    = \int \bar {\hat f}(-\alpha) \bar c\inv (\alpha) |\alpha| \diff \units \alpha
+                        me = c(-1) \int \bar {\hat f}(\alpha) \bar c\inv(\alpha) |\alpha| \diff \units \alpha
                         me = c(-1)\overline{\zeta(\hat f, \hat c)}
                     p
                         | If #[m \sigma=  \frac12] then #[m c(\alpha) \bar c(\alpha) = |\alpha| = c(\alpha) \hat c(\alpha) = \bar c(\alpha) = \hat c(\alpha)].
