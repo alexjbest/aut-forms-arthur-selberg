@@ -12,29 +12,52 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>First let \(K_v = \RR\) then we will use the following notation: Additively \(\xi\) with \(\Lambda(\xi) = -\xi\text{,}\) \(\diff \xi\) the Lebesgue measure. Multiplicatively \(\alpha\) with \(|\alpha|_v = |\alpha|_\RR\) and \(\diff \units \alpha = \diff \alpha/|\alpha|_\RR\text{.}\) We will use characters \(|\cdot |^s\) or \(\mathrm{sgn}|\cdot|^s\text{,}\) \(f= e^{-\pi \xi^2}\) and \(f_\mathrm{sgn} (\xi) = \xi e^{-\pi \xi^2}\text{.}\) These have fourier transforms</p>
+<p>First let \(K_v = \RR\) then we will use the following notation: Additively \(\xi\) with \(\Lambda(\xi) = -\xi\text{,}\) \(\diff \xi\) the Lebesgue measure. Multiplicatively \(\alpha\) with \(|\alpha|_v = |\alpha|_\RR\) and \(\diff \units \alpha = \diff \alpha/|\alpha|_\RR\text{.}\) We will use characters \(|\cdot |^s\) or \(\mathrm{sgn}|\cdot|^s\text{,}\) \(f_{|\cdot|^s}= e^{-\pi \xi^2}\) and \(f_{|\cdot|^s\mathrm{sgn}} (\xi) = \xi e^{-\pi \xi^2}\text{.}\) These have fourier transforms</p>
 <div class="displaymath">
 \begin{equation*}
-\hat f(\xi) = f(\xi)
+\hat f_{|\cdot|^s}(\xi) = f(\xi)
 \end{equation*}
 </div>
 <p>and</p>
 <div class="displaymath">
 \begin{equation*}
-\hat f_\mathrm{sgn}(\xi) = i f_\mathrm{sgn}(\xi)\text{.}
+\hat f_{|\cdot|^s\mathrm{sgn}}(\xi) = i f_\mathrm{sgn}(\xi)\text{.}
 \end{equation*}
 </div>
 <p>So that</p>
 <div class="displaymath">
 \begin{equation*}
-\zeta(f, |\cdot|^s) = \int_{\RR\units} f(\alpha) |\alpha|^s \diff \units \alpha = \int_{\RR\units} e^{-\pi \alpha^2} | \alpha| ^s \diff\units \alpha
+\zeta(f_{|\cdot|^s}, |\cdot|^s) = \int_{\RR\units} f(\alpha) |\alpha|^s \diff \units \alpha = \int_{\RR\units} e^{-\pi \alpha^2} | \alpha| ^s \diff\units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= 2 \int_0^\infty e^{-\pi \alpha^2}\text{.}
+= 2 \int_0^\infty e^{-\pi \alpha^2}
 \end{equation*}
 </div>
+<div class="displaymath">
+\begin{equation*}
+= \pi^{-s/2} \Gamma\left(\frac s2\right)\text{.}
+\end{equation*}
+</div>
+<p><article class="aside-like"><p>Lecture 19 10/4/2018</p></article></p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f_{|\cdot|^s\mathrm{sgn}}, |\cdot|^s\mathrm{sgn}) = \pi^{-(s+1)/2} \Gamma\left(\frac{s+1}{2}\right)
+\end{equation*}
+</div>
+<p>now</p>
+<div class="displaymath">
+\begin{equation*}
+\rho(|\cdot|^s) = 2^{1-s} \pi^{-s} \cos(\pi s /2) \Gamma(s)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho(|\cdot|^s\mathrm{sgn}) = -i 2^{1-s} \pi^{-s} \sin(\pi s /2) \Gamma(s)\text{.}
+\end{equation*}
+</div>
+<p>Normalizing by \(s= 1/2\) we get \(1 \) and \(- i\) respectively.</p>
 <span class="incontext"><a href="sec-tates-thesis.html#p-379">in-context</a></span>
 </body>
 </html>

@@ -588,7 +588,7 @@ K_v^\times \to S^1\text{.}
 c\colon N_v^\times \to \CC^\times \leadsto \zeta(f,c)
 \end{equation*}
 </div>
-<p>a family of \(zeta\)-functions. We will then look at the gcd over all possible \(f\text{,}\) this will be the \(L\)-factor.</p></section><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type" alt="Subsubsection 3.1.3 Local \(\zeta\)-functions">
+<p>a family of \(\zeta\)-functions. We will then look at the gcd over all possible \(f\text{,}\) this will be the \(L\)-factor.</p></section><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type" alt="Subsubsection 3.1.3 Local \(\zeta\)-functions">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.3</span><span class="title">Local \(\zeta\)-functions</span>
 </h4>
 <p id="p-362">Let</p>
@@ -742,7 +742,7 @@ f \colon K_v\units \to \CC
 <p id="p-377">Remark:</p>
 <div class="displaymath">
 \begin{equation*}
-\zeta(\hat{\bar} f, \hat {\bar c}) = \int \hat {\bar f}(\alpha) \hat {\bar c}(\alpha) \diff \units \alpha
+\zeta(\hat{\bar f}, \hat {\bar c}) = \int \hat {\bar f}(\alpha) \hat {\bar c}(\alpha) \diff \units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -768,29 +768,292 @@ f \colon K_v\units \to \CC
 <p id="p-378">If \(\sigma=  \frac12\) then \(c(\alpha) \bar c(\alpha) = |\alpha| = c(\alpha) \hat c(\alpha) = \bar c(\alpha) = \hat c(\alpha)\text{.}\) Together the previous parts give \(\rho(c)\overline {\rho(c)} = 1\text{.}\)</p></article></div></section><section class="subsubsection" id="subsubsection-15"><h4 class="heading hide-type" alt="Subsubsection 3.1.5 Explicit \(\zeta\) functions">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.5</span><span class="title">Explicit \(\zeta\) functions</span>
 </h4>
-<p id="p-379">First let \(K_v = \RR\) then we will use the following notation: Additively \(\xi\) with \(\Lambda(\xi) = -\xi\text{,}\) \(\diff \xi\) the Lebesgue measure. Multiplicatively \(\alpha\) with \(|\alpha|_v = |\alpha|_\RR\) and \(\diff \units \alpha = \diff \alpha/|\alpha|_\RR\text{.}\) We will use characters \(|\cdot |^s\) or \(\mathrm{sgn}|\cdot|^s\text{,}\) \(f= e^{-\pi \xi^2}\) and \(f_\mathrm{sgn} (\xi) = \xi e^{-\pi \xi^2}\text{.}\) These have fourier transforms</p>
+<p id="p-379">First let \(K_v = \RR\) then we will use the following notation: Additively \(\xi\) with \(\Lambda(\xi) = -\xi\text{,}\) \(\diff \xi\) the Lebesgue measure. Multiplicatively \(\alpha\) with \(|\alpha|_v = |\alpha|_\RR\) and \(\diff \units \alpha = \diff \alpha/|\alpha|_\RR\text{.}\) We will use characters \(|\cdot |^s\) or \(\mathrm{sgn}|\cdot|^s\text{,}\) \(f_{|\cdot|^s}= e^{-\pi \xi^2}\) and \(f_{|\cdot|^s\mathrm{sgn}} (\xi) = \xi e^{-\pi \xi^2}\text{.}\) These have fourier transforms</p>
 <div class="displaymath">
 \begin{equation*}
-\hat f(\xi) = f(\xi)
+\hat f_{|\cdot|^s}(\xi) = f(\xi)
 \end{equation*}
 </div>
 <p>and</p>
 <div class="displaymath">
 \begin{equation*}
-\hat f_\mathrm{sgn}(\xi) = i f_\mathrm{sgn}(\xi)\text{.}
+\hat f_{|\cdot|^s\mathrm{sgn}}(\xi) = i f_\mathrm{sgn}(\xi)\text{.}
 \end{equation*}
 </div>
 <p>So that</p>
 <div class="displaymath">
 \begin{equation*}
-\zeta(f, |\cdot|^s) = \int_{\RR\units} f(\alpha) |\alpha|^s \diff \units \alpha = \int_{\RR\units} e^{-\pi \alpha^2} | \alpha| ^s \diff\units \alpha
+\zeta(f_{|\cdot|^s}, |\cdot|^s) = \int_{\RR\units} f(\alpha) |\alpha|^s \diff \units \alpha = \int_{\RR\units} e^{-\pi \alpha^2} | \alpha| ^s \diff\units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= 2 \int_0^\infty e^{-\pi \alpha^2}\text{.}
+= 2 \int_0^\infty e^{-\pi \alpha^2}
 \end{equation*}
-</div></section></section></section></div></main>
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pi^{-s/2} \Gamma\left(\frac s2\right)\text{.}
+\end{equation*}
+</div>
+<p><article class="aside-like" id="aside-19"><p id="p-380">Lecture 19 10/4/2018</p></article></p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f_{|\cdot|^s\mathrm{sgn}}, |\cdot|^s\mathrm{sgn}) = \pi^{-(s+1)/2} \Gamma\left(\frac{s+1}{2}\right)
+\end{equation*}
+</div>
+<p>now</p>
+<div class="displaymath">
+\begin{equation*}
+\rho(|\cdot|^s) = 2^{1-s} \pi^{-s} \cos(\pi s /2) \Gamma(s)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho(|\cdot|^s\mathrm{sgn}) = -i 2^{1-s} \pi^{-s} \sin(\pi s /2) \Gamma(s)\text{.}
+\end{equation*}
+</div>
+<p>Normalizing by \(s= 1/2\) we get \(1 \) and \(- i\) respectively.</p>
+<p id="p-381">Over \(\CC\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{cc}
+K_v^+ \amp K_v\units\\
+\hline
+\xi = x+iy \amp \alpha = re^{i\theta}\\
+\Lambda = -2x \amp |\alpha| = r^2\\
+\diff \xi =2 |\diff x \diff y| \amp \diff\units \alpha =\diff \alpha /|\alpha|=  2|\diff r \diff \theta|/r\\
+\end{array}
+\end{equation*}
+</div>
+<p>characters</p>
+<div class="displaymath">
+\begin{equation*}
+c \leadsto c_n,\,n\in\ZZ
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+c_n(\alpha) = r^n e^{in \theta}
+\end{equation*}
+</div>
+<p>equivalence  class</p>
+<div class="displaymath">
+\begin{equation*}
+\{c_n(\alpha) |\alpha|^s : s\in \CC \}\text{.}
+\end{equation*}
+</div>
+<p>Functions</p>
+<div class="displaymath">
+\begin{equation*}
+f_n(\xi) = \begin{cases} (x-iy)^n e^{-2\pi(x^2 + y^2)} \amp \text{ if } n \ge 0 \\ (x+iy)^{-n} e^{-2\pi(x^2 + y^2)} \amp \text{ if } n \le 0\end{cases}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \begin{cases} r^{|n|}  e^{-in \theta} e^{-2\pi r^2} \amp\text{ if } n \ge 0 \\ r^{|n|} e^{in\theta} e^{-2\pi r^2}\amp \text{ if } n \le 0\end{cases}
+\end{equation*}
+</div>
+<p>fourier transforms</p>
+<article class="theorem-like" id="claim-2"><h6 class="heading">
+<span class="type">Claim</span><span class="codenumber">3.20</span>
+</h6>
+<div class="displaymath" id="p-382">
+\begin{equation*}
+\hat f_n(\xi) = i^{|n|} f_{-n}(\xi) \,\forall n
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-383">Induction on \(n\text{:}\)</p>
+<p id="p-384">\(n = 0\)</p>
+<div class="displaymath">
+\begin{equation*}
+f_0(\xi) = e^{-\pi (x^2 + y^2)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\hat f_0(\xi) = 2\int_{\CC} f_0(u+iv) \overbrace{e(2(ux-vy))}^{\Lambda((u+iv)(x+iy))} \diff u \diff v
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+2\int_{\RR} e^{-2\pi (u^2 - 2ixu)} \diff u \int_\RR e^{-2\pi(v^2 + 2ivy)} \diff v
+\end{equation*}
+</div>
+<p>which by completing the square and Cauchy gives</p>
+<div class="displaymath">
+\begin{equation*}
+e^{-2\pi x^2 + y^2)} = \hat f_0(\xi)
+\end{equation*}
+</div>
+<p id="p-385">Assume \(\hat f_n(\xi) = i^n f_{-n}(\xi)\) for \(n \gt 0\text{.}\) Then the induction step is to use \(\diff / \diff \bar \xi\) in the integral defining \(\hat f_n(\xi)\) (exercise).</p></article></div>
+<div class="displaymath" id="p-386">
+\begin{equation*}
+\zeta(f_n, c_n |\cdot|^s) = \int_{\CC\units} f_n(\alpha) c_n(\alpha) |\alpha|^s\diff\units\alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= 2 \int |r|^n e^{-i n \theta} e^{-2\pi r^2} e^{in \theta} r^{2s-2}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= 4\pi \int_0^\infty r^{|n| + 2s - 2} e^{-2 \pi r^2} r \diff r
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= (2\pi)^{1 - s - |n|/2} \Gamma\left(s+ \frac{|n|}{2}\right)
+\end{equation*}
+</div>
+<p>now</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f_{-n}, c_{-n}|\cdot|^s) = i^{|n|} (2\pi)^{s- |n|/2} \Gamma\left(1 - s + \frac{|n|}{2}\right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\rho(c_n|\cdot |^s)  = \frac{(-i)^{|n|} (2 \pi)^{k-s}}{(2\pi)^s} \frac{\Gamma(s + \frac{|n|}{2})}{\Gamma(1-s + \frac{|n|}{2})}\text{.}
+\end{equation*}
+</div>
+<p id="p-387">For \(K\) non-archimidean with \(|\varpi|_v= \frac 1q\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{cc}
+K^+ \amp K\units\\
+\hline
+\xi \amp \alpha = \tilde \alpha \varpi^{v(\alpha)}\\
+\Lambda (\xi) = \lambda(\tr_{K/\QQ_p}(\xi)) \amp |\alpha| = q_v^{-v(\alpha)}\\
+\diff \xi \implies \int_\ints \diff \xi = N(D_v)^{-1/2} \amp \diff\units \alpha =(1-q_v\inv)\diff \alpha /|\alpha| \implies \int_{\ints\units} \diff\units \alpha = N(D_v)^{-1/2}
+\end{array}
+\end{equation*}
+</div>
+<p>For \(D_v\) the different ideal.</p>
+<p id="p-388">Quasicharacters</p>
+<div class="displaymath">
+\begin{equation*}
+c_n \colon \ints\units \to \CC\units
+\end{equation*}
+</div>
+<p>of conductor \(f (\varpi^n)\ints_v\text{.}\) \(c_n(\varpi) = 1\text{.}\) Equivalence class of \(c_n\)</p>
+<div class="displaymath">
+\begin{equation*}
+\{c_n |\cdot|^s : s\in \CC\}\text{.}
+\end{equation*}
+</div>
+<p id="p-389">Functions</p>
+<div class="displaymath">
+\begin{equation*}
+f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \text{ if } \xi\in D_v\inv \varpi^{-n} \\ 0 \amp\end{cases}\text{.}
+\end{equation*}
+</div>
+<p id="p-390">The fourier transforms</p>
+<article class="theorem-like" id="lemma-14"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.21</span>
+</h6>
+<div class="displaymath" id="p-391">
+\begin{equation*}
+\hat f_n(\xi) = \begin{cases} |D_v|^{-1/2} |\varpi_v|^{-n} \amp \text{ if } \xi \equiv 1 \pmod{\varpi^n} \\ 0 \amp \end{cases}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-392">
+\begin{equation*}
+\hat f_n(\xi) = \int_K f_n(\eta) e(-\Lambda (\eta \xi)) \diff \eta
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=\int_{D_v\inv \varpi^{-n} \ints_v} e(\Lambda(\eta(1-\xi))) \diff \eta
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|\inv |varpi|^{-n} \int_{\ints_v} \diff \eta \amp   \end{cases}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|^{-1/2} |varpi|^{-n} \amp   \end{cases}
+\end{equation*}
+</div></article></div>
+<p id="p-393">Unramified calculatesn:</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f_0, |\cdot |^s)  =  \int_{K\units} f_0(\alpha) |\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{D_v\inv} e(\Lambda(\alpha) ) |\alpha| ^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{D_v\inv} |\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{k=0}^\infty|D_v|^{-s} \int_{\varpi^n \ints\units}|\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\left(\ints =  \bigsqcup_{n=0}^\infty \varpi^n \ints\units_v\right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{k=0}^\infty |D_v|^{-s+1/2} q_v^{-ns}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= |D_v|^{-s+1/2} \frac{1}{1-1/q_v^s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\zeta(\hat f_0, |\cdot |^{1-s}) = \zeta(|D_v|^{-1/2} \mathbf 1_{\ints_v}, |\cdot |^{1-s})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= N(D_v)^{1/2} \int_{\ints_v} |\alpha|^{1-s} \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=  \frac{1}{1-1/q_v^{1-s}}
+\end{equation*}
+</div>
+<p id="p-394">Let's recap a little, we have \(K\units \hookrightarrow K^+\) and moreover \(K\units \acts K^+\) with two orbits \(\{0\}\) and the rest. Looking at function spaces we have</p>
+<div class="displaymath">
+\begin{equation*}
+\cinf_c(K\units) \hookrightarrow S(K^+)\text{,}
+\end{equation*}
+</div>
+<p>Schwartz functions on the right. Taking duals to get spaces of distributions</p>
+<div class="displaymath">
+\begin{equation*}
+1 \to  ?? \to D(K^+)_c \to \cinf_c (K\units)^\vee_c \to 0\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="corollary-4"><h6 class="heading">
+<span class="type">Corollary</span><span class="codenumber">3.22</span>
+</h6>
+<p id="p-395">There is \(\rho(c)\) s.t.</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,c) = \rho(c) \zeta(\hat f, \hat c)
+\end{equation*}
+</div>
+<p>with</p>
+<div class="displaymath">
+\begin{equation*}
+\rho(c) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}\text{.}
+\end{equation*}
+</div></article></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

@@ -10,34 +10,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Remark:</p>
+<body><article class="hiddenproof"><p>Induction on \(n\text{:}\)</p>
+<p>\(n = 0\)</p>
 <div class="displaymath">
 \begin{equation*}
-\zeta(\hat{\bar f}, \hat {\bar c}) = \int \hat {\bar f}(\alpha) \hat {\bar c}(\alpha) \diff \units \alpha
+f_0(\xi) = e^{-\pi (x^2 + y^2)}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \int\hat {\bar f}(\alpha) \bar c \inv(\alpha) |\alpha| \diff \units \alpha
+\hat f_0(\xi) = 2\int_{\CC} f_0(u+iv) \overbrace{e(2(ux-vy))}^{\Lambda((u+iv)(x+iy))} \diff u \diff v
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \int \bar {\hat f}(-\alpha) \bar c\inv (\alpha) |\alpha| \diff \units \alpha
+2\int_{\RR} e^{-2\pi (u^2 - 2ixu)} \diff u \int_\RR e^{-2\pi(v^2 + 2ivy)} \diff v
 \end{equation*}
 </div>
+<p>which by completing the square and Cauchy gives</p>
 <div class="displaymath">
 \begin{equation*}
-= c(-1) \int \bar {\hat f}(\alpha) \bar c\inv(\alpha) |\alpha| \diff \units \alpha
+e^{-2\pi x^2 + y^2)} = \hat f_0(\xi)
 \end{equation*}
 </div>
-<div class="displaymath">
-\begin{equation*}
-= c(-1)\overline{\zeta(\hat f, \hat c)}
-\end{equation*}
-</div>
-<span class="incontext"><a href="sec-tates-thesis.html#p-377">in-context</a></span>
-</body>
+<p>Assume \(\hat f_n(\xi) = i^n f_{-n}(\xi)\) for \(n \gt 0\text{.}\) Then the induction step is to use \(\diff / \diff \bar \xi\) in the integral defining \(\hat f_n(\xi)\) (exercise).</p></article></body>
 </html>
