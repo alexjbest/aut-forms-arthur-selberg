@@ -2788,7 +2788,7 @@ section#sec-tates-thesis
                     // ????
 
             p
-                | Unramified calculatesn:
+                | Unramified calculation:
                 me \zeta(f_0, |\cdot |^s)  =  \int_{K\units} f_0(\alpha) |\alpha|^s \diff\units \alpha
                 me  = \int_{D_v\inv} e(\Lambda(\alpha) ) |\alpha| ^s \diff\units \alpha
                 me  = \int_{D_v\inv} |\alpha|^s \diff\units \alpha
@@ -2816,3 +2816,142 @@ section#sec-tates-thesis
                     | with
                     me \rho(c) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}
                     | .
+
+            aside: p Lecture 20 12/4/2018
+
+            p
+                | We have done the case of unramified characters.
+            p
+                | Case II:
+                | #[m n \gt 0]
+                me \zeta(f_n, c_n|\cdot|^s) = \int_{K_v\units} f_n(\alpha) c_n(\alpha) |\alpha|^s \diff\units \alpha
+                me = \int_{(D_vf_v) \inv} e(\Lambda(\alpha))(c(\alpha)) |\alpha|_v^s \diff \units \alpha
+                | .
+                | Let
+                me (D_v) = (\varpi_v^d)
+                me f= (\varpi_v^n)
+                me = int_{(\varpi_v^{n+d})\inv} e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
+                me = \sum_{j = -n-d}^\infty \int_{\varpi_v^j \ints_v\units } e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
+                | let #[m \alpha = \varpi_v^j \alpha] which implies
+                me = \sum_{j = -n-d}^\infty q_v^{js}\int_{\ints_v\units } e(\Lambda(\varpi^j\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
+                | .
+
+            lemma
+                statement: p
+                    | If #[m j \ge -d] then
+                    me \int_{\ints_v\units} (\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff\units \alpha = 0
+                    | .
+                proof: p
+                    | #[m j \ge -d] implies
+                    me \varpi_v^j \ints_v\units \subseteq D_v\inv
+                    me \implies \Lambda(\varpi_v^j \ints_v\units) \subseteq\ZZ
+                    me \implies e(\Lambda(\varpi_v^j \ints_v\units)) = 1
+                    | so the integral in question
+                    me  = \int_{\ints_v\units} c_n(\alpha) \diff\units \alpha
+                    | as #[m c_n \ne 1].
+
+            p
+                | So finitely many are non-zero.
+
+            lemma
+                statement: p
+                    | #[m - n - d \lt j \lt -d] then
+                    me \int_{\ints_v\units} e(\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff \units \alpha = 0
+                    | .
+                proof: p
+                    | (Note #[m -n-d \lt j \lt -d \iff 0 \lt -j-d \lt n])
+                    | Let #[m \alpha = a (1 + \varpi_v^{-d-j} \alpha_1)].
+                    | So we may write
+                    me \sum_{a \mod{\units \varpi_v^{d+j}}}  \int_{\ints_v} e(\Lambda(\varpi_v^ja (1+ \varpi_v^{-d-j} \alpha_1))) c_n(a (1+ \varpi_v^{-d-j} \alpha_1)) \diff \units \alpha
+                    | .
+                    | (Note: #[m \varpi_v^j (a(1+ \varpi_v^{-j-d} \alpha_1)) = a\varpi_v^j + a \varpi_v^{-d} \alpha_1], the last term is in #[m D_v\inv] so #[m e(\Lambda(\varpi_v^ja (1+ \varpi_v^{-d-j} \alpha_1))) = e(\Lambda(\varpi_v^ja))])
+                    | So the integral is
+                    me \sum_{a \mod{\units \varpi_v^{d+j}}} c_n(a) e(\Lambda(\varpi_v^ja)) \int_{\ints_v} c_n(1+ \varpi_v^{-d-j} \alpha_1) \diff \units \alpha = 0
+                    | as we are integrating over a multiplicative group.
+
+            p
+                | Therefore: In the ramified case we have
+                me \zeta(f_b, |\cdot |^s c_n) = e_v^{(n+d) s} \int_{\ints_v\units} e(\Lambda(\varpi_v^{-(n+d)} \alpha)) c_n(\alpha) \diff \units \alpha
+                me = q_v^{(n+d)s} \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(\varpi_v^{-(n+d)} a)) c_n(a) \int_{1 + \varpi_v^n \ints_v} \diff \units \alpha
+                | .
+                me N(D_v f_v)^s A_n G(c_n)
+                | where
+                me G(c_n) = \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(a\varpi^{-d-n})) c_n(a)
+                | is a Gauss-sum for #[m c_n], with #[m |G(c_n)| = N(f)^{1/2}].
+
+            corollary
+                statement: p
+                    me \zeta(\hat f, c_n\inv |\cdot |^{1-s}) = N(D_v)^{1/2} N(f_v) A_n
+                    | .
+                proof: p
+                    | Exercise.
+
+            p
+                | This finishes the proof of the local functional equation.
+                me \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha)\diff \units \alpha
+                | .
+            p
+                | A little bit of a more modern approach that may be helpful if you want to read things since Tate.
+                me \psi_v \text{ additive character}
+                me \mu \text{ additive measure, self-dual w.r.t } \psi_v
+
+            definition
+                statement: p
+                    | A family of #[m \zeta]-integrals for each #[m |cdot |^s \chi_v]
+                    me \chi_v \colon K_v\units \to \CC \units
+                    | .
+                    me Z(s,\chi_v, f_v, \psi_v) = \int_{K_v\units} f(\alpha) \chi_v(\alpha) |\alpha|^s \diff \units \alpha
+                    me Z \colon \mathcal S(K_v\units) \to \CC
+                    | .
+
+            remark
+                p
+                    | The interesting part of this integral is when #[m \alpha] is close to 0/
+            p
+                | To study this around 0
+                me f(\alpha) = a\phi_1( \alpha) + \phi_2(\alpha)
+                | where #[m \phi_1] is the characteristic function of a very small (depending on #[m f]) neighbourhood of 0.
+                | #[m \phi_2] is 0 around a sufficiently small neighbourhood of 0.
+
+            p
+                me Z(s, \chi_v, \phi_2, \psi_v) = \int_{K_v\units} \phi_2(\alpha) \chi_v(\alpha) |\alpha|_v^s  \diff\units \alpha
+                me = \sum_{j = -N_1}^{N_2} c_j \int_{\varpi_v^j \ints_v\units} \chi_v(\alpha) |\alpha|^s \diff\units \alpha
+                | This converges for all #[m s \in \CC] and lands in #[m \CC\lb q_v^s, q_v^{-1}]
+                | .
+            p
+                me Z(s, \chi_v, \phi_1, \psi_v) = \sum_{j = M  }^\infty    \int_{\varpi_v^j \ints_v\units} \chi_v(\alpha) |\alpha|^s \diff\units \alpha
+                me = \sum_{j = M  }^\infty  | \varpi_v^j|^s  \int_{\ints_v\units} \chi_v(\varpi_v^j\alpha) \diff\units \alpha
+                | this is a multiple of
+                me \begin{cases} 0 \amp \text{ if } \chi_v \text{ is ram.} \\ \frac{1}{1 - 1 /q_v^s} \amp \text{ if } \chi_v \text{ unram.}\end{cases}
+                | .
+
+            p
+                | Usually these observations are packed into saying
+                me Z(s,\chi_v, f)
+                | is
+                ol
+                    li
+                        | Rational function of #[m q_v^s] and in #[m \CC\lb q_v^s, q_v^{-s}\rb].
+                    li
+                        | #[m \chi_v] is unramified if its entire.
+                    li
+                        | There exists #[m f\in \mathcal S(K)] s.t.
+                        me Z(s,\chi, f) = L(s, \chi)
+                        |.
+                    li
+                        | For all #[m f]
+                        me \frac{Z(s, \chi, f)}{L(s, \chi, f)}
+                        | is entire.
+                | It is then said that #[m L(s,\chi)] is the GCD of the #[m \zeta] integrals #[m Z(s, \chi, f)].
+
+            p
+                me.
+                    \begin{array}{c|c|c}
+                    \text{Field} \amp \chi_v \amp L_v(s, \chi_v)\\
+                    \hline
+                    \CC       \amp |\cdot|^s_\CC\chi_n \amp 2(2\pi)^{-(s+ |n|/2)} \Gamma(s + |n|/2)\\
+                    \RR       \amp |\cdot|^s_\RR               \amp (\pi)^{-s/2)} \Gamma(s/2)\\
+                    \RR       \amp |\cdot|^s_\RR\mathrm{sgn}   \amp \pi^{-(s+1)/2)} \Gamma((s+1)/2)\\
+                    K_v       \amp |\cdot|^s \chi_v \text{ ur} \amp (1- \chi_v( \varpi_v)/q_v^s)\inv\\
+                    K_v       \amp |\cdot|^s \chi_v \text{ ram}\amp 1\\
+                    \end{array}

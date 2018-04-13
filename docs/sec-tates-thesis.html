@@ -976,7 +976,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 = \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|^{-1/2} |varpi|^{-n} \amp   \end{cases}
 \end{equation*}
 </div></article></div>
-<p id="p-393">Unramified calculatesn:</p>
+<p id="p-393">Unramified calculation:</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(f_0, |\cdot |^s)  =  \int_{K\units} f_0(\alpha) |\alpha|^s \diff\units \alpha
@@ -1053,7 +1053,237 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 \begin{equation*}
 \rho(c) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}\text{.}
 \end{equation*}
-</div></article></section></section></section></div></main>
+</div></article><article class="aside-like" id="aside-20"><p id="p-396">Lecture 20 12/4/2018</p></article><p id="p-397">We have done the case of unramified characters.</p>
+<p id="p-398">Case II: \(n \gt 0\)</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f_n, c_n|\cdot|^s) = \int_{K_v\units} f_n(\alpha) c_n(\alpha) |\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{(D_vf_v) \inv} e(\Lambda(\alpha))(c(\alpha)) |\alpha|_v^s \diff \units \alpha\text{.}
+\end{equation*}
+</div>
+<p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+(D_v) = (\varpi_v^d)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f= (\varpi_v^n)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= int_{(\varpi_v^{n+d})\inv} e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{j = -n-d}^\infty \int_{\varpi_v^j \ints_v\units } e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
+\end{equation*}
+</div>
+<p>let \(\alpha = \varpi_v^j \alpha\) which implies</p>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{j = -n-d}^\infty q_v^{js}\int_{\ints_v\units } e(\Lambda(\varpi^j\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="lemma-15"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.23</span>
+</h6>
+<p id="p-399">If \(j \ge -d\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\ints_v\units} (\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff\units \alpha = 0\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-39" id="proof-39"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-39" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-400">\(j \ge -d\) implies</p>
+<div class="displaymath">
+\begin{equation*}
+\varpi_v^j \ints_v\units \subseteq D_v\inv
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies \Lambda(\varpi_v^j \ints_v\units) \subseteq\ZZ
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\implies e(\Lambda(\varpi_v^j \ints_v\units)) = 1
+\end{equation*}
+</div>
+<p>so the integral in question</p>
+<div class="displaymath">
+\begin{equation*}
+= \int_{\ints_v\units} c_n(\alpha) \diff\units \alpha
+\end{equation*}
+</div>
+<p>as \(c_n \ne 1\text{.}\)</p></article></div>
+<p id="p-401">So finitely many are non-zero.</p>
+<article class="theorem-like" id="lemma-16"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.24</span>
+</h6>
+<p id="p-402">\(- n - d \lt j \lt -d\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\ints_v\units} e(\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff \units \alpha = 0\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-40" id="proof-40"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-40" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-403">(Note \(-n-d \lt j \lt -d \iff 0 \lt -j-d \lt n\)) Let \(\alpha = a (1 + \varpi_v^{-d-j} \alpha_1)\text{.}\) So we may write</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{a \mod{\units \varpi_v^{d+j}}}  \int_{\ints_v} e(\Lambda(\varpi_v^ja (1+ \varpi_v^{-d-j} \alpha_1))) c_n(a (1+ \varpi_v^{-d-j} \alpha_1)) \diff \units \alpha\text{.}
+\end{equation*}
+</div>
+<p>(Note: \(\varpi_v^j (a(1+ \varpi_v^{-j-d} \alpha_1)) = a\varpi_v^j + a \varpi_v^{-d} \alpha_1\text{,}\) the last term is in \(D_v\inv\) so \(e(\Lambda(\varpi_v^ja (1+ \varpi_v^{-d-j} \alpha_1))) = e(\Lambda(\varpi_v^ja))\)) So the integral is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{a \mod{\units \varpi_v^{d+j}}} c_n(a) e(\Lambda(\varpi_v^ja)) \int_{\ints_v} c_n(1+ \varpi_v^{-d-j} \alpha_1) \diff \units \alpha = 0
+\end{equation*}
+</div>
+<p>as we are integrating over a multiplicative group.</p></article></div>
+<p id="p-404">Therefore: In the ramified case we have</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f_b, |\cdot |^s c_n) = e_v^{(n+d) s} \int_{\ints_v\units} e(\Lambda(\varpi_v^{-(n+d)} \alpha)) c_n(\alpha) \diff \units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= q_v^{(n+d)s} \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(\varpi_v^{-(n+d)} a)) c_n(a) \int_{1 + \varpi_v^n \ints_v} \diff \units \alpha\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+N(D_v f_v)^s A_n G(c_n)
+\end{equation*}
+</div>
+<p>where</p>
+<div class="displaymath">
+\begin{equation*}
+G(c_n) = \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(a\varpi^{-d-n})) c_n(a)
+\end{equation*}
+</div>
+<p>is a Gauss-sum for \(c_n\text{,}\) with \(|G(c_n)| = N(f)^{1/2}\text{.}\)</p>
+<article class="theorem-like" id="corollary-5"><h6 class="heading">
+<span class="type">Corollary</span><span class="codenumber">3.25</span>
+</h6>
+<div class="displaymath" id="p-405">
+\begin{equation*}
+\zeta(\hat f, c_n\inv |\cdot |^{1-s}) = N(D_v)^{1/2} N(f_v) A_n\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-41" id="proof-41"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-41" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-406">Exercise.</p></article></div>
+<p id="p-407">This finishes the proof of the local functional equation.</p>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha)\diff \units \alpha\text{.}
+\end{equation*}
+</div>
+<p id="p-408">A little bit of a more modern approach that may be helpful if you want to read things since Tate.</p>
+<div class="displaymath">
+\begin{equation*}
+\psi_v \text{ additive character}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\mu \text{ additive measure, self-dual w.r.t } \psi_v
+\end{equation*}
+</div>
+<article class="definition-like" id="definition-19"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.26</span>
+</h6>
+<p id="p-409">A family of \(\zeta\)-integrals for each \(|cdot |^s \chi_v\)</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_v \colon K_v\units \to \CC \units\text{.}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+Z(s,\chi_v, f_v, \psi_v) = \int_{K_v\units} f(\alpha) \chi_v(\alpha) |\alpha|^s \diff \units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+Z \colon \mathcal S(K_v\units) \to \CC\text{.}
+\end{equation*}
+</div></article><article class="remark-like" id="remark-22"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">3.27</span>
+</h6>
+<p id="p-410">The interesting part of this integral is when \(\alpha\) is close to 0/</p></article><p id="p-411">To study this around 0</p>
+<div class="displaymath">
+\begin{equation*}
+f(\alpha) = a\phi_1( \alpha) + \phi_2(\alpha)
+\end{equation*}
+</div>
+<p>where \(\phi_1\) is the characteristic function of a very small (depending on \(f\)) neighbourhood of 0. \(\phi_2\) is 0 around a sufficiently small neighbourhood of 0.</p>
+<div class="displaymath" id="p-412">
+\begin{equation*}
+Z(s, \chi_v, \phi_2, \psi_v) = \int_{K_v\units} \phi_2(\alpha) \chi_v(\alpha) |\alpha|_v^s  \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{j = -N_1}^{N_2} c_j \int_{\varpi_v^j \ints_v\units} \chi_v(\alpha) |\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<p>This converges for all \(s \in \CC\) and lands in \(\CC\lb q_v^s, q_v^{-1}\) .</p>
+<div class="displaymath" id="p-413">
+\begin{equation*}
+Z(s, \chi_v, \phi_1, \psi_v) = \sum_{j = M  }^\infty    \int_{\varpi_v^j \ints_v\units} \chi_v(\alpha) |\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{j = M  }^\infty  | \varpi_v^j|^s  \int_{\ints_v\units} \chi_v(\varpi_v^j\alpha) \diff\units \alpha
+\end{equation*}
+</div>
+<p>this is a multiple of</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{cases} 0 \amp \text{ if } \chi_v \text{ is ram.} \\ \frac{1}{1 - 1 /q_v^s} \amp \text{ if } \chi_v \text{ unram.}\end{cases}\text{.}
+\end{equation*}
+</div>
+<p id="p-414">Usually these observations are packed into saying</p>
+<div class="displaymath">
+\begin{equation*}
+Z(s,\chi_v, f)
+\end{equation*}
+</div>
+<p>is</p>
+<ol class="decimal">
+<li id="li-76">Rational function of \(q_v^s\) and in \(\CC\lb q_v^s, q_v^{-s}\rb\text{.}\)</li>
+<li id="li-77">\(\chi_v\) is unramified if its entire.</li>
+<li id="li-78">There exists \(f\in \mathcal S(K)\) s.t.<div class="displaymath">
+\begin{equation*}
+Z(s,\chi, f) = L(s, \chi)\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-79">For all \(f\)<div class="displaymath">
+\begin{equation*}
+\frac{Z(s, \chi, f)}{L(s, \chi, f)}
+\end{equation*}
+</div>is entire.</li>
+</ol>
+<p>It is then said that \(L(s,\chi)\) is the GCD of the \(\zeta\) integrals \(Z(s, \chi, f)\text{.}\)</p>
+<div class="displaymath" id="p-415">
+\begin{equation*}
+\begin{array}{c|c|c}
+\text{Field} \amp \chi_v \amp L_v(s, \chi_v)\\
+\hline
+\CC       \amp |\cdot|^s_\CC\chi_n \amp 2(2\pi)^{-(s+ |n|/2)} \Gamma(s + |n|/2)\\
+\RR       \amp |\cdot|^s_\RR               \amp (\pi)^{-s/2)} \Gamma(s/2)\\
+\RR       \amp |\cdot|^s_\RR\mathrm{sgn}   \amp \pi^{-(s+1)/2)} \Gamma((s+1)/2)\\
+K_v       \amp |\cdot|^s \chi_v \text{ ur} \amp (1- \chi_v( \varpi_v)/q_v^s)\inv\\
+K_v       \amp |\cdot|^s \chi_v \text{ ram}\amp 1\\
+\end{array}
+\end{equation*}
+</div></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];
