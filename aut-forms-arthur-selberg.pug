@@ -2738,7 +2738,7 @@ section#sec-tates-thesis
                         me \hat f_0(\xi) = 2\int_{\CC} f_0(u+iv) \overbrace{e(2(ux-vy))}^{\Lambda((u+iv)(x+iy))} \diff u \diff v
                         me 2\int_{\RR} e^{-2\pi (u^2 - 2ixu)} \diff u \int_\RR e^{-2\pi(v^2 + 2ivy)} \diff v
                         | which by completing the square and Cauchy gives
-                        me e^{-2\pi x^2 + y^2)} = \hat f_0(\xi)
+                        me e^{-2\pi(x^2 + y^2)} = \hat f_0(\xi)
                     p
                         | Assume #[m \hat f_n(\xi) = i^n f_{-n}(\xi)] for #[m n \gt 0].
                         | Then the induction step is to use #[m \diff / \diff \bar \xi] in the integral defining #[m \hat f_n(\xi)] (exercise).
@@ -2783,8 +2783,8 @@ section#sec-tates-thesis
                 proof: p
                     me \hat f_n(\xi) = \int_K f_n(\eta) e(-\Lambda (\eta \xi)) \diff \eta
                     me =\int_{D_v\inv \varpi^{-n} \ints_v} e(\Lambda(\eta(1-\xi))) \diff \eta
-                    me = \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|\inv |varpi|^{-n} \int_{\ints_v} \diff \eta \amp   \end{cases}
-                    me = \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|^{-1/2} |varpi|^{-n} \amp   \end{cases}
+                    me = \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|\inv |\varpi|^{-n} \int_{\ints_v} \diff \eta \amp   \end{cases}
+                    me = \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|^{-1/2} |\varpi|^{-n} \amp   \end{cases}
                     // ????
 
             p
