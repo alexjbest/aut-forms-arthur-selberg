@@ -11,22 +11,93 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="paragraphs"><h5 class="heading"><span class="title">Multiplicative Haar measures</span></h5>
+<article class="paragraphs"><h5 class="heading"><span class="title">Characters</span></h5>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.31</span>
+</h6>
 <p>Let</p>
 <div class="displaymath">
 \begin{equation*}
-\diff_v^times \alpha = \begin{cases} \frac{\diff_v \alpha}{|\alpha|_v} \amp \text{ if } v \text{ archimidean}\\ \left(\frac{1}{1-1/N(\varpi_v)}\right) \frac{\diff_v \alpha}{|\alpha|_v}  \amp \text{ if } v \text{ non-archimidean}\end{cases}
+\psi \colon \adeles_K \to   \CC\units
 \end{equation*}
 </div>
-<p>where \(\diff_v \alpha\) is the additive Haar measure. these extra factors are really Tamagawa numbers. They make the product in the next lemma converge.</p>
-<article class="theorem-like"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.13</span>
-</h6>
-<p>For \(v\) non-archimidean</p>
+<p>be a continuous homomorphism. Then</p>
 <div class="displaymath">
 \begin{equation*}
-\int_{\ints_v^\times } \diff_v^\times \alpha = N(D_v)^{-1/2}\text{.}
+\psi = \otimes_v' \psi_v
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="./knowl/proof-32-hidden.html" knowl-id="hidden-proof-32" alt="Proof 3.13.1 " title="Proof 3.13.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article></article><span class="incontext"><a href="sec-tates-thesis.html#paragraphs-26">in-context</a></span>
+</div>
+<p>Where almost all \(\psi_v\)'s are unramified (i.e. \(\psi_v|_{\ints_v} = 1\)) and \(\psi(a) = \prod_v \psi_v(\alpha)\) (this is a finite product).</p></article><article class="hiddenproof"><a knowl="./knowl/proof-42-hidden.html" knowl-id="hidden-proof-42" alt="Proof 3.31.1 " title="Proof 3.31.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>From now on we will simply write \(\adeles = \adeles_K\text{.}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.32</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\widehat \adeles \simeq\adeles\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="./knowl/proof-43-hidden.html" knowl-id="hidden-proof-43" alt="Proof 3.32.1 " title="Proof 3.32.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article><p>Measures: \(\diff \xi = \prod_v \diff \xi_v\) where for almost all \(v\) we have \(\int_{\ints_v} \diff \xi_v = 1\text{.}\)</p>
+<p>Dual measures: Normalise so that Fourier inversion holds, i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\hat f(\eta) = \int f(\xi) \psi(\xi \eta) \diff \xi
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\hat{\hat f}(\eta) = f(- \xi)
+\end{equation*}
+</div>
+<p>so we get \(\mu^* (\ints_v^\perp) = 1\) where</p>
+<div class="displaymath">
+\begin{equation*}
+\ints_v^\perp = \{\psi_v : \psi_v|_{\ints_v} = 1\}\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.33</span>
+</h6>
+<p>Let \(\alpha \in \adeles\) then we get a map</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha \colon \adeles \to\adeles
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x\mapsto \alpha x\text{.}
+\end{equation*}
+</div>
+<p>This is an automorphism iff \(\alpha \in \adeles\units\text{.}\)</p></article><div class="displaymath">
+\begin{equation*}
+\mu(\alpha S) = |\alpha|_{\adeles} \mu(S)
+\end{equation*}
+</div>
+<p>where \(|\alpha|_\adeles = \prod |\alpha|_v\text{,}\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\alpha S} \diff \mu(x) = |\alpha| \int_S \diff \mu(x)\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">3.34</span>
+</h6>
+<p>We have \(K \hookrightarrow \adeles_K\text{.}\)</p>
+<ol class="decimal">
+<li>\(K\) is discrete in \(\adeles_K\text{.}\)</li>
+<li>\(K\) is cocompact in \(\adeles_K\) (i.e. \(K \backslash \adeles_K\) is compact).</li>
+<li><div class="displaymath">
+\begin{equation*}
+K \cap \adeles_{K,\infty} = K \cap \prod_{v|\infty} K_v = \ints _K\text{.}
+\end{equation*}
+</div></li>
+<li>\(K + \adeles_{K,\infty} = \adeles_K\text{.}\)</li>
+<li>\(\mu(K\backslash \adeles_K) = 1\) (with our earlier conventions).</li>
+<li>\(K^\perp = K\) i.e.<div class="displaymath">
+\begin{equation*}
+\{\alpha \in \adeles_K : e(\Lambda(\alpha \eta) ) = 1 \,\forall \eta \in K \} = K\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="hiddenproof"><a knowl="./knowl/proof-44-hidden.html" knowl-id="hidden-proof-44" alt="Proof 3.34.1 " title="Proof 3.34.1 "><h6 class="heading"><span class="type">Proof</span></h6></a></article></article><span class="incontext"><a href="sec-tates-thesis.html#paragraphs-26">in-context</a></span>
 </body>
 </html>

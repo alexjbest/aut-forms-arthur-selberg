@@ -2502,7 +2502,7 @@ section#sec-tates-thesis
 
             p
                 | Choose a uniformiser #[m \varpi_v] s.t.
-                me \begin{array}{ccc} \alpha \amp \tilde \alpha \amp \varpi_v^{v_v(\alpha)} \\ \CC^\times \amp S^1 \amp \RR_+ \\ \RR^\times \amp \{\pm 1\}\amp \RR_+ \\ K_v^\times \amp \ints_v^\times \amp \ZZ\end{array}
+                me \begin{array}{c|c|c} \alpha \amp \tilde \alpha \amp \varpi_v^{v_v(\alpha)} \\ \hline \CC^\times \amp S^1 \amp \RR_+ \\ \RR^\times \amp \{\pm 1\}\amp \RR_+ \\ K_v^\times \amp \ints_v^\times \amp \ZZ\end{array}
                 | .
 
             theorem
@@ -2511,6 +2511,7 @@ section#sec-tates-thesis
                     me \alpha \mapsto c(\alpha) = \tilde c (\tilde \alpha) |\alpha|^s
                     | where
                     me \tilde c \colon U_v \to \CC^\times
+                    |.
                 proof: p
                     | Exercise.
 
@@ -2955,3 +2956,351 @@ section#sec-tates-thesis
                     K_v       \amp |\cdot|^s \chi_v \text{ ur} \amp (1- \chi_v( \varpi_v)/q_v^s)\inv\\
                     K_v       \amp |\cdot|^s \chi_v \text{ ram}\amp 1\\
                     \end{array}
+
+        subsubsection
+            title #[m \epsilon]-factors
+
+            aside: p Lecture 21 17/4/2018
+
+            p
+                | Last time we looked at #[m L]-factors,
+                me Z(s,f,\chi)
+                | for #[m \chi]  a multiplicative character and #[m f \in \mathcal S (K_v)].
+            p
+                | Let #[m \psi_v\colon K_v \to \CC] be an additive character.
+
+            definition
+                title #[m \epsilon]-factors
+                statement: p
+                    | The #[m \epsilon]-factor is defined to be
+                    me \frac{Z(1-s, \hat f ,  \chi \inv)}{L(1-s, \chi \inv)} = \epsilon(s,\chi, \psi_v) \frac{Z(s,f,\chi)}{L(s,\chi)}
+                    | .
+
+            note
+                p
+                    | This is related to  #[m \rho(c) \inv] in Tate's notation.
+                p
+                    | Tate's normalization of the additive character #[m \psi_v] is such that #[m \psi_v( \cdots) = \Lambda(\cdots)].
+
+            definition
+                statement: p
+                    | The #[term root number] is
+                    me \frac{\epsilon(s,\chi, \psi)}{|\epsilon(s,\chi, \psi)|}
+                    | .
+                    | It is a complex number of norm 1.
+
+
+            p
+                me.
+                    \begin{array}{c|c|c|c|c}
+                    \text{Field} \amp \chi_v                   \amp \epsilon\text{-factor} \amp \text{Root number} \amp \text{Modern normalisation} \\
+                    \hline
+                    \CC       \amp |\cdot|^s_\CC\chi_n         \amp          i^{|n|}     \amp          i^{|n|}     \amp       i^{-|n|}         \\
+                    \RR       \amp |\cdot|^s_\RR               \amp          1           \amp          1           \amp          1            \\
+                    \RR       \amp |\cdot|^s_\RR\mathrm{sgn}   \amp          i           \amp          i           \amp          -i           \\
+                    K_v       \amp |\cdot|^s                   \amp  N(D_v)^{\frac12-\epsilon}\amp     1           \amp          1            \\
+                    K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\chi)/N(f)^{\frac12})\amp 1/(G(\chi)/N(f)^{\frac12})\amp (G(\chi)/N(f)^{\frac12})\\
+                    \end{array}
+
+    subsection
+        title Global theory
+
+        subsubsection
+            title Adeles, Ideles
+            p
+                | First, some notation (restricted direct product)
+
+                me \prod_v'(F_v, H_v) = \left\{ (x_v) \in \prod_v F_v: x_v \in H_v \text{ for all but finitely many } v\right\}
+                | . Then
+                me \adeles_K =  \prod_v'(K_v, \ints_v)
+                me \adeles_K\units =  \prod_v'(K_v\units, \ints_v\units)
+                | .
+                | Topologies:
+                me \adeles_{K,S} = \prod_{v\in S} K_v \times \prod_{v\not \in S}\ints_v
+                me \adeles_{K,S}\units = \prod_{v\in S} K_v\units \times \prod_{v\not \in S}\ints_v\units
+                | for #[m S] any finite set of places containing #[m v | \infty].
+
+            paragraphs
+                title Characters
+
+                lemma
+                    statement: p
+                        | Let
+                        me \psi \colon \adeles_K \to   \CC\units
+                        | be a continuous homomorphism.
+                        | Then
+                        me \psi = \otimes_v' \psi_v
+                        | Where almost all #[m \psi_v]'s are unramified (i.e. #[m \psi_v|_{\ints_v} = 1]) and #[m \psi(a) = \prod_v \psi_v(\alpha)] (this is a finite product).
+                    proof: p
+                        | Let #[m U \subseteq \CC^\times] be a neighbourhood of #[m 1 ] that does not contain any subgroups except for #[m \{1\}],
+                        | Let #[m N \subseteq \adeles_K] s.t. #[m \psi(N)\subseteq U].
+                        | Let #[m S] be a the set of places for which  #[m N_v \ne  \ints_v].
+                        | Consider
+                        me \adeles_K^S  =  \prod_{v\in S}1 \times \prod_{v\not \in S}  \ints_v  \subseteq N
+                        | so that
+                        me \psi(\adeles_K^S) = 1
+                        | since the image is a subgroup #[m \subseteq U].
+
+                p
+                    | From now on we will simply write #[m \adeles = \adeles_K].
+
+                lemma
+                    statement: p
+                        me \widehat \adeles \simeq\adeles
+                        | .
+                    proof: p
+                        | Completely analogous to #[m \hat K_v \simeq K_v] via #[m \eta \mapsto \Lambda(\eta \cdot)], for any non-trivial #[m \Lambda].
+                        | Fix one nontrivial #[m \Lambda \colon \adeles \to \CC\units].
+                        | Rest is just #[m \Lambda(\eta \cdot)] for #[m \eta \in \adeles].
+
+                p
+                    | Measures: #[m \diff \xi = \prod_v \diff \xi_v] where for almost all #[m v] we have #[m \int_{\ints_v} \diff \xi_v = 1].
+
+                p
+                    | Dual measures:
+                    | Normalise so that Fourier inversion holds, i.e.
+                    me \hat f(\eta) = \int f(\xi) \psi(\xi \eta) \diff \xi
+                    me \hat{\hat f}(\eta) = f(- \xi)
+                    | so we get #[m \mu^* (\ints_v^\perp) = 1] where
+                    me \ints_v^\perp = \{\psi_v : \psi_v|_{\ints_v} = 1\}
+                    | .
+
+                lemma
+                    statement: p
+                        | Let #[m \alpha \in \adeles] then we get a map
+                        me \alpha \colon \adeles \to\adeles
+                        me x\mapsto \alpha x
+                        | .
+                        | This is an automorphism iff #[m \alpha \in \adeles\units].
+
+                p
+                    me \mu(\alpha S) = |\alpha|_{\adeles} \mu(S)
+                    | where #[m |\alpha|_\adeles = \prod |\alpha|_v], i.e.
+                    me \int_{\alpha S} \diff \mu(x) = |\alpha| \int_S \diff \mu(x)
+                    | .
+
+                proposition
+                    statement: p
+                        | We have #[m K \hookrightarrow \adeles_K].
+                        ol
+                            li
+                                | #[m K] is discrete in #[m \adeles_K].
+                            li
+                                | #[m K] is cocompact in #[m \adeles_K] (i.e. #[m K \backslash \adeles_K] is compact).
+                            li
+                                me K \cap \adeles_{K,\infty} = K \cap \prod_{v|\infty} K_v = \ints _K
+                                |.
+                            li
+                                | #[m K + \adeles_{K,\infty} = \adeles_K].
+                            li
+                                | #[m \mu(K\backslash \adeles_K) = 1] (with our earlier conventions).
+                            li
+                                | #[m K^\perp = K] i.e.
+                                me \{\alpha \in \adeles_K : e(\Lambda(\alpha \eta) ) = 1 \,\forall \eta \in K \} = K
+                                | .
+                    proof: p
+                        ol
+                            li
+                                | #[m \ints_K] is a full rank lattice in #[m \prod_{v|\infty} K_v = V] (Note for #[m \lb K: \QQ \rb = N] then #[m V \simeq \RR^{r_1} \times \CC^{r_2} \simeq \RR^N]).
+                            li/
+                            li
+                                | Obvious
+                            li
+                                | Partial fractions.
+                            li
+                                me \mu(K\backslash \adeles) = \mu (K\backslash V) \mu(\pi\ints_v) = 1
+                                |.
+                            li
+                                | Since #[m \adeles_K / K] is compact, #[m \widehat{\adeles_K/K}] is discrete. Further #[m K \subseteq K^\perp].
+                                | In fact #[m K^\perp /K] is a finite vector space since
+                                me K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
+                                | which is compact, hence #[m K^\perp = K].
+
+            paragraphs
+                title Poisson summation
+
+                p
+                    | Let #[m f, \hat f \in L^1(\adeles)], then #[m \forall \alpha \in \adeles\units],
+                    me \frac{1}{|\alpha|} \sum_{\xi\in K} f\left(\frac\xi\alpha\right) = \sum_{\xi\in K} \hat f(\alpha \xi)
+                    | .
+                    | Tate refers to this as #[q Riemann-Roch].
+                    | This is due to the case where #[m K = \FF_q(T)] and #[m K(\PP^1)], #[m f = \chi_{\ints_K}].
+                    | There is some Serre duality involved.
+
+            paragraphs
+                title Ideles
+
+                p
+                    |Our goal is now to understand #[m K\units \hookrightarrow \adeles\units_K].
+
+                theorem
+                    title Product formula
+                    statement: p
+                        me |\alpha|_{\adeles} = 1 \, \forall \alpha \in K\units
+                        | .
+                    proof: p
+                        | Exercise.
+
+                p
+                    | Unfortunately #[m K\units\backslash \adeles\units_K] is not compact.
+
+                p
+                    | A non-canonical decomposition is as follows:
+
+                p
+                    | Fix #[m v_0 \in S_\infty] and let
+                    me \iota\colon\RR_{\gt 0} \hookrightarrow \adeles_K
+                    | via
+                    me \begin{cases} (\alpha, 1,\ldots, 1) \amp K_{v_0} = \RR \\ (\sqrt\alpha, 1,\ldots, 1) \amp K_{v_0} = \CC\end{cases}
+                    | Note
+                    me | \iota(x)|_{\adeles_K} = |x| = x
+                    | .
+                    | If #[m \alpha \in \adeles\units] then
+                    me \alpha =  \underbrace{\frac{\alpha}{|\alpha|_\adeles}}_b \underbrace{|\alpha|_\adeles}_t
+                    | with #[m b \in \adeles^{\times,1},t\in \RR_{\gt 0}].
+                    | Where #[m \adeles^{\times,1} = \ker(|\cdot|_\adeles)].
+                    | Then
+                    me \diff\units \alpha =  \diff\units t \diff\units b
+                    | so that
+                    me \int_{\adeles\units} f(\alpha) \diff\units \alpha = \int_0^\infty \int_{\adeles^{\times,1}} f(tb)  \frac{\diff t}{t} \diff b
+                    | .
+
+
+
+        paragraphs
+            title Multiplicative world
+            aside: p Lecture 22 19/4/2018
+            p
+                | Let
+                me \adeles^{\times, 1} = \ker(|\cdot|_\adeles \colon \adeles \units \to \CC\units)
+                ol
+                    li
+                        | #[m K\units \backslash \adeles^{\times, 1}] is compact, which leads to Dirichlet's   units theorem.
+                    li
+                        | #[m \mu(K\units \backslash \adeles^{\times, 1})].
+                    li
+                        | Analytic continuation and functional equation.
+                    li
+                        | Examples
+            paragraphs
+                title 1
+                p
+                    | Recall for a fixed archimidean place #[m v_0]
+                    me S_\infty = \{v|\infty\}, S_\infty' = S_\infty  \smallsetminus \{v_0\}
+                    | for #[m v] complex we take pairs as 1, so that #[m \#S_\infty = r_1 + r_2].
+
+                p
+                    | Let #[m r = r_1  + r_2 - 1 = \#S_\infty'].
+
+                p
+                    | Recall the log embedding for #[m \adeles^{\times, 1}]
+                    me l(b ) = (\log |b|_{v_1} , \ldots, \ldots, \log |b|_{v_r})_{v_i\in S_\infty'}
+                    | .
+
+                fact: statement
+                    p
+                        | #[m l] is onto and a homomorphism.
+                        | It vanishes on the global roots of unity, i.e. #[m l(b) = 0] for such.
+
+                p
+                    me l \colon W \backslash \adeles^{\times, 1} \twoheadrightarrow \RR^r
+                    | let #[m \{\epsilon_i\}] be a basis for the global units, #[m \{l(\epsilon_i)\} \subseteq \RR^r] span a full rank sublattice.
+                    | So #[m K^\times\backslash\adeles^{\times, 1}] is compact.
+
+            paragraphs
+                title 2
+
+                p
+                    me \mu(K\units \backslash \adeles^{\times, 1})  = \frac{2^{r_1} (2\pi)^{r_2} R h_K}{\sqrt{|D_K|} W_K}
+                    | Where #[m r_1] is  the number of real embeddings, #[m r_2] is half the number of complex embeddings, #[m R] is the regulator of #[m K], #[m D_K] is the discriminant of #[m K], #[m h_K] the class number, #[m W_K] the number of roots of unity of #[m K].
+
+            p
+                | 1 and 2 give us a fundamental domain.
+            lemma
+                statement: p
+                    me \adeles^{\times, 1} = \bigsqcup_{\alpha\in K^\times} \alpha \mathcal F
+                    | where  #[m \mathcal F] is defined as follows:
+                    | Let #[m \{b_i\}_{i=1}^{h_K}] be a set of representatives for the #[m \cl(K)] i.e. #[m \{\phi(b_i)\} = \cl (K)].
+                    | Let
+                    me P = \left\{ \sum_{v\in S_\infty'} x_v l(\epsilon_v) : 0 \le x_v \lt 1 \right\}
+                    | i.e. #[m P] is a fundamental parallelepiped for the lattice #[m \{l(\epsilon_v)\}_{v\in S_\infty'}].
+                    | Finally let
+                    me \mathcal F_0 = \left\{ b \in l\inv(P) : 0 \le \arg(b)_{v_0} \lt \frac{2\pi}{W}\right\}
+                    | so
+                    me \mathcal F = \bigsqcup_{b_i} b_i \mathcal F_0
+                    | .
+
+            definition#def-hecke-char
+                title Hecke characters
+                statement: p
+                    | A #[term Hecke character] is a continuous map
+                    me K\units \backslash \adeles\units \to \CC \units
+                    | .
+
+            note
+                p
+                    | #[m |\cdot |_\adeles^s] is a Hecke character any Hecke character #[m \chi = \chi_0 | \cdot |_\adeles^s]
+                    me \chi_0 \colon K\units \backslash \adeles^{\units,1} \to \CC\units
+                    | where #[m \Re(s)] is the exponent.
+
+        subsubsection
+            title Main theorem
+
+            p
+                | Global #[m \zeta]-functions #[m \zeta(f,\chi)]
+                me \mathcal S(\adeles) = \left\{ f \colon \adeles \to \CC : f,\hat f \in L^1,\, \sum_{\xi\in K} f(a(x + \xi)) , \sum_{\xi\in K} \hat f(a(x + \xi)) \text{ both }L^1\,\forall x\in \adeles\units, x\in \adeles,\,f(\alpha) |\alpha|^\sigma,  \hat f(\alpha)|\alpha|^\sigma  \in L^1 \,\forall \sigma \gt 1\right\}
+                me \zeta(f,\chi) = \int_{\adeles\units} f(\alpha) \chi(\alpha) \diff \units \alpha = \prod \zeta_v(f_v,\chi_v)
+                | .
+
+            theorem
+                statement: p
+                    | #[m \zeta] converges for #[m \chi] with exponent #[m \gt 1] and extends to a meromorphic function of all #[m s\in \CC].
+                    | #[m \zeta] is analytic, unless #[m \chi_0 = 1] (i.e. #[m \chi = |\cdot|^s_\adeles]) in which case it has poles at #[m s= 0] and 1 with residues #[m K\hat f(0), -Kf(0)] respectively for #[m \kappa = \mu(K\units \backslash \adeles^{\times,1})].
+                    | #[m \zeta(f,\chi) = \zeta(\hat f , \hat \chi)] where   #[m \hat \chi = \chi\inv |\cdot|].
+                proof
+                    p
+                        ol
+                            li
+                                me \zeta(f,\chi) = \int_{\adeles^\times} f(\alpha) \chi(\alpha) \diff\units \alpha
+                                me = \int_0^\infty \int_{\adeles^{\times,1}} f(tb) \chi(tb) \diff \units b \frac{\diff t}{t}
+                                me = \int_0^\infty \zeta_t(f, \chi) \frac{\diff t}{t}
+                                | where #[m \zeta_t(f,\chi) = \int_{\adeles^{\units,1}} f(tb) \chi(tb) \diff \units b].
+                            li
+                                | Functional equation
+                                me \zeta_t(f,\chi) = \int_{K\units\backslash \adeles^{\times,1}} \sum_{\alpha \in K^\times} f(t\alpha b) \overbrace{\chi(t\alpha b}^{=\chi(tb)} \diff \units b
+                                me = \int_{K\units \backslash \adeles^{\times,1}} \left\{\sum_{\alpha\in K} f(t\alpha b) - f(0)\right\} \chi(tb) \diff\units b
+                                me = \int_{K\units \backslash \adeles^{\times,1}} \left(\sum_{\alpha\in K} f(t \alpha b )\right) \chi(tb) \diff \units b - f(0) \int_{K\units \backslash \adeles^{\units,1}} \chi(tb) \diff \units b
+                                | the rightmost term is #[m \kappa] iff #[m \chi = |\cdot| ^s] and 0 otherwise.
+                                me \sum_{\alpha \in K} f(t\alpha b) = \frac{1}{|tb|_{\adeles}} \sum_{\alpha \in K} \hat f\left( \frac{\alpha}{tb}\right)
+                                | Remark: #[m b\in \adeles^{\times, 1}] implies #[m |b|_\adeles  = 1] and #[m |tb|_\adeles = |t|_\adeles =  t] via #[m \RR_{\gt 0} \hookrightarrow \adeles\units].
+                                | This implies
+                                me \int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} f(t \alpha b) \right) \chi(tb) \diff \units b = \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} \hat f(\frac{\alpha}{tb}) \right) \chi(tb) \diff \units b
+                                me  = \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} \hat f(\frac{\alpha b}{t}) \right) \chi(tb\inv) \diff \units b
+                                me  = \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }}  \sum_{\alpha \in K\units} \hat f(\frac{\alpha b}{t}) \chi(tb\inv) \diff \units b + \hat f(0)\int_{K\units\backslash \adeles^{\times, 1 }}   \hat \chi(b/t) \diff \units b
+                                | implies
+                                me \zeta_{1/t}(\hat f, \hat \chi) + \hat f (0 )  \int_{K\units\backslash \adeles^{\times, 1 }} \hat \chi(b/t) \diff\units b
+                                me = \zeta_t(f,\chi) + f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \chi (bt)  \diff\units b
+                                | take this and put it back in 1.
+                                me \int_0^\infty \zeta_t( f,\chi) \frac{\diff t}{t} = \int_0^1 + \int_1^\infty
+                                | the rightmost term is cool, so use
+                                me \int_0^1 \zeta(f,b) \frac{\diff t}{t} = \int_0^1\zeta_{1/t} (\hat f, \hat \chi) \frac {\diff t}{t}
+                                me + \int_0^1  \hat f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \hat \chi (b/t)  \diff\units b \frac{\diff t}{t} -\int_0^1  f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \chi (bt)  \diff\units b \frac{\diff t}{t}
+                                me  = \int_1^\infty\zeta_{t} (\hat f, \hat \chi) \frac {\diff t}{t} +  \hat f(0) \kappa \int_0^1 t^{s-1}\frac{\diff t}{t} -  f(0)\kappa\int_0^1 t^s\frac{\diff t}{t}
+                                | the rightmost terms are present only if #[m \chi_0 =1] they come to #[m \hat f(0) \kappa/(s-1) - f(0) \kappa/s].
+                                | This is invariant under #[m f\mapsto \hat f,\,\chi \mapsto \hat \chi].
+                                | All together
+                                me \zeta(f,\chi) = \int_1^\infty \zeta_t(f, \chi) \frac{\diff t}{t} + \int_1^\infty \zeta_t(\hat f , \hat \chi) \frac{\diff t}{t} + \left(\hat f(0) \kappa/(s-1) - f(0) \kappa/s \right)
+
+
+            example
+                title Concrete examples
+                statement: p
+                    ol
+                        li
+                            | Let #[m K] be  a number field and #[m \chi = |\cdot|_\adeles^s], #[m f = \otimes' f_v] where
+                            me f_v = \begin{cases} e^{-\pi x^2} \amp v = \RR\\ e^{-2\pi (x^2 + y^2)}\amp v = \CC\\ \text{char. fn. of } \ints_v \amp v\text{ non-arch.} \end{cases}
+
+                            | then #[m \zeta(f,\chi)] is a multiple of #[m \zeta_K(s)] the Dedekind zeta function (check this!).
+                            | We have thus proved the analytic continuation of #[m \zeta_K].
+                        li
+                            | Next time #[m K = \QQ(\sqrt 2)].

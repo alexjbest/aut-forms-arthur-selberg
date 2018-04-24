@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Multiplicative world</span></h5>
+<article class="aside-like"><p>Lecture 22 19/4/2018</p></article><p>Let</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles^{\times, 1} = \ker(|\cdot|_\adeles \colon \adeles \units \to \CC\units)
+\end{equation*}
+</div>
+<ol class="decimal">
+<li>\(K\units \backslash \adeles^{\times, 1}\) is compact, which leads to Dirichlet's   units theorem.</li>
+<li>\(\mu(K\units \backslash \adeles^{\times, 1})\text{.}\)</li>
+<li>Analytic continuation and functional equation.</li>
+<li>Examples</li>
+</ol>
+<article class="paragraphs"><h5 class="heading"><span class="title">1</span></h5>
+<p>Recall for a fixed archimidean place \(v_0\)</p>
+<div class="displaymath">
+\begin{equation*}
+S_\infty = \{v|\infty\}, S_\infty' = S_\infty  \smallsetminus \{v_0\}
+\end{equation*}
+</div>
+<p>for \(v\) complex we take pairs as 1, so that \(\#S_\infty = r_1 + r_2\text{.}\)</p>
+<p>Let \(r = r_1  + r_2 - 1 = \#S_\infty'\text{.}\)</p>
+<p>Recall the log embedding for \(\adeles^{\times, 1}\)</p>
+<div class="displaymath">
+\begin{equation*}
+l(b ) = (\log |b|_{v_1} , \ldots, \ldots, \log |b|_{v_r})_{v_i\in S_\infty'}\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Fact</span><span class="codenumber">3.36</span>
+</h6>
+<p>\(l\) is onto and a homomorphism. It vanishes on the global roots of unity, i.e. \(l(b) = 0\) for such.</p></article><div class="displaymath">
+\begin{equation*}
+l \colon W \backslash \adeles^{\times, 1} \twoheadrightarrow \RR^r
+\end{equation*}
+</div>
+<p>let \(\{\epsilon_i\}\) be a basis for the global units, \(\{l(\epsilon_i)\} \subseteq \RR^r\) span a full rank sublattice. So \(K^\times\backslash\adeles^{\times, 1}\) is compact.</p></article><article class="paragraphs"><h5 class="heading"><span class="title">2</span></h5>
+<div class="displaymath">
+\begin{equation*}
+\mu(K\units \backslash \adeles^{\times, 1})  = \frac{2^{r_1} (2\pi)^{r_2} R h_K}{\sqrt{|D_K|} W_K}
+\end{equation*}
+</div>
+<p>Where \(r_1\) is  the number of real embeddings, \(r_2\) is half the number of complex embeddings, \(R\) is the regulator of \(K\text{,}\) \(D_K\) is the discriminant of \(K\text{,}\) \(h_K\) the class number, \(W_K\) the number of roots of unity of \(K\text{.}\)</p></article><p>1 and 2 give us a fundamental domain.</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.37</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\adeles^{\times, 1} = \bigsqcup_{\alpha\in K^\times} \alpha \mathcal F
+\end{equation*}
+</div>
+<p>where  \(\mathcal F\) is defined as follows: Let \(\{b_i\}_{i=1}^{h_K}\) be a set of representatives for the \(\cl(K)\) i.e. \(\{\phi(b_i)\} = \cl (K)\text{.}\) Let</p>
+<div class="displaymath">
+\begin{equation*}
+P = \left\{ \sum_{v\in S_\infty'} x_v l(\epsilon_v) : 0 \le x_v \lt 1 \right\}
+\end{equation*}
+</div>
+<p>i.e. \(P\) is a fundamental parallelepiped for the lattice \(\{l(\epsilon_v)\}_{v\in S_\infty'}\text{.}\) Finally let</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal F_0 = \left\{ b \in l\inv(P) : 0 \le \arg(b)_{v_0} \lt \frac{2\pi}{W}\right\}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal F = \bigsqcup_{b_i} b_i \mathcal F_0\text{.}
+\end{equation*}
+</div></article><article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.38</span><span class="title">Hecke characters</span>
+</h6>
+<p>A <dfn class="terminology">Hecke character</dfn> is a continuous map</p>
+<div class="displaymath">
+\begin{equation*}
+K\units \backslash \adeles\units \to \CC \units\text{.}
+\end{equation*}
+</div></article><article class="remark-like"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">3.39</span>
+</h6>
+<p>\(|\cdot |_\adeles^s\) is a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> any <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> \(\chi = \chi_0 | \cdot |_\adeles^s\)</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_0 \colon K\units \backslash \adeles^{\units,1} \to \CC\units
+\end{equation*}
+</div>
+<p>where \(\Re(s)\) is the exponent.</p></article></article><span class="incontext"><a href="sec-tates-thesis.html#paragraphs-29">in-context</a></span>
+</body>
+</html>

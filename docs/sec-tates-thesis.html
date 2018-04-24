@@ -268,7 +268,10 @@ MathJax.Hub.Config({
 <li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
 </ul>
 <h2 class="link active"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
-<ul><li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<ul>
+<li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li>
+<li><a href="sec-tates-thesis.html#subsection-15" data-scroll="subsection-15">Global theory</a></li>
+</ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-tates-thesis"><h2 class="heading hide-type" alt="Section 3 Tate's Thesis (\(\GL_1\) theory)">
 <span class="type">Section</span><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span>
 </h2>
@@ -490,7 +493,7 @@ K_v^\times \to S^1\text{.}
 <p>if \(v\) is non-archimidean.</p></article><p id="p-350">Choose a uniformiser \(\varpi_v\) s.t.</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{array}{ccc} \alpha \amp \tilde \alpha \amp \varpi_v^{v_v(\alpha)} \\ \CC^\times \amp S^1 \amp \RR_+ \\ \RR^\times \amp \{\pm 1\}\amp \RR_+ \\ K_v^\times \amp \ints_v^\times \amp \ZZ\end{array}\text{.}
+\begin{array}{c|c|c} \alpha \amp \tilde \alpha \amp \varpi_v^{v_v(\alpha)} \\ \hline \CC^\times \amp S^1 \amp \RR_+ \\ \RR^\times \amp \{\pm 1\}\amp \RR_+ \\ K_v^\times \amp \ints_v^\times \amp \ZZ\end{array}\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-18"><h6 class="heading">
@@ -505,7 +508,7 @@ K_v^\times \to S^1\text{.}
 <p>where</p>
 <div class="displaymath">
 \begin{equation*}
-\tilde c \colon U_v \to \CC^\times
+\tilde c \colon U_v \to \CC^\times\text{.}
 \end{equation*}
 </div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-31" id="proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-352">Exercise.</p></article></div>
 <article class="example-like" id="example-10"><h6 class="heading">
@@ -1283,7 +1286,451 @@ K_v       \amp |\cdot|^s \chi_v \text{ ur} \amp (1- \chi_v( \varpi_v)/q_v^s)\inv
 K_v       \amp |\cdot|^s \chi_v \text{ ram}\amp 1\\
 \end{array}
 \end{equation*}
-</div></section></section></section></div></main>
+</div></section><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type" alt="Subsubsection 3.1.6 \(\epsilon\)-factors">
+<span class="type">Subsubsection</span><span class="codenumber">3.1.6</span><span class="title">\(\epsilon\)-factors</span>
+</h4>
+<article class="aside-like" id="aside-21"><p id="p-416">Lecture 21 17/4/2018</p></article><p id="p-417">Last time we looked at \(L\)-factors,</p>
+<div class="displaymath">
+\begin{equation*}
+Z(s,f,\chi)
+\end{equation*}
+</div>
+<p>for \(\chi\)  a multiplicative character and \(f \in \mathcal S (K_v)\text{.}\)</p>
+<p id="p-418">Let \(\psi_v\colon K_v \to \CC\) be an additive character.</p>
+<article class="definition-like" id="definition-20"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.28</span><span class="title">\(\epsilon\)-factors</span>
+</h6>
+<p id="p-419">The \(\epsilon\)-factor is defined to be</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{Z(1-s, \hat f ,  \chi \inv)}{L(1-s, \chi \inv)} = \epsilon(s,\chi, \psi_v) \frac{Z(s,f,\chi)}{L(s,\chi)}\text{.}
+\end{equation*}
+</div></article><article class="remark-like" id="note-15"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">3.29</span>
+</h6>
+<p id="p-420">This is related to  \(\rho(c) \inv\) in Tate's notation.</p>
+<p id="p-421">Tate's normalization of the additive character \(\psi_v\) is such that \(\psi_v( \cdots) = \Lambda(\cdots)\text{.}\)</p></article><article class="definition-like" id="definition-21"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.30</span>
+</h6>
+<p id="p-422">The <dfn class="terminology">root number</dfn> is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\epsilon(s,\chi, \psi)}{|\epsilon(s,\chi, \psi)|}\text{.}
+\end{equation*}
+</div>
+<p>It is a complex number of norm 1.</p></article><div class="displaymath" id="p-423">
+\begin{equation*}
+\begin{array}{c|c|c|c|c}
+\text{Field} \amp \chi_v                   \amp \epsilon\text{-factor} \amp \text{Root number} \amp \text{Modern normalisation} \\
+\hline
+\CC       \amp |\cdot|^s_\CC\chi_n         \amp          i^{|n|}     \amp          i^{|n|}     \amp       i^{-|n|}         \\
+\RR       \amp |\cdot|^s_\RR               \amp          1           \amp          1           \amp          1            \\
+\RR       \amp |\cdot|^s_\RR\mathrm{sgn}   \amp          i           \amp          i           \amp          -i           \\
+K_v       \amp |\cdot|^s                   \amp  N(D_v)^{\frac12-\epsilon}\amp     1           \amp          1            \\
+K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\chi)/N(f)^{\frac12})\amp 1/(G(\chi)/N(f)^{\frac12})\amp (G(\chi)/N(f)^{\frac12})\\
+\end{array}
+\end{equation*}
+</div></section></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type" alt="Subsection 3.2 Global theory">
+<span class="type">Subsection</span><span class="codenumber">3.2</span><span class="title">Global theory</span>
+</h3>
+<section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type" alt="Subsubsection 3.2.1 Adeles, Ideles">
+<span class="type">Subsubsection</span><span class="codenumber">3.2.1</span><span class="title">Adeles, Ideles</span>
+</h4>
+<p id="p-424">First, some notation (restricted direct product)</p>
+<div class="displaymath">
+\begin{equation*}
+\prod_v'(F_v, H_v) = \left\{ (x_v) \in \prod_v F_v: x_v \in H_v \text{ for all but finitely many } v\right\}\text{.}
+\end{equation*}
+</div>
+<p>Then</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles_K =  \prod_v'(K_v, \ints_v)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\adeles_K\units =  \prod_v'(K_v\units, \ints_v\units)\text{.}
+\end{equation*}
+</div>
+<p>Topologies:</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles_{K,S} = \prod_{v\in S} K_v \times \prod_{v\not \in S}\ints_v
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\adeles_{K,S}\units = \prod_{v\in S} K_v\units \times \prod_{v\not \in S}\ints_v\units
+\end{equation*}
+</div>
+<p>for \(S\) any finite set of places containing \(v | \infty\text{.}\)</p>
+<article class="paragraphs" id="paragraphs-26"><h5 class="heading"><span class="title">Characters</span></h5>
+<article class="theorem-like" id="lemma-17"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.31</span>
+</h6>
+<p id="p-425">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\psi \colon \adeles_K \to   \CC\units
+\end{equation*}
+</div>
+<p>be a continuous homomorphism. Then</p>
+<div class="displaymath">
+\begin{equation*}
+\psi = \otimes_v' \psi_v
+\end{equation*}
+</div>
+<p>Where almost all \(\psi_v\)'s are unramified (i.e. \(\psi_v|_{\ints_v} = 1\)) and \(\psi(a) = \prod_v \psi_v(\alpha)\) (this is a finite product).</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-42" id="proof-42"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-42" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-426">Let \(U \subseteq \CC^\times\) be a neighbourhood of \(1 \) that does not contain any subgroups except for \(\{1\}\text{,}\) Let \(N \subseteq \adeles_K\) s.t. \(\psi(N)\subseteq U\text{.}\) Let \(S\) be a the set of places for which  \(N_v \ne  \ints_v\text{.}\) Consider</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles_K^S  =  \prod_{v\in S}1 \times \prod_{v\not \in S}  \ints_v  \subseteq N
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+\psi(\adeles_K^S) = 1
+\end{equation*}
+</div>
+<p>since the image is a subgroup \(\subseteq U\text{.}\)</p></article></div>
+<p id="p-427">From now on we will simply write \(\adeles = \adeles_K\text{.}\)</p>
+<article class="theorem-like" id="lemma-18"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.32</span>
+</h6>
+<div class="displaymath" id="p-428">
+\begin{equation*}
+\widehat \adeles \simeq\adeles\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-43" id="proof-43"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-43" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-429">Completely analogous to \(\hat K_v \simeq K_v\) via \(\eta \mapsto \Lambda(\eta \cdot)\text{,}\) for any non-trivial \(\Lambda\text{.}\) Fix one nontrivial \(\Lambda \colon \adeles \to \CC\units\text{.}\) Rest is just \(\Lambda(\eta \cdot)\) for \(\eta \in \adeles\text{.}\)</p></article></div>
+<p id="p-430">Measures: \(\diff \xi = \prod_v \diff \xi_v\) where for almost all \(v\) we have \(\int_{\ints_v} \diff \xi_v = 1\text{.}\)</p>
+<p id="p-431">Dual measures: Normalise so that Fourier inversion holds, i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\hat f(\eta) = \int f(\xi) \psi(\xi \eta) \diff \xi
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\hat{\hat f}(\eta) = f(- \xi)
+\end{equation*}
+</div>
+<p>so we get \(\mu^* (\ints_v^\perp) = 1\) where</p>
+<div class="displaymath">
+\begin{equation*}
+\ints_v^\perp = \{\psi_v : \psi_v|_{\ints_v} = 1\}\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="lemma-19"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.33</span>
+</h6>
+<p id="p-432">Let \(\alpha \in \adeles\) then we get a map</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha \colon \adeles \to\adeles
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+x\mapsto \alpha x\text{.}
+\end{equation*}
+</div>
+<p>This is an automorphism iff \(\alpha \in \adeles\units\text{.}\)</p></article><div class="displaymath" id="p-433">
+\begin{equation*}
+\mu(\alpha S) = |\alpha|_{\adeles} \mu(S)
+\end{equation*}
+</div>
+<p>where \(|\alpha|_\adeles = \prod |\alpha|_v\text{,}\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\alpha S} \diff \mu(x) = |\alpha| \int_S \diff \mu(x)\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="proposition-8"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">3.34</span>
+</h6>
+<p id="p-434">We have \(K \hookrightarrow \adeles_K\text{.}\)</p>
+<ol class="decimal">
+<li id="li-80">\(K\) is discrete in \(\adeles_K\text{.}\)</li>
+<li id="li-81">\(K\) is cocompact in \(\adeles_K\) (i.e. \(K \backslash \adeles_K\) is compact).</li>
+<li id="li-82"><div class="displaymath">
+\begin{equation*}
+K \cap \adeles_{K,\infty} = K \cap \prod_{v|\infty} K_v = \ints _K\text{.}
+\end{equation*}
+</div></li>
+<li id="li-83">\(K + \adeles_{K,\infty} = \adeles_K\text{.}\)</li>
+<li id="li-84">\(\mu(K\backslash \adeles_K) = 1\) (with our earlier conventions).</li>
+<li id="li-85">\(K^\perp = K\) i.e.<div class="displaymath">
+\begin{equation*}
+\{\alpha \in \adeles_K : e(\Lambda(\alpha \eta) ) = 1 \,\forall \eta \in K \} = K\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-44" id="proof-44"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-44" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-435" class="decimal">
+<li id="li-86">\(\ints_K\) is a full rank lattice in \(\prod_{v|\infty} K_v = V\) (Note for \(\lb K: \QQ \rb = N\) then \(V \simeq \RR^{r_1} \times \CC^{r_2} \simeq \RR^N\)).</li>
+<li id="li-87">
+<li id="li-88">Obvious</li>
+<li id="li-89">Partial fractions.</li>
+<li id="li-90"><div class="displaymath">
+\begin{equation*}
+\mu(K\backslash \adeles) = \mu (K\backslash V) \mu(\pi\ints_v) = 1\text{.}
+\end{equation*}
+</div></li>
+<li id="li-91">Since \(\adeles_K / K\) is compact, \(\widehat{\adeles_K/K}\) is discrete. Further \(K \subseteq K^\perp\text{.}\) In fact \(K^\perp /K\) is a finite vector space since<div class="displaymath">
+\begin{equation*}
+K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
+\end{equation*}
+</div>which is compact, hence \(K^\perp = K\text{.}\)</li>
+</ol></article></div></article><article class="paragraphs" id="paragraphs-27"><h5 class="heading"><span class="title">Poisson summation</span></h5>
+<p id="p-436">Let \(f, \hat f \in L^1(\adeles)\text{,}\) then \(\forall \alpha \in \adeles\units\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{|\alpha|} \sum_{\xi\in K} f\left(\frac\xi\alpha\right) = \sum_{\xi\in K} \hat f(\alpha \xi)\text{.}
+\end{equation*}
+</div>
+<p>Tate refers to this as “Riemann-Roch”. This is due to the case where \(K = \FF_q(T)\) and \(K(\PP^1)\text{,}\) \(f = \chi_{\ints_K}\text{.}\) There is some Serre duality involved.</p></article><article class="paragraphs" id="paragraphs-28"><h5 class="heading"><span class="title">Ideles</span></h5>
+<p id="p-437">Our goal is now to understand \(K\units \hookrightarrow \adeles\units_K\text{.}\)</p>
+<article class="theorem-like" id="theorem-20"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.35</span><span class="title">Product formula</span>
+</h6>
+<div class="displaymath" id="p-438">
+\begin{equation*}
+|\alpha|_{\adeles} = 1 \, \forall \alpha \in K\units\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-45" id="proof-45"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-45" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-439">Exercise.</p></article></div>
+<p id="p-440">Unfortunately \(K\units\backslash \adeles\units_K\) is not compact.</p>
+<p id="p-441">A non-canonical decomposition is as follows:</p>
+<p id="p-442">Fix \(v_0 \in S_\infty\) and let</p>
+<div class="displaymath">
+\begin{equation*}
+\iota\colon\RR_{\gt 0} \hookrightarrow \adeles_K
+\end{equation*}
+</div>
+<p>via</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{cases} (\alpha, 1,\ldots, 1) \amp K_{v_0} = \RR \\ (\sqrt\alpha, 1,\ldots, 1) \amp K_{v_0} = \CC\end{cases}
+\end{equation*}
+</div>
+<p>Note</p>
+<div class="displaymath">
+\begin{equation*}
+| \iota(x)|_{\adeles_K} = |x| = x\text{.}
+\end{equation*}
+</div>
+<p>If \(\alpha \in \adeles\units\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha =  \underbrace{\frac{\alpha}{|\alpha|_\adeles}}_b \underbrace{|\alpha|_\adeles}_t
+\end{equation*}
+</div>
+<p>with \(b \in \adeles^{\times,1},t\in \RR_{\gt 0}\text{.}\) Where \(\adeles^{\times,1} = \ker(|\cdot|_\adeles)\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+\diff\units \alpha =  \diff\units t \diff\units b
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{\adeles\units} f(\alpha) \diff\units \alpha = \int_0^\infty \int_{\adeles^{\times,1}} f(tb)  \frac{\diff t}{t} \diff b\text{.}
+\end{equation*}
+</div></article></section><article class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">Multiplicative world</span></h5>
+<article class="aside-like" id="aside-22"><p id="p-443">Lecture 22 19/4/2018</p></article><p id="p-444">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles^{\times, 1} = \ker(|\cdot|_\adeles \colon \adeles \units \to \CC\units)
+\end{equation*}
+</div>
+<ol class="decimal">
+<li id="li-92">\(K\units \backslash \adeles^{\times, 1}\) is compact, which leads to Dirichlet's   units theorem.</li>
+<li id="li-93">\(\mu(K\units \backslash \adeles^{\times, 1})\text{.}\)</li>
+<li id="li-94">Analytic continuation and functional equation.</li>
+<li id="li-95">Examples</li>
+</ol>
+<article class="paragraphs" id="paragraphs-30"><h5 class="heading"><span class="title">1</span></h5>
+<p id="p-445">Recall for a fixed archimidean place \(v_0\)</p>
+<div class="displaymath">
+\begin{equation*}
+S_\infty = \{v|\infty\}, S_\infty' = S_\infty  \smallsetminus \{v_0\}
+\end{equation*}
+</div>
+<p>for \(v\) complex we take pairs as 1, so that \(\#S_\infty = r_1 + r_2\text{.}\)</p>
+<p id="p-446">Let \(r = r_1  + r_2 - 1 = \#S_\infty'\text{.}\)</p>
+<p id="p-447">Recall the log embedding for \(\adeles^{\times, 1}\)</p>
+<div class="displaymath">
+\begin{equation*}
+l(b ) = (\log |b|_{v_1} , \ldots, \ldots, \log |b|_{v_r})_{v_i\in S_\infty'}\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="fact-4"><h6 class="heading">
+<span class="type">Fact</span><span class="codenumber">3.36</span>
+</h6>
+<p id="p-448">\(l\) is onto and a homomorphism. It vanishes on the global roots of unity, i.e. \(l(b) = 0\) for such.</p></article><div class="displaymath" id="p-449">
+\begin{equation*}
+l \colon W \backslash \adeles^{\times, 1} \twoheadrightarrow \RR^r
+\end{equation*}
+</div>
+<p>let \(\{\epsilon_i\}\) be a basis for the global units, \(\{l(\epsilon_i)\} \subseteq \RR^r\) span a full rank sublattice. So \(K^\times\backslash\adeles^{\times, 1}\) is compact.</p></article><article class="paragraphs" id="paragraphs-31"><h5 class="heading"><span class="title">2</span></h5>
+<div class="displaymath" id="p-450">
+\begin{equation*}
+\mu(K\units \backslash \adeles^{\times, 1})  = \frac{2^{r_1} (2\pi)^{r_2} R h_K}{\sqrt{|D_K|} W_K}
+\end{equation*}
+</div>
+<p>Where \(r_1\) is  the number of real embeddings, \(r_2\) is half the number of complex embeddings, \(R\) is the regulator of \(K\text{,}\) \(D_K\) is the discriminant of \(K\text{,}\) \(h_K\) the class number, \(W_K\) the number of roots of unity of \(K\text{.}\)</p></article><p id="p-451">1 and 2 give us a fundamental domain.</p>
+<article class="theorem-like" id="lemma-20"><h6 class="heading">
+<span class="type">Lemma</span><span class="codenumber">3.37</span>
+</h6>
+<div class="displaymath" id="p-452">
+\begin{equation*}
+\adeles^{\times, 1} = \bigsqcup_{\alpha\in K^\times} \alpha \mathcal F
+\end{equation*}
+</div>
+<p>where  \(\mathcal F\) is defined as follows: Let \(\{b_i\}_{i=1}^{h_K}\) be a set of representatives for the \(\cl(K)\) i.e. \(\{\phi(b_i)\} = \cl (K)\text{.}\) Let</p>
+<div class="displaymath">
+\begin{equation*}
+P = \left\{ \sum_{v\in S_\infty'} x_v l(\epsilon_v) : 0 \le x_v \lt 1 \right\}
+\end{equation*}
+</div>
+<p>i.e. \(P\) is a fundamental parallelepiped for the lattice \(\{l(\epsilon_v)\}_{v\in S_\infty'}\text{.}\) Finally let</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal F_0 = \left\{ b \in l\inv(P) : 0 \le \arg(b)_{v_0} \lt \frac{2\pi}{W}\right\}
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal F = \bigsqcup_{b_i} b_i \mathcal F_0\text{.}
+\end{equation*}
+</div></article><article class="definition-like" id="def-hecke-char"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">3.38</span><span class="title">Hecke characters</span>
+</h6>
+<p id="p-453">A <dfn class="terminology">Hecke character</dfn> is a continuous map</p>
+<div class="displaymath">
+\begin{equation*}
+K\units \backslash \adeles\units \to \CC \units\text{.}
+\end{equation*}
+</div></article><article class="remark-like" id="note-16"><h6 class="heading">
+<span class="type">Note</span><span class="codenumber">3.39</span>
+</h6>
+<p id="p-454">\(|\cdot |_\adeles^s\) is a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> any <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> \(\chi = \chi_0 | \cdot |_\adeles^s\)</p>
+<div class="displaymath">
+\begin{equation*}
+\chi_0 \colon K\units \backslash \adeles^{\units,1} \to \CC\units
+\end{equation*}
+</div>
+<p>where \(\Re(s)\) is the exponent.</p></article></article><section class="subsubsection" id="subsubsection-18"><h4 class="heading hide-type" alt="Subsubsection 3.2.2 Main theorem">
+<span class="type">Subsubsection</span><span class="codenumber">3.2.2</span><span class="title">Main theorem</span>
+</h4>
+<p id="p-455">Global \(\zeta\)-functions \(\zeta(f,\chi)\)</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal S(\adeles) = \left\{ f \colon \adeles \to \CC : f,\hat f \in L^1,\, \sum_{\xi\in K} f(a(x + \xi)) , \sum_{\xi\in K} \hat f(a(x + \xi)) \text{ both }L^1\,\forall x\in \adeles\units, x\in \adeles,\,f(\alpha) |\alpha|^\sigma,  \hat f(\alpha)|\alpha|^\sigma  \in L^1 \,\forall \sigma \gt 1\right\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,\chi) = \int_{\adeles\units} f(\alpha) \chi(\alpha) \diff \units \alpha = \prod \zeta_v(f_v,\chi_v)\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="theorem-21"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">3.40</span>
+</h6>
+<p id="p-456">\(\zeta\) converges for \(\chi\) with exponent \(\gt 1\) and extends to a meromorphic function of all \(s\in \CC\text{.}\) \(\zeta\) is analytic, unless \(\chi_0 = 1\) (i.e. \(\chi = |\cdot|^s_\adeles\)) in which case it has poles at \(s= 0\) and 1 with residues \(K\hat f(0), -Kf(0)\) respectively for \(\kappa = \mu(K\units \backslash \adeles^{\times,1})\text{.}\) \(\zeta(f,\chi) = \zeta(\hat f , \hat \chi)\) where   \(\hat \chi = \chi\inv |\cdot|\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-46" id="proof-46"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-46" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-457" class="decimal">
+<li id="li-96">
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,\chi) = \int_{\adeles^\times} f(\alpha) \chi(\alpha) \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_0^\infty \int_{\adeles^{\times,1}} f(tb) \chi(tb) \diff \units b \frac{\diff t}{t}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_0^\infty \zeta_t(f, \chi) \frac{\diff t}{t}
+\end{equation*}
+</div>where \(\zeta_t(f,\chi) = \int_{\adeles^{\units,1}} f(tb) \chi(tb) \diff \units b\text{.}\)</li>
+<li id="li-97">Functional equation<div class="displaymath">
+\begin{equation*}
+\zeta_t(f,\chi) = \int_{K\units\backslash \adeles^{\times,1}} \sum_{\alpha \in K^\times} f(t\alpha b) \overbrace{\chi(t\alpha b}^{=\chi(tb)} \diff \units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{K\units \backslash \adeles^{\times,1}} \left\{\sum_{\alpha\in K} f(t\alpha b) - f(0)\right\} \chi(tb) \diff\units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{K\units \backslash \adeles^{\times,1}} \left(\sum_{\alpha\in K} f(t \alpha b )\right) \chi(tb) \diff \units b - f(0) \int_{K\units \backslash \adeles^{\units,1}} \chi(tb) \diff \units b
+\end{equation*}
+</div>the rightmost term is \(\kappa\) iff \(\chi = |\cdot| ^s\) and 0 otherwise.<div class="displaymath">
+\begin{equation*}
+\sum_{\alpha \in K} f(t\alpha b) = \frac{1}{|tb|_{\adeles}} \sum_{\alpha \in K} \hat f\left( \frac{\alpha}{tb}\right)
+\end{equation*}
+</div>Remark: \(b\in \adeles^{\times, 1}\) implies \(|b|_\adeles  = 1\) and \(|tb|_\adeles = |t|_\adeles =  t\) via \(\RR_{\gt 0} \hookrightarrow \adeles\units\text{.}\) This implies<div class="displaymath">
+\begin{equation*}
+\int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} f(t \alpha b) \right) \chi(tb) \diff \units b = \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} \hat f(\frac{\alpha}{tb}) \right) \chi(tb) \diff \units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} \hat f(\frac{\alpha b}{t}) \right) \chi(tb\inv) \diff \units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }}  \sum_{\alpha \in K\units} \hat f(\frac{\alpha b}{t}) \chi(tb\inv) \diff \units b + \hat f(0)\int_{K\units\backslash \adeles^{\times, 1 }}   \hat \chi(b/t) \diff \units b
+\end{equation*}
+</div>implies<div class="displaymath">
+\begin{equation*}
+\zeta_{1/t}(\hat f, \hat \chi) + \hat f (0 )  \int_{K\units\backslash \adeles^{\times, 1 }} \hat \chi(b/t) \diff\units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \zeta_t(f,\chi) + f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \chi (bt)  \diff\units b
+\end{equation*}
+</div>take this and put it back in 1.<div class="displaymath">
+\begin{equation*}
+\int_0^\infty \zeta_t( f,\chi) \frac{\diff t}{t} = \int_0^1 + \int_1^\infty
+\end{equation*}
+</div>the rightmost term is cool, so use<div class="displaymath">
+\begin{equation*}
+\int_0^1 \zeta(f,b) \frac{\diff t}{t} = \int_0^1\zeta_{1/t} (\hat f, \hat \chi) \frac {\diff t}{t}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
++ \int_0^1  \hat f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \hat \chi (b/t)  \diff\units b \frac{\diff t}{t} -\int_0^1  f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \chi (bt)  \diff\units b \frac{\diff t}{t}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_1^\infty\zeta_{t} (\hat f, \hat \chi) \frac {\diff t}{t} +  \hat f(0) \kappa \int_0^1 t^{s-1}\frac{\diff t}{t} -  f(0)\kappa\int_0^1 t^s\frac{\diff t}{t}
+\end{equation*}
+</div>the rightmost terms are present only if \(\chi_0 =1\) they come to \(\hat f(0) \kappa/(s-1) - f(0) \kappa/s\text{.}\) This is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> under \(f\mapsto \hat f,\,\chi \mapsto \hat \chi\text{.}\) All together<div class="displaymath">
+\begin{equation*}
+\zeta(f,\chi) = \int_1^\infty \zeta_t(f, \chi) \frac{\diff t}{t} + \int_1^\infty \zeta_t(\hat f , \hat \chi) \frac{\diff t}{t} + \left(\hat f(0) \kappa/(s-1) - f(0) \kappa/s \right)
+\end{equation*}
+</div>
+</li>
+</ol></article></div>
+<article class="example-like" id="example-11"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">3.41</span><span class="title">Concrete examples</span>
+</h6>
+<ol id="p-458" class="decimal">
+<li id="li-98">Let \(K\) be  a number field and \(\chi = |\cdot|_\adeles^s\text{,}\) \(f = \otimes' f_v\) where<div class="displaymath">
+\begin{equation*}
+f_v = \begin{cases} e^{-\pi x^2} \amp v = \RR\\ e^{-2\pi (x^2 + y^2)}\amp v = \CC\\ \text{char. fn. of } \ints_v \amp v\text{ non-arch.} \end{cases}
+\end{equation*}
+</div>then \(\zeta(f,\chi)\) is a multiple of \(\zeta_K(s)\) the Dedekind zeta function (check this!). We have thus proved the analytic continuation of \(\zeta_K\text{.}\)</li>
+<li id="li-99">Next time \(K = \QQ(\sqrt 2)\text{.}\)</li>
+</ol></article></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];
