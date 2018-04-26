@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AFAS \(\GL_2\) (and up)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/xyjax/xypic.js", "AMSmath.js", "AMSsymbols.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
+{\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
+\array{#1}}
+{\endarray}
+
+\newcommand{\ideal}[1]{\mathfrak{#1}}
+\newcommand{\lie}[1]{\operatorname{\mathfrak{#1}}}
+\newcommand{\sheaf}[1]{\operatorname{\mathcal{#1}}}
+\newcommand{\Lie}{\operatorname{Lie}}
+
+\newcommand{\diff}{\mathop{}\!\mathrm{d}}
+\newcommand{\cinf}{C^\infty}
+\newcommand{\inv}{^{-1}}
+\newcommand{\units}{^{\times}}
+
+\newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\pair}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\lb}{[}
+\newcommand{\rb}{]}
+\newcommand{\powerseries}[2]{#1[[#2]]}
+
+
+\newcommand{\partder}[2][]{\frac{\partial #1}{\partial #2}}
+
+
+\providecommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+\DeclareMathOperator{\Sha}{III}
+
+
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\HH}{\mathbf{H}}
+\newcommand{\FF}{\mathbf{F}}
+\newcommand{\GG}{\mathbf{G}}
+\newcommand{\ints}{\mathcal{O}}
+\newcommand{\adeles}{\mathbf{A}}
+
+\newcommand{\alg}{\mathrm{alg}}
+
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\catname}[1]{{\mathrm\textbf{#1}}}
+\newcommand{\Rings}{\mathrm{Rings}}
+
+\newcommand{\Ar}{\mathrm{Ar}}
+\newcommand{\dR}{\mathrm{dR}}
+\newcommand{\et}{\mathrm{\acute{e}t}}
+\newcommand{\Pet}{\mathrm{Pet}}
+
+\newcommand{\pinf}{{1/p^\infty}}
+
+\newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
+\newcommand{\acts}{\circlearrowright}
+
+\newcommand{\ab}{\mathrm{ab}}
+\newcommand{\alm}{\mathrm{a}}
+\newcommand{\an}{\mathrm{an}}
+\newcommand{\alt}{\mathrm{alt}}
+\newcommand{\cyc}{\mathrm{cyc}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\nr}{\mathrm{nr}}
+\newcommand{\ns}{\mathrm{ns}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\pre}{\mathrm{pre}}
+\newcommand{\reg}{\mathrm{reg}}
+\newcommand{\spec}{\mathrm{spec}}
+\newcommand{\Set}{\mathrm{Set}}
+\newcommand{\sep}{\mathrm{sep}}
+\newcommand{\St}{\mathrm{St}}
+\newcommand{\tors}{\mathrm{tors}}
+\newcommand{\transpose}{\mathrm{T}}
+
+
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Nat}{Nat}
+\DeclareMathOperator{\Syl}{Syl}
+\DeclareMathOperator{\Tgt}{Tgt}
+\DeclareMathOperator{\sprep}{sp}
+\DeclareMathOperator{\vol}{Vol}
+
+\DeclareMathOperator{\divisor}{div}
+\DeclareMathOperator{\divisors}{Div}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Princ}{Princ}
+\DeclareMathOperator{\Cycles}{Cycles}
+\DeclareMathOperator{\supp}{supp}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+
+\DeclareMathOperator{\gr}{gr}
+
+
+\DeclareMathOperator{\polylog}{\mathcal{L}}
+
+\DeclareMathOperator{\disc}{disc}
+
+\DeclareMathOperator{\Tan}{Tan}
+\DeclareMathOperator{\Cotan}{Cotan}
+\DeclareMathOperator{\Sing}{Sing}
+
+\DeclareMathOperator{\Sel}{Sel}
+\DeclareMathOperator{\red}{red}
+\DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\Rep}{Rep}
+
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\image}{im}
+\DeclareMathOperator{\coim}{coim}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\characteristic}{char}
+\DeclareMathOperator{\orient}{or}
+\DeclareMathOperator{\leadterm}{lt}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Ad}{Ad}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Spf}{Spf}
+\DeclareMathOperator{\Spv}{Spv}
+\DeclareMathOperator{\Spa}{Spa}
+\DeclareMathOperator{\Spm}{Spm}
+\DeclareMathOperator{\specialisation}{sp}
+\DeclareMathOperator{\Max}{Max}
+\newcommand{\Gal}[2]{\operatorname{Gal}(#1/#2)}
+\newcommand{\absgal}[1]{\operatorname{Gal}(\overline{#1}/#1)}
+\newcommand{\sepgal}[1]{\operatorname{Gal}(#1^\sep/#1)}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Res}{Res}
+
+
+\DeclareMathOperator{\power}{\mathcal{P}}
+\DeclareMathOperator{\aff}{\mathbf{A}}
+\DeclareMathOperator{\PP}{\mathbf{P}}
+\DeclareMathOperator{\norm}{Norm}
+\DeclareMathOperator{\trace}{Tr}
+\DeclareMathOperator{\Fr}{Fr}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\NS}{NS}
+\DeclareMathOperator{\Der}{Der}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\vf}{\mathcal{V}}
+\DeclareMathOperator{\krulldim}{krulldim}
+\DeclareMathOperator{\trdeg}{trdeg}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\Prob}{Prob}
+
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\orth}{O}
+\DeclareMathOperator{\unitary}{U}
+\DeclareMathOperator{\specialunitary}{SU}
+\DeclareMathOperator{\Sym}{Sym}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="aut-forms-arthur-selberg.html"><span class="title">Automorphic forms and the Arthur-Selberg trace formula</span><span class="subtitle">MA842 BU Spring 2018</span></a></h1>
+<p class="byline">Salim Ali Altuğ</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-tates-thesis.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-tates-thesis.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
+<ul>
+<li><a href="sec-aut-forms-motivation.html#subsection-1" data-scroll="subsection-1">Goal</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-2" data-scroll="subsection-2">Motivation</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-3" data-scroll="subsection-3">Motivating example</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-4" data-scroll="subsection-4">Modular forms</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-5" data-scroll="subsection-5">Euclidean Harmonic analysis</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-6" data-scroll="subsection-6">The hyperbolic plane \(\HH\)</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-7" data-scroll="subsection-7">\(\HH\) as a homogeneous space</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-8" data-scroll="subsection-8">\(\Delta_\HH\)</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-9" data-scroll="subsection-9">Integral operators</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
+<li><a href="sec-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
+</ul>
+<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<ul>
+<li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
+<li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
+</ul>
+<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
+<ul>
+<li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li>
+<li><a href="sec-tates-thesis.html#subsection-15" data-scroll="subsection-15">Global theory</a></li>
+</ul>
+<h2 class="link active"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span></a></h2>
+<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-gl2"><h2 class="heading hide-type" alt="Section 4 \(\GL_2\) (and up)">
+<span class="type">Section</span><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span>
+</h2>
+<a href="sec-gl2.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-460">This will be an overview.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type" alt="Subsection 4.1 Change of perspective: Representation theory">
+<span class="type">Subsection</span><span class="codenumber">4.1</span><span class="title">Change of perspective: Representation theory</span>
+</h3>
+<section class="introduction" id="introduction-8"><article class="definition-like" id="def-unitary-rep"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">4.1</span>
+</h6>
+<p id="p-461">A <dfn class="terminology">unitary representation</dfn> of a topological group \(G\) is  a pair \((\pi, V)\) with \(V\) a Hilbert space and</p>
+<div class="displaymath">
+\begin{equation*}
+\pi\colon G\times V \to V
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+g,v \mapsto \pi(g) v
+\end{equation*}
+</div>
+<p>continuous, where \(\pi\) acts unitarily.</p></article><article class="theorem-like" id="fact-5"><h6 class="heading">
+<span class="type">Fact</span><span class="codenumber">4.2</span><span class="title">A useful fact</span>
+</h6>
+<p id="p-462">If \(H \subseteq G\) is a closed subgroup and both are unimodular then there exists a \(G\) <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> measure on \(H\backslash G\) and so \(G \acts L^2(H\backslash G)\text{.}\)</p></article><article class="example-like" id="example-12"><h6 class="heading">
+<span class="type">Example</span><span class="codenumber">4.3</span>
+</h6>
+<p id="p-463">If \(G(K) = H\) and \(G(\adeles) = G\) then we can take</p>
+<div class="displaymath">
+\begin{equation*}
+L^2( G(K) \backslash G(\adeles))
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+g f(x) = f(xg)\text{.}
+\end{equation*}
+</div></article><p id="p-464">Now if \(\pi, V\) is finite dimensional with</p>
+<div class="displaymath">
+\begin{equation*}
+V = V_1 \oplus \cdots \oplus V_n
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\pi, \chi_1,\ldots, \pi, \chi_n
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+\RR \acts L^2(\RR) = \oint_{i\RR} e^{\pi t} \diff t\text{.}
+\end{equation*}
+</div></section><section class="subsubsection" id="subsubsection-19"><h4 class="heading hide-type" alt="Subsubsection 4.1.1 Automorphic forms/representations">
+<span class="type">Subsubsection</span><span class="codenumber">4.1.1</span><span class="title">Automorphic forms/representations</span>
+</h4>
+<p id="p-465">We are concerned with</p>
+<div class="displaymath">
+\begin{equation*}
+L^2(G(\QQ) \backslash G(\adeles))
+\end{equation*}
+</div>
+<p>for \(G\) a reductive algebraic group \(/\QQ\text{.}\)</p>
+<p id="p-466">Heads up</p>
+<div class="displaymath">
+\begin{equation*}
+G = \GL(1)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+L^2(\QQ\units\backslash \adeles\units) = \oint| instead we would like to look at a piece of
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+L^2( G(\QQ) \backslash G(\adeles))
+\end{equation*}
+</div>
+<p>where the center</p>
+<div class="displaymath">
+\begin{equation*}
+Z(\adeles) \hookrightarrow G(\adeles)
+\end{equation*}
+</div>
+<p>acts by  a fixed character \(\omega\text{.}\) For \(G= \GL(1)\) this is called the Nebentypus.</p>
+<div class="displaymath">
+\begin{equation*}
+(\rho_\omega, L^2(\underbrace{G(\QQ)\backslash G(\adeles)}_{\lb G(\adeles)\rb}, \omega))\text{.}
+\end{equation*}
+</div>
+<article class="definition-like" id="definition-24"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">4.4</span><span class="title">Constant term (along  a parabolic)</span>
+</h6>
+<div class="displaymath" id="p-467">
+\begin{equation*}
+f \in L^2([G(\adeles)], \omega)
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+f_N(g) = \int_{N(\QQ)\backslash N(\adeles)} f(ng) \diff n
+\end{equation*}
+</div>
+<p>for example</p>
+<div class="displaymath">
+\begin{equation*}
+N_B = \begin{pmatrix} 1 \amp \cdots  \amp * \\ 0 \amp \ddots \amp \vdots \\ 0 \amp 0 \amp1 \end{pmatrix}
+\end{equation*}
+</div>
+<p>for \(G = \GL(2)\)</p>
+<div class="displaymath">
+\begin{equation*}
+N = \begin{pmatrix} 1 \amp n \\ 0 \amp 1 \end{pmatrix}\text{.}
+\end{equation*}
+</div></article><article class="definition-like" id="definition-25"><h6 class="heading">
+<span class="type">Definition</span><span class="codenumber">4.5</span><span class="title">Cusp form</span>
+</h6>
+<p id="p-468">If \(f_N(g) \equiv 0\) \(\forall' g \in G(\adeles)\text{.}\)</p></article><p id="p-469">\(\rho_\omega\) is the right regular representation on \(L^2(\lb G \rb, \omega)\text{.}\) Let \(L^2_0\) denote the space of <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>.</p>
+<p id="p-470">Properties:</p>
+<article class="theorem-like" id="proposition-9"><h6 class="heading">
+<span class="type">Proposition</span><span class="codenumber">4.6</span>
+</h6>
+<div class="displaymath" id="p-471">
+\begin{equation*}
+L_0^2 \le L^2 \text{ is closed}\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-22"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.7</span><span class="title">Gelfand-Graev-Pitesk-Shapiro</span>
+</h6>
+<div class="displaymath" id="p-472">
+\begin{equation*}
+\bigoplus_{\pi} m_{\pi} \pi = \rho_{\omega,0} = \rho_\omega|_{L^2_0}
+\end{equation*}
+</div>
+<p>with all \(m_{\pi} \lt \infty\) countable.</p></article><article class="theorem-like" id="theorem-23"><h6 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.8</span><span class="title">Jacquet-Langlands</span>
+</h6>
+<p id="p-473">For all \(\pi\) we have \(m_\pi = 1\) for \(G = \GL(2)\) i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi\text{.}
+\end{equation*}
+</div></article></section><section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type" alt="Subsubsection 4.1.2 Modular forms correspond to automorphic forms">
+<span class="type">Subsubsection</span><span class="codenumber">4.1.2</span><span class="title">Modular forms correspond to automorphic forms</span>
+</h4>
+<p id="p-474">We will make a bunch of groups by letting</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma(N) = \ker( \SL_2(\ZZ) \to \SL_2(\ZZ/N\ZZ))
+\end{equation*}
+</div>
+<p>then we say \(\Gamma\) is a congruence subgroup if there exists \(N\) such that \(\Gamma \supseteq \Gamma(N)\text{.}\) For example</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_0(N) = \left\{\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \in \SL_2(\ZZ) : c \equiv 0 \pmod N\right\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_1(N) = \left\{\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \in \SL_2(\ZZ) : c \equiv 0 \pmod N,\,a \equiv d\equiv 1 \pmod N\right\} \lhd \Gamma_0(N)
+\end{equation*}
+</div>
+<p>we have an action</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_1(N) \backslash \Gamma_0(N) \acts L^2(\Gamma_1(N) \backslash \SL_2( \RR)) = L^2(N)\text{.}
+\end{equation*}
+</div>
+<article class="remark-like" id="remark-23"><h6 class="heading">
+<span class="type">Remark</span><span class="codenumber">4.9</span>
+</h6>
+<div class="displaymath" id="p-475">
+\begin{equation*}
+\Gamma_1(N) \backslash \Gamma_0(N) \simeq (\ZZ/ N\ZZ)\units
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\chi \colon {\ZZ/N\ZZ}\units \to \CC\units \leadsto \chi\colon \Gamma_1(N) \backslash \Gamma_0(N) \to \CC\units
+\end{equation*}
+</div>
+<p>via</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \mapsto \chi(d)\text{.}
+\end{equation*}
+</div>
+<p>Then \(L^2_\chi(N)\) is the \(\chi\)-eigenspace of \(L^2(N)\text{.}\) Now as in Tate</p>
+<div class="displaymath">
+\begin{equation*}
+\chi \leadsto \chi \text{ (adelic)}
+\end{equation*}
+</div>
+<p>can view this as</p>
+<div class="displaymath">
+\begin{equation*}
+\QQ\units\backslash \adeles \units \simeq Z(\QQ) \backslash Z(\adeles) \to \CC\units
+\end{equation*}
+</div>
+<p>for \(Z\le \GL(2)\text{.}\)</p>
+<div class="displaymath" id="p-476">
+\begin{equation*}
+\SL_2(\RR)\acts L^2(\chi)
+\end{equation*}
+</div>
+<p>where \(\chi\) is adelic now, via</p>
+<div class="displaymath">
+\begin{equation*}
+g\hookrightarrow (g,1,1,\ldots)
+\end{equation*}
+</div>
+<p>so</p>
+<div class="displaymath">
+\begin{equation*}
+K \colon G(\widehat \ZZ) \twoheadrightarrow \GL_2(\ZZ/N\ZZ)\text{.}
+\end{equation*}
+</div></article><article class="theorem-like" id="fact-6"><h6 class="heading">
+<span class="type">Fact</span><span class="codenumber">4.10</span><span class="title">Strong approximation for \(\GL(2)\)</span>
+</h6>
+<div class="displaymath" id="p-477">
+\begin{equation*}
+G(\adeles) = G(\QQ) (G_\infty^+ \times K_O(N))
+\end{equation*}
+</div>
+<p>for all \(N,O\text{.}\) Where</p>
+<div class="displaymath">
+\begin{equation*}
+K_O(N) = \{g \in K : g_p \text{ upper triangular for } p|N\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+G_\infty^+ = \{g \in \GL_2(\RR) :  \det(g) \gt 0\}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+Z_\infty^+\SL_2(\RR)\text{.}
+\end{equation*}
+</div></article><p id="p-478">Now embed</p>
+<div class="displaymath">
+\begin{equation*}
+L^2_\chi(N) \hookrightarrow L^2(N)
+\end{equation*}
+</div>
+<p>via</p>
+<div class="displaymath">
+\begin{equation*}
+f \leadsto \phi_f
+\end{equation*}
+</div>
+<p>with</p>
+<div class="displaymath">
+\begin{equation*}
+\phi_f(\gamma(z_\infty g_\infty \times k))= \chi(k) f(g_\infty)\text{.}
+\end{equation*}
+</div>
+<p id="p-479">From <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> to automorphic forms</p>
+<div class="displaymath">
+\begin{equation*}
+f\in  S_k(N,\chi) \leadsto \phi_f
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\phi_f\gamma(z_\infty g_\infty \times k)) = \chi(k) j(g_\infty, i)^{-k} f(g_\infty(i))\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="fact-7"><h6 class="heading">
+<span class="type">Fact</span><span class="codenumber">4.11</span>
+</h6>
+<ol id="p-480" class="decimal">
+<li id="li-100"><div class="displaymath">
+\begin{equation*}
+S_k(N,\chi) \hookrightarrow L^2_{O,\chi}(N)\text{.}
+\end{equation*}
+</div></li>
+<li id="li-101">
+<div class="displaymath">
+\begin{equation*}
+K_\infty = \begin{pmatrix} \cos \theta \amp \sin \theta \\ - \sin \theta \amp \cos \theta \end{pmatrix} = \Stab(i)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+j(\gamma r(\theta), i ) = e^{-i \theta} j(\gamma, i)\text{.}
+\end{equation*}
+</div>
+</li>
+</ol></article></section><section class="subsubsection" id="subsubsection-21"><h4 class="heading hide-type" alt="Subsubsection 4.1.3 Brief overview of local representation theory">
+<span class="type">Subsubsection</span><span class="codenumber">4.1.3</span><span class="title">Brief overview of local representation theory</span>
+</h4>
+<p id="p-481">Why?</p>
+<div class="displaymath">
+\begin{equation*}
+L^2(G(\QQ)\backslash G(\adeles)) = \bigoplus  \pi \oplus \oint
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\pi = \otimes' \pi_v
+\end{equation*}
+</div>
+<p>for \(\pi_v\) local representations.</p>
+<p id="p-482">We will consider non-archimidean admissible representations, i.e. \((\pi, V)\) such that \(\pi^{K'}\) is the functional dual for all \(K'\) compact.</p></section></section></section></div></main>
+</div>
+<!--Start: Google code--><script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-48250536-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><!--End: Google code-->
+</body>
+</html>

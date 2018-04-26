@@ -1126,7 +1126,8 @@ section#sec-aut-forms-motivation
                                             | fact:
                                             me \pi^{-(s+\frac 12)} y^{s+\frac 12} \Gamma(s+\frac 12) \int_{-\infty}^\infty \frac{e(-nx)}{|x+iy|^{2s+1} }\diff x = \begin{cases} \pi^{-s} \Gamma (s) y^{\frac12 - s } \amp \text{ if } n = 0 \\ 2|n|^2 \sqrt y K_s(2\pi |n| y) \amp\text{ if } n \ne 0\end{cases}
                                     | Combining these we have shown
-                                    men E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12} + \pi ^{-s} \Gamma(s) \zeta(2s) y^{\frac 12 -s} + \sum_{n \ne 0} \sigma_{-2s} (|n|) |n| ^s \sqrt{y} K_s( 2\pi |n| y) e(nx)
+                                    men E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12}
+                                    me + \pi ^{-s} \Gamma(s) \zeta(2s) y^{\frac 12 -s} + \sum_{n \ne 0} \sigma_{-2s} (|n|) |n| ^s \sqrt{y} K_s( 2\pi |n| y) e(nx)
                                     | where we have #[m K_s = K_{-s}] and
                                     me \sigma_{-2s} |n|^s = \sum_{d|n} d^{-2s}|n|^s = \sum_{d|n} \frac{d^{2s}}{|n|^s} = |n|^{-s} \sigma_{2s}(|n|) = E(z; s)
                                     | . So we have proved the functional equation and analytic continuation.
@@ -3267,7 +3268,7 @@ section#sec-tates-thesis
                                 | where #[m \zeta_t(f,\chi) = \int_{\adeles^{\units,1}} f(tb) \chi(tb) \diff \units b].
                             li
                                 | Functional equation
-                                me \zeta_t(f,\chi) = \int_{K\units\backslash \adeles^{\times,1}} \sum_{\alpha \in K^\times} f(t\alpha b) \overbrace{\chi(t\alpha b}^{=\chi(tb)} \diff \units b
+                                me \zeta_t(f,\chi) = \int_{K\units\backslash \adeles^{\times,1}} \sum_{\alpha \in K^\times} f(t\alpha b) \overbrace{\chi(t\alpha b)}^{=\chi(tb)} \diff \units b
                                 me = \int_{K\units \backslash \adeles^{\times,1}} \left\{\sum_{\alpha\in K} f(t\alpha b) - f(0)\right\} \chi(tb) \diff\units b
                                 me = \int_{K\units \backslash \adeles^{\times,1}} \left(\sum_{\alpha\in K} f(t \alpha b )\right) \chi(tb) \diff \units b - f(0) \int_{K\units \backslash \adeles^{\units,1}} \chi(tb) \diff \units b
                                 | the rightmost term is #[m \kappa] iff #[m \chi = |\cdot| ^s] and 0 otherwise.
@@ -3290,6 +3291,9 @@ section#sec-tates-thesis
                                 | This is invariant under #[m f\mapsto \hat f,\,\chi \mapsto \hat \chi].
                                 | All together
                                 me \zeta(f,\chi) = \int_1^\infty \zeta_t(f, \chi) \frac{\diff t}{t} + \int_1^\infty \zeta_t(\hat f , \hat \chi) \frac{\diff t}{t} + \left(\hat f(0) \kappa/(s-1) - f(0) \kappa/s \right)
+                                |.
+
+            aside: p Lecture 23 24/4/2018
 
 
             example
@@ -3303,4 +3307,215 @@ section#sec-tates-thesis
                             | then #[m \zeta(f,\chi)] is a multiple of #[m \zeta_K(s)] the Dedekind zeta function (check this!).
                             | We have thus proved the analytic continuation of #[m \zeta_K].
                         li
-                            | Next time #[m K = \QQ(\sqrt 2)].
+                            | For #[m K = \QQ(\sqrt 2)].
+                            | We have #[m \disc(K) = 8], i.e. #[m K] is ramified at 2 only.
+                            | #[m h_K = 1] also and #[m \ints_K = \ZZ\lb \sqrt 2 \rb].
+                            me \infty_1 \colon a+b\sqrt 2 \hookrightarrow a+ b\sqrt 2 \in \RR
+                            me \infty_2 \colon a+b\sqrt 2 \hookrightarrow a- b\sqrt 2 \in \RR
+                            | , the units are #[m \langle  -1 , 1 +\sqrt 2 \rangle].
+                            | The Hecke characters are then as follows:
+                            | Let
+                            me \chi = \prod \chi_v = |\cdot|_{\infty_1}^{it_{\infty_1}}|\cdot|_{\infty_2}^{it_{\infty_2}}\prod_{v\nmid \infty}|\cdot|_{v}^{it_{v}}
+                            | then for #[m \chi] to be a Hecke character we need #[m \chi(a) = 1] for all #[m a  \in K].
+                            | Let's check this condition on units.
+                            | #[m \chi(-1) = 1] does not give us an extra condition.
+                            | #[m \chi(1+ \sqrt2 ) = | 1+ \sqrt 2|^{it_1} | 1- \sqrt 2|^{it_2}] so that
+                            me \chi( \sqrt 2 +  1 ) = 1 \iff t_{\infty_1} - t_{\infty_2} =  \frac{2k \pi}{\log(\sqrt 2 - 1)}
+                            | let's fix
+                            me t_{\infty_1} = \frac{-\pi}{\log(\sqrt 2- 1)}
+                            me t_{\infty_2} = \frac{\pi}{\log(\sqrt 2- 1)}
+                            | once we fix this we can complete uniquely to a Hecke character #[m \chi].
+                            | Let's consider the #[m \zeta]-functions now.
+                            me \zeta(f,\chi) = \pi^{-(s+it_{\infty_1})/2}\pi^{-(s-it_{\infty_2})/2} \Gamma\left(\frac{s+it_{\infty_1}}{2}\right)\Gamma\left(\frac{s-it_{\infty_2}}{2}\right) \frac{1}{\sqrt 8} \overbrace{L(s,\chi)}^{\prod_{v\nmid \infty}(1- \chi(\varpi_v)/q^s)}
+                            me \zeta(\hat f,\hat \chi ) = \pi^{-(1-s+it_{\infty_1})/2}\pi^{-(1-s-it_{\infty_2})/2} \Gamma\left(\frac{1-s+it_{\infty_1}}{2}\right)\Gamma\left(\frac{1-s-it_{\infty_2}}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)
+                            // TODO wtf 8^s
+                            | then Tates's implies
+                            me \pi^{-s} \Gamma\left(\frac{s-i\pi/\log(\sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{s+i\pi/\log(\sqrt 2 - 1)}{2}\right) \frac{1}{8} L(s,\chi)
+                            me = \pi^{1-s} \Gamma\left(\frac{1-s-i\pi/\log(\1-sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{1-s+i\pi/\log(\1-sqrt 2 - 1)}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)
+                            | .
+
+
+section#sec-gl2
+    title #[m \GL_2] (and up)
+
+    introduction
+        p
+            | This will be an overview.
+
+    subsection
+        title Change of perspective: Representation theory
+
+        introduction
+            definition#def-unitary-rep
+                statement: p
+                    | A #[term unitary representation] of a topological group #[m G] is  a pair #[m (\pi, V)] with #[m V] a Hilbert space and
+                    me \pi\colon G\times V \to V
+                    me g,v \mapsto \pi(g) v
+                    | continuous, where #[m \pi] acts unitarily.
+
+            fact
+                title A useful fact
+                statement: p
+                    | If #[m H \subseteq G] is a closed subgroup and both are unimodular then there exists a #[m G] invariant measure on #[m H\backslash G] and so #[m G \acts L^2(H\backslash G)].
+
+            example
+                statement: p
+                    | If #[m G(K) = H] and #[m G(\adeles) = G] then we can take
+                    me L^2( G(K) \backslash G(\adeles))
+                    me g f(x) = f(xg)
+                    | .
+
+            p
+                | Now if #[m \pi, V] is finite dimensional with
+                me V = V_1 \oplus \cdots \oplus V_n
+                me \pi, \chi_1,\ldots, \pi, \chi_n
+                | then
+                me \RR \acts L^2(\RR) = \oint_{i\RR} e^{\pi t} \diff t
+                | .
+
+        subsubsection
+            title Automorphic forms/representations
+
+            p
+                | We are concerned with
+                me L^2(G(\QQ) \backslash G(\adeles))
+                | for #[m G] a reductive algebraic group #[m /\QQ].
+
+            p
+                | Heads up
+                me G = \GL(1)
+                me L^2(\QQ\units\backslash \adeles\units) = \oint| instead we would like to look at a piece of
+                me L^2( G(\QQ) \backslash G(\adeles))
+                | where the center
+                me Z(\adeles) \hookrightarrow G(\adeles)
+                | acts by  a fixed character #[m \omega].
+                | For #[m G= \GL(1)] this is called the Nebentypus.
+                me (\rho_\omega, L^2(\underbrace{G(\QQ)\backslash G(\adeles)}_{\lb G(\adeles)\rb}, \omega))
+                |.
+
+            definition
+                title Constant term (along  a parabolic)
+                statement: p
+                    me f \in L^2([G(\adeles)], \omega)
+                    | then
+                    me f_N(g) = \int_{N(\QQ)\backslash N(\adeles)} f(ng) \diff n
+                    | for example
+                    me N_B = \begin{pmatrix} 1 \amp \cdots  \amp * \\ 0 \amp \ddots \amp \vdots \\ 0 \amp 0 \amp1 \end{pmatrix}
+                    | for #[m G = \GL(2)]
+                    me N = \begin{pmatrix} 1 \amp n \\ 0 \amp 1 \end{pmatrix}
+                    |.
+
+            definition
+                title Cusp form
+                statement: p
+                    |  If #[m f_N(g) \equiv 0] #[m \forall' g \in G(\adeles)].
+
+            p
+                | #[m \rho_\omega] is the right regular representation on #[m L^2(\lb G \rb, \omega)].
+                | Let #[m L^2_0] denote the space of cusp forms.
+
+            p
+                | Properties:
+            proposition
+                statement: p
+                    me L_0^2 \le L^2 \text{ is closed}
+                    | .
+
+            theorem
+                title Gelfand-Graev-Pitesk-Shapiro
+                statement: p
+                    me \bigoplus_{\pi} m_{\pi} \pi = \rho_{\omega,0} = \rho_\omega|_{L^2_0}
+                    | with all #[m m_{\pi} \lt \infty] countable.
+
+            theorem
+                title Jacquet-Langlands
+                statement: p
+                    | For all #[m  \pi] we have #[m m_\pi = 1] for #[m G = \GL(2)] i.e.
+                    me L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi
+                    | .
+
+        subsubsection
+            title Modular forms correspond to automorphic forms
+
+            p
+                | We will make a bunch of groups by letting
+                me \Gamma(N) = \ker( \SL_2(\ZZ) \to \SL_2(\ZZ/N\ZZ))
+                | then we say #[m \Gamma] is a congruence subgroup if there exists #[m N] such that #[m \Gamma \supseteq \Gamma(N)].
+                | For example
+                me \Gamma_0(N) = \left\{\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \in \SL_2(\ZZ) : c \equiv 0 \pmod N\right\}
+                me \Gamma_1(N) = \left\{\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \in \SL_2(\ZZ) : c \equiv 0 \pmod N,\,a \equiv d\equiv 1 \pmod N\right\} \lhd \Gamma_0(N)
+                | we have an action
+                me \Gamma_1(N) \backslash \Gamma_0(N) \acts L^2(\Gamma_1(N) \backslash \SL_2( \RR)) = L^2(N)
+                | .
+
+            remark
+                p
+                    me \Gamma_1(N) \backslash \Gamma_0(N) \simeq (\ZZ/ N\ZZ)\units
+                    me \chi \colon {\ZZ/N\ZZ}\units \to \CC\units \leadsto \chi\colon \Gamma_1(N) \backslash \Gamma_0(N) \to \CC\units
+                    | via
+                    me \begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \mapsto \chi(d)
+                    | .
+                    // TODO ali had a widehat here wtf
+                    | Then #[m L^2_\chi(N)] is the #[m \chi]-eigenspace of #[m L^2(N)].
+                    | Now as in Tate
+                    me \chi \leadsto \chi \text{ (adelic)}
+                    | can view this as
+                    me \QQ\units\backslash \adeles \units \simeq Z(\QQ) \backslash Z(\adeles) \to \CC\units
+                    | for #[m Z\le \GL(2)].
+                p
+                    me \SL_2(\RR)\acts L^2(\chi)
+                    | where #[m \chi] is adelic now, via
+                    me g\hookrightarrow (g,1,1,\ldots)
+                    | so
+                    me K \colon G(\widehat \ZZ) \twoheadrightarrow \GL_2(\ZZ/N\ZZ)
+                    | .
+
+            fact
+                title Strong approximation for #[m \GL(2)]
+                statement: p
+                    me G(\adeles) = G(\QQ) (G_\infty^+ \times K_O(N))
+                    |  for all #[m N,O].
+                    | Where
+                    me K_O(N) = \{g \in K : g_p \text{ upper triangular for } p|N\}
+                    me G_\infty^+ = \{g \in \GL_2(\RR) :  \det(g) \gt 0\}
+                    me Z_\infty^+\SL_2(\RR)
+                    | .
+            p
+                | Now embed
+                me L^2_\chi(N) \hookrightarrow L^2(N)
+                | via
+                me f \leadsto \phi_f
+                | with
+                me \phi_f(\gamma(z_\infty g_\infty \times k))= \chi(k) f(g_\infty)
+                | .
+
+            p
+                | From modular forms to automorphic forms
+                me f\in  S_k(N,\chi) \leadsto \phi_f
+                me \phi_f\gamma(z_\infty g_\infty \times k)) = \chi(k) j(g_\infty, i)^{-k} f(g_\infty(i))
+                | .
+
+            fact
+                statement: p
+                    ol
+                        li
+                            me S_k(N,\chi) \hookrightarrow L^2_{O,\chi}(N)
+                            |.
+                        li
+                            me K_\infty = \begin{pmatrix} \cos \theta \amp \sin \theta \\ - \sin \theta \amp \cos \theta \end{pmatrix} = \Stab(i)
+                            me j(\gamma r(\theta), i ) = e^{-i \theta} j(\gamma, i)
+                            | .
+
+        subsubsection
+            title Brief overview of local representation theory
+
+            p
+                | Why?
+                me L^2(G(\QQ)\backslash G(\adeles)) = \bigoplus  \pi \oplus \oint
+                me \pi = \otimes' \pi_v
+                | for #[m \pi_v] local representations.
+            p
+                | We will consider non-archimidean admissible representations, i.e. #[m (\pi, V)] such that #[m \pi^{K'}] is the functional dual for all #[m K'] compact.
+
+
+            // TODO missed a     bit
