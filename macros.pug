@@ -73,6 +73,12 @@ macros.
     \newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
     % group action
     \newcommand{\acts}{\circlearrowright}
+    % rightrightrightarrows
+    \newcommand\rightrightrightarrows{%
+        \mathrel{\substack{\textstyle\rightarrow\\[-0.6ex]
+            \textstyle\rightarrow \\[-0.6ex]
+            \textstyle\rightarrow}}
+    }
 
     % abelianisation
     \newcommand{\ab}{\mathrm{ab}}
@@ -86,6 +92,8 @@ macros.
     \newcommand{\cyc}{\mathrm{cyc}}
     % identity
     \newcommand{\id}{\mathrm{id}}
+    % unipotent
+    \newcommand{\un}{\mathrm{un}}
     % unramified
     \newcommand{\nr}{\mathrm{nr}}
     % non-singular
@@ -154,6 +162,8 @@ macros.
 
     % graded piece
     \DeclareMathOperator{\gr}{gr}
+    % filtrations
+    \DeclareMathOperator{\Fil}{Fil}
 
 
     % polylogarithms
