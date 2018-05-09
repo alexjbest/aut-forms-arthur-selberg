@@ -7,6 +7,7 @@
         // You CAN do this using some other (more complex) way to distinguish between
         // them.
         postParse: function (ast) {
+            var pugWalk = require('pug-walk');
             // Change all ids to xml:ids, pug generates get ids from   tagname#id.
             return pugWalk(ast, function (node) {
                 // These are all the nodes that can contain a set of attributes.
@@ -36,6 +37,7 @@
                 return ast;
 
             var pluralize = require('pluralize');
+            var pugWalk = require('pug-walk');
 
             String.prototype.trim = function() {
                 return String(this).replace(/^\s+|\s+$/g, '');
