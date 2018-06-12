@@ -103,6 +103,11 @@ MathJax.Hub.Config({
 
 \newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
 \newcommand{\acts}{\circlearrowright}
+\newcommand\rightrightrightarrows{
+    \mathrel{\substack{\textstyle\rightarrow\\[-0.6ex]
+        \textstyle\rightarrow \\[-0.6ex]
+        \textstyle\rightarrow}}
+}
 
 \newcommand{\ab}{\mathrm{ab}}
 \newcommand{\alm}{\mathrm{a}}
@@ -110,6 +115,7 @@ MathJax.Hub.Config({
 \newcommand{\alt}{\mathrm{alt}}
 \newcommand{\cyc}{\mathrm{cyc}}
 \newcommand{\id}{\mathrm{id}}
+\newcommand{\un}{\mathrm{un}}
 \newcommand{\nr}{\mathrm{nr}}
 \newcommand{\ns}{\mathrm{ns}}
 \newcommand{\op}{\mathrm{op}}
@@ -151,6 +157,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Tor}{Tor}
 
 \DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Fil}{Fil}
 
 
 \DeclareMathOperator{\polylog}{\mathcal{L}}
@@ -1197,14 +1204,14 @@ H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
 X_n (x) = e^{in\phi} + e^{i(n-2)\phi} + \cdots + e^{-in\phi} = \trace (\Sym^n(U)),\,x = \trace(u)\text{.}
 \end{equation*}
 </div>
-<p id="p-319">Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of \(\specialunitary(2, \CC)\text{.}\)</p>
+<p id="p-319">Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of \(\specialunitary(2, \CC)\)).</p>
 <div class="displaymath">
 \begin{equation*}
 X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdots + x_{|n-m|}\text{.}
 \end{equation*}
 </div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-9" id="exercise-9"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">2.22</span>
+<span class="type">Checkpoint</span><span class="codenumber">2.22</span>
 </h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-320">Prove this.</p></article></div>
 <p id="p-321">Several measures:</p>
 <ol class="decimal">

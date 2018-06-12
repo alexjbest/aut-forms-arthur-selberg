@@ -12,7 +12,59 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>This will be an overview.</p>
-<span class="incontext"><a href="sec-gl2.html#p-460">in-context</a></span>
+<ol class="decimal">
+<li>Let \(K\) be  a number field and \(\chi = |\cdot|_\adeles^s\text{,}\) \(f = \otimes' f_v\) where<div class="displaymath">
+\begin{equation*}
+f_v = \begin{cases} e^{-\pi x^2} \amp v = \RR\\ e^{-2\pi (x^2 + y^2)}\amp v = \CC\\ \text{char. fn. of } \ints_v \amp v\text{ non-arch.} \end{cases}
+\end{equation*}
+</div>then \(\zeta(f,\chi)\) is a multiple of \(\zeta_K(s)\) the Dedekind zeta function (check this!). We have thus proved the analytic continuation of \(\zeta_K\text{.}\)</li>
+<li>For \(K = \QQ(\sqrt 2)\text{.}\) We have \(\disc(K) = 8\text{,}\) i.e. \(K\) is ramified at 2 only. \(h_K = 1\) also and \(\ints_K = \ZZ\lb \sqrt 2 \rb\text{.}\)<div class="displaymath">
+\begin{equation*}
+\infty_1 \colon a+b\sqrt 2 \hookrightarrow a+ b\sqrt 2 \in \RR
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\infty_2 \colon a+b\sqrt 2 \hookrightarrow a- b\sqrt 2 \in \RR\text{,}
+\end{equation*}
+</div>the units are \(\langle  -1 , 1 +\sqrt 2 \rangle\text{.}\) The <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke characters</a> are then as follows: Let<div class="displaymath">
+\begin{equation*}
+\chi = \prod \chi_v = |\cdot|_{\infty_1}^{it_{\infty_1}}|\cdot|_{\infty_2}^{it_{\infty_2}}\prod_{v\nmid \infty}|\cdot|_{v}^{it_{v}}
+\end{equation*}
+</div>then for \(\chi\) to be a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> we need \(\chi(a) = 1\) for all \(a  \in K\text{.}\) Let's check this condition on units. \(\chi(-1) = 1\) does not give us an extra condition. \(\chi(1+ \sqrt2 ) = | 1+ \sqrt 2|^{it_1} | 1- \sqrt 2|^{it_2}\) so that<div class="displaymath">
+\begin{equation*}
+\chi( \sqrt 2 +  1 ) = 1 \iff t_{\infty_1} - t_{\infty_2} =  \frac{2k \pi}{\log(\sqrt 2 - 1)}
+\end{equation*}
+</div>let's fix<div class="displaymath">
+\begin{equation*}
+t_{\infty_1} = \frac{-\pi}{\log(\sqrt 2- 1)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+t_{\infty_2} = \frac{\pi}{\log(\sqrt 2- 1)}
+\end{equation*}
+</div>once we fix this we can complete uniquely to a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> \(\chi\text{.}\) Let's consider the \(\zeta\)-functions now.<div class="displaymath">
+\begin{equation*}
+\zeta(f,\chi) = \pi^{-(s+it_{\infty_1})/2}\pi^{-(s-it_{\infty_2})/2} \Gamma\left(\frac{s+it_{\infty_1}}{2}\right)\Gamma\left(\frac{s-it_{\infty_2}}{2}\right) \frac{1}{\sqrt 8} \overbrace{L(s,\chi)}^{\prod_{v\nmid \infty}(1- \chi(\varpi_v)/q^s)}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\zeta(\hat f,\hat \chi ) = \pi^{-(1-s+it_{\infty_1})/2}\pi^{-(1-s-it_{\infty_2})/2} \Gamma\left(\frac{1-s+it_{\infty_1}}{2}\right)\Gamma\left(\frac{1-s-it_{\infty_2}}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)
+\end{equation*}
+</div>then Tates's implies<div class="displaymath">
+\begin{equation*}
+\pi^{-s} \Gamma\left(\frac{s-i\pi/\log(\sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{s+i\pi/\log(\sqrt 2 - 1)}{2}\right) \frac{1}{8} L(s,\chi)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \pi^{1-s} \Gamma\left(\frac{1-s-i\pi/\log(\sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{1-s+i\pi/\log(\sqrt 2 - 1)}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)\text{.}
+\end{equation*}
+</div>
+</li>
+</ol>
+<span class="incontext"><a href="sec-tates-thesis.html#p-460">in-context</a></span>
 </body>
 </html>

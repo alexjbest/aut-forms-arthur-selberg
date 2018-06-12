@@ -103,6 +103,11 @@ MathJax.Hub.Config({
 
 \newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
 \newcommand{\acts}{\circlearrowright}
+\newcommand\rightrightrightarrows{
+    \mathrel{\substack{\textstyle\rightarrow\\[-0.6ex]
+        \textstyle\rightarrow \\[-0.6ex]
+        \textstyle\rightarrow}}
+}
 
 \newcommand{\ab}{\mathrm{ab}}
 \newcommand{\alm}{\mathrm{a}}
@@ -110,6 +115,7 @@ MathJax.Hub.Config({
 \newcommand{\alt}{\mathrm{alt}}
 \newcommand{\cyc}{\mathrm{cyc}}
 \newcommand{\id}{\mathrm{id}}
+\newcommand{\un}{\mathrm{un}}
 \newcommand{\nr}{\mathrm{nr}}
 \newcommand{\ns}{\mathrm{ns}}
 \newcommand{\op}{\mathrm{op}}
@@ -151,6 +157,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Tor}{Tor}
 
 \DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Fil}{Fil}
 
 
 \DeclareMathOperator{\polylog}{\mathcal{L}}
@@ -277,7 +284,7 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
 <span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="sec-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated April 26, 2018.</p>
+<a href="sec-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated June 12, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
 <p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
 <span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
@@ -455,7 +462,7 @@ g(x) = f(\sqrt{t} x) \implies \hat g(\xi) = \frac{1}{\sqrt{t}}\hat f\left(\frac{
 </li>
 <li id="li-8">As \(t \to 0\) consider \(\xi = \frac 1t\) so \(\xi \to \infty\) and<div class="displaymath">
 \begin{equation*}
-\theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi]
+\theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -863,7 +870,7 @@ J_0(z) = \frac1\pi \int_0^\pi \cos(z\cos(\alpha)) \diff \alpha
 </div>
 <p>is a Bessel function of the second kind.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.13</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.13</span>
 </h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-66">Prove this.</p></article></div>
 <p id="p-67">Plug this into <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a></p>
 <div class="displaymath">
@@ -1052,7 +1059,7 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 </div>
 <p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> functions).</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.18</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.18</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-85">Prove these decompositions. Use the spectral theorem of symmetric matrices for the Cartan case.</p></article></div>
 <article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Classification of Motions</span></h5>
 <p id="p-86">We classify by the number of fixed points in \(\HH \cup \hat\RR\text{,}\)  for \(\hat \RR\) the extended real line.</p>
@@ -1116,7 +1123,7 @@ L(T_g f) = T_g(Lf)\text{.}
 \end{equation*}
 </div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.23</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.23</span>
 </h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> differential operator.</p></article></div>
 <p id="p-97">Polar:</p>
 <div class="displaymath">
@@ -1274,7 +1281,7 @@ Lf(z) = \int_{\HH} K(z,w) f(w)\diff \underbrace{\mu(w)}_\frac{\diff u\diff v}{v^
 K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 \end{equation*}
 </div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-4" id="exercise-4"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.32</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.32</span>
 </h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-116">Show this.</p></article></div>
 <article class="definition-like" id="def-point-pair-invariant"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.33</span><span class="title">Point pair invariants</span>
@@ -1615,7 +1622,7 @@ G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\
 \end{equation*}
 </div>
 <p>this is of weight \(2k\text{!}\)</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-5" id="exercise-5"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.44</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.44</span>
 </h6></a></article><div id="hk-exercise-5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-151">Prove this.</p></article></div>
 <article class="example-like" id="example-4"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.45</span>
@@ -1637,7 +1644,7 @@ G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\
 \end{equation*}
 </div>
 <p>the original Ramanujan conjecture.</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-6" id="exercise-6"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.46</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.46</span>
 </h6></a></article><div id="hk-exercise-6" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-154">Show these.</p></article></div>
 <article class="example-like" id="example-5"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">1.47</span><span class="title">A non-example</span>
@@ -1980,7 +1987,7 @@ f|_{\gamma} (z)  = \det(\gamma)^{k/2} (cz+d)^{-k} f\left(\frac{az+b}{cz+d}\right
 T_\gamma(f) =  \sum_{i=1}^r f|_{\gamma_i}(z)\text{.}
 \end{equation*}
 </div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-7" id="exercise-7"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.59</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.59</span>
 </h6></a></article><div id="hk-exercise-7" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="displaymath" id="p-179">
 \begin{equation*}
 \gamma = \begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix}
@@ -2427,7 +2434,7 @@ f(z) = \sum_{n=1}^\infty a_n e(nz)
 L(s,f\times \overline g) = \prod_p  \prod_{1\le i,j\le 2}(1- \frac{\alpha_i \overline \beta_j}{p^s})^{-1}\text{.}
 \end{equation*}
 </div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-8" id="exercise-8"><h6 class="heading">
-<span class="type">Exercise</span><span class="codenumber">1.75</span>
+<span class="type">Checkpoint</span><span class="codenumber">1.75</span>
 </h6></a></article><div id="hk-exercise-8" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-218">Prove this.</p></article></div>
 <article class="paragraphs" id="paragraphs-14"><h5 class="heading"><span class="title">Applications</span></h5>
 <p id="p-219">If one proves the prime number theorem using non-vanishing of the \(\zeta\) function in a certain region you use a weird identity using sines and cosines being positive. This really comes from a Rankin-Selberg product.</p>
@@ -2643,13 +2650,13 @@ E_T(z; s) = E(z; s) \,\forall z\in K\text{.}
 E_T(z; s) =
 \begin{cases}
 E(z; s) \amp y\lt T\\
-E(z; s) - pi^{-s} \Gamma(s) \zeta(2s) y^s \amp y\ge T
+E(z; s) - \pi^{-s} \Gamma(s) \zeta(2s) y^s \amp y\ge T
 \end{cases}\text{.}
 \end{equation*}
 </div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-16" id="proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-238">Recall</p>
 <div class="displaymath">
 \begin{equation*}
-\Im(\gamma z) = \frac{ y}{((cx+d)^2 + (cy)^2)}
+\Im(\gamma z) = \frac{ y}{((cx+d)^2 + (cy)^2)}\text{.}
 \end{equation*}
 </div>
 <p id="p-239">Case 1: \(c \ne 0 \) implies \(\Im( \gamma z)  \le \frac{1}{c^2 y} \le T\) for all \(y\in \mathcal F\text{.}\)</p>

@@ -103,6 +103,11 @@ MathJax.Hub.Config({
 
 \newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
 \newcommand{\acts}{\circlearrowright}
+\newcommand\rightrightrightarrows{
+    \mathrel{\substack{\textstyle\rightarrow\\[-0.6ex]
+        \textstyle\rightarrow \\[-0.6ex]
+        \textstyle\rightarrow}}
+}
 
 \newcommand{\ab}{\mathrm{ab}}
 \newcommand{\alm}{\mathrm{a}}
@@ -110,6 +115,7 @@ MathJax.Hub.Config({
 \newcommand{\alt}{\mathrm{alt}}
 \newcommand{\cyc}{\mathrm{cyc}}
 \newcommand{\id}{\mathrm{id}}
+\newcommand{\un}{\mathrm{un}}
 \newcommand{\nr}{\mathrm{nr}}
 \newcommand{\ns}{\mathrm{ns}}
 \newcommand{\op}{\mathrm{op}}
@@ -151,6 +157,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Tor}{Tor}
 
 \DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Fil}{Fil}
 
 
 \DeclareMathOperator{\polylog}{\mathcal{L}}
@@ -540,7 +547,7 @@ K_v^\times \to S^1\text{.}
 \tilde k = \min\{k\in \NN : \tilde c(\alpha)|_{1+ \varpi_v^k \ints_v} \equiv 1\}
 \end{equation*}
 </div>
-<p>and \(\varpi_v^{\tilde k} = f_v\) is the conductor of \(\tilde c\)</p>
+<p>and \(\varpi_v^{\tilde k} = f_v\) is the conductor of \(\tilde c\text{.}\)</p>
 <article class="remark-like" id="note-13"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">3.11</span>
 </h6>
@@ -801,8 +808,7 @@ f \colon K_v\units \to \CC
 = \pi^{-s/2} \Gamma\left(\frac s2\right)\text{.}
 \end{equation*}
 </div>
-<p><article class="aside-like" id="aside-19"><p id="p-380">Lecture 19 10/4/2018</p></article></p>
-<div class="displaymath">
+<article class="aside-like" id="aside-19"><p id="p-380">Lecture 19 10/4/2018</p></article><div class="displaymath" id="p-381">
 \begin{equation*}
 \zeta(f_{|\cdot|^s\mathrm{sgn}}, |\cdot|^s\mathrm{sgn}) = \pi^{-(s+1)/2} \Gamma\left(\frac{s+1}{2}\right)
 \end{equation*}
@@ -819,7 +825,7 @@ f \colon K_v\units \to \CC
 \end{equation*}
 </div>
 <p>Normalizing by \(s= 1/2\) we get \(1 \) and \(- i\) respectively.</p>
-<p id="p-381">Over \(\CC\)</p>
+<p id="p-382">Over \(\CC\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{cc}
@@ -863,12 +869,12 @@ f_n(\xi) = \begin{cases} (x-iy)^n e^{-2\pi(x^2 + y^2)} \amp \text{ if } n \ge 0 
 <article class="theorem-like" id="claim-2"><h6 class="heading">
 <span class="type">Claim</span><span class="codenumber">3.20</span>
 </h6>
-<div class="displaymath" id="p-382">
+<div class="displaymath" id="p-383">
 \begin{equation*}
 \hat f_n(\xi) = i^{|n|} f_{-n}(\xi) \,\forall n
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-383">Induction on \(n\text{:}\)</p>
-<p id="p-384">\(n = 0\)</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-384">Induction on \(n\text{:}\)</p>
+<p id="p-385">\(n = 0\)</p>
 <div class="displaymath">
 \begin{equation*}
 f_0(\xi) = e^{-\pi (x^2 + y^2)}
@@ -890,8 +896,8 @@ f_0(\xi) = e^{-\pi (x^2 + y^2)}
 e^{-2\pi(x^2 + y^2)} = \hat f_0(\xi)
 \end{equation*}
 </div>
-<p id="p-385">Assume \(\hat f_n(\xi) = i^n f_{-n}(\xi)\) for \(n \gt 0\text{.}\) Then the induction step is to use \(\diff / \diff \bar \xi\) in the integral defining \(\hat f_n(\xi)\) (exercise).</p></article></div>
-<div class="displaymath" id="p-386">
+<p id="p-386">Assume \(\hat f_n(\xi) = i^n f_{-n}(\xi)\) for \(n \gt 0\text{.}\) Then the induction step is to use \(\diff / \diff \bar \xi\) in the integral defining \(\hat f_n(\xi)\) (exercise).</p></article></div>
+<div class="displaymath" id="p-387">
 \begin{equation*}
 \zeta(f_n, c_n |\cdot|^s) = \int_{\CC\units} f_n(\alpha) c_n(\alpha) |\alpha|^s\diff\units\alpha
 \end{equation*}
@@ -922,7 +928,7 @@ e^{-2\pi(x^2 + y^2)} = \hat f_0(\xi)
 \rho(c_n|\cdot |^s)  = \frac{(-i)^{|n|} (2 \pi)^{k-s}}{(2\pi)^s} \frac{\Gamma(s + \frac{|n|}{2})}{\Gamma(1-s + \frac{|n|}{2})}\text{.}
 \end{equation*}
 </div>
-<p id="p-387">For \(K\) non-archimidean with \(|\varpi|_v= \frac 1q\text{.}\)</p>
+<p id="p-388">For \(K\) non-archimidean with \(|\varpi|_v= \frac 1q\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{cc}
@@ -935,7 +941,7 @@ K^+ \amp K\units\\
 \end{equation*}
 </div>
 <p>For \(D_v\) the different ideal.</p>
-<p id="p-388">Quasicharacters</p>
+<p id="p-389">Quasicharacters</p>
 <div class="displaymath">
 \begin{equation*}
 c_n \colon \ints\units \to \CC\units
@@ -947,21 +953,21 @@ c_n \colon \ints\units \to \CC\units
 \{c_n |\cdot|^s : s\in \CC\}\text{.}
 \end{equation*}
 </div>
-<p id="p-389">Functions</p>
+<p id="p-390">Functions</p>
 <div class="displaymath">
 \begin{equation*}
 f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \text{ if } \xi\in D_v\inv \varpi^{-n} \\ 0 \amp\end{cases}\text{.}
 \end{equation*}
 </div>
-<p id="p-390">The fourier transforms</p>
+<p id="p-391">The fourier transforms</p>
 <article class="theorem-like" id="lemma-14"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">3.21</span>
 </h6>
-<div class="displaymath" id="p-391">
+<div class="displaymath" id="p-392">
 \begin{equation*}
 \hat f_n(\xi) = \begin{cases} |D_v|^{-1/2} |\varpi_v|^{-n} \amp \text{ if } \xi \equiv 1 \pmod{\varpi^n} \\ 0 \amp \end{cases}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-392">
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-393">
 \begin{equation*}
 \hat f_n(\xi) = \int_K f_n(\eta) e(-\Lambda (\eta \xi)) \diff \eta
 \end{equation*}
@@ -981,7 +987,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 = \begin{cases} 0 \amp \text{ if } \xi \ne 1 \pmod{\varpi^n} \\ |D_v|^{-1/2} |\varpi|^{-n} \amp   \end{cases}
 \end{equation*}
 </div></article></div>
-<p id="p-393">Unramified calculation:</p>
+<p id="p-394">Unramified calculation:</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(f_0, |\cdot |^s)  =  \int_{K\units} f_0(\alpha) |\alpha|^s \diff\units \alpha
@@ -1032,7 +1038,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 =  \frac{1}{1-1/q_v^{1-s}}
 \end{equation*}
 </div>
-<p id="p-394">Let's recap a little, we have \(K\units \hookrightarrow K^+\) and moreover \(K\units \acts K^+\) with two orbits \(\{0\}\) and the rest. Looking at function spaces we have</p>
+<p id="p-395">Let's recap a little, we have \(K\units \hookrightarrow K^+\) and moreover \(K\units \acts K^+\) with two orbits \(\{0\}\) and the rest. Looking at function spaces we have</p>
 <div class="displaymath">
 \begin{equation*}
 \cinf_c(K\units) \hookrightarrow S(K^+)\text{,}
@@ -1047,7 +1053,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 <article class="theorem-like" id="corollary-4"><h6 class="heading">
 <span class="type">Corollary</span><span class="codenumber">3.22</span>
 </h6>
-<p id="p-395">There is \(\rho(c)\) s.t.</p>
+<p id="p-396">There is \(\rho(c)\) s.t.</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(f,c) = \rho(c) \zeta(\hat f, \hat c)
@@ -1058,8 +1064,8 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 \begin{equation*}
 \rho(c) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}\text{.}
 \end{equation*}
-</div></article><article class="aside-like" id="aside-20"><p id="p-396">Lecture 20 12/4/2018</p></article><p id="p-397">We have done the case of unramified characters.</p>
-<p id="p-398">Case II: \(n \gt 0\)</p>
+</div></article><article class="aside-like" id="aside-20"><p id="p-397">Lecture 20 12/4/2018</p></article><p id="p-398">We have done the case of unramified characters.</p>
+<p id="p-399">Case II: \(n \gt 0\)</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(f_n, c_n|\cdot|^s) = \int_{K_v\units} f_n(\alpha) c_n(\alpha) |\alpha|^s \diff\units \alpha
@@ -1083,7 +1089,7 @@ f= (\varpi_v^n)
 </div>
 <div class="displaymath">
 \begin{equation*}
-= int_{(\varpi_v^{n+d})\inv} e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
+= \int_{(\varpi_v^{n+d})\inv} e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
 \end{equation*}
 </div>
 <div class="displaymath">
@@ -1100,12 +1106,12 @@ f= (\varpi_v^n)
 <article class="theorem-like" id="lemma-15"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">3.23</span>
 </h6>
-<p id="p-399">If \(j \ge -d\) then</p>
+<p id="p-400">If \(j \ge -d\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\ints_v\units} (\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff\units \alpha = 0\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-39" id="proof-39"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-39" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-400">\(j \ge -d\) implies</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-39" id="proof-39"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-39" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-401">\(j \ge -d\) implies</p>
 <div class="displaymath">
 \begin{equation*}
 \varpi_v^j \ints_v\units \subseteq D_v\inv
@@ -1128,16 +1134,16 @@ f= (\varpi_v^n)
 \end{equation*}
 </div>
 <p>as \(c_n \ne 1\text{.}\)</p></article></div>
-<p id="p-401">So finitely many are non-zero.</p>
+<p id="p-402">So finitely many are non-zero.</p>
 <article class="theorem-like" id="lemma-16"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">3.24</span>
 </h6>
-<p id="p-402">\(- n - d \lt j \lt -d\) then</p>
+<p id="p-403">\(- n - d \lt j \lt -d\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\ints_v\units} e(\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff \units \alpha = 0\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-40" id="proof-40"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-40" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-403">(Note \(-n-d \lt j \lt -d \iff 0 \lt -j-d \lt n\)) Let \(\alpha = a (1 + \varpi_v^{-d-j} \alpha_1)\text{.}\) So we may write</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-40" id="proof-40"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-40" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-404">(Note \(-n-d \lt j \lt -d \iff 0 \lt -j-d \lt n\)) Let \(\alpha = a (1 + \varpi_v^{-d-j} \alpha_1)\text{.}\) So we may write</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{a \mod{\units \varpi_v^{d+j}}}  \int_{\ints_v} e(\Lambda(\varpi_v^ja (1+ \varpi_v^{-d-j} \alpha_1))) c_n(a (1+ \varpi_v^{-d-j} \alpha_1)) \diff \units \alpha\text{.}
@@ -1150,7 +1156,7 @@ f= (\varpi_v^n)
 \end{equation*}
 </div>
 <p>as we are integrating over a multiplicative group.</p></article></div>
-<p id="p-404">Therefore: In the ramified case we have</p>
+<p id="p-405">Therefore: In the ramified case we have</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(f_b, |\cdot |^s c_n) = e_v^{(n+d) s} \int_{\ints_v\units} e(\Lambda(\varpi_v^{-(n+d)} \alpha)) c_n(\alpha) \diff \units \alpha
@@ -1176,18 +1182,18 @@ G(c_n) = \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(a\varpi^{-d-n})) c_n(a)
 <article class="theorem-like" id="corollary-5"><h6 class="heading">
 <span class="type">Corollary</span><span class="codenumber">3.25</span>
 </h6>
-<div class="displaymath" id="p-405">
+<div class="displaymath" id="p-406">
 \begin{equation*}
 \zeta(\hat f, c_n\inv |\cdot |^{1-s}) = N(D_v)^{1/2} N(f_v) A_n\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-41" id="proof-41"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-41" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-406">Exercise.</p></article></div>
-<p id="p-407">This finishes the proof of the local functional equation.</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-41" id="proof-41"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-41" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-407">Exercise.</p></article></div>
+<p id="p-408">This finishes the proof of the local functional equation.</p>
 <div class="displaymath">
 \begin{equation*}
 \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha)\diff \units \alpha\text{.}
 \end{equation*}
 </div>
-<p id="p-408">A little bit of a more modern approach that may be helpful if you want to read things since Tate.</p>
+<p id="p-409">A little bit of a more modern approach that may be helpful if you want to read things since Tate.</p>
 <div class="displaymath">
 \begin{equation*}
 \psi_v \text{ additive character}
@@ -1201,7 +1207,7 @@ G(c_n) = \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(a\varpi^{-d-n})) c_n(a)
 <article class="definition-like" id="definition-19"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.26</span>
 </h6>
-<p id="p-409">A family of \(\zeta\)-integrals for each \(|\cdot |^s \chi_v\)</p>
+<p id="p-410">A family of \(\zeta\)-integrals for each \(|\cdot |^s \chi_v\)</p>
 <div class="displaymath">
 \begin{equation*}
 \chi_v \colon K_v\units \to \CC \units\text{.}
@@ -1219,14 +1225,14 @@ Z \colon \mathcal S(K_v\units) \to \CC\text{.}
 </div></article><article class="remark-like" id="remark-22"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">3.27</span>
 </h6>
-<p id="p-410">The interesting part of this integral is when \(\alpha\) is close to 0.</p></article><p id="p-411">To study this around 0</p>
+<p id="p-411">The interesting part of this integral is when \(\alpha\) is close to 0.</p></article><p id="p-412">To study this around 0</p>
 <div class="displaymath">
 \begin{equation*}
 f(\alpha) = a\phi_1( \alpha) + \phi_2(\alpha)
 \end{equation*}
 </div>
 <p>where \(\phi_1\) is the characteristic function of a very small (depending on \(f\)) neighbourhood of 0. \(\phi_2\) is 0 around a sufficiently small neighbourhood of 0.</p>
-<div class="displaymath" id="p-412">
+<div class="displaymath" id="p-413">
 \begin{equation*}
 Z(s, \chi_v, \phi_2, \psi_v) = \int_{K_v\units} \phi_2(\alpha) \chi_v(\alpha) |\alpha|_v^s  \diff\units \alpha
 \end{equation*}
@@ -1237,7 +1243,7 @@ Z(s, \chi_v, \phi_2, \psi_v) = \int_{K_v\units} \phi_2(\alpha) \chi_v(\alpha) |\
 \end{equation*}
 </div>
 <p>This converges for all \(s \in \CC\) and lands in \(\CC\lb q_v^s, q_v^{-1}\rb\) .</p>
-<div class="displaymath" id="p-413">
+<div class="displaymath" id="p-414">
 \begin{equation*}
 Z(s, \chi_v, \phi_1, \psi_v) = \sum_{j = M  }^\infty    \int_{\varpi_v^j \ints_v\units} \chi_v(\alpha) |\alpha|^s \diff\units \alpha
 \end{equation*}
@@ -1253,7 +1259,7 @@ Z(s, \chi_v, \phi_1, \psi_v) = \sum_{j = M  }^\infty    \int_{\varpi_v^j \ints_v
 \begin{cases} 0 \amp \text{ if } \chi_v \text{ is ram.} \\ \frac{1}{1 - 1 /q_v^s} \amp \text{ if } \chi_v \text{ unram.}\end{cases}\text{.}
 \end{equation*}
 </div>
-<p id="p-414">Usually these observations are packed into saying</p>
+<p id="p-415">Usually these observations are packed into saying</p>
 <div class="displaymath">
 \begin{equation*}
 Z(s,\chi_v, f)
@@ -1276,7 +1282,7 @@ Z(s,\chi, f) = L(s, \chi)\text{.}
 </div>is entire.</li>
 </ol>
 <p>It is then said that \(L(s,\chi)\) is the GCD of the \(\zeta\) integrals \(Z(s, \chi, f)\text{.}\)</p>
-<div class="displaymath" id="p-415">
+<div class="displaymath" id="p-416">
 \begin{equation*}
 \begin{array}{c|c|c}
 \text{Field} \amp \chi_v \amp L_v(s, \chi_v)\\
@@ -1291,18 +1297,18 @@ K_v       \amp |\cdot|^s \chi_v \text{ ram}\amp 1\\
 </div></section><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type" alt="Subsubsection 3.1.6 \(\epsilon\)-factors">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.6</span><span class="title">\(\epsilon\)-factors</span>
 </h4>
-<article class="aside-like" id="aside-21"><p id="p-416">Lecture 21 17/4/2018</p></article><p id="p-417">Last time we looked at \(L\)-factors,</p>
+<article class="aside-like" id="aside-21"><p id="p-417">Lecture 21 17/4/2018</p></article><p id="p-418">Last time we looked at \(L\)-factors,</p>
 <div class="displaymath">
 \begin{equation*}
 Z(s,f,\chi)
 \end{equation*}
 </div>
 <p>for \(\chi\)  a multiplicative character and \(f \in \mathcal S (K_v)\text{.}\)</p>
-<p id="p-418">Let \(\psi_v\colon K_v \to \CC\) be an additive character.</p>
+<p id="p-419">Let \(\psi_v\colon K_v \to \CC\) be an additive character.</p>
 <article class="definition-like" id="definition-20"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.28</span><span class="title">\(\epsilon\)-factors</span>
 </h6>
-<p id="p-419">The \(\epsilon\)-factor is defined to be</p>
+<p id="p-420">The \(\epsilon\)-factor is defined to be</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{Z(1-s, \hat f ,  \chi \inv)}{L(1-s, \chi \inv)} = \epsilon(s,\chi, \psi_v) \frac{Z(s,f,\chi)}{L(s,\chi)}\text{.}
@@ -1310,17 +1316,17 @@ Z(s,f,\chi)
 </div></article><article class="remark-like" id="note-15"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">3.29</span>
 </h6>
-<p id="p-420">This is related to  \(\rho(c) \inv\) in Tate's notation.</p>
-<p id="p-421">Tate's normalization of the additive character \(\psi_v\) is such that \(\psi_v( \cdots) = \Lambda(\cdots)\text{.}\)</p></article><article class="definition-like" id="definition-21"><h6 class="heading">
+<p id="p-421">This is related to  \(\rho(c) \inv\) in Tate's notation.</p>
+<p id="p-422">Tate's normalization of the additive character \(\psi_v\) is such that \(\psi_v( \cdots) = \Lambda(\cdots)\text{.}\)</p></article><article class="definition-like" id="definition-21"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.30</span>
 </h6>
-<p id="p-422">The <dfn class="terminology">root number</dfn> is</p>
+<p id="p-423">The <dfn class="terminology">root number</dfn> is</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\epsilon(s,\chi, \psi)}{|\epsilon(s,\chi, \psi)|}\text{.}
 \end{equation*}
 </div>
-<p>It is a complex number of norm 1.</p></article><div class="displaymath" id="p-423">
+<p>It is a complex number of norm 1.</p></article><div class="displaymath" id="p-424">
 \begin{equation*}
 \begin{array}{c|c|c|c|c}
 \text{Field} \amp \chi_v                   \amp \epsilon\text{-factor} \amp \text{Root number} \amp \text{Modern normalisation} \\
@@ -1338,7 +1344,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 <section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type" alt="Subsubsection 3.2.1 Adeles, Ideles">
 <span class="type">Subsubsection</span><span class="codenumber">3.2.1</span><span class="title">Adeles, Ideles</span>
 </h4>
-<p id="p-424">First, some notation (restricted direct product)</p>
+<p id="p-425">First, some notation (restricted direct product)</p>
 <div class="displaymath">
 \begin{equation*}
 \prod_v'(F_v, H_v) = \left\{ (x_v) \in \prod_v F_v: x_v \in H_v \text{ for all but finitely many } v\right\}\text{.}
@@ -1371,7 +1377,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 <article class="theorem-like" id="lemma-17"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">3.31</span>
 </h6>
-<p id="p-425">Let</p>
+<p id="p-426">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \psi \colon \adeles_K \to   \CC\units
@@ -1383,7 +1389,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 \psi = \otimes_v' \psi_v
 \end{equation*}
 </div>
-<p>Where almost all \(\psi_v\)'s are unramified (i.e. \(\psi_v|_{\ints_v} = 1\)) and \(\psi(a) = \prod_v \psi_v(\alpha)\) (this is a finite product).</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-42" id="proof-42"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-42" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-426">Let \(U \subseteq \CC^\times\) be a neighbourhood of \(1 \) that does not contain any subgroups except for \(\{1\}\text{,}\) Let \(N \subseteq \adeles_K\) s.t. \(\psi(N)\subseteq U\text{.}\) Let \(S\) be a the set of places for which  \(N_v \ne  \ints_v\text{.}\) Consider</p>
+<p>Where almost all \(\psi_v\)'s are unramified (i.e. \(\psi_v|_{\ints_v} = 1\)) and \(\psi(a) = \prod_v \psi_v(\alpha)\) (this is a finite product).</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-42" id="proof-42"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-42" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-427">Let \(U \subseteq \CC^\times\) be a neighbourhood of \(1 \) that does not contain any subgroups except for \(\{1\}\text{,}\) Let \(N \subseteq \adeles_K\) s.t. \(\psi(N)\subseteq U\text{.}\) Let \(S\) be a the set of places for which  \(N_v \ne  \ints_v\text{.}\) Consider</p>
 <div class="displaymath">
 \begin{equation*}
 \adeles_K^S  =  \prod_{v\in S}1 \times \prod_{v\not \in S}  \ints_v  \subseteq N
@@ -1396,17 +1402,17 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 \end{equation*}
 </div>
 <p>since the image is a subgroup \(\subseteq U\text{.}\)</p></article></div>
-<p id="p-427">From now on we will simply write \(\adeles = \adeles_K\text{.}\)</p>
+<p id="p-428">From now on we will simply write \(\adeles = \adeles_K\text{.}\)</p>
 <article class="theorem-like" id="lemma-18"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">3.32</span>
 </h6>
-<div class="displaymath" id="p-428">
+<div class="displaymath" id="p-429">
 \begin{equation*}
 \widehat \adeles \simeq\adeles\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-43" id="proof-43"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-43" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-429">Completely analogous to \(\hat K_v \simeq K_v\) via \(\eta \mapsto \Lambda(\eta \cdot)\text{,}\) for any non-trivial \(\Lambda\text{.}\) Fix one nontrivial \(\Lambda \colon \adeles \to \CC\units\text{.}\) Rest is just \(\Lambda(\eta \cdot)\) for \(\eta \in \adeles\text{.}\)</p></article></div>
-<p id="p-430">Measures: \(\diff \xi = \prod_v \diff \xi_v\) where for almost all \(v\) we have \(\int_{\ints_v} \diff \xi_v = 1\text{.}\)</p>
-<p id="p-431">Dual measures: Normalise so that Fourier inversion holds, i.e.</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-43" id="proof-43"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-43" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-430">Completely analogous to \(\hat K_v \simeq K_v\) via \(\eta \mapsto \Lambda(\eta \cdot)\text{,}\) for any non-trivial \(\Lambda\text{.}\) Fix one nontrivial \(\Lambda \colon \adeles \to \CC\units\text{.}\) Rest is just \(\Lambda(\eta \cdot)\) for \(\eta \in \adeles\text{.}\)</p></article></div>
+<p id="p-431">Measures: \(\diff \xi = \prod_v \diff \xi_v\) where for almost all \(v\) we have \(\int_{\ints_v} \diff \xi_v = 1\text{.}\)</p>
+<p id="p-432">Dual measures: Normalise so that Fourier inversion holds, i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 \hat f(\eta) = \int f(\xi) \psi(\xi \eta) \diff \xi
@@ -1426,7 +1432,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 <article class="theorem-like" id="lemma-19"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">3.33</span>
 </h6>
-<p id="p-432">Let \(\alpha \in \adeles\) then we get a map</p>
+<p id="p-433">Let \(\alpha \in \adeles\) then we get a map</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha \colon \adeles \to\adeles
@@ -1437,7 +1443,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 x\mapsto \alpha x\text{.}
 \end{equation*}
 </div>
-<p>This is an automorphism iff \(\alpha \in \adeles\units\text{.}\)</p></article><div class="displaymath" id="p-433">
+<p>This is an automorphism iff \(\alpha \in \adeles\units\text{.}\)</p></article><div class="displaymath" id="p-434">
 \begin{equation*}
 \mu(\alpha S) = |\alpha|_{\adeles} \mu(S)
 \end{equation*}
@@ -1451,7 +1457,7 @@ x\mapsto \alpha x\text{.}
 <article class="theorem-like" id="proposition-8"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">3.34</span>
 </h6>
-<p id="p-434">We have \(K \hookrightarrow \adeles_K\text{.}\)</p>
+<p id="p-435">We have \(K \hookrightarrow \adeles_K\text{.}\)</p>
 <ol class="decimal">
 <li id="li-80">\(K\) is discrete in \(\adeles_K\text{.}\)</li>
 <li id="li-81">\(K\) is cocompact in \(\adeles_K\) (i.e. \(K \backslash \adeles_K\) is compact).</li>
@@ -1468,7 +1474,7 @@ K \cap \adeles_{K,\infty} = K \cap \prod_{v|\infty} K_v = \ints _K\text{.}
 \end{equation*}
 </div>
 </li>
-</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-44" id="proof-44"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-44" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-435" class="decimal">
+</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-44" id="proof-44"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-44" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-436" class="decimal">
 <li id="li-86">\(\ints_K\) is a full rank lattice in \(\prod_{v|\infty} K_v = V\) (Note for \(\lb K: \QQ \rb = N\) then \(V \simeq \RR^{r_1} \times \CC^{r_2} \simeq \RR^N\)).</li>
 <li id="li-87">
 <li id="li-88">Obvious</li>
@@ -1484,25 +1490,25 @@ K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
 \end{equation*}
 </div>which is compact, hence \(K^\perp = K\text{.}\)</li>
 </ol></article></div></article><article class="paragraphs" id="paragraphs-27"><h5 class="heading"><span class="title">Poisson summation</span></h5>
-<p id="p-436">Let \(f, \hat f \in L^1(\adeles)\text{,}\) then \(\forall \alpha \in \adeles\units\text{,}\)</p>
+<p id="p-437">Let \(f, \hat f \in L^1(\adeles)\text{,}\) then \(\forall \alpha \in \adeles\units\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{|\alpha|} \sum_{\xi\in K} f\left(\frac\xi\alpha\right) = \sum_{\xi\in K} \hat f(\alpha \xi)\text{.}
 \end{equation*}
 </div>
 <p>Tate refers to this as “Riemann-Roch”. This is due to the case where \(K = \FF_q(T)\) and \(K(\PP^1)\text{,}\) \(f = \chi_{\ints_K}\text{.}\) There is some Serre duality involved.</p></article><article class="paragraphs" id="paragraphs-28"><h5 class="heading"><span class="title">Ideles</span></h5>
-<p id="p-437">Our goal is now to understand \(K\units \hookrightarrow \adeles\units_K\text{.}\)</p>
+<p id="p-438">Our goal is now to understand \(K\units \hookrightarrow \adeles\units_K\text{.}\)</p>
 <article class="theorem-like" id="theorem-20"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">3.35</span><span class="title">Product formula</span>
 </h6>
-<div class="displaymath" id="p-438">
+<div class="displaymath" id="p-439">
 \begin{equation*}
 |\alpha|_{\adeles} = 1 \, \forall \alpha \in K\units\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-45" id="proof-45"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-45" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-439">Exercise.</p></article></div>
-<p id="p-440">Unfortunately \(K\units\backslash \adeles\units_K\) is not compact.</p>
-<p id="p-441">A non-canonical decomposition is as follows:</p>
-<p id="p-442">Fix \(v_0 \in S_\infty\) and let</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-45" id="proof-45"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-45" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-440">Exercise.</p></article></div>
+<p id="p-441">Unfortunately \(K\units\backslash \adeles\units_K\) is not compact.</p>
+<p id="p-442">A non-canonical decomposition is as follows:</p>
+<p id="p-443">Fix \(v_0 \in S_\infty\) and let</p>
 <div class="displaymath">
 \begin{equation*}
 \iota\colon\RR_{\gt 0} \hookrightarrow \adeles_K
@@ -1537,8 +1543,8 @@ K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
 \begin{equation*}
 \int_{\adeles\units} f(\alpha) \diff\units \alpha = \int_0^\infty \int_{\adeles^{\times,1}} f(tb)  \frac{\diff t}{t} \diff b\text{.}
 \end{equation*}
-</div></article></section><article class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">Multiplicative world</span></h5>
-<article class="aside-like" id="aside-22"><p id="p-443">Lecture 22 19/4/2018</p></article><p id="p-444">Let</p>
+</div></article><article class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">Multiplicative world</span></h5>
+<article class="aside-like" id="aside-22"><p id="p-444">Lecture 22 19/4/2018</p></article><p id="p-445">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \adeles^{\times, 1} = \ker(|\cdot|_\adeles \colon \adeles \units \to \CC\units)
@@ -1549,17 +1555,16 @@ K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
 <li id="li-93">\(\mu(K\units \backslash \adeles^{\times, 1})\text{.}\)</li>
 <li id="li-94">Analytic continuation and functional equation.</li>
 <li id="li-95">Examples</li>
-</ol>
-<article class="paragraphs" id="paragraphs-30"><h5 class="heading"><span class="title">1</span></h5>
-<p id="p-445">Recall for a fixed archimidean place \(v_0\)</p>
+</ol></article><article class="paragraphs" id="paragraphs-30"><h5 class="heading"><span class="title">1</span></h5>
+<p id="p-446">Recall for a fixed archimidean place \(v_0\)</p>
 <div class="displaymath">
 \begin{equation*}
 S_\infty = \{v|\infty\}, S_\infty' = S_\infty  \smallsetminus \{v_0\}
 \end{equation*}
 </div>
 <p>for \(v\) complex we take pairs as 1, so that \(\#S_\infty = r_1 + r_2\text{.}\)</p>
-<p id="p-446">Let \(r = r_1  + r_2 - 1 = \#S_\infty'\text{.}\)</p>
-<p id="p-447">Recall the log embedding for \(\adeles^{\times, 1}\)</p>
+<p id="p-447">Let \(r = r_1  + r_2 - 1 = \#S_\infty'\text{.}\)</p>
+<p id="p-448">Recall the log embedding for \(\adeles^{\times, 1}\)</p>
 <div class="displaymath">
 \begin{equation*}
 l(b ) = (\log |b|_{v_1} , \ldots, \ldots, \log |b|_{v_r})_{v_i\in S_\infty'}\text{.}
@@ -1568,22 +1573,22 @@ l(b ) = (\log |b|_{v_1} , \ldots, \ldots, \log |b|_{v_r})_{v_i\in S_\infty'}\tex
 <article class="theorem-like" id="fact-4"><h6 class="heading">
 <span class="type">Fact</span><span class="codenumber">3.36</span>
 </h6>
-<p id="p-448">\(l\) is onto and a homomorphism. It vanishes on the global roots of unity, i.e. \(l(b) = 0\) for such.</p></article><div class="displaymath" id="p-449">
+<p id="p-449">\(l\) is onto and a homomorphism. It vanishes on the global roots of unity, i.e. \(l(b) = 0\) for such.</p></article><div class="displaymath" id="p-450">
 \begin{equation*}
 l \colon W \backslash \adeles^{\times, 1} \twoheadrightarrow \RR^r
 \end{equation*}
 </div>
 <p>let \(\{\epsilon_i\}\) be a basis for the global units, \(\{l(\epsilon_i)\} \subseteq \RR^r\) span a full rank sublattice. So \(K^\times\backslash\adeles^{\times, 1}\) is compact.</p></article><article class="paragraphs" id="paragraphs-31"><h5 class="heading"><span class="title">2</span></h5>
-<div class="displaymath" id="p-450">
+<div class="displaymath" id="p-451">
 \begin{equation*}
 \mu(K\units \backslash \adeles^{\times, 1})  = \frac{2^{r_1} (2\pi)^{r_2} R h_K}{\sqrt{|D_K|} W_K}
 \end{equation*}
 </div>
-<p>Where \(r_1\) is  the number of real embeddings, \(r_2\) is half the number of complex embeddings, \(R\) is the regulator of \(K\text{,}\) \(D_K\) is the discriminant of \(K\text{,}\) \(h_K\) the class number, \(W_K\) the number of roots of unity of \(K\text{.}\)</p></article><p id="p-451">1 and 2 give us a fundamental domain.</p>
+<p>Where \(r_1\) is  the number of real embeddings, \(r_2\) is half the number of complex embeddings, \(R\) is the regulator of \(K\text{,}\) \(D_K\) is the discriminant of \(K\text{,}\) \(h_K\) the class number, \(W_K\) the number of roots of unity of \(K\text{.}\)</p></article><p id="p-452">1 and 2 give us a fundamental domain.</p>
 <article class="theorem-like" id="lemma-20"><h6 class="heading">
 <span class="type">Lemma</span><span class="codenumber">3.37</span>
 </h6>
-<div class="displaymath" id="p-452">
+<div class="displaymath" id="p-453">
 \begin{equation*}
 \adeles^{\times, 1} = \bigsqcup_{\alpha\in K^\times} \alpha \mathcal F
 \end{equation*}
@@ -1608,7 +1613,7 @@ P = \left\{ \sum_{v\in S_\infty'} x_v l(\epsilon_v) : 0 \le x_v \lt 1 \right\}
 </div></article><article class="definition-like" id="def-hecke-char"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.38</span><span class="title">Hecke characters</span>
 </h6>
-<p id="p-453">A <dfn class="terminology">Hecke character</dfn> is a continuous map</p>
+<p id="p-454">A <dfn class="terminology">Hecke character</dfn> is a continuous map</p>
 <div class="displaymath">
 \begin{equation*}
 K\units \backslash \adeles\units \to \CC \units\text{.}
@@ -1616,16 +1621,16 @@ K\units \backslash \adeles\units \to \CC \units\text{.}
 </div></article><article class="remark-like" id="note-16"><h6 class="heading">
 <span class="type">Note</span><span class="codenumber">3.39</span>
 </h6>
-<p id="p-454">\(|\cdot |_\adeles^s\) is a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> any <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> \(\chi = \chi_0 | \cdot |_\adeles^s\)</p>
+<p id="p-455">\(|\cdot |_\adeles^s\) is a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> any <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> \(\chi = \chi_0 | \cdot |_\adeles^s\)</p>
 <div class="displaymath">
 \begin{equation*}
 \chi_0 \colon K\units \backslash \adeles^{\units,1} \to \CC\units
 \end{equation*}
 </div>
-<p>where \(\Re(s)\) is the exponent.</p></article></article><section class="subsubsection" id="subsubsection-18"><h4 class="heading hide-type" alt="Subsubsection 3.2.2 Main theorem">
+<p>where \(\Re(s)\) is the exponent.</p></article></section><section class="subsubsection" id="subsubsection-18"><h4 class="heading hide-type" alt="Subsubsection 3.2.2 Main theorem">
 <span class="type">Subsubsection</span><span class="codenumber">3.2.2</span><span class="title">Main theorem</span>
 </h4>
-<p id="p-455">Global \(\zeta\)-functions \(\zeta(f,\chi)\)</p>
+<p id="p-456">Global \(\zeta\)-functions \(\zeta(f,\chi)\)</p>
 <div class="displaymath">
 \begin{equation*}
 \mathcal S(\adeles) = \left\{ f \colon \adeles \to \CC : f,\hat f \in L^1,\, \sum_{\xi\in K} f(a(x + \xi)) , \sum_{\xi\in K} \hat f(a(x + \xi)) \text{ both }L^1\,\forall x\in \adeles\units, x\in \adeles,\,f(\alpha) |\alpha|^\sigma,  \hat f(\alpha)|\alpha|^\sigma  \in L^1 \,\forall \sigma \gt 1\right\}
@@ -1639,7 +1644,7 @@ K\units \backslash \adeles\units \to \CC \units\text{.}
 <article class="theorem-like" id="theorem-21"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">3.40</span>
 </h6>
-<p id="p-456">\(\zeta\) converges for \(\chi\) with exponent \(\gt 1\) and extends to a meromorphic function of all \(s\in \CC\text{.}\) \(\zeta\) is analytic, unless \(\chi_0 = 1\) (i.e. \(\chi = |\cdot|^s_\adeles\)) in which case it has poles at \(s= 0\) and 1 with residues \(K\hat f(0), -Kf(0)\) respectively for \(\kappa = \mu(K\units \backslash \adeles^{\times,1})\text{.}\) \(\zeta(f,\chi) = \zeta(\hat f , \hat \chi)\) where   \(\hat \chi = \chi\inv |\cdot|\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-46" id="proof-46"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-46" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-457" class="decimal">
+<p id="p-457">\(\zeta\) converges for \(\chi\) with exponent \(\gt 1\) and extends to a meromorphic function of all \(s\in \CC\text{.}\) \(\zeta\) is analytic, unless \(\chi_0 = 1\) (i.e. \(\chi = |\cdot|^s_\adeles\)) in which case it has poles at \(s= 0\) and 1 with residues \(K\hat f(0), -Kf(0)\) respectively for \(\kappa = \mu(K\units \backslash \adeles^{\times,1})\text{.}\) \(\zeta(f,\chi) = \zeta(\hat f , \hat \chi)\) where   \(\hat \chi = \chi\inv |\cdot|\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-46" id="proof-46"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-46" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-458" class="decimal">
 <li id="li-96">
 <div class="displaymath">
 \begin{equation*}
@@ -1722,10 +1727,10 @@ K\units \backslash \adeles\units \to \CC \units\text{.}
 </div>
 </li>
 </ol></article></div>
-<article class="aside-like" id="aside-23"><p id="p-458">Lecture 23 24/4/2018</p></article><article class="example-like" id="example-11"><h6 class="heading">
+<article class="aside-like" id="aside-23"><p id="p-459">Lecture 23 24/4/2018</p></article><article class="example-like" id="example-11"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">3.41</span><span class="title">Concrete examples</span>
 </h6>
-<ol id="p-459" class="decimal">
+<ol id="p-460" class="decimal">
 <li id="li-98">Let \(K\) be  a number field and \(\chi = |\cdot|_\adeles^s\text{,}\) \(f = \otimes' f_v\) where<div class="displaymath">
 \begin{equation*}
 f_v = \begin{cases} e^{-\pi x^2} \amp v = \RR\\ e^{-2\pi (x^2 + y^2)}\amp v = \CC\\ \text{char. fn. of } \ints_v \amp v\text{ non-arch.} \end{cases}
@@ -1773,7 +1778,7 @@ t_{\infty_2} = \frac{\pi}{\log(\sqrt 2- 1)}
 </div>
 <div class="displaymath">
 \begin{equation*}
-= \pi^{1-s} \Gamma\left(\frac{1-s-i\pi/\log(\1-sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{1-s+i\pi/\log(\1-sqrt 2 - 1)}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)\text{.}
+= \pi^{1-s} \Gamma\left(\frac{1-s-i\pi/\log(\sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{1-s+i\pi/\log(\sqrt 2 - 1)}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)\text{.}
 \end{equation*}
 </div>
 </li>

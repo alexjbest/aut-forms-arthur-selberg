@@ -12,37 +12,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<div class="displaymath">
-\begin{equation*}
-\zeta(f_n, c_n |\cdot|^s) = \int_{\CC\units} f_n(\alpha) c_n(\alpha) |\alpha|^s\diff\units\alpha
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= 2 \int |r|^n e^{-i n \theta} e^{-2\pi r^2} e^{in \theta} r^{2s-2}
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= 4\pi \int_0^\infty r^{|n| + 2s - 2} e^{-2 \pi r^2} r \diff r
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-= (2\pi)^{1 - s - |n|/2} \Gamma\left(s+ \frac{|n|}{2}\right)
-\end{equation*}
-</div>
-<p>now</p>
-<div class="displaymath">
-\begin{equation*}
-\zeta(f_{-n}, c_{-n}|\cdot|^s) = i^{|n|} (2\pi)^{s- |n|/2} \Gamma\left(1 - s + \frac{|n|}{2}\right)
-\end{equation*}
-</div>
-<div class="displaymath">
-\begin{equation*}
-\rho(c_n|\cdot |^s)  = \frac{(-i)^{|n|} (2 \pi)^{k-s}}{(2\pi)^s} \frac{\Gamma(s + \frac{|n|}{2})}{\Gamma(1-s + \frac{|n|}{2})}\text{.}
-\end{equation*}
-</div>
+<p>Assume \(\hat f_n(\xi) = i^n f_{-n}(\xi)\) for \(n \gt 0\text{.}\) Then the induction step is to use \(\diff / \diff \bar \xi\) in the integral defining \(\hat f_n(\xi)\) (exercise).</p>
 <span class="incontext"><a href="sec-tates-thesis.html#p-386">in-context</a></span>
 </body>
 </html>

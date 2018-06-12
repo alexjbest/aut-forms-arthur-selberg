@@ -12,19 +12,35 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let</p>
+<p>First, some notation (restricted direct product)</p>
 <div class="displaymath">
 \begin{equation*}
-\psi \colon \adeles_K \to   \CC\units
+\prod_v'(F_v, H_v) = \left\{ (x_v) \in \prod_v F_v: x_v \in H_v \text{ for all but finitely many } v\right\}\text{.}
 \end{equation*}
 </div>
-<p>be a continuous homomorphism. Then</p>
+<p>Then</p>
 <div class="displaymath">
 \begin{equation*}
-\psi = \otimes_v' \psi_v
+\adeles_K =  \prod_v'(K_v, \ints_v)
 \end{equation*}
 </div>
-<p>Where almost all \(\psi_v\)'s are unramified (i.e. \(\psi_v|_{\ints_v} = 1\)) and \(\psi(a) = \prod_v \psi_v(\alpha)\) (this is a finite product).</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles_K\units =  \prod_v'(K_v\units, \ints_v\units)\text{.}
+\end{equation*}
+</div>
+<p>Topologies:</p>
+<div class="displaymath">
+\begin{equation*}
+\adeles_{K,S} = \prod_{v\in S} K_v \times \prod_{v\not \in S}\ints_v
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\adeles_{K,S}\units = \prod_{v\in S} K_v\units \times \prod_{v\not \in S}\ints_v\units
+\end{equation*}
+</div>
+<p>for \(S\) any finite set of places containing \(v | \infty\text{.}\)</p>
 <span class="incontext"><a href="sec-tates-thesis.html#p-425">in-context</a></span>
 </body>
 </html>

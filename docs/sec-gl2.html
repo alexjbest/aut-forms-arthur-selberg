@@ -103,6 +103,11 @@ MathJax.Hub.Config({
 
 \newcommand{\colim}{\operatornamewithlimits{\underset{\longrightarrow}{colim}}}
 \newcommand{\acts}{\circlearrowright}
+\newcommand\rightrightrightarrows{
+    \mathrel{\substack{\textstyle\rightarrow\\[-0.6ex]
+        \textstyle\rightarrow \\[-0.6ex]
+        \textstyle\rightarrow}}
+}
 
 \newcommand{\ab}{\mathrm{ab}}
 \newcommand{\alm}{\mathrm{a}}
@@ -110,6 +115,7 @@ MathJax.Hub.Config({
 \newcommand{\alt}{\mathrm{alt}}
 \newcommand{\cyc}{\mathrm{cyc}}
 \newcommand{\id}{\mathrm{id}}
+\newcommand{\un}{\mathrm{un}}
 \newcommand{\nr}{\mathrm{nr}}
 \newcommand{\ns}{\mathrm{ns}}
 \newcommand{\op}{\mathrm{op}}
@@ -151,6 +157,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Tor}{Tor}
 
 \DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\Fil}{Fil}
 
 
 \DeclareMathOperator{\polylog}{\mathcal{L}}
@@ -277,13 +284,13 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-gl2"><h2 class="heading hide-type" alt="Section 4 \(\GL_2\) (and up)">
 <span class="type">Section</span><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span>
 </h2>
-<a href="sec-gl2.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-460">This will be an overview.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type" alt="Subsection 4.1 Change of perspective: Representation theory">
+<a href="sec-gl2.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-461">This will be an overview.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type" alt="Subsection 4.1 Change of perspective: Representation theory">
 <span class="type">Subsection</span><span class="codenumber">4.1</span><span class="title">Change of perspective: Representation theory</span>
 </h3>
 <section class="introduction" id="introduction-8"><article class="definition-like" id="def-unitary-rep"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">4.1</span>
 </h6>
-<p id="p-461">A <dfn class="terminology">unitary representation</dfn> of a topological group \(G\) is  a pair \((\pi, V)\) with \(V\) a Hilbert space and</p>
+<p id="p-462">A <dfn class="terminology">unitary representation</dfn> of a topological group \(G\) is  a pair \((\pi, V)\) with \(V\) a Hilbert space and</p>
 <div class="displaymath">
 \begin{equation*}
 \pi\colon G\times V \to V
@@ -297,10 +304,10 @@ g,v \mapsto \pi(g) v
 <p>continuous, where \(\pi\) acts unitarily.</p></article><article class="theorem-like" id="fact-5"><h6 class="heading">
 <span class="type">Fact</span><span class="codenumber">4.2</span><span class="title">A useful fact</span>
 </h6>
-<p id="p-462">If \(H \subseteq G\) is a closed subgroup and both are unimodular then there exists a \(G\) <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> measure on \(H\backslash G\) and so \(G \acts L^2(H\backslash G)\text{.}\)</p></article><article class="example-like" id="example-12"><h6 class="heading">
+<p id="p-463">If \(H \subseteq G\) is a closed subgroup and both are unimodular then there exists a \(G\) <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> measure on \(H\backslash G\) and so \(G \acts L^2(H\backslash G)\text{.}\)</p></article><article class="example-like" id="example-12"><h6 class="heading">
 <span class="type">Example</span><span class="codenumber">4.3</span>
 </h6>
-<p id="p-463">If \(G(K) = H\) and \(G(\adeles) = G\) then we can take</p>
+<p id="p-464">If \(G(K) = H\) and \(G(\adeles) = G\) then we can take</p>
 <div class="displaymath">
 \begin{equation*}
 L^2( G(K) \backslash G(\adeles))
@@ -310,7 +317,7 @@ L^2( G(K) \backslash G(\adeles))
 \begin{equation*}
 g f(x) = f(xg)\text{.}
 \end{equation*}
-</div></article><p id="p-464">Now if \(\pi, V\) is finite dimensional with</p>
+</div></article><p id="p-465">Now if \(\pi, V\) is finite dimensional with</p>
 <div class="displaymath">
 \begin{equation*}
 V = V_1 \oplus \cdots \oplus V_n
@@ -329,14 +336,14 @@ V = V_1 \oplus \cdots \oplus V_n
 </div></section><section class="subsubsection" id="subsubsection-19"><h4 class="heading hide-type" alt="Subsubsection 4.1.1 Automorphic forms/representations">
 <span class="type">Subsubsection</span><span class="codenumber">4.1.1</span><span class="title">Automorphic forms/representations</span>
 </h4>
-<p id="p-465">We are concerned with</p>
+<p id="p-466">We are concerned with</p>
 <div class="displaymath">
 \begin{equation*}
 L^2(G(\QQ) \backslash G(\adeles))
 \end{equation*}
 </div>
 <p>for \(G\) a reductive algebraic group \(/\QQ\text{.}\)</p>
-<p id="p-466">Heads up</p>
+<p id="p-467">Heads up</p>
 <div class="displaymath">
 \begin{equation*}
 G = \GL(1)
@@ -344,9 +351,10 @@ G = \GL(1)
 </div>
 <div class="displaymath">
 \begin{equation*}
-L^2(\QQ\units\backslash \adeles\units) = \oint| instead we would like to look at a piece of
+L^2(\QQ\units\backslash \adeles\units) = \oint
 \end{equation*}
 </div>
+<p>instead we would like to look at a piece of</p>
 <div class="displaymath">
 \begin{equation*}
 L^2( G(\QQ) \backslash G(\adeles))
@@ -367,7 +375,7 @@ Z(\adeles) \hookrightarrow G(\adeles)
 <article class="definition-like" id="definition-24"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">4.4</span><span class="title">Constant term (along  a parabolic)</span>
 </h6>
-<div class="displaymath" id="p-467">
+<div class="displaymath" id="p-468">
 \begin{equation*}
 f \in L^2([G(\adeles)], \omega)
 \end{equation*}
@@ -392,19 +400,19 @@ N = \begin{pmatrix} 1 \amp n \\ 0 \amp 1 \end{pmatrix}\text{.}
 </div></article><article class="definition-like" id="definition-25"><h6 class="heading">
 <span class="type">Definition</span><span class="codenumber">4.5</span><span class="title">Cusp form</span>
 </h6>
-<p id="p-468">If \(f_N(g) \equiv 0\) \(\forall' g \in G(\adeles)\text{.}\)</p></article><p id="p-469">\(\rho_\omega\) is the right regular representation on \(L^2(\lb G \rb, \omega)\text{.}\) Let \(L^2_0\) denote the space of <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>.</p>
-<p id="p-470">Properties:</p>
+<p id="p-469">If \(f_N(g) \equiv 0\) \(\forall' g \in G(\adeles)\text{.}\)</p></article><p id="p-470">\(\rho_\omega\) is the right regular representation on \(L^2(\lb G \rb, \omega)\text{.}\) Let \(L^2_0\) denote the space of <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>.</p>
+<p id="p-471">Properties:</p>
 <article class="theorem-like" id="proposition-9"><h6 class="heading">
 <span class="type">Proposition</span><span class="codenumber">4.6</span>
 </h6>
-<div class="displaymath" id="p-471">
+<div class="displaymath" id="p-472">
 \begin{equation*}
 L_0^2 \le L^2 \text{ is closed}\text{.}
 \end{equation*}
 </div></article><article class="theorem-like" id="theorem-22"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">4.7</span><span class="title">Gelfand-Graev-Pitesk-Shapiro</span>
 </h6>
-<div class="displaymath" id="p-472">
+<div class="displaymath" id="p-473">
 \begin{equation*}
 \bigoplus_{\pi} m_{\pi} \pi = \rho_{\omega,0} = \rho_\omega|_{L^2_0}
 \end{equation*}
@@ -412,7 +420,7 @@ L_0^2 \le L^2 \text{ is closed}\text{.}
 <p>with all \(m_{\pi} \lt \infty\) countable.</p></article><article class="theorem-like" id="theorem-23"><h6 class="heading">
 <span class="type">Theorem</span><span class="codenumber">4.8</span><span class="title">Jacquet-Langlands</span>
 </h6>
-<p id="p-473">For all \(\pi\) we have \(m_\pi = 1\) for \(G = \GL(2)\) i.e.</p>
+<p id="p-474">For all \(\pi\) we have \(m_\pi = 1\) for \(G = \GL(2)\) i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi\text{.}
@@ -420,7 +428,7 @@ L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi\text{.}
 </div></article></section><section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type" alt="Subsubsection 4.1.2 Modular forms correspond to automorphic forms">
 <span class="type">Subsubsection</span><span class="codenumber">4.1.2</span><span class="title">Modular forms correspond to automorphic forms</span>
 </h4>
-<p id="p-474">We will make a bunch of groups by letting</p>
+<p id="p-475">We will make a bunch of groups by letting</p>
 <div class="displaymath">
 \begin{equation*}
 \Gamma(N) = \ker( \SL_2(\ZZ) \to \SL_2(\ZZ/N\ZZ))
@@ -446,7 +454,7 @@ L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi\text{.}
 <article class="remark-like" id="remark-23"><h6 class="heading">
 <span class="type">Remark</span><span class="codenumber">4.9</span>
 </h6>
-<div class="displaymath" id="p-475">
+<div class="displaymath" id="p-476">
 \begin{equation*}
 \Gamma_1(N) \backslash \Gamma_0(N) \simeq (\ZZ/ N\ZZ)\units
 \end{equation*}
@@ -475,7 +483,7 @@ L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi\text{.}
 \end{equation*}
 </div>
 <p>for \(Z\le \GL(2)\text{.}\)</p>
-<div class="displaymath" id="p-476">
+<div class="displaymath" id="p-477">
 \begin{equation*}
 \SL_2(\RR)\acts L^2(\chi)
 \end{equation*}
@@ -494,7 +502,7 @@ K \colon G(\widehat \ZZ) \twoheadrightarrow \GL_2(\ZZ/N\ZZ)\text{.}
 </div></article><article class="theorem-like" id="fact-6"><h6 class="heading">
 <span class="type">Fact</span><span class="codenumber">4.10</span><span class="title">Strong approximation for \(\GL(2)\)</span>
 </h6>
-<div class="displaymath" id="p-477">
+<div class="displaymath" id="p-478">
 \begin{equation*}
 G(\adeles) = G(\QQ) (G_\infty^+ \times K_O(N))
 \end{equation*}
@@ -514,7 +522,7 @@ G_\infty^+ = \{g \in \GL_2(\RR) :  \det(g) \gt 0\}
 \begin{equation*}
 Z_\infty^+\SL_2(\RR)\text{.}
 \end{equation*}
-</div></article><p id="p-478">Now embed</p>
+</div></article><p id="p-479">Now embed</p>
 <div class="displaymath">
 \begin{equation*}
 L^2_\chi(N) \hookrightarrow L^2(N)
@@ -532,7 +540,7 @@ f \leadsto \phi_f
 \phi_f(\gamma(z_\infty g_\infty \times k))= \chi(k) f(g_\infty)\text{.}
 \end{equation*}
 </div>
-<p id="p-479">From <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> to automorphic forms</p>
+<p id="p-480">From <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> to automorphic forms</p>
 <div class="displaymath">
 \begin{equation*}
 f\in  S_k(N,\chi) \leadsto \phi_f
@@ -546,7 +554,7 @@ f\in  S_k(N,\chi) \leadsto \phi_f
 <article class="theorem-like" id="fact-7"><h6 class="heading">
 <span class="type">Fact</span><span class="codenumber">4.11</span>
 </h6>
-<ol id="p-480" class="decimal">
+<ol id="p-481" class="decimal">
 <li id="li-100"><div class="displaymath">
 \begin{equation*}
 S_k(N,\chi) \hookrightarrow L^2_{O,\chi}(N)\text{.}
@@ -567,7 +575,7 @@ j(\gamma r(\theta), i ) = e^{-i \theta} j(\gamma, i)\text{.}
 </ol></article></section><section class="subsubsection" id="subsubsection-21"><h4 class="heading hide-type" alt="Subsubsection 4.1.3 Brief overview of local representation theory">
 <span class="type">Subsubsection</span><span class="codenumber">4.1.3</span><span class="title">Brief overview of local representation theory</span>
 </h4>
-<p id="p-481">Why?</p>
+<p id="p-482">Why?</p>
 <div class="displaymath">
 \begin{equation*}
 L^2(G(\QQ)\backslash G(\adeles)) = \bigoplus  \pi \oplus \oint
@@ -579,7 +587,18 @@ L^2(G(\QQ)\backslash G(\adeles)) = \bigoplus  \pi \oplus \oint
 \end{equation*}
 </div>
 <p>for \(\pi_v\) local representations.</p>
-<p id="p-482">We will consider non-archimidean admissible representations, i.e. \((\pi, V)\) such that \(\pi^{K'}\) is the functional dual for all \(K'\) compact.</p></section></section></section></div></main>
+<p id="p-483">We will consider non-archimidean admissible representations, i.e. \((\pi, V)\) such that \(\pi^{K'}\) is finite dimensional for all \(K'\) compact.</p>
+<article class="paragraphs" id="paragraphs-32"><h5 class="heading"><span class="title">Representations of \(\GL_2(\QQ_p)\)</span></h5>
+<p id="p-484">Assume smooth, note that smooth implies admissible, possibly true for all \(G\text{.}\)</p>
+<ol class="decimal">
+<li id="li-102">1-dimensional representations \(\chi (\det)\text{.}\)</li>
+<li id="li-103">Principal series, let \(\chi_i = |\cdot|^{s_i} \omega, s_i \in \CC\) \(\omega \colon \QQ_p\units \to \CC\text{.}\) Let<div class="displaymath">
+\begin{equation*}
+\chi\left( \begin{array}{cc} t_1 \amp b \\ 0\amp t_1\end{array}\right) =  \chi_1(t_1) \chi_2(t_2)
+\end{equation*}
+</div>
+</li>
+</ol></article></section></section></section></div></main>
 </div>
 <!--Start: Google code--><script type="text/javascript">
 var _gaq = _gaq || [];

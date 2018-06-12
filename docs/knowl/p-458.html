@@ -12,7 +12,89 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Lecture 23 24/4/2018</p>
+<ol class="decimal">
+<li>
+<div class="displaymath">
+\begin{equation*}
+\zeta(f,\chi) = \int_{\adeles^\times} f(\alpha) \chi(\alpha) \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_0^\infty \int_{\adeles^{\times,1}} f(tb) \chi(tb) \diff \units b \frac{\diff t}{t}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_0^\infty \zeta_t(f, \chi) \frac{\diff t}{t}
+\end{equation*}
+</div>where \(\zeta_t(f,\chi) = \int_{\adeles^{\units,1}} f(tb) \chi(tb) \diff \units b\text{.}\)</li>
+<li>Functional equation<div class="displaymath">
+\begin{equation*}
+\zeta_t(f,\chi) = \int_{K\units\backslash \adeles^{\times,1}} \sum_{\alpha \in K^\times} f(t\alpha b) \overbrace{\chi(t\alpha b)}^{=\chi(tb)} \diff \units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{K\units \backslash \adeles^{\times,1}} \left\{\sum_{\alpha\in K} f(t\alpha b) - f(0)\right\} \chi(tb) \diff\units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{K\units \backslash \adeles^{\times,1}} \left(\sum_{\alpha\in K} f(t \alpha b )\right) \chi(tb) \diff \units b - f(0) \int_{K\units \backslash \adeles^{\units,1}} \chi(tb) \diff \units b
+\end{equation*}
+</div>the rightmost term is \(\kappa\) iff \(\chi = |\cdot| ^s\) and 0 otherwise.<div class="displaymath">
+\begin{equation*}
+\sum_{\alpha \in K} f(t\alpha b) = \frac{1}{|tb|_{\adeles}} \sum_{\alpha \in K} \hat f\left( \frac{\alpha}{tb}\right)
+\end{equation*}
+</div>Remark: \(b\in \adeles^{\times, 1}\) implies \(|b|_\adeles  = 1\) and \(|tb|_\adeles = |t|_\adeles =  t\) via \(\RR_{\gt 0} \hookrightarrow \adeles\units\text{.}\) This implies<div class="displaymath">
+\begin{equation*}
+\int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} f(t \alpha b) \right) \chi(tb) \diff \units b = \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} \hat f(\frac{\alpha}{tb}) \right) \chi(tb) \diff \units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }} \left( \sum_{\alpha \in K} \hat f(\frac{\alpha b}{t}) \right) \chi(tb\inv) \diff \units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \frac 1t \int_{K\units\backslash \adeles^{\times, 1 }}  \sum_{\alpha \in K\units} \hat f(\frac{\alpha b}{t}) \chi(tb\inv) \diff \units b + \hat f(0)\int_{K\units\backslash \adeles^{\times, 1 }}   \hat \chi(b/t) \diff \units b
+\end{equation*}
+</div>implies<div class="displaymath">
+\begin{equation*}
+\zeta_{1/t}(\hat f, \hat \chi) + \hat f (0 )  \int_{K\units\backslash \adeles^{\times, 1 }} \hat \chi(b/t) \diff\units b
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \zeta_t(f,\chi) + f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \chi (bt)  \diff\units b
+\end{equation*}
+</div>take this and put it back in 1.<div class="displaymath">
+\begin{equation*}
+\int_0^\infty \zeta_t( f,\chi) \frac{\diff t}{t} = \int_0^1 + \int_1^\infty
+\end{equation*}
+</div>the rightmost term is cool, so use<div class="displaymath">
+\begin{equation*}
+\int_0^1 \zeta(f,b) \frac{\diff t}{t} = \int_0^1\zeta_{1/t} (\hat f, \hat \chi) \frac {\diff t}{t}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
++ \int_0^1  \hat f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \hat \chi (b/t)  \diff\units b \frac{\diff t}{t} -\int_0^1  f(0) \int_{K\units\backslash \adeles^{\times, 1 }} \chi (bt)  \diff\units b \frac{\diff t}{t}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_1^\infty\zeta_{t} (\hat f, \hat \chi) \frac {\diff t}{t} +  \hat f(0) \kappa \int_0^1 t^{s-1}\frac{\diff t}{t} -  f(0)\kappa\int_0^1 t^s\frac{\diff t}{t}
+\end{equation*}
+</div>the rightmost terms are present only if \(\chi_0 =1\) they come to \(\hat f(0) \kappa/(s-1) - f(0) \kappa/s\text{.}\) This is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> under \(f\mapsto \hat f,\,\chi \mapsto \hat \chi\text{.}\) All together<div class="displaymath">
+\begin{equation*}
+\zeta(f,\chi) = \int_1^\infty \zeta_t(f, \chi) \frac{\diff t}{t} + \int_1^\infty \zeta_t(\hat f , \hat \chi) \frac{\diff t}{t} + \left(\hat f(0) \kappa/(s-1) - f(0) \kappa/s \right)\text{.}
+\end{equation*}
+</div>
+</li>
+</ol>
 <span class="incontext"><a href="sec-tates-thesis.html#p-458">in-context</a></span>
 </body>
 </html>

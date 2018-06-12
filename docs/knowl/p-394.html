@@ -12,16 +12,55 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let's recap a little, we have \(K\units \hookrightarrow K^+\) and moreover \(K\units \acts K^+\) with two orbits \(\{0\}\) and the rest. Looking at function spaces we have</p>
+<p>Unramified calculation:</p>
 <div class="displaymath">
 \begin{equation*}
-\cinf_c(K\units) \hookrightarrow S(K^+)\text{,}
+\zeta(f_0, |\cdot |^s)  =  \int_{K\units} f_0(\alpha) |\alpha|^s \diff\units \alpha
 \end{equation*}
 </div>
-<p>Schwartz functions on the right. Taking duals to get spaces of distributions</p>
 <div class="displaymath">
 \begin{equation*}
-1 \to  ?? \to D(K^+)_c \to \cinf_c (K\units)^\vee_c \to 0\text{.}
+= \int_{D_v\inv} e(\Lambda(\alpha) ) |\alpha| ^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \int_{D_v\inv} |\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{k=0}^\infty|D_v|^{-s} \int_{\varpi^n \ints\units}|\alpha|^s \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\left(\ints =  \bigsqcup_{n=0}^\infty \varpi^n \ints\units_v\right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= \sum_{k=0}^\infty |D_v|^{-s+1/2} q_v^{-ns}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= |D_v|^{-s+1/2} \frac{1}{1-1/q_v^s}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\zeta(\hat f_0, |\cdot |^{1-s}) = \zeta(|D_v|^{-1/2} \mathbf 1_{\ints_v}, |\cdot |^{1-s})
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+= N(D_v)^{1/2} \int_{\ints_v} |\alpha|^{1-s} \diff\units \alpha
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=  \frac{1}{1-1/q_v^{1-s}}
 \end{equation*}
 </div>
 <span class="incontext"><a href="sec-tates-thesis.html#p-394">in-context</a></span>

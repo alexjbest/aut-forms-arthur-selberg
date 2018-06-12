@@ -12,35 +12,29 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We will make a bunch of groups by letting</p>
 <div class="displaymath">
 \begin{equation*}
-\Gamma_1(N) \backslash \Gamma_0(N) \simeq (\ZZ/ N\ZZ)\units
+\Gamma(N) = \ker( \SL_2(\ZZ) \to \SL_2(\ZZ/N\ZZ))
+\end{equation*}
+</div>
+<p>then we say \(\Gamma\) is a congruence subgroup if there exists \(N\) such that \(\Gamma \supseteq \Gamma(N)\text{.}\) For example</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma_0(N) = \left\{\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \in \SL_2(\ZZ) : c \equiv 0 \pmod N\right\}
 \end{equation*}
 </div>
 <div class="displaymath">
 \begin{equation*}
-\chi \colon {\ZZ/N\ZZ}\units \to \CC\units \leadsto \chi\colon \Gamma_1(N) \backslash \Gamma_0(N) \to \CC\units
+\Gamma_1(N) = \left\{\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \in \SL_2(\ZZ) : c \equiv 0 \pmod N,\,a \equiv d\equiv 1 \pmod N\right\} \lhd \Gamma_0(N)
 \end{equation*}
 </div>
-<p>via</p>
+<p>we have an action</p>
 <div class="displaymath">
 \begin{equation*}
-\begin{pmatrix} a \amp  b \\ c \amp d \end{pmatrix} \mapsto \chi(d)\text{.}
+\Gamma_1(N) \backslash \Gamma_0(N) \acts L^2(\Gamma_1(N) \backslash \SL_2( \RR)) = L^2(N)\text{.}
 \end{equation*}
 </div>
-<p>Then \(L^2_\chi(N)\) is the \(\chi\)-eigenspace of \(L^2(N)\text{.}\) Now as in Tate</p>
-<div class="displaymath">
-\begin{equation*}
-\chi \leadsto \chi \text{ (adelic)}
-\end{equation*}
-</div>
-<p>can view this as</p>
-<div class="displaymath">
-\begin{equation*}
-\QQ\units\backslash \adeles \units \simeq Z(\QQ) \backslash Z(\adeles) \to \CC\units
-\end{equation*}
-</div>
-<p>for \(Z\le \GL(2)\text{.}\)</p>
 <span class="incontext"><a href="sec-gl2.html#p-475">in-context</a></span>
 </body>
 </html>

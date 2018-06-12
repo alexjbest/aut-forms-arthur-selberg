@@ -149,7 +149,7 @@ section#sec-aut-forms-motivation
                             me \iff \Re(s) \lt 0
                         li
                             | As #[m t \to 0] consider #[m \xi = \frac 1t] so #[m \xi \to \infty] and
-                            me  \theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi]
+                            me  \theta(t) = \frac{1}{\sqrt t } \theta\left(\frac 1t\right) = \sqrt \xi \theta \xi
                             me \implies \theta(t) = \sqrt \xi \theta(\xi) \sim \sqrt \xi = \frac{1}{\sqrt t}
                             | so #[m \theta(t) \sim \frac{1}{ \sqrt t}]
                             me \implies \left | \int_0^A \theta(t) t^{s/2} \frac{\diff t}{t}\right| \lt \infty
@@ -1612,13 +1612,14 @@ section#sec-aut-forms-motivation
                             E_T(z; s) =
                             \begin{cases}
                             E(z; s) \amp y\lt T\\
-                            E(z; s) - pi^{-s} \Gamma(s) \zeta(2s) y^s \amp y\ge T
+                            E(z; s) - \pi^{-s} \Gamma(s) \zeta(2s) y^s \amp y\ge T
                             \end{cases}
                         | .
                     proof
                         p
                             | Recall
                             me \Im(\gamma z) = \frac{ y}{((cx+d)^2 + (cy)^2)}
+                            |.
                         p
                             | Case 1:
                             | #[m c \ne 0 ] implies #[m \Im( \gamma z)  \le \frac{1}{c^2 y} \le T] for all #[m y\in \mathcal F].
@@ -2265,7 +2266,7 @@ section#sec-eichler-selberg
                 me X_n (x) = e^{in\phi} + e^{i(n-2)\phi} + \cdots + e^{-in\phi} = \trace (\Sym^n(U)),\,x = \trace(u)
                 | .
             p
-                | Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of #[m \specialunitary(2, \CC)].
+                | Clebesh-Gordon: (Decomposition of tensor powers of irreducible representations of #[m \specialunitary(2, \CC)]).
                 me X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdots + x_{|n-m|}
                 | .
 
@@ -2530,7 +2531,7 @@ section#sec-tates-thesis
                 | because #[m c] is a continuous map from a #[m p]-adic field to the complex numbers.
                 | Let
                 me \tilde k = \min\{k\in \NN : \tilde c(\alpha)|_{1+ \varpi_v^k \ints_v} \equiv 1\}
-                |  and #[m \varpi_v^{\tilde k} = f_v] is the conductor of #[m \tilde c]
+                |  and #[m \varpi_v^{\tilde k} = f_v] is the conductor of #[m \tilde c].
 
             note
                 p
@@ -2701,7 +2702,8 @@ section#sec-tates-thesis
                 me = 2 \int_0^\infty e^{-\pi \alpha^2}
                 me = \pi^{-s/2} \Gamma\left(\frac s2\right)
                 | .
-                aside: p Lecture 19 10/4/2018
+            aside: p Lecture 19 10/4/2018
+            p
                 me \zeta(f_{|\cdot|^s\mathrm{sgn}}, |\cdot|^s\mathrm{sgn}) = \pi^{-(s+1)/2} \Gamma\left(\frac{s+1}{2}\right)
                 | now
                 me \rho(|\cdot|^s) = 2^{1-s} \pi^{-s} \cos(\pi s /2) \Gamma(s)
@@ -2832,7 +2834,7 @@ section#sec-tates-thesis
                 | Let
                 me (D_v) = (\varpi_v^d)
                 me f= (\varpi_v^n)
-                me = int_{(\varpi_v^{n+d})\inv} e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
+                me = \int_{(\varpi_v^{n+d})\inv} e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
                 me = \sum_{j = -n-d}^\infty \int_{\varpi_v^j \ints_v\units } e(\Lambda(\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
                 | let #[m \alpha = \varpi_v^j \alpha] which implies
                 me = \sum_{j = -n-d}^\infty q_v^{js}\int_{\ints_v\units } e(\Lambda(\varpi^j\alpha)) c_n(\alpha) |\alpha|^s \diff \units \alpha
@@ -3168,21 +3170,21 @@ section#sec-tates-thesis
 
 
 
-        paragraphs
-            title Multiplicative world
-            aside: p Lecture 22 19/4/2018
-            p
-                | Let
-                me \adeles^{\times, 1} = \ker(|\cdot|_\adeles \colon \adeles \units \to \CC\units)
-                ol
-                    li
-                        | #[m K\units \backslash \adeles^{\times, 1}] is compact, which leads to Dirichlet's   units theorem.
-                    li
-                        | #[m \mu(K\units \backslash \adeles^{\times, 1})].
-                    li
-                        | Analytic continuation and functional equation.
-                    li
-                        | Examples
+            paragraphs
+                title Multiplicative world
+                aside: p Lecture 22 19/4/2018
+                p
+                    | Let
+                    me \adeles^{\times, 1} = \ker(|\cdot|_\adeles \colon \adeles \units \to \CC\units)
+                    ol
+                        li
+                            | #[m K\units \backslash \adeles^{\times, 1}] is compact, which leads to Dirichlet's   units theorem.
+                        li
+                            | #[m \mu(K\units \backslash \adeles^{\times, 1})].
+                        li
+                            | Analytic continuation and functional equation.
+                        li
+                            | Examples
             paragraphs
                 title 1
                 p
@@ -3331,7 +3333,7 @@ section#sec-tates-thesis
                             // TODO wtf 8^s
                             | then Tates's implies
                             me \pi^{-s} \Gamma\left(\frac{s-i\pi/\log(\sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{s+i\pi/\log(\sqrt 2 - 1)}{2}\right) \frac{1}{8} L(s,\chi)
-                            me = \pi^{1-s} \Gamma\left(\frac{1-s-i\pi/\log(\1-sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{1-s+i\pi/\log(\1-sqrt 2 - 1)}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)
+                            me = \pi^{1-s} \Gamma\left(\frac{1-s-i\pi/\log(\sqrt 2 - 1)}{2}\right)\Gamma\left(\frac{1-s+i\pi/\log(\sqrt 2 - 1)}{2}\right) \frac{1}{8^s} L(1-s,\chi\inv)
                             | .
 
 
@@ -3384,7 +3386,8 @@ section#sec-gl2
             p
                 | Heads up
                 me G = \GL(1)
-                me L^2(\QQ\units\backslash \adeles\units) = \oint| instead we would like to look at a piece of
+                me L^2(\QQ\units\backslash \adeles\units) = \oint
+                | instead we would like to look at a piece of
                 me L^2( G(\QQ) \backslash G(\adeles))
                 | where the center
                 me Z(\adeles) \hookrightarrow G(\adeles)
@@ -3515,7 +3518,20 @@ section#sec-gl2
                 me \pi = \otimes' \pi_v
                 | for #[m \pi_v] local representations.
             p
-                | We will consider non-archimidean admissible representations, i.e. #[m (\pi, V)] such that #[m \pi^{K'}] is the functional dual for all #[m K'] compact.
+                | We will consider non-archimidean admissible representations, i.e. #[m (\pi, V)] such that #[m \pi^{K'}] is finite dimensional for all #[m K'] compact.
+
+            paragraphs
+                title Representations of #[m \GL_2(\QQ_p)]
+
+                p
+                    | Assume smooth, note that smooth implies admissible, possibly true for all #[m G].
+                    ol
+                        li
+                            | 1-dimensional representations #[m \chi (\det)].
+                        li
+                            | Principal series, let #[m \chi_i = |\cdot|^{s_i} \omega, s_i \in \CC] #[m \omega \colon \QQ_p\units \to \CC].
+                            | Let
+                            me \chi\left( \begin{array}{cc} t_1 \amp b \\ 0\amp t_1\end{array}\right) =  \chi_1(t_1) \chi_2(t_2)
 
 
             // TODO missed a     bit
