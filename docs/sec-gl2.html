@@ -11,7 +11,7 @@
 <title>AFAS \(\GL_2\) (and up)</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
 MathJax.Hub.Config({
     tex2jax: {
@@ -42,10 +42,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
@@ -246,16 +246,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-tates-thesis.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-tates-thesis.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-tates-thesis.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-tates-thesis.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
+<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span> <span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
 <ul>
 <li><a href="sec-aut-forms-motivation.html#subsection-1" data-scroll="subsection-1">Goal</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-2" data-scroll="subsection-2">Motivation</a></li>
@@ -269,26 +269,27 @@ MathJax.Hub.Config({
 <li><a href="sec-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span> <span class="title">The Eichler-Selberg trace formula</span></a></h2>
 <ul>
 <li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
 <li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
 </ul>
-<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
+<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span> <span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
 <ul>
 <li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li>
 <li><a href="sec-tates-thesis.html#subsection-15" data-scroll="subsection-15">Global theory</a></li>
 </ul>
-<h2 class="link active"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span></a></h2>
-<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-gl2"><h2 class="heading hide-type" alt="Section 4 \(\GL_2\) (and up)">
-<span class="type">Section</span><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span>
+<h2 class="link active"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span> <span class="title">\(\GL_2\) (and up)</span></a></h2>
+<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-gl2"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4</span> <span class="title">\(\GL_2\) (and up)</span>
 </h2>
-<a href="sec-gl2.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-461">This will be an overview.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type" alt="Subsection 4.1 Change of perspective: Representation theory">
-<span class="type">Subsection</span><span class="codenumber">4.1</span><span class="title">Change of perspective: Representation theory</span>
+<a href="sec-gl2.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-461">This will be an overview.</p></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1</span> <span class="title">Change of perspective: Representation theory</span>
 </h3>
 <section class="introduction" id="introduction-8"><article class="definition-like" id="def-unitary-rep"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">4.1</span>
+<span class="type">Definition</span> <span class="codenumber">4.1</span>
 </h6>
 <p id="p-462">A <dfn class="terminology">unitary representation</dfn> of a topological group \(G\) is  a pair \((\pi, V)\) with \(V\) a Hilbert space and</p>
 <div class="displaymath">
@@ -302,10 +303,10 @@ g,v \mapsto \pi(g) v
 \end{equation*}
 </div>
 <p>continuous, where \(\pi\) acts unitarily.</p></article><article class="theorem-like" id="fact-5"><h6 class="heading">
-<span class="type">Fact</span><span class="codenumber">4.2</span><span class="title">A useful fact</span>
+<span class="type">Fact</span> <span class="codenumber">4.2</span> <span class="title">A useful fact</span>
 </h6>
-<p id="p-463">If \(H \subseteq G\) is a closed subgroup and both are unimodular then there exists a \(G\) <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> measure on \(H\backslash G\) and so \(G \acts L^2(H\backslash G)\text{.}\)</p></article><article class="example-like" id="example-12"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">4.3</span>
+<p id="p-463">If \(H \subseteq G\) is a closed subgroup and both are unimodular then there exists a \(G\) <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> measure on \(H\backslash G\) and so \(G \acts L^2(H\backslash G)\text{.}\)</p></article><article class="example-like" id="example-12"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">4.3</span>
 </h6>
 <p id="p-464">If \(G(K) = H\) and \(G(\adeles) = G\) then we can take</p>
 <div class="displaymath">
@@ -333,8 +334,8 @@ V = V_1 \oplus \cdots \oplus V_n
 \begin{equation*}
 \RR \acts L^2(\RR) = \oint_{i\RR} e^{\pi t} \diff t\text{.}
 \end{equation*}
-</div></section><section class="subsubsection" id="subsubsection-19"><h4 class="heading hide-type" alt="Subsubsection 4.1.1 Automorphic forms/representations">
-<span class="type">Subsubsection</span><span class="codenumber">4.1.1</span><span class="title">Automorphic forms/representations</span>
+</div></section><section class="subsubsection" id="subsubsection-19"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.1</span> <span class="title">Automorphic forms/representations</span>
 </h4>
 <p id="p-466">We are concerned with</p>
 <div class="displaymath">
@@ -373,7 +374,7 @@ Z(\adeles) \hookrightarrow G(\adeles)
 \end{equation*}
 </div>
 <article class="definition-like" id="definition-24"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">4.4</span><span class="title">Constant term (along  a parabolic)</span>
+<span class="type">Definition</span> <span class="codenumber">4.4</span> <span class="title">Constant term (along  a parabolic)</span>
 </h6>
 <div class="displaymath" id="p-468">
 \begin{equation*}
@@ -398,19 +399,19 @@ N_B = \begin{pmatrix} 1 \amp \cdots  \amp * \\ 0 \amp \ddots \amp \vdots \\ 0 \a
 N = \begin{pmatrix} 1 \amp n \\ 0 \amp 1 \end{pmatrix}\text{.}
 \end{equation*}
 </div></article><article class="definition-like" id="definition-25"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">4.5</span><span class="title">Cusp form</span>
+<span class="type">Definition</span> <span class="codenumber">4.5</span> <span class="title">Cusp form</span>
 </h6>
-<p id="p-469">If \(f_N(g) \equiv 0\) \(\forall' g \in G(\adeles)\text{.}\)</p></article><p id="p-470">\(\rho_\omega\) is the right regular representation on \(L^2(\lb G \rb, \omega)\text{.}\) Let \(L^2_0\) denote the space of <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>.</p>
+<p id="p-469">If \(f_N(g) \equiv 0\) \(\forall' g \in G(\adeles)\text{.}\)</p></article><p id="p-470">\(\rho_\omega\) is the right regular representation on \(L^2(\lb G \rb, \omega)\text{.}\) Let \(L^2_0\) denote the space of <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp forms</a>.</p>
 <p id="p-471">Properties:</p>
 <article class="theorem-like" id="proposition-9"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">4.6</span>
+<span class="type">Proposition</span> <span class="codenumber">4.6</span>
 </h6>
 <div class="displaymath" id="p-472">
 \begin{equation*}
 L_0^2 \le L^2 \text{ is closed}\text{.}
 \end{equation*}
 </div></article><article class="theorem-like" id="theorem-22"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">4.7</span><span class="title">Gelfand-Graev-Pitesk-Shapiro</span>
+<span class="type">Theorem</span> <span class="codenumber">4.7</span> <span class="title">Gelfand-Graev-Piatetski-Shapiro</span>
 </h6>
 <div class="displaymath" id="p-473">
 \begin{equation*}
@@ -418,15 +419,15 @@ L_0^2 \le L^2 \text{ is closed}\text{.}
 \end{equation*}
 </div>
 <p>with all \(m_{\pi} \lt \infty\) countable.</p></article><article class="theorem-like" id="theorem-23"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">4.8</span><span class="title">Jacquet-Langlands</span>
+<span class="type">Theorem</span> <span class="codenumber">4.8</span> <span class="title">Jacquet-Langlands</span>
 </h6>
 <p id="p-474">For all \(\pi\) we have \(m_\pi = 1\) for \(G = \GL(2)\) i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi\text{.}
 \end{equation*}
-</div></article></section><section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type" alt="Subsubsection 4.1.2 Modular forms correspond to automorphic forms">
-<span class="type">Subsubsection</span><span class="codenumber">4.1.2</span><span class="title">Modular forms correspond to automorphic forms</span>
+</div></article></section><section class="subsubsection" id="subsubsection-20"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.2</span> <span class="title">Modular forms correspond to automorphic forms</span>
 </h4>
 <p id="p-475">We will make a bunch of groups by letting</p>
 <div class="displaymath">
@@ -452,7 +453,7 @@ L^2_0 ( [\GL_2(\adeles)], \omega)  = \bigoplus \pi\text{.}
 \end{equation*}
 </div>
 <article class="remark-like" id="remark-23"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">4.9</span>
+<span class="type">Remark</span> <span class="codenumber">4.9</span>
 </h6>
 <div class="displaymath" id="p-476">
 \begin{equation*}
@@ -500,7 +501,7 @@ g\hookrightarrow (g,1,1,\ldots)
 K \colon G(\widehat \ZZ) \twoheadrightarrow \GL_2(\ZZ/N\ZZ)\text{.}
 \end{equation*}
 </div></article><article class="theorem-like" id="fact-6"><h6 class="heading">
-<span class="type">Fact</span><span class="codenumber">4.10</span><span class="title">Strong approximation for \(\GL(2)\)</span>
+<span class="type">Fact</span> <span class="codenumber">4.10</span> <span class="title">Strong approximation for \(\GL(2)\)</span>
 </h6>
 <div class="displaymath" id="p-478">
 \begin{equation*}
@@ -540,7 +541,7 @@ f \leadsto \phi_f
 \phi_f(\gamma(z_\infty g_\infty \times k))= \chi(k) f(g_\infty)\text{.}
 \end{equation*}
 </div>
-<p id="p-480">From <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> to automorphic forms</p>
+<p id="p-480">From <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular forms</a> to automorphic forms</p>
 <div class="displaymath">
 \begin{equation*}
 f\in  S_k(N,\chi) \leadsto \phi_f
@@ -552,7 +553,7 @@ f\in  S_k(N,\chi) \leadsto \phi_f
 \end{equation*}
 </div>
 <article class="theorem-like" id="fact-7"><h6 class="heading">
-<span class="type">Fact</span><span class="codenumber">4.11</span>
+<span class="type">Fact</span> <span class="codenumber">4.11</span>
 </h6>
 <ol id="p-481" class="decimal">
 <li id="li-100"><div class="displaymath">
@@ -572,8 +573,8 @@ j(\gamma r(\theta), i ) = e^{-i \theta} j(\gamma, i)\text{.}
 \end{equation*}
 </div>
 </li>
-</ol></article></section><section class="subsubsection" id="subsubsection-21"><h4 class="heading hide-type" alt="Subsubsection 4.1.3 Brief overview of local representation theory">
-<span class="type">Subsubsection</span><span class="codenumber">4.1.3</span><span class="title">Brief overview of local representation theory</span>
+</ol></article></section><section class="subsubsection" id="subsubsection-21"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">4.1.3</span> <span class="title">Brief overview of local representation theory</span>
 </h4>
 <p id="p-482">Why?</p>
 <div class="displaymath">
@@ -600,7 +601,7 @@ L^2(G(\QQ)\backslash G(\adeles)) = \bigoplus  \pi \oplus \oint
 </li>
 </ol></article></section></section></section></div></main>
 </div>
-<!--Start: Google code--><script type="text/javascript">
+<!--Start: Google code--><script>
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-48250536-1']);
 _gaq.push(['_trackPageview']);

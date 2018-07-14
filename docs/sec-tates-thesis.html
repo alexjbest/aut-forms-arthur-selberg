@@ -11,7 +11,7 @@
 <title>AFAS Tate's Thesis (\(\GL_1\) theory)</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
 MathJax.Hub.Config({
     tex2jax: {
@@ -42,10 +42,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
@@ -246,16 +246,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-eichler-selberg.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-gl2.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-eichler-selberg.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-gl2.html" title="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-eichler-selberg.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec-gl2.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-eichler-selberg.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-gl2.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
+<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span> <span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
 <ul>
 <li><a href="sec-aut-forms-motivation.html#subsection-1" data-scroll="subsection-1">Goal</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-2" data-scroll="subsection-2">Motivation</a></li>
@@ -269,24 +269,25 @@ MathJax.Hub.Config({
 <li><a href="sec-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span> <span class="title">The Eichler-Selberg trace formula</span></a></h2>
 <ul>
 <li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
 <li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
 </ul>
-<h2 class="link active"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
+<h2 class="link active"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span> <span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
 <ul>
 <li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li>
 <li><a href="sec-tates-thesis.html#subsection-15" data-scroll="subsection-15">Global theory</a></li>
 </ul>
-<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span></a></h2>
-<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-tates-thesis"><h2 class="heading hide-type" alt="Section 3 Tate's Thesis (\(\GL_1\) theory)">
-<span class="type">Section</span><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span>
+<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span> <span class="title">\(\GL_2\) (and up)</span></a></h2>
+<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-tates-thesis"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Tate's Thesis (\(\GL_1\) theory)</span>
 </h2>
 <a href="sec-tates-thesis.html" class="permalink">¶</a><section class="introduction" id="introduction-5"><h6 class="heading">What's the aim?<span></span>
 </h6>
-<article class="aside-like" id="aside-17"><p id="p-331">Lecture 17 3/4/2018</p></article><p id="p-332">Redo Hecke's work, in an adelic setting, more canonically. I.e. obtain analytic continuation and functional equation of Hecke \(L\)-functions. This was also seemingly a bit more general than the Hecke theory. The local theory will give us terms like</p>
+<aside class="aside-like" id="aside-17"><p id="p-331">Lecture 17 3/4/2018</p></aside><p id="p-332">Redo Hecke's work, in an adelic setting, more canonically. I.e. obtain analytic continuation and functional equation of Hecke \(L\)-functions. This was also seemingly a bit more general than the Hecke theory. The local theory will give us terms like</p>
 <div class="displaymath">
 \begin{equation*}
 (1 - \frac{\chi(p)}{p^r})\inv
@@ -297,8 +298,8 @@ MathJax.Hub.Config({
 \begin{equation*}
 \prod_p (1 - \frac{\chi(p)}{p^r})\inv\text{.}
 \end{equation*}
-</div></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type" alt="Subsection 3.1 Local theory">
-<span class="type">Subsection</span><span class="codenumber">3.1</span><span class="title">Local theory</span>
+</div></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1</span> <span class="title">Local theory</span>
 </h3>
 <section class="introduction" id="introduction-6"><p id="p-333">For all of today, \(K\) is  a number field and   \(v\) a place of \(K\) so that</p>
 <div class="displaymath">
@@ -312,13 +313,13 @@ K_v = \begin{cases} \RR,\CC \amp \text{ if } v \text{ is archimidean} \\ [K_v: \
 |\alpha|_v = \begin{cases} |\alpha|_\CC^2 \amp \text{ if } K_v = \CC \\ |\alpha|_\RR   \amp \text{ if } K_v = \RR \\ N(\varpi_v)^{-v_v(\alpha)} \amp \text{ if } v \text{ is non-archimidean}\end{cases}
 \end{equation*}
 </div>
-<p>where \(|N(\varpi_v) = | \ints_v / \varpi \ints_v|\text{.}\)</p></section><section class="subsubsection" id="subsubsection-11"><h4 class="heading hide-type" alt="Subsubsection 3.1.1 Additive theory (Theory of Fourier transform)">
-<span class="type">Subsubsection</span><span class="codenumber">3.1.1</span><span class="title">Additive theory (Theory of Fourier transform)</span>
+<p>where \(|N(\varpi_v) = | \ints_v / \varpi \ints_v|\text{.}\)</p></section><section class="subsubsection" id="subsubsection-11"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.1.1</span> <span class="title">Additive theory (Theory of Fourier transform)</span>
 </h4>
 <p id="p-334">Let \(K_v^+\) denote the additive group of \(K_v\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-22"><h5 class="heading"><span class="title">Characters of \(K_v^+\) (continuous)</span></h5>
 <article class="theorem-like" id="lemma-7"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.1</span>
+<span class="type">Lemma</span> <span class="codenumber">3.1</span>
 </h6>
 <p id="p-335">Let \(\chi_v\) be a non-trivial additive character of \(K_v^+\text{,}\) i.e.</p>
 <div class="displaymath">
@@ -403,7 +404,7 @@ K_v^+  \simeq \widehat K_v^+
 \end{equation*}
 </div>
 <article class="theorem-like" id="lemma-8"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.2</span>
+<span class="type">Lemma</span> <span class="codenumber">3.2</span>
 </h6>
 <p id="p-340">Let \(v\) be non-archimidean</p>
 <div class="displaymath">
@@ -423,7 +424,7 @@ D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}\text{.}
 <li id="li-71">\(K_v\text{,}\) \(\mu_v(\ints_v) = N(D_v)^{-1/2}\text{.}\)</li>
 </ul>
 <article class="theorem-like" id="lemma-9"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.3</span>
+<span class="type">Lemma</span> <span class="codenumber">3.3</span>
 </h6>
 <p id="p-342">\(\alpha \ne 0\) implies</p>
 <div class="displaymath">
@@ -439,25 +440,25 @@ D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}\text{.}
 \end{equation*}
 </div>
 <article class="definition-like" id="definition-15"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.4</span><span class="title">Fourier Transform</span>
+<span class="type">Definition</span> <span class="codenumber">3.4</span> <span class="title">Fourier Transform</span>
 </h6>
 <div class="displaymath" id="p-345">
 \begin{equation*}
 \hat f(\eta) = \int f(\xi) e(-\lambda_v(\eta\xi)) \diff \mu_v(\xi)\text{.}
 \end{equation*}
 </div></article><article class="theorem-like" id="theorem-17"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">3.5</span><span class="title">Fourier inversion</span>
+<span class="type">Theorem</span> <span class="codenumber">3.5</span> <span class="title">Fourier inversion</span>
 </h6>
 <p id="p-346">Let \(f \in L^1(K_v^+)\) such that \(\hat f \in L^1(K_v^+)\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 f(\xi) = \int \hat f( \eta) e(-\lambda_v(\eta\xi)) \diff \mu(\eta) = \hat{\hat f}(-\xi)\text{.}
 \end{equation*}
-</div></article></article></section><section class="subsubsection" id="subsubsection-12"><h4 class="heading hide-type" alt="Subsubsection 3.1.2 Multiplicative theory">
-<span class="type">Subsubsection</span><span class="codenumber">3.1.2</span><span class="title">Multiplicative theory</span>
+</div></article></article></section><section class="subsubsection" id="subsubsection-12"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.1.2</span> <span class="title">Multiplicative theory</span>
 </h4>
 <article class="definition-like" id="definition-16"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.6</span><span class="title">Unit group</span>
+<span class="type">Definition</span> <span class="codenumber">3.6</span> <span class="title">Unit group</span>
 </h6>
 <div class="displaymath" id="p-347">
 \begin{equation*}
@@ -470,7 +471,7 @@ U_v = \ker(x\mapsto |x|_v)
 U_v = \begin{cases}S^1 \amp \text{ if }K_v = \CC \\S^1 \amp \text{ if }K_v = \RR \\ \ints_v^\times \amp\text{ if } v\text{ non-archimidean}\end{cases}\text{.}
 \end{equation*}
 </div></article><article class="definition-like" id="def-quasichar"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.7</span>
+<span class="type">Definition</span> <span class="codenumber">3.7</span>
 </h6>
 <p id="p-348">A <dfn class="terminology">quasicharacter</dfn> is</p>
 <div class="displaymath">
@@ -491,7 +492,7 @@ K_v^\times \to S^1\text{.}
 \end{equation*}
 </div>
 <p>is unramified \(s\in  \CC\text{.}\)</p></article><article class="theorem-like" id="lemma-10"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.8</span>
+<span class="type">Lemma</span> <span class="codenumber">3.8</span>
 </h6>
 <p id="p-349">All unramified characters are of this form</p>
 <div class="displaymath">
@@ -506,9 +507,9 @@ K_v^\times \to S^1\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-18"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">3.9</span>
+<span class="type">Theorem</span> <span class="codenumber">3.9</span>
 </h6>
-<p id="p-351">All <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacters</a> of \(K_v^\times\) are of the form</p>
+<p id="p-351">All <a knowl="./knowl/def-quasichar.html" title="Definition 3.7">quasicharacters</a> of \(K_v^\times\) are of the form</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha \mapsto c(\alpha) = \tilde c (\tilde \alpha) |\alpha|^s
@@ -521,7 +522,7 @@ K_v^\times \to S^1\text{.}
 \end{equation*}
 </div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-31" id="proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-352">Exercise.</p></article></div>
 <article class="example-like" id="example-10"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">3.10</span>
+<span class="type">Example</span> <span class="codenumber">3.10</span>
 </h6>
 <p id="p-353">Dirichlet characters mod \(p\text{.}\)</p></article><p id="p-354">E.g. over \(\CC^\times\) then</p>
 <div class="displaymath">
@@ -549,10 +550,10 @@ K_v^\times \to S^1\text{.}
 </div>
 <p>and \(\varpi_v^{\tilde k} = f_v\) is the conductor of \(\tilde c\text{.}\)</p>
 <article class="remark-like" id="note-13"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">3.11</span>
+<span class="type">Note</span> <span class="codenumber">3.11</span>
 </h6>
 <p id="p-355">Sometimes this \(\tilde k\) is called the ramification degree of \(c\text{.}\)</p></article><article class="remark-like" id="note-14"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">3.12</span>
+<span class="type">Note</span> <span class="codenumber">3.12</span>
 </h6>
 <p id="p-356">If \(c = \tilde c | \cdot |^s\) then \(\Re(s) = \sigma\) is uniquely determined  by \(c\text{.}\) It is called the exponent of \(c\text{.}\) In modern lingo this is measuring how non-tempered \(c\) is.</p></article><article class="paragraphs" id="paragraphs-25"><h5 class="heading"><span class="title">Multiplicative Haar measures</span></h5>
 <p id="p-357">Let</p>
@@ -563,7 +564,7 @@ K_v^\times \to S^1\text{.}
 </div>
 <p>where \(\diff_v \alpha\) is the additive Haar measure. these extra factors are really Tamagawa numbers. They make the product in the next lemma converge.</p>
 <article class="theorem-like" id="lemma-11"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.13</span>
+<span class="type">Lemma</span> <span class="codenumber">3.13</span>
 </h6>
 <p id="p-358">For \(v\) non-archimidean</p>
 <div class="displaymath">
@@ -594,14 +595,14 @@ K_v^\times \to S^1\text{.}
 \begin{equation*}
 = N(D_v)^{-1/2} |\varpi_v| (N(\varpi_v) - 1) (1- N(\varpi_v)\inv)\inv = N(D_v)^{-1/2}\text{.}
 \end{equation*}
-</div></article></div></article><article class="aside-like" id="aside-18"><p id="p-360">Lecture 18 5/4/2018</p></article><p id="p-361">We are trying to set up a general machinery that will take a  <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacter</a> and associate  a zeta function. In fact we want have</p>
+</div></article></div></article><aside class="aside-like" id="aside-18"><p id="p-360">Lecture 18 5/4/2018</p></aside><p id="p-361">We are trying to set up a general machinery that will take a  <a knowl="./knowl/def-quasichar.html" title="Definition 3.7">quasicharacter</a> and associate  a zeta function. In fact we want have</p>
 <div class="displaymath">
 \begin{equation*}
 c\colon N_v^\times \to \CC^\times \leadsto \zeta(f,c)
 \end{equation*}
 </div>
-<p>a family of \(\zeta\)-functions. We will then look at the gcd over all possible \(f\text{,}\) this will be the \(L\)-factor.</p></section><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type" alt="Subsubsection 3.1.3 Local \(\zeta\)-functions">
-<span class="type">Subsubsection</span><span class="codenumber">3.1.3</span><span class="title">Local \(\zeta\)-functions</span>
+<p>a family of \(\zeta\)-functions. We will then look at the gcd over all possible \(f\text{,}\) this will be the \(L\)-factor.</p></section><section class="subsubsection" id="subsubsection-13"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.1.3</span> <span class="title">Local \(\zeta\)-functions</span>
 </h4>
 <p id="p-362">Let</p>
 <div class="displaymath">
@@ -632,7 +633,7 @@ f \colon K_v\units \to \CC
 </ol>
 <p>Call the class of such \(f\) \(S\text{.}\)</p>
 <article class="definition-like" id="definition-18"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.14</span>
+<span class="type">Definition</span> <span class="codenumber">3.14</span>
 </h6>
 <p id="p-363">Let \(f \in S\) and \(c\) s.t. exponent of \(c\) is \(\sigma \gt 0\text{,}\) i.e. \(c=  c_0 \cdot |\cdot|^s\) with \(c_0\) unitary and \(\Re(s) = \sigma \gt 0\) then we may define</p>
 <div class="displaymath">
@@ -646,7 +647,7 @@ f \colon K_v\units \to \CC
 \end{equation*}
 </div>
 <article class="remark-like" id="remark-21"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">3.15</span>
+<span class="type">Remark</span> <span class="codenumber">3.15</span>
 </h6>
 <p id="p-365">\(c = c_0 | \cdot |^s\) for fixed \(f\) and \(c_0\)</p>
 <div class="displaymath">
@@ -657,22 +658,22 @@ f \colon K_v\units \to \CC
 <ol class="decimal">
 <li id="li-74">Prove that \(\zeta(f,s)\) extends to a meromorphic function of \(s\text{.}\)</li>
 <li id="li-75">Calculate this for “nice” choices of \(f\text{.}\)</li>
-</ol></section><section class="subsubsection" id="subsubsection-14"><h4 class="heading hide-type" alt="Subsubsection 3.1.4 Analytic properties of \(\zeta(f,c)\)">
-<span class="type">Subsubsection</span><span class="codenumber">3.1.4</span><span class="title">Analytic properties of \(\zeta(f,c)\)</span>
+</ol></section><section class="subsubsection" id="subsubsection-14"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.1.4</span> <span class="title">Analytic properties of \(\zeta(f,c)\)</span>
 </h4>
 <article class="theorem-like" id="lemma-12"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.16</span>
+<span class="type">Lemma</span> <span class="codenumber">3.16</span>
 </h6>
-<p id="p-367">\(\zeta(f,c)\) is a regular function for <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacters</a> \(c\) with \(\sigma \gt 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-33" id="proof-33"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-33" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-368">
+<p id="p-367">\(\zeta(f,c)\) is a regular function for <a knowl="./knowl/def-quasichar.html" title="Definition 3.7">quasicharacters</a> \(c\) with \(\sigma \gt 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-33" id="proof-33"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-33" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-368">
 \begin{equation*}
 \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff \units \alpha
 \end{equation*}
 </div>
 <p>check, absolutely convergent around 0, has derivatives around 0, other points are fine.</p></article></div>
 <article class="theorem-like" id="lemma-13"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.17</span><span class="title">fundamental lemma</span>
+<span class="type">Lemma</span> <span class="codenumber">3.17</span> <span class="title">fundamental lemma</span>
 </h6>
-<p id="p-369">Let \(c\) be a <a knowl="./knowl/def-quasichar.html" knowl-id="xref-def-quasichar" alt="Definition 3.7 " title="Definition 3.7 ">quasicharacter</a> that satisfies \(0 \lt \sigma \lt 1\) and define</p>
+<p id="p-369">Let \(c\) be a <a knowl="./knowl/def-quasichar.html" title="Definition 3.7">quasicharacter</a> that satisfies \(0 \lt \sigma \lt 1\) and define</p>
 <div class="displaymath">
 \begin{equation*}
 \hat c (\alpha) = c_0\inv (\alpha) | \cdot| ^{1-s}
@@ -702,7 +703,7 @@ f \colon K_v\units \to \CC
 </div>
 <p>change variable \(\beta \mapsto \alpha\beta\text{.}\)</p></article></div>
 <article class="theorem-like" id="theorem-19"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">3.18</span><span class="title">Local functional equation</span>
+<span class="type">Theorem</span> <span class="codenumber">3.18</span> <span class="title">Local functional equation</span>
 </h6>
 <p id="p-372">A \(\zeta\)-function will satisfy</p>
 <div class="displaymath">
@@ -718,7 +719,7 @@ f \colon K_v\units \to \CC
 </div>
 <p>we will show \(\rho(c)\) is independent of \(f\) and that we can choose \(f\) s.t. \(\zeta(\hat f, \hat c)\) is non-zero. TBC.</p></article></div>
 <article class="theorem-like" id="proposition-7"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">3.19</span>
+<span class="type">Proposition</span> <span class="codenumber">3.19</span>
 </h6>
 <p id="p-374">Several properties:</p>
 <div class="displaymath">
@@ -777,8 +778,8 @@ f \colon K_v\units \to \CC
 = c(-1)\overline{\zeta(\hat f, \hat c)}
 \end{equation*}
 </div>
-<p id="p-378">If \(\sigma=  \frac12\) then \(c(\alpha) \bar c(\alpha) = |\alpha| = c(\alpha) \hat c(\alpha) = \bar c(\alpha) = \hat c(\alpha)\text{.}\) Together the previous parts give \(\rho(c)\overline {\rho(c)} = 1\text{.}\)</p></article></div></section><section class="subsubsection" id="subsubsection-15"><h4 class="heading hide-type" alt="Subsubsection 3.1.5 Explicit \(\zeta\) functions">
-<span class="type">Subsubsection</span><span class="codenumber">3.1.5</span><span class="title">Explicit \(\zeta\) functions</span>
+<p id="p-378">If \(\sigma=  \frac12\) then \(c(\alpha) \bar c(\alpha) = |\alpha| = c(\alpha) \hat c(\alpha) = \bar c(\alpha) = \hat c(\alpha)\text{.}\) Together the previous parts give \(\rho(c)\overline {\rho(c)} = 1\text{.}\)</p></article></div></section><section class="subsubsection" id="subsubsection-15"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.1.5</span> <span class="title">Explicit \(\zeta\) functions</span>
 </h4>
 <p id="p-379">First let \(K_v = \RR\) then we will use the following notation: Additively \(\xi\) with \(\Lambda(\xi) = -\xi\text{,}\) \(\diff \xi\) the Lebesgue measure. Multiplicatively \(\alpha\) with \(|\alpha|_v = |\alpha|_\RR\) and \(\diff \units \alpha = \diff \alpha/|\alpha|_\RR\text{.}\) We will use characters \(|\cdot |^s\) or \(\mathrm{sgn}|\cdot|^s\text{,}\) \(f_{|\cdot|^s}= e^{-\pi \xi^2}\) and \(f_{|\cdot|^s\mathrm{sgn}} (\xi) = \xi e^{-\pi \xi^2}\text{.}\) These have fourier transforms</p>
 <div class="displaymath">
@@ -808,7 +809,7 @@ f \colon K_v\units \to \CC
 = \pi^{-s/2} \Gamma\left(\frac s2\right)\text{.}
 \end{equation*}
 </div>
-<article class="aside-like" id="aside-19"><p id="p-380">Lecture 19 10/4/2018</p></article><div class="displaymath" id="p-381">
+<aside class="aside-like" id="aside-19"><p id="p-380">Lecture 19 10/4/2018</p></aside><div class="displaymath" id="p-381">
 \begin{equation*}
 \zeta(f_{|\cdot|^s\mathrm{sgn}}, |\cdot|^s\mathrm{sgn}) = \pi^{-(s+1)/2} \Gamma\left(\frac{s+1}{2}\right)
 \end{equation*}
@@ -867,7 +868,7 @@ f_n(\xi) = \begin{cases} (x-iy)^n e^{-2\pi(x^2 + y^2)} \amp \text{ if } n \ge 0 
 </div>
 <p>fourier transforms</p>
 <article class="theorem-like" id="claim-2"><h6 class="heading">
-<span class="type">Claim</span><span class="codenumber">3.20</span>
+<span class="type">Claim</span> <span class="codenumber">3.20</span>
 </h6>
 <div class="displaymath" id="p-383">
 \begin{equation*}
@@ -961,7 +962,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 </div>
 <p id="p-391">The fourier transforms</p>
 <article class="theorem-like" id="lemma-14"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.21</span>
+<span class="type">Lemma</span> <span class="codenumber">3.21</span>
 </h6>
 <div class="displaymath" id="p-392">
 \begin{equation*}
@@ -1051,7 +1052,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 \end{equation*}
 </div>
 <article class="theorem-like" id="corollary-4"><h6 class="heading">
-<span class="type">Corollary</span><span class="codenumber">3.22</span>
+<span class="type">Corollary</span> <span class="codenumber">3.22</span>
 </h6>
 <p id="p-396">There is \(\rho(c)\) s.t.</p>
 <div class="displaymath">
@@ -1064,7 +1065,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 \begin{equation*}
 \rho(c) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}\text{.}
 \end{equation*}
-</div></article><article class="aside-like" id="aside-20"><p id="p-397">Lecture 20 12/4/2018</p></article><p id="p-398">We have done the case of unramified characters.</p>
+</div></article><aside class="aside-like" id="aside-20"><p id="p-397">Lecture 20 12/4/2018</p></aside><p id="p-398">We have done the case of unramified characters.</p>
 <p id="p-399">Case II: \(n \gt 0\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1104,7 +1105,7 @@ f= (\varpi_v^n)
 \end{equation*}
 </div>
 <article class="theorem-like" id="lemma-15"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.23</span>
+<span class="type">Lemma</span> <span class="codenumber">3.23</span>
 </h6>
 <p id="p-400">If \(j \ge -d\) then</p>
 <div class="displaymath">
@@ -1136,7 +1137,7 @@ f= (\varpi_v^n)
 <p>as \(c_n \ne 1\text{.}\)</p></article></div>
 <p id="p-402">So finitely many are non-zero.</p>
 <article class="theorem-like" id="lemma-16"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.24</span>
+<span class="type">Lemma</span> <span class="codenumber">3.24</span>
 </h6>
 <p id="p-403">\(- n - d \lt j \lt -d\) then</p>
 <div class="displaymath">
@@ -1180,7 +1181,7 @@ G(c_n) = \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(a\varpi^{-d-n})) c_n(a)
 </div>
 <p>is a Gauss-sum for \(c_n\text{,}\) with \(|G(c_n)| = N(f)^{1/2}\text{.}\)</p>
 <article class="theorem-like" id="corollary-5"><h6 class="heading">
-<span class="type">Corollary</span><span class="codenumber">3.25</span>
+<span class="type">Corollary</span> <span class="codenumber">3.25</span>
 </h6>
 <div class="displaymath" id="p-406">
 \begin{equation*}
@@ -1205,7 +1206,7 @@ G(c_n) = \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(a\varpi^{-d-n})) c_n(a)
 \end{equation*}
 </div>
 <article class="definition-like" id="definition-19"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.26</span>
+<span class="type">Definition</span> <span class="codenumber">3.26</span>
 </h6>
 <p id="p-410">A family of \(\zeta\)-integrals for each \(|\cdot |^s \chi_v\)</p>
 <div class="displaymath">
@@ -1223,7 +1224,7 @@ Z(s,\chi_v, f_v, \psi_v) = \int_{K_v\units} f(\alpha) \chi_v(\alpha) |\alpha|^s 
 Z \colon \mathcal S(K_v\units) \to \CC\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="remark-22"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">3.27</span>
+<span class="type">Remark</span> <span class="codenumber">3.27</span>
 </h6>
 <p id="p-411">The interesting part of this integral is when \(\alpha\) is close to 0.</p></article><p id="p-412">To study this around 0</p>
 <div class="displaymath">
@@ -1294,10 +1295,10 @@ K_v       \amp |\cdot|^s \chi_v \text{ ur} \amp (1- \chi_v( \varpi_v)/q_v^s)\inv
 K_v       \amp |\cdot|^s \chi_v \text{ ram}\amp 1\\
 \end{array}
 \end{equation*}
-</div></section><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type" alt="Subsubsection 3.1.6 \(\epsilon\)-factors">
-<span class="type">Subsubsection</span><span class="codenumber">3.1.6</span><span class="title">\(\epsilon\)-factors</span>
+</div></section><section class="subsubsection" id="subsubsection-16"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.1.6</span> <span class="title">\(\epsilon\)-factors</span>
 </h4>
-<article class="aside-like" id="aside-21"><p id="p-417">Lecture 21 17/4/2018</p></article><p id="p-418">Last time we looked at \(L\)-factors,</p>
+<aside class="aside-like" id="aside-21"><p id="p-417">Lecture 21 17/4/2018</p></aside><p id="p-418">Last time we looked at \(L\)-factors,</p>
 <div class="displaymath">
 \begin{equation*}
 Z(s,f,\chi)
@@ -1306,7 +1307,7 @@ Z(s,f,\chi)
 <p>for \(\chi\)  a multiplicative character and \(f \in \mathcal S (K_v)\text{.}\)</p>
 <p id="p-419">Let \(\psi_v\colon K_v \to \CC\) be an additive character.</p>
 <article class="definition-like" id="definition-20"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.28</span><span class="title">\(\epsilon\)-factors</span>
+<span class="type">Definition</span> <span class="codenumber">3.28</span> <span class="title">\(\epsilon\)-factors</span>
 </h6>
 <p id="p-420">The \(\epsilon\)-factor is defined to be</p>
 <div class="displaymath">
@@ -1314,11 +1315,11 @@ Z(s,f,\chi)
 \frac{Z(1-s, \hat f ,  \chi \inv)}{L(1-s, \chi \inv)} = \epsilon(s,\chi, \psi_v) \frac{Z(s,f,\chi)}{L(s,\chi)}\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="note-15"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">3.29</span>
+<span class="type">Note</span> <span class="codenumber">3.29</span>
 </h6>
 <p id="p-421">This is related to  \(\rho(c) \inv\) in Tate's notation.</p>
 <p id="p-422">Tate's normalization of the additive character \(\psi_v\) is such that \(\psi_v( \cdots) = \Lambda(\cdots)\text{.}\)</p></article><article class="definition-like" id="definition-21"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.30</span>
+<span class="type">Definition</span> <span class="codenumber">3.30</span>
 </h6>
 <p id="p-423">The <dfn class="terminology">root number</dfn> is</p>
 <div class="displaymath">
@@ -1338,11 +1339,11 @@ K_v       \amp |\cdot|^s                   \amp  N(D_v)^{\frac12-\epsilon}\amp  
 K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\chi)/N(f)^{\frac12})\amp 1/(G(\chi)/N(f)^{\frac12})\amp (G(\chi)/N(f)^{\frac12})\\
 \end{array}
 \end{equation*}
-</div></section></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type" alt="Subsection 3.2 Global theory">
-<span class="type">Subsection</span><span class="codenumber">3.2</span><span class="title">Global theory</span>
+</div></section></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2</span> <span class="title">Global theory</span>
 </h3>
-<section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type" alt="Subsubsection 3.2.1 Adeles, Ideles">
-<span class="type">Subsubsection</span><span class="codenumber">3.2.1</span><span class="title">Adeles, Ideles</span>
+<section class="subsubsection" id="subsubsection-17"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.2.1</span> <span class="title">Adeles, Ideles</span>
 </h4>
 <p id="p-425">First, some notation (restricted direct product)</p>
 <div class="displaymath">
@@ -1375,7 +1376,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 <p>for \(S\) any finite set of places containing \(v | \infty\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-26"><h5 class="heading"><span class="title">Characters</span></h5>
 <article class="theorem-like" id="lemma-17"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.31</span>
+<span class="type">Lemma</span> <span class="codenumber">3.31</span>
 </h6>
 <p id="p-426">Let</p>
 <div class="displaymath">
@@ -1404,7 +1405,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 <p>since the image is a subgroup \(\subseteq U\text{.}\)</p></article></div>
 <p id="p-428">From now on we will simply write \(\adeles = \adeles_K\text{.}\)</p>
 <article class="theorem-like" id="lemma-18"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.32</span>
+<span class="type">Lemma</span> <span class="codenumber">3.32</span>
 </h6>
 <div class="displaymath" id="p-429">
 \begin{equation*}
@@ -1430,7 +1431,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 \end{equation*}
 </div>
 <article class="theorem-like" id="lemma-19"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.33</span>
+<span class="type">Lemma</span> <span class="codenumber">3.33</span>
 </h6>
 <p id="p-433">Let \(\alpha \in \adeles\) then we get a map</p>
 <div class="displaymath">
@@ -1455,7 +1456,7 @@ x\mapsto \alpha x\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="proposition-8"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">3.34</span>
+<span class="type">Proposition</span> <span class="codenumber">3.34</span>
 </h6>
 <p id="p-435">We have \(K \hookrightarrow \adeles_K\text{.}\)</p>
 <ol class="decimal">
@@ -1499,7 +1500,7 @@ K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
 <p>Tate refers to this as “Riemann-Roch”. This is due to the case where \(K = \FF_q(T)\) and \(K(\PP^1)\text{,}\) \(f = \chi_{\ints_K}\text{.}\) There is some Serre duality involved.</p></article><article class="paragraphs" id="paragraphs-28"><h5 class="heading"><span class="title">Ideles</span></h5>
 <p id="p-438">Our goal is now to understand \(K\units \hookrightarrow \adeles\units_K\text{.}\)</p>
 <article class="theorem-like" id="theorem-20"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">3.35</span><span class="title">Product formula</span>
+<span class="type">Theorem</span> <span class="codenumber">3.35</span> <span class="title">Product formula</span>
 </h6>
 <div class="displaymath" id="p-439">
 \begin{equation*}
@@ -1544,7 +1545,7 @@ K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
 \int_{\adeles\units} f(\alpha) \diff\units \alpha = \int_0^\infty \int_{\adeles^{\times,1}} f(tb)  \frac{\diff t}{t} \diff b\text{.}
 \end{equation*}
 </div></article><article class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">Multiplicative world</span></h5>
-<article class="aside-like" id="aside-22"><p id="p-444">Lecture 22 19/4/2018</p></article><p id="p-445">Let</p>
+<aside class="aside-like" id="aside-22"><p id="p-444">Lecture 22 19/4/2018</p></aside><p id="p-445">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \adeles^{\times, 1} = \ker(|\cdot|_\adeles \colon \adeles \units \to \CC\units)
@@ -1571,7 +1572,7 @@ l(b ) = (\log |b|_{v_1} , \ldots, \ldots, \log |b|_{v_r})_{v_i\in S_\infty'}\tex
 \end{equation*}
 </div>
 <article class="theorem-like" id="fact-4"><h6 class="heading">
-<span class="type">Fact</span><span class="codenumber">3.36</span>
+<span class="type">Fact</span> <span class="codenumber">3.36</span>
 </h6>
 <p id="p-449">\(l\) is onto and a homomorphism. It vanishes on the global roots of unity, i.e. \(l(b) = 0\) for such.</p></article><div class="displaymath" id="p-450">
 \begin{equation*}
@@ -1586,7 +1587,7 @@ l \colon W \backslash \adeles^{\times, 1} \twoheadrightarrow \RR^r
 </div>
 <p>Where \(r_1\) is  the number of real embeddings, \(r_2\) is half the number of complex embeddings, \(R\) is the regulator of \(K\text{,}\) \(D_K\) is the discriminant of \(K\text{,}\) \(h_K\) the class number, \(W_K\) the number of roots of unity of \(K\text{.}\)</p></article><p id="p-452">1 and 2 give us a fundamental domain.</p>
 <article class="theorem-like" id="lemma-20"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">3.37</span>
+<span class="type">Lemma</span> <span class="codenumber">3.37</span>
 </h6>
 <div class="displaymath" id="p-453">
 \begin{equation*}
@@ -1611,7 +1612,7 @@ P = \left\{ \sum_{v\in S_\infty'} x_v l(\epsilon_v) : 0 \le x_v \lt 1 \right\}
 \mathcal F = \bigsqcup_{b_i} b_i \mathcal F_0\text{.}
 \end{equation*}
 </div></article><article class="definition-like" id="def-hecke-char"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">3.38</span><span class="title">Hecke characters</span>
+<span class="type">Definition</span> <span class="codenumber">3.38</span> <span class="title">Hecke characters</span>
 </h6>
 <p id="p-454">A <dfn class="terminology">Hecke character</dfn> is a continuous map</p>
 <div class="displaymath">
@@ -1619,16 +1620,16 @@ P = \left\{ \sum_{v\in S_\infty'} x_v l(\epsilon_v) : 0 \le x_v \lt 1 \right\}
 K\units \backslash \adeles\units \to \CC \units\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="note-16"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">3.39</span>
+<span class="type">Note</span> <span class="codenumber">3.39</span>
 </h6>
-<p id="p-455">\(|\cdot |_\adeles^s\) is a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> any <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> \(\chi = \chi_0 | \cdot |_\adeles^s\)</p>
+<p id="p-455">\(|\cdot |_\adeles^s\) is a <a knowl="./knowl/def-hecke-char.html" title="Definition 3.38: Hecke characters">Hecke character</a> any <a knowl="./knowl/def-hecke-char.html" title="Definition 3.38: Hecke characters">Hecke character</a> \(\chi = \chi_0 | \cdot |_\adeles^s\)</p>
 <div class="displaymath">
 \begin{equation*}
 \chi_0 \colon K\units \backslash \adeles^{\units,1} \to \CC\units
 \end{equation*}
 </div>
-<p>where \(\Re(s)\) is the exponent.</p></article></section><section class="subsubsection" id="subsubsection-18"><h4 class="heading hide-type" alt="Subsubsection 3.2.2 Main theorem">
-<span class="type">Subsubsection</span><span class="codenumber">3.2.2</span><span class="title">Main theorem</span>
+<p>where \(\Re(s)\) is the exponent.</p></article></section><section class="subsubsection" id="subsubsection-18"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">3.2.2</span> <span class="title">Main theorem</span>
 </h4>
 <p id="p-456">Global \(\zeta\)-functions \(\zeta(f,\chi)\)</p>
 <div class="displaymath">
@@ -1642,7 +1643,7 @@ K\units \backslash \adeles\units \to \CC \units\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-21"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">3.40</span>
+<span class="type">Theorem</span> <span class="codenumber">3.40</span>
 </h6>
 <p id="p-457">\(\zeta\) converges for \(\chi\) with exponent \(\gt 1\) and extends to a meromorphic function of all \(s\in \CC\text{.}\) \(\zeta\) is analytic, unless \(\chi_0 = 1\) (i.e. \(\chi = |\cdot|^s_\adeles\)) in which case it has poles at \(s= 0\) and 1 with residues \(K\hat f(0), -Kf(0)\) respectively for \(\kappa = \mu(K\units \backslash \adeles^{\times,1})\text{.}\) \(\zeta(f,\chi) = \zeta(\hat f , \hat \chi)\) where   \(\hat \chi = \chi\inv |\cdot|\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-46" id="proof-46"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-46" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-458" class="decimal">
 <li id="li-96">
@@ -1720,15 +1721,15 @@ K\units \backslash \adeles\units \to \CC \units\text{.}
 \begin{equation*}
 = \int_1^\infty\zeta_{t} (\hat f, \hat \chi) \frac {\diff t}{t} +  \hat f(0) \kappa \int_0^1 t^{s-1}\frac{\diff t}{t} -  f(0)\kappa\int_0^1 t^s\frac{\diff t}{t}
 \end{equation*}
-</div>the rightmost terms are present only if \(\chi_0 =1\) they come to \(\hat f(0) \kappa/(s-1) - f(0) \kappa/s\text{.}\) This is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> under \(f\mapsto \hat f,\,\chi \mapsto \hat \chi\text{.}\) All together<div class="displaymath">
+</div>the rightmost terms are present only if \(\chi_0 =1\) they come to \(\hat f(0) \kappa/(s-1) - f(0) \kappa/s\text{.}\) This is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> under \(f\mapsto \hat f,\,\chi \mapsto \hat \chi\text{.}\) All together<div class="displaymath">
 \begin{equation*}
 \zeta(f,\chi) = \int_1^\infty \zeta_t(f, \chi) \frac{\diff t}{t} + \int_1^\infty \zeta_t(\hat f , \hat \chi) \frac{\diff t}{t} + \left(\hat f(0) \kappa/(s-1) - f(0) \kappa/s \right)\text{.}
 \end{equation*}
 </div>
 </li>
 </ol></article></div>
-<article class="aside-like" id="aside-23"><p id="p-459">Lecture 23 24/4/2018</p></article><article class="example-like" id="example-11"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">3.41</span><span class="title">Concrete examples</span>
+<aside class="aside-like" id="aside-23"><p id="p-459">Lecture 23 24/4/2018</p></aside><article class="example-like" id="example-11"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.41</span> <span class="title">Concrete examples</span>
 </h6>
 <ol id="p-460" class="decimal">
 <li id="li-98">Let \(K\) be  a number field and \(\chi = |\cdot|_\adeles^s\text{,}\) \(f = \otimes' f_v\) where<div class="displaymath">
@@ -1745,11 +1746,11 @@ f_v = \begin{cases} e^{-\pi x^2} \amp v = \RR\\ e^{-2\pi (x^2 + y^2)}\amp v = \C
 \begin{equation*}
 \infty_2 \colon a+b\sqrt 2 \hookrightarrow a- b\sqrt 2 \in \RR\text{,}
 \end{equation*}
-</div>the units are \(\langle  -1 , 1 +\sqrt 2 \rangle\text{.}\) The <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke characters</a> are then as follows: Let<div class="displaymath">
+</div>the units are \(\langle  -1 , 1 +\sqrt 2 \rangle\text{.}\) The <a knowl="./knowl/def-hecke-char.html" title="Definition 3.38: Hecke characters">Hecke characters</a> are then as follows: Let<div class="displaymath">
 \begin{equation*}
 \chi = \prod \chi_v = |\cdot|_{\infty_1}^{it_{\infty_1}}|\cdot|_{\infty_2}^{it_{\infty_2}}\prod_{v\nmid \infty}|\cdot|_{v}^{it_{v}}
 \end{equation*}
-</div>then for \(\chi\) to be a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> we need \(\chi(a) = 1\) for all \(a  \in K\text{.}\) Let's check this condition on units. \(\chi(-1) = 1\) does not give us an extra condition. \(\chi(1+ \sqrt2 ) = | 1+ \sqrt 2|^{it_1} | 1- \sqrt 2|^{it_2}\) so that<div class="displaymath">
+</div>then for \(\chi\) to be a <a knowl="./knowl/def-hecke-char.html" title="Definition 3.38: Hecke characters">Hecke character</a> we need \(\chi(a) = 1\) for all \(a  \in K\text{.}\) Let's check this condition on units. \(\chi(-1) = 1\) does not give us an extra condition. \(\chi(1+ \sqrt2 ) = | 1+ \sqrt 2|^{it_1} | 1- \sqrt 2|^{it_2}\) so that<div class="displaymath">
 \begin{equation*}
 \chi( \sqrt 2 +  1 ) = 1 \iff t_{\infty_1} - t_{\infty_2} =  \frac{2k \pi}{\log(\sqrt 2 - 1)}
 \end{equation*}
@@ -1762,7 +1763,7 @@ t_{\infty_1} = \frac{-\pi}{\log(\sqrt 2- 1)}
 \begin{equation*}
 t_{\infty_2} = \frac{\pi}{\log(\sqrt 2- 1)}
 \end{equation*}
-</div>once we fix this we can complete uniquely to a <a knowl="./knowl/def-hecke-char.html" knowl-id="xref-def-hecke-char" alt="Definition 3.38 Hecke characters" title="Definition 3.38 Hecke characters">Hecke character</a> \(\chi\text{.}\) Let's consider the \(\zeta\)-functions now.<div class="displaymath">
+</div>once we fix this we can complete uniquely to a <a knowl="./knowl/def-hecke-char.html" title="Definition 3.38: Hecke characters">Hecke character</a> \(\chi\text{.}\) Let's consider the \(\zeta\)-functions now.<div class="displaymath">
 \begin{equation*}
 \zeta(f,\chi) = \pi^{-(s+it_{\infty_1})/2}\pi^{-(s-it_{\infty_2})/2} \Gamma\left(\frac{s+it_{\infty_1}}{2}\right)\Gamma\left(\frac{s-it_{\infty_2}}{2}\right) \frac{1}{\sqrt 8} \overbrace{L(s,\chi)}^{\prod_{v\nmid \infty}(1- \chi(\varpi_v)/q^s)}
 \end{equation*}
@@ -1784,7 +1785,7 @@ t_{\infty_2} = \frac{\pi}{\log(\sqrt 2- 1)}
 </li>
 </ol></article></section></section></section></div></main>
 </div>
-<!--Start: Google code--><script type="text/javascript">
+<!--Start: Google code--><script>
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-48250536-1']);
 _gaq.push(['_trackPageview']);

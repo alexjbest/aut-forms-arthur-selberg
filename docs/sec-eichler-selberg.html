@@ -11,7 +11,7 @@
 <title>AFAS The Eichler-Selberg trace formula</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
 MathJax.Hub.Config({
     tex2jax: {
@@ -42,10 +42,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
@@ -246,16 +246,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-aut-forms-motivation.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-tates-thesis.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-aut-forms-motivation.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-tates-thesis.html" title="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-aut-forms-motivation.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec-tates-thesis.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-aut-forms-motivation.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-tates-thesis.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
+<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span> <span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
 <ul>
 <li><a href="sec-aut-forms-motivation.html#subsection-1" data-scroll="subsection-1">Goal</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-2" data-scroll="subsection-2">Motivation</a></li>
@@ -269,38 +269,39 @@ MathJax.Hub.Config({
 <li><a href="sec-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link active"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<h2 class="link active"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span> <span class="title">The Eichler-Selberg trace formula</span></a></h2>
 <ul>
 <li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
 <li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
 </ul>
-<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
+<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span> <span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
 <ul>
 <li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li>
 <li><a href="sec-tates-thesis.html#subsection-15" data-scroll="subsection-15">Global theory</a></li>
 </ul>
-<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span></a></h2>
-<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-eichler-selberg"><h2 class="heading hide-type" alt="Section 2 The Eichler-Selberg trace formula">
-<span class="type">Section</span><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span>
+<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span> <span class="title">\(\GL_2\) (and up)</span></a></h2>
+<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-eichler-selberg"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2</span> <span class="title">The Eichler-Selberg trace formula</span>
 </h2>
-<a href="sec-eichler-selberg.html" class="permalink">¶</a><section class="subsection" id="subsection-12"><h3 class="heading hide-type" alt="Subsection 2.1 The OG approach">
-<span class="type">Subsection</span><span class="codenumber">2.1</span><span class="title">The OG approach</span>
+<a href="sec-eichler-selberg.html" class="permalink">¶</a><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1</span> <span class="title">The OG approach</span>
 </h3>
-<article class="aside-like" id="aside-12"><p id="p-251">Lecture 12 15/3/2018</p></article><p id="p-252">What does it do? It calculates the <em class="emphasis">trace</em> of the \(m\)th Hecke operator \(T(m)\) on \(S_k\) the space of holomorphic <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> of weight \(k\) level 1.</p>
+<aside class="aside-like" id="aside-12"><p id="p-251">Lecture 12 15/3/2018</p></aside><p id="p-252">What does it do? It calculates the <em class="emphasis">trace</em> of the \(m\)th Hecke operator \(T(m)\) on \(S_k\) the space of holomorphic <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular forms</a> of weight \(k\) level 1.</p>
 <p id="p-253">Input \(m \in \ZZ_{\ge 0}\text{,}\) \(k\) weight.</p>
 <article class="remark-like" id="remark-18"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">2.1</span>
+<span class="type">Remark</span> <span class="codenumber">2.1</span>
 </h6>
 <p id="p-254">It is more general, there is an  (Eichler-)Selberg trace formula for general level \(N\text{.}\)</p>
-<p id="p-255">Even more generally there is a Selberg trace formula for <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a> of arbitrary level.</p>
+<p id="p-255">Even more generally there is a Selberg trace formula for <a knowl="./knowl/def-maass-form.html" title="Definition 1.50: Maass forms">Maass forms</a> of arbitrary level.</p>
 <p id="p-256">Even more general Arthur-Selberg trace formula for automorphic representations on any group.</p></article><p id="p-257">Recall</p>
 <div class="displaymath">
 \begin{equation*}
 T(m) f(z) =  m^{k-1} \sum_{ad=m,\, b \pmod d} d^{-k} f\left(\frac {az+b}{d} \right)
 \end{equation*}
 </div>
-<p>\(S_k\)  <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a> of weight \(k\ge 2\) even level 1.</p>
+<p>\(S_k\)  <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp forms</a> of weight \(k\ge 2\) even level 1.</p>
 <div class="displaymath">
 \begin{equation*}
 \trace_{S_k} T(m) = -\frac12 \sum_{t\in \ZZ,\,t^2 - 4m \lt 0} P_k(t,m) H(4 m -t^2)
@@ -326,7 +327,7 @@ P_k(t,m) = \frac{\rho^k - \bar \rho^k}{\rho - \bar\rho}
 <p>each one counted with multiplicity 1 unless it is equivalent to \(x^2+y^2 \to \frac 12\text{,}\) \(x^2+xy+y^2 \to \frac 13\) We will prove this and examine some consequences.</p>
 <p id="p-258">How would we calculate terms in this? It can be hard, the Hurwitz class number requires \(\sqrt D\) time for \(N = f^2D\text{,}\) \(D\) a fundamental discriminant. To get the trace we can integrate \(\int K(x,x)\) for the kernel which gives us \(T(m)\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">Towards the trace formula</span></h5>
-<p id="p-259">We will follow Zagier: <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">Modular forms</a> whose coefficients are Dirichlet series.</p>
+<p id="p-259">We will follow Zagier: <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">Modular forms</a> whose coefficients are Dirichlet series.</p>
 <p id="p-260">Normalization: Let \(\{f_1, \ldots, f_r\}\) be a basis for \(S_k\text{.}\) We will assume that they are all Hecke eigenfunctions and they are normalized by \(a_1^i = 1\) (Hecke normalized).</p>
 <div class="displaymath">
 \begin{equation*}
@@ -334,7 +335,7 @@ f_i(z)  = \sum_{i=1}^\infty a_n^i e(nx)
 \end{equation*}
 </div>
 <article class="remark-like" id="note-10"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">2.2</span>
+<span class="type">Note</span> <span class="codenumber">2.2</span>
 </h6>
 <p id="p-261">\(f_i\)s are pairwise orthogonal with respect to \(\pair{-}{-}_{\Pet}\)</p>
 <div class="displaymath">
@@ -359,7 +360,7 @@ f_i(z)  = \sum_{i=1}^\infty a_n^i e(nx)
 \end{equation*}
 </div></article></article><article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">Kernel function</span></h5>
 <article class="theorem-like" id="theorem-11"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">2.3</span>
+<span class="type">Theorem</span> <span class="codenumber">2.3</span>
 </h6>
 <p id="p-262">\(T(m)\) is an integral operator with the kernel</p>
 <div class="displaymath">
@@ -367,7 +368,7 @@ f_i(z)  = \sum_{i=1}^\infty a_n^i e(nx)
 h_m(z,z') = \sum_{ad-bc = m }\frac{1}{(czz' + dz' + az+ b)^k} = \frac{1}{(cz+d)^k} \frac{1}{z' + \left(\frac{az+b}{cz+d}\right)^k}\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="note-11"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">2.4</span>
+<span class="type">Note</span> <span class="codenumber">2.4</span>
 </h6>
 <p id="p-263">Let's set \(j_k(\gamma,z) = (cz+d)^{-k}\text{,}\)</p>
 <div class="displaymath">
@@ -402,7 +403,7 @@ f\ast h_1( z') = \int_{\Gamma \backslash \HH} f(z)  \overline{h_1(z,-\bar z')} y
 \int_{\Gamma \backslash\HH} f(z) \left\{ \sum_{\gamma} j_k(\gamma,z) (-z' + \gamma z)^{-k} \right\} y^k \diff \mu(y)
 \end{equation*}
 </div>
-<p>\(f\) is  a <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular form</a> of weight \(k\) implies</p>
+<p>\(f\) is  a <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular form</a> of weight \(k\) implies</p>
 <div class="displaymath">
 \begin{equation*}
 f(\gamma z) = (cz+d)^k  f(z)
@@ -468,7 +469,7 @@ f(\gamma z) = (cz+d)^k  f(z)
 \end{equation*}
 </div></article></div>
 <article class="theorem-like" id="corollary-2"><h6 class="heading">
-<span class="type">Corollary</span><span class="codenumber">2.5</span>
+<span class="type">Corollary</span> <span class="codenumber">2.5</span>
 </h6>
 <div class="displaymath" id="p-265">
 \begin{equation*}
@@ -480,7 +481,7 @@ c_k\inv m^{k-1} h_m(z,z') = \sum_{i=1}^r \frac{a^i_m}{\pair{f_i}{f_i}_\Pet} f_i(
 \begin{equation*}
 \trace(T_m) = \frac{c_k\inv}{m^{k-1}} \int_{\Gamma\backslash \HH} h_m(z,\bar z)\Im(z)^k \frac{\diff x \diff y}{y^2}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-266">Expand \(h_m(z,z')\) with respect to \(\{f_1, \ldots, f_r\}\text{.}\) \(h_m(z,z')\) is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> in both variables, we will show this later!</p>
+</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-266">Expand \(h_m(z,z')\) with respect to \(\{f_1, \ldots, f_r\}\text{.}\) \(h_m(z,z')\) is a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> in both variables, we will show this later!</p>
 <div class="displaymath">
 \begin{equation*}
 h_m(z,z') = \sum_{1\le i,j\le r} \alpha_{i,j} f_i(z) f_j(z'),\, \alpha_{i,j} \in \CC
@@ -493,7 +494,7 @@ h_m(z,z') = \sum_{1\le i,j\le r} \alpha_{i,j} f_i(z) f_j(z'),\, \alpha_{i,j} \in
 \end{equation*}
 </div>
 <p>let's apply this to \(f_{i_0}\) for any \(i_0\) .. Next time.</p></article></div>
-<article class="aside-like" id="aside-13"><p id="p-267">Lecture 13 20/3/2018</p></article><p id="p-268">Summary:</p>
+<aside class="aside-like" id="aside-13"><p id="p-267">Lecture 13 20/3/2018</p></aside><p id="p-268">Summary:</p>
 <p id="p-269">Aim: to establish the Eichler-Selberg trace formula for  the trace of \(T_m \acts S_k\text{,}\) for \(T_m\)  the \(m\)th Hecke operator</p>
 <div class="displaymath">
 \begin{equation*}
@@ -518,7 +519,7 @@ h_m(z,z') = \sum_{ad-bc = m }(czz' + dz' + az+ b)^{-k}
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-12"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">2.6</span><span class="title">Petersson</span>
+<span class="type">Theorem</span> <span class="codenumber">2.6</span> <span class="title">Petersson</span>
 </h6>
 <p id="p-271">Let \(c_k = \frac{(-1)^{k/2} \pi}{2^{k-3} (k-1)}\text{.}\)</p>
 <ol class="decimal">
@@ -599,7 +600,7 @@ c_k\inv m^{k-1} h_m(z,z')  = \sum_{j=1}^{\dim(S_k)} \frac {\alpha_j (z')}{\pair{
 \begin{equation}
 c_k\inv m^{k-1} \pair{f_k}{h(\cdot, z')}_\Pet =  T_m(f_k)(z') = a_k(m) f_k(z')\label{eqn-pet-proof-2}\tag{2.3}
 \end{equation}
-</div>as \(f_k\) is an eigenform. On the other hand by <a knowl="./knowl/eqn-pet-proof-1.html" knowl-id="xref-eqn-pet-proof-1" alt="Equation 2.2 " title="Equation 2.2 ">(2.2)</a><div class="displaymath">
+</div>as \(f_k\) is an eigenform. On the other hand by <a knowl="./knowl/eqn-pet-proof-1.html" title="Equation 2.2">(2.2)</a><div class="displaymath">
 \begin{equation*}
 c_k\inv m^{k-1} \pair{f_k}{h_m(\cdot, -\bar z ')} = c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \pair{f_k}{\frac{\alpha_j(-\bar z ') f_j}{\pair{f_j}{f_j}_{\Pet}}}_{\Pet}
 \end{equation*}
@@ -613,7 +614,7 @@ c_k\inv m^{k-1} \pair{f_k}{h_m(\cdot, -\bar z ')} = c_k\inv m^{k-1} \sum_{j=1}^{
 \begin{equation*}
 = c_k\inv m^{k-1} \sum_{j=1}^{\dim S_k} \overline{\alpha_j(-\bar z ')} \frac{\pair{f_k}{f_k}_{\Pet}}{\pair{f_k}{f_k}_{\Pet}}
 \end{equation*}
-</div>combined with <a knowl="./knowl/eqn-pet-proof-2.html" knowl-id="xref-eqn-pet-proof-2" alt="Equation 2.3 " title="Equation 2.3 ">(2.3)</a> this implies<div class="displaymath">
+</div>combined with <a knowl="./knowl/eqn-pet-proof-2.html" title="Equation 2.3">(2.3)</a> this implies<div class="displaymath">
 \begin{equation*}
 a_k(m) \overline{f_k(z')} =  c_k\inv m^{k-1}\alpha_k(-\bar z')
 \end{equation*}
@@ -643,7 +644,7 @@ c_k\inv m^{k-1} h_m(z,z') = \sum_{j=1}^{\dim S_k} \frac{a_j(m)}{\pair{f_j}{f_j}_
 </li>
 </ol></article></div>
 <article class="theorem-like" id="corollary-3"><h6 class="heading">
-<span class="type">Corollary</span><span class="codenumber">2.7</span>
+<span class="type">Corollary</span> <span class="codenumber">2.7</span>
 </h6>
 <div class="displaymath" id="p-273">
 \begin{equation*}
@@ -659,8 +660,8 @@ c_k\inv m^{k-1} \int_{\Gamma\backslash \HH} h_m( z, - \bar z') y^k \diff \mu(z) 
 = \sum_{j=1}^{\dim(S_k)} a_j(m) \frac{\pair{f_j}{f_j}_\Pet}{\pair{f_j}{f_j}_\Pet}  = \trace(T(m))\text{.}
 \end{equation*}
 </div></article></div>
-<p id="p-275">Subtle point (in general): This integral converges, and gives a manageable expression.</p></article></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type" alt="Subsection 2.2 Zagier's approach">
-<span class="type">Subsection</span><span class="codenumber">2.2</span><span class="title">Zagier's approach</span>
+<p id="p-275">Subtle point (in general): This integral converges, and gives a manageable expression.</p></article></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2</span> <span class="title">Zagier's approach</span>
 </h3>
 <div class="displaymath" id="p-276">
 \begin{equation*}
@@ -674,7 +675,7 @@ I(s) = \int_{\Gamma\backslash \HH} h_m(z,-\bar z')  E(z; s) y^k \diff \mu(z)
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-13"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">2.8</span>
+<span class="type">Theorem</span> <span class="codenumber">2.8</span>
 </h6>
 <ol id="p-277" class="decimal">
 <li id="li-50">\(I(s)\) is absolutely convergent for \(\Re(s) \gt 1\text{.}\)</li>
@@ -684,7 +685,7 @@ I(s) = \int_{\Gamma\backslash \HH} h_m(z,-\bar z')  E(z; s) y^k \diff \mu(z)
 I(s) = \sum_{\Delta \ne 0} \zeta(s,\Delta) \{\text{archimidean}\}+ \zeta(s,0) \{\text{archimidean}\} +   \frac { (-1)^{k/2}\Gamma(s+ k -1)\zeta(s)\zeta(2s)}{(2\pi)^{s-1}\Gamma(k)}
 \end{equation*}
 </div>\(\zeta(s, \Delta)\) is a cousin of \(\zeta_\Delta(s) = \sum_{I_k} \frac{1}{N(I_k)^s}\) for \(K = \QQ(\sqrt{-\Delta})\text{.}\)</li>
-</ol></article><article class="aside-like" id="aside-14"><p id="p-278">Lecture 14 22/3/2018</p></article><article class="paragraphs" id="paragraphs-19"><h5 class="heading"><span class="title">Calculation of  \(I(s)\)</span></h5>
+</ol></article><aside class="aside-like" id="aside-14"><p id="p-278">Lecture 14 22/3/2018</p></aside><article class="paragraphs" id="paragraphs-19"><h5 class="heading"><span class="title">Calculation of  \(I(s)\)</span></h5>
 <p id="p-279">First step:</p>
 <p id="p-280">Recall that there exists a one to one correspondence between (for fixed \(m,t\))</p>
 <div class="displaymath">
@@ -736,7 +737,7 @@ R_\phi(z,t) = \frac{y^k}{(a|z|^2 + bx + c - ity)^k}\text{.}
 </div>
 <p>Exercise: substitute \(a=  \frac 12 (t-b), b=  -c , c = a, d= \frac12 (t+b)\text{.}\)</p>
 <article class="theorem-like" id="proposition-4"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">2.9</span>
+<span class="type">Proposition</span> <span class="codenumber">2.9</span>
 </h6>
 <p id="p-281">For \(s\in \CC\) s.t. \(2-k \lt \Re(s) \lt k- 1\)</p>
 <div class="displaymath">
@@ -744,7 +745,7 @@ R_\phi(z,t) = \frac{y^k}{(a|z|^2 + bx + c - ity)^k}\text{.}
 \sum_{t\in \ZZ}\int_{\Gamma\backslash \HH} |E(z; s)|\left| \sum_{|\phi| = t^2 - 4m } R_\phi(z,t) \right| \diff \mu(z) \lt \infty
 \end{equation*}
 </div></article><article class="remark-like" id="remark-19"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">2.10</span>
+<span class="type">Remark</span> <span class="codenumber">2.10</span>
 </h6>
 <p id="p-282">It will turn out that the \(t\)-sum is finite.</p></article><p id="p-283">Recall that \(\SL_2(\ZZ)\) acts on binary quadratic forms \(\Phi\) by</p>
 <div class="displaymath">
@@ -753,7 +754,7 @@ R_\phi(z,t) = \frac{y^k}{(a|z|^2 + bx + c - ity)^k}\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-14"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">2.11</span><span class="title">Geometric side of the Eichler-Selberg trace  formula</span>
+<span class="type">Theorem</span> <span class="codenumber">2.11</span> <span class="title">Geometric side of the Eichler-Selberg trace  formula</span>
 </h6>
 <p id="p-284">For \(t,m\) fixed</p>
 <div class="displaymath">
@@ -788,7 +789,7 @@ I(\Delta, t, s) = \int_0^\infty  \int_{-\infty}^\infty \frac{y^{k+s - 2}}{(x^2 +
 = \frac{\Gamma(k- \frac 12)\Gamma(\frac 12)}{\Gamma(k)} \int_0^\infty \frac{y^{k+s -2}}{(y^2 + ity - \frac14 \Delta)^{k-\frac 12}} \diff y\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="remark-20"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">2.12</span>
+<span class="type">Remark</span> <span class="codenumber">2.12</span>
 </h6>
 <p id="p-286">If \(\Delta = \disc(K/\QQ)\) then</p>
 <div class="displaymath">
@@ -802,8 +803,8 @@ I(\Delta, t, s) = \int_0^\infty  \int_{-\infty}^\infty \frac{y^{k+s - 2}}{(x^2 +
 \sum_t\Res_{s= 1} \zeta_K(s)
 \end{equation*}
 </div>
-<p>where \(K = \QQ(\sqrt{t^2 - 4m})\text{.}\)</p></article><article class="aside-like" id="aside-15"><p id="p-288">Lecture 15 27/3/2018</p></article><article class="theorem-like" id="proposition-5"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">2.13</span>
+<p>where \(K = \QQ(\sqrt{t^2 - 4m})\text{.}\)</p></article><aside class="aside-like" id="aside-15"><p id="p-288">Lecture 15 27/3/2018</p></aside><article class="theorem-like" id="proposition-5"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.13</span>
 </h6>
 <p id="p-289">Let \(\zeta(s, \Delta)\) be as above and \(\Re(s) \gt 1\text{.}\) Then</p>
 <ol class="decimal">
@@ -898,13 +899,13 @@ n(a) = \#\{\phi \in \Phi ,\,(m,n) \in \ZZ^2 :  \phi(m,n) = 0, |\phi| = \Delta,\,
 = \sum_{x\in X/\Gamma} \sum_{\phi\in \Phi_\Delta/\Aut(x)} \frac{1}{\pair{\phi}{x}^s}\label{eqn-zeta-delta-calc}\tag{2.4}
 \end{equation}
 </div>
-<p>we are using Fubini to swap the order of summation as the pairing is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a>. Finally note that</p>
+<p>we are using Fubini to swap the order of summation as the pairing is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a>. Finally note that</p>
 <div class="displaymath">
 \begin{equation*}
 x= \pm(m,n)\sim_{\Gamma} \pm(0,\gcd(m,n)),\, r = \gcd(m,n) \gt 0
 \end{equation*}
 </div>
-<p>so <a knowl="./knowl/eqn-zeta-delta-calc.html" knowl-id="xref-eqn-zeta-delta-calc" alt="Equation 2.4 " title="Equation 2.4 ">(2.4)</a></p>
+<p>so <a knowl="./knowl/eqn-zeta-delta-calc.html" title="Equation 2.4">(2.4)</a></p>
 <div class="displaymath">
 \begin{equation*}
 = \sum_{r= 1}^\infty \sum_{\phi \in \Phi_\Delta/\Aut((r,0))} \frac{1}{\phi(r,0)^s}
@@ -926,7 +927,7 @@ x= \pm(m,n)\sim_{\Gamma} \pm(0,\gcd(m,n)),\, r = \gcd(m,n) \gt 0
 </li></ol></article></div>
 <p id="p-296">Back to the proof of the trace formula.</p>
 <article class="theorem-like" id="lemma-6"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">2.14</span>
+<span class="type">Lemma</span> <span class="codenumber">2.14</span>
 </h6>
 <p id="p-297">Let \(k \in \ZZ_{\gt 2},\,k\equiv 0 \pmod 2,\,\Delta \in \ZZ,\,\Delta \equiv 0,1 \pmod4,\,t\in \RR\) s.t. \(t^2 \gt \Delta\text{.}\) For each \(\phi \in \Phi_\Delta\) let</p>
 <div class="displaymath">
@@ -993,7 +994,7 @@ R_{-\phi} (z,t) = R_\phi(z,-t)
 </ol></article></div>
 <p id="p-299">We really need to check some convergence here, but lets instead use the trace formula for something useful, to determine its value.</p></article><article class="paragraphs" id="paragraphs-20"><h5 class="heading"><span class="title">Application to spaces of modular forms</span></h5>
 <article class="theorem-like" id="theorem-15"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">2.15</span>
+<span class="type">Theorem</span> <span class="codenumber">2.15</span>
 </h6>
 <div class="displaymath" id="p-300">
 \begin{equation*}
@@ -1085,16 +1086,16 @@ H(4) = \frac{1}{2}
 <td class="l m b0 r0 l0 t0 lines">\((k-1)   \)</td>
 </tr>
 </table>
-<figcaption><span class="type">Table</span><span class="codenumber">2.16</span>Values of \(P_k(t,1)\text{.}\)</figcaption></figure><p id="p-302">Now if \(k \equiv 0\pmod{12}\)</p>
+<figcaption><span class="type">Table</span> <span class="codenumber">2.16</span> Values of \(P_k(t,1)\text{.}\)</figcaption></figure><p id="p-302">Now if \(k \equiv 0\pmod{12}\)</p>
 <div class="displaymath">
 \begin{equation*}
 -\left( \frac{-1}{4} - \frac {1}{3} - \frac{k-1}{12}\right) - \frac12 = \frac{k}{12} = \left\lfloor \frac{k}{12}\right \rfloor= \cdots\text{.}
 \end{equation*}
 </div></article></div></article><article class="paragraphs" id="paragraphs-21"><h5 class="heading"><span class="title">Another application: Equidistribution of Hecke eigenvalues.</span></h5>
-<article class="aside-like" id="aside-16"><p id="p-303">Lecture 16 29/3/2018</p></article><p id="p-304">Following Serre '97, very readable article.</p>
+<aside class="aside-like" id="aside-16"><p id="p-303">Lecture 16 29/3/2018</p></aside><p id="p-304">Following Serre '97, very readable article.</p>
 <p id="p-305">Equidistribution:</p>
 <article class="definition-like" id="definition-13"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">2.17</span>
+<span class="type">Definition</span> <span class="codenumber">2.17</span>
 </h6>
 <p id="p-306">Let \((\Omega, \mu)\) be a measure space</p>
 <div class="displaymath">
@@ -1112,14 +1113,14 @@ H(4) = \frac{1}{2}
 \int_\Omega \diff \mu  = 1
 \end{equation*}
 </div></article><article class="example-like" id="example-9"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">2.18</span>
+<span class="type">Example</span> <span class="codenumber">2.18</span>
 </h6>
 <div class="displaymath" id="p-307">
 \begin{equation*}
 [-1,1],\,\frac{\diff x}{2} = \diff \mu
 \end{equation*}
 </div></article><article class="remark-like" id="note-12"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">2.19</span>
+<span class="type">Note</span> <span class="codenumber">2.19</span>
 </h6>
 <p id="p-308">\(\mu\) gives a linear functional.</p>
 <div class="displaymath">
@@ -1133,7 +1134,7 @@ f\mapsto \int_\Omega f(x) \diff \mu(x)\text{,}
 \pair{f}{\mu}\text{.}
 \end{equation*}
 </div></article><article class="definition-like" id="definition-14"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">2.20</span><span class="title">\(\delta\) measures</span>
+<span class="type">Definition</span> <span class="codenumber">2.20</span> <span class="title">\(\delta\) measures</span>
 </h6>
 <p id="p-309">Let \(L\) be a sequence of indices, going to \(\infty\) (this will be the indexing set for the weight \(k\)). For \(\lambda \in L\) let \(I_\lambda\) be a  non-empty finite set of cardinality</p>
 <div class="displaymath">
@@ -1179,7 +1180,7 @@ H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
 </div>
 <p>whose eigenvalues are in \(\Omega\text{.}\) And \(I_\lambda = \{ 1,2,\ldots, d_\lambda\}\text{,}\) \(\mathbf X_\lambda = \{x_{1,\lambda}, \ldots, x_{d_\lambda,\lambda}\}\) the eigenvalues of \(H_\lambda\) suitably normalised counted with multiplicity.</p>
 <article class="theorem-like" id="proposition-6"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">2.21</span>
+<span class="type">Proposition</span> <span class="codenumber">2.21</span>
 </h6>
 <p id="p-314">TFAE</p>
 <ol class="decimal">
@@ -1194,7 +1195,7 @@ H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
 \end{equation}
 </div>
 </li>
-<li id="li-66">For all \(m \in \ZZ_{\ge 0}\) there exists a polynomial \(P\) of degree \(m\) s.t. <a knowl="./knowl/eqn-equidist-poly.html" knowl-id="xref-eqn-equidist-poly" alt="Equation 2.5 " title="Equation 2.5 ">(2.5)</a> is satisfied.</li>
+<li id="li-66">For all \(m \in \ZZ_{\ge 0}\) there exists a polynomial \(P\) of degree \(m\) s.t. <a knowl="./knowl/eqn-equidist-poly.html" title="Equation 2.5">(2.5)</a> is satisfied.</li>
 </ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-27" id="proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-315">Exercise.</p></article></div>
 <p id="p-316">Now we will choose a special set of polynomials to work with.</p>
 <p id="p-317">Symmetric polynomials:</p>
@@ -1211,7 +1212,7 @@ X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdot
 \end{equation*}
 </div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-9" id="exercise-9"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">2.22</span>
+<span class="type">Exercise</span> <span class="codenumber">2.22</span>
 </h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-320">Prove this.</p></article></div>
 <p id="p-321">Several measures:</p>
 <ol class="decimal">
@@ -1275,7 +1276,7 @@ f_q(x) = \sum_{n=0}^\infty q^{-n} X_{2n}(x) = \frac{q+1}{(q^{1/2} + q^{-1/2})^2 
 </li>
 </ol>
 <article class="theorem-like" id="theorem-16"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">2.23</span><span class="title">Serre '97</span>
+<span class="type">Theorem</span> <span class="codenumber">2.23</span> <span class="title">Serre '97</span>
 </h6>
 <p id="p-322">\(k \equiv 0 \pmod 2\) let \(s(k) = \dim(S_k(1))\)</p>
 <div class="displaymath">
@@ -1335,8 +1336,8 @@ T_k'(p^m) = X_m(T_k'(p))
 - \frac 12 \sum_{dd' = n,\,d,d' \gt 0} \min(d,d')^{k-1}\label{eqn-serre-equi-3}\tag{2.8}
 \end{gather}
 </div>
-<p id="p-327">Sublemma: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O(n^{k/2})\)</p>
-<p id="p-328">Proof: <a knowl="./knowl/eqn-serre-equi-2.html" knowl-id="xref-eqn-serre-equi-2" alt="Equation 2.7 " title="Equation 2.7 ">(2.7)</a> \(= O_n(\sum_{t^2 \lt 4n} P_k(t,n) )\)</p>
+<p id="p-327">Sublemma: <a knowl="./knowl/eqn-serre-equi-2.html" title="Equation 2.7">(2.7)</a> \(= O(n^{k/2})\)</p>
+<p id="p-328">Proof: <a knowl="./knowl/eqn-serre-equi-2.html" title="Equation 2.7">(2.7)</a> \(= O_n(\sum_{t^2 \lt 4n} P_k(t,n) )\)</p>
 <div class="displaymath">
 \begin{equation*}
 P_k(t,n) = \frac{\rho^{k-1} - \bar \rho^{k-1}}{\rho - \bar \rho},\, \rho = \frac{t + i \sqrt{4n - t^2}}{2}
@@ -1352,10 +1353,10 @@ P_k(t,n) = \frac{\rho^{k-1} - \bar \rho^{k-1}}{\rho - \bar \rho},\, \rho = \frac
 \rho - \bar \rho = \sqrt{n - t^2}
 \end{equation*}
 </div>
-<p id="p-329">Sublemma: <a knowl="./knowl/eqn-serre-equi-3.html" knowl-id="xref-eqn-serre-equi-3" alt="Equation 2.8 " title="Equation 2.8 ">(2.8)</a> \(= O(n^{(k-1)/2})\) Proof: exercise.</p>
+<p id="p-329">Sublemma: <a knowl="./knowl/eqn-serre-equi-3.html" title="Equation 2.8">(2.8)</a> \(= O(n^{(k-1)/2})\) Proof: exercise.</p>
 <p id="p-330">The equations above combined with  the fact \(n^{k-1/2} \to n^{-1/2} \delta_{n=\square}\text{.}\)</p></article></div></article></section></section></div></main>
 </div>
-<!--Start: Google code--><script type="text/javascript">
+<!--Start: Google code--><script>
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-48250536-1']);
 _gaq.push(['_trackPageview']);

@@ -11,7 +11,7 @@
 <title>AFAS Front Matter</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
 MathJax.Hub.Config({
     tex2jax: {
@@ -42,10 +42,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
@@ -246,16 +246,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="aut-forms-arthur-selberg.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-aut-forms-motivation.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="aut-forms-arthur-selberg.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-aut-forms-motivation.html" title="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="aut-forms-arthur-selberg.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec-aut-forms-motivation.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="aut-forms-arthur-selberg.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-aut-forms-motivation.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link active"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
+<h2 class="link"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span> <span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
 <ul>
 <li><a href="sec-aut-forms-motivation.html#subsection-1" data-scroll="subsection-1">Goal</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-2" data-scroll="subsection-2">Motivation</a></li>
@@ -269,28 +269,29 @@ MathJax.Hub.Config({
 <li><a href="sec-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span> <span class="title">The Eichler-Selberg trace formula</span></a></h2>
 <ul>
 <li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
 <li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
 </ul>
-<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
+<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span> <span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
 <ul>
 <li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li>
 <li><a href="sec-tates-thesis.html#subsection-15" data-scroll="subsection-15">Global theory</a></li>
 </ul>
-<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span></a></h2>
-<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="frontmatter" id="frontmatter-1"><h1 class="heading">
+<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span> <span class="title">\(\GL_2\) (and up)</span></a></h2>
+<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="frontmatter" id="frontmatter-1"><h1 class="heading">
 <span class="title">Automorphic forms and the Arthur-Selberg trace formula</span><span class="subtitle">MA842 BU Spring 2018</span>
 </h1>
 <div class="author">
 <div class="author-name">Salim Ali Altuğ</div>
 <div class="author-info"></div>
 </div>
-<time class="date">June 12, 2018</time></section></div></main>
+<div class="date">July 14, 2018</div></section></div></main>
 </div>
-<!--Start: Google code--><script type="text/javascript">
+<!--Start: Google code--><script>
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-48250536-1']);
 _gaq.push(['_trackPageview']);

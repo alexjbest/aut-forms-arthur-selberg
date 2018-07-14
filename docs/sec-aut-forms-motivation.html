@@ -11,7 +11,7 @@
 <title>AFAS Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["Contrib"] = "//cdn.rawgit.com/mathjax/MathJax-third-party-extensions/22087770";
 MathJax.Hub.Config({
     tex2jax: {
@@ -42,10 +42,10 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
@@ -246,16 +246,16 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-eichler-selberg.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-eichler-selberg.html" title="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="sec-eichler-selberg.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="aut-forms-arthur-selberg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-eichler-selberg.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<h2 class="link active"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
+<h2 class="link active"><a href="sec-aut-forms-motivation.html" data-scroll="sec-aut-forms-motivation"><span class="codenumber">1</span> <span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span></a></h2>
 <ul>
 <li><a href="sec-aut-forms-motivation.html#subsection-1" data-scroll="subsection-1">Goal</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-2" data-scroll="subsection-2">Motivation</a></li>
@@ -269,25 +269,26 @@ MathJax.Hub.Config({
 <li><a href="sec-aut-forms-motivation.html#subsection-10" data-scroll="subsection-10">Automorphic forms</a></li>
 <li><a href="sec-aut-forms-motivation.html#subsection-11" data-scroll="subsection-11">Rankin-Selberg method</a></li>
 </ul>
-<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span><span class="title">The Eichler-Selberg trace formula</span></a></h2>
+<h2 class="link"><a href="sec-eichler-selberg.html" data-scroll="sec-eichler-selberg"><span class="codenumber">2</span> <span class="title">The Eichler-Selberg trace formula</span></a></h2>
 <ul>
 <li><a href="sec-eichler-selberg.html#subsection-12" data-scroll="subsection-12">The OG approach</a></li>
 <li><a href="sec-eichler-selberg.html#subsection-13" data-scroll="subsection-13">Zagier's approach</a></li>
 </ul>
-<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span><span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
+<h2 class="link"><a href="sec-tates-thesis.html" data-scroll="sec-tates-thesis"><span class="codenumber">3</span> <span class="title">Tate's Thesis (\(\GL_1\) theory)</span></a></h2>
 <ul>
 <li><a href="sec-tates-thesis.html#subsection-14" data-scroll="subsection-14">Local theory</a></li>
 <li><a href="sec-tates-thesis.html#subsection-15" data-scroll="subsection-15">Global theory</a></li>
 </ul>
-<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span><span class="title">\(\GL_2\) (and up)</span></a></h2>
-<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-aut-forms-motivation"><h2 class="heading hide-type" alt="Section 1 Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))">
-<span class="type">Section</span><span class="codenumber">1</span><span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
+<h2 class="link"><a href="sec-gl2.html" data-scroll="sec-gl2"><span class="codenumber">4</span> <span class="title">\(\GL_2\) (and up)</span></a></h2>
+<ul><li><a href="sec-gl2.html#subsection-16" data-scroll="subsection-16">Change of perspective: Representation theory</a></li></ul></nav><div class="extras"><nav><a class="feedback-link" href="https://github.com/alexjbest/aut-forms-arthur-selberg/issues" target="_blank">Feedback</a><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec-aut-forms-motivation"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1</span> <span class="title">Automorphic forms \(/ \GL_2\) (possibly \(\GL_n\))</span>
 </h2>
-<a href="sec-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><article class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></article><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated June 12, 2018.</p>
+<a href="sec-aut-forms-motivation.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><aside class="aside-like" id="aside-1"><p id="p-1">Lecture 1 18/1/2018</p></aside><p id="p-2">These are notes for Ali Altuğ's course MA842 at BU Spring 2018, they were last updated July 14, 2018.</p>
 <p id="p-3">The course webpage is <a class="url" href="http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html" target="_blank"><code class="code-inline tex2jax_ignore">http://math.bu.edu/people/saaltug/2018_1/2018_1_sem.html</code></a>.</p>
-<p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type" alt="Subsection 1.1 Goal">
-<span class="type">Subsection</span><span class="codenumber">1.1</span><span class="title">Goal</span>
+<p id="p-4">Course overview: This course will be focused on the two papers <a class="url" href="http://people.mpim-bonn.mpg.de/zagier/files/scanned/EisensteinSelberg/fulltext.pdf" target="_blank">Eisenstein Series and the Selberg Trace Formula I</a> by D. Zagier and <a class="url" href="https://www.math.columbia.edu/~hj/EisensteinTrace.pdf" target="_blank">Eisenstein series and the Selberg Trace Formula II</a> by H. Jacquet and D. Zagier. Although the titles of the papers sound like one is a prerequisite of the other it actually is not the case, the main difference is the language of the papers (the first is written in classical language whereas the second is written in adelically). We will spend most of our time with the second paper, which is adelic.</p></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1</span> <span class="title">Goal</span>
 </h3>
 <p id="p-5">Jacquet and Zagier, Eisenstein series and the Selberg Trace Formula II (1980's).</p>
 <p id="p-6">Part I is a paper of Zagier from 1970 in purely classical language. Part II is in adelic language (and somewhat incomplete).</p>
@@ -296,21 +297,21 @@ MathJax.Hub.Config({
 \left( \begin{aligned} \amp\text{Arthur-Selberg} \\ \amp\text{trace formula}\end{aligned}\right) \xleftrightarrow{\text{conjecture}} \left( \begin{aligned} \amp\text{Relative} \\ \amp\text{trace formula}\end{aligned}\right)
 \end{equation*}
 </div>
-<p>the Arthur-Selberg side is used in Langlands functoriality and the Relative is used in arithmetic applications.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type" alt="Subsection 1.2 Motivation">
-<span class="type">Subsection</span><span class="codenumber">1.2</span><span class="title">Motivation</span>
+<p>the Arthur-Selberg side is used in Langlands functoriality and the Relative is used in arithmetic applications.</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2</span> <span class="title">Motivation</span>
 </h3>
 <p id="p-7">What does this paper do?</p>
 <blockquote class="blockquote" id="blockquote-1"><p id="p-8">“It rederives the Selberg trace formula for \(\GL_2\) by a regularised process.”</p></blockquote>
 <article class="remark-like" id="note-1"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.1</span>
+<span class="type">Note</span> <span class="codenumber">1.1</span>
 </h6>
 <ul id="p-9" class="disc">
 <li id="li-1">Selberg trace formula only for \(\GL_2\)</li>
 <li id="li-2">Arthur-Selberg more general</li>
-</ul></article><p id="p-10">The Selberg trace formula generalises the more classical <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> formula.</p>
+</ul></article><p id="p-10">The Selberg trace formula generalises the more classical <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a> formula.</p>
 <article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Poisson summation</span></h5>
 <article class="theorem-like" id="thm-poisson-sum"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.2</span><span class="title">Poisson summation</span>
+<span class="type">Theorem</span> <span class="codenumber">1.2</span> <span class="title">Poisson summation</span>
 </h6>
 <p id="p-11">Let</p>
 <div class="displaymath">
@@ -356,8 +357,8 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 \sum_{\gamma \in \Gamma^\#}\cdots ``="  \sum_{\pi\in ``(G/\Gamma)^{\vee}" } \cdots
 \end{equation*}
 </div>
-<p>relating conjugacy classes on the left to automorphic forms on the right.</p></article><p id="p-15">Arthur and Selberg prove the trace formula by a <em class="emphasis">sharp cut off</em>, Jacquet and Zagier derive this using a regularisation.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type" alt="Subsection 1.3 Motivating example">
-<span class="type">Subsection</span><span class="codenumber">1.3</span><span class="title">Motivating example</span>
+<p>relating conjugacy classes on the left to automorphic forms on the right.</p></article><p id="p-15">Arthur and Selberg prove the trace formula by a <em class="emphasis">sharp cut off</em>, Jacquet and Zagier derive this using a regularisation.</p></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3</span> <span class="title">Motivating example</span>
 </h3>
 <div class="displaymath" id="p-16">
 \begin{equation*}
@@ -366,7 +367,7 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 </div>
 <p>converges absolutely for \(s \gt 1\text{.}\)</p>
 <article class="theorem-like" id="thm-riemann-zeta-continuation"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.3</span><span class="title">Riemann</span>
+<span class="type">Theorem</span> <span class="codenumber">1.3</span> <span class="title">Riemann</span>
 </h6>
 <p id="p-17">\(\zeta(s)\) has analytic continuation up to \(\Re(s) \gt 0\) with a simple pole at \(s=  1\) residue \(1\text{.}\) i.e.</p>
 <div class="displaymath">
@@ -374,7 +375,7 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 \zeta(s) = \frac{1}{s-1} + \phi(s)
 \end{equation*}
 </div>
-<p>where \(\phi(s)\) is holomorphic for \(\Re(s) \gt 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-1" id="proof-1"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-18">Step 1: observe</p>
+<p>where \(\phi(s)\) is holomorphic for \(\Re(s) \gt 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-1" id="proof-1"><h6 class="heading"><span class="title">1</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-18">Step 1: observe</p>
 <div class="displaymath">
 \begin{align*}
 \frac{1}{s-1} \amp= \int_1^\infty t^{-s} \diff t \ \text{(for }\Re(s) \gt 1\text{)}\\
@@ -404,14 +405,14 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 <p>by applying the mean value theorem.</p>
 <p id="p-21">So \(\sum_{n=1}^\infty \phi_n\) converges absolutely. Hence \(\phi = \sum_{n=1}^\infty \phi_n\) is holomorphic</p>
 <p id="p-22">One can push this idea to get analytic continuation to all of \(\CC\text{,}\) one strip at a time. This is an analogue of the sharp cut off method mentioned above. It's fairly elementary but somewhat unmotivated and doesn't give any deep information (like the functional equation).</p></article></div>
-<article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-2" id="proof-2"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-23">Introduce</p>
+<article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-2" id="proof-2"><h6 class="heading"><span class="title">2</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-23">Introduce</p>
 <div class="displaymath">
 \begin{equation*}
 \theta(t) = \sum_{n \in \ZZ} e^{-\pi n^2 t },\,t\gt 0
 \end{equation*}
 </div>
 <p>note that \(\theta(t)  =  1 + 2 \sum_{n=1}^\infty e^{-\pi n^2 t}\text{.}\)</p>
-<p id="p-24">Idea: <a knowl="./knowl/def-mellin-transform.html" knowl-id="xref-def-mellin-transform" alt="Definition 1.66 Mellin transforms" title="Definition 1.66 Mellin transforms">Mellin transform</a> and properties of \(\theta\) to derive properties of \(\zeta\text{.}\)</p>
+<p id="p-24">Idea: <a knowl="./knowl/def-mellin-transform.html" title="Definition 1.66: Mellin transforms">Mellin transform</a> and properties of \(\theta\) to derive properties of \(\zeta\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{\Gamma\left(\frac{s}{2}\right)}{\pi^{s/2}} \frac{1}{ns} = \int_0^\infty e^{-\pi n^2 t} t^{s/2} \frac{\diff t}{t}
@@ -423,7 +424,7 @@ G = \GL_2(\RR),\,\Gamma = \GL_2(\ZZ)
 \theta(t) = \frac{1}{\sqrt{t}} \theta\left(\frac1t\right)
 \end{equation*}
 </div>
-<p id="p-25">Step 1: proof of this property is the <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> formula</p>
+<p id="p-25">Step 1: proof of this property is the <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a> formula</p>
 <ul class="disc">
 <li id="li-5"><div class="displaymath">
 \begin{equation*}
@@ -518,8 +519,8 @@ I(s) = I(1-s)\text{,}
 \end{equation*}
 </div>
 </li>
-</ol></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type" alt="Subsection 1.4 Modular forms">
-<span class="type">Subsection</span><span class="codenumber">1.4</span><span class="title">Modular forms</span>
+</ol></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Modular forms</span>
 </h3>
 <p id="p-29">Functions on the upper half plane,</p>
 <div class="displaymath">
@@ -527,9 +528,9 @@ I(s) = I(1-s)\text{,}
 \HH = \{z\in \CC : \Im(z) \gt 0\}\text{.}
 \end{equation*}
 </div>
-<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> and elliptic curves.</p>
+<p id="p-30">Historically elliptic integrals lead to elliptic functions, and <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular forms</a> and elliptic curves.</p>
 <article class="remark-like" id="note-2"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.4</span>
+<span class="type">Note</span> <span class="codenumber">1.4</span>
 </h6>
 <p id="p-31">When one is interested in functions on \(\mathcal O/\Lambda\) where \(\mathcal O\) is some object and \(\Lambda\) is some discrete group. Take \(f\) a function on \(\mathcal O\) and average over \(\Lambda\) to get</p>
 <div class="displaymath">
@@ -569,7 +570,7 @@ G_k(\tau)  = \sum_{(m,n) \in \ZZ^2\smallsetminus\{0\}} \frac{1}{(m\tau+n)^{2k}}
 </div>
 <p>the weight \(2k\) holomorphic Eisenstein series.</p>
 <article class="theorem-like" id="fact-1"><h6 class="heading">
-<span class="type">Fact</span><span class="codenumber">1.5</span>
+<span class="type">Fact</span> <span class="codenumber">1.5</span>
 </h6>
 <p id="p-34">Let</p>
 <div class="displaymath">
@@ -582,23 +583,23 @@ u = \int_y^\infty \frac{\diff s}{\sqrt{4s^3 - 60G_2 s -  140G_3}}
 \begin{equation*}
 y = \wp_\Lambda (u)\text{.}
 \end{equation*}
-</div></article></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type" alt="Subsection 1.5 Euclidean Harmonic analysis">
-<span class="type">Subsection</span><span class="codenumber">1.5</span><span class="title">Euclidean Harmonic analysis</span>
+</div></article></article></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5</span> <span class="title">Euclidean Harmonic analysis</span>
 </h3>
-<section class="introduction" id="introduction-2"><article class="aside-like" id="aside-2"><p id="p-35">Lecture 2 23/1/2018</p></article><p id="p-36">We'll take a roundabout route to automorphic forms.</p>
+<section class="introduction" id="introduction-2"><aside class="aside-like" id="aside-2"><p id="p-35">Lecture 2 23/1/2018</p></aside><p id="p-36">We'll take a roundabout route to automorphic forms.</p>
 <p id="p-37">Today: Classical harmonic analysis on \(\RR^n\text{.}\) Classical harmonic analysis on \(\HH\text{.}\)</p>
 <p id="p-38">The aim (in general) is to express a certain class of functions (i.e. \(\mathcal L^2\)) in terms of building block (harmonics).</p>
 <p id="p-39">In classical analysis the harmonics are known (\(e(nx)\)), then the question becomes how these things fit together. In number theory the harmonics are extremely mysterious. We are looking at far more complicated geometries, quotient spaces etc. and arithmetic information comes in.</p>
 <article class="example-like" id="example-1"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.6</span>
+<span class="type">Example</span> <span class="codenumber">1.6</span>
 </h6>
 <p id="p-40">\(\RR\text{,}\) \(f\colon \RR\to \CC\text{,}\) being periodic in \(\mathcal L^2(S^1)\) leads to a fourier expansion</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = \sum_{n\in\ZZ} a_ne(nx)\text{.}
 \end{equation*}
-</div></article></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type" alt="Subsubsection 1.5.1 \(\RR^2\)">
-<span class="type">Subsubsection</span><span class="codenumber">1.5.1</span><span class="title">\(\RR^2\)</span>
+</div></article></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.5.1</span> <span class="title">\(\RR^2\)</span>
 </h4>
 <p id="p-41">We have a slightly different perspective.</p>
 <div class="displaymath">
@@ -608,7 +609,7 @@ f(x) = \sum_{n\in\ZZ} a_ne(nx)\text{.}
 </div>
 <p>via translations (i.e. right regular representation of \(G\) will be \(G\acts \mathcal L^2(G)\)). I.e. \(g\cdot x = x+g\text{.}\)</p>
 <article class="remark-like" id="remark-1"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.7</span>
+<span class="type">Remark</span> <span class="codenumber">1.7</span>
 </h6>
 <p id="p-42">This makes \(\RR^2\) a homogeneous space.</p>
 <p id="p-43">\(\RR^2\) with standard metric \(\diff s^2 = \diff x^2 + \diff y^2\) is a flat space \(\kappa = 0\text{.}\)</p></article><p id="p-44">To the metric we have the associated Laplacian (Laplace-Beltrami operator, \(\nabla\cdot\nabla\))</p>
@@ -619,7 +620,7 @@ f(x) = \sum_{n\in\ZZ} a_ne(nx)\text{.}
 </div>
 <p>we are interested in this as it is essentially the only operator, we will define automorphic forms to be eigenfunctions for this operator.</p>
 <article class="remark-like" id="note-3"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.8</span>
+<span class="type">Note</span> <span class="codenumber">1.8</span>
 </h6>
 <p id="p-45">The exponential functions</p>
 <div class="displaymath">
@@ -645,7 +646,7 @@ f(x,y) = \int\int_{\RR^2} \hat f(u,v) \phi_{u,v} (x,y) \diff u\diff v
 \hat f(u,v) = \int\int_{\RR^2}     f(u,v) \bar \phi_{u,v} (x,y) \diff y\diff x\text{.}
 \end{equation*}
 </div></article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">A little twist</span></h5>
-<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> integral operators.</p>
+<p id="p-46">We could have established the spectral resolution ( of \(\Delta\)) by considering <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> integral operators.</p>
 <p id="p-47">Using the spectral theorem if we can find easier to diagonalise operators that commute we can find the eigenspaces for those to cut down the eigenspace.</p>
 <p id="p-48">Recall: an integral operator is</p>
 <div class="displaymath">
@@ -665,9 +666,9 @@ L(gf) = gL(f) \ g\in G
 g\cdot f(x) = f(g+x)\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="observation-1"><h6 class="heading">
-<span class="type">Observation</span><span class="codenumber">1.9</span>
+<span class="type">Observation</span> <span class="codenumber">1.9</span>
 </h6>
-<p id="p-49">If \(L\) is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> then the kernel \(K(x,y)\) is given by</p>
+<p id="p-49">If \(L\) is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> then the kernel \(K(x,y)\) is given by</p>
 <div class="displaymath">
 \begin{equation*}
 K(x,y) = K_0(x-y)
@@ -675,7 +676,7 @@ K(x,y) = K_0(x-y)
 </div>
 <p>for some function \(K_0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-3" id="proof-3"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-1"><h6 class="heading"></h6>
 <p id="p-50">\((\Leftarrow)\) obvious</p></article><article class="case" id="case-2"><h6 class="heading"></h6>
-<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> then</p>
+<p id="p-51">\((\Rightarrow)\) Suppose \(L\) is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> then</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\RR^2} K(x,y) f(y+ \alpha) \diff y = \int_{\RR^2} K(x+ \alpha,y) f(y) \diff y \ \forall f
@@ -706,7 +707,7 @@ K(x,y) = K(x-y,0)\text{.}
 \end{equation*}
 </div></article></article></div>
 <article class="remark-like" id="observation-2"><h6 class="heading">
-<span class="type">Observation</span><span class="codenumber">1.10</span>
+<span class="type">Observation</span> <span class="codenumber">1.10</span>
 </h6>
 <p id="p-52">Invariant integral operators commute with each other</p>
 <div class="displaymath">
@@ -725,7 +726,7 @@ u\mapsto z - u+w
 \end{equation*}
 </div></article></div>
 <article class="remark-like" id="observation-3"><h6 class="heading">
-<span class="type">Observation</span><span class="codenumber">1.11</span>
+<span class="type">Observation</span> <span class="codenumber">1.11</span>
 </h6>
 <p id="p-54">\(L\) commutes with \(\Delta\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-5" id="proof-5"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-55">Based on the following:</p>
 <div class="displaymath">
@@ -761,7 +762,7 @@ K(x,y) = K_0(x-y,0)
 \end{equation*}
 </div></article></div>
 <article class="remark-like" id="observation-4"><h6 class="heading">
-<span class="type">Observation</span><span class="codenumber">1.12</span>
+<span class="type">Observation</span> <span class="codenumber">1.12</span>
 </h6>
 <p id="p-56">\(\phi_{u,v}(x,y)\) is an eigenfunction of \(L\text{,}\) \((u,v)\in\RR^2, (x,y) \in \RR^2\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-6" id="proof-6"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-6" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-57">
 \begin{equation*}
@@ -795,8 +796,8 @@ L\phi_{u,v}(\overbrace{z}^{=x,y})  = \int_{\RR^2} \phi_{u,v}(w) K(z,w) \diff w
 L\phi_{u,v} = \hat K_0(u,v) \phi_{u,v}\text{.}
 \end{equation*}
 </div></article></div>
-<p id="p-58">Side remark: these are enough to form a generating set.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type" alt="Subsubsection 1.5.2 Poisson summation (yet again)">
-<span class="type">Subsubsection</span><span class="codenumber">1.5.2</span><span class="title">Poisson summation (yet again)</span>
+<p id="p-58">Side remark: these are enough to form a generating set.</p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.5.2</span> <span class="title">Poisson summation (yet again)</span>
 </h4>
 <p id="p-59">Let's consider integral operators on functions on \(\ZZ^2 \backslash \RR^2 = \mathbf T^2\text{.}\)</p>
 <p id="p-60">Observe: \(L\leadsto K(x,y) = K_0(x-y)\text{.}\)</p>
@@ -835,7 +836,7 @@ K(z,w) = \sum_{n\in \ZZ^2} K_0(z-w + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_
 \sum_{n\in \ZZ^2} K_0(n) = \sum_{\xi\in \ZZ^2} \hat K_0(\xi)
 \end{equation*}
 </div>
-<p>i.e. <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a>.</p>
+<p>i.e. <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a>.</p>
 <p id="p-62">Why care about Poisson summation?</p>
 <div class="displaymath">
 \begin{equation*}
@@ -843,8 +844,8 @@ K(z,w) = \sum_{n\in \ZZ^2} K_0(z-w + n) = \sum_{\xi \in \ZZ^2} \lambda_\xi \phi_
 \end{equation*}
 </div>
 <p>Gauss circle problem, how many lattice points are there in a circle of radius \(R\text{.}\) We can pick a radially symmetric function that is 1 on the circle and 0 outside, or a smooth approximation of such an indicator function at least. Poisson summation packages the important information into a single term, plus some rapidly decaying ones. Then we get \(\pi R^2 + \) error, Gauss conjectured that the error is \(R^{1/2 + \epsilon}\text{.}\)</p>
-<article class="aside-like" id="aside-3"><p id="p-63">Lecture 3 25/1/2018</p></article><p id="p-64">Last time we gave a conceptual proof of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> (this strategy will generalise to the trace formula eventually).</p>
-<p id="p-65">To clean up one loose end: there is a generalisation of <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> called Voronoi summation, which will actually be useful later. For <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> we had</p>
+<aside class="aside-like" id="aside-3"><p id="p-63">Lecture 3 25/1/2018</p></aside><p id="p-64">Last time we gave a conceptual proof of <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a> (this strategy will generalise to the trace formula eventually).</p>
+<p id="p-65">To clean up one loose end: there is a generalisation of <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a> called Voronoi summation, which will actually be useful later. For <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a> we had</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n_1,n_2\in \ZZ} K(n_1, n_2) = \sum_{\xi_1,\xi_2\in \ZZ} \hat K(\xi_1, \xi_2)
@@ -870,9 +871,9 @@ J_0(z) = \frac1\pi \int_0^\pi \cos(z\cos(\alpha)) \diff \alpha
 </div>
 <p>is a Bessel function of the second kind.</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-1" id="exercise-1"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.13</span>
+<span class="type">Exercise</span> <span class="codenumber">1.13</span>
 </h6></a></article><div id="hk-exercise-1" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-66">Prove this.</p></article></div>
-<p id="p-67">Plug this into <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a></p>
+<p id="p-67">Plug this into <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a></p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{(n_1,n_2)\in \ZZ^2} K(n_1,n_2) = \sum_{N=0}^\infty r_2(N)K_0(N)
@@ -895,7 +896,7 @@ r_2 = \#\{(n_1,n_2) \in \ZZ^2 : n_1^2 + n_2^2 = N\}\text{.}
 \end{equation*}
 </div>
 <article class="theorem-like" id="theorem-3"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.14</span><span class="title">Voronoi summation</span>
+<span class="type">Theorem</span> <span class="codenumber">1.14</span> <span class="title">Voronoi summation</span>
 </h6>
 <div class="displaymath" id="p-69">
 \begin{equation*}
@@ -943,13 +944,13 @@ f(z) = K_0\left( \frac{ z}{R^2}\right)
 \sum_{N=0}^\infty K_0\left( \frac{N}{R^2}\right) r_2(N) = R^2\left( \pi  + \sum_{M=1}^\infty r_2(M) \tilde K_0(MR^2)\right)
 \end{equation*}
 </div>
-<p>where the lead term is the area of the circle. Finally if \(M \ne 0\) then \(f(MR^2)\) doesn't increase fast as \(R\to \infty\text{.}\) i.e. it is smaller than \(R^2\text{.}\) So as \(R\to \infty\) we find \(\#\{\text{lattice points in the circle}\} \sim\pi R^2\text{.}\)</p></section></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type" alt="Subsection 1.6 The hyperbolic plane \(\HH\)">
-<span class="type">Subsection</span><span class="codenumber">1.6</span><span class="title">The hyperbolic plane \(\HH\)</span>
+<p>where the lead term is the area of the circle. Finally if \(M \ne 0\) then \(f(MR^2)\) doesn't increase fast as \(R\to \infty\text{.}\) i.e. it is smaller than \(R^2\text{.}\) So as \(R\to \infty\) we find \(\#\{\text{lattice points in the circle}\} \sim\pi R^2\text{.}\)</p></section></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.6</span> <span class="title">The hyperbolic plane \(\HH\)</span>
 </h3>
 <p id="p-72">What if we consider the same problem on the hyperbolic disk? Things are extremely different.</p>
 <article class="paragraphs" id="paragraphs-5"><h5 class="heading"><span class="title">Generalities</span></h5>
 <article class="definition-like" id="definition-1"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.15</span>
+<span class="type">Definition</span> <span class="codenumber">1.15</span>
 </h6>
 <div class="displaymath" id="p-73">
 \begin{equation*}
@@ -974,9 +975,9 @@ f(z) = K_0\left( \frac{ z}{R^2}\right)
 \end{equation*}
 </div>
 <article class="remark-like" id="observation-5"><h6 class="heading">
-<span class="type">Observation</span><span class="codenumber">1.16</span>
+<span class="type">Observation</span> <span class="codenumber">1.16</span>
 </h6>
-<p id="p-75">As \(w\to \RR\) we have \(\rho \to \infty\text{.}\) So \(\RR\) is the boundary.</p></article><p id="p-76">Recall: the isoperimetric inequality</p>
+<p id="p-75">As \(w\to x\in \RR\) we have \(\rho \to \infty\text{.}\) So \(\RR\) is the boundary.</p></article><p id="p-76">Recall: the isoperimetric inequality</p>
 <div class="displaymath">
 \begin{equation*}
 4\pi A -\kappa A^2 \le L^2
@@ -1003,8 +1004,8 @@ f(z) = K_0\left( \frac{ z}{R^2}\right)
 \end{equation*}
 </div>
 <p>But how many points of distance exactly \(R\) are there? Roughly \(2^R\) again.</p>
-<p id="p-79">A hyperbolic disk of radius \(R\) centred at \(i\) would be a euclidean disk, but not centered at \(i\text{.}\) The area is \(4\pi(\sinh (R/2))^2\) and the circumference is \(2\pi\sinh(R)\) these are roughly the same size as \(\sinh(x) = (e^x - e^{-x})/2\text{.}\) The euclidean area is far large (roughly the square) of the hyperbolic.</p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type" alt="Subsection 1.7 \(\HH\) as a homogeneous space">
-<span class="type">Subsection</span><span class="codenumber">1.7</span><span class="title">\(\HH\) as a homogeneous space</span>
+<p id="p-79">A hyperbolic disk of radius \(R\) centred at \(i\) would be a euclidean disk, but not centered at \(i\text{.}\) The area is \(4\pi(\sinh (R/2))^2\) and the circumference is \(2\pi\sinh(R)\) these are roughly the same size as \(\sinh(x) = (e^x - e^{-x})/2\text{.}\) The euclidean area is far larger (roughly the square) of the hyperbolic.</p></article></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7</span> <span class="title">\(\HH\) as a homogeneous space</span>
 </h3>
 <section class="introduction" id="introduction-3"><div class="displaymath" id="p-80">
 \begin{equation*}
@@ -1023,10 +1024,10 @@ g\cdot z = \frac{az+b}{cz+d} \text{ for } g= \begin{pmatrix} a\amp b \\c\amp d\e
 \HH = \SL_2(\HH) / \SO(2)
 \end{equation*}
 </div>
-<p>because \(\SO(2) = \Stab_i(\SL_2(\RR))\text{.}\)</p></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type" alt="Subsubsection 1.7.1 Several decompositions">
-<span class="type">Subsubsection</span><span class="codenumber">1.7.1</span><span class="title">Several decompositions</span>
+<p>because \(\SO(2) = \Stab_i(\SL_2(\RR))\text{.}\)</p></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.7.1</span> <span class="title">Several decompositions</span>
 </h4>
-<p id="p-81">Cartesian: \(x+ iy\) then the <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
+<p id="p-81">Cartesian: \(x+ iy\) then the <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> measure is \(\frac{\diff x\diff y}{y^2}\text{.}\)</p>
 <p id="p-82">Iwasawa: \(G = NAK\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1050,19 +1051,19 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 </div>
 <p>this is very general, an analogue of Gram-Schmidt.</p>
 <article class="remark-like" id="observation-6"><h6 class="heading">
-<span class="type">Observation</span><span class="codenumber">1.17</span>
+<span class="type">Observation</span> <span class="codenumber">1.17</span>
 </h6>
 <div class="displaymath" id="p-83">
 \begin{equation*}
 \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\left\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\right\}}
 \end{equation*}
 </div>
-<p>warning \(NA \ne AN\) elementwise</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> functions).</p>
+<p>but be warned that \(NA \ne AN\) elementwise.</p></article><p id="p-84">Cartan: \(KAK\) (useful when dealing with rotationally <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> functions).</p>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-2" id="exercise-2"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.18</span>
+<span class="type">Exercise</span> <span class="codenumber">1.18</span>
 </h6></a></article><div id="hk-exercise-2" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-85">Prove these decompositions. Use the spectral theorem of symmetric matrices for the Cartan case.</p></article></div>
 <article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Classification of Motions</span></h5>
-<p id="p-86">We classify by the number of fixed points in \(\HH \cup \hat\RR\text{,}\)  for \(\hat \RR\) the extended real line.</p>
+<p id="p-86">We classify motions by the number of fixed points in \(\HH \cup \hat\RR\text{,}\)  for \(\hat \RR\) the extended real line.</p>
 <ul class="disc">
 <li id="li-11">Identity, infinitely many fixed points.</li>
 <li id="li-12">Parabolic, 1 fixed point in \(\hat \RR\) (\(\infty\)) \(\begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\)</li>
@@ -1070,19 +1071,19 @@ x+iy \leftrightarrow \underbrace{\begin{pmatrix} \sqrt{y} \amp   \\ \amp \sqrt{y
 <li id="li-14">Elliptic, 1 fixed point in \(\HH\) but not in \(\overline \HH\text{,}\) \((i,-i)\)  \(\begin{pmatrix} \cos \theta \amp \sin \theta  \\ -\sin \theta \amp\cos \theta \end{pmatrix}\text{.}\)</li>
 </ul>
 <article class="remark-like" id="note-4"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.19</span><span class="title">for the future</span>
+<span class="type">Note</span> <span class="codenumber">1.19</span> <span class="title">for the future</span>
 </h6>
-<p id="p-87">These notions are different when we consider \(\gamma \in G(\QQ)\) something can be \(\QQ\)-elliptic but \(\RR\)-hyperbolic. This depends on the Jordan decomposition essentially, we can have such \(\gamma\) with no rational roots of the characteristic polynomial but which splits over \(\RR\text{.}\)</p></article><p id="p-88">So we have</p>
+<p id="p-87">These notions are different when we consider \(\gamma \in G(\QQ)\text{,}\) something can be \(\QQ\)-elliptic but \(\RR\)-hyperbolic. This depends on the Jordan decomposition essentially, we can have such \(\gamma\) with no rational roots of the characteristic polynomial but which splits over \(\RR\text{.}\)</p></article><p id="p-88">So we have</p>
 <ul class="disc">
 <li id="li-15">Parabolic \(| \tr | = 2\)</li>
 <li id="li-16">(\(\RR\)-)Elliptic \(| \tr | \lt 2\)</li>
 <li id="li-17">(\(\RR\)-)Hyperbolic \(| \tr | \gt 2\)</li>
-</ul></article></section></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type" alt="Subsection 1.8 \(\Delta_\HH\)">
-<span class="type">Subsection</span><span class="codenumber">1.8</span><span class="title">\(\Delta_\HH\)</span>
+</ul></article></section></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.8</span> <span class="title">\(\Delta_\HH\)</span>
 </h3>
-<article class="aside-like" id="aside-4"><p id="p-89">Lecture 4 30/1/2018</p></article><p id="p-90">For this section \(\Delta_\HH  = \Delta\text{.}\)</p>
+<aside class="aside-like" id="aside-4"><p id="p-89">Lecture 4 30/1/2018</p></aside><p id="p-90">For this section \(\Delta_\HH  = \Delta\text{.}\)</p>
 <article class="definition-like" id="definition-2"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.20</span>
+<span class="type">Definition</span> <span class="codenumber">1.20</span>
 </h6>
 <p id="p-91">We have the translation operators</p>
 <div class="displaymath">
@@ -1095,7 +1096,7 @@ g\in \SL_2(\RR)
 T_g f(z) = f(g\cdot z)\text{.}
 \end{equation*}
 </div></article><article class="definition-like" id="def-invariant-operator"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.21</span><span class="title">Invariant operators</span>
+<span class="type">Definition</span> <span class="codenumber">1.21</span> <span class="title">Invariant operators</span>
 </h6>
 <p id="p-92">A linear operator \(L\) will be called <dfn class="terminology">invariant</dfn> if it commutes with \(T_g\) for all \(g\in \SL_2(\RR)\text{,}\) i.e.</p>
 <div class="displaymath">
@@ -1103,7 +1104,7 @@ T_g f(z) = f(g\cdot z)\text{.}
 L(T_g f) = T_g(Lf)\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="remark-2"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.22</span>
+<span class="type">Remark</span> <span class="codenumber">1.22</span>
 </h6>
 <p id="p-93">On any Riemannian manifold \(\Delta\) can be characterised by: A diffeomorphism is an isometry iff it commutes with \(\Delta\text{.}\)</p></article><p id="p-94">\(\Delta\) in coordinates:</p>
 <p id="p-95">Cartesian</p>
@@ -1123,8 +1124,8 @@ L(T_g f) = T_g(Lf)\text{.}
 \end{equation*}
 </div>
 <article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-3" id="exercise-3"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.23</span>
-</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> differential operator.</p></article></div>
+<span class="type">Exercise</span> <span class="codenumber">1.23</span>
+</h6></a></article><div id="hk-exercise-3" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-96">Show that \(\Delta\) is an <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> differential operator.</p></article></div>
 <p id="p-97">Polar:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1140,10 +1141,10 @@ f\in C^2( \HH) \text{ s.t. } (\Delta + \lambda) f \equiv 0\text{.}
 \end{equation*}
 </div>
 <article class="remark-like" id="remark-3"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.24</span>
+<span class="type">Remark</span> <span class="codenumber">1.24</span>
 </h6>
 <p id="p-100">\(\Delta\) is an “elliptic” operator with real analytic coefficients. This implies any eigenfunction is real analytic.</p></article><article class="remark-like" id="remark-4"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.25</span>
+<span class="type">Remark</span> <span class="codenumber">1.25</span>
 </h6>
 <p id="p-101">\(\lambda = 0\) means \(f\) is harmonic.</p></article><p id="p-102">Some basic eigenfunctions: Lets try \(f(z) = f_0(y)\) independent of \(x\)</p>
 <div class="displaymath">
@@ -1207,7 +1208,7 @@ F''(u) + \left( \frac{\lambda}{u^2} - 1\right) F(u) = 0\text{.}
 </div>
 <p>intuition: as \(y\to\infty\) we have \(F'' - F = 0\) so \(e^{u}\) or \(e^{-u}\text{.}\)</p>
 <article class="remark-like" id="remark-5"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.26</span>
+<span class="type">Remark</span> <span class="codenumber">1.26</span>
 </h6>
 <p id="p-106">If we insist on some “moderate growth” (at most polynomial in \(y\)) on the eigenfunction. The \(I_{s-\frac 12}\) solution can not contribute. (when we come to automorphic forms we will see that the definition is essentially eigenfunctions with moderate growth).</p></article><p id="p-107">So our periodic (in \(x\)) eigenfunction with (moderate growth) looks like</p>
 <div class="displaymath">
@@ -1216,11 +1217,11 @@ f_s(z) = \underbrace{C2y^{\frac 12} K_{s-\frac12}(2\pi y) e(x)}_{=W_s(z)}\text{.
 \end{equation*}
 </div>
 <article class="definition-like" id="def-whittaker"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.27</span><span class="title">Whittaker functions</span>
+<span class="type">Definition</span> <span class="codenumber">1.27</span> <span class="title">Whittaker functions</span>
 </h6>
 <p id="p-108">\(W_s(z)\) is called a <dfn class="terminology">Whittaker function</dfn>.</p></article><p id="p-109">These exist for arbitrary lie groups, but we may not always be able to write eigenfunctions in terms of them in general though. They are a replacement for the exponential functions.</p>
 <article class="theorem-like" id="theorem-4"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.28</span><span class="title">Spectral decomposition</span>
+<span class="type">Theorem</span> <span class="codenumber">1.28</span> <span class="title">Spectral decomposition</span>
 </h6>
 <div class="displaymath" id="p-110">
 \begin{equation*}
@@ -1239,7 +1240,7 @@ f_s(r) = \int_{\HH} f(z) W_s(rz) \diff z
 \end{equation*}
 </div>
 <p>analogue of the Fourier inversion formula for \(\HH\text{.}\)</p></article><article class="theorem-like" id="thm-whittaker-expansion"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.29</span><span class="title">2</span>
+<span class="type">Theorem</span> <span class="codenumber">1.29</span> <span class="title">2</span>
 </h6>
 <p id="p-111">If \(f\) is actually periodic in \(x\) and \((\Delta + s(1-s)) f= 0\) with growth \(O(e^2{\pi y})\)</p>
 <div class="displaymath">
@@ -1248,15 +1249,15 @@ f(z) =  f_0(y) + \sum_{n=1}^\infty  f_n W_s(nz)
 \end{equation*}
 </div>
 <p>where \(f_0(y)\) is a combination of \(y^s, y^{1-s}\text{.}\)</p></article><article class="remark-like" id="note-5"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.30</span>
+<span class="type">Note</span> <span class="codenumber">1.30</span>
 </h6>
 <p id="p-112">We will be considering automorphic forms</p>
 <div class="displaymath">
 \begin{equation*}
 \left\langle  \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}\right \rangle \subseteq \Gamma \subseteq \SL_2(\ZZ)\text{.}
 \end{equation*}
-</div></article></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type" alt="Subsection 1.9 Integral operators">
-<span class="type">Subsection</span><span class="codenumber">1.9</span><span class="title">Integral operators</span>
+</div></article></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.9</span> <span class="title">Integral operators</span>
 </h3>
 <p id="p-113">Recall the Cauchy integral formula for holomorphic functions</p>
 <div class="displaymath">
@@ -1271,35 +1272,35 @@ f(z) = \frac{1}{2\pi i} \int_{B_z} \frac{f(w)}{w-z} \diff w = \int_{B_z} K(w,z) 
 Lf(z) = \int_{\HH} K(z,w) f(w)\diff \underbrace{\mu(w)}_\frac{\diff u\diff v}{v^2} ,\,w = u+iv
 \end{equation*}
 </div>
-<p>\(K\) will often be smooth of compact support for us. \(L\) is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> if it commutes with \(T_g\) for all \(g\text{.}\)</p>
+<p>\(K\) will often be smooth of compact support for us. \(L\) is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> if it commutes with \(T_g\) for all \(g\text{.}\)</p>
 <article class="remark-like" id="observation-7"><h6 class="heading">
-<span class="type">Observation</span><span class="codenumber">1.31</span>
+<span class="type">Observation</span> <span class="codenumber">1.31</span>
 </h6>
-<p id="p-115">\(L\) is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> iff</p>
+<p id="p-115">\(L\) is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> iff</p>
 <div class="displaymath">
 \begin{equation*}
 K(gz,gw) = K(z,w)\,\forall g\in \SL_2(\RR)\text{.}
 \end{equation*}
 </div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-4" id="exercise-4"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.32</span>
+<span class="type">Exercise</span> <span class="codenumber">1.32</span>
 </h6></a></article><div id="hk-exercise-4" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-116">Show this.</p></article></div>
 <article class="definition-like" id="def-point-pair-invariant"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.33</span><span class="title">Point pair invariants</span>
+<span class="type">Definition</span> <span class="codenumber">1.33</span> <span class="title">Point pair invariants</span>
 </h6>
-<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a></dfn>. This was first introduced by Selberg.</p></article><p id="p-118">Invariant integral operators are convolution operators.</p>
+<p id="p-117">A function \(K\colon \HH \times \HH \to \CC\) that satisfies \(K(gz, g w) = K(z,w)\) is called a <dfn class="terminology">point pair <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a></dfn>. This was first introduced by Selberg.</p></article><p id="p-118">Invariant integral operators are convolution operators.</p>
 <article class="remark-like" id="remark-6"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.34</span>
+<span class="type">Remark</span> <span class="codenumber">1.34</span>
 </h6>
-<p id="p-119">A <a knowl="./knowl/def-point-pair-invariant.html" knowl-id="xref-def-point-pair-invariant" alt="Definition 1.33 Point pair invariants" title="Definition 1.33 Point pair invariants">point pair invariant</a> \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
+<p id="p-119">A <a knowl="./knowl/def-point-pair-invariant.html" title="Definition 1.33: Point pair invariants">point pair invariant</a> \(K(z,w)\) depends only of the distance between \(z,w\) i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
 \end{equation*}
 </div>
-<p>so an <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> operator is just a convolution operator.</p></article><article class="aside-like" id="aside-5"><p id="p-120">Lecture 5 1/2/2018</p></article><article class="theorem-like" id="theorem-6"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.35</span>
+<p>so an <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> operator is just a convolution operator.</p></article><aside class="aside-like" id="aside-5"><p id="p-120">Lecture 5 1/2/2018</p></aside><article class="theorem-like" id="theorem-6"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.35</span>
 </h6>
-<p id="p-121">If \((\Delta + \lambda)f \equiv 0\) and \(L\) is an <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> integral operator. (\(\Rightarrow\)) Then there exists</p>
+<p id="p-121">If \((\Delta + \lambda)f \equiv 0\) and \(L\) is an <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> integral operator. (\(\Rightarrow\)) Then there exists</p>
 <div class="displaymath">
 \begin{equation*}
 \Lambda(\lambda,K)
@@ -1311,7 +1312,7 @@ K(z,w) = K_0(\rho(z,w))\text{ for } K_0\colon \RR^+ \to \CC
 L(f)(z) = \Lambda(\lambda, K) f(z)\text{.}
 \end{equation*}
 </div>
-<p id="p-122">(\(\Leftarrow\))  Moreover if \(f\) is an eigenfunction of all <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> operators then \(f\) is an eigenfunction of \(\Delta\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-3"><h6 class="heading"></h6>
+<p id="p-122">(\(\Leftarrow\))  Moreover if \(f\) is an eigenfunction of all <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> operators then \(f\) is an eigenfunction of \(\Delta\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><article class="case" id="case-3"><h6 class="heading"></h6>
 <p id="p-123">(\(\Leftarrow\)) Let \(L_K\) be</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1335,7 +1336,7 @@ L_K(f)(z) = \Lambda_K f(z)
 \frac{1}{ \Lambda_K} \int_\HH f(w) \Delta_z K(w,z) \diff \mu(w)
 \end{equation*}
 </div>
-<p id="p-124">Note \(f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)\) is another <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> integral operator (exercise, show this).</p></article><article class="case" id="case-4"><h6 class="heading"></h6>
+<p id="p-124">Note \(f \to \int_\HH f(z) \Delta_z K(w,z) \diff \mu(w)\) is another <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> integral operator (exercise, show this).</p></article><article class="case" id="case-4"><h6 class="heading"></h6>
 <p id="p-125">We will prove an integral representation that looks like the Cauchy integral formula</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1394,7 +1395,7 @@ L(\Phi_z(f))(z) = \int_\HH \Phi_z(f) (w) K(w,z) \diff \mu(w)
 </div>
 </li>
 </ol>
-<p id="p-127">Now returning to the proof. Let \((\Delta + \lambda)f  \equiv 0\text{,}\) \(L\) <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a>.</p>
+<p id="p-127">Now returning to the proof. Let \((\Delta + \lambda)f  \equiv 0\text{,}\) \(L\) <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a>.</p>
 <div class="displaymath">
 \begin{equation*}
 Lf(z) = L(\Phi_zf)(z)
@@ -1436,9 +1437,9 @@ Lf(z) = L(\Phi_zf)(z)
 = \int_\HH W( w,z_1) K(z_1, w) \diff \mu(w)\text{.}
 \end{equation*}
 </div></article></article></div>
-<p id="p-129">Upshot so far: <a knowl="./knowl/thm-poisson-sum.html" knowl-id="xref-thm-poisson-sum" alt="Theorem 1.2 Poisson summation" title="Theorem 1.2 Poisson summation">Poisson summation</a> is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
+<p id="p-129">Upshot so far: <a knowl="./knowl/thm-poisson-sum.html" title="Theorem 1.2: Poisson summation">Poisson summation</a> is a duality, but it can be seen as an equality of the trace of an operator calculated in two different ways. In the non-euclidean setting we can do something similar, but not so recognisable.</p>
 <article class="paragraphs" id="paragraphs-8"><h5 class="heading"><span class="title">Digression: Ramanujan conjecture</span></h5>
-<p id="p-130">A weight \(k\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a>, eigenfunction of the Hecke operators implies</p>
+<p id="p-130">A weight \(k\) <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a>, eigenfunction of the Hecke operators implies</p>
 <div class="displaymath">
 \begin{equation*}
 |\lambda_p| \le 2 p^{\frac{k-1}{2}}\text{,}
@@ -1449,7 +1450,7 @@ Lf(z) = L(\Phi_zf)(z)
 <p id="p-132">Selberg's eigenvalue conjecture: \(\phi\) is a cuspidal automorphic (Maass) form with eigenvalue \(\lambda = s(1-s)\) implies \(s = \frac 12 + it\text{,}\) \(t\in \RR\) i.e. \(|\lambda| \ge \frac 14\text{.}\)</p></article><article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Back to \(\HH\)</span></h5>
 <p id="p-133">If we have \((\Delta + \lambda) f = 0\) can we say anything about \(\lambda\text{?}\)</p>
 <article class="theorem-like" id="proposition-1"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">1.36</span>
+<span class="type">Proposition</span> <span class="codenumber">1.36</span>
 </h6>
 <div class="displaymath" id="p-134">
 \begin{equation*}
@@ -1480,7 +1481,7 @@ Lf(z) = L(\Phi_zf)(z)
 </div></article></div>
 <p id="p-136">For the \(\frac14\) bound one needs to work a little harder.</p>
 <article class="theorem-like" id="proposition-2"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">1.37</span>
+<span class="type">Proposition</span> <span class="codenumber">1.37</span>
 </h6>
 <div class="displaymath" id="p-137">
 \begin{equation*}
@@ -1548,22 +1549,22 @@ f \equiv 0 \text{ on }\partial D\text{.}
 \end{equation*}
 </div></article></div>
 <article class="remark-like" id="remark-7"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.38</span>
+<span class="type">Remark</span> <span class="codenumber">1.38</span>
 </h6>
-<p id="p-142">In <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a> we restricted to the \(1/2\) line, this is a reincarnation of \(\lambda \ge \frac 14\text{.}\) Only certain functions contributed, similar to the way only the unitaries \(e^{2\pi ix\xi}\) contribute to a fourier expansion, not all characters of \(\RR\text{.}\)</p></article><p id="p-143">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type" alt="Subsection 1.10 Automorphic forms">
-<span class="type">Subsection</span><span class="codenumber">1.10</span><span class="title">Automorphic forms</span>
+<p id="p-142">In <a knowl="./knowl/thm-whittaker-expansion.html" title="Theorem 1.29: 2">Theorem 1.29</a> we restricted to the \(1/2\) line, this is a reincarnation of \(\lambda \ge \frac 14\text{.}\) Only certain functions contributed, similar to the way only the unitaries \(e^{2\pi ix\xi}\) contribute to a fourier expansion, not all characters of \(\RR\text{.}\)</p></article><p id="p-143">The spectrum of \(\Delta\) on \(\HH\) has \(\lambda = s(1-s)\text{,}\) \(s = \frac 12 + it\text{.}\) If we consider the quotient \(\Gamma \backslash \HH\) there is a possibility for \(t = t_{\RR} + it_{\CC}\) where \(0\le  t_\CC \le \frac 12\text{.}\) Selberg's conjecture is that these extra ones don't appear for <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp forms</a>. This is very sensitive to the arithmetic, we need a congruence subgroup for this to be true.</p></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.10</span> <span class="title">Automorphic forms</span>
 </h3>
-<section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type" alt="Subsubsection 1.10.1 Modular forms">
-<span class="type">Subsubsection</span><span class="codenumber">1.10.1</span><span class="title">Modular forms</span>
+<section class="subsubsection" id="subsubsection-4"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.10.1</span> <span class="title">Modular forms</span>
 </h4>
-<p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" knowl-id="xref-thm-riemann-zeta-continuation" alt="Theorem 1.3 Riemann" title="Theorem 1.3 Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular form</a> as we involved square roots</p>
+<p id="p-144">These are functions  on \(\HH\) that are very symmetric. We already saw one in the first lecture, \(\theta(t)\) in the proof of <a knowl="./knowl/thm-riemann-zeta-continuation.html" title="Theorem 1.3: Riemann">Theorem 1.3</a>. Its not quite, instead it is a <em class="emphasis">half-integral</em> weight <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular form</a> as we involved square roots</p>
 <div class="displaymath">
 \begin{equation*}
 \theta (t) \leftrightarrow \theta\left(\frac 1t\right)\text{.}
 \end{equation*}
 </div>
 <article class="definition-like" id="def-arthur-selberg-modular-function"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.39</span><span class="title">Modular functions and forms</span>
+<span class="type">Definition</span> <span class="codenumber">1.39</span> <span class="title">Modular functions and forms</span>
 </h6>
 <p id="p-145">A <dfn class="terminology">modular function</dfn> is some</p>
 <div class="displaymath">
@@ -1578,15 +1579,15 @@ f\left(\frac{az+b}{cz+d}\right) = (cz+d)^k f(z) \, \forall\begin{pmatrix} a\amp 
 \end{equation*}
 </div>
 <p>where, \(f\) is meromorphic on \(\HH\) including \(\infty\text{.}\) It is called a <dfn class="terminology">modular form</dfn> if it is indeed holomorphic at infinity, this is equivalent to some growth condition.</p></article><article class="definition-like" id="def-cusp-form"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.40</span><span class="title">Cusp forms</span>
+<span class="type">Definition</span> <span class="codenumber">1.40</span> <span class="title">Cusp forms</span>
 </h6>
 <p id="p-146">\(f\) is a <dfn class="terminology">cusp form</dfn> if</p>
 <div class="displaymath">
 \begin{equation*}
 \int_0^1 f(x+z) \diff x = 0\, \forall z\text{.}
 \end{equation*}
-</div></article><article class="aside-like" id="aside-6"><p id="p-147">Lecture 6 6/2/2018</p></article><article class="remark-like" id="remark-8"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.41</span>
+</div></article><aside class="aside-like" id="aside-6"><p id="p-147">Lecture 6 6/2/2018</p></aside><article class="remark-like" id="remark-8"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.41</span>
 </h6>
 <p id="p-148">\(f\) has  a fourier expansion (invariant under \(x\mapsto x+1\)) holomorphic implies</p>
 <div class="displaymath">
@@ -1600,14 +1601,14 @@ f(z) = \sum_{n=0}^\infty a_n e(nz) \ (e(\alpha) =e^{2\pi i \alpha})
 f(z) = \sum_{n=1}^\infty a_n e(nz)
 \end{equation*}
 </div>
-<p>as cuspidal implies \(f(z) = O(e^{-2\pi y})\) as \(y \to \infty\text{.}\) \(f\) not cuspidal implies \(f(z) = O(y^s)\) as \(y \to \infty\text{.}\)</p></article></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type" alt="Subsubsection 1.10.2 Examples">
-<span class="type">Subsubsection</span><span class="codenumber">1.10.2</span><span class="title">Examples</span>
+<p>as cuspidal implies \(f(z) = O(e^{-2\pi y})\) as \(y \to \infty\text{.}\) \(f\) not cuspidal implies \(f(z) = O(y^s)\) as \(y \to \infty\text{.}\)</p></article></section><section class="subsubsection" id="subsubsection-5"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.10.2</span> <span class="title">Examples</span>
 </h4>
 <article class="example-like" id="example-2"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.42</span>
+<span class="type">Example</span> <span class="codenumber">1.42</span>
 </h6>
 <p id="p-149">Constant functions for \(k = 0\text{.}\)</p></article><article class="example-like" id="example-3"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.43</span>
+<span class="type">Example</span> <span class="codenumber">1.43</span>
 </h6>
 <p id="p-150">Eisenstein series (holomorphic).</p>
 <div class="displaymath">
@@ -1622,17 +1623,17 @@ G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\
 \end{equation*}
 </div>
 <p>this is of weight \(2k\text{!}\)</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-5" id="exercise-5"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.44</span>
+<span class="type">Exercise</span> <span class="codenumber">1.44</span>
 </h6></a></article><div id="hk-exercise-5" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-151">Prove this.</p></article></div>
 <article class="example-like" id="example-4"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.45</span>
+<span class="type">Example</span> <span class="codenumber">1.45</span>
 </h6>
 <div class="displaymath" id="p-152">
 \begin{equation*}
 \Delta(z) = (60G_2(z))^3 - 27(140G_3(z))^2
 \end{equation*}
 </div>
-<p>is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight 12.</p>
+<p>is a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> of weight 12.</p>
 <div class="displaymath" id="p-153">
 \begin{equation*}
 \Delta(z) = \sum_{n=1}^\infty a_n e(nz),\,a_n = n^{11/2} \tau(n) \implies \tau(n) = O(n^\varepsilon) \forall \varepsilon
@@ -1644,10 +1645,10 @@ G_k(z) = 2\underbrace{\zeta(2k)}_{\ne 0} + \frac{2(2\pi i)^{2k}}{(2k-1)!}\sum_{\
 \end{equation*}
 </div>
 <p>the original Ramanujan conjecture.</p></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-6" id="exercise-6"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.46</span>
+<span class="type">Exercise</span> <span class="codenumber">1.46</span>
 </h6></a></article><div id="hk-exercise-6" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-154">Show these.</p></article></div>
 <article class="example-like" id="example-5"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.47</span><span class="title">A non-example</span>
+<span class="type">Example</span> <span class="codenumber">1.47</span> <span class="title">A non-example</span>
 </h6>
 <div class="displaymath" id="p-155">
 \begin{equation*}
@@ -1655,13 +1656,13 @@ j(x) = \frac{1728(60G_2(z))^2}{\Delta(z)}
 \end{equation*}
 </div>
 <p>not holomorphic at \(\infty\text{.}\)</p></article><article class="example-like" id="example-6"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.48</span>
+<span class="type">Example</span> <span class="codenumber">1.48</span>
 </h6>
-<p id="p-156">We had also seen \(\theta\)-function but it <em class="emphasis">does not</em> fit in to this setting. It is rather a <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular form</a> for a covering group.</p></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
+<p id="p-156">We had also seen \(\theta\)-function but it <em class="emphasis">does not</em> fit in to this setting. It is rather a <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular form</a> for a covering group.</p></article><article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Digression: bounds on fourier coefficients of cusp forms</span></h5>
 <article class="theorem-like" id="theorem-7"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.49</span><span class="title">Hecke</span>
+<span class="type">Theorem</span> <span class="codenumber">1.49</span> <span class="title">Hecke</span>
 </h6>
-<p id="p-157">If \(f(z)\) is a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\)</p>
+<p id="p-157">If \(f(z)\) is a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> of weight \(k\)</p>
 <div class="displaymath">
 \begin{equation*}
 f(z) = \sum_{n=1}^\infty a_n e(nz)
@@ -1714,11 +1715,11 @@ a_n e(iy) = \int_0^1 f(x+iy) e(-nz) \diff x
 \le \int_0^1 \frac{M}{y^{k/2}} \diff x = O\left(\frac{1}{y^{k/2}}\right)
 \end{equation*}
 </div>
-<p>for all \(y\) pick \(y=1/n\) so \(O(n^{k/2})\text{.}\)</p></article></div></article></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type" alt="Subsubsection 1.10.3 Maass forms">
-<span class="type">Subsubsection</span><span class="codenumber">1.10.3</span><span class="title">Maass forms</span>
+<p>for all \(y\) pick \(y=1/n\) so \(O(n^{k/2})\text{.}\)</p></article></div></article></section><section class="subsubsection" id="subsubsection-6"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.10.3</span> <span class="title">Maass forms</span>
 </h4>
 <article class="definition-like" id="def-maass-form"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.50</span><span class="title">Maass forms</span>
+<span class="type">Definition</span> <span class="codenumber">1.50</span> <span class="title">Maass forms</span>
 </h6>
 <p id="p-161">A function \(f\colon \HH \to \CC\) s.t.</p>
 <ul class="disc">
@@ -1736,19 +1737,19 @@ f(gz) = f(z) \ \forall g\in\SL_2(Z)
 \int_0^1 f(x+iy)\diff x = 0
 \end{equation*}
 </div>
-<p>we call it a <dfn class="terminology">maass <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a></dfn>.</p></article><article class="example-like" id="example-7"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.51</span>
+<p>we call it a <dfn class="terminology">maass <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a></dfn>.</p></article><article class="example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.51</span>
 </h6>
-<p id="p-162">Constant functions are <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass forms</a>, this is because they are \(L^2\) because \(\HH/\SL_2(\ZZ)\) has finite volume.</p></article><article class="example-like" id="example-8"><h6 class="heading">
-<span class="type">Example</span><span class="codenumber">1.52</span><span class="title">Non-holomorphic Eisenstein series.</span>
+<p id="p-162">Constant functions are <a knowl="./knowl/def-maass-form.html" title="Definition 1.50: Maass forms">Maass forms</a>, this is because they are \(L^2\) because \(\HH/\SL_2(\ZZ)\) has finite volume.</p></article><article class="example-like" id="example-8"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.52</span> <span class="title">Non-holomorphic Eisenstein series.</span>
 </h6>
 <div class="displaymath" id="p-163">
 \begin{equation*}
 E(z; s) = \sum_{(c,d) \in \ZZ^2 \smallsetminus (0,0),(c,d) =1,c\ge 0}\frac{\Im(z)^{s+1/2}}{|cz+d|^{2s+1}}\text{,}
 \end{equation*}
 </div>
-<p>we choose this normalisation (for now) with \(s+\frac 12\) as it generalises better to \(\GL_3\) which has more elements in its Weyl group.</p></article><article class="aside-like" id="aside-7"><p id="p-164">Lecture 7 8/2/2018</p></article><article class="remark-like" id="remark-9"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.53</span>
+<p>we choose this normalisation (for now) with \(s+\frac 12\) as it generalises better to \(\GL_3\) which has more elements in its Weyl group.</p></article><aside class="aside-like" id="aside-7"><p id="p-164">Lecture 7 8/2/2018</p></aside><article class="remark-like" id="remark-9"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.53</span>
 </h6>
 <p id="p-165">In fact most things are non-holomorphic in the sense that many spaces of interest do not have a complex structure.</p></article><article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Properties</span></h5>
 <ul id="p-166" class="disc">
@@ -1775,7 +1776,7 @@ E(z; s) = O(y^{\max\{\Res(s+\frac 12),\Re(-s + \frac 12)\}})
 \end{equation*}
 </div></li>
 </ul>
-<p>hence \(E(z; s)\) is a <a knowl="./knowl/def-maass-form.html" knowl-id="xref-def-maass-form" alt="Definition 1.50 Maass forms" title="Definition 1.50 Maass forms">Maass form</a>. We have</p>
+<p>hence \(E(z; s)\) is a <a knowl="./knowl/def-maass-form.html" title="Definition 1.50: Maass forms">Maass form</a>. We have</p>
 <div class="displaymath">
 \begin{equation*}
 \Im(\gamma z) = \frac{\Im(z)}{|cz+d|^2}
@@ -1810,7 +1811,7 @@ E(z; s) = \sum_{(c,d)\in\ZZ^2 \smallsetminus (0,0), (c,d) =1,c\ge 0} \frac{y^{s+
 </div>
 <p>\(\gamma\) is an isometry implies \(\Delta\gamma = \gamma\Delta\text{.}\) So \(\gamma y^{s+\frac 12}\) is also an eigenfunction with eigenvalue \(\frac 14 - s^2\text{.}\)</p>
 <article class="theorem-like" id="thm-functional-eqn-eisenstein"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.54</span>
+<span class="type">Theorem</span> <span class="codenumber">1.54</span>
 </h6>
 <p id="p-168">\(E(z; s)\) has analytic continuation to \(\CC\) (in \(s\)), it satisfies \(E(z; s) = E(z; -s)\) and</p>
 <div class="displaymath">
@@ -1823,7 +1824,7 @@ E(z; s) = O( y^\sigma),\,\sigma=\max\{\Re(s),\Re(-s)\} + \frac 12\text{.}
 E(z; s) = a_0(y)+ \sum_{n\ne 0} a_n 2y^{\frac12}K_s(2\pi |n| y) e(nx)
 \end{equation*}
 </div>
-<p>using <a knowl="./knowl/thm-whittaker-expansion.html" knowl-id="xref-thm-whittaker-expansion" alt="Theorem 1.29 2" title="Theorem 1.29 2">Theorem 1.29</a>.</p>
+<p>using <a knowl="./knowl/thm-whittaker-expansion.html" title="Theorem 1.29: 2">Theorem 1.29</a>.</p>
 <div class="displaymath">
 \begin{equation*}
 \int_0^1 E(x+iy ; s ) e(-nx) \diff x = \begin{cases} a_0 (y) \amp n=0 \\ 2a_n y^{\frac 12} K_s(2\pi|n|y) \amp n \ne0 \end{cases}\text{.}
@@ -1866,7 +1867,7 @@ c\ne 0 : \sum_{(c,d),\,c\ne0} \int_0^1 \frac{y^{s+\frac12}}{|cz+d|^{2y+1}}  e(-n
 =2 \sum_{c=1}^\infty \sum_{d = -\infty}^ \infty y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{\underbrace{|cz+d|^{2s+1}}_{=cx+d +icy}} \diff x
 \end{equation*}
 </div>
-<p>the right hand side is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> under \(x\mapsto x+1\) we can absorb the shift into the sum over \(d\text{,}\) in a general context this is known as unfolding.</p>
+<p>the right hand side is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> under \(x\mapsto x+1\) we can absorb the shift into the sum over \(d\text{,}\) in a general context this is known as unfolding.</p>
 <div class="displaymath">
 \begin{equation*}
 =2 \sum_{c=1}^\infty\sum_{\alpha \pmod c} \sum_{d \equiv \alpha \pmod c} y^{s+\frac 12} \int_0^1 \frac{e(-nx)}{|cz+d|^{2s+1}} \diff x
@@ -1948,23 +1949,23 @@ E_1(z; s) = \pi^{-(s+\frac12)} \Gamma(s+\frac 12) \zeta(2s+1 ) y^{s+\frac 12}\ta
 </li>
 </ol></article></div></article><p id="p-172">We can see that we have \(\zeta\) appearing here in the constant term, we can determine analytic information about it using what we know about Eisenstein series, this idea in generality is known as the Langlands-Shahidi method.</p>
 <article class="remark-like" id="remark-10"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.55</span>
+<span class="type">Remark</span> <span class="codenumber">1.55</span>
 </h6>
-<p id="p-173">This has poles at \(s = \frac12\text{,}\) \(\Res_{s=\frac12} E(z; s) = \frac12\text{.}\) Note that this residue is constant. We will use this in Rankin-Selberg.</p></article><article class="aside-like" id="aside-8"><p id="p-174">Lecture 8 15/2/2018</p></article><article class="remark-like" id="remark-11"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.56</span>
+<p id="p-173">This has poles at \(s = \frac12\text{,}\) \(\Res_{s=\frac12} E(z; s) = \frac12\text{.}\) Note that this residue is constant. We will use this in Rankin-Selberg.</p></article><aside class="aside-like" id="aside-8"><p id="p-174">Lecture 8 15/2/2018</p></aside><article class="remark-like" id="remark-11"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.56</span>
 </h6>
-<p id="p-175">If \(G\) is a reductive group and \(M \subseteq G\) a Levi subgroup, e.g. for \(\GL_n\) a Levi is diagonal blocks of size \(n_1 + n_2 + \cdots +n_k = n\text{.}\) One can associate  a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> to these subgroups following Eisenstein. There are automorphic \(L\)-functions corresponding to these and by doing the same procedure as last time we see these \(L\)-functions appearing in the constant terms of the Eisenstein series. So we can establish analytic properties of these automorphic \(L\)-functions via those of the Eisenstein series. This is known as the Langlands-Shahidi  method, it only works in some cases but when it does it is very powerful. Shahidi pushed the idea by looking at non-constant terms. In the example above we have</p>
+<p id="p-175">If \(G\) is a reductive group and \(M \subseteq G\) a Levi subgroup, e.g. for \(\GL_n\) a Levi is diagonal blocks of size \(n_1 + n_2 + \cdots +n_k = n\text{.}\) One can associate  a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> to these subgroups following Eisenstein. There are automorphic \(L\)-functions corresponding to these and by doing the same procedure as last time we see these \(L\)-functions appearing in the constant terms of the Eisenstein series. So we can establish analytic properties of these automorphic \(L\)-functions via those of the Eisenstein series. This is known as the Langlands-Shahidi  method, it only works in some cases but when it does it is very powerful. Shahidi pushed the idea by looking at non-constant terms. In the example above we have</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma_{-2s}(n) = \sum_{d|n} d^{-2s} \prod(1+ 1/p^{2s} = \prod_{p|n} \zeta_p^{-1}(2s)
 \end{equation*}
 </div>
-<p>so there are \(L\)-functions even in the non-constant terms.</p></article></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type" alt="Subsubsection 1.10.4 Hecke Operators">
-<span class="type">Subsubsection</span><span class="codenumber">1.10.4</span><span class="title">Hecke Operators</span>
+<p>so there are \(L\)-functions even in the non-constant terms.</p></article></section><section class="subsubsection" id="subsubsection-7"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.10.4</span> <span class="title">Hecke Operators</span>
 </h4>
-<p id="p-176">The natural setting to view these is over \(\GL_2(\QQ_p)\text{.}\) But as we haven't done this yet we will take the path that Hecke took and just write a formula. They act on the space of <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a>.</p>
+<p id="p-176">The natural setting to view these is over \(\GL_2(\QQ_p)\text{.}\) But as we haven't done this yet we will take the path that Hecke took and just write a formula. They act on the space of <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular forms</a>.</p>
 <article class="definition-like" id="definition-9"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.57</span><span class="title">Slash operators</span>
+<span class="type">Definition</span> <span class="codenumber">1.57</span> <span class="title">Slash operators</span>
 </h6>
 <p id="p-177">Let \(k\in   \ZZ_+\) fixed, \(\gamma \in \GL_2^+(\RR)\) (positive determinant).</p>
 <div class="displaymath">
@@ -1973,7 +1974,7 @@ f|_{\gamma} (z)  = \det(\gamma)^{k/2} (cz+d)^{-k} f\left(\frac{az+b}{cz+d}\right
 \end{equation*}
 </div>
 <p>There is a determinant twist so that the center acts trivially.</p></article><article class="definition-like" id="definition-10"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.58</span><span class="title">\(T_{\gamma}\)</span>
+<span class="type">Definition</span> <span class="codenumber">1.58</span> <span class="title">\(T_{\gamma}\)</span>
 </h6>
 <p id="p-178">Let \(\gamma\in  \GL_2^+(\QQ)\) write</p>
 <div class="displaymath">
@@ -1987,7 +1988,7 @@ f|_{\gamma} (z)  = \det(\gamma)^{k/2} (cz+d)^{-k} f\left(\frac{az+b}{cz+d}\right
 T_\gamma(f) =  \sum_{i=1}^r f|_{\gamma_i}(z)\text{.}
 \end{equation*}
 </div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-7" id="exercise-7"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.59</span>
+<span class="type">Exercise</span> <span class="codenumber">1.59</span>
 </h6></a></article><div id="hk-exercise-7" class="hidden-content tex2jax_ignore"><article class="exercise-like"><div class="displaymath" id="p-179">
 \begin{equation*}
 \gamma = \begin{pmatrix}p\amp 0 \\ 0 \amp 1 \end{pmatrix}
@@ -2011,20 +2012,20 @@ T_n(f)(z) = \sum_{ad = n,\,b\pmod {d} } n^{k/2} d^{-k} f\left(\frac{az+ b}{d}\ri
 \end{equation*}
 </div>
 <article class="theorem-like" id="fact-2"><h6 class="heading">
-<span class="type">Fact</span><span class="codenumber">1.60</span>
+<span class="type">Fact</span> <span class="codenumber">1.60</span>
 </h6>
 <p id="p-181">Hecke operators commpute with each other (follows from \(KAK\) decomposition).</p></article><article class="theorem-like" id="fact-3"><h6 class="heading">
-<span class="type">Fact</span><span class="codenumber">1.61</span>
+<span class="type">Fact</span> <span class="codenumber">1.61</span>
 </h6>
-<p id="p-182">Hecke operators are self-adjoint with respect to the Petersson inner product on \(M_k(1)\text{,}\) the <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> of weight \(k\) and level \(1\text{.}\)</p>
+<p id="p-182">Hecke operators are self-adjoint with respect to the Petersson inner product on \(M_k(1)\text{,}\) the <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular forms</a> of weight \(k\) and level \(1\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \pair fg_\Pet \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline{g(z)} y^{k} \diff \mu(z)\text{.}
 \end{equation*}
 </div></article><article class="theorem-like" id="lemma-1"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">1.62</span>
+<span class="type">Lemma</span> <span class="codenumber">1.62</span>
 </h6>
-<p id="p-183">Let \(f(z)\ne 0\) be  a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\) which is an eigenfunction for all of the Hecke operators with eigenvalue \(n^{1-k/2} \lambda(n)\) i.e.</p>
+<p id="p-183">Let \(f(z)\ne 0\) be  a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> of weight \(k\) which is an eigenfunction for all of the Hecke operators with eigenvalue \(n^{1-k/2} \lambda(n)\) i.e.</p>
 <div class="displaymath">
 \begin{equation*}
 T_n(f)(z) n^{1-k/2} \lambda(n) f(z) \forall n
@@ -2120,7 +2121,7 @@ n^{1-k/2} \lambda(n) a_1 = n^{-k/2 + 1} a_n
 </ol></article></div>
 <p id="p-185">This is very special to \(\GL_2\text{,}\) in general fourier coefficients have more information than Hecke eigenvalues.</p>
 <article class="remark-like" id="remark-12"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.63</span>
+<span class="type">Remark</span> <span class="codenumber">1.63</span>
 </h6>
 <p id="p-186">With the normalisation</p>
 <div class="displaymath">
@@ -2129,13 +2130,13 @@ T_n(f)(z) = \lambda(n) n^{1-k/2} f(z)
 \end{equation*}
 </div>
 <p>the Ramanujan conjecture reads \(\lambda(n) = O(n^{(k-1)/2 + \epsilon})\text{.}\)</p></article><article class="remark-like" id="remark-13"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.64</span>
+<span class="type">Remark</span> <span class="codenumber">1.64</span>
 </h6>
-<p id="p-187">Having \(a_1 = 1\) is known as being Hecke normalised.</p></article></article></section></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type" alt="Subsection 1.11 Rankin-Selberg method">
-<span class="type">Subsection</span><span class="codenumber">1.11</span><span class="title">Rankin-Selberg method</span>
+<p id="p-187">Having \(a_1 = 1\) is known as being Hecke normalised.</p></article></article></section></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.11</span> <span class="title">Rankin-Selberg method</span>
 </h3>
-<section class="introduction" id="introduction-4"><p id="p-188">This is a protoype of the integral representation of automorphic \(L\)-functions.</p></section><section class="subsubsection" id="subsubsection-8"><h4 class="heading hide-type" alt="Subsubsection 1.11.1 Mellin transforms of automorphic forms and automorphic \(L\)-functions">
-<span class="type">Subsubsection</span><span class="codenumber">1.11.1</span><span class="title">Mellin transforms of automorphic forms and automorphic \(L\)-functions</span>
+<section class="introduction" id="introduction-4"><p id="p-188">This is a protoype of the integral representation of automorphic \(L\)-functions.</p></section><section class="subsubsection" id="subsubsection-8"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.11.1</span> <span class="title">Mellin transforms of automorphic forms and automorphic \(L\)-functions</span>
 </h4>
 <p id="p-189">Let</p>
 <div class="displaymath">
@@ -2157,9 +2158,9 @@ a_n(y) = \int_0^1  \phi(z) \overline {e(nx)} \diff x\text{.}
 </div>
 <p>converges for \(\Re(s) \gg 0\) if \(a_n(y) = O(y^{-N})\) for all \(N\text{.}\)</p>
 <article class="theorem-like" id="theorem-9"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.65</span>
+<span class="type">Theorem</span> <span class="codenumber">1.65</span>
 </h6>
-<p id="p-191">Let \(\phi(x+iy) = O(y{-N})\) for all \(N\gt 0\) and \(\phi(z)\) is <a knowl="./knowl/def-invariant-operator.html" knowl-id="xref-def-invariant-operator" alt="Definition 1.21 Invariant operators" title="Definition 1.21 Invariant operators">invariant</a> under \(z\mapsto \gamma z\) for \(\gamma\in \SL_2(\ZZ)\text{.}\) Then</p>
+<p id="p-191">Let \(\phi(x+iy) = O(y{-N})\) for all \(N\gt 0\) and \(\phi(z)\) is <a knowl="./knowl/def-invariant-operator.html" title="Definition 1.21: Invariant operators">invariant</a> under \(z\mapsto \gamma z\) for \(\gamma\in \SL_2(\ZZ)\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\SL_2(\ZZ)\backslash \HH} \phi(z) E(z; s) \diff z
@@ -2169,8 +2170,8 @@ a_n(y) = \int_0^1  \phi(z) \overline {e(nx)} \diff x\text{.}
 \begin{equation*}
 = \pi^{-s} \Gamma(S) \zeta(2s) \tilde a_0 (s-1)\text{.}
 \end{equation*}
-</div></article><article class="aside-like" id="aside-9"><p id="p-192">Lecture 9 22/2/2018</p></article><article class="definition-like" id="def-mellin-transform"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.66</span><span class="title">Mellin transforms</span>
+</div></article><aside class="aside-like" id="aside-9"><p id="p-192">Lecture 9 22/2/2018</p></aside><article class="definition-like" id="def-mellin-transform"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.66</span> <span class="title">Mellin transforms</span>
 </h6>
 <p id="p-193">Given</p>
 <div class="displaymath">
@@ -2208,7 +2209,7 @@ f(y) = g(Q(n) y)
 </div>
 <p>we can see the integrating over \(\SL_2(\ZZ) \backslash \HH\) a sum over \(\Gamma_\infty\backslash \SL_2(\ZZ)\) things should cancel to give us an integral over \(\Gamma_\infty \backslash \HH\text{,}\) a rectangle! So this unfolding should simplify things.</p>
 <article class="theorem-like" id="prop-unfolding"><h6 class="heading">
-<span class="type">Proposition</span><span class="codenumber">1.67</span>
+<span class="type">Proposition</span> <span class="codenumber">1.67</span>
 </h6>
 <p id="p-196">Let \(\phi\colon \HH \to \CC\) be automorphic with respect to \(\SL_2(\ZZ)\text{,}\) with fourier expansion</p>
 <div class="displaymath">
@@ -2247,7 +2248,7 @@ E(z; s) = O(y^2 + y^{1-s})\text{.}
 \end{gather*}
 </div></article></div>
 <article class="theorem-like" id="cor-l-function-functional-eq-eisenstein"><h6 class="heading">
-<span class="type">Corollary</span><span class="codenumber">1.68</span>
+<span class="type">Corollary</span> <span class="codenumber">1.68</span>
 </h6>
 <div class="displaymath" id="p-201">
 \begin{equation*}
@@ -2270,8 +2271,8 @@ E(z; s) = O(y^2 + y^{1-s})\text{.}
 \Res_{s=1} \Lambda(s) = \int_{\SL_2(\ZZ) \backslash \HH} \phi(s) \diff \mu(z)
 \end{equation*}
 </div></li>
-</ul></article><p id="p-202">Note that if we use a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> for \(\phi\) we get 0 from the integral above, in \(L^2\) the <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a> and Eisenstein series are orthogonal. Instead we will cook up something interesting from two functions.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type" alt="Subsubsection 1.11.2 Rankin-Selberg \(L\)-functions">
-<span class="type">Subsubsection</span><span class="codenumber">1.11.2</span><span class="title">Rankin-Selberg \(L\)-functions</span>
+</ul></article><p id="p-202">Note that if we use a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> for \(\phi\) we get 0 from the integral above, in \(L^2\) the <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp forms</a> and Eisenstein series are orthogonal. Instead we will cook up something interesting from two functions.</p></section><section class="subsubsection" id="subsubsection-9"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.11.2</span> <span class="title">Rankin-Selberg \(L\)-functions</span>
 </h4>
 <p id="p-203">Let</p>
 <div class="displaymath">
@@ -2284,20 +2285,20 @@ f(z) = \sum_{n=0}^\infty a_ne(nz)
 g(z) = \sum_{n=0}^\infty b_ne(nz)
 \end{equation*}
 </div>
-<p>be holomorphic <a knowl="./knowl/def-arthur-selberg-modular-function.html" knowl-id="xref-def-arthur-selberg-modular-function" alt="Definition 1.39 Modular functions and forms" title="Definition 1.39 Modular functions and forms">modular forms</a> of weight \(k\text{.}\)</p>
+<p>be holomorphic <a knowl="./knowl/def-arthur-selberg-modular-function.html" title="Definition 1.39: Modular functions and forms">modular forms</a> of weight \(k\text{.}\)</p>
 <p id="p-204">Assume that at least one of \(f\) or \(g\) is cuspidal. Assume additionally that \(f,g\) are normalised Hecke eigenforms so \(a(1) = b(1) = 1\text{.}\)</p>
 <article class="definition-like" id="definition-12"><h6 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.69</span>
+<span class="type">Definition</span> <span class="codenumber">1.69</span>
 </h6>
 <div class="displaymath" id="p-205">
 \begin{equation*}
 \phi(z) = f(z) \overline g(z)y^k\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="note-6"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.70</span>
+<span class="type">Note</span> <span class="codenumber">1.70</span>
 </h6>
 <p id="p-206">\(\phi(\gamma z) = \phi(z)\) for any \(\gamma \in \SL_2(\ZZ)\text{.}\) \(\phi\) also satisfies the decay condition.</p></article><article class="remark-like" id="note-exp-phi0"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.71</span>
+<span class="type">Note</span> <span class="codenumber">1.71</span>
 </h6>
 <p id="p-207">If \(f = \sum a_n e(nz)\text{,}\) \(g = \sum b_n e(nz)\) then</p>
 <div class="displaymath">
@@ -2322,7 +2323,7 @@ f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \
 \phi_0(y) = \int_0^1 \phi(x+iy) \diff x = \sum_{n \in \ZZ} a_n(y) \overline b_n(y) y^k e^{-4\pi i ny}\text{.}
 \end{equation*}
 </div></article><article class="remark-like" id="note-8"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.72</span>
+<span class="type">Note</span> <span class="codenumber">1.72</span>
 </h6>
 <div class="displaymath" id="p-208">
 \begin{equation*}
@@ -2344,19 +2345,19 @@ f(z)\overline g(z)  = \sum_{m-n \ne 0} A_{n-m} e((n-m)z) + \sum_{n\in \ZZ} a_n \
 = \frac{\Gamma(k+s)}{(4\pi)^{k+s}}\underbrace{\sum_{n=1}^\infty\frac{ a_n\overline b_n}{n^{k+s}}}_{L(s+k; f\times \overline g)}
 \end{equation*}
 </div>
-<p>this is the Rankin-Selberg \(L\)-function. So by the <a knowl="./knowl/cor-l-function-functional-eq-eisenstein.html" knowl-id="xref-cor-l-function-functional-eq-eisenstein" alt="Corollary 1.68 " title="Corollary 1.68 ">corollary 1.68</a>; \(L(s+k; f\times g)\) has analytic continuation and functional equation, and poles only at \(s= 1+k, s=k\text{.}\)</p></article><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">An application</span></h5>
-<p id="p-209">We proved \(f\) <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> \(f(z) = \sum  a_ne(nz)\) implies \(a_n = O(n^{k/2})\text{,}\) Ramanujan \(a_n = O(n^{k-1/2})\text{.}\) As <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp forms</a> often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series. The averaged version of the Ramanujan conjecture is much easier</p>
+<p>this is the Rankin-Selberg \(L\)-function. So by the <a knowl="./knowl/cor-l-function-functional-eq-eisenstein.html" title="Corollary 1.68">corollary 1.68</a>; \(L(s+k; f\times g)\) has analytic continuation and functional equation, and poles only at \(s= 1+k, s=k\text{.}\)</p></article><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">An application</span></h5>
+<p id="p-209">We proved \(f\) <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> \(f(z) = \sum  a_ne(nz)\) implies \(a_n = O(n^{k/2})\text{,}\) Ramanujan \(a_n = O(n^{(k-1)/2})\text{.}\) As <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp forms</a> often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series. The averaged version of the Ramanujan conjecture is much easier</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{n\lt X} a_n\text{.}
 \end{equation*}
-</div></article><article class="aside-like" id="aside-10"><p id="p-210">Lecture 10 27/2/2018</p></article><p id="p-211">Recall <a knowl="./knowl/prop-unfolding.html" knowl-id="xref-prop-unfolding" alt="Proposition 1.67 " title="Proposition 1.67 ">Proposition 1.67</a> and moreover that</p>
+</div></article><aside class="aside-like" id="aside-10"><p id="p-210">Lecture 10 27/2/2018</p></aside><p id="p-211">Recall <a knowl="./knowl/prop-unfolding.html" title="Proposition 1.67">Proposition 1.67</a> and moreover that</p>
 <div class="displaymath">
 \begin{equation*}
 E(z; s) = \pi^{-s} \Gamma(s) \zeta(2s) \frac 12 \sum_{\gamma \in     \Gamma_\infty \backslash \SL_2(\ZZ)} \Im(\gamma z)^s = \pi^{-s } \Gamma(s) \sum_{(m,n) \in \ZZ^2 \smallsetminus (0,0)} \frac{y^s}{|mz+n|^{2s}}\text{,}
 \end{equation*}
 </div>
-<p>from this and <a knowl="./knowl/note-exp-phi0.html" knowl-id="xref-note-exp-phi0" alt="Note 1.71 " title="Note 1.71 ">Note 1.71</a> we conclude.</p>
+<p>from this and <a knowl="./knowl/note-exp-phi0.html" title="Note 1.71">Note 1.71</a> we conclude.</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\SL_2(\ZZ) \backslash \HH} f(z) \overline g(z) y^k E(z; s) \diff \mu (z)
@@ -2367,7 +2368,7 @@ E(z; s) = \pi^{-s} \Gamma(s) \zeta(2s) \frac 12 \sum_{\gamma \in     \Gamma_\inf
 = \frac{\pi^{-s} \zeta(2s) \Gamma(s) \Gamma(s+ k-1)}{(4\pi)^{2+k-1}} \sum_{n=1}^\infty \frac{a_n \overline b_n}{n^{s+k-1}}\label{eqn-conclusion-rankin-selberg}\tag{1.5}
 \end{equation}
 </div>
-<p><a knowl="./knowl/eqn-conclusion-rankin-selberg.html" knowl-id="xref-eqn-conclusion-rankin-selberg" alt="Equation 1.5 " title="Equation 1.5 ">(1.5)</a> has analytic continuation as a function of \(s\) to all \(s\in \CC\text{.}\) It has at most simple poles with residue at \(s =1\text{:}\)</p>
+<p><a knowl="./knowl/eqn-conclusion-rankin-selberg.html" title="Equation 1.5">(1.5)</a> has analytic continuation as a function of \(s\) to all \(s\in \CC\text{.}\) It has at most simple poles with residue at \(s =1\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \frac 12 \pair{f}{g}_{\Pet}\text{.}
@@ -2390,16 +2391,16 @@ L(s,f\times \overline g) = \zeta(2(s-k+1)) \sum_{n=1} ^\infty \frac{a_n \overlin
 \Lambda(s, f\times \overline g) = \Lambda(2k-1-s, f\times g)
 \end{equation*}
 </div>
-<p>this follows from <a knowl="./knowl/thm-functional-eqn-eisenstein.html" knowl-id="xref-thm-functional-eqn-eisenstein" alt="Theorem 1.54 " title="Theorem 1.54 ">Theorem 1.54</a> \(E(z; s) = E(s; 1-s)\text{.}\) .</p>
+<p>this follows from <a knowl="./knowl/thm-functional-eqn-eisenstein.html" title="Theorem 1.54">Theorem 1.54</a> \(E(z; s) = E(s; 1-s)\text{.}\) .</p>
 <p id="p-213">\(\Lambda(s,f\times \overline g)\) has analytic continuation to \(s\in \CC\) with poles at most at \(s=k,\,s=k-1\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \Res_{s=k} \Lambda(s,f\times g) =  \frac{1}{2\pi^{k-1}} \pair fg_{\Pet}\text{.}
 \end{equation*}
 </div>
-<p id="p-214">This is analogous to when we took the <a knowl="./knowl/def-mellin-transform.html" knowl-id="xref-def-mellin-transform" alt="Definition 1.66 Mellin transforms" title="Definition 1.66 Mellin transforms">Mellin transform</a> of the theta function. We have obtained some highly nontrivial information above:</p>
+<p id="p-214">This is analogous to when we took the <a knowl="./knowl/def-mellin-transform.html" title="Definition 1.66: Mellin transforms">Mellin transform</a> of the theta function. We have obtained some highly nontrivial information above:</p>
 <article class="remark-like" id="remark-14"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.73</span>
+<span class="type">Remark</span> <span class="codenumber">1.73</span>
 </h6>
 <p id="p-215">Given an arbitrary series of the form</p>
 <div class="displaymath">
@@ -2415,7 +2416,7 @@ f(z) = \sum_{n=1}^\infty a_n e(nz)
 </div>
 <p>a cuspidal (Hecke eigen)form of weight \(k\) has \(a_n = O(n^{k/2})\text{.}\) Ramanujan (Deligne) gives us \(a_n =O(n^{(k-1)/2})\text{.}\) Hecke implies that \(a_n\overline b_n = O(n^k)\) implies \(\sum_{n=1}^\infty \frac{a_n\overline b_n}{n^s}\) converges for \(\Re(s) \gt k+1\text{.}\) Deligne implies that \(a_n\overline b_n = O(n^{k-1})\) implies \(\sum_{n=1}^\infty \frac{a_n\overline b_n}{n^s}\) converges for \(\Re(s) \gt k\text{.}\) But the above already gives us this convergence, highly nontrivial \(k\text{!}\)</p>
 <article class="remark-like" id="remark-15"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.74</span>
+<span class="type">Remark</span> <span class="codenumber">1.74</span>
 </h6>
 <p id="p-217">If we take \(f,g\) to be normalized Hecke eigenforms. Let</p>
 <div class="displaymath">
@@ -2434,12 +2435,12 @@ f(z) = \sum_{n=1}^\infty a_n e(nz)
 L(s,f\times \overline g) = \prod_p  \prod_{1\le i,j\le 2}(1- \frac{\alpha_i \overline \beta_j}{p^s})^{-1}\text{.}
 \end{equation*}
 </div></article><article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-8" id="exercise-8"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="codenumber">1.75</span>
+<span class="type">Exercise</span> <span class="codenumber">1.75</span>
 </h6></a></article><div id="hk-exercise-8" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-218">Prove this.</p></article></div>
 <article class="paragraphs" id="paragraphs-14"><h5 class="heading"><span class="title">Applications</span></h5>
 <p id="p-219">If one proves the prime number theorem using non-vanishing of the \(\zeta\) function in a certain region you use a weird identity using sines and cosines being positive. This really comes from a Rankin-Selberg product.</p>
 <article class="remark-like" id="remark-16"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.76</span>
+<span class="type">Remark</span> <span class="codenumber">1.76</span>
 </h6>
 <p id="p-220">Rankin-Selberg proves positivity.</p>
 <div class="displaymath">
@@ -2464,7 +2465,7 @@ L(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}
 \phi(z) = \sum_{n=1}^\infty a_n e(nz)
 \end{equation*}
 </div>
-<p>be a <a knowl="./knowl/def-cusp-form.html" knowl-id="xref-def-cusp-form" alt="Definition 1.40 Cusp forms" title="Definition 1.40 Cusp forms">cusp form</a> of weight \(k\text{.}\)</p>
+<p>be a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> of weight \(k\text{.}\)</p>
 <p id="p-222">Consider</p>
 <div class="displaymath">
 \begin{equation*}
@@ -2473,7 +2474,7 @@ D(s) = \sum_{n=1}^\infty \frac{|a_n|^2}{n^s}\text{,}
 </div>
 <p>Hecke implies this converges for \(\Re(s) \gt k+1\text{.}\)</p>
 <article class="remark-like" id="note-9"><h6 class="heading">
-<span class="type">Note</span><span class="codenumber">1.77</span>
+<span class="type">Note</span> <span class="codenumber">1.77</span>
 </h6>
 <div class="displaymath" id="p-223">
 \begin{equation*}
@@ -2500,7 +2501,7 @@ D(s) = L(s, f\times \overline f)
 </div>
 <p>which converges for \(s\gt (k+1)/2\text{.}\)</p>
 <article class="example-like" id="question-1"><h6 class="heading">
-<span class="type">Question</span><span class="codenumber">1.78</span>
+<span class="type">Question</span> <span class="codenumber">1.78</span>
 </h6>
 <p id="p-225">Fix \(\diff \mu(z) = \frac{\diff x \diff y}{y^2}\) on \(\HH\text{.}\) What is \(\vol(\SL_2(\ZZ) \backslash \HH)\text{?}\) (\(\pi/3\text{?}\)) What about other \(\Gamma\text{?}\)</p></article><p id="p-226">Naive observation:</p>
 <div class="displaymath">
@@ -2527,10 +2528,10 @@ D(s) = L(s, f\times \overline f)
 \int_1^\infty * y^s + * y^{1-s} \frac{\diff y}{y^2}
 \end{equation*}
 </div>
-<p>we will truncate the Eisenstein series.</p></article></section><section class="subsubsection" id="subsubsection-10"><h4 class="heading hide-type" alt="Subsubsection 1.11.3 Applications">
-<span class="type">Subsubsection</span><span class="codenumber">1.11.3</span><span class="title">Applications</span>
+<p>we will truncate the Eisenstein series.</p></article></section><section class="subsubsection" id="subsubsection-10"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.11.3</span> <span class="title">Applications</span>
 </h4>
-<article class="aside-like" id="aside-11"><p id="p-228">Lecture 11 1/3/2018</p></article><p id="p-229">First aim of the day: Calculate</p>
+<aside class="aside-like" id="aside-11"><p id="p-228">Lecture 11 1/3/2018</p></aside><p id="p-229">First aim of the day: Calculate</p>
 <div class="displaymath">
 \begin{equation*}
 \vol(\SL_2(\ZZ)\backslash\HH,\,\diff \mu(z) = \frac{\diff x \diff y}{y^2})
@@ -2583,7 +2584,7 @@ E_T(z; s) = \frac{\pi^{-s} \Gamma (s)\zeta(2s)}{2} \sum_{\gamma\in \Gamma_\infty
 </div>
 <p id="p-231">Observations:</p>
 <article class="theorem-like" id="lemma-2"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">1.79</span>
+<span class="type">Lemma</span> <span class="codenumber">1.79</span>
 </h6>
 <p id="p-232">\(K \subseteq \HH\) compact, there exists \(T_K\) such that for all \(T \ge T_K\)</p>
 <div class="displaymath">
@@ -2607,7 +2608,7 @@ E_T(z; s) = E(z; s) \,\forall z\in K\text{.}
 </div>
 <p>for some \(T_0\text{.}\)</p></article></div>
 <article class="theorem-like" id="lemma-3"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">1.80</span>
+<span class="type">Lemma</span> <span class="codenumber">1.80</span>
 </h6>
 <div class="displaymath" id="p-234">
 \begin{equation*}
@@ -2642,7 +2643,7 @@ E_T(z; s) = E(z; s) \,\forall z\in K\text{.}
 </div></article></div>
 <p id="p-236">There is a huge generalization of this lemma by Langlands that allows him to calculate a lot of volumes.</p>
 <article class="theorem-like" id="lemma-4"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">1.81</span>
+<span class="type">Lemma</span> <span class="codenumber">1.81</span>
 </h6>
 <p id="p-237">Let \(T \gt 1\) and \(x+ iy\) in the standard fundamental domain \(\mathcal F\) for \(\SL_2(\ZZ) \backslash \HH\) then</p>
 <div class="displaymath">
@@ -2687,10 +2688,10 @@ E(z; s) \amp y\ge T
 \end{equation*}
 </div></article></div>
 <article class="remark-like" id="remark-17"><h6 class="heading">
-<span class="type">Remark</span><span class="codenumber">1.82</span>
+<span class="type">Remark</span> <span class="codenumber">1.82</span>
 </h6>
 <p id="p-241">\(E(z; s) - E_T(z; s) \) for fixed \(z\) is holomorphic as a function of \(s\) at \(s =1\text{.}\)</p></article><article class="theorem-like" id="theorem-10"><h6 class="heading">
-<span class="type">Theorem</span><span class="codenumber">1.83</span>
+<span class="type">Theorem</span> <span class="codenumber">1.83</span>
 </h6>
 <div class="displaymath" id="p-242">
 \begin{equation*}
@@ -2803,7 +2804,7 @@ L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus 
 \end{equation*}
 </div>
 <article class="theorem-like" id="lemma-5"><h6 class="heading">
-<span class="type">Lemma</span><span class="codenumber">1.84</span>
+<span class="type">Lemma</span> <span class="codenumber">1.84</span>
 </h6>
 <div class="displaymath" id="p-246">
 \begin{equation*}
@@ -2817,15 +2818,15 @@ L^2(\SL_2(\ZZ)\backslash \HH)= 1\oplus \int_{(\frac 12)} E(z; s) \diff s \oplus 
 \end{equation}
 </div>
 <article class="theorem-like" id="claim-1"><h6 class="heading">
-<span class="type">Claim</span><span class="codenumber">1.85</span>
+<span class="type">Claim</span> <span class="codenumber">1.85</span>
 </h6>
-<p id="p-249"><a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> implies that</p>
+<p id="p-249"><a knowl="./knowl/eqn-volE.html" title="Equation 1.6">(1.6)</a> implies that</p>
 <div class="displaymath">
 \begin{equation*}
 \int_{\SL_2(\ZZ) \backslash \HH} E(z; -s ) \diff \mu(z) \equiv0\text{,}
 \end{equation*}
 </div>
-<p>whenever it converges.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-19" id="proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-250">By a change of variables we can rewrite <a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> as</p>
+<p>whenever it converges.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-19" id="proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-250">By a change of variables we can rewrite <a knowl="./knowl/eqn-volE.html" title="Equation 1.6">(1.6)</a> as</p>
 <div class="displaymath">
 \begin{equation*}
 c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                         \diff s
@@ -2838,7 +2839,7 @@ c \tilde f (-1)= \int_{(0      )} \tilde f (-\frac12+s)I(S)                     
 \tilde F(s) = \tilde f( s+ \frac 12)\text{.}
 \end{equation*}
 </div>
-<a knowl="./knowl/eqn-volE.html" knowl-id="xref-eqn-volE" alt="Equation 1.6 " title="Equation 1.6 ">(1.6)</a> \(\iff\)<div class="displaymath">
+<a knowl="./knowl/eqn-volE.html" title="Equation 1.6">(1.6)</a> \(\iff\)<div class="displaymath">
 \begin{equation*}
 \frac{1}{2\pi i } \int_{(0)} \tilde F(s) I(s) \diff s = c \tilde F(-\frac32)\text{.}
 \end{equation*}
@@ -2864,7 +2865,7 @@ I(z; s) \equiv 0
 </div>whenever it converges.</li>
 </ol></article></div></article></section></section></section></div></main>
 </div>
-<!--Start: Google code--><script type="text/javascript">
+<!--Start: Google code--><script>
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-48250536-1']);
 _gaq.push(['_trackPageview']);
