@@ -477,7 +477,7 @@ section#sec-aut-forms-motivation
 
             observation
                 p
-                    | As #[m w\to \RR] we have #[m \rho \to \infty].
+                    | As #[m w\to x\in \RR] we have #[m \rho \to \infty].
                     | So #[m \RR] is the boundary.
 
             p
@@ -503,7 +503,7 @@ section#sec-aut-forms-motivation
             p
                 | A hyperbolic disk of radius #[m R] centred at #[m i] would be a euclidean disk, but not centered at #[m i].
                 | The area is #[m 4\pi(\sinh (R/2))^2] and the circumference is #[m 2\pi\sinh(R)] these are roughly the same size as #[m \sinh(x) = (e^x - e^{-x})/2].
-                | The euclidean area is far large (roughly the square) of the hyperbolic.
+                | The euclidean area is far larger (roughly the square) of the hyperbolic.
 
     subsection
         title #[m \HH] as a homogeneous space
@@ -536,7 +536,7 @@ section#sec-aut-forms-motivation
             observation
                 p
                     me \HH = \underbrace{NA}_{=AN} = \underbrace{P}_{\left\{\begin{pmatrix} * \amp * \\ \amp * \end{pmatrix}\right\}}
-                    | warning #[m NA \ne AN] elementwise
+                    | but be warned that #[m NA \ne AN] elementwise.
 
             p
                 | Cartan: #[m KAK] (useful when dealing with rotationally invariant functions).
@@ -550,7 +550,7 @@ section#sec-aut-forms-motivation
                 title Classification of Motions
 
                 p
-                    |We classify by the number of fixed points in #[m \HH \cup \hat\RR],  for #[m \hat \RR] the extended real line.
+                    |We classify motions by the number of fixed points in #[m \HH \cup \hat\RR],  for #[m \hat \RR] the extended real line.
                     ul
                         li Identity, infinitely many fixed points.
                         li Parabolic, 1 fixed point in #[m \hat \RR] (#[m \infty]) #[m \begin{pmatrix} 1 \amp n \\ \amp 1 \end{pmatrix}]
@@ -561,7 +561,7 @@ section#sec-aut-forms-motivation
                     title for the future
 
                     p
-                        | These notions are different when we consider #[m \gamma \in G(\QQ)] something can be #[m \QQ]-elliptic but #[m \RR]-hyperbolic.
+                        | These notions are different when we consider #[m \gamma \in G(\QQ)], something can be #[m \QQ]-elliptic but #[m \RR]-hyperbolic.
                         | This depends on the Jordan decomposition essentially, we can have such #[m \gamma] with no rational roots of the characteristic polynomial but which splits over #[m \RR].
 
                 p
@@ -1410,7 +1410,7 @@ section#sec-aut-forms-motivation
             paragraphs
                 title An application
                 p
-                    | We proved #[m f] cusp form #[m f(z) = \sum  a_ne(nz)] implies #[m a_n = O(n^{k/2})], Ramanujan #[m a_n = O(n^{k-1/2})].
+                    | We proved #[m f] cusp form #[m f(z) = \sum  a_ne(nz)] implies #[m a_n = O(n^{k/2})], Ramanujan #[m a_n = O(n^{(k-1)/2})].
                     | As cusp forms often appear as error terms for counting arguments knowing it gives us many results, tells us we can just count with Eisenstein series.
                     | The averaged version of the Ramanujan conjecture is much easier
                     me \sum_{n\lt X} a_n
@@ -3425,7 +3425,7 @@ section#sec-gl2
                     | .
 
             theorem
-                title Gelfand-Graev-Pitesk-Shapiro
+                title Gelfand-Graev-Piatetski-Shapiro
                 statement: p
                     me \bigoplus_{\pi} m_{\pi} \pi = \rho_{\omega,0} = \rho_\omega|_{L^2_0}
                     | with all #[m m_{\pi} \lt \infty] countable.
