@@ -7,6 +7,7 @@ mathbook
             package xypic
             package newpxtext
             package newpxmath
+            package cancel
 
 
         include ./macros.pug
@@ -18,6 +19,8 @@ mathbook
         analytics: google: tracking UA-48250536-1
 
         rename(element="inlineexercise" lang="en-US") Exercise
+
+        latex-image-preamble \usepackage{tikz}
 
     article#aut-forms-arthur-selberg
         title Automorphic forms and the Arthur-Selberg trace formula

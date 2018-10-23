@@ -42,13 +42,13 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\newenvironment{smallermatrix}[1]
 {\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
 \array{#1}}
 {\endarray}
@@ -90,12 +90,15 @@ MathJax.Hub.Config({
 
 \newcommand{\alg}{\mathrm{alg}}
 
+\newcommand{\subgroup}{\mathrel{\subseteq}}
+
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\catname}[1]{{\mathrm\textbf{#1}}}
 \newcommand{\Rings}{\mathrm{Rings}}
 
 \newcommand{\Ar}{\mathrm{Ar}}
 \newcommand{\dR}{\mathrm{dR}}
+\newcommand{\crys}{\mathrm{crys}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
 \newcommand{\Pet}{\mathrm{Pet}}
 
@@ -228,7 +231,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\PSL}{PSL}
 \DeclareMathOperator{\PGL}{PGL}
-\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\specialorthogonal}{SO}
 \DeclareMathOperator{\Sp}{Sp}
 \DeclareMathOperator{\orth}{O}
 \DeclareMathOperator{\unitary}{U}
@@ -345,7 +348,7 @@ K_v = \begin{cases} \RR,\CC \amp \text{ if } v \text{ is archimidean} \\ [K_v: \
 K_v^+  \simeq \widehat K_v^+
 \end{equation*}
 </div>
-<p>both topologically and algebraically.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-29" id="proof-29"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-29" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-336">Exercise.</p></article></div></article><p id="p-337">This is not really canonical, but as far as number theorists are concerned there is a right choice of additive character to fix.</p>
+<p>both topologically and algebraically.</p></article><article class="hiddenproof" id="proof-29"><a knowl="" class="id-ref" refid="hk-proof-29"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-29" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-336">Exercise.</p></article></div></article><p id="p-337">This is not really canonical, but as far as number theorists are concerned there is a right choice of additive character to fix.</p>
 <article class="paragraphs" id="paragraphs-23"><h5 class="heading"><span class="title">A particular non-trivial additive character</span></h5>
 <p id="p-338">If \(K_v= \RR,\CC\) let</p>
 <div class="displaymath">
@@ -432,7 +435,7 @@ D_v^{-1} = \{x\in K_v : \tr(xy) \in \ZZ_v ,\, \forall y \in \ints_v\}\text{.}
 \mu_v(\alpha M) = |\alpha|_v \mu(M)
 \end{equation*}
 </div>
-<p>for all measurable sets \(M\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-30" id="proof-30"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-30" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-343">Exercise</p></article></div>
+<p>for all measurable sets \(M\text{.}\)</p></article><article class="hiddenproof" id="proof-30"><a knowl="" class="id-ref" refid="hk-proof-30"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-30" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-343">Exercise</p></article></div>
 <p id="p-344">I.e.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -520,7 +523,7 @@ K_v^\times \to S^1\text{.}
 \begin{equation*}
 \tilde c \colon U_v \to \CC^\times\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-31" id="proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-352">Exercise.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-31"><a knowl="" class="id-ref" refid="hk-proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-352">Exercise.</p></article></div>
 <article class="example-like" id="example-10"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">3.10</span>
 </h6>
@@ -571,7 +574,7 @@ K_v^\times \to S^1\text{.}
 \begin{equation*}
 \int_{\ints_v^\times } \diff_v^\times \alpha = N(D_v)^{-1/2}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-32" id="proof-32"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-32" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-359">
+</div></article><article class="hiddenproof" id="proof-32"><a knowl="" class="id-ref" refid="hk-proof-32"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-32" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-359">
 \begin{equation*}
 \int_{\ints_v^\times} \diff_v^\times \alpha= \int_{\ints_v^\times} \frac{\diff_v \alpha}{|\alpha|_v} (1- N(\varpi_v)\inv)\inv
 \end{equation*}
@@ -664,7 +667,7 @@ f \colon K_v\units \to \CC
 <article class="theorem-like" id="lemma-12"><h6 class="heading">
 <span class="type">Lemma</span> <span class="codenumber">3.16</span>
 </h6>
-<p id="p-367">\(\zeta(f,c)\) is a regular function for <a knowl="./knowl/def-quasichar.html" title="Definition 3.7">quasicharacters</a> \(c\) with \(\sigma \gt 0\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-33" id="proof-33"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-33" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-368">
+<p id="p-367">\(\zeta(f,c)\) is a regular function for <a knowl="./knowl/def-quasichar.html" title="Definition 3.7">quasicharacters</a> \(c\) with \(\sigma \gt 0\text{.}\)</p></article><article class="hiddenproof" id="proof-33"><a knowl="" class="id-ref" refid="hk-proof-33"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-33" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-368">
 \begin{equation*}
 \zeta(f,c) = \int_{K_v\units} f(\alpha) c(\alpha) \diff \units \alpha
 \end{equation*}
@@ -684,7 +687,7 @@ f \colon K_v\units \to \CC
 \begin{equation*}
 \zeta(f,c) \zeta(\hat g,\hat c) =  \zeta(\hat f, \hat c)\zeta(g,c)\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-34" id="proof-34"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-34" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-370">All of the integrals are absolutely convergent.</p>
+</div></article><article class="hiddenproof" id="proof-34"><a knowl="" class="id-ref" refid="hk-proof-34"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-34" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-370">All of the integrals are absolutely convergent.</p>
 <p id="p-371">Fubini implies the LHS is</p>
 <div class="displaymath">
 \begin{equation*}
@@ -711,7 +714,7 @@ f \colon K_v\units \to \CC
 \zeta(f,c) = \rho(c) \zeta(\hat f, \hat c)
 \end{equation*}
 </div>
-<p>where \(\rho\) is meromorphic, and is defined initially for \(0\lt \sigma \lt 1\) then extended by analytic continuation.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-35" id="proof-35"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-35" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-373">Take \(f= g\) so</p>
+<p>where \(\rho\) is meromorphic, and is defined initially for \(0\lt \sigma \lt 1\) then extended by analytic continuation.</p></article><article class="hiddenproof" id="proof-35"><a knowl="" class="id-ref" refid="hk-proof-35"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-35" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-373">Take \(f= g\) so</p>
 <div class="displaymath">
 \begin{equation*}
 \rho(C) = \frac{\zeta(f,c)}{\zeta(\hat f, \hat c)}
@@ -736,7 +739,7 @@ f \colon K_v\units \to \CC
 \begin{equation*}
 |\rho(c) | = 1 \text{ if }\sigma= \frac12\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-36" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-375">
+</div></article><article class="hiddenproof" id="proof-36"><a knowl="" class="id-ref" refid="hk-proof-36"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-36" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-375">
 \begin{equation*}
 \zeta(f,c) = \rho(c) \zeta(\hat f, \hat c) = \rho(c) \rho(\hat c) \zeta(\hat{\hat f}, \hat{\hat c})
 \end{equation*}
@@ -874,7 +877,7 @@ f_n(\xi) = \begin{cases} (x-iy)^n e^{-2\pi(x^2 + y^2)} \amp \text{ if } n \ge 0 
 \begin{equation*}
 \hat f_n(\xi) = i^{|n|} f_{-n}(\xi) \,\forall n
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-384">Induction on \(n\text{:}\)</p>
+</div></article><article class="hiddenproof" id="proof-37"><a knowl="" class="id-ref" refid="hk-proof-37"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-37" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-384">Induction on \(n\text{:}\)</p>
 <p id="p-385">\(n = 0\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -968,7 +971,7 @@ f_n(\xi) = \begin{cases} e(\Lambda(\xi)) = e^{2\pi i \lambda(\tr(\xi))} \amp \te
 \begin{equation*}
 \hat f_n(\xi) = \begin{cases} |D_v|^{-1/2} |\varpi_v|^{-n} \amp \text{ if } \xi \equiv 1 \pmod{\varpi^n} \\ 0 \amp \end{cases}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-393">
+</div></article><article class="hiddenproof" id="proof-38"><a knowl="" class="id-ref" refid="hk-proof-38"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-38" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-393">
 \begin{equation*}
 \hat f_n(\xi) = \int_K f_n(\eta) e(-\Lambda (\eta \xi)) \diff \eta
 \end{equation*}
@@ -1112,7 +1115,7 @@ f= (\varpi_v^n)
 \begin{equation*}
 \int_{\ints_v\units} (\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff\units \alpha = 0\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-39" id="proof-39"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-39" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-401">\(j \ge -d\) implies</p>
+</div></article><article class="hiddenproof" id="proof-39"><a knowl="" class="id-ref" refid="hk-proof-39"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-39" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-401">\(j \ge -d\) implies</p>
 <div class="displaymath">
 \begin{equation*}
 \varpi_v^j \ints_v\units \subseteq D_v\inv
@@ -1144,7 +1147,7 @@ f= (\varpi_v^n)
 \begin{equation*}
 \int_{\ints_v\units} e(\Lambda(\varpi_v^j \alpha)) c_n(\alpha) \diff \units \alpha = 0\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-40" id="proof-40"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-40" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-404">(Note \(-n-d \lt j \lt -d \iff 0 \lt -j-d \lt n\)) Let \(\alpha = a (1 + \varpi_v^{-d-j} \alpha_1)\text{.}\) So we may write</p>
+</div></article><article class="hiddenproof" id="proof-40"><a knowl="" class="id-ref" refid="hk-proof-40"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-40" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-404">(Note \(-n-d \lt j \lt -d \iff 0 \lt -j-d \lt n\)) Let \(\alpha = a (1 + \varpi_v^{-d-j} \alpha_1)\text{.}\) So we may write</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{a \mod{\units \varpi_v^{d+j}}}  \int_{\ints_v} e(\Lambda(\varpi_v^ja (1+ \varpi_v^{-d-j} \alpha_1))) c_n(a (1+ \varpi_v^{-d-j} \alpha_1)) \diff \units \alpha\text{.}
@@ -1187,7 +1190,7 @@ G(c_n) = \sum_{a \mod{\units \varpi_v^{ n }}} e(\Lambda(a\varpi^{-d-n})) c_n(a)
 \begin{equation*}
 \zeta(\hat f, c_n\inv |\cdot |^{1-s}) = N(D_v)^{1/2} N(f_v) A_n\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-41" id="proof-41"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-41" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-407">Exercise.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-41"><a knowl="" class="id-ref" refid="hk-proof-41"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-41" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-407">Exercise.</p></article></div>
 <p id="p-408">This finishes the proof of the local functional equation.</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1390,7 +1393,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 \psi = \otimes_v' \psi_v
 \end{equation*}
 </div>
-<p>Where almost all \(\psi_v\)'s are unramified (i.e. \(\psi_v|_{\ints_v} = 1\)) and \(\psi(a) = \prod_v \psi_v(\alpha)\) (this is a finite product).</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-42" id="proof-42"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-42" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-427">Let \(U \subseteq \CC^\times\) be a neighbourhood of \(1 \) that does not contain any subgroups except for \(\{1\}\text{,}\) Let \(N \subseteq \adeles_K\) s.t. \(\psi(N)\subseteq U\text{.}\) Let \(S\) be a the set of places for which  \(N_v \ne  \ints_v\text{.}\) Consider</p>
+<p>Where almost all \(\psi_v\)'s are unramified (i.e. \(\psi_v|_{\ints_v} = 1\)) and \(\psi(a) = \prod_v \psi_v(\alpha)\) (this is a finite product).</p></article><article class="hiddenproof" id="proof-42"><a knowl="" class="id-ref" refid="hk-proof-42"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-42" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-427">Let \(U \subseteq \CC^\times\) be a neighbourhood of \(1 \) that does not contain any subgroups except for \(\{1\}\text{,}\) Let \(N \subseteq \adeles_K\) s.t. \(\psi(N)\subseteq U\text{.}\) Let \(S\) be a the set of places for which  \(N_v \ne  \ints_v\text{.}\) Consider</p>
 <div class="displaymath">
 \begin{equation*}
 \adeles_K^S  =  \prod_{v\in S}1 \times \prod_{v\not \in S}  \ints_v  \subseteq N
@@ -1411,7 +1414,7 @@ K_v       \amp |\cdot|^s \chi_v            \amp   N(D_v)^{\frac12-\epsilon}/(G(\
 \begin{equation*}
 \widehat \adeles \simeq\adeles\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-43" id="proof-43"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-43" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-430">Completely analogous to \(\hat K_v \simeq K_v\) via \(\eta \mapsto \Lambda(\eta \cdot)\text{,}\) for any non-trivial \(\Lambda\text{.}\) Fix one nontrivial \(\Lambda \colon \adeles \to \CC\units\text{.}\) Rest is just \(\Lambda(\eta \cdot)\) for \(\eta \in \adeles\text{.}\)</p></article></div>
+</div></article><article class="hiddenproof" id="proof-43"><a knowl="" class="id-ref" refid="hk-proof-43"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-43" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-430">Completely analogous to \(\hat K_v \simeq K_v\) via \(\eta \mapsto \Lambda(\eta \cdot)\text{,}\) for any non-trivial \(\Lambda\text{.}\) Fix one nontrivial \(\Lambda \colon \adeles \to \CC\units\text{.}\) Rest is just \(\Lambda(\eta \cdot)\) for \(\eta \in \adeles\text{.}\)</p></article></div>
 <p id="p-431">Measures: \(\diff \xi = \prod_v \diff \xi_v\) where for almost all \(v\) we have \(\int_{\ints_v} \diff \xi_v = 1\text{.}\)</p>
 <p id="p-432">Dual measures: Normalise so that Fourier inversion holds, i.e.</p>
 <div class="displaymath">
@@ -1475,7 +1478,7 @@ K \cap \adeles_{K,\infty} = K \cap \prod_{v|\infty} K_v = \ints _K\text{.}
 \end{equation*}
 </div>
 </li>
-</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-44" id="proof-44"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-44" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-436" class="decimal">
+</ol></article><article class="hiddenproof" id="proof-44"><a knowl="" class="id-ref" refid="hk-proof-44"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-44" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-436" class="decimal">
 <li id="li-86">\(\ints_K\) is a full rank lattice in \(\prod_{v|\infty} K_v = V\) (Note for \(\lb K: \QQ \rb = N\) then \(V \simeq \RR^{r_1} \times \CC^{r_2} \simeq \RR^N\)).</li>
 <li id="li-87">
 <li id="li-88">Obvious</li>
@@ -1506,7 +1509,7 @@ K^\perp/K \hookrightarrow \widehat \adeles_K/K \simeq \adeles/K
 \begin{equation*}
 |\alpha|_{\adeles} = 1 \, \forall \alpha \in K\units\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-45" id="proof-45"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-45" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-440">Exercise.</p></article></div>
+</div></article><article class="hiddenproof" id="proof-45"><a knowl="" class="id-ref" refid="hk-proof-45"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-45" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-440">Exercise.</p></article></div>
 <p id="p-441">Unfortunately \(K\units\backslash \adeles\units_K\) is not compact.</p>
 <p id="p-442">A non-canonical decomposition is as follows:</p>
 <p id="p-443">Fix \(v_0 \in S_\infty\) and let</p>
@@ -1645,7 +1648,7 @@ K\units \backslash \adeles\units \to \CC \units\text{.}
 <article class="theorem-like" id="theorem-21"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">3.40</span>
 </h6>
-<p id="p-457">\(\zeta\) converges for \(\chi\) with exponent \(\gt 1\) and extends to a meromorphic function of all \(s\in \CC\text{.}\) \(\zeta\) is analytic, unless \(\chi_0 = 1\) (i.e. \(\chi = |\cdot|^s_\adeles\)) in which case it has poles at \(s= 0\) and 1 with residues \(K\hat f(0), -Kf(0)\) respectively for \(\kappa = \mu(K\units \backslash \adeles^{\times,1})\text{.}\) \(\zeta(f,\chi) = \zeta(\hat f , \hat \chi)\) where   \(\hat \chi = \chi\inv |\cdot|\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-46" id="proof-46"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-46" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-458" class="decimal">
+<p id="p-457">\(\zeta\) converges for \(\chi\) with exponent \(\gt 1\) and extends to a meromorphic function of all \(s\in \CC\text{.}\) \(\zeta\) is analytic, unless \(\chi_0 = 1\) (i.e. \(\chi = |\cdot|^s_\adeles\)) in which case it has poles at \(s= 0\) and 1 with residues \(K\hat f(0), -Kf(0)\) respectively for \(\kappa = \mu(K\units \backslash \adeles^{\times,1})\text{.}\) \(\zeta(f,\chi) = \zeta(\hat f , \hat \chi)\) where   \(\hat \chi = \chi\inv |\cdot|\text{.}\)</p></article><article class="hiddenproof" id="proof-46"><a knowl="" class="id-ref" refid="hk-proof-46"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-46" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-458" class="decimal">
 <li id="li-96">
 <div class="displaymath">
 \begin{equation*}

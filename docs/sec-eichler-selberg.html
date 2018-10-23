@@ -42,13 +42,13 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-4.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\require{xypic}\require{newpxtext}\require{newpxmath}\newenvironment{smallermatrix}[1]
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{xypic}\require{newpxtext}\require{newpxmath}\require{cancel}\newenvironment{smallermatrix}[1]
 {\arraycolsep=0.5pt\def\arraystretch{0.5}\tiny
 \array{#1}}
 {\endarray}
@@ -90,12 +90,15 @@ MathJax.Hub.Config({
 
 \newcommand{\alg}{\mathrm{alg}}
 
+\newcommand{\subgroup}{\mathrel{\subseteq}}
+
 \newcommand{\cat}[1]{\mathcal{#1}}
 \newcommand{\catname}[1]{{\mathrm\textbf{#1}}}
 \newcommand{\Rings}{\mathrm{Rings}}
 
 \newcommand{\Ar}{\mathrm{Ar}}
 \newcommand{\dR}{\mathrm{dR}}
+\newcommand{\crys}{\mathrm{crys}}
 \newcommand{\et}{\mathrm{\acute{e}t}}
 \newcommand{\Pet}{\mathrm{Pet}}
 
@@ -228,7 +231,7 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\PSL}{PSL}
 \DeclareMathOperator{\PGL}{PGL}
-\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\specialorthogonal}{SO}
 \DeclareMathOperator{\Sp}{Sp}
 \DeclareMathOperator{\orth}{O}
 \DeclareMathOperator{\unitary}{U}
@@ -387,7 +390,7 @@ F_k(z,z') = (z+z')^{-k}
 h_m(z,z') = \sum_{\gamma\in \Mat_2(\ZZ),\,\det \gamma = m} j_k(\gamma,z) F_k(\gamma z, z')\text{.}
 \end{equation*}
 </div>
-<p>Even more is true \(h_m(z,z') = h_1(T_m(z), z')\text{.}\)</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-20" id="proof-20"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-20" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-264">
+<p>Even more is true \(h_m(z,z') = h_1(T_m(z), z')\text{.}\)</p></article><article class="hiddenproof" id="proof-20"><a knowl="" class="id-ref" refid="hk-proof-20"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-20" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-264">
 \begin{equation*}
 f\ast h_m(z') = \frac{c_k}{m^{k-1}} T_m(f)(z')
 \end{equation*}
@@ -481,7 +484,7 @@ c_k\inv m^{k-1} h_m(z,z') = \sum_{i=1}^r \frac{a^i_m}{\pair{f_i}{f_i}_\Pet} f_i(
 \begin{equation*}
 \trace(T_m) = \frac{c_k\inv}{m^{k-1}} \int_{\Gamma\backslash \HH} h_m(z,\bar z)\Im(z)^k \frac{\diff x \diff y}{y^2}\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-266">Expand \(h_m(z,z')\) with respect to \(\{f_1, \ldots, f_r\}\text{.}\) \(h_m(z,z')\) is a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> in both variables, we will show this later!</p>
+</div></article><article class="hiddenproof" id="proof-21"><a knowl="" class="id-ref" refid="hk-proof-21"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-21" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-266">Expand \(h_m(z,z')\) with respect to \(\{f_1, \ldots, f_r\}\text{.}\) \(h_m(z,z')\) is a <a knowl="./knowl/def-cusp-form.html" title="Definition 1.40: Cusp forms">cusp form</a> in both variables, we will show this later!</p>
 <div class="displaymath">
 \begin{equation*}
 h_m(z,z') = \sum_{1\le i,j\le r} \alpha_{i,j} f_i(z) f_j(z'),\, \alpha_{i,j} \in \CC
@@ -549,7 +552,7 @@ f_j(z) = \sum_{n=1}^\infty a_j(n) e(nz)\text{.}
 \end{equation*}
 </div>
 </li>
-</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-22" id="proof-22"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-22" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-272">For the proof set \(g_k(z,z') = (z+z')^{-k}\text{.}\) This implies that</p>
+</ol></article><article class="hiddenproof" id="proof-22"><a knowl="" class="id-ref" refid="hk-proof-22"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-22" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-272">For the proof set \(g_k(z,z') = (z+z')^{-k}\text{.}\) This implies that</p>
 <div class="displaymath">
 \begin{equation*}
 h_m(z,z') = \sum_{\gamma\in \Mat_z(\ZZ),\det(\gamma) =m}  j_k(\gamma; z) g_k(\gamma z ,z')
@@ -650,7 +653,7 @@ c_k\inv m^{k-1} h_m(z,z') = \sum_{j=1}^{\dim S_k} \frac{a_j(m)}{\pair{f_j}{f_j}_
 \begin{equation*}
 c_k\inv m^{k-1} \int_{\Gamma\backslash \HH} h_m( z, - \bar z') y^k \diff \mu(z) = \trace(T(m))\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-23" id="proof-23"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-23" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-274">
+</div></article><article class="hiddenproof" id="proof-23"><a knowl="" class="id-ref" refid="hk-proof-23"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-23" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath" id="p-274">
 \begin{equation*}
 \int_{\Gamma\backslash \HH} \sum_{j=1}^{\dim S_k} \frac{a_j(m)}{\pair{f_j}{f_j}_\Pet} f_j(z)\overline{f_j(z)} y^k \diff \mu(z)
 \end{equation*}
@@ -840,7 +843,7 @@ a(n)  = \#\{b \pmod {2a} : b^2   \equiv \Delta \pmod{4a}\}\text{.}
 \Res_{s=1} \zeta(s, \Delta) = \frac{\pi}{\sqrt{|\Delta|}} H(|\Delta|)\text{.}
 \end{equation*}
 </div></li>
-</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-24" id="proof-24"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-24" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-290" class="decimal"><li id="li-56">
+</ol></article><article class="hiddenproof" id="proof-24"><a knowl="" class="id-ref" refid="hk-proof-24"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-24" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-290" class="decimal"><li id="li-56">
 <p id="p-291">A slick proof involves noting that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -950,7 +953,7 @@ R_\phi (t,z) = \frac{y^k}{(a|z|^2 + bx + c - ity )^k}
 \begin{equation*}
 + \begin{cases}(-1)^{k/2} \frac{\Gamma(s+ k - 1) \zeta(s) \zeta(2s)}{(2\pi)^{s -1} \Gamma(k)}\amp \Delta = 0 \\ 0 \amp \Delta \ne 0\end{cases}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-25" id="proof-25"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-25" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-298" class="decimal">
+</div></article><article class="hiddenproof" id="proof-25"><a knowl="" class="id-ref" refid="hk-proof-25"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-25" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-298" class="decimal">
 <li id="li-57">Note \(R_{\gamma\phi}(t,z) = R_\phi (t, \gamma^\transpose z)\) which means that the integral is well defined (check this).</li>
 <li id="li-58">
 <div class="displaymath">
@@ -1018,7 +1021,7 @@ P_k(t,m) = \frac{\rho^{k-1} - \bar \rho ^{k-1}}{\rho - \bar \rho},\,\{\rho,\bar 
 \dim(S_k(1)) = \left\lfloor \frac{k}{12} \right \rfloor  - \mathbf 1[k \equiv 2 \pmod{12}]\text{.}
 \end{equation*}
 </div>
-<p>This is a weird looking formula but it generalises very well, works even without a complex structure, Riemann-Roch, etc.</p></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-26" id="proof-26"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-26" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-301">Recall that</p>
+<p>This is a weird looking formula but it generalises very well, works even without a complex structure, Riemann-Roch, etc.</p></article><article class="hiddenproof" id="proof-26"><a knowl="" class="id-ref" refid="hk-proof-26"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-26" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-301">Recall that</p>
 <div class="displaymath">
 \begin{equation*}
 \trace(T_{S_k}(m))
@@ -1196,7 +1199,7 @@ H_\lambda,\,\rank (H_\lambda) = d_\lambda \lt \infty
 </div>
 </li>
 <li id="li-66">For all \(m \in \ZZ_{\ge 0}\) there exists a polynomial \(P\) of degree \(m\) s.t. <a knowl="./knowl/eqn-equidist-poly.html" title="Equation 2.5">(2.5)</a> is satisfied.</li>
-</ol></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-27" id="proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-315">Exercise.</p></article></div>
+</ol></article><article class="hiddenproof" id="proof-27"><a knowl="" class="id-ref" refid="hk-proof-27"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-27" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-315">Exercise.</p></article></div>
 <p id="p-316">Now we will choose a special set of polynomials to work with.</p>
 <p id="p-317">Symmetric polynomials:</p>
 <p id="p-318">Let \(\Omega= \lb -2 , 2 \rb \leftrightarrow 2 \cos \lb -\pi, \pi\rb = \trace(\specialunitary(2,\CC))\text{,}\) this is really Satake parameters. For \(x\in \lb -2, 2\rb\) we have a corresponding \(2\cos (\phi)\text{.}\) Let</p>
@@ -1211,7 +1214,7 @@ X_n (x) = e^{in\phi} + e^{i(n-2)\phi} + \cdots + e^{-in\phi} = \trace (\Sym^n(U)
 X_nX_m = \sum_{0\le r \le \min\{n,m\}} X_{n+m - 2r} = x_{n+m} + x_{n+m-2} +\cdots + x_{|n-m|}\text{.}
 \end{equation*}
 </div>
-<article class="exercise-like"><a knowl="" class="id-ref" refid="hk-exercise-9" id="exercise-9"><h6 class="heading">
+<article class="exercise-like" id="exercise-9"><a knowl="" class="id-ref" refid="hk-exercise-9"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.22</span>
 </h6></a></article><div id="hk-exercise-9" class="hidden-content tex2jax_ignore"><article class="exercise-like"><p id="p-320">Prove this.</p></article></div>
 <p id="p-321">Several measures:</p>
@@ -1289,7 +1292,7 @@ T_k'(n) = \frac{T_k(n)}{n^{k-1/2}}
 \begin{equation*}
 \mu_p = \frac{p+1}{(p^{1/2} + p^{-1/2})^2 - x^2} \frac 1 \pi \sqrt{1-\frac{x^2}{4}} \diff x\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof"><a knowl="" class="id-ref" refid="hk-proof-28" id="proof-28"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-28" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-323">Claim:</p>
+</div></article><article class="hiddenproof" id="proof-28"><a knowl="" class="id-ref" refid="hk-proof-28"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-28" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-323">Claim:</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{k\to \infty,k\equiv 0 \pmod 2} \frac{\tr(T_k'(n))}{s(k)}

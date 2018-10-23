@@ -36,6 +36,7 @@ debug:	*.pug pug-plugin.json
 check:	aut-forms-arthur-selberg-pretty.xml
 	jing ../mathbook/schema/pretext.rng aut-forms-arthur-selberg-pretty.xml
 	#xmllint --xinclude --postvalid --noout --dtdvalid ../mathbook/schema/dtd/mathbook.dtd aut-forms-arthur-selberg-pretty.xml
+	$(XSLTPROC) ../mathbook/schema/pretext-schematron.xsl aut-forms-arthur-selberg-pretty.xml
 
 clean-html:
 	rm -rf docs
